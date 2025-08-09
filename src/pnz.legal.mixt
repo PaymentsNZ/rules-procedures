@@ -154,6 +154,11 @@ import [
 		html::class( "italic", content )
 	)
 
+	// pnz.legal::bold_div configures the content as a paragraph
+	pnz.legal::bold_div = (...content as any) => #( div =
+		html::class( "bold", content )
+	)
+
 	// pnz.legal::italic configures the content as a italic text
 	pnz.legal::italic = (content as text) => #( span =
 		html::class( "italic", content )

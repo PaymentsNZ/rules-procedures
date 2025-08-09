@@ -16,26 +16,26 @@ import [
 			pnz::document( "HVCS Overview", overview )
 		)
 	)
+	*/
 	Common = File.Write(
 		"docs/hvcs/common.html"
 		Html.FromValue(
 			pnz::document( "HVCS Common Procedures", common )
 		)
 	)
+	/*
 	SCP = File.Write(
 		"docs/hvcs/scp.html"
 		Html.FromValue(
 			pnz::document( "HVCS SCP Procedures", scp )
 		)
 	)
-	*/
 	MX = File.Write(
 		"docs/hvcs/mx.html"
 		Html.FromValue(
 			pnz::document( "HVCS MX Procedures", mx )
 		)
 	)
-	/*
 	MT = File.Write(
 		"docs/hvcs/mt.html"
 		Html.FromValue(

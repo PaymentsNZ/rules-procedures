@@ -103,6 +103,36 @@
 	color: #fff;
   }
 
+
+  .validation-table {
+	width: 100%;
+	table-layout: fixed;       /* enforces the widths */
+	vertical-align: top;       /* vertical-align also applies to table cells */
+	overflow-wrap: break-word; /* break long words when needed */
+	word-break: break-word;    /* legacy fallback */
+  }
+  
+  .validation-table th,
+  .validation-table td {
+	vertical-align: top;   /* or middle, bottom */
+  }
+
+  .validation-table th:nth-child(1),
+  .validation-table td:nth-child(1) {
+	width: 20%; /* first column */
+  }
+  
+  .validation-table th:nth-child(2),
+  .validation-table td:nth-child(2) {
+	width: 30%; /* second column */
+  }
+  
+  .validation-table th:nth-child(3),
+  .validation-table td:nth-child(3) {
+	width: 50%; /* third column */
+  }
+
+
   @media (max-width: 600px) {
 	.menu-branches {
 	  flex-direction: column;      /* stack vertically */

@@ -1,5 +1,6 @@
 import [
 	pnz = "pnz.legal.mixt"
+	hvcs = "hvcs/hvcs.mixt"
 	overview = "hvcs/overview.mixt"
 	common = "hvcs/common.mixt"
 	scp = "hvcs/scp.mixt"	
@@ -16,14 +17,12 @@ import [
 			pnz::document( "HVCS Overview", overview )
 		)
 	)
-	*/
 	Common = File.Write(
 		"docs/hvcs/common.html"
 		Html.FromValue(
 			pnz::document( "HVCS Common Procedures", common )
 		)
 	)
-	/*
 	SCP = File.Write(
 		"docs/hvcs/scp.html"
 		Html.FromValue(
@@ -42,11 +41,11 @@ import [
 			pnz::document( "HVCS MT Procedures", mt )
 		)
 	)
+	*/
 	Coexistence = File.Write(
 		"docs/hvcs/coexistence.html"
 		Html.FromValue(
-			pnz::document( "HVCS Coexistence Procedures", coexistence )
+			hvcs::document( "HVCS Coexistence Procedures", coexistence )
 		)
 	)
-	*/
 }

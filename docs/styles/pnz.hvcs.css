@@ -1,0 +1,126 @@
+/*
+** structured-address-table
+*/
+
+.structured-address-table tbody tr:nth-child(1),
+.structured-address-table tbody tr:nth-child(3) {
+	background-color: #666;
+	color: #fff;
+}
+
+/*
+** validation-table
+*/
+
+.validation-table {
+	width: 100%;
+	table-layout: fixed;       /* enforces the widths */
+	vertical-align: top;       /* vertical-align also applies to table cells */
+	overflow-wrap: break-word; /* break long words when needed */
+	word-break: break-word;    /* legacy fallback */
+}
+
+.validation-table th,
+.validation-table td {
+	vertical-align: top;   /* or middle, bottom */
+}
+
+.validation-table th:nth-child(1),
+.validation-table td:nth-child(1) {
+	width: 20%; /* first column */
+}
+
+.validation-table th:nth-child(2),
+.validation-table td:nth-child(2) {
+	width: 30%; /* second column */
+}
+
+.validation-table th:nth-child(3),
+.validation-table td:nth-child(3) {
+	width: 50%; /* third column */
+}
+
+/*
+** coexistence-table
+*/
+
+.coexistence-table {
+	width: 100%;
+	table-layout: fixed;       /* enforces the widths */
+	vertical-align: top;       /* vertical-align also applies to table cells */
+	overflow-wrap: break-word; /* break long words when needed */
+	word-break: break-word;    /* legacy fallback */
+	margin-bottom: 1em;
+}
+	
+/* Vertiacal alignment */
+.coexistence-table th,
+.coexistence-table td {
+	vertical-align: top;
+}
+
+/* Column: 1 */
+.coexistence-table th:nth-child(1),
+.coexistence-table td:nth-child(1) {
+	width: 20%;
+}
+
+/* Column: 2 */
+.coexistence-table th:nth-child(2),
+.coexistence-table td:nth-child(2) {
+	width: 20%;
+}
+
+/* Column: 3 */
+.coexistence-table th:nth-child(3),
+.coexistence-table td:nth-child(3) {
+	width: 30%;
+}
+
+/* Column: 4 */
+.coexistence-table th:nth-child(4),
+.coexistence-table td:nth-child(4) {
+	width: 30%;
+}
+
+/*
+** coexistence-notification-table
+*/
+
+.coexistence-notification-table {
+	font-size: 8pt;
+}
+
+.coexistence-notification-table td:nth-child(n+2):nth-child(-n+9),
+.coexistence-notification-table th:nth-child(n+2):nth-child(-n+9) {
+  text-align: center;
+}
+
+/*
+** cug-capabilities-table
+*/
+
+.cug-capabilities-table {
+	font-size: 10pt;
+	text-align: center;
+}
+
+.cug-capabilities-table thead {
+	display: none;
+}
+
+.cug-capabilities-table td {
+	vertical-align: top;
+}
+
+.cug-capabilities-table td:nth-child(-n+1) {
+	border-top: none;
+}
+
+.cug-capabilities-table tr:first-child td:nth-child(1) {
+  border-left: none;
+}
+
+.cug-capabilities-table tr:nth-child(2) {
+	font-weight: bold;
+}

@@ -164,6 +164,11 @@ import [
 		html::class( "italic", content )
 	)
 
+	// pnz.legal::div configures the content as a paragraph
+	pnz.legal::div = (...content as any) => #( div =
+		content
+	)
+
 	// pnz.legal::italic_item configures the content as a italic text
 	pnz.legal::italic_item = (content as text) => #( li =
 		html::class( "italic", content )
@@ -241,4 +246,18 @@ import [
 
 	// pnz.legal::list configures the content as a list
 	pnz.legal::list = (...content as any) => #( ul = content )
+
+	// pnz.legal::tick
+	pnz.legal::tick = {
+		html::attributes = {
+			class = "tick"
+		}
+	} @> "✓"
+
+	// pnz.legal::cross
+	pnz.legal::cross = {
+		html::attributes = {
+			class = "cross"
+		}
+	} @> "✘"
 }

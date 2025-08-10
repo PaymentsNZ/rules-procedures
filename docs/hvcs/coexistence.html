@@ -5,6 +5,7 @@
         <title>HVCS Coexistence Procedures</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
         <link href="../styles/pnz.legal.css" rel="stylesheet"/>
+        <link href="../styles/pnz.hvcs.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.menu.css" rel="stylesheet"/>
     </head>
     <body class="document">
@@ -65,14 +66,87 @@
             </div>
             <div class="menu-caption">Diagram 01: HVCS Rules and Procedures documentation structure</div>
         </div>
-        <div>This document discusses the obligations that apply to participants during the co-existence period.</div>
-        <div>This document is divided into five chapters.</div>
-        <div>Chapter 1 provides defined terms, an overview of the HVCS instructions that are in scope during co-existence, the migration timeline and the obligations to send and receive HVCS instructions that apply to participants.</div>
-        <div> Chapter 2 provides information on how to join the MX CUG and specifies the types of BICs that can be used in the MT and MX CUGs during</div>
-        <div>co-existence.</div>
-        <div>Chapter 3 provides an overview on the New Zealand HVCS’s approach to structured data during co-existence, and the approach of CBPR+.</div>
-        <div>Chapter 4 explains the expectations for intermediaries during co-existence and provides an overview on data truncation.</div>
-        <div>Chapter 5 provides information on SWIFT’s Transaction Manager.</div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number=""></div>
+            <div class="level1">
+                <p>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).
+		Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants
+		to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including
+		SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</p>
+                <p>	In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants
+		comply with Part 9 are comprised of:</p>
+                <ul class="bullets">
+                    <li>Part A — HVCS Overview</li>
+                    <ul>
+                        <li>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and
+				settlement works, and the business, technical, and regulatory environment in which the process
+				operates.  This is a non-binding document for use as guidance only.</li>
+                    </ul>
+                    <li>Part B — HVCS Common Procedures</li>
+                    <ul>
+                        <li>Provides binding procedures and product requirements that apply to all HVCS instructions
+				at all times.  This document also contains some non-binding commentary and best practice.</li>
+                    </ul>
+                    <li>Part C — SCP Procedures</li>
+                    <ul>
+                        <li>Provides binding procedures and product requirements that apply only to an HVCS instruction
+				that is a same day cleared payment.  This document also contains some non-binding commentary
+				and best practice, such as recommended terms and conditions with customers.</li>
+                    </ul>
+                    <li>Part D — MX Messaging Procedures</li>
+                    <ul>
+                        <li>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022
+				messages) across the HVCS MX CUG.  This document also contains some non-binding commentary
+				and best practice.</li>
+                    </ul>
+                    <li>Part E — MT Messaging Procedures</li>
+                    <ul>
+                        <li>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022
+				messages) across the HVCS MT CUG.  This document also contains some non-binding commentary
+				and best practice.</li>
+                    </ul>
+                    <li>Part F — Co-existence Procedures (this document)</li>
+                    <ul>
+                        <li>Provides binding procedures for participants during the co-existence phase of the migration
+				from sending and receiving MT messages to MX messages.</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="">Standards, best practices and commentary</div>
+            <ol class="level1">
+                <p>
+                    <span>For information on how to determine whether the content of an applicable HVCS standard in Appendix
+			14 creates binding legal rights or obligations, please see</span>
+                    <span class="italic">Part A - Overview.</span>
+                </p>
+                <p>
+                    <span>Notwithstanding anything in clause 1.8 of the Rules or in Part A — Overview, any reference to
+			actions a person &quot;should&quot; take or anything a person &quot;should&quot; do is intended to convey a best practice
+			with which a person should comply with only, but which has no legal effect.</span>
+                </p>
+            </ol>
+        </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="">Document purpose and structure</div>
+            <ol class="level1">
+                <li>This document discusses the obligations that apply to participants during the co-existence period.</li>
+                <li>This document is divided into five chapters.</li>
+                <li>Chapter 1 provides defined terms, an overview of the HVCS instructions that are in scope during
+		co-existence, the migration timeline and the obligations to send and receive HVCS instructions that
+		apply to participants.</li>
+                <li>Chapter 2 provides information on how to join the MX CUG and specifies the types of BICs that can be
+		used in the MT and MX CUGs during co-existence.</li>
+                <li>Chapter 3 provides an overview on the New Zealand HVCS&apos;s approach to structured data during co-existence,
+		and the approach of CBPR+.</li>
+                <li>Chapter 4 explains the expectations for intermediaries during co-existence and provides an overview
+		on data truncation.</li>
+                <li>Chapter 5 provides information on SWIFT&apos;s Transaction Manager.</li>
+            </ol>
+        </div>
+        <h1 class="section-heading">Chapter 1: The journey from MT to MX</h1>
+        <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.1">Introduction</div>
             <ol class="level1">
@@ -80,38 +154,332 @@
                 <ol class="level2">
                     <li>the HVCS instructions (MT and MX messages) that are in scope during the co-existence phase,</li>
                     <li>the timeline for migrating HVCS instructions as an MT message to an MX message,</li>
-                    <li>the obligations for participants to send and receive HVCS instructions in accordance with the MX Messaging Procedures and the MX Message Specifications,</li>
+                    <li>the obligations for participants to send and receive HVCS instructions in accordance with the
+			MX Messaging Procedures and the MX Message Specifications,</li>
                     <li>dates and times MX messaging will go live.</li>
                 </ol>
             </ol>
         </div>
+        <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.2">Defined terms</div>
-            <ol class="level1"></ol>
+            <div class="level1">
+                <p>
+                    <span class="bold">Co-existence phase</span>
+                    <span>means the period determined by Payments NZ in which the MT Messaging
+				Procedures, the MX Messaging Procedures, the MX Message Specifications and these Co-existence
+				Procedures all apply simultaneously beginning on 20 March 2023 and ending on a date:</span>
+                </p>
+                <ol class="level2">
+                    <li>in November 2025; or</li>
+                    <li>as determined by Payments NZ if all participants have fully migrated to using MX messages
+			prior to November 2025.</li>
+                </ol>
+                <p>
+                    <span class="bold">On-send</span>
+                    <span>means when a participant, in its capacity as an intermediary:</span>
+                </p>
+                <ol class="level2">
+                    <li>receives an MX message from another participant destined for a third party recipient and sends
+			that message as a CBPR+ message to that recipient;</li>
+                    <li>receives an MT message from another participant destined for a third party recipient and sends
+			that message as a CBPR+ message or a FIN message to that recipient;</li>
+                    <li>receives a CBPR+ message destined for another participant and, subject to clause 1.7(7)(a)(iv)
+			of these Co-existence Procedures, sends that message as an MX message to that participant; or</li>
+                    <li>receives a FIN message destined for another participant and sends that message as an HVCS
+			instruction to that participant.</li>
+                </ol>
+                <p>
+                    <span class="bold">Send</span>
+                    <span>means when an instructing agent delivers an HVCS instruction to an instructed agent,
+				being either:</span>
+                </p>
+                <ol class="level2">
+                    <li>a payment message; or</li>
+                    <li>an exception and investigation message.</li>
+                </ol>
+                <p>
+                    <span class="bold">Structured Postal Address formatting</span>
+                    <span>means when the content of the address information within an MX message is formatted in
+				accordance with the structured data requirements set out in the MX Message Specifications.</span>
+                </p>
+                <p>
+                    <span class="bold">Unstructured Address Line formatting</span>
+                    <span>means when the content of the address information within an MX message is not formatted in
+				accordance with the structured data requirements set out in the MX Message Specifications.</span>
+                </p>
+                <p>Unless the context otherwise specifies, all other defined terms have the meanings given to them in
+		Part 19 of the Payments NZ Rules and the HVCS Common Procedures.</p>
+            </div>
         </div>
-        <div>in November 2025; or</div>
-        <div>as determined by Payments NZ if all participants have fully migrated to using MX messages prior to November 2025.</div>
-        <div>receives an MX message from another participant destined for a third party recipient and sends that message as a CBPR+ message to that recipient;</div>
-        <div>receives an MT message from another participant destined for a third party recipient and sends that message as a CBPR+ message or a FIN message to that recipient;</div>
-        <div>receives a CBPR+ message destined for another participant and, subject to clause 1.7(7)(a)(iv) of these Co-existence Procedures, sends that message as an MX message to that participant; or</div>
-        <div>receives a FIN message destined for another participant and sends that message as an HVCS instruction to that participant.</div>
-        <div>a payment message; or</div>
-        <div>an exception and investigation message.</div>
+        <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.3">Payment message scope</div>
             <ol class="level1">
                 <li>The payment messages described below are in scope during the co-existence phase.</li>
-                <li>This table identifies new obligations that participants need to comply with in relation to MX messages. Participants will still be required to comply with all existing obligations in relation to receiving and processing MT messages until the end of the co-existence phase (currently scheduled for November 2025).</li>
+                <li>This table identifies new obligations that participants need to comply with in relation to MX
+		messages. Participants will still be required to comply with all existing obligations in relation 
+		o receiving and processing MT messages until the end of the co-existence phase (currently scheduled
+		for November 2025).</li>
             </ol>
         </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.4">Cash management message scope</div>
-            <ol class="level1"></ol>
+        <div>
+            <p>Messages exchanged between SWIFT message transfer service and participants:</p>
         </div>
+        <table class="pnz-table coexistence-table">
+            <thead>
+                <th>MT message</th>
+                <th>MX message</th>
+                <th>NZ HVCS timing</th>
+                <th>CBPR+ timing</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MT 103 - Single Customer Credit Transfer</td>
+                    <td>
+                        <div>pacs.008 - FI to FI Customer Credit Transfer</div>
+                        <br/>
+                        <span class="bold">RETN</span>
+                        <div>pacs.004 — Payment Return</div>
+                    </td>
+                    <td rowspan="5">
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must be able to receive and process HVCS instructions as
+							an MX message</p>
+                        </div>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must be able to send, receive and process HVCS instructions
+							as an MX message</p>
+                        </div>
+                    </td>
+                    <td rowspan="5">
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants acting as intermediaries5 must be able to receive and process
+							CBPR+ messages.</p>
+                            <p>Subject to clause 1.7(7)(a)(iv)of these Co-existence Procedures, participants
+							acting as intermediaries must be able to on-send a CBPR+ message to participants
+							as an MX message.</p>
+                        </div>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants acting as intermediaries must be able to send CBPR+ messages
+							and on-send all CBPR+ messages to participants as an MX message.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 202 - General Financial Institution Transfer</td>
+                    <td>
+                        <div>pacs.009 - Financial Institution Credit Transfer</div>
+                        <br/>
+                        <span class="bold">RETN</span>
+                        <div>pacs.004 — Payment Return</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 202 COV - General Financial Institution Cover</td>
+                    <td>
+                        <div>pacs.009 COV - Financial Institution Credit Transfer Cover</div>
+                        <br/>
+                        <span class="bold">RETN</span>
+                        <div>pacs.004 — Payment Return</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 205 - Financial Institution Transfer Execution</td>
+                    <td>
+                        <div>pacs.009 - Financial Institution Credit Transfer</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 205 COV - Financial Institution Transfer Execution Cover</td>
+                    <td>
+                        <div>pacs.009 COV - Financial Institution Credit Transfer Cover</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 012 - FIN-Copy Sender Notification</td>
+                    <td>xsys.002 - Authorisation Notification</td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
+                        </div>
+                    </td>
+                    <td>n/a</td>
+                </tr>
+                <tr>
+                    <td>MT 019 - FIN-Copy Abort Notification</td>
+                    <td>xsys.003 - Refusal Notification</td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
+                        </div>
+                    </td>
+                    <td>n/a</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <p>Messages exchanged between SWIFT message transfer service and HVCS (RBNZ):</p>
+        </div>
+        <table class="pnz-table coexistence-table">
+            <thead>
+                <th>MT message</th>
+                <th>MX message</th>
+                <th>NZ HVCS timing</th>
+                <th>CBPR+ timing</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MT 096 - FIN-Copy to Central Institution Message</td>
+                    <td>xcop.xxx - SWIFTNet Copy message</td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>RBNZ must be able to receive and process as an MX message</p>
+                        </div>
+                    </td>
+                    <td>n/a</td>
+                </tr>
+                <tr>
+                    <td>MT 097 - FIN-Copy to Message Authorisation / Refusal</td>
+                    <td>xsys.001 - Settlement Notification</td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>RBNZ must be able to send as an MX message</p>
+                        </div>
+                    </td>
+                    <td>n/a</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <p>Messages exchanged between SWIFT and participants:</p>
+        </div>
+        <table class="pnz-table coexistence-table">
+            <thead>
+                <th>MT message</th>
+                <th>MX message</th>
+                <th>NZ HVCS timing</th>
+                <th>CBPR+ timing</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MT 010 - Non-Delivery Warning</td>
+                    <td>xsys.010 - Non-Delivery Warning</td>
+                    <td rowspan="2">
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
+                        </div>
+                    </td>
+                    <td rowspan="2">
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>Participants acting as intermediaries must be able to receive from SWIFT as an MX message</div>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 011 - Delivery Notification</td>
+                    <td>xsys.011 - Delivery Notification</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="bold">
+            <p>1.4 Cash management message scope</p>
+        </div>
+        <div>
+            <p>The following cash management messages are in scope during the co-existence phase:</p>
+        </div>
+        <table class="pnz-table coexistence-table">
+            <thead>
+                <th>MT message</th>
+                <th>MX message</th>
+                <th>NZ HVCS timing</th>
+                <th>CBPR+ timing</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MT 192 / 292 - Request for Cancellation</td>
+                    <td>camt.056 - FI to FI Cancellation Request</td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants acting as intermediaries must accept CBPR+ camt.056 messages.
+							MX-&gt;MT and MT-&gt;MX translation will be available via the SWIFT Transaction Manager.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 196 / 296 - Answers</td>
+                    <td>camt.029 - Resolution of Investigation</td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX
+							translation will be available via the SWIFT Transaction Manager.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.5">ISO 20022 migration timeline</div>
-            <ol class="level1"></ol>
+            <div class="level1">
+                <p>A phased adoption of MX Messaging Procedures will begin on 20 March 2023, with the full transition
+		to MX messaging mandated at the end of the co-existence phase (currently scheduled for November 2025).</p>
+                <div class="diagram">
+                    <img src="images/hvcs_coexistence_migration_timeline.png" alt="Coexistence Migration Timeline"></img>
+                </div>
+            </div>
         </div>
+        <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.6">Obligations for participants to join CUGS</div>
             <ol class="level1">
@@ -125,147 +493,417 @@
             </ol>
         </div>
         <div class="clause-row">
-            <div class="clause-heading" data-number="1.7">Obligations for participants to send and receive</div>
-            <ol class="level1"></ol>
+            <div class="clause-heading" data-number="1.7">Obligations for participants to send and receive messages during the co-existence phase</div>
+            <ol class="level1">
+                <li>The approach established for the New Zealand migration places obligations on participants in relation
+		to sending and receiving MX messages.</li>
+                <li>
+                    <span>The following obligations in sub-paragraphs (3) to (7) apply to participants</span>
+                    <span class="bold">during the co-existence phase.</span>
+                </li>
+                <li>Sending payment messages:</li>
+                <ol class="level2">
+                    <li>
+                        <span>Participants</span>
+                        <span class="bold">must</span>
+                        <span>send payment messages to other participants using</span>
+                        <span class="bold">either</span>
+                        <span>an MX message</span>
+                        <span class="bold">or</span>
+                        <span>an MT message as follows:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>
+                            <span>FI to FI Customer Credit Transfer using</span>
+                            <span class="bold">either</span>
+                            <span>a pacs.008</span>
+                            <span class="bold">or</span>
+                            <span>MT 103;</span>
+                        </li>
+                        <li>
+                            <span>Financial Institution Credit Transfer</span>
+                            <span class="bold">either</span>
+                            <span>a pacs.009</span>
+                            <span class="bold">or</span>
+                            <span>MT202 / MT205;</span>
+                        </li>
+                        <li>
+                            <span>Financial Institution Credit Transfer Cover</span>
+                            <span class="bold">either</span>
+                            <span>a pacs.009 COV</span>
+                            <span class="bold">or</span>
+                            <span>MT202 COV / MT205 COV; and</span>
+                        </li>
+                        <li>
+                            <span>A return message using</span>
+                            <span class="bold">either</span>
+                            <span>pacs.004</span>
+                            <span class="bold">or</span>
+                            <span>MT103 RETN / MT202 RETN / MT202COV RETN / MT205 RETN / MT205 COV RETN.</span>
+                        </li>
+                    </ol>
+                    <li>
+                        <span>Where a participant sends a payment message as an MX message, the participant</span>
+                        <span class="bold">must</span>
+                        <span>:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>
+                            <span>Send an address that contains</span>
+                            <span class="bold">either</span>
+                            <span>Unstructured Address Line formatting</span>
+                            <span class="bold">or</span>
+                            <span>Structured Postal Address formatting; but</span>
+                        </li>
+                        <li>
+                            <span class="bold">Not</span>
+                            <span>send an address that contains</span>
+                            <span class="bold">both</span>
+                            <span>Unstructured Address Line formatting</span>
+                            <span class="bold">and</span>
+                            <span>Structured Postal Address formatting.</span>
+                        </li>
+                    </ol>
+                </ol>
+                <li>
+                    <span>Sending exception and investigation messages:  Participants</span>
+                    <span class="bold">must</span>
+                    <span>send exception and investigation messages to other participants using</span>
+                    <span class="bold">either</span>
+                    <span>an MX message</span>
+                    <span class="bold">or</span>
+                    <span>an MT message including:</span>
+                </li>
+                <ol class="level2">
+                    <li>
+                        <span>Request for Cancellation message using</span>
+                        <span class="bold">either</span>
+                        <span>a camt.056</span>
+                        <span class="bold">or</span>
+                        <span>MT192 / MT292; and</span>
+                    </li>
+                    <li>
+                        <span>Resolution of Investigation message using</span>
+                        <span class="bold">either</span>
+                        <span>a camt.029</span>
+                        <span class="bold">or</span>
+                        <span>MT196 / MT296.</span>
+                    </li>
+                </ol>
+                <li>Receiving and processing payment messages:</li>
+                <ol class="level2">
+                    <li>
+                        <span>Participants</span>
+                        <span class="bold">must</span>
+                        <span>receive and process the following MX payment messages from other participants:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>pacs.004 — Payment Return;</li>
+                        <li>pacs.008 — FI to FI Customer Credit Transfer;</li>
+                        <li>pacs.009 — Financial Institution Credit Transfer; and</li>
+                        <li>pacs.009 COV — Financial Institution Credit Transfer Cover.</li>
+                    </ol>
+                    <li>
+                        <span>Participants</span>
+                        <span class="bold">must</span>
+                        <span>receive and process MX messages that contain:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>Structured Postal Address formatting; and</li>
+                        <li>Unstructured Address Line formatting.</li>
+                    </ol>
+                    <li>
+                        <span>Participants</span>
+                        <span class="bold">must</span>
+                        <span>receive and process the following MT payment messages from other participants:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>MT103;</li>
+                        <li>MT202;</li>
+                        <li>MT202 COV;</li>
+                        <li>MT205; and</li>
+                        <li>MT205 COV.</li>
+                    </ol>
+                </ol>
+                <li>
+                    <span>Return messages:  If returning an HVCS payment, participants</span>
+                    <span class="bold">must</span>
+                    <span>return the HVCS payment by sending a return message to the original instructing agent as follows:</span>
+                </li>
+                <ol class="level2">
+                    <li>
+                        <span>if the original instructed agent receives a pacs.008 message, return by sending</span>
+                        <span class="bold">either</span>
+                        <span>a pacs.004 message</span>
+                        <span class="bold">or</span>
+                        <span>a MT103 RETN message;</span>
+                    </li>
+                    <li>
+                        <span>if the original instructed agent receives a pacs.009 message, return by sending</span>
+                        <span class="bold">either</span>
+                        <span>a pacs.004 messag</span>
+                        <span class="bold">or</span>
+                        <span>a MT202 RETN message;</span>
+                    </li>
+                    <li>
+                        <span>if the original instructed agent receives a pacs.009 COV message, return by sending</span>
+                        <span class="bold">either</span>
+                        <span>a pacs.004 message</span>
+                        <span class="bold">or</span>
+                        <span>a MT202 COV RETN message / MT205 COV RETN message;</span>
+                    </li>
+                    <li>
+                        <span>if the original instructed agent receives a MT103 message, return by sending</span>
+                        <span class="bold">either</span>
+                        <span>a MT103 RETN message</span>
+                        <span class="bold">or</span>
+                        <span>a pacs.004 message;</span>
+                    </li>
+                    <li>
+                        <span>if the original instructed agent receives a MT202 message, return by sending</span>
+                        <span class="bold">either</span>
+                        <span>a MT202 RETN message</span>
+                        <span class="bold">or</span>
+                        <span>a pacs.004 message;</span>
+                    </li>
+                    <li>
+                        <span>if the original instructed agent receives a MT202 COV message, return by sending</span>
+                        <span class="bold">either</span>
+                        <span>a MT202 COV RETN message</span>
+                        <span class="bold">or</span>
+                        <span>a pacs.004 message; and</span>
+                    </li>
+                    <li>
+                        <span>if the original instructed agent receives a MT205 message, return by sending</span>
+                        <span class="bold">either</span>
+                        <span>a MT205 RETN message</span>
+                        <span class="bold">or</span>
+                        <span>a pacs.004 message.</span>
+                    </li>
+                </ol>
+                <li>Receiving and processing other messages</li>
+                <ol class="level2">
+                    <li>
+                        <span>Participants</span>
+                        <span class="bold">must</span>
+                        <span>receive and process the following MX messages:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>camt.056 — Request for Cancellation;</li>
+                        <li>camt.029 — Resolution of Investigation;</li>
+                        <li>xsys.002 — Authorisation Notification; and</li>
+                        <li>xsys.003 — Refusal Notification.</li>
+                    </ol>
+                    <li>
+                        <span>Participants</span>
+                        <span class="bold">must</span>
+                        <span>receive and process MT messages including:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>MT 192/ MT 292;</li>
+                        <li>MT 196 / MT 296;</li>
+                        <li>MT 012; and</li>
+                        <li>MT 019.</li>
+                    </ol>
+                </ol>
+                <li>Participants that act as intermediaries</li>
+                <ol class="level2">
+                    <li>
+                        <span>For SWIFT messages that accompany a payment received in CBPR+ format destined
+					for another participant, participants that are acting as intermediaries</span>
+                        <span class="bold">must</span>
+                        <span>on-send the CBPR+ messages to the instructed agent using a payment message as follows:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>
+                            <span>a pacs.008 SWIFT message received in CBPR+ format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as a pacs.008 payment message;</span>
+                        </li>
+                        <li>
+                            <span>a pacs.009 SWIFT message received in CBPR+ format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as a pacs.009 payment message;</span>
+                        </li>
+                        <li>
+                            <span>a pacs.009 COV SWIFT message received in CBPR+ format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as a pacs.009 COV payment message; and</span>
+                        </li>
+                        <li>
+                            <span>a pacs.004 SWIFT message received in CBPR+ format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>a pacs.004 return message</span>
+                            <span class="bold">or</span>
+                            <span>an MT103RETN / MT202RETN / MT205RETN return message</span>
+                        </li>
+                    </ol>
+                    <li>
+                        <span>For SWIFT messages that accompany a payment received in FIN message format destined
+					for another participant, participants that are acting as intermediaries</span>
+                        <span class="bold">must</span>
+                        <span>on-send the FIN messages to the instructed agent using</span>
+                        <span class="bold">either</span>
+                        <span>an MT payment message</span>
+                        <span class="bold">or</span>
+                        <span>an MX payment message as follows:</span>
+                    </li>
+                    <ol class="level3">
+                        <li>
+                            <span>an MT103 SWIFT message received in FIN message format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT103 payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.008 payment message;</span>
+                        </li>
+                        <li>
+                            <span>an MT202 SWIFT message received in FIN message format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT202 payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.009 payment message;</span>
+                        </li>
+                        <li>
+                            <span>an MT202 COV SWIFT message received in FIN message format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT202 COV payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.009 COV payment message;</span>
+                        </li>
+                        <li>
+                            <span>an MT205 COV SWIFT message received in FIN message format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT205 COV payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.009 COV payment message;</span>
+                        </li>
+                        <li>
+                            <span>an MT103 RETN SWIFT message received in FIN message format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT103 RETN payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.004 payment message;</span>
+                        </li>
+                        <li>
+                            <span>an MT202 RETN SWIFT message received in FIN message format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT202 RETN payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.004 payment message;</span>
+                        </li>
+                        <li>
+                            <span>an MT202 COV RETN SWIFT message received in FIN message format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT202 COV RETN payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.004 payment message; and</span>
+                        </li>
+                        <li>
+                            <span>an MT205 COV RETN SWIFT message received in FIN format</span>
+                            <span class="bold">must</span>
+                            <span>be on-sent as</span>
+                            <span class="bold">either</span>
+                            <span>an MT205 COV RETN payment message</span>
+                            <span class="bold">or</span>
+                            <span>a pacs.004 payment message.</span>
+                        </li>
+                    </ol>
+                    <li>For SWIFT messages that do not accompany a payment destined for another participant,
+			participants acting as an intermediary must:</li>
+                    <ol class="level3">
+                        <li>
+                            <span>upon receiving a Request for Cancellation SWIFT message in any format,
+						on-send either a camt.056</span>
+                            <span class="bold">or</span>
+                            <span>a MTn92 Request for Cancellation message to the instructed agent; and</span>
+                        </li>
+                        <li>
+                            <span>upon receiving a Resolution of Investigation SWIFT message in any format,</span>
+                            <span>on-send as</span>
+                            <span class="bold">either</span>
+                            <span>a camt.029</span>
+                            <span class="bold">or</span>
+                            <span>a MT196 / MT296 Resolution of Investigation message to the instructed agent.</span>
+                        </li>
+                    </ol>
+                    <li>Participants acting as intermediaries should:</li>
+                    <ol class="level3">
+                        <li>be able to receive and process CBPR+ messages (either MX or MX with embedded MT);</li>
+                        <li>for MX payment messages received from another participant destined for a correspondent banking partner, on-send these as a CBPR+ message in accordance with SWIFT guidelines; and</li>
+                        <li>for MT payment messages received from another participant destined for a correspondent banking partner, on-send these as either a FIN message or a CBPR+ message in accordance with SWIFT guidelines.</li>
+                    </ol>
+                </ol>
+                <li>Participants that offer specific services to customers</li>
+                <ol class="level2">
+                    <li>Participants that receive MX PAIN messages from their customers destined for another participant should create an MX payment message for that instruction.</li>
+                    <li>Participants that receive an HVCS instruction from their customers as an MT message or other non-MX message format destined for another participant may use either MX or MT messages.</li>
+                </ol>
+            </ol>
         </div>
-        <div>The approach established for the New Zealand migration places obligations on participants in relation to sending and receiving MX messages.</div>
-        <div>The following obligations in sub-paragraphs (3) to (7) apply to participants during the co-existence phase.</div>
-        <div>Sending payment messages:</div>
-        <ol class="level2">
-            <li>Participants must send payment messages to other participants using either an MX message or an MT message as follows:</li>
-            <ol class="level3">
-                <li>FI to FI Customer Credit Transfer using either a pacs.008 or MT 103;</li>
-                <li>Financial Institution Credit Transfer using either a pacs.009 or MT202 / MT205;</li>
-                <li>Financial Institution Credit Transfer Cover using either a pacs.009 COV or MT202 COV / MT205 COV; and</li>
-                <li>A return message using either pacs.004 or MT103 RETN / MT202 RETN / MT202COV RETN / MT205 RETN / MT205 COV RETN.</li>
-            </ol>
-            <li>Where a participant sends a payment message as an MX message, the participant must:</li>
-            <ol class="level3">
-                <li>Send an address that contains either Unstructured Address Line formatting or Structured Postal Address formatting; but</li>
-                <li>Not send an address that contains both Unstructured Address Line formatting and Structured Postal Address formatting</li>
-            </ol>
-        </ol>
-        <div>Sending exception and investigation messages:  Participants must send exception and investigation messages to other participants using either an MX message or an MT message including:</div>
-        <ol class="level2">
-            <li>Request for Cancellation message using either a camt.056 or MT192 / MT292; and</li>
-            <li>Resolution of Investigation message using either a camt.029 or MT196 / MT296.</li>
-        </ol>
-        <div>Receiving and processing payment messages:</div>
-        <ol class="level2">
-            <li>Participants must receive and process the following MX payment messages from other participants:</li>
-            <ol class="level3">
-                <li>pacs.004 – Payment Return;</li>
-                <li>pacs.008 – FI to FI Customer Credit Transfer;</li>
-                <li>pacs.009 – Financial Institution Credit Transfer; and</li>
-                <li>pacs.009 COV – Financial Institution Credit Transfer Cover.</li>
-            </ol>
-            <li>Participants must receive and process MX messages that contain:</li>
-            <ol class="level3">
-                <li>Structured Postal Address formatting; and</li>
-                <li>Unstructured Address Line formatting.</li>
-            </ol>
-            <li>Participants must receive and process the following MT payment messages from other participants:</li>
-            <ol class="level3">
-                <li>MT103;</li>
-                <li>MT202;</li>
-                <li>MT202 COV;</li>
-                <li>MT205; and</li>
-            </ol>
-            <li>MT205 COV.</li>
-        </ol>
-        <div>Return messages:  If returning an HVCS payment, participants must return the HVCS payment by sending a return message to the original instructing agent as follows:</div>
-        <ol class="level2">
-            <li>if the original instructed agent receives a pacs.008 message, return by sending either a pacs.004 message or a MT103 RETN message;</li>
-            <li>if the original instructed agent receives a pacs.009 message, return by sending either a pacs.004 message or a MT202 RETN message;</li>
-            <li>if the original instructed agent receives a pacs.009 COV message, return by sending either a pacs.004 message or a MT202 COV RETN message / MT205 COV RETN message;</li>
-            <li>if the original instructed agent receives a MT103 message, return by sending either a MT103 RETN message or a pacs.004 message;</li>
-            <li>if the original instructed agent receives a MT202 message, return by sending either a MT202 RETN message or a pacs.004 message;</li>
-            <li>if the original instructed agent receives a MT202 COV message, return by sending either a MT202 COV RETN message or a pacs.004 message; and</li>
-            <li>if the original instructed agent receives a MT205 message, return by sending either a MT205 RETN message or a pacs.004 message.</li>
-        </ol>
-        <div>Receiving and processing other messages</div>
-        <ol class="level2">
-            <li>Participants must receive and process the following MX messages:</li>
-            <ol class="level3">
-                <li>camt.056 – Request for Cancellation;</li>
-                <li>camt.029 – Resolution of Investigation;</li>
-                <li>xsys.002 – Authorisation Notification; and</li>
-                <li>xsys.003 – Refusal Notification.</li>
-            </ol>
-            <li>Participants must receive and process MT messages including:</li>
-            <ol class="level3">
-                <li>MT 192/ MT 292;</li>
-                <li>MT 196 / MT 296;</li>
-                <li>MT 012; and</li>
-                <li>MT 019.</li>
-            </ol>
-        </ol>
-        <div>Participants that act as intermediaries</div>
-        <ol class="level2">
-            <li>For SWIFT messages that accompany a payment received in CBPR+ format destined for another participant, participants that are acting as intermediaries must on-send the CBPR+ messages to the instructed agent using a payment message as follows:</li>
-            <ol class="level3">
-                <li>a pacs.008 SWIFT message received in CBPR+ format must be on-sent as a pacs.008 payment message;</li>
-                <li>a pacs.009 SWIFT message received in CBPR+ format must be on-sent as a pacs.009 payment message;</li>
-                <li>a pacs.009 COV SWIFT message received in CBPR+ format must be on-sent as a pacs.009 COV payment message; and</li>
-                <li>a pacs.004 SWIFT message received in CBPR+ format must be on-sent as either a pacs.004 return message or an MT103RETN / MT202RETN / MT205RETN return message.</li>
-            </ol>
-            <li>For SWIFT messages that accompany a payment received in FIN message format destined for another participant, participants that are acting as intermediaries must on-send the FIN messages to the instructed agent using either an MT payment message or an MX payment message as follows:</li>
-            <ol class="level3">
-                <li>an MT103 SWIFT message received in FIN message format must be on-sent as either an MT103 payment message or a pacs.008 payment message;</li>
-                <li>an MT202 SWIFT message received in FIN message format must be on-sent as either an MT202 payment message or a pacs.009 payment message;</li>
-                <li>an MT202 COV SWIFT message received in FIN message format must be on-sent as either an MT202 COV payment message or a pacs.009 COV payment message;</li>
-                <li>an MT205 COV SWIFT message received in FIN message format must be on-sent as either an MT205 COV payment message or a pacs.009 COV payment message;</li>
-            </ol>
-            <li>an MT103 RETN SWIFT message received in FIN message format must be on-sent as either an MT103 RETN payment message or a pacs.004 payment message;</li>
-            <li>an MT202 RETN SWIFT message received in FIN message format must be on-sent as either an MT202 RETN payment message or a pacs.004 payment message;</li>
-            <li>an MT202 COV RETN SWIFT message received in FIN message format must be on-sent as either an MT202 COV RETN payment message or a pacs.004 payment message; and</li>
-            <li>an MT205 COV RETN SWIFT message received in FIN format must be on-sent as either an MT205 COV RETN payment message or a pacs.004 payment message.</li>
-            <li>For SWIFT messages that do not accompany a payment destined for another participant, participants acting as an intermediary must:</li>
-            <ol class="level3">
-                <li>upon receiving a Request for Cancellation SWIFT message in any format, on-send either a camt.056 or a MTn92 Request for Cancellation message to the instructed agent; and</li>
-                <li>upon receiving a Resolution of Investigation SWIFT message in any format, on-send as either a camt.029 or a MT196 / MT296 Resolution of Investigation message to the instructed agent.</li>
-            </ol>
-            <li>Participants acting as intermediaries should:</li>
-            <ol class="level3">
-                <li>be able to receive and process CBPR+ messages (either MX or MX with embedded MT);</li>
-                <li>for MX payment messages received from another participant destined for a correspondent banking partner, on-send these as a CBPR+ message in accordance with SWIFT guidelines; and</li>
-                <li>for MT payment messages received from another participant destined for a correspondent banking partner, on-send these as either a FIN message or a CBPR+ message in accordance with SWIFT guidelines.</li>
-            </ol>
-        </ol>
-        <div>Participants that offer specific services to customers</div>
-        <ol class="level2">
-            <li>Participants that receive MX PAIN messages from their customers destined for another participant should create an MX payment message for that instruction.</li>
-            <li>Participants that receive an HVCS instruction from their customers as an MT message or other non-MX message format destined for another participant may use either MX or MT messages.</li>
-        </ol>
+        <div class="tag-commentary"></div>
         <div class="clause-row">
-            <div class="clause-heading" data-number="1.8">Obligations for participants to send and receive</div>
-            <ol class="level1"></ol>
+            <div class="clause-heading" data-number="1.8">Obligations for participants to send and receive messages after the co-existence phase</div>
+            <ol class="level1">
+                <li>
+                    <span class="bold">From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase),</span>
+                    <span>all participants will be required to: </span>
+                </li>
+                <ol class="level2">
+                    <li>send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX
+			Message Specifications for all message types that are in scope;</li>
+                    <li>send HVCS instructions containing Structured Postal Address formatting only; and</li>
+                    <li>send and receive structured data for CBPR+ and HVCS instructions.</li>
+                </ol>
+                <li>The ability to send or receive MT category 1,2, and MTn99 messages will be retired. There is no foreseen
+		retirement date for MTn98 messages.</li>
+            </ol>
         </div>
-        <div>From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase), all participants will be required to:</div>
-        <ol class="level2">
-            <li>send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX Message Specifications for all message types that are in scope;</li>
-            <li>send HVCS instructions containing Structured Postal Address formatting only; and</li>
-            <li>send and receive structured data for CBPR+ and HVCS instructions.</li>
-        </ol>
-        <div>The ability to send or receive MT category 1,2, and MTn99 messages will be retired. There is no foreseen retirement date for MTn98 messages.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.9">Continuous linked settlements</div>
             <ol class="level1">
                 <li>This section is only relevant to CLS members.</li>
-                <li>CLS will participate in both the AVP MT CUG and AVP MX CUG during the co-existence phase in the same way as HVCS participants.</li>
-                <li> CLS will be able to receive pay-in payment messages as an MT message through to the end of the coexistence period</li>
-                <li>CLS will be able to receive pay-in payment messages as an MX message from the beginning of the co-existence period.</li>
-                <li>CLS will send all pay- outs as an MT message until the ESAS v7.0 upgrade is completed, and then all pay- outs will be sent as MX messages.</li>
+                <li>CLS will participate in both the AVP MT CUG and AVP MX CUG during the co-existence phase in the
+		same way as HVCS participants.</li>
+                <li>CLS will be able to receive pay-in payment messages as an MT message through to the end of the
+		coexistence period</li>
+                <li>CLS will be able to receive pay-in payment messages as an MX message from the beginning of the
+		co-existence period.</li>
+                <li>CLS will send all pay- outs as an MT message until the ESAS v7.0 upgrade is completed, and then
+		all pay- outs will be sent as MX messages.</li>
                 <li>The timing of the ESAS v7 upgrade is yet to be confirmed, though likely late 2023 / early 2024.</li>
             </ol>
         </div>
+        <h1 class="section-heading">Chapter 2: Dual CUGs</h1>
+        <div class="tag-commentary"></div>
         <div class="clause-row">
-            <div class="clause-heading" data-number="2.1">Joining the</div>
-            <ol class="level1"></ol>
+            <div class="clause-heading" data-number="2.1">Joining the AVP MX CUG</div>
+            <div class="level1">
+                <p>Information on how to prepare for the AVP MX CUG and the process to join the CUG is provided by
+		the RBNZ Confluence website.</p>
+            </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.2">AVP MT CUG retirement</div>
-            <ol class="level1"></ol>
+            <div class="level1">
+                <p>Clarification on the process to retire the AVP MT CUG will be developed with participants during
+		the co-existence phase.</p>
+            </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.3">Test and production BICs</div>
@@ -275,48 +913,179 @@
                     <li>Production BICS must be used to send and receive MX messages; and</li>
                     <li>Test BICS must be used to send and receive MT messages across the Test CUG.</li>
                 </ol>
-                <li>see the table at clause 2.4 of these Co-existence Procedures to see where Production and Test BICs should be used.</li>
+                <li>see the table at clause 2.4 of these Co-existence Procedures to see where Production and Test BICs
+		should be used.</li>
             </ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.4">MT and MX CUG capabilities</div>
             <ol class="level1">
-                <li>The following table describes the capabilities and functionality of the AVP MT CUG and AVP MX CUG provided by SWIFT and RBNZ.</li>
+                <li>The following table describes the capabilities and functionality of the AVP MT CUG and AVP MX CUG
+		provided by SWIFT and RBNZ.</li>
+                <table class="pnz-table cug-capabilities-table">
+                    <thead>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" colspan="2"></td>
+                            <td colspan="2">
+                                <span class="bold">MT Block 1, 2</span>
+                                <br/>
+                                <span class="bold">MX InterAct Headers</span>
+                                <br/>
+                                <div>Sender</div>
+                                <div>Receiver</div>
+                                <div>Instructing Agent</div>
+                                <div>Instructed Agent</div>
+                            </td>
+                            <td colspan="2">
+                                <span class="bold">MT Block 4</span>
+                                <br/>
+                                <span class="bold">MX BAH / Business Document</span>
+                                <br/>
+                                <div>Debtor Agent</div>
+                                <div>Creditor Agent</div>
+                                <div>Intermediaries</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Test BIC</td>
+                            <td>Production BIC</td>
+                            <td>Test BIC</td>
+                            <td>Production BIC</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">SWIFT</td>
+                            <td>
+                                <span class="bold">AVP MT</span>
+                                <br/>
+                                <span>Test CUG</span>
+                            </td>
+                            <td class="tick">✓</td>
+                            <td class="cross">✘</td>
+                            <td class="tick">✓</td>
+                            <td class="tick">✓</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="bold">AVP MX</span>
+                                <br/>
+                                <span>Test CUG</span>
+                            </td>
+                            <td class="cross">✘</td>
+                            <td class="tick">✓</td>
+                            <td>
+                                <div class="tick">✓</div>
+                                <div>(for coexistence)</div>
+                            </td>
+                            <td class="tick">✓</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">RBNZ</td>
+                            <td>
+                                <span class="bold">AVP MT</span>
+                                <br/>
+                                <span>Test CUG</span>
+                            </td>
+                            <td class="tick">✓</td>
+                            <td class="cross">✘</td>
+                            <td class="tick">✓</td>
+                            <td class="tick">✓</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="bold">AVP MX</span>
+                                <br/>
+                                <span>Test CUG</span>
+                            </td>
+                            <td class="cross">✘</td>
+                            <td class="tick">✓</td>
+                            <td class="cross">✘</td>
+                            <td class="tick">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <li>The requirement to use Test and Production BICs will have implications for mixed message scenarios
+		as shown in the example below and identified in Chapter 5:</li>
+                <ol class="level2">
+                    <li>
+                        <span>The pacs.008 (message #0) that HVCS A sends to HVCS B must contain</span>
+                        <span class="bold">Productions BICs;</span>
+                        <span>and</span>
+                    </li>
+                    <li>
+                        <span>The MT103 RETN (message #1) that HVCS B sends to HVCS A must contain</span>
+                        <span class="bold">Test BICs.</span>
+                    </li>
+                </ol>
+                <li>In order to meet this requirement, HVCS B will need to translate the Production BICS received
+		into Test BICs for the return.</li>
+                <div class="diagram">
+                    <img src="images/hvcs_coexistence_bic_translation.png" alt="BIC Translation"></img>
+                </div>
+                <li>This requirement should be factored into the design and implementation of participant&apos;s systems
+		and processes and participants should consider the translation implications.</li>
             </ol>
         </div>
-        <div>coexistence)</div>
-        <div>The requirement to use Test and Production BICs will have implications for mixed message scenarios as shown in the example below and identified in Chapter 5:</div>
-        <ol class="level2">
-            <li>The pacs.008 (message #0) that HVCS A sends to HVCS B must contain Productions BICs; and</li>
-            <li>The MT103 RETN (message #1) that HVCS B sends to HVCS A must contain Test BICs.</li>
-        </ol>
-        <div>In order to meet this requirement, HVCS B will need to translate the Production BICS received into Test BICs for the return. </div>
-        <div>This requirement should be factored into the design and implementation of participant’s systems and processes and participants should consider the translation implications.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.5">Segregation of Test and Production Messaging</div>
             <ol class="level1">
-                <li>For MT messages, the Test and Production environments require different log in credentials and make use of different BICs in addressing. Together, these safeguards have acted to ensure test messages do not escape into production, as they would fail validation and immediately be stopped.</li>
-                <li>In contrast, the MX test (pilot) service requires log in to a SWIFT production environment and uses a published BIC8. The traditional addressing safeguards have been replaced with the Distinguished Name (DN) specified in the Interact Header to address messages to the participant’s correct test environment. This means that both test and production messages contain a live BIC and there is greater potential for messages to be directed into the wrong environment.</li>
-                <li>Participants must ensure that their processes and systems have sufficient protections to ensure test messages using live BICs do not escape into production, particularly when making technical changes, such as routing changes.</li>
-                <li>The BIC is combined with the Service Name in the SWIFTNet Header (Network Header) of an InterAct message, to ensure correct addressing and separation of test and production traffic.</li>
+                <li>For MT messages, the Test and Production environments require different log in credentials and
+		make use of different BICs in addressing. Together, these safeguards have acted to ensure test
+		messages do not escape into production, as they would fail validation and immediately be stopped.</li>
+                <li>In contrast, the MX test (pilot) service requires log in to a SWIFT production environment and uses
+		a published BIC8. The traditional addressing safeguards have been replaced with the Distinguished Name
+		(DN) specified in the Interact Header to address messages to the participant&apos;s correct test environment.
+		This means that both test and production messages contain a live BIC and there is greater potential for
+		messages to be directed into the wrong environment.</li>
+                <li>Participants must ensure that their processes and systems have sufficient protections to ensure test
+		messages using live BICs do not escape into production, particularly when making technical changes,
+		such as routing changes.</li>
+                <li>The BIC is combined with the Service Name in the SWIFTNet Header (Network Header) of an InterAct
+		message, to ensure correct addressing and separation of test and production traffic.</li>
             </ol>
         </div>
+        <h1 class="section-heading">Chapter 3: Structured data</h1>
+        <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.1">NZ HVCS approach to structured data</div>
             <ol class="level1">
-                <li>The move to structured data in MX messages will remove ambiguity around the meaning of the information contained in HVCS instructions resulting in better quality data for screening and identifying customer behaviour. This should lead to improved fraud detection, and richer remittance, name and address information.</li>
-                <li>Domestically, it is recommended that participants review their processes relating to obtaining customer data and acquire any additional customer data needed to ensure all ISO 20022 schema elements needed to provide structured name and address information are captured.</li>
-                <li>The following list outlines the agreed approach to use of structured data within HVCS instructions (across remittance, name and address elements) for New Zealand’s HVCS:</li>
+                <li>The move to structured data in MX messages will remove ambiguity around the meaning of the information
+		contained in HVCS instructions resulting in better quality data for screening and identifying customer
+		behaviour. This should lead to improved fraud detection, and richer remittance, name and address
+		information.</li>
+                <li>Domestically, it is recommended that participants review their processes relating to obtaining
+		customer data and acquire any additional customer data needed to ensure all ISO 20022 schema elements
+		needed to provide structured name and address information are captured.</li>
+                <li>The following list outlines the agreed approach to use of structured data within HVCS instructions
+		(across remittance, name and address elements) for New Zealand&apos;s HVCS:</li>
                 <ol class="level2">
-                    <li>During the co-existence phase:</li>
+                    <li>
+                        <span class="bold">During the co-existence phase:</span>
+                    </li>
                     <ol class="level3">
-                        <li>Participants must be able to receive and process MX messages that contain Unstructured Address Line formatting.</li>
-                        <li>If an HVCS instruction using an MT message is converted to an MX message, the MX message must contain Unstructured Address Line formatting.</li>
+                        <li>Participants must be able to receive and process MX messages that contain Unstructured
+				Address Line formatting.</li>
+                        <li>If an HVCS instruction using an MT message is converted to an MX message, the MX message must
+				contain Unstructured Address Line formatting.</li>
                         <li>Sending MX messages containing Structured Postal Address formatting is recommended.</li>
                     </ol>
-                    <li>From the scheduled date of mandated use of MX messaging (the end of the co-existence phase), the capability to send MX messages containing Unstructured Address Line formatting will be removed from the MX specification; therefore, participants must be able to send and receive MX messages containing Structured Postal Address formatting for HVCS instructions.</li>
+                    <li>
+                        <span class="bold">From the scheduled date of mandated use of MX messaging (the end of the co-existence phase),</span>
+                        <span>the capability to send MX messages containing Unstructured Address Line formatting will be
+					removed from the MX specification; therefore, participants must be able to send and receive MX
+					messages containing Structured Postal Address formatting for HVCS instructions.</span>
+                    </li>
                 </ol>
-                <li>Further clarification and guidelines for the use of structured remittance and structured name and address is provided in Part D – MX Messaging Procedures.</li>
+                <li>Further clarification and guidelines for the use of structured remittance and structured name and
+		address is provided in Part D — MX Messaging Procedures.</li>
             </ol>
         </div>
         <div class="clause-row">
@@ -324,106 +1093,320 @@
             <ol class="level1">
                 <li>The following outlines the agreed approach to structured data for CBPR+:</li>
                 <ol class="level2">
-                    <li>If a FIN message is converted to a CBPR+ message, the CBPR+ message must contain Unstructured Address Line formatting.</li>
-                    <li>During the co-existence phase, if a payment instruction is initiated by the debtor agent using a CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting for the debtor and creditor.</li>
-                    <li>At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured Address formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the co-existence phase, all participants that act as intermediaries must be able to send and receive CBPR+ messages containing Structured Postal Address formatting.</li>
-                    <div class="clause-row">
-                        <div class="clause-heading" data-number="4.1">Expectations for intermediaries</div>
-                        <ol class="level1">
-                            <li>During the co-existence phase, participants acting as an intermediary are required to adhere to the principle ‘send on what you receive’ which requires participants to on-send payment message data in the same format it is received.</li>
-                            <li>This principle removes the risk of data truncation. It is acceptable to on-send an MX payment message that was received as an MT payment message or FIN message as translating MT to MX for on-sending results in no data loss. Except for return messages, it is not acceptable to on-send an MT payment message that was received as an MX payment message or a CPBR+ message as not all MX data can be included in an MT message when translating from MX to MT. The principle also enables agents further down the payment chain to meet their compliance obligations more easily.</li>
-                            <li>This means for intermediaries that receive incoming cross-border payments in CBPR+ that, subject to clause 1.7(7)(a)(iv) of these Co-existence Procedures, it will be mandatory to be able to pass those messages in full (on-send), as an MX message from the beginning of the co-existence phase if they are to be processed in the NZ HVCS.</li>
-                            <li>It is recommended that participants who act as intermediaries ensure they review their terms and conditions with their customers prior to the start of the co-existence phase to ensure they obtain the relevant mandatory information from their customers to comply with the MX message format. For example, when a payment is being sent cross border on behalf of a domestic customer, and the domestic customer may need to provide more information than they have provided previously.</li>
-                            <li>For information on expectations for participants acting as an intermediary agent please refer to Part D – MX Messaging Procedures.</li>
-                        </ol>
-                    </div>
-                    <div class="clause-row">
-                        <div class="clause-heading" data-number="4.2">Truncation</div>
-                        <ol class="level1">
-                            <li>If a participant needs to map MX messages to an MT message for their back office systems then they should be aware that truncation can occur and should refer to the PMPG guidelines for basic principles for mapping, prioritisation of elements and translation. SWIFT also provides translator and/or mapping libraries to define, map and validate HVCS instructions to and from any format including MX messages and MT messages.</li>
-                            <li>There are two scenarios where truncation can occur when receiving a CBPR+ message with embedded MT message:</li>
-                            <ol class="level2">
-                                <li>a CBPR+ message that has gone through in-flow translation,</li>
-                                <li>a CBPR+ message that has gone through the Transaction Manager (The Transaction Manager scope is limited to cross border payments sent via the FINPlus CUG).</li>
-                            </ol>
-                            <li>For MT messages that have been translated in-flow or in the Transaction Manager, SWIFT provides the delivery format “ISO 20022 with embedded MT”, this includes an indication of whether truncation has occurred and provides additional details of the truncation(s).</li>
-                        </ol>
-                    </div>
-                    <div class="clause-row">
-                        <div class="clause-heading" data-number="5.1">Overview</div>
-                        <ol class="level1"></ol>
-                    </div>
-                    <li>SWIFT’s transaction management platform (Transaction Manager) will provide a set of common transaction processing services that today are typically provided by each financial institution, however SWIFT messages that travel across market infrastructure (including HVCS instructions through the RBNZ’s AVP MX CUG) are currently out of scope for the Transaction Manager.</li>
-                    <li>The Transaction Manager platform will ensure interoperability between users of different data formats and connectivity channels, but those that want to unlock the full benefits of richer data and advanced Transaction Manager features will need to be able to receive and process CBPR+ messages and connect to SWIFT&apos;s network using APIs.</li>
-                    <li>The Transaction Manager will provide a useful reference to participants since:</li>
-                    <ol class="level2">
-                        <li>it will show what mapping is used between CBPR+ messages and FIN messages;</li>
-                        <li>there is additional logic used to check the consistency of serial payments;</li>
-                        <li>there may be data enrichment applied to CBPR+ messages which may need to be understood for cross-border payment instructions and transactions and</li>
-                        <li>the Transaction Manager can be used to see what has happened to a CBPR+ message either prior to entering the HVCS, entering the AVP MX CUG as an HVCS instruction, or once it has left the HVCS.</li>
-                        <div class="clause-row">
-                            <div class="clause-heading" data-number="5.2">Connecting</div>
-                            <ol class="level1"></ol>
-                        </div>
-                        <li>Participants are encouraged to review SWIFT’s Connectivity Guidance document to determine which connectivity option makes the most sense for their organisation and the prerequisites to support each option.</li>
-                        <li>Participants can connect to the Transaction Manager at their own pace however, it is strongly recommended this is completed prior to the Transaction Manager going live in order to process SWIFT messages received that have been routed through the Transaction Manager.</li>
-                    </ol>
-                    <div class="clause-row">
-                        <div class="clause-heading" data-number="5.3">Transaction Manager traffic build-up</div>
-                        <ol class="level1">
-                            <li>The ISO 20022 traffic volume will be gradually routed to the Transaction Manager as of a date in March 2023 that will be notified to participants. SWIFT will control and execute the incremental build-up of this traffic.</li>
-                            <li>This build-up will start with a low volume from March 2023 and build up to cover all ISO 20022 traffic over six months. Addition of a new increment will be dependent on clear criteria and an additional three-month contingency phase will be activated if at any point the criteria are not met.</li>
-                            <li>The build-up process will prioritise rich-data transactions first. Rich-data for pacs.008 and pacs.009 is defined as:</li>
-                        </ol>
-                    </div>
-                    <li>address or LEI or Name with more than 70 characters)</li>
-                    <li>address or LEI or Name with more than 70 characters)</li>
-                    <li>address or LEI or Name with more than 70 characters)</li>
-                    <li>address or LEI or Name with more than 70 characters)</li>
+                    <li>If a FIN message is converted to a CBPR+ message, the CBPR+ message must contain Unstructured Address
+			Line formatting.</li>
+                    <li>During the co-existence phase, if a payment instruction is initiated by the debtor agent using a
+			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
+			for the debtor and creditor.</li>
+                    <li>At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured
+			Address formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the
+			co-existence phase, all participants that act as intermediaries must be able to send and receive
+			CBPR+ messages containing Structured Postal Address formatting.</li>
                 </ol>
-                <li>During this build-up phase, ISO 20022 messages that are not yet part of the build-up, will not be processed by the Transaction Manager. They will be processed by in-flow translation, meaning that they are received as an ISO 20022 message with embedded MT format, but not stored in the central transaction copy.</li>
+            </ol>
+        </div>
+        <h1 class="section-heading">Chapter 4: Forwarding data</h1>
+        <div class="tag-commentary"></div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="4.1">Expectations for intermediaries</div>
+            <ol class="level1">
+                <li>During the co-existence phase, participants acting as an intermediary are required to adhere to the
+		principle &apos;send on what you receive&apos; which requires participants to on-send payment message data in
+		the same format it is received.</li>
+                <li>This principle removes the risk of data truncation. It is acceptable to on-send an MX payment message
+		that was received as an MT payment message or FIN message as translating MT to MX for on-sending results
+		in no data loss. Except for return messages, it is not acceptable to on-send an MT payment message that
+		was received as an MX payment message or a CPBR+ message as not all MX data can be included in an MT
+		message when translating from MX to MT. The principle also enables agents further down the payment chain
+		to meet their compliance obligations more easily.</li>
+                <div class="diagram">
+                    <img src="images/hvcs_coexistence_intermediaries.png" alt="Intermediary Expectations"></img>
+                </div>
+                <li>This means for intermediaries that receive incoming cross-border payments in CBPR+ that, subject to
+		clause 1.7(7)(a)(iv) of these Co-existence Procedures, it will be mandatory to be able to pass those
+		messages in full (on-send), as an MX message from the beginning of the co-existence phase if they are
+		to be processed in the NZ HVCS.</li>
+                <li>It is recommended that participants who act as intermediaries ensure they review their terms and
+		conditions with their customers prior to the start of the co-existence phase to ensure they obtain
+		the relevant mandatory information from their customers to comply with the MX message format. For
+		example, when a payment is being sent cross border on behalf of a domestic customer, and the domestic
+		customer may need to provide more information than they have provided previously.</li>
+                <li>For information on expectations for participants acting as an intermediary agent please refer to
+		Part D — MX Messaging Procedures.</li>
             </ol>
         </div>
         <div class="clause-row">
+            <div class="clause-heading" data-number="4.2">Truncation</div>
+            <ol class="level1">
+                <li>If a participant needs to map MX messages to an MT message for their back office systems then they
+		should be aware that truncation can occur and should refer to the PMPG guidelines for basic principles
+		for mapping, prioritisation of elements and translation. SWIFT also provides translator and/or mapping
+		libraries to define, map and validate HVCS instructions to and from any format including MX messages
+		and MT messages.</li>
+                <li>There are two scenarios where truncation can occur when receiving a CBPR+ message with embedded
+		MT message:</li>
+                <ol class="level2">
+                    <li>a CBPR+ message that has gone through in-flow translation,</li>
+                    <li>a CBPR+ message that has gone through the Transaction Manager (The Transaction Manager scope is
+			limited to cross border payments sent via the FINPlus CUG).</li>
+                </ol>
+                <li>For MT messages that have been translated in-flow or in the Transaction Manager, SWIFT provides the
+		delivery format “ISO 20022 with embedded MT”, this includes an indication of whether truncation has
+		occurred and provides additional details of the truncation(s).</li>
+            </ol>
+        </div>
+        <h1 class="section-heading">Chapter 5: Transaction Manager</h1>
+        <div class="tag-commentary"></div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="5.1">Overview</div>
+            <ol class="level1">
+                <div>
+                    <p>This section is relevant for intermediaries sending and receiving cross border payments and
+			instructions via the FINPlus CUG.</p>
+                </div>
+                <li>SWIFT&apos;s transaction management platform (Transaction Manager) will provide a set of common
+		transaction processing services that today are typically provided by each financial institution,
+		however SWIFT messages that travel across market infrastructure (including HVCS instructions through
+		the RBNZ&apos;s AVP MX CUG) are currently out of scope for the Transaction Manager.</li>
+                <li>The Transaction Manager platform will ensure interoperability between users of different data
+		formats and connectivity channels, but those that want to unlock the full benefits of richer data
+		and advanced Transaction Manager features will need to be able to receive and process CBPR+ messages
+		and connect to SWIFT&apos;s network using APIs.</li>
+                <li>The Transaction Manager will provide a useful reference to participants since:</li>
+                <ol class="level2">
+                    <li>it will show what mapping is used between CBPR+ messages and FIN messages;</li>
+                    <li>there is additional logic used to check the consistency of serial payments;</li>
+                    <li>there may be data enrichment applied to CBPR+ messages which may need to be understood for
+			cross-border payment instructions and transactions and</li>
+                    <li>the Transaction Manager can be used to see what has happened to a CBPR+ message either prior
+			to entering the HVCS, entering the AVP MX CUG as an HVCS instruction, or once it has left the HVCS.</li>
+                </ol>
+            </ol>
+        </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="5.2">Connecting to the Transaction Manger</div>
+            <ol class="level1">
+                <li>Participants are encouraged to review SWIFT&apos;s Connectivity Guidance document to determine which
+		connectivity option makes the most sense for their organisation and the prerequisites to support
+		each option.</li>
+                <li>Participants can connect to the Transaction Manager at their own pace however, it is strongly
+		recommended this is completed prior to the Transaction Manager going live in order to process SWIFT
+		messages received that have been routed through the Transaction Manager.</li>
+            </ol>
+        </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="5.3">Transaction Manager traffic build-up</div>
+            <ol class="level1">
+                <li>The ISO 20022 traffic volume will be gradually routed to the Transaction Manager as of a date in
+		March 2023 that will be notified to participants. SWIFT will control and execute the incremental
+		build-up of this traffic.</li>
+                <li>This build-up will start with a low volume from March 2023 and build up to cover all ISO 20022
+		traffic over six months. Addition of a new increment will be dependent on clear criteria and an
+		additional three-month contingency phase will be activated if at any point the criteria are not
+		met.</li>
+                <li>The build-up process will prioritise rich-data transactions first. Rich-data for pacs.008 and
+		pacs.009 is defined as:</li>
+                <table class="pnz-table">
+                    <thead>
+                        <th>Message type</th>
+                        <th>Element</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>pacs.008</td>
+                            <td>Category purpose</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.008</td>
+                            <td>Ultimate debtor</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.008</td>
+                            <td>Ultimate creditor</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.008</td>
+                            <td>Structured remittance information</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.008</td>
+                            <td>Purpose</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.008</td>
+                            <td>Regulatory reporting</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.008</td>
+                            <td>
+                                <div>Rich debtor or creditor information</div>
+                                <div>(structured address or LEI or Name with more than 70 characters)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009</td>
+                            <td>Category purpose</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009</td>
+                            <td>Purpose</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009</td>
+                            <td>
+                                <div>Rich debtor or creditor information</div>
+                                <div>(structured address or LEI or Name with more than 70 characters)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009</td>
+                            <td>Remittance information</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009 COV</td>
+                            <td>Purpose</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009 COV</td>
+                            <td>
+                                <div>Rich debtor or creditor information</div>
+                                <div>(structured address or LEI or Name with more than 70 characters)</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009 COV</td>
+                            <td>Remittance information</td>
+                        </tr>
+                        <tr>
+                            <td>pacs.009 COV</td>
+                            <td>
+                                <div>Underlying credit transfer:</div>
+                                <ul class="bullets">
+                                    <li>Ultimate debtor</li>
+                                    <li>Ultimate creditor</li>
+                                    <li>Structured remittance information</li>
+                                    <li>
+                                        <span>Rich debtor or creditor information</span>
+                                        <br/>
+                                        <span>(structured address or LEI or Name with more than 70 characters)</span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <li>During this build-up phase, ISO 20022 messages that are not yet part of the build-up,
+		will not be processed by the Transaction Manager. They will be processed by in-flow
+		translation, meaning that they are received as an ISO 20022 message with embedded MT
+		format, but not stored in the central transaction copy.</li>
+            </ol>
+        </div>
+        <h1 class="section-heading">Chapter 6: Testing required during co-existence</h1>
+        <div class="tag-commentary"></div>
+        <div class="clause-row">
             <div class="clause-heading" data-number="6.1">Overview</div>
-            <ol class="level1"></ol>
+            <div class="level1">
+                <p>As participants introduce new functionality/platforms to be included, there will be testing required.</p>
+            </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.2">Payments NZ runs 5 release windows</div>
             <ol class="level1">
-                <li>During the co-existence phase, Payments NZ will run 5 periods (‘release windows’) that participants can use to test and implement the MX message ‘capabilities’ in clause 6.6.</li>
+                <li>During the co-existence phase, Payments NZ will run 5 periods (&apos;release windows&apos;) that participants
+		can use to test and implement the MX message &apos;capabilities&apos; in clause 6.6.</li>
                 <li>The release windows enable participants to introduce change in a coordinated way reducing—</li>
                 <ol class="level2">
-                    <li> testing complexity; and</li>
-                    <li> interoperability risks in HVCS.</li>
+                    <li>testing complexity; and</li>
+                    <li>interoperability risks in HVCS.</li>
                 </ol>
                 <li>Each release window is a period of 8 weeks, split into 3 shorter periods as follows:</li>
                 <ol class="level2">
                     <li>a period of 4 weeks for a participant to test with a bilateral test partner:</li>
-                    <li>a period of 2 weeks for the participant to resolve any defects identified during the bilateral tests:</li>
-                    <li>a final period of 2 weeks for the participant to prepare and implement any capabilities tested and complete production implementation verification tests.</li>
+                    <li>a period of 2 weeks for the participant to resolve any defects identified during the
+			bilateral tests:</li>
+                    <li>a final period of 2 weeks for the participant to prepare and implement any capabilities tested
+			and complete production implementation verification tests.</li>
                 </ol>
-                <li>On each Monday following the end of a release window, Payments NZ will run a go live day on which participants may implement capabilities tested.</li>
+                <li>On each Monday following the end of a release window, Payments NZ will run a go live day on which
+		participants may implement capabilities tested.</li>
                 <li>The following table specifies—</li>
                 <ol class="level2">
                     <li>the number of each release window; and</li>
                     <li>for each release window,—</li>
-                    <ol class="level3">
-                        <li> the start date and end date of each of the periods—</li>
+                    <ol class="level3U">
+                        <li>the start date and end date of each of the periods—</li>
+                        <ol class="level3">
+                            <li>for testing; and</li>
+                            <li>for defect resolution; and</li>
+                            <li>for preparation, implementation, and production implementation verification tests; and</li>
+                        </ol>
+                        <li>the Monday go live date.</li>
                     </ol>
-                    <li>the Monday go live date.</li>
                 </ol>
-                <li> After the final ‘go live’ Monday on 25 August 2025, a ‘change freeze’ applies until the end of the co-existence phase allowing participants, who have implemented MX message capabilities during the release windows, to resolve any residual defects.</li>
+                <table class="pnz-table">
+                    <thead>
+                        <th>Window no / year</th>
+                        <th>Testing 4 weeks</th>
+                        <th>Defect resolution 2 weeks</th>
+                        <th>Prepare / implement / PVT 2 weeks</th>
+                        <th>Go live Monday</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 (2024)</td>
+                            <td>1 — 26 April</td>
+                            <td>29 April — 10 May</td>
+                            <td>13 — 24 May</td>
+                            <td>27 May</td>
+                        </tr>
+                        <tr>
+                            <td>2 (2024)</td>
+                            <td>1 — 26 July</td>
+                            <td>29 July — 9 August</td>
+                            <td>12 — 23 August</td>
+                            <td>26 August</td>
+                        </tr>
+                        <tr>
+                            <td>3 (2024)</td>
+                            <td>30 September — 25 October</td>
+                            <td>28 October — 8 November</td>
+                            <td>11 — 22 November</td>
+                            <td>25 November</td>
+                        </tr>
+                        <tr>
+                            <td>4 (2025)</td>
+                            <td>31 March — 26 April</td>
+                            <td>28 April — 9 May</td>
+                            <td>12 — 23 May</td>
+                            <td>26 May</td>
+                        </tr>
+                        <tr>
+                            <td>5 (2025)</td>
+                            <td>30 June — 25 July</td>
+                            <td>28 July — 8 August</td>
+                            <td>11 — 22 August</td>
+                            <td>25 August</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <li>After the final &apos;go live&apos; Monday on 25 August 2025, a &apos;change freeze&apos; applies until the
+		end of the co-existence phase allowing participants, who have implemented MX message
+		capabilities during the release windows, to resolve any residual defects.</li>
             </ol>
         </div>
         <div class="clause-row">
-            <div class="clause-heading" data-number="6.3">Payments NZ may run ‘big bang’ tests</div>
-            <ol class="level1"></ol>
+            <div class="clause-heading" data-number="6.3">Payments NZ may run &apos;big bang&apos; tests</div>
+            <div class="level1">
+                <p>During the co-existence phase, Payments NZ may coordinate testing for participants who propose
+		to test and implement all MX message capabilities in a single release window.</p>
+            </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.4">Payments NZ appoints test manager</div>
             <ol class="level1">
-                <li> Payments NZ will appoint a test manager to manage testing during every release window.</li>
+                <li>Payments NZ will appoint a test manager to manage testing during every release window.</li>
                 <li>The test manager is responsible for the following:</li>
                 <ol class="level2">
                     <li>confirming the capabilities each participant tests during a release window:</li>
@@ -431,7 +1414,7 @@
                     <li>coordinating test partners:</li>
                     <li>confirming whether participants pass tests:</li>
                     <li>managing post implementation verification testing and the go live process:</li>
-                    <li> reporting the progress and status of co-existence tests to the HVCS management committee.</li>
+                    <li>reporting the progress and status of co-existence tests to the HVCS management committee.</li>
                 </ol>
             </ol>
         </div>
@@ -440,18 +1423,327 @@
             <ol class="level1">
                 <li>A participant notifies Payments NZ if the participant proposes to do the following:</li>
                 <ol class="level2">
-                    <li> to test an MX message capability during a release window:</li>
+                    <li>to test an MX message capability during a release window:</li>
                     <li>to implement an MX message capability on a go live Monday linked to a release window.</li>
                 </ol>
-                <li>The participant gives the notification in writing, no later than 1 month before the start of the release window.</li>
-                <li>  To avoid doubt, if a participant tests an MX message capability during a release window, it is not required to implement the capability on the go live date linked to the particular release window.</li>
+                <li>The participant gives the notification in writing, no later than 1 month before the start
+		of the release window.</li>
+                <li>To avoid doubt, if a participant tests an MX message capability during a release window,
+		it is not required to implement the capability on the go live date linked to the particular
+		release window.</li>
             </ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.6">Notifying change outside release windows</div>
-            <ol class="level1"></ol>
+            <div class="level1">
+                <p>If a participant chooses to introduce a capability outside of a release window, the following
+		table defines who should be informed for each new capability and the recommended notice period.</p>
+            </div>
         </div>
-        <div>lead-time required)</div>
-        <div>of 1 month lead-time)</div>
+        <table class="pnz-table coexistence-notification-table">
+            <thead>
+                <th>Capability</th>
+                <th>No industry visibility required</th>
+                <th>Inform HVCS participants (no lead-time required)</th>
+                <th>Inform HVCS participants (minimum of 1 month lead-time)</th>
+                <th>Inform HVCS participants and Bilateral Test (minimum of 1 month lead-time)</th>
+                <th>Inform HVCS participants and Industry Test</th>
+                <th>Inform SWIFT</th>
+                <th>Inform RBNZ RTGS Help Desk</th>
+                <th>Inform RBNZ Ops</th>
+                <th>Notes / Assumptions</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Commence sending pacs.008 (SCP)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td rowspan="6">Bilateral tests reflect heightened sensitivity as participants begin sending MX messages</td>
+                </tr>
+                <tr>
+                    <td>Will no longer be sending MT103 (SCP) to other HVCS participants</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Commence sending pacs.008 (inbound Cross Border to other HVCS Participants)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Will no longer be sending MT103 (inbound Cross Border) messages to other HVCS participants</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Commence sending pacs.008 (outbound Cross Border to other HVCS participants)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Will no longer be sending MT103 (outbound Cross Border) to other HVCS participants</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Commence sending pacs.004</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Will no longer be sending MT103 RETN or MT202 RETN to other HVCS participants</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Commence sending pacs.009</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Will no longer be sending MT202 to other HVCS participants</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Commence sending pacs.009 COV</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Will no longer be sending MT202 COV to other HVCS participants</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Exception messages — will commence sending camt 056 messages</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2">Deemed low complexity and therefore IT not required. Bilateral testing is optional and may be requested by informed participants.</td>
+                </tr>
+                <tr>
+                    <td>Exception messages — will commence sending camt 029 messages</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Will commence sending address details in the structured address format</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>If testing for the beginning of the co-existence phase is rigorous, perhaps we don&apos;t need to revalidate?</td>
+                </tr>
+                <tr>
+                    <td>Will commence sending remittance details in the structured remittance format</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>TBC</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>This requires bilateral and possibly end-to-end agreement. Includes all structured remittance information formats except Additional Remittance Information.</td>
+                </tr>
+                <tr>
+                    <td>Will include Ultimate Debtor/ Creditor details</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>CLS Pay In —MT 202 to pacs.009 message</td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td rowspan="2">No interoperability risk because these payments flow is between a participant and CLS Bank.</td>
+                </tr>
+                <tr>
+                    <td>CLS Pay Out (and CLS Statements?) - Migration from MT to MX format</td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Commence receiving MX statement messages from the RBNZ</td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Have no further need to be a member of the AVP MT CUG - now send ISO only MX messages</td>
+                    <td colspan="8">To be managed by the RBNZ as part of the CUG closure process</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Significant upgrade to a Participant&apos;s payments engine (processing HVCS payments)</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td>This is a requirement in the HVCS rules today.</td>
+                </tr>
+                <tr>
+                    <td>Changes to SWIFT gateway - technology/ repatriation</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td>This is a requirement in the HVCS rules today.</td>
+                </tr>
+                <tr>
+                    <td>Introduction of new exception and investigation messages</td>
+                    <td colspan="8">Not required as a new message type would initiate a more formal project</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Changes to payment flows via the Transaction Manager</td>
+                    <td colspan="8">Not required as changes to the TM will be managed on a case-by-case basis</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Confirmation of debit and credit messages (900/910) migration to ISO</td>
+                    <td>✔</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                    <td></td>
+                    <td>PNZ to reach out to RBNZ to confirm implementation plans for these message types</td>
+                </tr>
+                <tr>
+                    <td>NZ Clear - Cash settlements</td>
+                    <td colspan="8">Managed as an industry project</td>
+                    <td>Test phase over a 2 week period - assumption move to iso at a point in time</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>

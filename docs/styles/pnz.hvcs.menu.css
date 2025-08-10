@@ -5,10 +5,10 @@
 	margin-bottom: 1em;
 	width: fit-content;
 	max-width: 100%;
-  }
-  
-  /* Top box */
-  .menu-root {
+}
+
+/* Top box */
+.menu-root {
 	background: #1a3a5b;       /* dark blue */
 	color: white;
 	padding: 15px 30px;
@@ -17,10 +17,10 @@
 	display: inline-block;
 	margin-bottom: 40px;
 	position: relative;
-  }
-  
-  /* Horizontal line under root */
-  .menu-root::after {
+}
+
+/* Horizontal line under root */
+.menu-root::after {
 	content: "";
 	position: absolute;
 	bottom: -20px;
@@ -28,19 +28,19 @@
 	width: 2px;
 	height: 20px;
 	background: #333;
-  }
-  
-  /* Branch container */
-  .menu-branches {
+}
+
+/* Branch container */
+.menu-branches {
 	display: flex;
 	justify-content: center;
 	gap: 20px;
 	flex-wrap: wrap;         /* allow items to wrap to new lines */
 	position: relative;
 	max-width: 100%;         /* ensures it can shrink */
-  }
-  /* Horizontal line connecting branches */
-  .menu-branches::before {
+}
+/* Horizontal line connecting branches */
+.menu-branches::before {
 	content: "";
 	position: absolute;
 	top: -20px;
@@ -48,98 +48,62 @@
 	right: 0;
 	height: 2px;
 	background: #333;
-  }
-  
-  /* Individual branch boxes */
-  .menu-branch {
-    background: #bcd0e5;    /* light blue */
-    padding: 15px 20px;
-    border-radius: 10px;
-    width: 100px;
-    font-size: 14px;
-    line-height: 1.3em;
-    display: inline-block;
-    text-decoration: none;    /* removes the underline */
-    color: inherit;           /* inherits the text color from parent */    
-  }
-  
-  /* Highlighted active branch */
-  .menu-branch.active {
-    background: #2b5f8a;        /* darker blue */
-    color: white;
-    font-weight: bold;
-  }
+}
 
-  .menu-caption {
-    font-weight: bold;
-    margin-bottom: 1.5em;
-  }
-  
-	/* Hover effect for branches */
-	.menu-branch:hover {
-		background: #94b8d9;      /* slightly darker than the base light blue */
-		transform: translateY(-3px);
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-		cursor: pointer;
-		transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+/* Individual branch boxes */
+.menu-branch {
+	background: #bcd0e5;    /* light blue */
+	padding: 15px 20px;
+	border-radius: 10px;
+	width: 100px;
+	font-size: 14px;
+	line-height: 1.3em;
+	display: inline-block;
+	text-decoration: none;    /* removes the underline */
+	color: inherit;           /* inherits the text color from parent */    
+}
+
+/* Highlighted active branch */
+.menu-branch.active {
+	background: #2b5f8a;        /* darker blue */
+	color: white;
+	font-weight: bold;
 	}
 
-	/* Keep active branch distinct even when hovered */
-	.menu-branch.active:hover {
-		background: #2b5f8a;      /* keep the same as active */
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-	}
+.menu-caption {
+	font-weight: bold;
+	margin-bottom: 1.5em;
+}
 
-  .menu-branch:hover,
-  .menu-branch:focus,
-  .menu-branch:visited {
-      text-decoration: none;    /* prevent underline in all states */
-      color: inherit;           /* keep text color consistent */
-  }
+/* Hover effect for branches */
+.menu-branch:hover {
+	background: #94b8d9;      /* slightly darker than the base light blue */
+	transform: translateY(-3px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .structured-address-table tbody tr:nth-child(1),
-  .structured-address-table tbody tr:nth-child(3) {
-	background-color: #666;
-	color: #fff;
-  }
+/* Keep active branch distinct even when hovered */
+.menu-branch.active:hover {
+	background: #2b5f8a;      /* keep the same as active */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
+.menu-branch:hover,
+.menu-branch:focus,
+.menu-branch:visited {
+	text-decoration: none;    /* prevent underline in all states */
+	color: inherit;           /* keep text color consistent */
+}
 
-  .validation-table {
-	width: 100%;
-	table-layout: fixed;       /* enforces the widths */
-	vertical-align: top;       /* vertical-align also applies to table cells */
-	overflow-wrap: break-word; /* break long words when needed */
-	word-break: break-word;    /* legacy fallback */
-  }
-  
-  .validation-table th,
-  .validation-table td {
-	vertical-align: top;   /* or middle, bottom */
-  }
-
-  .validation-table th:nth-child(1),
-  .validation-table td:nth-child(1) {
-	width: 20%; /* first column */
-  }
-  
-  .validation-table th:nth-child(2),
-  .validation-table td:nth-child(2) {
-	width: 30%; /* second column */
-  }
-  
-  .validation-table th:nth-child(3),
-  .validation-table td:nth-child(3) {
-	width: 50%; /* third column */
-  }
-
-
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
 	.menu-branches {
-	  flex-direction: column;      /* stack vertically */
-	  align-items: center;
-	  gap: 10px;
+		flex-direction: column;      /* stack vertically */
+		align-items: center;
+		gap: 10px;
 	}
 	.menu-branches::before {
-	  display: none;               /* hide connecting line on small screens */
+		display: none;               /* hide connecting line on small screens */
 	}
-  }
+}

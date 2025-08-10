@@ -4,6 +4,26 @@ import [
 	"../html.mixt"
 ]
 {
+	//hvcs::document creates a PNZ HVCS legal document as HTML
+	hvcs::document = (docTitle as text, docContent as list) => (
+		html::document(
+			"html",
+			"en",
+			[
+					;meta = html::meta( "UTF-8" )
+					title = docTitle
+					link = html::stylesheet( "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" )
+					link = html::stylesheet( "../styles/pnz.legal.css" )
+					link = html::stylesheet( "../styles/pnz.hvcs.css" )
+					link = html::stylesheet( "../styles/pnz.hvcs.menu.css" )
+			]		
+			html::class(
+				"document"
+				docContent
+			)
+		)
+	)
+
 	menuClass = (currentIndex as UInt64.Type, activeIndex as UInt64.Type) => (
 		if currentIndex == activeIndex then
 			"menu-branch active"

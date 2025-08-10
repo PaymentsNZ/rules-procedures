@@ -385,6 +385,16 @@ h1 {
   font-weight: bold;
 }
 
+.tick {
+  color: green;
+  font-weight: bold;
+}
+
+.cross {
+  color: #a94442;
+  font-weight: bold;
+}
+
 /*
 ** @media - mobile
 */

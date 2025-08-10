@@ -765,211 +765,535 @@ import [
 				]
 			)
 		)
+
+		pnz::subsection_heading( "Instructed Agent" )
+
+		pnz::styled_table(
+			"validation-table"
+			#table(
+				[
+					"Action", "MT Obligations", "MX Obligations"
+				]
+				[
+					// Row
+					[
+						// Col1
+						[
+							`Has been sent an HVCS instruction:`
+							pnz::bullets(
+								[
+									pnz::text( "As a customer credit transfer message — " )
+									pnz::bold( "cross border redirection" )
+									pnz::text( "(as set out in clause 9.1(2)(a)(iii) of the Rules); and" )
+								]
+								[
+									pnz::text( "Is also the" )
+									pnz::bold( "creditor agent" )
+								]
+							)
+						]
+						// Col2
+						"No MT obligation"
+						// Col3
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the HVCS instruction in accordance with clauses 2.1 and 2.3
+									of the MX Procedures and in accordance with MyStandards and Local Usage
+									Guideline Validation.`
+								)
+							]
+							pnz::br
+							pnz::italic_div( `(MX Message Requirements)` )
+							pnz::italic_div( `(Instructed Agent Validation)` )
+							`Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures.`
+							pnz::br
+							pnz::italic_div( `(Message Validation (Swift))` )
+							pnz::italic_div( `(Message Validation (Participant))` )
+						]
+					]
+
+					// Row
+					[
+						// Col1
+						[
+							pnz::text( `Has been sent an HVCS instruction as an` )
+							pnz::bold( "SCP" )
+						]
+						// Col2
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the HVCS instruction in accordance with clauses 3.7 and 3.8
+									of the MT procedures`
+								)
+							]
+							pnz::br
+							pnz::italic_div( "(Field 59: Instructed Agent Validation)" )
+							pnz::italic_div( "(Validation not required)" )
+						]
+						// Col3
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures
+									and in accordance with MyStandards.`
+								)
+							]
+							pnz::br
+							pnz::italic_div( "(Instructed agent validation)" )
+						]
+					]
+					// Row
+					[
+						// Col1
+						[
+							`Has been sent an HVCS instruction:`
+							pnz::bullets(
+								[
+									pnz::text( "As an" )
+									pnz::bold( "SCP" )
+									pnz::text( "; and" )
+								]
+								[
+									pnz::text( "Includes an" )
+									pnz::bold( "email address" )
+									pnz::text( "for the beneficiary notification" )
+								]
+							)
+						]
+						// Col2
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the email address in accordance with clause 3.12 of the MT procedures`
+								)
+							]
+							pnz::br
+							pnz::italic_div( "(Field 72: Instructed agent transformation)" )
+						]
+						// Col3
+						[
+							`Clause 4.3 of the MX Procedures shows the dedicated email address field.`
+							pnz::br
+							pnz::italic_div( "(SCP Customer notifications)" )
+							[
+								pnz::bold("XML Path")
+								pnz::text("for Email Address:")
+							]
+							pnz::br
+							`/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr`
+						]
+					]
+
+					// Row 1
+					[
+						// Col 1
+						[
+							`Has been sent an HVCS instruction:`
+							pnz::bullets(
+								[
+									pnz::text( "A customer credit transfer message — " )
+									pnz::bold( "cross border redirection" )
+									pnz::text( "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)" )
+								]
+							)
+						]
+						// Col 2
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the HVCS instruction in accordance with clauses 4.8 and 4.9
+									of the MT procedures`
+								)
+							]
+							pnz::br
+							pnz::italic_div( "(Field 59: Instructed Agent Validation)" )
+							pnz::italic_div( "(Validation not required)" )
+						]
+						// Col 3
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the HVCS instruction in accordance with clauses 2.3
+									of the MX Procedures.`
+								)
+							]
+							pnz::br
+							pnz::italic_div( "(Instructed agent validation)" )
+						]
+					]
+
+					// Row 1
+					[
+						// Col 1
+						[
+							pnz::bullets(
+								[
+									pnz::text( "Needs to" )
+									pnz::bold( "return" )
+									pnz::text( "an HVCS payment;" )
+								]
+								[
+									pnz::bold( "Chooses to" )
+									pnz::text( "populate line number 4 and 5 of" )
+									pnz::bold( "field 72" )
+								]
+							)
+						]
+						// Col 2
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the HVCS instruction in accordance with clauses 3.14, 4.14 and
+									5.11 of the MT procedures`
+								)
+							]
+							pnz::br
+							pnz::italic_div( "(Field 72: Return HVCS Payment: Timing, Format and Content)" )
+						]
+						// Col 3
+						[
+							[
+								pnz::text( "The instructed agent" )
+								pnz::bold( "must" )
+								pnz::text(
+									`validate the HVCS instruction in accordance with clause 2.1 of the
+									MX Procedures and in accordance with MyStandards.`
+								)
+							]
+							pnz::br
+							pnz::italic_div( "(MX Message Requirements)" )
+						]
+					]					
+				]
+			)
+		)
+	)
+	pnz::nonumber_clause(
+		"1.6"
+		"No revoking after settlement"
+
+		`As HVCS payments are made through the Reserve Bank's designated settlement system, ESAS, they cannot
+		be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms
+		and conditions and section 156R of the Banking (Prudential Supervision) Act 1989.2.`
+	)
+
+	pnz::tag_standards
+
+	pnz::clause(
+		"1.7"
+		"Return HVCS payment: timing, format and content"
+
+		`To comply with rule 9.21 and clause 2.2 of these HVCS Common Procedures , an instructed agent must
+		return an HVCS payment:`
+
+		pnz::level2(
+			`as soon as practicable after making the decision to return it, and`
+			`in accordance with Part F - Co-existence Procedures and the applicable message standards.`
+		)
+	)
+
+	pnz::section_heading( "Chapter 2: Errors" )
+
+	pnz::tag_commentary
+
+	pnz::nonumber_clause(
+		"2.1"
+		"Errors"
+
+		`Sometimes an instructed agent cannot process an HVCS instruction because of, for example, a problem
+		with the content or the format of the instruction or an invalid account number.`
+
+		`If an instructed agent cannot process an HVCS instruction, rule 9.21 and clause 2.2 of these HVCS
+		Common Procedures, provides the instructed agent two options. The instructed agent can either return
+		the HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS
+		instruction.`
+		
+		`The following diagram summarises the processes that apply if the HVCS instruction contains an error.`	
+	)
+
+	pnz::tag_standards
+
+	pnz::clause(
+		"2.2"
+		"Error prevents processing"
+
+		`This clause applies to an instructed agent who has received a settled HVCS payment but cannot process
+		the HVCS payment because of an error relating to the HVCS payment.`
+
+		`The instructed agent must do one of the following:`
+
+		pnz::level2(
+			`return the HVCS payment to the instructing agent in accordance with the applicable HVCS standards:`
+
+			`require the instructing agent to send data to amend the HVCS payment:`
+
+			`amend the HVCS payment without asking the instructing agent for amended data and, as soon as
+			practicable after amendment is complete, process the HVCS payment.`
+		)
+
+		`For a cross border redirection (as described in clause 9.1(2)(a)(iii) of the Rules), the instructed agent
+		must not deduct any fees from the amount of the HVCS payment before returning it.`
+
+		`If an instructing agent of an HVCS payment receives a request from an instructed agent under subclause
+		(2)(b), the instructing agent must, as soon as practicable after receiving the request, send data to amend
+		the HVCS payment to the instructed agent.`
+
+		`If the instructed agent receives amended data from an instructing agent under subclause (4), the
+		instructing agent must, as soon as practicable after receiving the data, use the data to amend the HVCS
+		payment.`
+	)
+
+	pnz::tag_bestpractice
+
+	pnz::clause(
+		"2.3"
+		"Instructed agent credits wrong account"
+
+		`If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS
+		payment and the instructing agent incurs loss as a direct result of the error, the instructed agent must
+		pay the instructing agent the amount of the loss up to the value of the HVCS payment if one of the
+		following applies:`
+
+		pnz::level2(
+			`the payment message specified the correct account number:`
+
+			`the instructing agent sent data to the instructed agent to amend the payment message in accordance
+			with clause 2.2 of these HVCS Common Procedures and the data specified the correct account number:`
+
+			`the instructed agent—`
+			pnz::level3(
+				`could not process the HVCS instruction because of an error relating to the HVCS instruction; and`
+
+				`did not obtain data from the instructing agent to amend the payment message under clause 2.2 of
+				these HVCS Common Procedures; and`
+
+				`amended the HVCS payment with the wrong account number.`
+			)
+		)
+
+		`If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS
+		payment because the instructing agent specified the wrong account number in the payment message the
+		instructing agent must, as soon as practicable after it becomes aware that the wrong account number has
+		been credited—`
+
+		pnz::level2(
+			`send the payment message to the instructed agent again; and`
+			`ensure that the payment message contains the correct account number.`
+		)
+	)
+
+	pnz::tag_bestpractice
+
+	pnz::clause(
+		"2.4"
+		"Co-operate to resolve processing errors"
+
+		`Participants should co-operate to resolve a problem caused by a processing error affecting a HVCS
+		instruction.`
+
+		`For example, if an instructed agent credits the amount of a HVCS payment to the wrong creditor's
+		account number—`
+
+		pnz::level2(
+			`the instructing agent may ask the instructed agent to freeze funds in the creditor's account
+			until the problem is resolved; and`
+
+			`the instructed agent should determine whether to comply with the request, including by having
+			regard to whether the instructed agent has the legal right to do so.`
+		)
+	)
+
+	pnz::tag_commentary
+
+	pnz::nonumber_clause(
+		"2.5"
+		"Request and response formats"
+
+		`If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common
+		Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by,
+		for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message
+		sends corrected data to the instructed agent under rule 9.21 and clause 2.2 of these HVCS Common
+		Procedures, the instructing agent can use, for example, SWIFT message MTn96-Answers.`
+	)
+
+	pnz::section_heading( "Chapter 3: Late processing" )
+
+	pnz::tag_commentary
+
+	pnz::nonumber_clause(
+		"3.1"
+		"Late processing"
+
+		`Rule 9.11 and clause 1.4 of these HVCS Common Procedures requires an instructing agent to send an HVCS
+		instruction no later than 16:45 on a business day unless standards 3.3 or 3.4 apply.`
+
+		`The following diagram gives an overview of the processes that apply if the instructing agent proposes
+		to send an HVCS instruction after 16:45. The diagram has no legal effect.`
+	)
+
+	pnz::tag_standards
+
+	pnz::clause(
+		"3.2"
+		"When HVCS payments settle"
+
+		`The effect of rule 9.14 is that if the instructing agent settles an HVCS payment after 17:15, unless
+		the late HVCS instruction requirements apply, the instructed agent:`
+
+		pnz::level2(
+			`is not required to process the HVCS instruction that business day, but`
+
+			`may decide to process the HVCS instruction that business day to meet the requirements or the
+			expectations of its customer.`
+		)
+	)
+
+	pnz::tag_standards
+
+	pnz::clause(
+		"3.3"
+		"Sending customer HVCS instructions after 16:45"
+
+		`This clause applies to a customer credit transfer message that is an SCP or a cross border payment
+		redirection if—`
+
+		pnz::level2(
+			`a technical problem or an operational problem prevents the instructing agent from sending the
+			customer credit transfer message by 16.45 on a business day; and`
+			
+			`the instructing agent requires the instructed agent to credit the creditor's account with the
+			amount of an HVCS payment that business day.`
+		)
+
+		`The instructing agent—`
+		pnz::level2(
+			`must obtain the instructed agent's explicit consent to the time by which the instructing agent
+			must send a HVCS instruction to which this standard applies; and`
+
+			`must use the contact people and method of communicating for the instructed agent specified in the
+			industry incident contact list; and`
+
+			`is entitled to obtain the consent in written form or verbal form.`
+		)
+
+		`The instructed agent is not required to consent to a request from an instructing agent to send a
+		customer credit transfer message after 16:45. For example, the instructed agent may not be able to
+		process the HVCS instruction at the time requested.`
+
+		`If the instructing agent obtains the instructed agent's consent to a time for sending the HVCS
+		instruction and the instructing agent sends the HVCS instruction by the agreed time, the timeframe
+		in clause 1.4 of these HVCS Common Procedures does not apply to the HVCS instruction.`
+	)
+
+	pnz::clause(
+		"3.4"
+		"Sending FI HVCS instructions after 16:45"
+	
+		`This clause applies to a participant who proposes to send and receive FI credit transfer messages
+		during the CLS evening session either—`
+
+		pnz::level2(
+			`as the creditor or the debtor; or`
+			`on behalf of a FI customer.`
+		)
+
+		`The participant may only send and receive FI credit transfer messages during the CLS evening session
+		on a business day if—`
+
+		pnz::level2(
+			`no less than 1 month before that business day,—`
+			pnz::level3(
+				`the participant has notified the chief executive of Payments NZ that on and from a specified
+				date the participant proposes to send and receive FI credit transfer messages during the CLS
+				evening session; and`
+
+				`the chief executive has notified every other participant that on and from the specified date
+				the participant proposes to send and receive FI credit transfer messages during the CLS evening
+				session; and`
+			)
+
+			`the participant has, on and from the date specified in the chief executive's notification,
+			participated in every CLS evening session; and`
+
+			`the participant participates in the CLS evening session that business day during the time period
+			commencing at 16:45 on the business day and ending 30 minutes after the final CLS pay out.`
+		)
+
+		`If the participant sends an FI credit transfer message during the CLS evening session in accordance
+		with subclause (2), the timeframe in clause 1.4 of these HVCS Common Procedures do not apply to the
+		FI credit transfer messages.`
+
+		`If a participant proposes to cease sending and receiving FI credit transfer messages during the CLS
+		evening session, no less than 1 month before the business day that the participant proposes to cease
+		sending and receiving the FI credit transfer messages, the participant must notify Payments NZ that
+		it proposes to cease.`
+	)
+
+	pnz::tag_commentary
+
+	pnz::nonumber_clause(
+		"3.5"
+		"Evening session participants"
+
+		`Participants who send and receive financial institution credit transfers during the CLS evening
+		session are:`
+
+		pnz::table(
+			#table(
+				[
+					"Participants"
+					"Date"
+				]
+				[
+					[
+						`ANZ Bank New Zealand Limited`
+						`1 October 2010`
+					]
+					[
+						`ASB Bank Ltd`
+						`1 October 2010`
+					]
+					[
+						`Bank of China (New Zealand) Limited`
+						`4 December 2020`
+					]
+					[
+						`Bank of New Zealand`
+						`1 October 2010`
+					]
+					[
+						`Citibank, N.A.`
+						`1 October 2010`
+					]
+					[
+						`HSBC`
+						`1 October 2010`
+					]
+					[
+						`Westpac New Zealand Limited`
+						`1 October 2010`
+					]
+				]
+			)
+		)
 	)
 	/*
-	`(MT 202 Swift and HVCS Rules)`
-	`(MT202COV Swift and HVCS Requirements)`
-	`(MT205)`
-	`(MT205COV)`
-	`The Instructing agent must validate the HVCS instruction in accordance with clause 2.1 of the MX Procedures and in accordance with MyStandards.`
-	`(MX Message Requirements)`
-	`INSTRUCTED AGENT`
-	`Has been sent an HVCS instruction:`
-	`• As a customer credit transfer message — cross border redirection (as set out in clause 9.1(2)(a)(iii) of the Rules); and`
-	`• Is also the creditor agent`
-	`No MT obligation`
-	`The instructed agent must validate the HVCS instruction in accordance with clauses 2.1 and 2.3 of the MX Procedures and in accordance with MyStandards and Local Usage Guideline Validation.`
-	`(MX Message Requirements)`
-	`(Instructed Agent Validation)`
-	`Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures.`
-	`(Message Validation (Swift))`
-	`(Message Validation (Participant))`
-	`Has been sent an HVCS instruction as an SCP`
-	`The instructed agent must validate the HVCS instruction in accordance with clauses 3.7 and 3.8 of the MT procedures`
-	`(Field 59: Instructed Agent Validation)`
-	`(Validation not required)`
-	`The instructed agent must validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures and in accordance with MyStandards.`
-	`(Instructed agent validation)`
-	`Has been sent an HVCS instruction:`
-	`• As an SCP; and`
-	`• Includes as email address for the beneficiary notification`
-	`The instructed agent must validate the email address in accordance with clause 3.12 of the MT procedures`
-	`(Field 72: Instructed agent transformation)`
-	`Clause 4.3 of the MX Procedures shows the dedicated email address field.`
-	`(SCP Customer notifications)`
-	`XML Path for Email Address:`
-	`/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr`
-	`Has been sent an HVCS instruction as:`
-	`• A customer credit transfer message — cross border redirection (as set out is defined in clause 9.1(2)(a)(iii) of the Rules)`
-	`The instructed agent must validate the HVCS instruction in accordance with clauses 4.8 and 4.9 of the MT procedures`
-	`(Field 59: Instructed Agent Validation)`
-	`(Validation not required)`
-	`The instructed agent must validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures.`
-	`(Instructed agent validation)`
-	`• Needs to return an HVCS payment;`
-	`• Chooses to populate line number 4 and 5 of field 72`
-	`The instructed agent must validate the HVCS instruction in accordance with clauses 3.14, 4.14 and 5.11 of the MT procedures`
-	`(Field 72: Return HVCS Payment: Timing, Format and Content)`
-	`The instructed agent must validate the HVCS instruction in accordance with clause 2.1 of the MX Procedures and in accordance with MyStandards.`
-	`(MX Message Requirements)`
-	*/
-		pnz::clause(
-			"1.6"
-			"No revoking after settlement"
-		)
-	/*
-	`As HVCS payments are made through the Reserve Bank’s designated settlement system, ESAS, they cannot be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms and conditions and section 156R of the Banking (Prudential Supervision) Act 1989.2.`
-	*/
-		pnz::clause(
-			"1.7"
-			"Return HVCS payment: timing, format and content"
-			`To comply with rule 9.21 and clause 2.2 of these HVCS Common Procedures , an instructed agent must return an HVCS payment:`
-			pnz::level2(
-				`as soon as practicable after making the decision to return it, and`
-				`in accordance with Part F - Co-existence Procedures and the applicable message standards.`
-			)
-		)
-	/*
-	`Chapter 2: Errors`
-	*/
-		pnz::clause(
-			"2.1"
-			"Errors"
-		)
-	/*
-	`Sometimes an instructed agent cannot process an HVCS instruction because of, for example, a problem with the content or the format of the instruction or an invalid account number.`
-	`If an instructed agent cannot process an HVCS instruction, rule 9.21 and clause 2.2 of these HVCS Common Procedures, provides the instructed agent two options. The instructed agent can either return the HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS instruction.`
-	`The following diagram summarises the processes that apply if the HVCS instruction contains an error.`
-	*/
-		pnz::clause(
-			"2.2"
-			"Error prevents processing"
-			`This clause applies to an instructed agent who has received a settled HVCS payment but cannot process the HVCS payment because of an error relating to the HVCS payment.`
-			`The instructed agent must do one of the following:`
-			pnz::level2(
-				`return the HVCS payment to the instructing agent in accordance with the applicable HVCS standards:`
-				`require the instructing agent to send data to amend the HVCS payment:`
-				`amend the HVCS payment without asking the instructing agent for amended data and, as soon as practicable after amendment is complete, process the HVCS payment.`
-			)
-			`For a cross border redirection (as described in clause 9.1(2)(a)(iii) of the Rules), the instructed agent must not deduct any fees from the amount of the HVCS payment before returning it.`
-			`If an instructing agent of an HVCS payment receives a request from an instructed agent under subclause (2)(b), the instructing agent must, as soon as practicable after receiving the request, send data to amend the HVCS payment to the instructed agent.`
-			`If the instructed agent receives amended data from an instructing agent under subclause (4), the instructing agent must, as soon as practicable after receiving the data, use the data to amend the HVCS payment.`
-		)
-		pnz::clause(
-			"2.3"
-			"Instructed agent credits wrong account"
-			`If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS payment and the instructing agent incurs loss as a direct result of the error, the instructed agent must pay the instructing agent the amount of the loss up to the value of the HVCS payment if one of the following applies:`
-			pnz::level2(
-				`the payment message specified the correct account number:`
-				`the instructing agent sent data to the instructed agent to amend the payment message in accordance with clause 2.2 of these HVCS Common Procedures and the data specified the correct account number:`
-				`the instructed agent—`
-				pnz::level3(
-					`could not process the HVCS instruction because of an error relating to the HVCS instruction; and`
-					`did not obtain data from the instructing agent to amend the payment message under clause 2.2 of these HVCS Common Procedures; and`
-					`amended the HVCS payment with the wrong account number.`
-				)
-			)
-			`If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS payment because the instructing agent specified the wrong account number in the payment message the instructing agent must, as soon as practicable after it becomes aware that the wrong account number has been credited—`
-			pnz::level2(
-				`send the payment message to the instructed agent again; and`
-				`ensure that the payment message contains the correct account number.`
-			)
-		)
-		pnz::clause(
-			"2.4"
-			"Co-operate to resolve processing errors"
-			`Participants should co-operate to resolve a problem caused by a processing error affecting a HVCS instruction.`
-			`For example, if an instructed agent credits the amount of a HVCS payment to the wrong creditor's account number—`
-			pnz::level2(
-				`the instructing agent may ask the instructed agent to freeze funds in the creditor's account until the problem is resolved; and`
-				`the instructed agent should determine whether to comply with the request, including by having regard to whether the instructed agent has the legal right to do so.`
-			)
-		)
-		pnz::clause(
-			"2.5"
-			"Request and response formats"
-		)
-	/*
-	`If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by, for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message sends corrected data to the instructed agent under rule 9.21 and clause 2.2 of these HVCS Common Procedures, the instructing agent can use, for example, SWIFT message MTn96-Answers.`
-	`Chapter 3: Late processing`
-	*/
-		pnz::clause(
-			"3.1"
-			"Late processing"
-		)
-	/*
-	`Rule 9.11 and clause 1.4 of these HVCS Common Procedures requires an instructing agent to send an HVCS instruction no later than 16:45 on a business day unless standards 3.3 or 3.4 apply.`
-	`The following diagram gives an overview of the processes that apply if the instructing agent proposes to send an HVCS instruction after 16:45. The diagram has no legal effect.`
-	*/
-		pnz::clause(
-			"3.2"
-			"When HVCS payments settle"
-			`The effect of rule 9.14 is that if the instructing agent settles an HVCS payment after 17:15, unless the late HVCS instruction requirements apply, the instructed agent:`
-			pnz::level2(
-				`is not required to process the HVCS instruction that business day, but`
-				`may decide to process the HVCS instruction that business day to meet the requirements or the expectations of its customer.`
-			)
-		)
-		pnz::clause(
-			"3.3"
-			"Sending customer HVCS instructions after 16:45"
-			`This clause applies to a customer credit transfer message that is an SCP or a cross border payment redirection if—`
-			pnz::level2(
-				`a technical problem or an operational problem prevents the instructing agent from sending the customer credit transfer message by 16.45 on a business day; and`
-				`the instructing agent requires the instructed agent to credit the creditor’s account with the amount of an HVCS payment that business day.`
-			)
-			`The instructing agent—`
-			pnz::level2(
-				`must obtain the instructed agent’s explicit consent to the time by which the instructing agent must send a HVCS instruction to which this standard applies; and`
-				`must use the contact people and method of communicating for the instructed agent specified in the industry incident contact list; and`
-				`is entitled to obtain the consent in written form or verbal form.`
-			)
-			`The instructed agent is not required to consent to a request from an instructing agent to send a customer credit transfer message after 16:45. For example, the instructed agent may not be able to process the HVCS instruction at the time requested.`
-			`If the instructing agent obtains the instructed agent’s consent to a time for sending the HVCS instruction and the instructing agent sends the HVCS instruction by the agreed time, the timeframe in clause 1.4 of these HVCS Common Procedures does not apply to the HVCS instruction.`
-		)
-		pnz::clause(
-			"3.4"
-			"Sending FI HVCS instructions after 16:45"
-			`This clause applies to a participant who proposes to send and receive FI credit transfer messages during the CLS evening session either—`
-			pnz::level2(
-				`as the creditor or the debtor; or`
-				`on behalf of a FI customer.`
-			)
-			`The participant may only send and receive FI credit transfer messages during the CLS evening session on a business day if—`
-			pnz::level2(
-				`no less than 1 month before that business day,—`
-				pnz::level3(
-					`the participant has notified the chief executive of Payments NZ that on and from a specified date the participant proposes to send and receive FI credit transfer messages during the CLS evening session; and`
-					`the chief executive has notified every other participant that on and from the specified date the participant proposes to send and receive FI credit transfer messages during the CLS evening session; and`
-				)
-				`the participant has, on and from the date specified in the chief executive’s notification, participated in every CLS evening session; and`
-				`the participant participates in the CLS evening session that business day during the time period commencing at 16:45 on the business day and ending 30 minutes after the final CLS pay out.`
-			)
-			`If the participant sends an FI credit transfer message during the CLS evening session in accordance with subclause (2), the timeframe in clause 1.4 of these HVCS Common Procedures do not apply to the FI credit transfer messages.`
-			`If a participant proposes to cease sending and receiving FI credit transfer messages during the CLS evening session, no less than 1 month before the business day that the participant proposes to cease sending and receiving the FI credit transfer messages, the participant must notify Payments NZ that it proposes to cease.`
-		)
-		pnz::clause(
-			"3.5"
-			"Evening session participants"
-		)
-	/*
-	`Participants who send and receive financial institution credit transfers during the CLS evening session are:`
-	`Participants`
-	`Date`
-	`ANZ Bank New Zealand Limited`
-	`1 October 2010`
-	`ASB Bank Ltd`
-	`1 October 2010`
-	`Bank of China (New Zealand) Limited`
-	`4 December 2020`
-	`Bank of New Zealand`
-	`1 October 2010`
-	`Citibank, N.A.`
-	`1 October 2010`
-	`HSBC`
-	`1 October 2010`
-	`Westpac New Zealand Limited`
-	`1 October 2010`
 	`1 Participants should also carefully read Parts 1, 15 and 19 of the Payments NZ Rules to fully understand the operation of the HVCS Clearing and Settlement Rules.  Parts 5, 9-11A, 14 and 16-18 may also be relevant to HVCS instructions in certain circumstances.`
 	`2 This will be governed by section 55 of the Financial Markets Infrastructure Act 2021 when that section comes into force.`
 	`---------------`

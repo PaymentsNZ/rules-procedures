@@ -80,7 +80,7 @@ import [
 						data-number = id
 					}
 				} @> heading
-				ol = html::class( "level1", content )
+				ol = html::class( "level1 level1-counter-reset", content )
 			]
 		)
 	)
@@ -102,17 +102,27 @@ import [
 
 	// pnz.legal::level2 creates indented clauses numbered with the style (a) (b)
 	pnz.legal::level2 = (...content as any) => #( ol = 
-		html::class( "level2", content )
+		html::class( "level2 level2-counter-reset", content )
+	)
+
+	// pnz.legal::continue_level2 creates indented clauses numbered with the style (a) (b)
+	pnz.legal::continue_level2 = (startNumber as number, ...content as any) => #( ol = 
+		{
+			html::attributes = {
+				class = "level2"
+				start = $"$(startNumber)"
+			}
+		} @> content
 	)
 
 	// pnz.legal::level3 creates indented clauses numbered with the style (i) (ii)
 	pnz.legal::level3 = (...content as any) => #( ol = 
-		html::class( "level3", content )
+		html::class( "level3 level3-counter-reset", content )
 	)
 
 	// pnz.legal::level3U creates indented clauses numbered with the style (I) (II)
 	pnz.legal::level3U = (...content as any) => #( ol = 
-		html::class( "level3U", content )
+		html::class( "level3U level3U-counter-reset", content )
 	)
 
 	// pnz.legal::xml creates xml formatted content
@@ -246,6 +256,11 @@ import [
 
 	// pnz.legal::list configures the content as a list
 	pnz.legal::list = (...content as any) => #( ul = content )
+
+	// pnz.legal::dashes sets the style of content to a bulleted list
+	pnz.legal::dashes = (...content as any) => #( ul = 
+		html::class( "dashes", content )
+	)
 
 	// pnz.legal::tick
 	pnz.legal::tick = {

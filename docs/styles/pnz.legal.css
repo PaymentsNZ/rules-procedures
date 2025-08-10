@@ -221,6 +221,10 @@ h1 {
   margin-bottom: 0.1em;
 }
 
+.level1-counter-reset {
+  counter-reset: level;
+}
+
 .level1 > li {
   counter-increment: level1;
   padding-left: var(--indent-level1);
@@ -239,10 +243,13 @@ h1 {
 /* --- Level 2: (a) --- */
 .level2 {
   list-style: none;
-  counter-reset: level2;
   padding-left: var(--indent-level1);
   margin-top: 0em;
   margin-bottom: 1em;
+}
+
+.level2-counter-reset {
+  counter-reset: level2;
 }
 
 .level2 > li {
@@ -262,17 +269,21 @@ h1 {
 
 /* --- Level 3: (i) --- */
 .level3 {
-  counter-reset: level3;
   list-style: none; /* Disable default list numbering */
   padding-left: var(--indent-level3);
   position: relative;
   margin-bottom: 0.1em;
 }
 
+.level3-counter-reset {
+  counter-reset: level3;
+}
+
 .level3 > li {
   counter-increment: level3;
   padding-left: var(--indent-level3);
   position: relative;
+  margin-bottom: 0.5rem;  /* vertical gap */
 }
 
 .level3 > li::before {
@@ -285,21 +296,24 @@ h1 {
 
 /* --- Level 3U: (I) --- */
 .level3U {
-  counter-reset: level3;
   list-style: none; /* Disable default list numbering */
   padding-left: var(--indent-level3);
   position: relative;
   margin-bottom: 0.1em;
 }
 
+.level3U-counter-reset {
+  counter-reset: level3U;
+}
+
 .level3U > li {
-  counter-increment: level3;
+  counter-increment: level3U;
   padding-left: var(--indent-level3);
   position: relative;
 }
 
 .level3U > li::before {
-  content: "(" counter(level3, upper-roman) ")";
+  content: "(" counter(level3U, upper-roman) ")";
   position: absolute;
   left: 0;
   width: var(--indent-level3);
@@ -323,16 +337,23 @@ h1 {
 .pnz-table {
   border-collapse: collapse;       /* Merge adjacent cell borders */
   width: 100%;                     /* Optional: make table full width */
+  vertical-align: top;
 }
 
 .pnz-table th,
 .pnz-table td {
   border: 1px solid black;         /* Thin black border */
   padding: 4px 8px;                /* Optional: add some padding */
+  vertical-align: top;
 }
 
 .pnz-table th {
   text-align: left;                /* Left-align heading text */
+}
+
+.center-col1 th:nth-child(1),
+.center-col1 td:nth-child(1) {
+	text-align: center;
 }
 
 /*
@@ -384,6 +405,30 @@ h1 {
 .bullets strong {
   font-weight: bold;
 }
+
+/*
+** dashes
+*/
+
+ul.dashes {
+  list-style-type: none;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul.dashes li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul.dashes li::marker {
+  content: "– "; /* en dash */
+}
+
+/*
+** tick / cross
+*/
 
 .tick {
   color: green;

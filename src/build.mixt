@@ -10,42 +10,42 @@ import [
 ]
 
 {
-	/*
 	Overview = File.Write(
 		"docs/hvcs/overview.html"
 		Html.FromValue(
-			pnz::document( "HVCS Overview", overview )
+			hvcs::document( "HVCS Overview", overview )
 		)
 	)
+	/*
 	Common = File.Write(
 		"docs/hvcs/common.html"
 		Html.FromValue(
-			pnz::document( "HVCS Common Procedures", common )
+			hvcs::document( "HVCS Common Procedures", common )
 		)
 	)
 	SCP = File.Write(
 		"docs/hvcs/scp.html"
 		Html.FromValue(
-			pnz::document( "HVCS SCP Procedures", scp )
+			hvcs::document( "HVCS SCP Procedures", scp )
 		)
 	)
 	MX = File.Write(
 		"docs/hvcs/mx.html"
 		Html.FromValue(
-			pnz::document( "HVCS MX Procedures", mx )
+			hvcs::document( "HVCS MX Procedures", mx )
 		)
 	)
 	MT = File.Write(
 		"docs/hvcs/mt.html"
 		Html.FromValue(
-			pnz::document( "HVCS MT Procedures", mt )
+			hvcs::document( "HVCS MT Procedures", mt )
 		)
 	)
-	*/
 	Coexistence = File.Write(
 		"docs/hvcs/coexistence.html"
 		Html.FromValue(
 			hvcs::document( "HVCS Coexistence Procedures", coexistence )
 		)
 	)
+	*/
 }

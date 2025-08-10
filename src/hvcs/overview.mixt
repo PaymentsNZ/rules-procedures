@@ -2,6 +2,7 @@
 import [
 	pnz = "../pnz.legal.mixt"
 	hvcs = "hvcs.mixt"
+	html = "../html.mixt"
 ]
 
 [
@@ -50,270 +51,495 @@ import [
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 
-	pnz::clause(
+	pnz::nonumber_clause(
 		""
 		"HVCS rules and procedures overview"
 
-		pnz::nonumber(
-			`This document HVCS Overview (Part A) is one part of a suite of documentation to help participants
-			understand what is required to become a high value clearing system (HVCS) participant and how to send
-			and receive individual HVCS instructions and NZD HVCS payments that the participant cannot revoke or
-			reverse after settlement.`
-		)
+		`This document HVCS Overview (Part A) is one part of a suite of documentation to help participants
+		understand what is required to become a high value clearing system (HVCS) participant and how to send
+		and receive individual HVCS instructions and NZD HVCS payments that the participant cannot revoke or
+		reverse after settlement.`
 	)
 
 	hvcs::menu(0)
 
-	/*
-	`This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).1 Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.`
-	`In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants comply with Part 9 are comprised of:`
-	`• Part A – HVCS Overview (this document)`
-	`o Provides a high-level overview of the HVCS community, message types, how HVCS clearing and settlement works, and the business, technical, and regulatory environment in which the process operates.  This is a non-binding document for use as guidance only.`
-	`• Part B – HVCS Common Procedures`
-	`o Provides binding procedures and product requirements that apply to all HVCS instructions at all times.  This document also contains some non-binding commentary and best practice.`
-	`• Part C – SCP Procedures`
-	`o Provides binding procedures and product requirements that apply only to an HVCS instruction that is a same day cleared payment.  This document also contains some non-binding commentary and best practice, such as recommended terms and conditions with customers.`
-	`• Part D – MX Messaging Procedures`
-	`o Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022 messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and best practice.`
-	`• Part E – MT Messaging Procedures`
-	`o Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022 messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and best practice.`
-	`• Part F – Co-existence Procedures`
-	`o Provides binding procedures for participants during the co-existence phase of the migration from sending and receiving MT messages to MX messages.`
-	`Standards, best practices and commentary`
-	`This section specifies how participants can determine whether the content of an applicable HVCS Standard in appendix 14 creates binding legal rights or obligations.`
-	`Rule 1.8 provides:`
-	`Rules bind participants and affect customers`
-	`The HVCS rules and procedures are a multilateral contract that binds Payments NZ and direct settlement participants acting in various capacities including:`
-	`• instructing agents;2`
-	`• instructed agents;`
-	`• sender of an exception and investigation message or SWIFT messages;`
-	`• receiver of an exception and investigation message, system message or SWIFT messages;`
-	`• creditor agents; and/or`
-	`• debtor agents.`
-	`The multilateral contract does not bind other third parties involved in the HVCS clearing process like debtors, who are customers of debtor agents (often acting as the instructing agent), or creditors, who are customers of creditor agents (often acting as the instructed agent).`
-	`If the HVCS rules and the procedures give a participant a right:`
-	`• no corresponding obligation is imposed on any other person or entity who is not a participant, and`
-	`• other participants must recognise the right when they deal with the participant.`
-	`Although the rules and procedures can’t bind debtors or creditors, rule 9.8 requires participants to ensure that the terms and conditions of each agreement between the participant and an HVCS debtor or creditor are consistent with the HVCS rules. Payments NZ recommends standard terms and conditions that relate to 1 type of HVCS payment – an SCP – that participants can include in their terms and conditions with SCP customers in chapter 2 of the SCP Procedures.`
-	`Document purpose and structure`
-	*/
-	/*
-			`This document provides participants with a general introduction to the HVCS and gives context to the other documents that make up the applicable HVCS Standards (Appendix 14). It introduces the types of messages used by the HVCS, the concept of Y-copy, frequently used terminology, and the organisations and systems involved in the clearing and settlement process and provides participants with a high level overview of the payment message flows used by the HVCS.`
-			`This document is divided into six chapters.`
-			`Chapter 1 introduces new terms that have been included through the implementation of ISO 20022 messaging.`
-			`Chapter 2 provides a high level overview of the process for creating, settling and processing HVCS transactions.`
-			`Chapter 3 provides an overview of the message formats and types of messages sent across the HVCS.`
-			`Chapter 4 introduces Y-copy and HVCS message flows.`
-			`Chapter 5 gives an overview of the organisations and systems involved in the HVCS clearing and settlement processes and their roles.`
-			`Chapter 6 describes the legislation, contracts, and standards that apply to HVCS payments and some of the technical terms used by the HVCS.`
-		)
-	`Documentation map`
-	`Rules`
-	`A – HVCS Overview`
-	`B – HVCS Common Procedures`
-	`C – SCP Procedures`
-	`D – MX Messaging Procedures`
-	`E – MT Messaging Procedures`
-	`F – Co-existence Procedures`
-	`• Part 2 – Access and Participation`
-	`• Part 9 – HVCS Clearing and Settlement`
-	`• Part 10 – Operational Problems`
-	`• Part 12 – Financial Problems`
-	`• Part 19 – definitions`
-	`• HVCS message types`
-	`- Customer credit transfer messages`
-	`- Financial institution credit transfer messages`
-	`- - return messages`
-	`- Exception and investigation messages`
-	`- - system messages`
-	`• Message flows`
-	`• Roles of organisations and systems`
-	`• Regulating HVCS payments`
-	`- Legislation, rules, standards, procedures, by-laws, codes and contracts`
-	`- Technical terms`
-	`• Normal HVCS processing`
-	`- Form, content and delivery of payment instruction`
-	`- HVCS operating times`
-	`- Validating HVCS payments`
-	`- No revoking after settlement`
-	`- Returning HVCS payment: timing, format and content`
-	`• Errors and late processing`
-	`- Error prevents processing`
-	`- Instructed agent credits wrong account`
-	`- Co-operate to resolve processing errors`
-	`- Request and response formats`
-	`- When HVCS payments settle`
-	`- Sending customer HVCS instructions after 16:45`
-	`• Inter-bank SCPs`
-	`- SCP processing`
-	`- Customer notifications`
-	`• On-us SCPs`
-	`- SCP processing`
-	`- Customer notifications`
-	`• Customer Terms and Conditions`
-	`• Introduction to ISO 20022 and SWIFT resources`
-	`- MyStandards, MX Message Specifications and Usage Guidelines`
-	`- Readiness Portal`
-	`- Transaction Manager`
-	`- Associated documents`
-	`• MX Specifications`
-	`- MX message requirements`
-	`- Validation`
-	`- charges`
-	`• ISO 20022 key concepts`
-	`- H/L timeline`
-	`- Message scope`
-	`- Message structure`
-	`- Alignment with CBPR+ and HVPS+`
-	`- Agents in a payment`
-	`- Message flows`
-	`- Message usage guidelines`
-	`- Character sets`
-	`- Structured data`
-	`- Remittance information`
-	`- Structured address line formatting and name`
-	`- LEIs`
-	`• Interact header`
-	`• Business Application Header`
-	`• Payments messages`
-	`• Exception and investigation messages and system messages`
-	`• ESAS setup`
-	`• Partial Y Copy`
-	`- Third party information`
-	`- Message validation`
-	`- Conditional release`
-	`- Agency arrangements`
-	`• Sanctions screening`
-	`• MT messages in scope`
-	`• SWIFT message header details`
-	`• Customer credit transfer (SCP)`
-	`• Customer credit transfer (cross border redirection)`
-	`• Formats for financial institution transfers`
-	`• FINCopy system messages advising transaction status`
-	`• The Journey from MT to MX`
-	`- H/L timeline`
-	`- ISO 20022`
-	`go-live`
-	`- Messages in scope`
-	`• Dual CUGs`
-	`- CUGs during co-existence`
-	`- BIC use for each CUG`
-	`• Structured data`
-	`• Forwarding data`
-	`- Data truncation`
-	`• Mixed MT and MX message flows`
-	`- Transaction Manager`
-	`• Testing requirements`
-	`Chapter 1: Terminology`
-	*/
-		pnz::clause(
-			"1.1"
-			"Rationale for Change"
-			`The introduction of MX messages to the High Value Clearing System (HVCS) introduces new ISO standard terms.  Readers familiar with the previous Appendix 14 will note that many of the terms used previously by the NZ payments industry have been replaced with their ISO equivalents in both the HVCS rules and procedures.`
-			`There are also many places where MT specific terms have been replaced by message system agnostic terms.  This is necessary to prepare for the removal of MT messaging from November 2025.`
-		)
-		pnz::clause(
-			"1.2"
-			"Terminology Venn Diagram"
-			`This diagram shows the relationship between the standards documents and also the relationship between key terms.`
-			`The Rules Part 19.1 should be referenced for definitions of all the terms within the diagram.`
-			`Additional definition of the specific message types and their use can be found in the HVCS Common Procedures Section at clause 1.1.`
-		)
-		pnz::clause(
-			"1.3"
-			"Senders / Receivers / Instructing Agents / Instructed Agents"
-			`ISO 20022 introduces the terms instructing agent and instructed agent.  These terms are used to describe the role of an HVCS participant in relation to a payment message that flows across the HVCS.  During settlement, the instructing agent’s ESAS account is debited, and the instructed agent’s ESAS account is credited.`
-			`Instructing agent and instructed agent are payment message specific terms.  When referencing the wider scope of HVCS Instructions (inclusive of exception and investigation messages and system messages), the terms sender and receiver are used, whereby the sender is the entity that constructs the exception and investigation message or system message and requests message delivery from SWIFT (or in some circumstances is SWIFT itself), and the receiver is the recipient entity.  The sender and receiver of the exception and investigation message and system message are represented within the From and To fields of the Business Application Header.`
-		)
-	/*
-	`Chapter 2: HVCS Overview`
-	*/
-		pnz::clause(
-			"2.1"
-			"HVCS clearing and settlement overview"
-			`The following diagram and table provide a high-level overview of how the people, the organisations and the systems interact to create and process HVCS instructions and settle HVCS payments under normal processing conditions.`
-		)
-	/*
-	`Arrow`
-	`Settlement of HVCS payments`
-	`Rule`
-	`1`
-	`The debtor sends a payment instruction to the instructing agent.`
-	`clause 1.1, HVCS Common Procedures`
-	`2`
-	`The instructing agent sends an payment message using the`
-	`AVP CUG transaction delivery system .`
-	*/
-		pnz::clause(
-			"9.10"
-			""
-		)
-	/*
-	`3`
-	`SWIFT’s transaction delivery system sends a settlement request to ESAS.`
-	`N/A`
-	`4`
-	`ESAS—`
-	
-				`the HVCS payment by debiting the instructing agent’s settlement account and crediting the instructed agent’s settlement account with the amount of the HVCS payment; and`
-				`SWIFT’s transaction delivery system of settlement of the HVCS payment.`
+	pnz::nonumber_clause(
+		""
+		""
+
+		`This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).
+		Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants
+		to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including
+		SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.`
+
+		`In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants
+		comply with Part 9 are comprised of:`
+
+		pnz::bullets(
+			`Part A — HVCS Overview (this document)`
+			pnz::list(
+				`Provides a high-level overview of the HVCS community, message types, how HVCS clearing and
+				settlement works, and the business, technical, and regulatory environment in which the process
+				operates.  This is a non-binding document for use as guidance only.`
+			)
+			`Part B — HVCS Common Procedures`
+			pnz::list(
+				`Provides binding procedures and product requirements that apply to all HVCS instructions at
+				all times.  This document also contains some non-binding commentary and best practice.`
+			)
+			`Part C — SCP Procedures`
+			pnz::list(
+				`Provides binding procedures and product requirements that apply only to an HVCS instruction
+				that is a same day cleared payment.  This document also contains some non-binding commentary
+				and best practice, such as recommended terms and conditions with customers.`
+			)
+			`Part D — MX Messaging Procedures`
+			pnz::list(
+				`Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022
+				messages) across the HVCS MX CUG.  This document also contains some non-binding commentary
+				and best practice.`
+			)
+			`Part E — MT Messaging Procedures`
+			pnz::list(
+				`Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022
+				messages) across the HVCS MT CUG.  This document also contains some non-binding commentary
+				and best practice.`
+			)
+			`Part F — Co-existence Procedures (this document)`
+			pnz::list(
+				`Provides binding procedures for participants during the co-existence phase of the migration
+				from sending and receiving MT messages to MX messages.`
 			)
 		)
-		pnz::clause(
-			"9.13"
-			""
+	)
+
+	pnz::nonumber_clause(
+		""
+		"Standards, best practices and commentary"
+
+		`This section specifies how participants can determine whether the content of an applicable
+		HVCS Standard in appendix 14 creates binding legal rights or obligations.`
+
+		`Rule 1.8 provides:`
+
+		pnz::image( "images/hvcs_overview_rule_1_8.png", "Rule 1.8" )
+	)
+
+	pnz::nonumber_clause(
+		""
+		"Rules bind participants and affect customers"
+
+		`The HVCS rules and procedures are a multilateral contract that binds Payments NZ and direct
+		settlement participants acting in various capacities including:`
+
+		pnz::bullets(
+			`instructing agents;`
+			`instructed agents;`
+			`sender of an exception and investigation message or SWIFT messages;`
+			`receiver of an exception and investigation message, system message or SWIFT messages;`
+			`creditor agents; and/or`
+			`debtor agents.`
 		)
-	`5`
-	`The transaction delivery system delivers the payment message to the instructed agent.`
-	`N/A`
-	`6`
-	`The instructed agent credits the creditor’s account.`
-	`N/A`
-	*/
-		pnz::clause(
-			"2.2"
-			"HVCS clearing and settlement process"
-			`The blocks in the following diagram show the stages in the high value clearing and settlement process described in the HVCS Standards.`
+
+		pnz::br
+		`NOTE: It is important to understand that the terms 'instructing agent' and 'instructed agent'
+		are also defined terms under the ISO 20022 standard.  This means that the ISO 20022 standard
+		might describe a person as an 'instructing agent' or an 'instructed agent' even if they are
+		not a HVCS participant.  However, the Rules have narrowed these definitions from their meaning
+		under the ISO 20022 standard.  This means that whenever these terms are used in the Rules and
+		the HVCS Standards, it is referring to HVCS participants only that fulfil the role of an
+		instructing agent or an instructed agent.`
+
+		`The multilateral contract does not bind other third parties involved in the HVCS clearing
+		process like debtors, who are customers of debtor agents (often acting as the instructing agent),
+		or creditors, who are customers of creditor agents (often acting as the instructed agent).`
+
+		`If the HVCS rules and the procedures give a participant a right:`
+		pnz::bullets(
+			`no corresponding obligation is imposed on any other person or entity who is not a participant, and`
+			`other participants must recognise the right when they deal with the participant.`
 		)
-		pnz::clause(
-			"2.3"
-			"Payment instructions"
-			`For a payment message like an SCP, in which the funds are ‘pushed’ from a customer’s account, the debtor gives a payment instruction to the debtor agent directly and communicates the information required by the debtor agent, for example:`
-			pnz::level2(
-				`the amount and the date of the HVCS payment,`
-				`the account name and the account number to be debited with the amount of the HVCS payment,`
-				`a way of identifying the creditor agent, and`
-				`the account name and the account number to be credited with the amount of the HVCS payment.`
+
+		pnz::br
+		`Although the rules and procedures can't bind debtors or creditors, rule 9.8 requires participants
+		to ensure that the terms and conditions of each agreement between the participant and an HVCS debtor
+		or creditor are consistent with the HVCS rules. Payments NZ recommends standard terms and conditions
+		that relate to 1 type of HVCS payment — an SCP — that participants can include in their terms and
+		conditions with SCP customers in chapter 2 of the SCP Procedures.`
+	)
+
+	pnz::clause(
+		""
+		"Document purpose and structure"
+
+		`This document provides participants with a general introduction to the HVCS and gives context to the
+		other documents that make up the applicable HVCS Standards (Appendix 14). It introduces the types of
+		messages used by the HVCS, the concept of Y-copy, frequently used terminology, and the organisations
+		and systems involved in the clearing and settlement process and provides participants with a high
+		level overview of the payment message flows used by the HVCS.`
+
+		`This document is divided into six chapters.`
+		
+		`Chapter 1 introduces new terms that have been included through the implementation of ISO 20022
+		messaging.`
+		
+		`Chapter 2 provides a high level overview of the process for creating, settling and processing HVCS
+		transactions.`
+		
+		`Chapter 3 provides an overview of the message formats and types of messages sent across the HVCS.`
+		
+		`Chapter 4 introduces Y-copy and HVCS message flows.`
+		
+		`Chapter 5 gives an overview of the organisations and systems involved in the HVCS clearing and
+		settlement processes and their roles.`
+		
+		`Chapter 6 describes the legislation, contracts, and standards that apply to HVCS payments and some
+		of the technical terms used by the HVCS.`
+	)
+
+	pnz::subsection_heading( "Documentation map" )
+
+	pnz::styled_table(
+		"documentation-map"
+		#table(
+			[
+				`Rules`
+				`A — HVCS Overview`
+				`B — HVCS Common Procedures`
+				`C — SCP Procedures`
+				`D — MX Messaging Procedures`
+				`E — MT Messaging Procedures`
+				`F — Co-existence Procedures`
+			]
+			[
+				[
+					// Col1
+					[
+						pnz::bullets(
+							`Part 2 — Access and Participation`
+							`Part 9 — HVCS Clearing and Settlement`
+							`Part 10 — Operational Problems`
+							`Part 12 — Financial Problems`
+							`Part 19 — definitions`
+						)
+					]
+					// Col2
+					[
+						pnz::bullets(
+							`HVCS message types`
+							pnz::dashes(
+								`Customer credit transfer messages`
+								`Financial institution credit transfer messages`
+								pnz::dashes(
+									`return messages`
+								)
+								`Exception and investigation messages`
+								pnz::dashes(
+									`system messages`
+								)
+							)
+							`Message flows`
+							`Roles of organisations and systems`
+							`Regulating HVCS payments`
+							pnz::dashes(
+								`Legislation, rules, standards, procedures, by-laws, codes and contracts`
+								`Technical terms`
+							)
+						)
+					]
+					// Col3
+					[
+						pnz::bullets(
+							`Normal HVCS processing`
+							pnz::dashes(
+								`Form, content and delivery of payment instruction`
+								`HVCS operating times`
+								`Validating HVCS payments`
+								`No revoking after settlement`
+								`Returning HVCS payment: timing, format and content`
+							)
+							`Errors and late processing`
+							pnz::dashes(
+								`Error prevents processing`
+								`Instructed agent credits wrong account`
+								`Co-operate to resolve processing errors`
+								`Request and response formats`
+								`When HVCS payments settle`
+								`Sending customer HVCS instructions after 16:45`
+							)
+						)
+					]
+					// Col4
+					[
+						pnz::bullets(
+							`Inter-bank SCPs`
+								pnz::dashes(
+									`SCP processing`
+									`Customer notifications`
+								)
+							`On-us SCPs`
+							pnz::dashes(
+								`SCP processing`
+								`Customer notifications`
+							)
+							`Customer Terms and Conditions`
+						)
+					]
+					// Col5
+					[
+						pnz::bullets(
+							`Introduction to ISO 20022 and SWIFT resources`
+							pnz::dashes(
+								`MyStandards, MX Message Specifications and Usage Guidelines`
+								`Readiness Portal`
+								`Transaction Manager`
+								`Associated documents`
+							)
+							`MX Specifications`
+							pnz::dashes(
+								`MX message requirements`
+								`Validation`
+								`charges`
+							)
+							`ISO 20022 key concepts`
+							pnz::dashes(
+								`H/L timeline`
+								`Message scope`
+								`Message structure`
+								`Alignment with CBPR+ and HVPS+`
+								`Agents in a payment`
+								`Message flows`
+								`Message usage guidelines`
+								`Character sets`
+								`Structured data`
+								`Remittance information`
+								`Structured address line formatting and name`
+								`LEIs`
+							)
+							`Interact header`
+							`Business Application Header`
+							`Payments messages`
+							`Exception and investigation messages and system messages`
+							`ESAS setup`
+							`Partial Y Copy`
+							pnz::dashes(
+								`Third party information`
+								`Message validation`
+								`Conditional release`
+								`Agency arrangements`
+							)
+							`Sanctions screening`
+						)
+					]
+					// Col6
+					[
+						pnz::bullets(
+							`MT messages in scope`
+							`SWIFT message header details`
+							`Customer credit transfer (SCP)`
+							`Customer credit transfer (cross border redirection)`
+							`Formats for financial institution transfers`
+							`FINCopy system messages advising transaction status`
+						)
+					]
+					// Col7
+					[
+						pnz::bullets(
+							`The Journey from MT to MX`
+							pnz::dashes(
+								`H/L timeline`
+								`ISO 20022 go-live`
+								`Messages in scope`
+							)
+							`Dual CUGs`
+							pnz::dashes(
+								`CUGs during co-existence`
+								`BIC use for each CUG`
+							)
+							`Structured data`
+							`Forwarding data`
+							pnz::dashes(
+								`Data truncation`
+							)
+							`Mixed MT and MX message flows`
+							pnz::dashes(
+								`Transaction Manager`
+							)
+							`Testing requirements`
+						)
+					]
+				]
+			]
+		)
+	)
+
+	pnz::section_heading( "Chapter 1: Terminology" )
+
+	pnz::clause(
+		"1.1"
+		"Rationale for Change"
+		
+		`The introduction of MX messages to the High Value Clearing System (HVCS) introduces new
+		ISO standard terms.  Readers familiar with the previous Appendix 14 will note that many of
+		the terms used previously by the NZ payments industry have been replaced with their ISO
+		equivalents in both the HVCS rules and procedures.`
+
+		`There are also many places where MT specific terms have been replaced by message system
+		agnostic terms.  This is necessary to prepare for the removal of MT messaging from November
+		2025.`
+	)
+
+	pnz::clause(
+		"1.2"
+		"Terminology Venn Diagram"
+		
+		`This diagram shows the relationship between the standards documents and also the relationship
+		between key terms.`
+
+		pnz::image( "images/hvcs_overview_standards.png", "Standards Overview" )
+
+		pnz::br
+		`The Rules Part 19.1 should be referenced for definitions of all the terms within the diagram.`
+
+		`Additional definition of the specific message types and their use can be found in the HVCS
+		Common Procedures Section at clause 1.1.`
+	)
+
+	pnz::clause(
+		"1.3"
+		"Senders / Receivers / Instructing Agents / Instructed Agents"
+		
+		`ISO 20022 introduces the terms instructing agent and instructed agent.  These terms are used to
+		describe the role of an HVCS participant in relation to a payment message that flows across the
+		HVCS.  During settlement, the instructing agent's ESAS account is debited, and the instructed
+		agent's ESAS account is credited.`
+
+		`Instructing agent and instructed agent are payment message specific terms.  When referencing
+		the wider scope of HVCS Instructions (inclusive of exception and investigation messages and
+		system messages), the terms sender and receiver are used, whereby the sender is the entity that
+		constructs the exception and investigation message or system message and requests message
+		delivery from SWIFT (or in some circumstances is SWIFT itself), and the receiver is the
+		recipient entity.  The sender and receiver of the exception and investigation message and
+		system message are represented within the From and To fields of the Business Application Header.`
+	)
+
+	pnz::section_heading( "Chapter 2: HVCS Overview" )
+
+	pnz::clause(
+		"2.1"
+		"HVCS clearing and settlement overview"
+
+		`The following diagram and table provide a high-level overview of how the people, the
+		organisations and the systems interact to create and process HVCS instructions and settle HVCS
+		payments under normal processing conditions.`
+
+		pnz::image( "images/hvcs_overview_clearing_and_settlement.png", "HVCS Clearing and Settlement Overview" )
+
+		pnz::styled_table(
+			"center-col1"
+			#table(
+				[
+					`Arrow`
+					`Settlement of HVCS payments`
+					`Rule`
+				]
+				[
+					[
+						1
+						`The debtor sends a payment instruction to the instructing agent.`
+						`clause 1.1, HVCS Common Procedures`
+					]
+					[
+						2
+						`The instructing agent sends an payment message using the AVP CUG transaction
+						delivery system.`
+						"9.10"
+					]
+					[
+						`3`
+						`SWIFT's transaction delivery system sends a settlement request to ESAS.`
+						`N/A`
+					]
+					[
+						4
+						[
+							`ESAS—`
+							pnz::dashes(
+								`settles the HVCS payment by debiting the instructing agent's settlement account
+								andcrediting the instructed agent's settlement account with the amount of the
+								HVCS payment; and`
+								`notifies SWIFT's transaction delivery system of settlement of the HVCS payment.`
+							)
+						]
+						"9.13"
+					]
+					[
+						`5`
+						`The transaction delivery system delivers the payment message to the instructed agent.`
+						`N/A`
+					]
+					[
+						`6`
+						`The instructed agent credits the creditor's account.`
+						`N/A`
+					]
+				]
 			)
-			`The payment instruction is usually authenticated (e.g. for an SCP with a log on password for internet banking) allowing the debtor agent to confirm that the payment instruction comes from a secure source.`
 		)
-		pnz::clause(
-			"2.4"
-			""
+	)
+
+	pnz::clause(
+		"2.2"
+		"HVCS clearing and settlement process"
+
+		`The blocks in the following diagram show the stages in the high value clearing and settlement
+		process described in the HVCS Standards.`
+	)
+	pnz::image( "images/hvcs_clearing_and_settlement_process.svg", "HVCS Clearing and Settlment Process" )
+
+	pnz::clause(
+		"2.3"
+		"Payment instructions"
+
+		`For a payment message like an SCP, in which the funds are 'pushed' from a customer's account,
+		the debtor gives a payment instruction to the debtor agent directly and communicates the information
+		required by the debtor agent, for example:`
+
+		pnz::level2(
+			`the amount and the date of the HVCS payment,`
+			`the account name and the account number to be debited with the amount of the HVCS payment,`
+			`a way of identifying the creditor agent, and`
+			`the account name and the account number to be credited with the amount of the HVCS payment.`
 		)
-	/*
-	`Irrevocable`
-	*/
+		`The payment instruction is usually authenticated (e.g. for an SCP with a log on password for internet banking) allowing the debtor agent to confirm that the payment instruction comes from a secure source.`
+	)
+
+	pnz::clause(
+		"2.4"
+		"Irrevocable"
+
+		[
 			`The HVCS is used to make large payments quickly. HVCS payments are:`
 			pnz::level2(
 				`fast; and`
 				`irrevocable`
 			)
-//		)
-	/*
-	`Therefore:`
-	*/
+			`Therefore:`
+			pnz::continue_level2( 3
 				`an HVCS payment cannot be reversed by the instructing agent after settlement, and`
-				`if the creditor’s account is credited with the amount of the HVCS payment, the instructed agent cannot reverse the HVCS payment.`
-//			)
-//		)
-	/*
-	`Chapter 3: HVCS message types`
-	*/
+
+				`if the creditor's account is credited with the amount of the HVCS payment, the
+				instructed agent cannot reverse the HVCS payment.`
+			)			
+		]
+	)
+
+	pnz::section_heading( "Chapter 3: HVCS message types" )
+
 		pnz::clause(
 			"3.1"
 			"Message formats"
-			`The HVCS uses two SWIFT message formats that have been defined for New Zealand’s HVCS. They are:`
+			`The HVCS uses two SWIFT message formats that have been defined for New Zealand's HVCS. They are:`
 			pnz::level2(
 				`MX message format (ISO 20022)`
 				`MT message format (ISO 15022)`
@@ -337,708 +563,1468 @@ import [
 			"HVCS payment categories"
 			`An HVCS participant can make the following types of payment:`
 		)
-	/*
-	`Payment category`
-	`Sub type`
-	`#`
-	`Product / Scenario`
-	`Currency`
-	`Debtor agent`
-	`Creditor agent`
-	`Example use case`
-	`Customer Credit Transfer`
-	`Domestic (NZD)`
-	`1`
-	`Same Day Cleared Payment`
-	`NZD`
-	`Participant`
-	`Participant or financial institution customer of Participant`
-	`NZD SCP for settlement to customer of a  Participant`
-	`2`
-	`Other NZD Customer Payment`
-	`NZD`
-	`AVP MX CUG Member`
-	`AVP MX CUG Member`
-	`NZD payment to foreign currency account of a customer of an AVP MX CUG member`
-	`Cross border payment redirection`
-	`3`
-	`Initiated overseas for`
-	`domestic creditor`
-	`NZD or NZD converted from foreign Currency`
-	`Foreign financial institution`
-	`Participant or financial institution customer of participant`
-	`NZD or foreign currency converted to NZD for settlement to customer of a  participant`
-	`4`
-	`Initiated domestically for overseas creditor`
-	`NZD`
-	`AVP CUG member`
-	`Foreign financial institution`
-	`Payment message created by a participant routed to another participant prior to routing overseas`
-	`5`
-	`Initiated overseas for`
-	`overseas creditor`
-	`NZD`
-	`Foreign financial institution`
-	`Foreign financial institution`
-	`NZD serial payment between two foreign financial institutions who hold NZD Nostro accounts each with a different participant`
-	`FI to FI Credit Transfer`
-	`Core`
-	`6`
-	`Payment between two financial institutions`
-	`NZD`
-	`AVP CUG member or`
-	`financial institution customer of participant or foreign financial institution`
-	`AVP CUG member or`
-	`financial institution customer of  participant or foreign financial institution`
-	`CLS Settlement, Vostro Payment`
-	`Cover`
-	`7`
-	`Cover leg of direct and cover payment`
-	`NZD`
-	`AVP CUG member or`
-	`agent of participant or foreign financial institution`
-	`AVP CUG member or`
-	`financial institution customer of  participant or foreign financial institution`
-	`Cover for a credit transfer to a customer of an AVP CUG member`
-	`Customer credit transfer`
-	*/
-		pnz::clause(
-			"3.4"
-			"Introduction"
-			`A customer credit transfer is used to make high value NZD payments from a debtor account to a creditor account.`
-			`A customer credit transfer payment message can be used by participants in the following scenarios:`
-			pnz::level2(
-				`Same day cleared payment (SCP) either –`
-				pnz::level3(
-					`between 2 of its own customers (an on-us SCP), or`
-					`from its own customer to a customer of another participant using a payment message,`
-				)
-				`A domestic payment as an MX message to a creditor that does not meet the criteria to be classified as an SCP (e.g. alternate account number format)`
-				`A cross border payment redirection`
+
+	pnz::styled_table(
+		"payment-categories-table"
+		#table(
+			[
+				"Payment category",
+				"Sub type",
+				"#",
+				"Product / Scenario",
+				"Currency",
+				"Debtor agent",
+				"Creditor agent",
+				"Example use case"
+			]
+			[
+				// Customer Credit Transfer - Domestic (NZD)
+				[
+					"Customer Credit Transfer" <@ pnz::rowspan(5)
+					"Domestic (NZD)" <@ pnz::rowspan(2)
+					"1"
+					"Same Day Cleared Payment"
+					"NZD"
+					"Participant"
+					"Participant or financial institution customer of Participant"
+					"NZD SCP for settlement to customer of a Participant"
+				]
+				[
+					""
+					""
+					"2"
+					"Other NZD Customer Payment"
+					"NZD"
+					"AVP MX CUG Member"
+					"AVP MX CUG Member"
+					"NZD payment to foreign currency account of a customer of an AVP MX CUG member"
+				]
+				// Cross border payment redirection
+				[
+					""
+					"Cross border payment redirection" <@ pnz::rowspan(3)
+					"3"
+					"Initiated overseas for domestic creditor"
+					"NZD or NZD converted from foreign Currency"
+					"Foreign financial institution"
+					"Participant or financial institution customer of participant"
+					"NZD or foreign currency converted to NZD for settlement to customer of a participant"
+				]
+				[
+					""
+					""
+					"4"
+					"Initiated domestically for overseas creditor"
+					"NZD"
+					"AVP CUG member"
+					"Foreign financial institution"
+					"Payment message created by a participant routed to another participant prior to routing overseas"
+				]
+				[
+					""
+					""
+					"5"
+					"Initiated overseas for overseas creditor"
+					"NZD"
+					"Foreign financial institution"
+					"Foreign financial institution"
+					`NZD serial payment between two foreign financial institutions who hold
+					NZD Nostro accounts each with a different participant`
+				]
+				// FI to FI Credit Transfer - Core
+				[
+					"FI to FI Credit Transfer" <@ pnz::rowspan(2)
+					"Core"
+					"6"
+					"Payment between two financial institutions"
+					"NZD"
+					`AVP CUG member or financial institution customer of participant or foreign
+					financial institution`
+					`AVP CUG member or financial institution customer of participant or foreign
+					financial institution`
+					"CLS Settlement, Vostro Payment"
+				]
+				// FI to FI Credit Transfer - Cover
+				[
+					""
+					"Cover"
+					"7"
+					"Cover leg of direct and cover payment"
+					"NZD"
+					[
+						"AVP CUG member or"
+						pnz::br
+						"agent of participant or foreign financial institution"
+					]
+					[
+						"AVP CUG member or"
+						pnz::br
+						"financial institution customer of participant or foreign financial institution"
+					]
+					"Cover for a credit transfer to a customer of an AVP CUG member"
+				]
+			]
+		)
+	)
+
+	pnz::subsection_heading( "Customer credit transfer" )
+
+	pnz::clause(
+		"3.4"
+		"Introduction"
+		
+		`A customer credit transfer is used to make high value NZD payments from a debtor account to
+		a creditor account.`
+		
+		`A customer credit transfer payment message can be used by participants in the following scenarios:`
+		pnz::level2(
+			`Same day cleared payment (SCP) either —`
+			pnz::level3(
+				`between 2 of its own customers (an on-us SCP), or`
+				`from its own customer to a customer of another participant using a payment message,`
+			)
+			
+			`A domestic payment as an MX message to a creditor that does not meet the criteria to be
+			classified as an SCP (e.g. alternate account number format)`
+			
+			`A cross border payment redirection`
+		)
+	)
+
+	pnz::subsection_heading( "Same day cleared payment" )	
+
+	pnz::clause(
+		"3.5"
+		"Same day cleared payment"
+		
+		`A participant's customer typically uses a same day cleared payment (SCP) if the customer
+		proposes to make a high value NZD payment to a New Zealand customer quickly in clear and
+		irrevocable funds, for example, to complete a linked transaction.`
+
+		`The following diagram and table show at a high level how 2 different participants and their
+		customers interact to make an SCP in exchange for transfer of the title to a house.`
+
+		`More information on SCPs is provided in Part C - SCP Procedures.`
+
+		pnz::image( "images/hvcs_overview_sameday_cleared_payment.png", "Sameday Cleared Payment" )
+
+		pnz::styled_table(
+			"center-col1"
+			#table(
+				[
+					"Step", "Action"
+				]
+				[
+					[
+						1
+						`A debtor instructs the debtor agent to make an NZD payment to the customer
+						of the creditor agent.`
+					]
+					[
+						2
+						[
+							`The instructing agent creates a customer credit transfer message that includes
+							requirements for SCPs and sends the payment message to the instructed agent using
+							the SWIFT transaction delivery system through the AVP CUG.`
+							`If the debtor agent is not the instructing agent, the debtor agent needs to have
+							an arrangement with an instructing agent to send payment messages to give effect
+							to their customer's payment instruction.`
+						]
+					]
+					[
+						3
+						[
+							`The creditor agent credits the creditor's account with the amount of the HVCS payment.`
+							`If the creditor agent is not the instructed agent, the creditor agent needs to have an
+							arrangement with an instructed agent to enable their customer to receive the amount of
+							the HVCS payment.`
+						]
+					]
+					[
+						4
+						`Neither the debtor, the debtor agent nor the instructing agent can revoke the SCP payment
+						after the HVCS payment settles and the creditor can rely on the payment to, for example,
+						transfer title of the creditor's house to the debtor.`
+					]
+				]
 			)
 		)
-	/*
-	`Same day cleared payment`
-	*/
-		pnz::clause(
-			"3.5"
-			"Same day cleared payment"
-			`A participant’s customer typically uses a same day cleared payment (SCP) if the customer proposes to make a high value NZD payment to a New Zealand customer quickly in clear and irrevocable funds, for example, to complete a linked transaction.`
-			`The following diagram and table show at a high level how 2 different participants and their customers interact to make an SCP in exchange for transfer of the title to a house.`
-			`More information on SCPs is provided in Part C - SCP Procedures.`
+	)
+
+	pnz::clause(
+		"3.6"
+		"Non-SCP Customer Credit Transfer"
+
+		`This section applies to MX messages only.`
+
+		`A payment to a creditor that does not meet the SCP criteria can be sent a customer credit transfer without
+		the SCP designation by omitting the Local Instrument code.  Examples of where this could be used are:`
+
+		pnz::level2(
+			`The creditor's account number does not meet the SCP formatting requirements e.g. NZD payment to a foreign
+			currency account of a domestic creditor, or`
+
+			`The debtor agent is neither a participant nor AVP CUG member, such as a financial institution with an
+			agency arrangement with a participant.`
 		)
-	/*
-	`Step`
-	`Action`
-	`1`
-	`A debtor instructs the debtor agent to make an NZD payment to the customer of the creditor agent.`
-	`2`
-	`The instructing agent creates a customer credit transfer message that includes requirements for SCPs and sends the payment message to the instructed agent using the SWIFT transaction delivery system through the AVP CUG.`
-	`If the debtor agent is not the instructing agent, the debtor agent needs to have an arrangement with an instructing agent to send payment messages to give effect to their customer's payment instruction.`
-	`3`
-	`The creditor agent credits the creditor’s account with the amount of the HVCS payment.`
-	`If the creditor agent is not the instructed agent, the creditor agent needs to have an arrangement with an instructed agent to enable their customer to receive the amount of the HVCS payment.`
-	`4`
-	`Neither the debtor, the debtor agent nor the instructing agent can revoke the SCP payment after the HVCS payment settles and the creditor can rely on the payment to, for example, transfer title of the creditor’s house to the debtor.`
-	`Customer credit transfer (non-SCP)`
-	*/
-		pnz::clause(
-			"3.6"
-			"Non-SCP Customer Credit Transfer"
-			`This section applies to MX messages only.`
-			`A payment to a creditor that does not meet the SCP criteria can be sent a customer credit transfer without the SCP designation by omitting the Local Instrument code.  Examples of where this could be used are:`
-			pnz::level2(
-				`The creditor’s account number does not meet the SCP formatting requirements e.g. NZD payment to a foreign currency account of a domestic creditor, or`
-				`The debtor agent is neither a participant nor AVP CUG member, such as a financial institution with an agency arrangement with a participant.`
+	)
+
+	pnz::subsection_heading( "Cross border payment redirection" )
+
+	pnz::clause(
+		"3.7"
+		"Cross border payment redirection"
+
+		pnz::nonumber(
+			`The following are provided as examples for the overview. For detail of all scenarios, please see the
+			applicable message standards.`
+		)
+
+		`A cross border redirection allows a participant to forward a customer credit transfer message from an
+		overseas financial institution (acting for the financial institution's own customer) to the customer of
+		another participant, who then credits its customer's account with the amount of the cross border payment.`
+
+		`The diagram and table show, at a high level, how the people and organisations interact to make a cross
+		border redirection.`
+
+		pnz::image( "images/hvcs_cross_border_payment_redirections.png", "Cross Border Redirection" )
+
+		pnz::styled_table(
+			"center-col1"
+			#table(
+				[
+					"Step", "Action"
+				]
+				[
+					[
+						1
+						"The debtor instructs an overseas bank to make an NZD payment to the creditor of the creditor agent."
+					]
+					[
+						2
+						[
+							`The overseas bank (debtor agent) has an NZD account with the instructing agent (the domestic intermediary).`
+
+							`The debtor agent instructs the instructing agent to debit their NZD account and to pay the creditor using
+							a customer credit transfer message.`
+						]
+					]
+					[
+						3
+						`The instructing agent debits the overseas bank's NZD account, creates a cross border redirection using a customer
+						credit transfer message and sends the HVCS payment to the instructed agent for settlement in ESAS using the AVP CUG
+						transaction delivery system.`
+					]
+					[ 
+						4
+						[
+							`The instructed agent credits the creditor's account with the amount of the HVCS payment.`
+							
+							`If the creditor agent is not an instructed agent, the creditor agent needs to have an arrangement
+							with an instructed agent to enable their customer to receive the amount of the HVCS payment.`
+						]
+					]
+					[
+						5
+						`The instructing agent cannot reverse the cross border redirection after settlement and the creditor can
+						rely on the payment to complete a linked transaction, for example, delivering goods to the payer.`
+					]
+				]
 			)
 		)
-	/*
-	`Cross border payment redirection`
-	*/
-		pnz::clause(
-			"3.7"
-			"Cross border payment redirection"
+	)
+
+	pnz::subsection_heading( "Financial institution credit transfer" )
+
+	pnz::clause(
+		"3.8"
+		"Introduction"
+		
+		`A financial institution (FI) credit transfer is used to transfer funds from one participant to another
+		participant. A FI credit transfer message can also be used by participants in a direct and cover payment
+		scenario.`
+	)
+
+	pnz::subsection_heading( "FI credit transfer" )
+
+	pnz::clause(
+		"3.9"
+		"Financial institution credit transfer process"
+
+		pnz::nonumber(
+			`The following are provided as examples for the overview. For detail of all scenarios, please see
+			the applicable message standards.`
 		)
-	/*
-	`The following are provided as examples for the overview. For detail of all scenarios, please see the applicable message standards.`
-	*/
-			`A cross border redirection allows a participant to forward a customer credit transfer message from an overseas financial institution (acting for the financial institution’s own customer) to the customer of another participant, who then credits its customer’s account with the amount of the cross border payment.`
-			`The diagram and table show, at a high level, how the people and organisations interact to make a cross border redirection.`
-//		)
-	/*
-	`Step`
-	`Action`
-	`1`
-	`The debtor instructs an overseas bank to make an NZD payment to the creditor of the creditor agent.`
-	`2`
-	`The overseas bank (debtor agent) has an NZD account with the instructing agent (the domestic intermediary). The debtor agent instructs the instructing agent to debit their NZD account and to pay the creditor using a customer credit transfer message.`
-	`3`
-	`The instructing agent debits the overseas bank's NZD account, creates a cross border redirection using a customer credit transfer message and sends the HVCS payment to the instructed agent for settlement in ESAS using the AVP CUG transaction delivery system.`
-	`4`
-	`The instructed agent credits the creditor’s account with the amount of the HVCS payment.`
-	`If the creditor agent is not an instructed agent, the creditor agent needs to have an arrangement with an instructed agent to enable their customer to receive the amount of the HVCS payment.`
-	`5`
-	`The instructing agent cannot reverse the cross border redirection after settlement and the creditor can rely on the payment to complete a linked transaction, for example, delivering goods to the payer.`
-	`Financial institution credit transfer`
-	*/
-		pnz::clause(
-			"3.8"
-			"Introduction"
-			`A financial institution (FI) credit transfer is used to transfer funds from one participant to another participant. A FI credit transfer message can also be used by participants in a direct and cover payment scenario.`
+
+		`A participant may send an FI credit transfer message to pay the creditor who is also a financial
+		institution.`
+
+		`The following diagram and table show at a high level how financial institutions interact to send
+		a FI to FI credit transfer which is typically the domestic settlement leg of a payment from the
+		debtor to the creditor.`
+	)
+
+	pnz::image( "images/hvcs_overview_fi_credit_transfer.png", "FI Credit Transfer")
+
+	pnz::styled_table(
+		"center-col1"
+		#table(
+			[
+				"Step", "Action"
+			]
+			[
+				[
+					1
+					[
+						"An overseas debtor or debtor agent:"
+						pnz::bullets(
+							`has an NZD account with a participant (the instructing agent in the diagram), and`
+							`instructs the instructing agent to debit the debtor agent's NZD account and to
+							credit the creditor agent's NZD account.`
+						)
+						`The creditor or creditor agent has an NZD account with another participant (the
+						instructed agent in the diagram).`
+					]
+				]
+				[
+					2
+					"The instructing agent debits the debtor/debtor agent's NZD account."
+				]
+				[
+					3
+					`The instructing agent sends an FI credit transfer to the instructed agent using the AVP
+					CUG transaction delivery system.`
+				]
+				[
+					4
+					`The instructed agent credits the creditor/creditor agent's NZD account with the amount
+					of the HVCS payment.`
+				]
+				[
+					5
+					"The debtor/debtor agent cannot reverse the payment after settlement."
+				]
+			]
 		)
-	/*
-	`FI credit transfer`
-	*/
-		pnz::clause(
-			"3.9"
-			"Financial institution credit transfer process"
+	)
+
+	pnz::subsection_heading( "Financial institution credit transfer cover" )
+
+	pnz::clause(
+		"3.10"
+		"Financial institution credit transfer cover process"
+
+		pnz::nonumber(
+			`The following are provided as examples for the overview. For detail of all scenarios, please
+			see the applicable message standards.`
 		)
-	/*
-	`The following are provided as examples for the overview. For detail of all scenarios, please see the applicable message standards.`
-	*/
-			`A participant may send an FI credit transfer message to pay the creditor who is also a financial institution.`
-			`The following diagram and table show at a high level how financial institutions interact to send a FI to FI credit transfer which is typically the domestic settlement leg of a payment from the debtor to the creditor.`
-//		)
-	/*
-	`Step`
-	`Action`
-	`1`
-	`An overseas debtor or debtor agent:`
-	`• has an NZD account with a participant (the instructing agent in the diagram), and`
-	`• instructs the instructing agent to debit the debtor agent’s NZD account and to credit the creditor agent’s NZD account.`
-	`The creditor or creditor agent has an NZD account with another participant (the instructed agent in the diagram).`
-	`2`
-	`The instructing agent debits the debtor/debtor agent's NZD account.`
-	`3`
-	`The instructing agent sends an FI credit transfer to the instructed agent using the AVP CUG transaction delivery system.`
-	`4`
-	`The instructed agent credits the creditor/creditor agent's NZD account with the amount of the HVCS payment.`
-	`5`
-	`The debtor/debtor agent cannot reverse the payment after settlement.`
-	`Financial institution credit transfer cover`
-	*/
-		pnz::clause(
-			"3.10"
-			"Financial institution credit transfer cover process"
+
+		`An FI credit transfer can also be used in a direct and cover payment scenario whereby a participant
+		may send an FI credit transfer message with the contents of a customer credit transfer message received
+		from an overseas financial institution (FI cover message).`
+
+		`An FI cover message:`
+		pnz::level2(
+			`is linked to a customer credit transfer message involving a debtor or a creditor who is not a
+			financial institution,`
+			
+			`contains the linked customer credit transfer message with the name and address of the debtor
+			or the creditor,`
+
+			`settles the obligations of a financial institution (the debtor agent) who sends a customer credit
+			transfer message to another financial institution (for example the creditor agent in the diagram)
+			if the debtor agent does not have an account with the creditor agent.`
 		)
-	/*
-	`The following are provided as examples for the overview. For detail of all scenarios, please see the applicable message standards.`
-	*/
-			`An FI credit transfer can also be used in a direct and cover payment scenario whereby a participant may send an FI credit transfer message with the contents of a customer credit transfer message received from an overseas financial institution (FI cover message).`
-			`An FI cover message:`
-			pnz::level2(
-				`is linked to a customer credit transfer message involving a debtor or a creditor who is not a financial institution,`
-				`contains the linked customer credit transfer message with the name and address of the debtor or the creditor,`
-				`settles the obligations of a financial institution (the debtor agent) who sends a customer credit transfer message to another financial institution (for example the creditor agent in the diagram) if the debtor agent does not have an account with the creditor agent.`
+		`The following diagram and table show at a high level how financial institutions interact to send an
+		FI cover message.`
+	)
+
+	pnz::image( "images/hvcs_overview_fi_credit_transfer_cover.png", "FI Credit Transfer Cover")
+
+	pnz::styled_table(
+		"center-col1"
+		#table(
+			[
+				"Step", "Action"
+			]
+			[
+				[
+					1
+					`A debtor instructs their overseas bank (debtor agent) to make an NZD payment
+					to a creditor.`
+				]
+				[
+					2
+					[
+						"The overseas debtor agent"
+						pnz::bullets(
+							`sends a customer credit transfer message to the overseas creditor agent.`
+
+							`has an NZD account with a participant (its correspondent bank) so it sends
+							a financial FI cover message (with the details of the customer credit participant
+							transfer message embedded in the payment message) to the correspondent bank (labelled
+							B in the diagram). The FI cover message instructs the correspondent bank participant
+							to debit the debtor agent's NZD account and credit the NZD account of the creditor
+							agent's correspondent bank (labelled C in the diagram).`
+						)
+					]
+				]
+				[
+					3
+					"The correspondent bank participant debits the debtor agent's NZD account."
+				]
+				[
+					4
+					`The correspondent bank participant, as instructing agent, sends an FI cover message to the
+					correspondent bank of the creditor agent, as instructed agent using the AVP CUG transaction
+					delivery system.`
+				]
+				[
+					5
+					`The instructed agent credits the creditor agent's NZD account with the amount of the HVCS
+					payment.`
+				]
+				[
+					6
+					`When the creditor agent's account is credited, the creditor agent has the money to comply
+					with the payment instruction in the customer credit transfer message (received under step
+					2). The creditor agent credits the creditor's account. The debtor cannot reverse the HVCS
+					payment after settlement and the creditor can rely on the HVCS payment to complete a linked
+					transaction, for example, provide goods or services to the debtor.`
+				]
+			]
+		)
+	)
+
+	pnz::subsection_heading( "Exception and investigation messages" )
+
+	pnz::clause(
+		"3.11"
+		"Introduction"
+		
+		`The exception and investigation messages are designed to support investigation case management in
+		connection with the cancellation of payment messages or independently between a case assigner and
+		assignee.`
+		
+		`There are two common scenarios for exception and investigation messages to be used by participants:`
+		pnz::level2(
+			`an unsolicited return where a payment instruction has failed to credit the creditor's account and
+			resulted in a return message by the instructed agent; or`
+
+			`a solicited return where a cancellation request has been initiated by the instructing agent and
+			resulted in a return message.`
+		)
+	)
+
+	pnz::clause(
+		"3.12"
+		"Unsolicited return — failed to credit account"
+		
+		`A Return message is initiated by the creditor agent and used to return the original payment message,
+		for example, in the case of an invalid payment message (e.g. specifying an incorrect account number).`
+	)
+
+	pnz::clause(
+		"3.13"
+		"Solicited return — request for cancellation"
+
+		`A Payment Cancellation Request message can be used to request the cancellation of an HVCS payment.
+		This message would typically be created by the debtor agent and sent to the creditor agent depending
+		on the status of the payment.`
+
+		`This exception and investigation message must be used only for the return of HVCS payments and the
+		sender of the cancellation request must include their investigation case identifier within the
+		"Case/Identification" element of the exception and investigation message.`
+
+		`On receipt of a Payment Cancellation Request message by a participant, the participant must investigate
+		the request and respond by sending a Resolution of Investigation message back to sender of the request
+		indicating whether the Payment Cancellation Request is pending, or if it has been accepted or rejected.`
+
+		`If the Payment Cancellation Request is accepted, the participant sends a return message and the returned
+		VCS payment to the instructing agent of the HVCS payment being returned along with the Resolution o
+		Investigation.`
+
+		`The diagram below describes the message flow between participants when a Payment Cancellation Request
+		is sent by a debtor agent.`
+	)
+
+	pnz::image( "images/hvcs_overview_solicited_return.png", "Solicited Return")
+
+	pnz::clause(
+		"3.14"
+		"Payment return"
+
+		`Exception and investigation messages may result in a return message being sent by an agent to the
+		previous agent in the payment chain to return a payment previously settled.`
+
+		`Return messages may be the consequence of a payment message cancellation requested by the debtor
+		agent or one of the intermediary agents of the HVCS payment or sent by a creditor agent or instructed
+		agent due to a failure to process the payment message.`
+
+		`The return message refers to the payment message(s) by means of references only, or by means of
+		references and a set of elements from the payment message, and the return message must include a
+		payment return code. The full value of the original HVCS payment must be returned as a single payment
+		or in instalments in circumstances permitted by the applicable message standards.`
+
+		`The following diagram and table show at a high level how participants interact to return an HVCS
+		payment with a return message where the payment message could not be processed for example, due to
+		a failure to credit the creditor's account.`
+	)
+
+	pnz::image( "images/hvcs_overview_unsolicited_return.png", "Unsolicited Return")
+
+	pnz::styled_table(
+		"center-col1"
+		#table(
+			[
+				"Step", "Action"
+			]
+			[
+				[
+					1
+					"Debtor initiates a payment instruction to the debtor agent."
+				]
+				[
+					2
+					"Debtor agent initiates a payment message to the creditor agent using the transaction delivery system."
+				]
+				[
+					3
+					"The HVCS payment is settled via the AVP CUG, whereby the HVCS payment is released to the creditor agent."
+				]
+				[
+					4
+					`Having received the HVCS payment, the creditor agent recognises the HVCS payment cannot be
+					processed as requested e.g. the creditor's account is closed. The creditor agent returns the HVCS
+					payment to the debtor agent using a return message also including the return reason code.`
+				]
+				[
+					5
+					`The market infrastructure returns the HVCS payment performing the necessary settlement posting
+					between the creditor agent and the debtor agent.`
+				]
+			]
+		)
+	)
+
+	pnz::section_heading( "Chapter 4: Message flows" )
+
+	pnz::clause(
+		"4.1"
+		"Message flows"
+		
+		`The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode
+		requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the
+		recipient. Authorised messages are only delivered to the recipients once they have been authorised, and
+		typically once settlement of the HVCS payment has been made within RTGS.`
+
+		`More detail about Y-copy can be found in the respective procedures:`
+		pnz::level2(
+			`Part D MX Messaging Procedures (ISO 20022)`
+			`Part E MT Messaging Procedures (ISO 15022)`
+		)
+		
+		pnz::bold_div( "Payment message flow" )
+
+		`When a payment message (1) is initiated by participant A, the payment message is then sent to SWIFT who copy
+		key parts of the payment message and send it to the RBNZ to authorise (2).`
+
+		`The RBNZ authorises or refuses the payment message and responds with a system message sent back to SWIFT (3).
+		Based on the RBNZ's response SWIFT will then either send the authorised payment message to participant B to
+		credit their customer's account, or send a refusal notification to participant A (4).`
+	)
+
+	pnz::image( "images/hvcs_overview_payment_message_flows.png", "Payment Message Flows")
+
+	pnz::section_heading( "Chapter 5: Roles of organisations and systems" )
+
+	pnz::clause(
+		"5.1"
+		"Roles of organisations"
+		`The following table lists some of the organisations involved in the HVCS clearing and settlement process and their role.`
+	)
+
+	pnz::styled_table(
+		"definition-table"
+		#table(
+			[
+				"Term"
+				"Definition"
+			]
+			[
+				[
+					"AVP CUG"
+
+					[
+						`Is the closed user group provided by SWIFT for HVCS message processing. The Reserve Bank is the AVP CUG
+						service administrator. The service administrator determines:`
+						pnz::bullets(
+							`who participates in the CUG as a member,`
+							`the requirements for participating in the CUG, and`
+							`the service parameters for the SWIFT FINCopy or SWIFT NetCopy service.`
+						)
+						pnz::br
+						`Members of the AVP CUG exchange HVCS instructions with each other using SWIFT FINCopy or SWIFT NetCopy
+						in Y mode. Further information on how to prepare to join the AVP CUG and the process to join the AVP CUG
+						is provided by the RBNZ here. AVP CUG members who are participants and their BICs are:`
+						pnz::br
+						
+						pnz::table(
+							#table(
+								[
+									"Participants", "BIC"
+								]
+								[
+									[ "ANZ Bank New Zealand Limited", "ANZBNZ22" ]
+									[ "ASB Bank Ltd", "ASBBNZ2A" ]
+									[ "ASX Clearing Corporation Limited", "ACLOAUS2" ]
+									[ "Bank of China", "BKCHNZ22" ]
+									[ "Bank of China (Branch)", "BKCHNZ2A" ]
+									[ "Bank of New Zealand", "BKNZNZ22985" ]
+									[ "China Construction Bank", "PCBCNZ22" ]
+									[ "Citibank, N.A.", "CITINZ2X" ]
+									[ "HSBC", "HSBCNZ2A" ]
+									[ "HSBC - For CLS payments use", "HSBCNZ2ACLS" ]
+									[ "Industrial & Commercial Bank of China New Zealand Ltd", "ICBKNZ2A" ]
+									[ "Kiwibank Limited", "KIWINZ22" ]
+									[ "MUFG", "BOTKNZ2A" ]
+									[ "New Zealand Depository Limited", "NZXCNZ2W" ]
+									[ "TSB Bank Ltd", "TSBANZ22" ]
+									[ "Westpac New Zealand Limited", "WPACNZ2W" ]
+								]
+							)
+						)
+
+						pnz::br
+						`Participants should be aware there are also members of the AVP CUG that send and receive messages but
+						are not participants. Their BICs are:`
+						pnz::br
+
+						pnz::table(
+							#table(
+								[
+									"Non-HVCS participants", "BIC"
+								]
+								[
+									[ "CLS Bank International", "CLSBUS33" ]
+									[ "Rabobank New Zealand Branch", "RABONZ2W" ]
+									[ "Reserve Bank", "RBNZNZ2W (for payment messages for the Reserve Bank or Reserve Bank customers)" ]
+									[ "Reserve Bank", "RBNZNZ2S (for Reserve Bank internal testing)" ]
+									[ "Reserve Bank", "ESASNZ2W" ]
+									[ "NZ Treasury-DMO", "NZTRNZ2W" ]
+								]
+							)
+						)
+					]
+				]
+				[
+					"CLS (Continuous Linked Settlement)"
+
+					`Is the largest multicurrency cash settlement system in the world, with links to RTGS
+					systems in 18 currencies (including the NZ dollar). CLS settles payment instructions
+					relating to FX spot, forwards, swaps, option exercises, non-deliverable forwards and
+					credit derivatives. CLS offers a 5 hour window in each CLS daily settlement cycle,
+					during which linked RTGS systems are open and can make and receive payments using the
+					SWIFT network. CLS Bank International (a company incorporated in the United States)
+					operates CLS. Some participants operate a CLS evening session to settle and deliver
+					FI credit transfer messages (MT202) for payments to and from CLS Bank.`
+				]
+				[
+					"Instructed agent"
+					[
+						"Is the participant who:"
+						pnz::bullets(
+							"is identified in a payment message as the intended recipient, and"
+							"receives the HVCS payment to its settlement account."
+						)
+					]
+				]
+				[
+					"Instructing agent"
+					[
+						"Is the participant who:"
+						pnz::bullets(
+							`sends a payment message to the AVP CUG transaction delivery system for
+							settlement and delivery, and`
+							
+							"funds the HVCS payment from its settlement account."
+						)
+					]
+				]
+				[
+					"NZ Clear"
+					[
+						`Is a real-time settlement system that provides the financial markets with clearing
+						and settlement services for high value debt securities and equities:`
+						pnz::bullets(
+							`Each participant has a security account(s) on the system which records the
+							securities "lodged" with New Zealand Central Securities Depository Limited
+							(NZCSD). NZCSD becomes the legal owner of the securities on the relevant register
+							and holds securities on behalf of the participant, the beneficial owner.`
+
+							`Each participant has to have an account which is provided by an ESAS account
+							holder, generally a registered New Zealand bank. The bank providing a system
+							cash account has real-time access to set daylight limits on that account.`
+
+							`NZClear has electronic interfaces with both Computershare and Link which allow
+							entries of securities lodges to and securities uplifts from NZClear to
+							electronically effect the necessary movement of securities in the relevant
+							securities registry.`
+						)
+					]
+				]
+				[
+					"Reserve Bank"
+					[
+						pnz::bullets(
+							"Is the AVP CUG service administrator, and"
+							"Owns and operates ESAS, used for settling HVCS payments."
+						)
+					]
+				]
+				[
+					"SWIFT"
+					`Is a member-owned co-operative society under Belgian law supplying standardised
+					messaging services and interface software to financial institutions. SWIFT means
+					the Society for Worldwide Interbank Financial Telecommunication.`
+				]
+			]
+		)
+	)
+
+	pnz::clause(
+		"5.2"
+		"Roles of systems"
+
+		`The following table lists some of the systems involved in the HVCS clearing and settlement process
+		and their role.`
+	)
+
+	pnz::styled_table(
+		"definition-table"
+		#table(
+			[
+				"Term"
+				"Definition"
+			]
+			[
+				[
+					"ESAS"
+					[
+						`Is the system that holds the settlement accounts of financial institutions and enables the
+						instructing agent to send a payment instruction to settle the HVCS payment by transferring
+						the value from the instructing agent's settlement account to the instructed agent's settlement
+						account.`
+
+						`ESAS is owned, operated, and managed by the Reserve Bank.`
+					]
+				]
+				[
+					"SWIFT FIN"
+					[
+						`Is a messaging service that enables financial institutions to exchange SWIFT messages in MT
+						format in store-and-forward mode. For more information see appendix 14E: MT Messaging
+						Procedures.`
+
+						`SWIFT FIN is owned, operated, and managed by SWIFT.`
+					]
+				]
+				[
+					"SWIFT FINCopy"
+					[
+						`Is a value-added feature of the SWIFT FIN service that enables the sender of an MT message to
+						copy the MT message to a specified third party for authorisation or processing.`
+
+						`For the AVP CUG, SWIFT FINCopy partially copies MT messages and sends the copies to ESAS for
+						authorisation and processing before releasing the MT messages to the instructed agent. SWIFT
+						FINCopy for the AVP CUG is set up in Y-copy mode.`
+
+						`SWIFT FINCopy is owned, operated, and managed by SWIFT.`
+					]
+				]
+				[
+					"SWIFTNet Copy"
+					[
+						`The ISO 20022 equivalent of the SWIFT FINCopy service that delivers Y-copy capability for a
+						SWIFT Closed User Group (CUG). It is deployed when a market infrastructure needs its own
+						SWIFTNet service for MX messages.`
+
+						`SWIFTNet Copy is owned, operated, and managed by SWIFT.`
+					]
+				]
+			]
+		)
+	)
+
+	pnz::clause(
+		"5.3"
+		"Roles within the sequence of a payment"
+
+		`is important to be familiar with the terminology used in MX messaging Technical Terms for a definition
+		of the terms below.`
+	)
+
+	pnz::image( "images/hvcs_overview_payment_roles.png", "Payment Message Roles" )
+
+	pnz::styled_table(
+		"center-col1"
+		#table(
+			[
+				"Sequence"
+				"Term"
+				"Definition"
+			]
+			[
+				[
+					1
+					"Ultimate Debtor"
+					`The party that ultimately owes the amount of money to the ultimate creditor.`
+				]
+				[
+					2
+					"Debtor"
+					`The party that owes the amount of money to the creditor.`
+				]
+				[
+					3
+					"Initiating Party"
+					`Party that initiates the payment (the instructing agent).`
+				]
+				[
+					4
+					"Debtor Agent"
+					`Financial Institution providing an account for the debtor.`
+				]
+				[
+					5
+					"Previous instructing agent"
+					`Agent immediately prior to the instructing agent.`
+				]
+				[
+					6
+					"Intermediary Agent"
+					`Agent between the debtor's and creditor's agents (may include the instructing agent, the
+					instructed agent and previous instructing agents).`
+				]
+				[
+					7
+					"Creditor Agent"
+					`Financial institution providing an account for the creditor.`
+				]
+				[
+					8
+					"Creditor"
+					`Party to which an amount of money is due from the debtor.`
+				]
+				[
+					9
+					"Ultimate Creditor"
+					`Ultimate party to which an amount of money is due.`
+				]
+			]
+		)
+	)
+
+	pnz::section_heading( "Chapter 6: Regulating HVCS payments" )
+
+	pnz::nonumber_clause(
+		"6.1"
+		"Legislation, contracts, and standards"
+		
+		`The following table lists some of the legislation, rules, standards, procedures, by-laws,
+		codes and contracts that may apply to clearing and settlement of an HVCS instruction.`
+	)
+
+	pnz::nonumber_clause(
+		""
+		"Legislation"
+
+		`No legislation directly regulates HVCS clearing and settlement in New Zealand. Some legislation
+		indirectly affects HVCS clearing and settlement, for example:`
+
+		pnz::bullets(
+			`the identification, verification, or sanctions compliance requirements for wire transfers in the:`
+			pnz::list(
+				`NZ Anti-Money Laundering and Countering Financing of Terrorism Act 2009,`
+				
+				`United Nations security council sanctions enforced through the NZ United Nations Act 1946;`
+				
+				`other sanctions such as the Russia Sanctions Act 2022; and`
+				
+				`sanctions issued by the office of foreign asset control (OFAC) in the US, as well as other
+				bodies like the EU and UN who also issue prohibition notices; and`
 			)
-			`The following diagram and table show at a high level how financial institutions interact to send an FI cover message.`
-		//)
-	/*
-	`Step`
-	`Action`
-	`1`
-	`A debtor instructs their overseas bank (debtor agent) to make an NZD payment to a creditor.`
-	`2`
-	`The overseas debtor agent`
-	`• sends a customer credit transfer message to the overseas creditor agent.`
-	`• has an NZD account with a participant (its correspondent bank) so it sends a financial FI cover message (with the details of the customer credit participant transfer message embedded in the payment message) to the correspondent bank (labelled B in the diagram). The FI cover message instructs the correspondent bank participant to debit the debtor agent’s NZD account and credit the NZD account of the creditor agent’s correspondent bank (labelled C in the diagram).`
-	`3`
-	`The correspondent bank participant debits the debtor agent’s NZD account.`
-	`4`
-	`The correspondent bank participant, as instructing agent, sends an FI cover message to the correspondent bank of the creditor agent, as instructed agent using the AVP CUG transaction delivery system.`
-	`5`
-	`The instructed agent credits the creditor agent’s NZD account with the amount of the HVCS payment.`
-	`6`
-	`When the creditor agent’s account is credited, the creditor agent has the money to comply with the payment instruction in the customer credit transfer message (received under step 2). The creditor agent credits the creditor’s account. The debtor cannot reverse the HVCS payment after settlement and the creditor can rely on the HVCS payment to complete a linked transaction, for example, provide goods or services to the debtor.`
-	`Exception and investigation messages`
-	*/
-		pnz::clause(
-			"3.11"
-			"Introduction"
-			`The exception and investigation messages are designed to support investigation case management in connection with the cancellation of payment messages or independently between a case assigner and assignee.`
-			`There are two common scenarios for exception and investigation messages to be used by participants:`
-			pnz::level2(
-				`an unsolicited return where a payment instruction has failed to credit the creditor’s account and resulted in a return message by the instructed agent; or`
-				`a solicited return where a cancellation request has been initiated by the instructing agent and resulted in a return message.`
-			)
+			`Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a
+			designated FMI) which could cover clearing and settlement requirements.`
 		)
-		pnz::clause(
-			"3.12"
-			"Unsolicited return – failed to credit account"
-			`A Return message is initiated by the creditor agent and used to return the original payment message, for example, in the case of an invalid payment message (e.g. specifying an incorrect account number).`
+	)
+
+	pnz::subsection_heading( "Contracts and codes" )
+
+	pnz::styled_table(
+		"definition-table"
+		#table(
+			[
+				"Term"
+				"Definition"
+			]
+			[
+				[
+					"SWIFT requirements"
+					`SWIFT members must comply with SWIFT's Corporate Rules and SWIFT By-Laws available at www.swift.com`
+				]
+				[
+					"AVP CUG service administration agreement"
+					[
+						`Under the SWIFT service administration agreement between the Reserve Bank and SWIFT, the Reserve Bank:` 
+						pnz::bullets(
+							`administers and provides the service to participants.`
+
+							`is the primary contact with SWIFT for the provision of SWIFT AVP FINCopy messaging services in New
+							Zealand.`
+
+							`defines, in co-operation and agreement with SWIFT, the AVP service parameters.`
+						)
+					]
+				]
+				[
+					"AVP CUG service parameters"
+					[
+						`For AVP MT CUG service parameters, please refer to Part E MT Messaging Procedures (ISO 15022).`
+						`For AVP MX CUG service parameters, please refer to the RBNZ Confluence website, here.`
+					]
+				]
+				[
+					"Payments NZ rules and standards"
+					[
+						`The Payments NZ rules and procedures are the principal rules regulating HVCS clearing and settlement in
+						New Zealand. They are a multilateral contract that bind agents who are a direct settlement participants
+						acting in various capacities including:`
+						pnz::bullets(
+							`instructing agent.`
+
+							`instructed agent.`
+
+							`sender of an exception and investigation message or SWIFT message.`
+
+							`receiver of an exception and investigation message, system message or SWIFT message.`
+
+							`creditor agent.`
+
+							`debtor agent.`
+						)
+					]
+				]
+				[
+					"ESAS terms and conditions"
+					`A contract between each ESAS settlement accountholder and the Reserve Bank governing the operation of
+					the accountholder's ESAS settlement account.`
+				]
+				[
+					"ESAS BCP"
+					`A business continuity plan developed between the Reserve Bank and ESAS settlement accountholders
+					specifying the business continuity processes that apply if there is a problem with ESAS.`
+				]
+			]
 		)
-		pnz::clause(
-			"3.13"
-			"Solicited return – request for cancellation"
-			`A Payment Cancellation Request message can be used to request the cancellation of an HVCS payment.  This message would typically be created by the debtor agent and sent to the creditor agent depending on the status of the payment.`
-			`This exception and investigation message must be used only for the return of HVCS payments and the sender of the cancellation request must include their investigation case identifier within the "Case/Identification" element of the exception and investigation message.`
-			`On receipt of a Payment Cancellation Request message by a participant, the participant must investigate the request and respond by sending a Resolution of Investigation message back to sender of the request indicating whether the Payment Cancellation Request is pending, or if it has been accepted or rejected.`
-			`If the Payment Cancellation Request is accepted, the participant sends a return message and the returned HVCS payment to the instructing agent of the HVCS payment being returned along with the Resolution of Investigation.`
-			`The diagram below describes the message flow between participants when a Payment Cancellation Request is sent by a debtor agent.`
+	)
+
+	pnz::clause(
+		"6.2"
+		"Technical terms"
+
+		`The following table lists some of the technical terms used in the HVCS Standards (Appendix 14) procedures.
+		For definitions, see Part 19 of the rules:`
+	)
+
+	pnz::styled_table(
+		"definition-table"
+		#table(
+			[
+				"Term"
+				"Definition"
+			]
+			[
+				[
+					"AML/CTF" 
+					`Anti-Money Laundering / Counter-Terrorism Financing` 
+				]
+				[
+					"ASCII" 
+					`American Standard Code for Information Interchange (ISO646 code for characters)` 
+				]
+				[
+					"Branch Number" 
+					`is a four-digit number that identifies banks and branches across New Zealand` 
+				]
+				[
+					"Beneficiary, beneficiary customer" 
+					`is the ultimate recipient of funds transferred under a customer credit transfer message.` 
+				]
+				[
+					"Beneficiary institution" 
+					`is the financial institution designated by the ordering institution as the ultimate recipient of
+					the HVCS payment or funds transferred under an FI credit transfer message.` 
+				]
+				[
+					"Beneficiary notification"
+					[
+						`a notification to the creditor of an SCP:`
+						pnz::bullets(
+							`for an SCP between customers of 2 participants, from the instructed agent / creditor agent that
+							they have credited the amount of the SCP to the creditor's account.`
+
+							`for an on-us SCP, from the creditor's agent notifying the creditor that they have credited the
+							amount of the SCP to the creditor's account.`
+						)
+					]
+				]
+				[
+					"BIC - Business Identifier Code."
+					[
+						`BIC is an international standard for routing business transactions and identification of business
+						parties. BICs consist of:`
+						pnz::bullets(
+							`institution code consisting of 4 alphabetic characters.`
+
+							`country code consisting of 2 alphabetic characters.`
+
+							`country code consisting of 2 alpha-numeric characters.`
+
+							`optionally, the branch code consisting of 3 alpha-numeric characters.`
+						)
+					]
+				]
+				[
+					"BIC 8"
+					`An 8-character BIC, also known as a 'party identifier' which does not include the 3-character branch
+					code.`
+				]
+				[
+					"BAH"
+					`Business Application Header is an MX message definition which can be combined with any other MX message
+					definition to form a business message.`
+				]
+				[
+					"camt"
+					`Cash Management messages, used for exception and investigation messaging in relation to HVCS and
+					cross-border payments.`
+				]
+				[
+					"CBPR+"
+					`Cross-Border Payments and Reporting Plus. ISO 20022 global usage guidelines for cross-border payments
+					developed by SWIFT and the PMPG.`
+				]
+				[
+					"Creditor agent"
+					`A financial institution servicing an account for the creditor.`
+				]
+				[
+					"Debtor agent"
+					`A financial institution servicing an account for the debtor.`
+				]
+				[
+					"ESAS"
+					`Exchange Settlement Account System.`
+				]
+				[
+					"FileAct"
+					`An automated SWIFT messaging service designed to enable customers to exchange files. FileAct supports
+					both interactive and store-and-forward modes. It is particularly suited for the exchange of large
+					volumes of data.`
+				]
+				[
+					"FINplus"
+					`A SWIFTNet messaging service which enables financial institutions to exchange SWIFT messages in MX
+					format for securities and payments, currently supporting CBPR+ messaging.`
+				]
+				[
+					"gCASE gpi"
+					`Case Resolution, SWIFT's cloud-based payment investigation and resolution service.`
+				]
+				[
+					"gCCT gpi"
+					`Customer Credit Transfer is the first service launched as part of the gpi initiative and focuses on
+					interbank customer-initiated payments.`
+				]
+				[
+					"gCOV gpi"
+					`Cover Payments is part of the gCCT service and SWIFT gpi Rulebook for Mandatory Services.`
+				]
+				[
+					"gpi"
+					`Global Payment Initiative, also known by the acronym “gpi”, is a service launched by SWIFT to improve
+					the customer-bank experience in the world of international payments.`
+				]
+				[
+					"HVCS"
+					`High Value Clearing System.`
+				]
+				[
+					"HVPS+"
+					`High Value Payments Plus. A task force formed by SWIFT, along with major global banks and market
+					infrastructures responsible for developing ISO 20022 global usage guidelines for high-value payments.`
+				]
+				[
+					"IFTI"
+					`International Funds Transfer Instruction.`
+				]
+				[
+					"Instructing agent"
+					`Agent that instructs the next agent in the chain to carry out the payment instruction.`
+				]
+				[
+					"Instructed agent"
+					`Agent that is instructed by the previous agent in the chain to carry out the payment instruction.`
+				]
+				[
+					"InterAct"
+					`Global financial messaging service used by the SWIFTNet platform.`
+				]
+				[
+					"Intermediary institution"
+					[
+						`For a payment instruction sent through SWIFT, a financial institution:`
+						pnz::bullets(
+							`which is not the ordering institution or the beneficiary institution.`
+
+							`through which the payment must pass to reach the beneficiary institution.`
+						)
+					]
+				]
+				[
+					"ISO"
+					`International Organization for Standardization.`
+				]
+				[
+					"ISO 20022"
+					`A message standard for financial markets developed and maintained by ISO.`
+				]
+				[
+					"LDAP"
+					`Lightweight Directory Access Protocol. A lightweight client-server protocol for accessing directory
+					services, specifically X.500-based directory services. LDAP runs over TCP/IP or other connection-oriented
+					transfer service.`
+				]
+				[
+					"LEI"
+					`Legal Entity Identifier. A 20 character unique identifier allocated to organisations using the
+					ISO 17442 format.`
+				]
+				[
+					"Ordering customer"
+					`is the MT terminology used to identify a customer who acts as a debtor and orders (requests) a
+					customer credit transfer.`
+				]
+				[
+					"Ordering institution"
+					[
+						`Is MT terminology used:`
+						pnz::bullets(
+							`for customer credit transfer messages, the financial institution of the ordering customer if it is
+							different from the instructing agent.`
+
+							`for other payment messages, the instructing institution if it is different from the instructing
+							agent.`
+						)
+					]
+				]
+				[
+					"pacs"
+					`A subset of the ISO 20022 base standard message definitions for payment clearing and settlement.`
+				]
+				[
+					"pain"
+					`A subset of the ISO 20022 base standard message definitions for payments initiation.`
+				]
+				[
+					"PMPG"
+					[
+						`The Payments Market Practice Group is an international forum, facilitated by SWIFT, that assists
+						industry participants formulate better market practices, including the recommended use of standards.
+						Further details on the group can be found at:`
+						`https://www.swift.com/about-us/community/swift-advisory-groups/payments-marketpractice-group.`
+					]
+				]
+				[
+					"Point-to-point reference"
+					`A reference included within a SWIFT message sent from one financial institution to another that has
+					specific meaning for those two institutions though has no relevance for other parties in the end-to-end
+					messaging flow.`
+				]
+				[
+					"Remitter confirmation"
+					[
+						`a notification to the debtor of an SCP:`
+						pnz::bullets(
+							`for an SCP between customers of 2 participants, from the instructing agent that they have
+							instructed the instructed agent to credit the amount of the SCP to the creditor's account.`
+
+							`for an on-us SCP, from the debtor's agent notifying the debtor of the status of the on-us SCP.`
+						)
+					]
+				]
+				[
+					"Remitter notification"
+					[
+						`a notification to the debtor of an SCP:`
+						pnz::bullets(
+							`for an SCP between customers of 2 participants, from the instructing agent that it has settled the
+							SCP with the instructed agent.`
+						)
+					]
+				]
+				[
+					"RTGS"
+					`Reserve Bank Real Time Gross Settlement used for interbank settlement in HVCS.`
+				]
+				[
+					"Sending confirmation"
+					`For an SCP between customers of 2 participants, is a notification to the creditor of an SCP from the
+					instructing agent that it has settled the funds with the instructed agent.`
+				]
+				[
+					"STP"
+					`Straight Through Processing.`
+				]
+				[
+					"SWIFT"
+					`Society for Worldwide Interbank Financial Telecommunication.`
+				]
+				[
+					"SWIFT FIN (FIN)"
+					`A SWIFT messaging service that enables the exchange of MT messages.`
+				]
+				[
+					"SWIFT InterAct (InterAct)"
+					`A SWIFT service that enables the exchange of MX messages.`
+				]
+				[
+					"SWIFT MT (MT)"
+					`SWIFT Message Type (MT) messages. (ISO 15022 Standard).`
+				]
+				[
+					"SWIFTNet"
+					`The SWIFT service that enables the exchange of MX messages, which is based on the InterAct financial
+					messaging service.`
+				]
+				[
+					"SWIFTNet Header"
+					`Part of the envelope of an MX message which contains elements to address the MX message to the correct
+					SWIFTNet service or CUG.`
+				]
+				[
+					"UETR"
+					`Unique Electronic Transaction Reference.`
+				]
+				[
+					"Usage Guideline"
+					`Usage Guidelines are a combination of the ISO 20022 base standard message definition plus restrictions
+					that adapted the specifications to meet local market practice. The Usage Guideline can also include
+					additional commentary to explain how local instructions should be constructed for specific scenarios.
+					In the New Zealand context, the Usage Guidelines that apply to HVCS are contained in the MX Message
+					Specifications. MX Message Specifications are sometimes referred to as Message Usage Guidelines (MUGs).`
+				]
+				[
+					"UTF8"
+					`Unicode (or Universal Coded Character Set) Transformation Format — 8-bit.`
+				]
+				[
+					"XML"
+					`Extensible Markup Language.`
+				]
+				[
+					"Y-Copy"
+					`A copying mode of a SWIFT service where payment messages are authorised by market infrastructure (e.g.
+					RBNZ's RTGS) before they are delivered to the intended recipient.`
+				]
+			]
 		)
-		pnz::clause(
-			"3.14"
-			"Payment return"
-			`Exception and investigation messages may result in a return message being sent by an agent to the previous agent in the payment chain to return a payment previously settled.`
-			`Return messages may be the consequence of a payment message cancellation requested by the debtor agent or one of the intermediary agents of the HVCS payment or sent by a creditor agent or instructed agent due to a failure to process the payment message.`
-			`The return message refers to the payment message(s) by means of references only, or by means of references and a set of elements from the payment message, and the return message must include a payment return code. The full value of the original HVCS payment must be returned as a single payment or in instalments in circumstances permitted by the applicable message standards.`
-			`The following diagram and table show at a high level how participants interact to return an HVCS payment with a return message where the payment message could not be processed for example, due to a failure to credit the creditor’s account.`
+	)
+
+	pnz::section_heading( "Appendix 1: Document control" )
+
+	`The following table summarises amendments made to the former Appendix 14 procedures, prior to implementation of the
+	ISO 20022 message format. It has been retained here as a historical reference.`
+
+	pnz::styled_table(
+		"document-control-table"
+		#table(
+			[
+				"Version number and description of amendment"
+				"Amendment method and date"
+				"Amendment notice date"
+				"Effective date of amendment"
+				"Authors"
+    		]
+    		[
+				[
+					`Version 2. Amendments to remove testing requirements in chapter 3 and to transfer
+					substance of appendix 3 to version 1 of appendix 1, access procedures.`
+					`Board resolution: 19 February 2013`
+					`25 Feb 13`
+					`20 May 13`
+					`Payments NZ`
+				]
+
+				[
+					`Version 3. Amendments to change title and appendix no.`
+					`Chief executive amendment: 14 May 2013`
+					`14 May 13`
+					`10 Jul 13`
+					`Payments NZ`
+				]
+
+				[
+					`Version 4 Amendments to change title and appendix no. as a consequence of the creation
+					of the mobile device standards`
+					`Chief executive amendment: 13 March 2014`
+					`13 Mar 2014`
+					`14 May 2014`
+					`Caroline Kidd Frank Susko`
+				]
+
+				[
+					`Version 5: Rewrite to create end-to-end clearing and settlement procedures linked to
+					Part 9 of the rules for HVCS and to capture improvements to SCPs Reformat in information
+					mapping style.`
+					`Board resolution: 2-Dec-14`
+					`8 Dec 2014`
+					`16 Feb 2015`
+					`Simon Jensen, Katie Williams, Caroline Kidd, Frank Susko`
+				]
+
+				[
+					[
+						`Version 6: Amendments to reflect amendments to require participants to email SCP
+						notifications.`
+						`Amendments to update out-of-date references to the AVP CUG service parameters and
+						to reflect amendments to Part 2`
+					]
+					[
+						`Board resolution: 15-Dec-15`
+						`Chief executive amendment: 21 December 2015`
+					]
+					`21 Dec 2015`
+					`29 Feb 2016`
+					`Caroline Kidd, Frank Susko`
+				]
+
+				[
+					[
+						`Version 7: Minor amendments to chapter 3, sections C2 and C3`
+						`Amendments to clarify the characters required for email notifications and remove
+						out-of-date references to facsimile notices`
+					]
+					[
+						`CE amendment 17 November 2016`
+						`MC amendment 17 November 2016`
+					]
+					`17 Nov 2016`
+					`31 Jan 2017`
+					`Simon Jensen, Katie Williams, Caroline Kidd Frank Susko`
+				]
+
+				[
+					`Version 8: Amendments to remove references to Deutsche Bank`
+					`CE amendment 19 December 2016`
+					`19 Dec 2016`
+					`27 Feb 2017`
+					`Jade Ford`
+				]
+
+				[
+					`Version 9: Amendments to consolidate HVCS and SBI requirements for reporting operational
+					problems and business continuity, by deleting requirements in relation to reporting
+					operational problems, compliance testing and compliance reporting and transfer to new
+					operational problem procedures and new compliance procedures.`
+					`Board resolution: 11 April 2017`
+					`10 May 2017`
+					`10 Jul 2017`
+					`Buddle Findlay: Simon Jensen, Katie Williams, Payments NZ: Caroline Kidd, Frank Susko`
+				]
+
+				[
+					`Version 10: Amendments to format fields in MT103, MT202 COV and MT205 COV messages for
+					the SWIFT standard change (SR2020).`
+					`HVCS management committee notice to the chief executive and approval by the chief
+					executive: 18-Jul-2017`
+					`19 Jul 2017`
+					`25 Sep 2017`
+					`Murray Goold, Martin Quin`
+				]
+
+				[
+					`Version 11: Consequential amendments as a result of the introduction of a new compliance
+					regime.`
+					`Board resolution: 26 February 2018 (technical or minor changes approved by the chief
+					executive)`
+					`5 Mar 2018`
+					`14 May 2018`
+					`Payments NZ`
+				]
+
+				[
+					`Version 12: Amendments to appendix 14A to ensure standards align with SWIFT standards`
+					[
+						`Management committee resolution: 6 June 2018`
+						`Chief executive amendment: 6 Jun 2018`
+					]
+					`6 Jun 2018`
+					`13 Aug 2018`
+					`Murray Goold, Gary Lloyd, Martin Quin`
+				]
+
+				[
+					`Version 13: Amendments in relation to field 72 in the HVCS message formats to, amongst
+					other things, allow participants to manage liquidity in their ESAS accounts.`
+					`Management committee amendment: 22 Feb 2019`
+					`27 Feb 2019`
+					`6 May 2019`
+					`Buddle Findlay, Payments NZ`
+				]
+
+				[
+					`Version 14: Amendments as result of changes to ESAS`
+					`Board resolution: 11 December 2019`
+					`17 Dec 2019`
+					`24 Feb 2020`
+					`Buddle Findlay, Payments NZ Ltd`
+				]
+
+				[
+					`Version 15: Add reference to ASX in the table at, ch 1, B1.`
+					`CE amendment 21 May 2020`
+					`21 May 2020`
+					`27 Jul 2020`
+					`Payments NZ Ltd`
+				]
+
+				[
+					`Version 16: Minor amendments to the use of the term ESAS`
+					`Board resolution 7 December 2020`
+					`10 Dec 2020`
+					`1 Mar 2021`
+					`Buddle Findlay, Payments NZ Ltd`
+				]
+
+				[
+					`Version 17: Minor amendments to references to the SBI procedures as a result of the
+					settlement windows provisions.`
+					`Board resolution 7 December 2020`
+					`10 Dec 2020`
+					`31 May 2021`
+					`Buddle Findlay, Payments NZ Ltd`
+				]
+
+				[
+					`Version 18: Minor updates to commentary including recording of ESAS rejection codes`
+					`Board resolution 3 May 21 and chief executive amendment 7 May 2021`
+					`7 May 2021`
+					`12 Jul 2021`
+					`Buddle Findlay, Payments NZ Ltd`
+				]
+			]
 		)
-	/*
-	`Step`
-	`Action`
-	`1`
-	`Debtor initiates a payment instruction to the debtor agent.`
-	`2`
-	`Debtor agent initiates a payment message to the creditor agent using the transaction delivery system.`
-	`3`
-	`The HVCS payment is settled via the AVP CUG, whereby the HVCS payment is released to the creditor agent.`
-	`4`
-	`Having received the HVCS payment, the creditor agent recognises the HVCS payment cannot be processed as requested e.g. the creditor’s account is closed. The creditor agent returns the HVCS payment to the debtor agent using a return message also including the return reason code.`
-	`5`
-	`The market infrastructure returns the HVCS payment performing the necessary settlement posting between the creditor agent and the debtor agent.`
-	`Chapter 4: Message flows`
-	*/
-		pnz::clause(
-			"4.1"
-			"Message flows"
-			`The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the recipient. Authorised messages are only delivered to the recipients once they have been authorised, and typically once settlement of the HVCS payment has been made within RTGS.`
-			`More detail about Y-copy can be found in the respective procedures:`
-			pnz::level2(
-				`Part D MX Messaging Procedures (ISO 20022)`
-				`Part E MT Messaging Procedures (ISO 15022)`
-			)
-		)
-	/*
-	`Payment message flow`
-	*/
-			`When a payment message (1) is initiated by participant A, the payment message is then sent to SWIFT who copy key parts of the payment message and send it to the RBNZ to authorise (2).`
-			`The RBNZ authorises or refuses the payment message and responds with a system message sent back to SWIFT (3). Based on the RBNZ’s response SWIFT will then either send the authorised payment message to participant B to credit their customer’s account, or send a refusal notification to participant A (4).`
-//		)
-	/*
-	`Chapter 5: Roles of organisations and systems`
-	*/
-		pnz::clause(
-			"5.1"
-			"Roles of organisations"
-			`The following table lists some of the organisations involved in the HVCS clearing and settlement process and their role.`
-		)
-	/*
-	`AVP CUG`
-	`Is the closed user group provided by SWIFT for HVCS message processing. The Reserve Bank is the AVP CUG service administrator. The service administrator determines:`
-	`• who participates in the CUG as a member,`
-	`• the requirements for participating in the CUG, and`
-	`• the service parameters for the SWIFT FINCopy or SWIFT NetCopy service.`
-	`Members of the AVP CUG exchange HVCS instructions with each other using SWIFT FINCopy or SWIFT NetCopy in Y mode.`
-	`Further information on how to prepare to join the AVP CUG and the process to join the AVP CUG is provided by the RBNZ here.`
-	`AVP CUG members who are participants and their BICs are:`
-	`Participants`
-	`BIC`
-	`ANZ Bank New Zealand Limited`
-	`ANZBNZ22`
-	`ASB Bank Ltd`
-	`ASBBNZ2A`
-	`ASX Clearing Corporation Limited`
-	`ACLOAUS2`
-	`Bank of China`
-	`BKCHNZ22`
-	`Bank of China (Branch)`
-	`BKCHNZ2A`
-	`Bank of New Zealand`
-	`BKNZNZ22985`
-	`China Construction Bank`
-	`PCBCNZ22`
-	`Citibank, N.A.`
-	`CITINZ2X`
-	`HSBC`
-	`For HSBC CLS payments use`
-	`HSBCNZ2A`
-	`HSBCNZ2ACLS`
-	`Industrial & Commercial Bank of China New Zealand Ltd`
-	`ICBKNZ2A`
-	`Kiwibank Limited`
-	`KIWINZ22`
-	`MUFG`
-	`BOTKNZ2A`
-	`New Zealand Depository Limited`
-	`NZXCNZ2W`
-	`TSB Bank Ltd`
-	`TSBANZ22`
-	`Westpac New Zealand Limited`
-	`WPACNZ2W`
-	`Participants should be aware there are also members of the AVP CUG that send and receive messages but are not participants. Their BICs are:`
-	`Non-HVCS participants`
-	`BIC`
-	`CLS Bank International`
-	`CLSBUS33`
-	`Rabobank New Zealand Branch`
-	`RABONZ2W`
-	`Reserve Bank`
-	`RBNZNZ2W (for payment messages for the Reserve Bank or Reserve Bank customers)`
-	`Reserve Bank`
-	`RBNZNZ2S (for Reserve Bank internal testing)`
-	`Reserve Bank`
-	`ESASNZ2W`
-	`NZ Treasury-DMO`
-	`NZTRNZ2W`
-	`CLS Continuous Linked Settlement`
-	`Is the largest multicurrency cash settlement system in the world, with links to RTGS systems in 18 currencies (including the NZ dollar). CLS settles payment instructions relating to FX spot, forwards, swaps, option exercises, non-deliverable forwards and credit derivatives. CLS offers a 5 hour window in each CLS daily settlement cycle, during which linked RTGS systems are open and can make and receive payments using the SWIFT network. CLS Bank International (a company incorporated in the United States) operates CLS. Some participants operate a CLS evening session to settle and deliver FI credit transfer messages (MT202) for payments to and from CLS Bank.`
-	`Instructed agent`
-	`Is the participant who:`
-	`• is identified in a payment message as the intended recipient, and`
-	`• receives the HVCS payment to its settlement account.`
-	`Instructing agent`
-	`Is the participant who:`
-	`• sends a payment message to the AVP CUG transaction delivery system for settlement and delivery, and`
-	`• funds the HVCS payment from its settlement account.`
-	`NZ Clear`
-	`Is a real-time settlement system that provides the financial markets with clearing and settlement services for high value debt securities and equities:`
-	`• Each participant has a security account(s) on the system which records the securities "lodged“ with New Zealand Central Securities Depository Limited (NZCSD). NZCSD becomes the legal owner of the securities on the relevant register and holds securities on behalf of the participant, the beneficial owner.`
-	`• Each participant has to have an account which is provided by an ESAS account holder, generally a registered New Zealand bank. The bank providing a system cash account has real-time access to set daylight limits on that account.`
-	`• NZClear has electronic interfaces with both Computershare and Link which allow entries of securities lodges to and securities uplifts from NZClear to electronically effect the necessary movement of securities in the relevant securities registry.`
-	`Reserve Bank`
-	`• Is the AVP CUG service administrator, and`
-	`• Owns and operates ESAS, used for settling HVCS payments.`
-	`SWIFT`
-	`Is a member-owned co-operative society under Belgian law supplying standardised messaging services and interface software to financial institutions. SWIFT means the Society for Worldwide Interbank Financial Telecommunication.`
-	*/
-		pnz::clause(
-			"5.2"
-			"Roles of systems"
-			`The following table lists some of the systems involved in the HVCS clearing and settlement process and their role.`
-		)
-	/*
-	`ESAS`
-	`Is the system that holds the settlement accounts of financial institutions and enables the instructing agent to send a payment instruction to settle the HVCS payment by transferring the value from the instructing agent’s settlement account to the instructed agent’s settlement account.`
-	`ESAS is owned, operated, and managed by the Reserve Bank.`
-	`SWIFT FIN`
-	`Is a messaging service that enables financial institutions to exchange SWIFT messages in MT format in store-and-forward mode. For more information see appendix 14E: MT Messaging Procedures.`
-	`SWIFT FIN is owned, operated, and managed by SWIFT.`
-	`SWIFT FINCopy`
-	`Is a value-added feature of the SWIFT FIN service that enables the sender of an MT message to copy the MT message to a specified third party for authorisation or processing.`
-	`For the AVP CUG, SWIFT FINCopy partially copies MT messages and sends the copies to ESAS for authorisation and processing before releasing the MT messages to the instructed agent. SWIFT FINCopy for the AVP CUG is set up in Y-copy mode.`
-	`SWIFT FINCopy is owned, operated, and managed by SWIFT.`
-	`SWIFTNet Copy`
-	`The ISO 20022 equivalent of the SWIFT FINCopy service that delivers Y-copy  capability for a SWIFT Closed User Group (CUG).  It is deployed when a market infrastructure needs its own SWIFTNet service for MX messages.  SWIFTNet Copy is owned, operated, and managed by SWIFT.`
-	*/
-		pnz::clause(
-			"5.3"
-			"Roles within the sequence of a payment"
-			`is important to be familiar with the terminology used in MX messaging Technical Terms for a definition of the terms below.`
-		)
-	/*
-	`Sequence`
-	`Term`
-	`Definition`
-	`1`
-	`Ultimate Debtor`
-	`The party that ultimately owes the amount of money to the ultimate creditor.`
-	`2`
-	`Debtor`
-	`The party that owes the amount of money to the  creditor.`
-	`3`
-	`Initiating Party`
-	`Party that initiates the payment (the instructing agent).`
-	`4`
-	`Debtor Agent`
-	`Financial Institution providing an account for the debtor.`
-	`5`
-	`Previous instructing agent`
-	`Agent immediately prior to the instructing agent.`
-	`6`
-	`Intermediary Agent`
-	`Agent between the debtor’s and creditor’s agents (may include the instructing agent, the instructed agent and previous instructing agents).`
-	`7`
-	`Creditor Agent`
-	`Financial institution providing an account for the creditor.`
-	`8`
-	`Creditor`
-	`Party to which an amount of money is due from the debtor`
-	`9`
-	`Ultimate Creditor`
-	`Ultimate party to which an amount of money is due`
-	`Chapter 6: Regulating HVCS payments`
-	*/
-		pnz::clause(
-			"6.1"
-			"Legislation, contracts, and standards"
-			`The following table lists some of the legislation, rules, standards, procedures, by-laws, codes and contracts that may apply to clearing and settlement of an HVCS instruction.`
-		)
-	/*
-	`Legislation`
-	`No legislation directly regulates HVCS clearing and settlement in New Zealand. Some legislation indirectly affects HVCS clearing and settlement, for example:`
-	`• the identification, verification, or sanctions compliance requirements for wire transfers in the:`
-	`- NZ Anti-Money Laundering and Countering Financing of Terrorism Act 2009,`
-	`- United Nations security council sanctions enforced through the NZ United Nations Act 1946;`
-	`- other sanctions such as the Russia Sanctions Act 2022; and`
-	`- sanctions issued by the office of foreign asset control (OFAC) in the US, as well as other bodies like the EU and UN who also issue prohibition notices; and`
-	`• Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a designated FMI) which could cover clearing and settlement requirements.`
-	`Contracts and codes`
-	`SWIFT requirements`
-	`SWIFT members must comply with SWIFT’s Corporate Rules and SWIFT By-Laws available at www.swift.com`
-	`AVP CUG service administration agreement`
-	`Under the SWIFT service administration agreement between the Reserve Bank and SWIFT, the Reserve Bank:`
-	`• administers and provides the service to participants,`
-	`• is the primary contact with SWIFT for the provision of SWIFT AVP FINCopy messaging services in New Zealand, and`
-	`• defines, in co-operation and agreement with SWIFT, the AVP service parameters.`
-	`AVP CUG service parameters`
-	`For AVP MT CUG service parameters, please refer to Part E MT Messaging Procedures (ISO 15022).`
-	`For AVP MX CUG service parameters, please refer to the RBNZ Confluence website, here.`
-	`Payments NZ rules and standards`
-	`The Payments NZ rules and procedures are the principal rules regulating HVCS clearing and settlement in New Zealand. They are a multilateral contract that bind agents who are a direct settlement participants acting in various capacities including:`
-	`• instructing agent;`
-	`• instructed agent;`
-	`• sender of an exception and investigation message or SWIFT message;`
-	`• receiver of an exception and investigation message, system message or SWIFT message;`
-	`• creditor agent; and/or`
-	`• debtor agent.`
-	`ESAS terms and conditions`
-	`A contract between each ESAS settlement accountholder and the Reserve Bank governing the operation of the accountholder’s ESAS settlement account.`
-	`ESAS BCP`
-	`A business continuity plan developed between the Reserve Bank and ESAS settlement accountholders specifying the business continuity processes that apply if there is a problem with ESAS.`
-	*/
-		pnz::clause(
-			"6.2"
-			"Technical terms"
-			`The following table lists some of the technical terms used in the HVCS Standards (Appendix 14) procedures. For definitions, see Part 19 of the rules:`
-		)
-	/*
-	`Term`
-	`Description`
-	`AML/CTF`
-	`Anti-Money Laundering / Counter-Terrorism Financing`
-	`ASCII`
-	`American Standard Code for Information Interchange (ISO646 code for characters)`
-	`Branch Number`
-	`is a four-digit number that identifies banks and branches across New Zealand`
-	`Beneficiary,`
-	`beneficiary customer`
-	`is the ultimate recipient of funds transferred under a customer credit transfer message.`
-	`Beneficiary institution`
-	`is the financial institution designated by the ordering institution as the ultimate recipient of the HVCS payment or funds transferred under an FI credit transfer message.`
-	`Beneficiary notification`
-	`a notification to the creditor of an SCP:`
-	`• for an SCP between customers of 2 participants, from the instructed agent / creditor agent that they have credited the amount of the SCP to the creditor’s account, or`
-	`• for an on-us SCP, from the creditor’s agent notifying the creditor that they have credited the amount of the SCP to the creditor’s account.`
-	`BIC - Business Identifier Code.`
-	`BIC is an international standard for routing business transactions and identification of business parties. BICs consist of:`
-	`• institution code consisting of 4 alphabetic characters`
-	`• country code consisting of 2 alphabetic characters`
-	`• country code consisting of 2 alpha-numeric characters and`
-	`• optionally, the branch code consisting of 3 alpha-numeric characters`
-	`BIC 8`
-	`An 8-character BIC, also known as a ‘party identifier’ which does not include the 3-character branch code.`
-	`BAH`
-	`Business Application Header is an MX message definition which can be combined with any other MX message definition to form a business message.`
-	`camt`
-	`Cash Management messages, used for exception and investigation messaging in relation to HVCS and cross-border payments`
-	`CBPR+`
-	`Cross-Border Payments and Reporting Plus.  ISO 20022 global usage guidelines for cross-border payments developed by SWIFT and the PMPG.`
-	`Creditor agent`
-	`A financial institution servicing an account for the creditor.`
-	`Debtor agent`
-	`A financial institution servicing an account for the debtor.`
-	`ESAS`
-	`Exchange Settlement Account System.`
-	`FileAct`
-	`An automated SWIFT messaging service designed to enable customers to exchange files. FileAct supports both interactive and store-and-forward modes. It is particularly suited for the exchange of large volumes of data.`
-	`FINplus`
-	`A SWIFTNet messaging service which enables financial institutions to exchange SWIFT messages in MX format for securities and payments, currently supporting CBPR+ messaging.`
-	`gCASE gpi`
-	`Case Resolution, SWIFT’s cloud-based payment investigation and resolution service`
-	`gCCT gpi`
-	`Customer Credit Transfer is the first service launched as part of the gpi initiative and focuses on interbank customer-initiated payments.`
-	`gCOV gpi`
-	`Cover Payments is part of the gCCT service and SWIFT gpi Rulebook for Mandatory Services.`
-	`gpi`
-	`Global Payment Initiative', also known by the acronym “gpi”, is a service launched by SWIFT to improve the customer-bank experience in the world of international payments.`
-	`HVCS`
-	`High Value Clearing System`
-	`HVPS+`
-	`High Value Payments Plus. A task force formed by SWIFT, along with major global banks and market infrastructures responsible for developing ISO 20022 global usage guidelines for high-value payments.`
-	`IFTI`
-	`International Funds Transfer Instruction`
-	`Instructing agent`
-	`Agent that instructs the next agent in the chain to carry out the payment instruction.`
-	`Instructed agent`
-	`Agent that is instructed by the previous agent in the chain to carry out the payment instruction.`
-	`InterAct`
-	`Global financial messaging service used by the SWIFTNet platform`
-	`Intermediary institution`
-	`For a payment instruction sent through SWIFT, a financial institution:`
-	`• which is not the ordering institution or the beneficiary institution, but`
-	`• through which the payment must pass to reach the beneficiary institution.`
-	`ISO`
-	`International Organization for Standardization`
-	`ISO 20022`
-	`A message standard for financial markets developed and maintained by ISO.`
-	`LDAP`
-	`Lightweight Directory Access Protocol. A lightweight client-server protocol for accessing directory services, specifically X. 500-based directory services. LDAP runs over TCP/IP or other connection-oriented transfer service`
-	`LEI`
-	`Legal Entity Identifier. A 20 character unique identifier allocated to organisations using the ISO 17442 format.`
-	`Ordering customer`
-	`is the MT terminology used to identify a customer who acts as a debtor and orders (requests) a customer credit transfer`
-	`Ordering institution`
-	`Is MT terminology used:`
-	`• for customer credit transfer messages, the financial institution of the ordering customer if it is different from the instructing agent, and`
-	`• for other payment messages, the instructing institution if it is different from the instructing agent.`
-	`pacs`
-	`A subset of the ISO 20022 base standard message definitions for payment clearing and settlement.`
-	`pain`
-	`A subset of the ISO 20022 base standard message definitions for payments initiation`
-	`PMPG`
-	`The Payments Market Practice Group is an international forum, facilitated by SWIFT, that assists industry participants formulate better market practices, including the recommended use of standards. Further details on the group can be found at:`
-	`https://www.swift.com/about-us/community/swift-advisory-groups/payments-marketpractice-group.`
-	`Point-to-point reference`
-	`A reference included within a SWIFT message sent from one financial institution to another that has specific meaning for those two institutions though has no relevance for other parties in the end-to-end messaging flow.`
-	`Remitter confirmation`
-	`a notification to the debtor of an SCP:`
-	`• for an SCP between customers of 2 participants, from the instructing agent that they have instructed the instructed agent to credit the amount of the SCP to the creditor's account, or`
-	`• for an on-us SCP, from the debtor’s agent notifying the debtor of the status of the on-us SCP.`
-	`Remitter notification`
-	`a notification to the debtor of an SCP:`
-	`• for an SCP between customers of 2 participants, from the instructing agent that it has settled the SCP with the instructed agent.`
-	`RTGS`
-	`Reserve Bank Real Time Gross Settlement used for interbank settlement in HVCS.`
-	`Sending confirmation`
-	`For an SCP between customers of 2 participants, is a notification to the creditor of an SCP from the instructing agent that it has settled the funds with the instructed agent.`
-	`STP`
-	`Straight Through Processing`
-	`SWIFT`
-	`Society for Worldwide Interbank Financial Telecommunication`
-	`SWIFT FIN (FIN)`
-	`A SWIFT messaging service that enables the exchange of MT messages.`
-	`SWIFT InterAct (InterAct)`
-	`A SWIFT service that enables the exchange of MX messages.`
-	`SWIFT MT (MT)`
-	`SWIFT Message Type (MT) messages. (ISO 15022 Standard).`
-	`SWIFTNet`
-	`The SWIFT service that enables the exchange of MX messages, which is based on the InterAct financial messaging service.`
-	`SWIFTNet Header`
-	`Part of the envelope of an MX message which contains elements to address the MX message to the correct SWIFTNet service or CUG.`
-	`UETR`
-	`Unique Electronic Transaction Reference`
-	`Usage Guideline`
-	`Usage Guidelines are a combination of the ISO 20022 base standard message definition plus restrictions that adapted the specifications to meet local market practice.  The Usage Guideline can also include additional commentary to explain how local instructions should be constructed for specific scenarios.  In the New Zealand context, the Usage Guidelines that apply to HVCS are contained in the MX Message Specifications.  MX Message Specifications are sometimes referred to as Message Usage Guidelines (MUGs).`
-	`UTF8`
-	`Unicode (or Universal Coded Character Set) Transformation Format – 8-bit`
-	`XML`
-	`Extensible Markup Language`
-	`Y-Copy`
-	`A copying mode of a SWIFT service where payment messages are authorised by market infrastructure (e.g. RBNZ’s RTGS) before they are delivered to the intended recipient`
-	`Appendix 1: Document control`
-	`The following table summarises amendments made to the former Appendix 14 procedures, prior to implementation of the ISO 20022 message format. It has been retained here as a historical reference.`
-	`Version number and description of amendment`
-	`Amendment method and date`
-	`Amendment notice date`
-	`Effective date of amendment`
-	`Authors`
-	`Version 2. Amendments to remove testing requirements in chapter 3 and to transfer substance of appendix 3 to version 1 of appendix 1, access procedures.`
-	`Board resolution: 19 February 2013`
-	`25 February 2013`
-	`20 May 2013`
-	`Payments NZ`
-	`Version 3. Amendments to change title and appendix no.`
-	`Chief executive amendment: 14 May 2013`
-	`14 May 2013`
-	`10 July 2013`
-	`Payments NZ`
-	`Version 4 Amendments to change title and appendix no. as a consequence of the creation of the mobile device standards`
-	`Chief executive amendment: 13 March 2014`
-	`13 March 2014`
-	`14 May 2014`
-	`Caroline Kidd Frank Susko`
-	`Version 5: Rewrite to create end-to-end clearing and settlement procedures linked to Part 9 of the rules for HVCS and to capture improvements to SCPs   Reformat in information mapping style.`
-	`Board resolution:`
-	`2 December 2014`
-	`8 December 2014`
-	`16 February 2015`
-	`Simon Jensen, Katie Williams`
-	`Caroline Kidd, Frank Susko`
-	`Version 6:  Amendments to reflect amendments to require participants to email SCP notifications.`
-	`Amendments to update out-of-date references to the AVP CUG service parameters and to reflect amendments to Part 2`
-	`Board resolution:`
-	`15 December 2015`
-	`Chief executive amendment: 21 December 2015`
-	`21 December 2015`
-	`29 February 2016`
-	`Caroline Kidd, Frank Susko`
-	`Version 7: Minor amendments to chapter 3, sections C2 and C3`
-	`Amendments to clarify the characters required for email notifications and remove out-of-date references to facsimile notices`
-	`CE amendment 17 November 2016`
-	`MC amendment 17 November 2016`
-	`17 November 2016`
-	`31 January 2017`
-	`Simon Jensen, Katie Williams`
-	`Caroline Kidd Frank Susko`
-	`Version 8: Amendments to remove references to  Deutsche Bank`
-	`CE amendment 19 December 2016`
-	`19 December 2016`
-	`27 February 2017`
-	`Jade Ford`
-	`Version 9: Amendments to consolidate HVCS and SBI requirements for reporting operational problems and business continuity, by deleting requirements in relation to reporting operational problems, compliance testing and compliance reporting and transfer to new operational problem procedures and new compliance procedures.`
-	`Board resolution: 11 April 17`
-	`10 May 2017`
-	`10 July 2017`
-	`Buddle Findlay: Simon Jensen, Katie Williams Payments NZ: Caroline Kidd,`
-	`Frank Susko`
-	`Version 10: Amendments to format fields in MT103, MT202 COV and MT205 COV messages for the SWIFT standard change (SR2020).`
-	`HVCS management committee notice to the chief executive and approval by the chief executive:`
-	`18 July 2017`
-	`19 July 2017`
-	`25 September 2017`
-	`Murray Goold, Martin Quin`
-	`Version 11: Consequential amendments as a result of the introduction of a new compliance regime.`
-	`Board resolution: 26 February 2018 (technical or minor changes approved by the chief executive)`
-	`5 March 2018`
-	`14 May 2018`
-	`Payments NZ`
-	`Version 12:`
-	`Amendments to appendix 14A to ensure standards align with SWIFT standards`
-	`Management committee resolution: 6 June 2018`
-	`Chief executive amendment: 6 June 2018`
-	`6 June 2018`
-	`13 August 2018`
-	`Murray Goold, Gary Lloyd, Martin Quin`
-	`Version 13: Amendments in relation to field 72 in the HVCS message formats to, amongst other things, allow participants to manage liquidity in their ESAS accounts.`
-	`Management committee amendment: 22 February 2019`
-	`27 February 2019`
-	`6 May 2019`
-	`Buddle Findlay, Payments NZ`
-	`Version 14: Amendments as result of changes to ESAS`
-	`Board resolution: 11 December 2019`
-	`17 December 2019`
-	`24 February 2020`
-	`Buddle Findlay, Payments NZ Ltd`
-	`Version 15: Add reference to ASX in the table at, ch 1, B1.`
-	`CE amendment 21 May 20`
-	`21 May 2020`
-	`27 July 2020`
-	`Payments NZ Ltd`
-	`Version 16: Minor amendments to the use of the term ESAS`
-	`Board resolution 7 December 20`
-	`10 December 20`
-	`1 March 2021`
-	`Buddle Findlay, Payments NZ Ltd`
-	`Version 17: Minor amendments to references to the SBI procedures as a result of the settlement windows provisions.`
-	`Board resolution 7 December 20`
-	`10 December 20`
-	`31 May 2021`
-	`Buddle Findlay, Payments NZ Ltd`
-	`Version 18: Minor updates to commentary including recording of ESAS rejection codes`
-	`Board resolution 3 May 21 and chief executive amendment`
-	`7 May 21`
-	`12 July 21`
-	`Buddle Findlay, Payments NZ Ltd`
-	`1 Participants should also carefully read Parts 1, 15 and 19 of the Payments NZ Rules to fully understand the operation of the HVCS Clearing and Settlement Rules.  Parts 5, 9-11A, 14 and 16-18 may also be relevant to HVCS instructions in certain circumstances.`
-	`2 It is important to understand that the terms 'instructing agent' and 'instructed agent' are also defined terms under the ISO 20022 standard.  This means that the ISO 20022 standard might describe a person as an 'instructing agent' or an 'instructed agent' even if they are not a HVCS participant.  However, the Rules have narrowed these definitions from their meaning under the ISO 20022 standard.  This means that whenever these terms are used in the Rules and the HVCS Standards, it is referring to HVCS participants only that fulfil the role of an instructing agent or an instructed agent.`
-	`---------------`
-	`------------------------------------------------------------`
-	`---------------`
-	`------------------------------------------------------------`
-	`Appendix 14 A: HVCS Overview`
-	`Effective date: 24/02/2025	Appendix 14 A: HVCS Overview	Page 29 of 29`
-	`Appendix 14A: HVCS Overview`
-	`Appendix 14A: HVCS Overview`
-	*/
+	)
 ]

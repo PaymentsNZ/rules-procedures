@@ -1,7 +1,7 @@
 namespace hvcs
 
 import [
-	"../html.mixt"
+	html = "../html.mixt"
 ]
 {
 	//hvcs::document creates a PNZ HVCS legal document as HTML

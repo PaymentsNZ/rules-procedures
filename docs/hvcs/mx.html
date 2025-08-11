@@ -5,6 +5,7 @@
         <title>HVCS MX Procedures</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
         <link href="../styles/pnz.legal.css" rel="stylesheet"/>
+        <link href="../styles/pnz.hvcs.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.menu.css" rel="stylesheet"/>
     </head>
     <body class="document">
@@ -20,7 +21,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">HVCS rules and procedures overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>This document MX Messaging Procedures (Part D) is one part of a suite of documentation to help participants
 			understand what is required to become a high value clearing system (HVCS) participant and how to send and
@@ -67,7 +68,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number=""></div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).1 Part 9 contains
 			the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, 
@@ -114,7 +115,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">Standards, best practices and commentary</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <p>
                     <span>For information on how to determine whether the content of an applicable HVCS Standard in Appendix 14
 			creates binding legal rights or obligations, please see</span>
@@ -129,7 +130,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">Document purpose and structure</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>This document discusses the MX Messaging Procedures that apply to HVCS instructions. It is recommended if
 		you&apos;re not familiar with the ISO 20022 message format to read ISO for Dummies.</li>
                 <li>This document is divided into eight chapters.</li>
@@ -152,7 +153,7 @@
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">Interpretation</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>For the purposes of these MX Messaging Procedures, all references to the following defined terms means
 			an HVCS instruction that is an MX message:</p>
@@ -172,7 +173,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.1">MyStandards</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>SWIFT maintains the MX Message Specifications on behalf of Payments NZ and participants. The specifications
 		are maintained using SWIFT&apos;s MyStandards tools and published to the MyStandards website.</li>
                 <li>MyStandards is a website licensed by SWIFT to Payments NZ and participants for viewing draft and final
@@ -184,7 +185,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.2">Alignment with CBPR+ and HVCS Rules specifications</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>CBPR+ is designed for cross border flows and is the dominant standard referenced in these MX Messaging
 		Procedures.</li>
                 <li>New Zealand&apos;s HVCS Rules are designed for clearing NZD payments between participants.</li>
@@ -192,14 +193,14 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.3">Intermediaries</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Under ISO 20022, intermediaries need to be bilingual in accordance with the Co-existence Procedures, and:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>Use CBPR+ for cross border correspondents.</li>
                     <li>Use the HVCS Rules for domestic settlement.</li>
                 </ol>
                 <li>The following diagram shows the interaction between CBPR+ and MX messages:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>A cross border correspondent (A) (debtor agent) sends a payment instruction (that aligns to CBPR+ message
 			specifications) to their NZD Vostro account provider (B), who is also a participant.</li>
                     <li>The participant acting as an intermediary (B) forwards the payment instruction in the form of an MX
@@ -214,7 +215,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.4">Usage Guidelines</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>
                     <span class="bold">A Usage Guideline</span>
                     <span>is the formal definition for the language used to exchange HVCS instructions and other SWIFT messages.
@@ -255,11 +256,11 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.5">MyStandards exports</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The MyStandards website includes capability to export copies of the MX Message Specifications for offline
 		assessment.</li>
                 <li>The archive contains three files for each MX message:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>A usage guideline in PDF format,</li>
                     <li>The MX message specification in XLSX format, and</li>
                     <li>The MX message specification in XSD format.</li>
@@ -268,7 +269,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.6">Specification versioning</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Specifications are released as a versioned set.</li>
                 <li>Schema changes will always be released with a new date.</li>
                 <li>Technical versions can contain minor corrections to cross-element rules or navigation, though not be used for
@@ -280,7 +281,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.7">Content view vs Result view</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div class="diagram">
                     <img src="images/hvcs_mx_mystandards_result_view.png" alt="Content View vs Result View"></img>
                 </div>
@@ -301,10 +302,10 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.8">MyStandards compare function</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Participants may want to determine the differences between the variants of a message. This comparison can be
 		performed directly in MyStandards using the Compare function to:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>compare different versions of the same message from the same publisher (e.g., comparing the pacs.008 from MX
 			Message Specifications 20220721 Technical Version 1 vs MX Message Specifications 20220721 Technical Version
 			4); or</li>
@@ -322,7 +323,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.9">Readiness portal</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The Readiness Portal is an extension to MyStandards that participants can use to accelerate development and
 		verification of conformance to the new standards.</li>
                 <li>A separate Readiness Portal has been created for each participant. Please email iso20022@paymentsnz.co.nz to
@@ -341,7 +342,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.10">Transaction Manager</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>SWIFT&apos;s Transaction Manager platform will provide a set of centralised common transaction processing services
 		that today are typically provided by each financial institution in a distributed manner. Transaction Manager scope
 		is limited to cross border payments and does not currently monitor payments sent across local market infrastructure.</li>
@@ -361,10 +362,10 @@
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.1">MX message requirements</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Participants must refer to MyStandards for detailed MX Message Specifications and in conjunction with Part F
 		— Co-existence Procedures must:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>send MX messages that conform with this part D and the MX Message Specifications, and</li>
                     <li>receive and process MX messages that conform with this Part D and the MX Message Specifications.</li>
                 </ol>
@@ -372,7 +373,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.2">Instructing agent validation</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>
                     <span>An instructing agent that utilises gateway products provided by SWIFT such as SWIFT Alliance Access
 				(SAA) or Alliance Message Hub (AMH)</span>
@@ -387,14 +388,14 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.3">Instructed agent validation</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Subclause (2) applies to a participant who receives an SCP and is also the creditor agent for the message.</li>
                 <li>The instructed agent must do the following to validate the content of Creditor Account before crediting the
 		amount of the HVCS payment to the creditor&apos;s account:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>if the Creditor Account contains an account number for the creditor but no BIC, the instructed agent must
 			ensure that the account number is a valid NZ account number by—</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>performing interchange number and branch number interlock checking; and</li>
                         <li>ensuring that the account number passes check digit validation in accordance with the SBI standards:
 				BACHO account numbers:</li>
@@ -407,10 +408,10 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.4">Charges for cross border redirections</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>an instructing agent proposes to deduct a charge from an inward cross border redirection before sending the
 		HVCS payment to the AVP MX CUG transaction delivery system for settlement,—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>SWIFT requirements apply to the Interbank Settlement Amount, Instructed Amount and Exchange Rate plus the
 			associated charges fields of Charge Bearer and Charges Information and</li>
                     <li>the amount of the charge is determined by the instructing agent and its overseas customer.</li>
@@ -420,7 +421,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.5">Cross border redirection: Charge Bearer contains DEBT (NZD or converted to NZD)</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>
                     <span class="bold">Situation 1:</span>
                     <span>Charge Bearer contains DEBT (NZD or converted to NZD).</span>
@@ -429,7 +430,7 @@
                     <span class="bold">Case 1:</span>
                     <span>Charges Information is present: If Charges Information is present,—</span>
                 </li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>amount specified in Charges Information is the amount of the charge; and</li>
                     <li>the amount in the Interbank Settlement Amount of the redirected message by the amount in Charges Information
 			that is owed by referencing the BIC identified in the Agent sub-element of the Charges Information field; and</li>
@@ -440,17 +441,17 @@
                     <span class="bold">Case 2:</span>
                     <span>Charges Information is not present:  If Charges Information is not present,—</span>
                 </li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>instructing agent may claim a charge from the debtor agent, but must not deduct the charge from the amount
 			of the cross border redirection; and</li>
                     <li>content of Charge Bearer in the redirected message should remain as DEBT.</li>
                     <li>currency transactions redirected after conversion to NZD:  If an instructing agent proposes to deduct a charge
 			from the Interbank Settlement Amount of a cross border redirection (even if Charge Bearer contains DEBT) the
 			following applies—</li>
-                    <ol class="level3U">
+                    <ol class="level3U level3U-counter-reset">
                         <li>if the Instructed Amount (currency/instructed amount) is present on the inward cross border redirection,
 				the instructing agent must—</li>
-                        <ol class="level3">
+                        <ol class="level3 level3-counter-reset">
                             <li>deduct the charge from the amount in Interbank Settlement Amount with no action on the Instructed
 					Amount; and</li>
                             <li>create a new Charges Information element (instructing agent&apos;s charges) and set Charge Bearer in the
@@ -461,7 +462,7 @@
                         </ol>
                         <li>if the Instructed Amount (currency/instructed amount) is not present on the inward cross-border redirection,
 				the instructing agent must—</li>
-                        <ol class="level3">
+                        <ol class="level3 level3-counter-reset">
                             <li>create new Instructed Amount element containing the amount in the Interbank Settlement Amount of the
 					inward cross-border message; and</li>
                             <li>create a new Instruction Information element (instructing agent&apos;s charges) and set the Charge Bearer
@@ -475,14 +476,14 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.6">Cross border redirection: Charge Bearer CRED or SHAR</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>
                     <span class="bold">Situation 2:</span>
                     <span>Charge Bearer CRED or SHAR.</span>
                 </li>
                 <li>an instructing agent proposes to deduct a charge from an inward cross border redirection before sending the HVCS
 		payment to the AVP MX CUG transaction delivery system for settlement, the following rules apply:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>if the Instructed Amount is not present on the inward cross border redirection and the instructing agent
 			proposes to deduct the charge from the Interbank Settlement Amount, the instructing agent must create new
 			Instructed Amount element containing the Interbank Settlement Amount of the inward cross border redirection:</li>
@@ -496,7 +497,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.7">Messages for HVCS payments</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>Participants use the payment message types described in the following table to clear and settle HVCS payments:</p>
                 </div>
@@ -538,7 +539,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.8">Other SWIFTNet message types</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>The Reserve Bank and SWIFT use the system messages described in the following table to process HVCS
 			instructions.:</p>
@@ -581,7 +582,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.9">Other FIN message types</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>Participants exchange the MX message types described in the following table:</p>
                 </div>
@@ -625,7 +626,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.1">ISO 20022 message structure</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div class="diagram">
                     <img src="images/hvcs_mx_message_structure.png" alt="MX Message Structure"></img>
                 </div>
@@ -664,7 +665,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.2">Identifying message types and usage guidelines</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The combination of the Message Definition Identifier and the Usage Identifier are used to identify the Message
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.</li>
                 <table class="pnz-table">
@@ -775,7 +776,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.3">External code lists</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>Several elements within the MX Message Specifications refer to &apos;External Code Lists&apos;. These code lists are
 			 maintained by SWIFT (through their quarterly release cycle) and are published for use here. Unless otherwise
@@ -785,7 +786,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.3">External code lists</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>Several elements within the MX Message Specifications refer to &apos;External Code Lists&apos;. These code lists are
 			 maintained by SWIFT (through their quarterly release cycle) and are published for use here. Unless otherwise
@@ -795,7 +796,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.4">BICs</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The BIC element will form a mandatory component in the SWIFTNet Header and BAH. The BIC must be a production BIC
 		and contain 11 characters, either BIC11 or BIC8 + &apos;XXX&apos;. The BIC8 used in both of these message components must
 		be identical in specific fields as outlined below, and published in the SWIFTNet Directory. Note that the
@@ -805,7 +806,7 @@
                 <li>SWIFT will undertake central validation to ensure that any BICs used in the Business Document are valid.  Both
 		connected and non-connected BICs are allowed.</li>
                 <li>Consistency checking of the BIC8 in payment messages will be undertaken within RTGS as follows:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>The BIC8 in the Sender DN of the SWIFTNet Header must be identical to the corresponding BIC8 in the From
 			elements of the BAH; and</li>
                     <li>The BIC8 in the From element of the BAH must be identical to the corresponding BIC8 in the instructing agent
@@ -816,7 +817,7 @@
 		consistency checking. In the case of delivery failure, the reason code provided in the xsys.003 message will be RC05
 		(Invalid BIC Identifier). The full list of rejection codes is available on the RBNZ Confluence website.</li>
                 <li>The BIC elements are expected to be the same except for the following circumstances:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>when the Copy/Duplicate indicator is set to COPY or CODU,</li>
                     <li>when the sender BIC is prefixed with RBNZNZ.</li>
                 </ol>
@@ -824,7 +825,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.5">Distinguished name structure</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The RBNZ have decided to adopt the Distinguished Name (DN) structure for transport of FINplus / CBPR+ messages.</li>
                 <li>To enable ISO 20022 to work for multiple use cases and independent of networks, the general convention is to use DNs
 		to specify sender and receiver information. This will enable SWIFT to implement a consistency check between the
@@ -845,7 +846,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.6">Distinguished name registry</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>New participants joining the AVP MX CUG will need to specify their DN for message addressing and place the SWIFT e-order
 		required to join the AVP MX CUG.</li>
                 <li>DNs are service specific and must be used with the matching service and messages.</li>
@@ -856,7 +857,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.7">Legal Entity Identifier</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The Legal Entity Identifier (LEI) is a 20-character, alpha-numeric code, designed to uniquely identify legally distinct
 		entities that engage in financial transactions. It requires annual verification, carries useful information about company
 		structure, and is the globally recognized ISO 17442 standard.</li>
@@ -868,7 +869,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.8">Remittance information (pacs.008 and pacs.004)</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.</li>
                 <li>Unstructured remittance information &lt;RmtInf/Ustrd&gt; allows 1x140 characters (to align with HVPS+ and CBPR+).</li>
@@ -882,7 +883,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.9">HVCS structured address line formatting</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>This section provides guidance for how the schema should be used to transport New Zealand addresses containing debtor and
 		creditor address information for all HVCS payments, including exclusively  domestic payments and the domestic element of
 		cross border payments. The guidance below is to be followed when structured address line formatting is used.</li>
@@ -896,7 +897,7 @@
                 <li>Non-location addresses (for example PO Box addresses, Private Bags, Lobbies etc.) do not form part this guidance for debtor
 		and creditor identification because they are not expected to be used for this purpose.</li>
                 <li>Please note for the schema elements listed below:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>M = Mandatory, O = Optional, E = Expected.</li>
                     <li>Expected should not be interpreted as Mandatory; there will always be scenarios where expectations cannot be met.</li>
                 </ol>
@@ -1043,12 +1044,12 @@
         </table>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.10">Using payment message identifiers</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div class="diagram">
                     <img src="images/hvcs_mx_payment_message_identifiers.png" alt="Payment Message Identifiers"></img>
                 </div>
                 <li>Payment messages can be passed serially between each agent in the payment chain and contain:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>Point-to-point (P2P) elements which are passed between one party to the next, and are not necessarily
 			passed on in subsequent payment messages (for example, the Instruction Identification); and</li>
                     <li>End-to-end elements (E2E) which are passed unchanged through the entire payment life cycle to all
@@ -1198,9 +1199,9 @@
         </table>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.11">ISO 20022 base standards</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>All MX message elements which are defined (by data type) as text are restricted to FIN X Characters:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <span class="bold">a-z A-Z 0-9 / - ? : ( ) . , &apos; + CrLf Space</span>
                 </ol>
                 <li>
@@ -1208,7 +1209,7 @@
                     <span class="bold">! # $ % &amp; &apos; * = ? ^ _ ` { | } ~ &quot; ( ) ; &lt; &gt; @ [ \ ]</span>
                     <span>are additionally allowed in:</span>
                 </li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>all party (agents and non-agents) Name and Address elements;</li>
                     <li>the Related Remittance Information &lt;RltdRmtInf&gt; element; and</li>
                     <li>the Remittance Information &lt;RmtInf&gt; element.</li>
@@ -1217,7 +1218,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.12">CBPR+ character sets</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>While ISO 20022 base standards support non-Latin characters, CBPR+ will only
 		support Latin characters in the initial service implementation.</li>
                 <li>Non-Latin characters (including Mandarin, Cantonese, Arabic, Cyrillic character
@@ -1231,7 +1232,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.13">HVCS character sets</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li></li>
                 <li>
                     <span>The character sets used within the HVCS specifications are aligned to CBPR+ though
@@ -1293,7 +1294,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.1">Identifying SCPs</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Domestic customer credit transfers require explicit classification within pacs.008 MX messages to trigger
 		treatment as a Same-day Cleared Payment.</li>
                 <li>To classify the payment as an SCP, the Local Instrument / Code element of a pacs.008 must be set to the
@@ -1307,20 +1308,20 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.2">SCP account number format</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The following account number restrictions apply to Same-day Cleared Payments where the SCP does not specify
 		a BIC for the creditor:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>The scheme name (DbtrAcct / Id / Other / SchmeNm / Cd) should be populated where the identifier
 			represents a NZ Basic Bank Account, a Debit Card or a Credit Card using one of the following values:</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>BBAN — Basic Bank Account Number identification</li>
                         <li>AIIN — Card Issuer Identification Number</li>
                         <li>Scheme Name should be omitted or use a Proprietary value (enabled through bilateral agreement) where
 				the identifier represents something other than a BBAN or AIIN.</li>
                     </ol>
                     <li>Where Scheme Name = BBAN (Basic Bank Account Number), the Identifier must be either 15 or 16 digits:</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>2 digits — Interchange number (Bank Number)</li>
                         <li>4 digits — Branch number</li>
                         <li>7 digits — Account number, right aligned, padded with high order zeros</li>
@@ -1334,7 +1335,7 @@
                         </div>
                     </ol>
                     <li>Where Scheme Name = AIIN (Debit Card or Credit Card), the Identifier must be 16 digits:</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>6 digits — Issuer Identification Number (IIN) or Bank Identification Number (BIN)</li>
                         <li>9 digits — Account identifier / number</li>
                         <li>1 digit — Checksum</li>
@@ -1344,7 +1345,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.3">SCP Customer notifications</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>There is now a dedicated Email Address field (see the path element
 			/Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/CtctDtls/EmailAdr within the MX Message Specifications
@@ -1356,13 +1357,13 @@
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.4">SCP remittance information</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>If remittance information is specified—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>a single structured remittance element must be used (&lt;RmtInf/Strd&gt;); and</li>
                     <li>three additional remittance information elements (&lt;RmtInf / Strd / AddtlRmtInf&gt;) must be included to
 			represent particulars, code, and reference information (&apos;PCR&apos;) as follows:</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>occurence 1: particulars:</li>
                         <li>occurence 2: code:</li>
                         <li>occurence 3: reference; and</li>
@@ -1379,7 +1380,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.5">PCR examples</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The following examples demonstrate how particulars, code, and reference information can be encoded within an SCP:</li>
                 <code class="xml-snippet">
                     <div>&lt;CdtTrfTxInf&gt;</div>
@@ -1414,7 +1415,7 @@
         <div class="tag-bestpractice"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="5.1">How to represent direct and cover payments</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Several scenarios have been identified where domestic direct and cover MT messages have been used
 		to send payments to beneficiary accounts to ensure they are not identified as SCPs, and hence do not
 		trigger SCP obligations such as account number formatting or timing.</li>
@@ -1456,7 +1457,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.1">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The pacs.004 return message is sent by an agent to the previous agent in the payment chain to return
 		a payment previously settled.</li>
                 <li>Payment returns may be the consequence of a payment cancellation requested by the instructing agent
@@ -1466,7 +1467,7 @@
 		message) REJT/RETN and the MT202/202 COV (financial institution credit transfer message) REJT/RETN.
 		A REJT/ RETN message is functionally like an unsolicited / solicited pacs.004, respectively.</li>
                 <li>When using the pacs.004 return message, it is important to note the following:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>Each pacs.004 return message must contain one HVCS return payment.</li>
                     <li>HVCS supports partial solicited payment returns with the use of multiple pacs.004 return
 			messages to return an HVCS payment in instalments.</li>
@@ -1521,7 +1522,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="7.1">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Exception and investigation messages are designed to support case management functions related to
 		payment instructions.</li>
                 <li>The camt.056 (FI to FI Payment Cancellation Request) message is used to request the return of an HVCS
@@ -1539,7 +1540,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="7.2">Element guidance</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>This section provides market practice guidance for elements used in scope for the HVCS.</p>
                 </div>
@@ -1602,7 +1603,7 @@
         </table>
         <div class="clause-row">
             <div class="clause-heading" data-number="7.3">Reason Codes and Use of Narrative</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>When sending a camt.029 or a camt.056 message, participants apply a reason code to define why the
 			message is being sent. These reason codes are defined in detail within SWIFT MyStandards.</p>
@@ -1616,9 +1617,9 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.1">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The HVCS Y-Copy message set includes the following SWIFTNet MX system messages:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>xcop.001 Y-Copy Payment Partial Copy Notification</li>
                     <li>xsys.001 Y-Copy Authorisation or Refusal</li>
                     <li>xsys.002 Y-Copy Authorisation Notification</li>
@@ -1635,7 +1636,7 @@
                     <img src="images/hvcs_mx_swiftnet_copy_service.png" alt="Serial Payment Return"></img>
                 </div>
                 <li>As illustrated in the diagram above:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>The HVCS operates on the SWIFTNet Copy Service in a mandatory partial Y-Copy mode for the
 			following message types; pacs.008, pacs.009 (CORE/COV) and pacs.004.</li>
                     <li>In Y-Copy mode, SWIFT intercepts the pacs.008, pacs.009 (CORE/COV) and pacs.004 messages
@@ -1660,14 +1661,14 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.2">Message validation (SWIFT)</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The RBNZ has chosen to implement Base Message Validation within the AVP MX CUG. This means SWIFT will
 		validate messages conform to the ISO 20022 base standards only (that is, not the MX Message
 		Specifications); including whether the XML tree is well formed and that the HVCS instruction complies
 		with the base ISO 20022 message format.</li>
                 <li>The XML validations SWIFT performs ensure that the business document contains valid XML coding, for
 		example:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>Each XML document must be a single-rooted hierarchical structure of elements;</li>
                     <li>All elements must be correctly paired;</li>
                     <li>The element opening tag and closing tag are the same name; and</li>
@@ -1685,13 +1686,13 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.3">Message validation (Participant)</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Usage Guideline validation is designed to complement the validations provided by SWIFT described in
 		the previous section that are applicable specifically to HVCS instructions in accordance with the MX
 		Message Specifications.</li>
                 <li>For the purposes of validation, the rules within Usage Guidelines generally falls into two
 		categories:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>Formal Rules or &apos;hard&apos; rules — which include the Schema, Cross-Element and Reference Data
 			Rules. These can be articulated in the form of machine-readable algorithms and can be easily
 			validated; and</li>
@@ -1705,7 +1706,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.4">Conditional release</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Conditional release is where the payment message will only be released upon certain criteria being
 		met.</li>
                 <li>ESAS will maintain the conditional release functionality with ISO 20022 for the pacs.008 and pacs.009
@@ -1713,7 +1714,7 @@
                 <li>The element “Instruction for Next Agent / Instruction Information” elements are used to specify any
 		conditional release parameters for the HVCS payment.</li>
                 <li>The following release conditions are supported:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>Release the HVCS payment for settlement at a specified date and time.</li>
                     <li>Release the HVCS payment for settlement at a specified event in the RTGS.</li>
                     <li>Release the HVCS payment for settlement once authorised in the ESAS GUI.</li>
@@ -1723,7 +1724,7 @@
         <h2 class="subsection-heading">Authorisation request (xcop.001)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.5">Core data copied to ESAS — pacs.008 and pacs.009</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The table below lists the elements that will be copied from the Document sections of the pacs.008
 		and pacs.009 payment messages to the xsys.001.</li>
                 <li>All elements from the Business Application Header (BAH) will be copied to ESAS including sender
@@ -1803,7 +1804,7 @@
         </table>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.6">Core data copied to ESAS — pacs.004</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>All elements from the Business Application Header (BAH) will be copied to ESAS including sender BIC,
 		receiver BIC, business message identifier, message definition identifier, and creation date.</li>
                 <li>The following table list the elements that will be copied from the Document sections of pacs.004
@@ -1889,7 +1890,7 @@
         <h2 class="subsection-heading">Authorisation response (xsys.001)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.7">Third party information</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>As part of the SWIFT Partial Copy service, ESAS is required to either authorise or reject the
 		payment message (pacs.008/pacs.009 CORE/pacs.009 COV/pacs.004) using an xsys.001 system message. In
 		the xsys.001 system message ESAS provides additional information related to the payment message and
@@ -1898,9 +1899,9 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.8">Settlement is successful</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>If settlement is successful in ESAS:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>The elements &lt;ThirdPartyToSenderInformation&gt; and &lt;ThirdPartyToReceiverInformation&gt; are used to
 			supply ESAS settlement information to the sender and receiver of the payment message.</li>
                     <li>The element &lt;ThirdPartyToSenderInformation&gt; and its child elements are appended from the xsys.001
@@ -1934,9 +1935,9 @@
         </table>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.9">Settlement is unsuccessful</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>If settlement is not successful in ESAS:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>The element &lt;ThirdPartyRefusalReason&gt; is used to supply information related to why the payment
 			was rejected in ESAS, which is sent to the sender of the payment message.</li>
                     <li>The element &lt;ThirdPartyRefusalReason&gt; and its child elements are appended from the xsys.001 into
@@ -1994,7 +1995,7 @@
         <h2 class="subsection-heading">Authorisation Notification (xsys.002)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.10">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The Y-Copy Authorisation Notification is generated by SWIFTNet to notify the sender that a pacs.008
 		/ pacs.009 (CORE/COV) / pacs.004 message has been authorised by RTGS - an xsys.001 with AuthstnSts
 		equal to &apos;Authorised&apos;.</li>
@@ -2006,7 +2007,7 @@
 		status of each payment message.</li>
                 <li>There are two options for linking an xsys.002 authorisation notification back to the original
 		pacs.008, pacs.009 or pacs.004 payment message:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>one using a SWIFT generated reference (this is the recommended option); and</li>
                     <li>the other using user input reference. More information on either option can be found on the
 			RBNZ&apos;s Confluence Website.</li>
@@ -2016,7 +2017,7 @@
         <h2 class="subsection-heading">Refusal Notification (xsys.003)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.11">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The Y-Copy Refusal Notification is a system message generated by SWIFTNet to alert the sender that
 		a pacs.008 / pacs.009 (CORE/COV) / pacs.004 return message has been refused by RTGS - an xsys.001
 		with AuthstnSts equal to &apos;Refused&apos;.</li>
@@ -2024,7 +2025,7 @@
 		information about the refusal (see Third Party Refusal Reason Codes below).</li>
                 <li>There are two options for linking an xsys.003 refusal notification back to the pacs.008, pacs.009
 		or pacs.004 payment message:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>one using a SWIFT generated reference (this is the recommended option); and</li>
                     <li>the other using user input reference. More information on either option can be found on the
 			RBNZ&apos;s Confluence Website.</li>
@@ -2034,7 +2035,7 @@
         <h2 class="subsection-heading">Non-delivery warning (xsys.010)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.12">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The SWIFTNet Y-Copy service generates the Non-Delivery Warning (xsys.010) system message when a
 		message is considered to be overdue (not delivered within the time frame specified by the sender).</li>
                 <li>The xsys.010 system message directly corresponds to the MT010 system message and is optional.</li>
@@ -2045,7 +2046,7 @@
                 <li>Participants should refer to the SWIFTNet system message specification for the additional xsys.010
 		fields and example of the XML structure.</li>
                 <li>Status codes:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>PendingAuthorisation (The message is not yet authorised by the RBNZ).</li>
                     <li>AuthorisedPendingDelivery (The message is authorised by RBNZ, but not yet delivered).</li>
                 </ol>
@@ -2054,7 +2055,7 @@
         <h2 class="subsection-heading">Delivery notification (xsys.011)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.13">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The Delivery Notification message is an optional system message that indicates that a message for
 		which a delivery notification is requested, has been successfully delivered.</li>
                 <li>The Delivery Notification is reconciled with the InterAct request to which it applies.</li>
@@ -2071,7 +2072,7 @@
         <h2 class="subsection-heading">Third Party Refusal Return Codes (xsys.003)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.14">Overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>The following rejection codes will be provided in the &lt;RefusalReason&gt; element of the xsys.003
 			if a payment message is rejected by ESAS:</p>

@@ -5,6 +5,7 @@
         <title>HVCS MT Procedures</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
         <link href="../styles/pnz.legal.css" rel="stylesheet"/>
+        <link href="../styles/pnz.hvcs.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.menu.css" rel="stylesheet"/>
     </head>
     <body class="document">
@@ -20,7 +21,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">HVCS rules and procedures overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>This document MT Messaging Procedures (Part E) is one part of a suite of documentation to help participants
 			understand what is required to become a high value clearing system (HVCS) participant and how to send and
@@ -75,19 +76,19 @@
         <div>Chapter 6 specifies the format of the notification messages that FINCopy sends to an HVCS instructing agent and provides the ESAS rejection codes for AVP.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.1">MT messages for HVCS payments</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.2">Other FINCopy message types</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.3">Other FIN message types</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.4">Message lifecycle</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div>identifies the message as an AVP message using the AVP code indicator in field 103 of the user header block 3,</div>
         <div>checks that the instructing agent and the instructed agent are AVP MT CUG members, and</div>
@@ -119,14 +120,14 @@
         <div>FINCopy does not notify the intended instructed agent that ESAS has rejected the settlement request.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.1">SWIFT message header details</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.2">User header details</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>content and format of block 1 or block 2 is similar for all SWIFT messages (refer to the SWIFT User Handbook).</li>
                 <li>3—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>mandatory for all MT messages; and</li>
                     <li>data that is specific to HVCS.</li>
                 </ol>
@@ -139,12 +140,12 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.1">SWIFT and HVCS rules</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>An MT103 is a general use payment message delivered through SWIFT that contains an instruction to make an HVCS payment.</li>
                 <li>An MT103 message is sent—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>by, or on behalf of, the financial institution (debtor agent) of the ordering customer (the debtor); and</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>either—</li>
                     </ol>
                 </ol>
@@ -154,51 +155,51 @@
         <div>From the perspective of the instructing agent, 1 or both of the ordering customer (debtor) or the beneficiary customer (creditor) is not a financial institution.</div>
         <div>Participants use MT103 payment messages to settle and deliver customer credit transfers (SCPs and cross border redirections).</div>
         <div>The following standards apply to SCP MT103s:</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>SWIFT’s MT103 format and validation standards (refer to the SWIFT user handbook):</li>
             <li>the HVCS format and validation standards in the following table:</li>
         </ol>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.2">Field 56a</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>institution)</li>
             </ol>
         </div>
         <div>with institution)</div>
         <div>instructing agent of an SCP payment message must ensure that —</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>field 56a is not present; and</li>
             <li>if 57a is entered, it is entered as 57A and contains a BIC.</li>
         </ol>
         <div>the account of the creditor is held with an agency institution, the instructing agent is entitled to enter—</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>the BIC of the agency institution in field 57A; and</li>
             <li>the creditor details in field 59/59A.</li>
         </ol>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.3">Field 59: instructing agent</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div>option A; or</div>
         <div>option F; or</div>
         <div>No Letter</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.4">SCP MT103: field 59: instructing agent: option A</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div>the instructing agent must ensure that field 59A contains a valid BIC (SWIFT validation); and</div>
         <div>the instructing agent is entitled to enter an account number in the first line of field 59A but the account number is not required to:</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>comply with the account number validation requirements in the SBI standards: BACHO account numbers.</li>
         </ol>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.5">SCP MT103: field 59: instructing agent: option F</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The format of ‘option F’ must comply with the following SWIFT defined MT103 field specification:</li>
             </ol>
         </div>
         <div>If an instructing agent uses the F option in field 59 of an SCP payment message, the instructing agent must enter 1 of the following types of account number in the first line of field 59:</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>a valid credit card number:</li>
             <li>a valid scheme debit card number:</li>
             <li>an account number that complies with the requirements of the SBI standards: BACHO account numbers. If the creditor is the principal in the transaction, the account may be, a nominated control account (e.g. a financial institution&apos;s NZ dollar settlement account). The SBI standards: BACHO account numbers specify the format for account numbers in the following table:</li>
@@ -206,9 +207,9 @@
         <div>The instructing agent must ensure that the creditor’s account number is left aligned on the first line of field 59 with a slash ( / ) as the first character in the account number line (sub-field 1).</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.6">SCP MT103: field 59: no letter option </div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>If an instructing agent uses the ‘no letter‘ option in field 59 of an SCP payment message, the instructing agent must enter 1 of the following types of account number in the first line of field 59: </li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>a valid credit card number,  </li>
                     <li>a valid scheme debit card number, or </li>
                     <li>an account number that complies with the requirements of the SBI standards: BACHO account numbers. If the creditor is the principal in the transaction, the account may be, a nominated control account (e.g. a financial institution&apos;s NZ dollar settlement account). The SBI standards: BACHO account numbers specify the format for account numbers in the following table:</li>
@@ -216,18 +217,18 @@
             </ol>
         </div>
         <div>The instructing agent must ensure that:</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>the first line of field 59 contains at least 1 line of name data and address data, and</li>
             <li>the creditor’s account number is left aligned on the first line of field 59 with a slash ( / ) as the first character in the account number line (sub-field 1).</li>
         </ol>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.7">Field 59: instructed agent validation</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Subclause (2) applies to the instructed agent who receives an SCP payment message.</li>
                 <li>The instructed agent must do the following to validate the content of field 59 before crediting the amount of the HVCS payment to the creditor’s account:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>if field 59 contains an account number for the creditor but no BIC, the instructed agent must ensure that the account number is a valid NZ account number by—</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>performing interchange number and branch number interlock checking; and</li>
                         <li>ensuring that the account number passes check digit validation in accordance with the SBI standards: BACHO account numbers:</li>
                     </ol>
@@ -237,20 +238,20 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.8">Validation not required</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div>any content of the payment message other than field 59 or an email address in field 72, or</div>
         <div>the format of the payment message.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.9">Field 70: remittance information</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>the instructing agent populates field 70,—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>instructing agent may insert 4 lines of 35 characters in terms of the SWIFT standard; but</li>
                     <li>instructed agent is required to use only the first 12 characters in each of the first 3 lines to populate the particulars, code, and reference details on the customer’s statement.</li>
                 </ol>
                 <li>instructing agent should—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>that payment messages contain only 3 lines of 12 characters to avoid confusion when lines are truncated; and</li>
                     <li>use the first 12 characters in lines 1, 2, and 3 to populate the particulars, code, and reference fields respectively.</li>
                 </ol>
@@ -258,16 +259,16 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.10">Field 72: Instructing agent to instructed agent information: SCP creditor’s email address</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>the instructing agent of an SCP instructs the instructed agent to notify the creditor that the instructed agent has credited the creditor’s account with the amount of the SCP, the instructing agent must use field 72 to capture the creditor’s email address.</li>
                 <li>the instructing agent populates field 72 with the creditor’s email address, the instructing agent must ensure that the field 72 string contains—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>no spaces; and</li>
                     <li>no more than 140 characters to communicate an email address (4x35); and</li>
                     <li>no less than 6 characters to communicate an email address.</li>
                 </ol>
                 <li>instructing agent must—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>use the code /EMAIL/ at the beginning of the first line of field 72; and</li>
                     <li>ensure that the letters in the code /EMAIL/ at the beginning of the first line are upper case.</li>
                 </ol>
@@ -277,11 +278,11 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.11">Field 72: Instructing agent to instructed agent information: x character set</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>An instructing agent must ensure that the format of any creditor’s email address for a beneficiary notification recorded in field 72 of the MT103 message complies with the requirements for field 72, as detailed below.</li>
                 <li>The instructing agent must ensure that the characters communicating the email address are valid SWIFT characters from the “X” character set.</li>
                 <li>If the instructing agent receives a creditor email address from a debtor containing any characters specified in the following table in the ‘invalid character’ column, the instructing agent must—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>accept the invalid character; and</li>
                     <li>replace the invalid character with the character specified in the following table in the ‘replace with’ column:</li>
                 </ol>
@@ -291,7 +292,7 @@
         <div>or (A)</div>
         <div>or (AND)</div>
         <div>If the instructing agent receives a creditor email address from a Debtor containing any characters specified in the following table in the ‘invalid character’ column, the instructing agent—</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>may determine whether or not to accept the invalid character; but</li>
             <li>if the instructing agent accepts the invalid character, must replace the invalid character with the character specified in the following table in the ‘replace with’ column:</li>
         </ol>
@@ -306,7 +307,7 @@
         <div>If an instructing agent replaces more than 1 invalid character in a single email address in accordance with this clause 3.8, the instructing agent must ensure that all of the replacement characters are either upper case or lower case.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.12">Field 72: Instructed agent transformation</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div>must have the technical capability to receive and process the following replacement characters in field 72 - in both upper case and lower case; and</div>
         <div>or (U)</div>
@@ -335,9 +336,9 @@
         <div>or (P)</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.13">Field 72: Instructing agent to instructed agent information: Instructing agent ESAS liquidity management</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>the instructing agent of an SCP proposes to manage the priority or timing of settlement of the HVCS payment in ESAS, the instructing agent may use 1 of the tags in subclause (2) to populate field 72 unless:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>HVCS payment is a return message (sent under clause 2.2 of the HVCS Common Procedures); or</li>
                     <li>of the 6 lines available in field 72 are populated with other information.</li>
                 </ol>
@@ -347,29 +348,29 @@
         <div>If an instructing agent populates field 72 with a tag in subclause (2), the instructing agent must use the first available line in field 72.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.14">Field 72: Return HVCS payment: timing, format and content</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>instructed agent must return an HVCS payment in accordance with—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>clause 1.6(1)(a) of the HVCS Common Procedures; and</li>
                     <li>the guidance provided in Part F – Co-existence Procedures.</li>
                 </ol>
                 <li>instructed agent must—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>put the reason for the return of the HVCS payment in field 72 of the message; and</li>
                     <li>ensure that the content and the format of field 72 complies with the requirements in the following table:</li>
                     <li>ensure that line 2 of field 72 contains 1 of the reason codes in the following table:</li>
                     <li>The instructed agent may—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>populate line number 4 (TREF) or line number 5 (TEXT) of field 72 in the return message.  If the instructed agent populates line 4 or 5 in the return message, the instructed agent must comply with the requirements in the following table and the SWIFT format and validation requirements (refer to the SWIFT user handbook):</li>
                         <div class="clause-row">
                             <div class="clause-heading" data-number="4.1"></div>
-                            <ol class="level1"></ol>
+                            <ol class="level1 level1-counter-reset"></ol>
                         </div>
                         <li>An MT103 is a general use payment message delivered through SWIFT that contains an instruction to make an HVCS payment.</li>
                         <li>An MT103 message is sent—</li>
-                        <ol class="level2">
+                        <ol class="level2 level2-counter-reset">
                             <li>by, or on behalf of, the financial institution (debtor agent) of the ordering customer (debtor); and</li>
-                            <ol class="level3">
+                            <ol class="level3 level3-counter-reset">
                                 <li>either—</li>
                             </ol>
                             <li>to the financial institution (creditor agent) of the beneficiary customer (creditor).</li>
@@ -378,15 +379,15 @@
                     <li>From the perspective of the instructing agent, one or both of the ordering customer (debtor) or the beneficiary customer (creditor) is not a financial institution.</li>
                     <li>Participants use MT103 payment messages to settle and deliver customer credit transfers (SCPs and cross border payment redirections).</li>
                     <li>The following standards apply to the domestic leg of cross border redirection MT103s:</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>SWIFT’s MT103 format and validation standards (refer to the SWIFT user handbook):</li>
                         <li>the HVCS format and validation standards in the following table:</li>
                         <li>Agent)</li>
                     </ol>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.2">Field 52a</div>
-                        <ol class="level1">
-                            <ol class="level2">
+                        <ol class="level1 level1-counter-reset">
+                            <ol class="level2 level2-counter-reset">
                                 <li>institution)</li>
                             </ol>
                             <li>field 52a is present on the inward MT103 message, the instructing agent must copy field 52a from the inward message into the HVCS cross border redirection.</li>
@@ -395,18 +396,18 @@
                     </div>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.3">Field 56a</div>
-                        <ol class="level1">
+                        <ol class="level1 level1-counter-reset">
                             <li>institution)</li>
                         </ol>
                     </div>
                     <li>with institution)</li>
                 </ol>
                 <li>instructing agent of a cross-border MT103 message is entitled to complete field 56a with information that may be—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>relevant to the HVCS payment; or</li>
                     <li>required to comply with anti-money laundering legislation or counter-terrorism legislation.</li>
                     <li>instructing agent of a cross border redirection message is entitled to enter—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>the national clearing code for a domestic institution in sub field 1 of field 56a; and</li>
                         <li>the national clearing code for an agency institution in field 57a; and</li>
                         <li>incomplete customer account details in sub field 1 of field 59.</li>
@@ -415,27 +416,27 @@
                 </ol>
                 <div class="clause-row">
                     <div class="clause-heading" data-number="4.4">Field 59: instructing agent</div>
-                    <ol class="level1"></ol>
+                    <ol class="level1 level1-counter-reset"></ol>
                 </div>
                 <li>may blend the national clearing code information in sub-field 1 of field 57a (or field 56a); and</li>
                 <li>may use 1 of the following options in field 59:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>option A: or</li>
                     <li>option F; or</li>
                     <li>option No Letter</li>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.5">Field 59: instructing agent: option A</div>
-                        <ol class="level1"></ol>
+                        <ol class="level1 level1-counter-reset"></ol>
                     </div>
                     <li>must ensure that field 59A contains a valid BIC (SWIFT will reject an invalid BIC); and</li>
                     <li>is entitled to enter an account number in the first line of field 59A but the account number is not required to—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>comply with the account number validation requirements in the SBI standards: BACHO account numbers; or</li>
                         <li>be a valid credit card number; or</li>
                         <li>be a valid scheme debit card number format.</li>
                         <div class="clause-row">
                             <div class="clause-heading" data-number="4.6">Field 59: instructing agent: option F</div>
-                            <ol class="level1"></ol>
+                            <ol class="level1 level1-counter-reset"></ol>
                         </div>
                         <li>comply with the account number validation requirements in the SBI standards: BACHO account numbers; or</li>
                         <li>be a valid credit card number; or</li>
@@ -443,19 +444,19 @@
                     </ol>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.7">Field 59: no letter option </div>
-                        <ol class="level1"></ol>
+                        <ol class="level1 level1-counter-reset"></ol>
                     </div>
                     <li>comply with the account number validation requirements in the SBI standards: BACHO account numbers; or</li>
                     <li>be a valid credit card number; or  </li>
                     <li>be a valid scheme debit card number format.</li>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.8">Field 59: instructed agent validation</div>
-                        <ol class="level1">
+                        <ol class="level1 level1-counter-reset">
                             <li>Subclause (2) applies to an instructed agent who receives a cross border redirection message.</li>
                             <li>The instructed agent must do the following to validate the content of field 59 before crediting the amount of the HVCS payment to the creditor’s account:</li>
-                            <ol class="level2">
+                            <ol class="level2 level2-counter-reset">
                                 <li>if field 59 contains an account number for the creditor but no BIC, the instructed agent must ensure that the account number is a valid NZ account number by—</li>
-                                <ol class="level3">
+                                <ol class="level3 level3-counter-reset">
                                     <li>performing interchange number and branch number interlock checking; and</li>
                                     <li>ensuring that the account number passes check digit validation in accordance with the SBI standards: BACHO account numbers:</li>
                                 </ol>
@@ -465,21 +466,21 @@
                     </div>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.9">Validation not required</div>
-                        <ol class="level1"></ol>
+                        <ol class="level1 level1-counter-reset"></ol>
                     </div>
                     <li>for a cross border redirection MT103 message:</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>any content of the payment message other than field 59, or</li>
                         <li>the format of the payment message.</li>
                     </ol>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.10">Field 71A and field 71F</div>
-                        <ol class="level1">
-                            <ol class="level2">
+                        <ol class="level1 level1-counter-reset">
+                            <ol class="level2 level2-counter-reset">
                                 <li>for redirections)</li>
                             </ol>
                             <li>an instructing agent proposes to deduct a charge from an inward cross-border MT103 before sending the payment message to the AVP MT CUG transaction delivery system for settlement,—</li>
-                            <ol class="level2">
+                            <ol class="level2 level2-counter-reset">
                                 <li>SWIFT requirements apply to fields 32A, 33B, and 36 plus the associated charges fields of 71A and 71F (refer to the SWIFT user handbook); and</li>
                                 <li>the amount of the charge is determined by the instructing agent and its overseas customer.</li>
                             </ol>
@@ -488,30 +489,30 @@
                     </div>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.11">Cross border redirection: Field 71A example: situation 1</div>
-                        <ol class="level1">
+                        <ol class="level1 level1-counter-reset">
                             <li>1: 71A contains OUR (NZD or converted to NZD).</li>
                             <li>1: Field 71G is present: If field 71G is present,—</li>
-                            <ol class="level2">
+                            <ol class="level2 level2-counter-reset">
                                 <li>amount specified in field 71G is the amount of the charge; and</li>
                                 <li>the amount in field 32A of the redirected message by the amount in field 71G; and</li>
                                 <li>field 71G from the redirected message; and</li>
                                 <li>content of field 71A in the redirected message should remain as OUR.</li>
                             </ol>
                             <li>2: Field 71G is not present.  If field 71G is not present,—</li>
-                            <ol class="level2">
+                            <ol class="level2 level2-counter-reset">
                                 <li>instructing agent may claim a charge from the ordering institution and must not deduct the charge from the amount of the cross border payment redirection; and</li>
                                 <li>content of field 71A in the redirected message should remain as OUR.</li>
                             </ol>
                             <li>currency transactions redirected after conversion to NZD: If an instructing agent proposes to deduct a charge from the amount in field 32A of a cross border MT103 (even if field 71A contains OUR) the following apply—</li>
-                            <ol class="level2">
+                            <ol class="level2 level2-counter-reset">
                                 <li>if field 33B (currency/instructed amount) is present on the inward MT103, the instructing agent must—</li>
-                                <ol class="level3">
+                                <ol class="level3 level3-counter-reset">
                                     <li>deduct the charge from the amount in field 32A with no action on field 33B; and</li>
                                     <li>create a new field 71F (instructing agent’s charges) and set field 71A in the redirected message to BEN (if the instructing agent does not create a new field 71F, the instructing agent must set field 71A to SHA); and</li>
                                     <li>enter the charge deducted from field 32A in new field 71F; or</li>
                                 </ol>
                                 <li>if field 33B (currency/instructed amount) is not present on the inward MT103, the instructing agent must—</li>
-                                <ol class="level3">
+                                <ol class="level3 level3-counter-reset">
                                     <li>create new field 33B containing the amount in field 32A of the inward message; and</li>
                                     <li>create new field 71F (instructing agent’s charges) and set field 71A in the redirected message to BEN (if the instructing agent does not create field 71F, the instructing agent must set field 71A to SHA); and</li>
                                     <li>enter the charge deducted from field 32A in new field 71F.</li>
@@ -521,10 +522,10 @@
                     </div>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.12">Field 71A examples: situation 2 BEN or SHA</div>
-                        <ol class="level1">
+                        <ol class="level1 level1-counter-reset">
                             <li>2: Field 71A contains BEN or SHA.</li>
                             <li>an instructing agent proposes to deduct a charge from an inward cross-border payment before sending the payment message to the AVP MT CUG transaction delivery system for settlement, the following rules apply:</li>
-                            <ol class="level2">
+                            <ol class="level2 level2-counter-reset">
                                 <li>if field 33B is not present on the inward MT103 and the instructing agent proposes to deduct the charge from the amount in field 32A, the instructing agent must create new field 33B containing the amount in field 32A of the inward message:</li>
                                 <li>if field 33B is present on the inward MT103 message, the instructing agent must deduct the charge from field 32A with no action on field 33B:</li>
                                 <li>the instructing agent must create new field 71F and enter the amount deducted in new field 71F:</li>
@@ -534,13 +535,13 @@
                     </div>
                     <div class="clause-row">
                         <div class="clause-heading" data-number="4.13">Field 72: Instructing agent to instructed agent information</div>
-                        <ol class="level1">
+                        <ol class="level1 level1-counter-reset">
                             <li>For a cross border redirection, the instructing agent must copy appropriate content from the inward message into field 72 of the HVCS MT103.</li>
                             <li>If field 52a of the original inward cross-border MT103 contains the ordering institution and not the instructing agent, the instructing agent must add /INS/ followed by the BIC of the instructing agent to field 72.</li>
                         </ol>
                     </div>
                     <li>the instructing agent of a cross border redirection proposes to manage the priority or timing of settlement of the HVCS payment in ESAS, the instructing agent may use any 1 of the tags in subclause (4) to populate field 72 unless—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>HVCS payment is a return (sent under clause 2.2 of the HVCS Common Procedures); or</li>
                         <li>of the 6 lines available in field 72 are populated with other information.</li>
                     </ol>
@@ -551,14 +552,14 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.14">Field 72: Return HVCS payment: timing, format and content</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>instructed agent must return an HVCS payment in accordance with—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>clause 1.7(1)(a) of the HVCS Common Procedures.</li>
                     <li>the guidance provided in Part F – Co-existence Procedures.</li>
                 </ol>
                 <li>The instructed agent must—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>put the reason for the return of the HVCS payment in field 72 of the message; and</li>
                     <li>ensure that the content and the format of field 72 complies with the requirements in the following table:</li>
                 </ol>
@@ -566,22 +567,22 @@
         </div>
         <div>ensure that line 2 of field 72 contains 1 of the reason codes in the following table:</div>
         <div>instructed agent may—</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>populate line number 4 (TREF) or line number 5 (TEXT) of field 72 in the return message.  If the instructed agent populates line 4 or 5 in the return message, the instructed agent must comply with the requirements in the following table and the SWIFT format and validation requirements (refer to the SWIFT user handbook):</li>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.1">MT202 and MT 202COV overview</div>
-                <ol class="level1">
+                <ol class="level1 level1-counter-reset">
                     <li>If an instructing agent initiates an HVCS payment with an MT202 or an MT202COV message to an instructed agent, the instructing agent creates a payment message that complies with the format and content requirements specified in these MT Messaging Procedures.</li>
                     <li>If another financial institution initiates an HVCS payment with an MT202 or MT202COV, the instructing agent copies the content into a new MT202, MT202COV or MT205, MT205COV payment message that complies with the format and content requirements for the message specified in these MT Messaging Procedures.</li>
                 </ol>
             </div>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.2">MT202 SWIFT and HVCS rules</div>
-                <ol class="level1">
+                <ol class="level1 level1-counter-reset">
                     <li>organisation who sends or receives an MT202 message is a financial institution.</li>
                     <li>a participant sends an MT202 using the AVP MT CUG transaction delivery system, the payment message may be a redirection of another category 2 message, for example, an MT200, MT201, MT202, or MT203 received from an overseas institution.</li>
                     <li>following standards apply to MT202s:</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>SWIFT’s format and validation standards (refer to the SWIFT user handbook):</li>
                         <li>the HVCS format and validation standards in the following table:</li>
                     </ol>
@@ -589,36 +590,36 @@
             </div>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.3">MT202COV SWIFT and HVCS requirements</div>
-                <ol class="level1">
+                <ol class="level1 level1-counter-reset">
                     <li>an organisation sends or receives an MT202COV message—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>participant is a financial institution; and</li>
                         <li>transaction is an interbank transaction that relates to an underlying customer credit transfer MT103 sent with the cover method.</li>
                     </ol>
                     <li>following standards apply to MT202COVs:</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>format and validation standards (refer to the SWIFT user handbook):</li>
                         <li>HVCS format and validation standards in subclauses (3) and (4).</li>
                     </ol>
                     <li>Sequence A as follows:</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>standards in the following table:</li>
                     </ol>
                 </ol>
             </div>
             <li>for each field tag in sequence A, the description of the HVCS use for the equivalent field tag in an MT202 message applies to the field tag in sequence A.</li>
             <li>Sequence B as follows:</li>
-            <ol class="level2">
+            <ol class="level2 level2-counter-reset">
                 <li>the standards in the following table:</li>
             </ol>
             <li>each field tag in sequence B, the data content for the equivalent field tag in the original MT202COV received applies to the field tag in sequence B.</li>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.4">MT205</div>
-                <ol class="level1">
+                <ol class="level1 level1-counter-reset">
                     <li>participant who sends or receives an MT205 message is a domestic financial institution who has agreed with the other participant who is party to the transaction to use the MT205 format.</li>
                     <li>a participant sends an MT205 using the AVP MT CUG transaction delivery system, the message may be a redirection of another category 2 message, for example, an MT200, MT201, MT202, or MT203, or MT205 received from overseas institution.</li>
                     <li>following standards apply to MT205s:</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>SWIFT’s format and validation standards (refer to the SWIFT user handbook):</li>
                         <li>the HVCS format and validation standards in the following table:</li>
                     </ol>
@@ -626,19 +627,19 @@
             </div>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.5">MT205COV</div>
-                <ol class="level1">
+                <ol class="level1 level1-counter-reset">
                     <li>a participant sends or receives an MT205COV message—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>the participant is a domestic financial institution who has agreed with the other participant who is party to the transaction to use the MT205COV format; and</li>
                         <li>the transaction is an interbank transaction that relates to an underlying customer credit transfer sent with the cover method.</li>
                     </ol>
                     <li>following standards apply to MT205COVs—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>SWIFT’s format and validation standards (refer to the SWIFT user handbook); and</li>
                         <li>the HVCS format and validation standards in subclauses (3) and (4).</li>
                     </ol>
                     <li>Sequence A as follows:</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>standards in the following table:</li>
                     </ol>
                 </ol>
@@ -647,17 +648,17 @@
             <li>Sequence B standards are specified in the following table:</li>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.6">Field 52a</div>
-                <ol class="level1">
-                    <ol class="level2">
+                <ol class="level1 level1-counter-reset">
+                    <ol class="level2 level2-counter-reset">
                         <li>institution)</li>
                     </ol>
                     <li>a payment message initiated in New Zealand,—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>if an instructing agent sends an HVCS instruction on behalf of a financial institution that has an agency arrangement with a participant, the instructing agent is entitled to use field 52a; and</li>
                         <li>in any other case, an instructing agent must not use field 52a.</li>
                     </ol>
                     <li>For a message initiated overseas—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>if field 52a is on the inward message, the instructing agent must copy field 52a from the inward message onto the HVCS instruction; and</li>
                         <li>if field 52a is not on the inward message, the instructing agent must insert the original overseas remitting financial institution as the ordering institution in field 52A of the HVCS instruction; and</li>
                         <li>if field 52a of the original inward message contains the ordering institution and not the instructing agent, the instructing agent must add /INS/ followed by the BIC of the instructing agent to field 72.</li>
@@ -666,31 +667,31 @@
             </div>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.7">Validation not required</div>
-                <ol class="level1"></ol>
+                <ol class="level1 level1-counter-reset"></ol>
             </div>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.8">Field 57a</div>
-                <ol class="level1">
-                    <ol class="level2">
+                <ol class="level1 level1-counter-reset">
+                    <ol class="level2 level2-counter-reset">
                         <li>with institution) and field 58a (beneficiary institution)</li>
                     </ol>
                     <li>field 57a and field 58a are both present in a message,—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>for field 57a,—</li>
-                        <ol class="level3">
+                        <ol class="level3 level3-counter-reset">
                             <li>the field should be the party to be credited in the instructed agent’s books; and</li>
                             <li>the field should be in option A format and contain a valid BIC; and</li>
                             <li>if the field contains an account number, the account number should appear in sub-field 1 followed by the BIC in sub-field 2 (otherwise, the BIC appears in the first and only line of field 57A (refer to the SWIFT user handbook)); and</li>
                         </ol>
                         <li>for field 58a,—</li>
-                        <ol class="level3">
+                        <ol class="level3 level3-counter-reset">
                             <li>the correspondent detail should be “for further credit” information that will appear on the statement for the party in field 57; and</li>
                             <li>data in option D format (name and address) should be used only if the beneficiary institution does not have a BIC; and</li>
                             <li>if the field contains an account number, the account number should appear in sub-field 1 followed by the BIC or name and address in sub-field 2 (otherwise, the data begins in the first line of field 58 (refer to the SWIFT user handbook)).</li>
                         </ol>
                     </ol>
                     <li>only field 58a is present in a message (with no field 57a),—</li>
-                    <ol class="level2">
+                    <ol class="level2 level2-counter-reset">
                         <li>the field should be in option A format (a BIC), as it contains the party to be credited in the instructed agent’s books; and</li>
                         <li>data in option D format (name and address) should be used only if the beneficiary institution does not have a BIC; and</li>
                         <li>if the field contains an account number, the account number should appear in sub-field 1 followed by the BIC or name and address in sub-field 2. (otherwise, the data will begin in the first line of field 58a (refer to the SWIFT user handbook)).</li>
@@ -699,17 +700,17 @@
             </div>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.9">Use of account number for field 57a and field 58a</div>
-                <ol class="level1"></ol>
+                <ol class="level1 level1-counter-reset"></ol>
             </div>
             <li>if an account number is present in the original message, the account number should appear in sub-field 1 followed by the party detail in sub-field 2 (refer to the SWIFT user handbook); and</li>
             <li>the account number line format should comply with the requirements of the SWIFT user handbook being [/34x] (referred to as the ’party identifier’ in the handbook).</li>
             <div class="clause-row">
                 <div class="clause-heading" data-number="5.10">Field 72:</div>
-                <ol class="level1"></ol>
+                <ol class="level1 level1-counter-reset"></ol>
             </div>
             <li>field 52a of an original inward message initiated overseas contains the ordering institution and not the instructing agent, the instructing agent must add /INS/ followed by the BIC of the instructing agent to field 72.</li>
             <li>the instructing agent of an MT2nn series HVCS instruction proposes to manage the priority or timing of settlement of an HVCS payment in ESAS, the instructing agent may use 1 of the tags in subclause (3) to populate field 72 unless—</li>
-            <ol class="level2">
+            <ol class="level2 level2-counter-reset">
                 <li>HVCS payment is a return HVCS payment (sent under clause 2.2 of the HVCS Common Procedures); or</li>
                 <li>of the 6 lines available in field 72 are populated with other information.</li>
             </ol>
@@ -717,14 +718,14 @@
         </ol>
         <div class="clause-row">
             <div class="clause-heading" data-number="5.11">Field 72: Return HVCS payment: timing, format and content</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>instructed agent must return an HVCS payment in accordance with—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>clause 1.6(1)(a) of the HVCS Common Procedures.</li>
                     <li>the guidance provided in Part F – Co-existence Procedures.</li>
                 </ol>
                 <li>instructed agent must—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>put the reason for the return of the HVCS payment in field 72 of the message; and</li>
                     <li>ensure that the content and the format of field 72 complies with the requirements in the following table:</li>
                 </ol>
@@ -732,22 +733,22 @@
         </div>
         <div>ensure that line 2 of field 72 contains 1 of the reason codes in the following table:</div>
         <div>instructed agent may—</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>populate line number 4 (TREF) or line number 5 (TEXT) of field 72 in the message.  If the instructed agent populates line 4 or 5 in the message, the instructed agent must comply with the requirements in the following table and the SWIFT format and validation requirements (refer to the SWIFT user handbook):</li>
         </ol>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.1">Purpose</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div>the format for 2 of the notification message types that FINCopy sends to an instructing agent—</div>
-        <ol class="level2">
+        <ol class="level2 level2-counter-reset">
             <li>an MT012 system message - instructing agent notification; and</li>
             <li>an MT019 system message - abort notification; and</li>
         </ol>
         <div>the ESAS rejection codes for AVP.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.2">MT012: instructing agent notification</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>sends an MT012 system message to notify the instructing agent that FINCopy has released the HVCS payment to the instructed agent. In AVP this occurs after the HVCS payment settles in ESAS.</li>
                 <li>the instructing agent does not receive an MT012 system message from FINCopy by 17:15, the HVCS payment may not have settled. If the instructing agent doesn’t settle the HVCS payment by the end of the ESAS day, ESAS will cancel the HVCS payment.</li>
                 <li>following table specifies the format for an MT012 system message:</li>
@@ -758,11 +759,11 @@
         <div>ESAS Reference Number.</div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.3">MT019: abort notification</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>an unsettled HVCS payment in ESAS is cancelled by the instructing agent or by ESAS (at 08:30 end of day), FINCopy notifies the instructing agent of the cancellation by sending an MT019 system message to the instructing agent.</li>
                 <li>MT019 system message contains a code in field 432 specifying a reason for the abort.</li>
                 <li>the HVCS payment was not settled by the 08:30am end of day,—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>will cancel the HVCS payment; and</li>
                     <li>will send an abort notification MT019 system message (with error code 62 – Cancelled by ESAS end of day) to the instructing agent.</li>
                 </ol>
@@ -771,31 +772,31 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.4">ESAS rejection codes</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.">Duplicate tags</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.">The Instructing or Instructed agents are inactivated or unknown.</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.Invalid">settlement date</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.">Instructing agent failed to activate an instruction</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="5.">Invalid amount</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="6.5">AVP MT CUG service parameters</div>
-            <ol class="level1"></ol>
+            <ol class="level1 level1-counter-reset"></ol>
         </div>
         <div>= Y, T&amp;T = N)</div>
         <div>= 1, double = 2)</div>

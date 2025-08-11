@@ -1,0 +1,32 @@
+namespace html
+
+meta {
+}
+
+{
+	// html::document is used to constuct a html document
+	html::document = (doctype as text, language as text, head as list, body as list) => null
+
+	// html::meta should only be used for fields named 'meta'
+	html::meta = ( charset as text ) => null
+
+	// html::link should only be used for fields named 'link'
+	html::link = (href as text, rel as text) => href
+
+	// html::stylesheet should only be used for fields named 'link'
+	html::stylesheet = (href as text) => null
+
+	// html::class is used to provide a class name to a DOCX element
+	html::class = (className as text, content as any ) => (
+		{
+			docx::class = className
+		} @> content
+	)
+
+	// html::styled_link is used to provide a class name to an DOCX element
+	html::styled_link = (href as text, className as text, content as any ) => (
+		{
+			docx::class = className
+		} @> content
+	)
+}

@@ -16,7 +16,6 @@ import [
 			hvcs::document( "HVCS Overview", overview )
 		)
 	)
-	/*
 	Common = File.Write(
 		"docs/hvcs/common.html"
 		Html.FromValue(
@@ -47,5 +46,4 @@ import [
 			hvcs::document( "HVCS Coexistence Procedures", coexistence )
 		)
 	)
-	*/
 }

@@ -1,0 +1,63 @@
+namespace html
+
+meta {
+}
+
+{
+	// html::document is used to constuct a html document
+	html::document = (doctype as text, language as text, head as list, body as list) => (
+		{
+			html = {
+				html::attributes = {
+					lang = "en"
+				}
+			} @> {
+				head = head
+				body = body
+			}
+		}
+	)
+
+	// html::meta should only be used for fields named 'meta'
+	html::meta = ( charset as text ) => (
+		{
+			html::attributes = {
+				charset = "UTF-8"
+			}
+		} @> null
+	)
+
+	// html::link should only be used for fields named 'link'
+	html::link = (href as text, rel as text) => (
+		{
+			html::attributes = {
+				href = href
+				rel = rel
+			}
+		} @> null
+	)
+
+	// html::stylesheet should only be used for fields named 'link'
+	html::stylesheet = (href as text) => (
+		html::link( href, "stylesheet" )
+	)
+
+	// html::class is used to provide a class name to an HTML element
+	html::class = (className as text, content as any ) => (
+		{
+			html::attributes = {
+				class = className
+			}
+		} @> content
+	)
+
+	// html::link is used to provide a class name to an HTML element
+	html::styled_link = (href as text, className as text, content as any ) => (
+		{
+			html::attributes = {
+				href = href
+				class = className
+			}
+		} @> content
+	)
+}

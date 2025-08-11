@@ -5,6 +5,7 @@
         <title>HVCS Common Procedures</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
         <link href="../styles/pnz.legal.css" rel="stylesheet"/>
+        <link href="../styles/pnz.hvcs.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.menu.css" rel="stylesheet"/>
     </head>
     <body class="document">
@@ -20,7 +21,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">HVCS rules and procedures overview</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>This document HVCS Common Procedures (Part B) is one part of a suite of documentation to help
 			participants understand what is required to become a high value clearing system (HVCS) participant
@@ -67,7 +68,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number=""></div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <div>
                     <p>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).
 			Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants
@@ -116,7 +117,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">Standards, best practices and commentary</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <p>
                     <span>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14
 			creates binding legal rights or obligations, please see</span>
@@ -126,7 +127,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="">Document purpose and structure</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>This document discusses the HVCS Common Procedures that apply to normal processing of all HVCS instructions
 		and the processing of errors and late HVCS payments.</li>
                 <li>This document is divided into three chapters.</li>
@@ -251,7 +252,7 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.3">Agency arrangement obligations</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>A participant that receives HVCS instructions on behalf of a creditor agent pursuant to an agency arrangement
 		must ensure that each creditor agent which it has an agency arrangement with has a SWIFT BIC to identify the
 		creditor agent that can be provided to the debtor for inclusion in the details of the debtor&apos;s payment
@@ -263,9 +264,9 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.4">HVCS operating times</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>An HVCS participant must connect to the transaction delivery system—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>every business day including every provincial holiday; and</li>
                     <li>during the minimum time period commencing at 09:00 on a business day and ending at 17:15 on that business
 			day; and</li>
@@ -280,7 +281,7 @@
         <div class="tag-commentary"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.5">Validating HVCS payments</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The following table sets out the validation requirements that apply to a range of HVCS instructions.</li>
                 <li>For clarity, the obligations set out in the table below are cumulative.  Participants must comply with every
 		validation obligation that applies to the type of HVCS instruction that the participant sends or receives.</li>
@@ -925,10 +926,10 @@
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.7">Return HVCS payment: timing, format and content</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>To comply with rule 9.21 and clause 2.2 of these HVCS Common Procedures , an instructed agent must
 		return an HVCS payment:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>as soon as practicable after making the decision to return it, and</li>
                     <li>in accordance with Part F - Co-existence Procedures and the applicable message standards.</li>
                 </ol>
@@ -951,11 +952,11 @@
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.2">Error prevents processing</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>This clause applies to an instructed agent who has received a settled HVCS payment but cannot process
 		the HVCS payment because of an error relating to the HVCS payment.</li>
                 <li>The instructed agent must do one of the following:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>return the HVCS payment to the instructing agent in accordance with the applicable HVCS standards:</li>
                     <li>require the instructing agent to send data to amend the HVCS payment:</li>
                     <li>amend the HVCS payment without asking the instructing agent for amended data and, as soon as
@@ -974,17 +975,17 @@
         <div class="tag-bestpractice"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.3">Instructed agent credits wrong account</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS
 		payment and the instructing agent incurs loss as a direct result of the error, the instructed agent must
 		pay the instructing agent the amount of the loss up to the value of the HVCS payment if one of the
 		following applies:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>the payment message specified the correct account number:</li>
                     <li>the instructing agent sent data to the instructed agent to amend the payment message in accordance
 			with clause 2.2 of these HVCS Common Procedures and the data specified the correct account number:</li>
                     <li>the instructed agent—</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>could not process the HVCS instruction because of an error relating to the HVCS instruction; and</li>
                         <li>did not obtain data from the instructing agent to amend the payment message under clause 2.2 of
 				these HVCS Common Procedures; and</li>
@@ -995,7 +996,7 @@
 		payment because the instructing agent specified the wrong account number in the payment message the
 		instructing agent must, as soon as practicable after it becomes aware that the wrong account number has
 		been credited—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>send the payment message to the instructed agent again; and</li>
                     <li>ensure that the payment message contains the correct account number.</li>
                 </ol>
@@ -1004,12 +1005,12 @@
         <div class="tag-bestpractice"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.4">Co-operate to resolve processing errors</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>Participants should co-operate to resolve a problem caused by a processing error affecting a HVCS
 		instruction.</li>
                 <li>For example, if an instructed agent credits the amount of a HVCS payment to the wrong creditor&apos;s
 		account number—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>the instructing agent may ask the instructed agent to freeze funds in the creditor&apos;s account
 			until the problem is resolved; and</li>
                     <li>the instructed agent should determine whether to comply with the request, including by having
@@ -1042,10 +1043,10 @@
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.2">When HVCS payments settle</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>The effect of rule 9.14 is that if the instructing agent settles an HVCS payment after 17:15, unless
 		the late HVCS instruction requirements apply, the instructed agent:</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>is not required to process the HVCS instruction that business day, but</li>
                     <li>may decide to process the HVCS instruction that business day to meet the requirements or the
 			expectations of its customer.</li>
@@ -1055,17 +1056,17 @@
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.3">Sending customer HVCS instructions after 16:45</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>This clause applies to a customer credit transfer message that is an SCP or a cross border payment
 		redirection if—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>a technical problem or an operational problem prevents the instructing agent from sending the
 			customer credit transfer message by 16.45 on a business day; and</li>
                     <li>the instructing agent requires the instructed agent to credit the creditor&apos;s account with the
 			amount of an HVCS payment that business day.</li>
                 </ol>
                 <li>The instructing agent—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>must obtain the instructed agent&apos;s explicit consent to the time by which the instructing agent
 			must send a HVCS instruction to which this standard applies; and</li>
                     <li>must use the contact people and method of communicating for the instructed agent specified in the
@@ -1082,18 +1083,18 @@
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.4">Sending FI HVCS instructions after 16:45</div>
-            <ol class="level1">
+            <ol class="level1 level1-counter-reset">
                 <li>This clause applies to a participant who proposes to send and receive FI credit transfer messages
 		during the CLS evening session either—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>as the creditor or the debtor; or</li>
                     <li>on behalf of a FI customer.</li>
                 </ol>
                 <li>The participant may only send and receive FI credit transfer messages during the CLS evening session
 		on a business day if—</li>
-                <ol class="level2">
+                <ol class="level2 level2-counter-reset">
                     <li>no less than 1 month before that business day,—</li>
-                    <ol class="level3">
+                    <ol class="level3 level3-counter-reset">
                         <li>the participant has notified the chief executive of Payments NZ that on and from a specified
 				date the participant proposes to send and receive FI credit transfer messages during the CLS
 				evening session; and</li>

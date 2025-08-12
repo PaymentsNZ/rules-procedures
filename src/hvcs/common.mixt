@@ -7,9 +7,9 @@ import [
 [
 	pnz::logo
 	pnz::document_title(
-		"Appendix 14B: HVCS Common Procedures"
-		"1"
-		"20/11/2022"
+		"Appendix 14B: HVCS Common Procedures (UG2025)"
+		"2"
+		"22/11/2025"
 	)
 	/*
 	`Document control`
@@ -146,13 +146,15 @@ import [
 		"1.1"
 		"Defined terms"
 
+		pnz::comment( "UG2025", "RK", "Changed capitalisation of FINplus" )
 		[
 			pnz::bold( "CBPR+" )
 			pnz::text(
-				`means the ISO 20022-based messaging standard for sending a SWIFT message through the FinPlus CUG
+				`means the ISO 20022-based messaging standard for sending a SWIFT message through the FINplus CUG
 				operated by SWIFT.`
 			)
 		]
+		pnz::comment( "UG2025", "JW", "Removed MT103" )
 		[
 			pnz::bold( "Customer credit transfer message" )
 			pnz::text(
@@ -160,7 +162,6 @@ import [
 				participant:`
 			)
 			pnz::bullets(
-				`MT103; and`
 				`pacs.008`
 			)
 		]
@@ -178,6 +179,7 @@ import [
 				`camt.029`
 			)
 		]
+		pnz::comment( "UG2025", "JW", "Removed MT202, MT202COV, MT205, MT205COV" )
 		[
 			pnz::bold( "FI credit transfer message" )
 			pnz::text(
@@ -185,10 +187,6 @@ import [
 				 financial institution customer of a participant:`
 			)
 			pnz::bullets(
-				`MT202;`
-				`MT202COV;`
-				`MT205;`
-				`MT205COV;`
 				`pacs.009; and`
 				`pacs.009COV`
 			)
@@ -221,17 +219,13 @@ import [
 				webpage`
 			)
 		]
+		pnz::comment( "UG2025", "JW", "Removed MT103 RETN, MT202 RETN, MT202COV RETN, MT205 RETN, and MT205COV RETN" )
 		[
 			pnz::bold( "Return message" )
 			pnz::text(
 				`message means the following payment messages used to facilitate the return of an HVCS payment:`
 			)
 			pnz::bullets(
-				`MT103 RETN`
-				`MT202 RETN;`
-				`MT202COV RETN;`
-				`MT205 RETN;`
-				`MT205COV RETN; and`
 				`pacs.004`
 			)
 		]
@@ -247,6 +241,7 @@ import [
 				`FIN message`
 			)
 		]
+		pnz::question( "UG2025", "JW", "Is it safe to remove MT010, MT011, MT012 and MT019?" )
 		[
 			pnz::bold( "System message" )
 			pnz::text(
@@ -324,11 +319,12 @@ import [
 
 		pnz::subsection_heading( "Instructing Agent" )
 
+		pnz::comment( "UG2025", "RK", "Removed MT Obligations" )
 		pnz::styled_table(
 			"validation-table"
 			#table(
 				[
-					"Action", "MT Obligations", "MX Obligations"
+					"Action", "MX Obligations"
 				]
 				[
 					// Row
@@ -339,8 +335,6 @@ import [
 							pnz::bold( `MX message` )
 						]
 						// Col 2
-						`No MT obligation`
-						// Col 3
 						[
 							`The instructing agent:`
 							pnz::bullets(
@@ -379,19 +373,6 @@ import [
 						]
 						// Col 2
 						[
-							[
-								pnz::text( `The instructing agent` )
-								pnz::bold( `must` )
-								pnz::text(
-									`validate the HVCS instruction in accordance with clause 1.5 of the SCP Procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( `See section 3.1 of the MT Procedures` )
-							pnz::italic_div( `(Swift and HVCS Rules)` )
-						]
-						// Col 3
-						[
 							`The instructing agent:`
 							pnz::bullets(
 								[
@@ -418,8 +399,6 @@ import [
 							pnz::bold( `Non-SCP` )
 						]
 						// Col 2
-						`N/A`
-						// Col 3
 						[
 							`The instructing agent:`
 							pnz::bullets(
@@ -469,18 +448,6 @@ import [
 						// Col 2
 						[
 							[
-								pnz::text("The instructing agent")
-								pnz::bold("must")
-								pnz::text(
-									`validate the HVCS instruction in accordance with clause 3.4 of the MT Messaging Procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(SCP MT103: field 59: instructing agent: Option A)" )
-						]
-						// Col 3
-						[
-							[
 								pnz::bold("XML Path")
 								pnz::text("for Creditor BIC:")
 							]
@@ -528,19 +495,6 @@ import [
 						]
 						// Col 2
 						[
-							[
-								pnz::text("The instructing agent")
-								pnz::bold("must")
-								pnz::text(
-									`validate the HVCS instruction in accordance with clause 3.5 or 3.6 of the MT
-									Messaging Procedures`
-								)
-							]
-							pnz::br
-							pnz::italic( "(MT103: field 59: instructing agent)" )
-						]
-						// Col 3
-						[
 							`Clause 4.2 of the MX Procedures has commentary that documents what an account number
 							should look like.`
 							pnz::br
@@ -586,18 +540,6 @@ import [
 						]
 						// Col 2
 						[
-							[
-								pnz::text("The instructing agent")
-								pnz::bold("must")
-								pnz::text(
-									`validate the HVCS instruction in accordance with clause 3.11 of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(Field 72 Information: X Character set)" )
-						]
-						// Col 3
-						[
 							`Clause 4.3 of the MX Procedures shows the dedicated email address field.`
 							pnz::br
 							pnz::italic_div( "SCP Customer notifications)" )
@@ -628,20 +570,6 @@ import [
 							)
 						]
 						// Col 2
-						[
-							[
-								pnz::text("The instructing agent")
-								pnz::bold("must")
-								pnz::text(
-									`validate the HVCS instruction in accordance with clause 4.1 and 4.5
-									of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(Swift and HVCS Rules)" )
-							pnz::italic_div( "(Field 59: instructing agent)" )
-						]
-						// Col 3
 						[
 							[
 								pnz::bold("XML Path")
@@ -687,20 +615,6 @@ import [
 						// Col 2
 						[
 							[
-								pnz::text("The instructing agent")
-								pnz::bold("must")
-								pnz::text(
-									`validate the HVCS instruction in accordance with clause 4.1, 4.6 and 4.7
-									of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(Swift and HVCS Rules)" )
-							pnz::italic_div( "(Field 59: instructing agent)" )
-						]
-						// Col 3
-						[
-							[
 								pnz::bold("XML Path")
 								pnz::text("for Creditor BIC:")
 							]
@@ -738,22 +652,6 @@ import [
 								pnz::text("The instructing agent")
 								pnz::bold("must")
 								pnz::text(
-									`validate the HVCS instruction in accordance with clauses 5.2-5.5 and 5.7
-									of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( `(MT 202 Swift and HVCS Rules)` )
-							pnz::italic_div( `(MT202COV Swift and HVCS Requirements)` )
-							pnz::italic_div( `(MT205)` )
-							pnz::italic_div( `(MT205COV)` )
-						]
-						// Col 3
-						[
-							[
-								pnz::text("The instructing agent")
-								pnz::bold("must")
-								pnz::text(
 									`validate the HVCS instruction in accordance with clause 2.1 of the MX
 									Procedures and in accordance with MyStandards.`
 								)
@@ -768,11 +666,12 @@ import [
 
 		pnz::subsection_heading( "Instructed Agent" )
 
+		pnz::comment( "UG2025", "RK", "Removed MT Obligations" )
 		pnz::styled_table(
 			"validation-table"
 			#table(
 				[
-					"Action", "MT Obligations", "MX Obligations"
+					"Action", "MX Obligations"
 				]
 				[
 					// Row
@@ -793,8 +692,6 @@ import [
 							)
 						]
 						// Col2
-						"No MT obligation"
-						// Col3
 						[
 							[
 								pnz::text( "The instructed agent" )
@@ -828,20 +725,6 @@ import [
 								pnz::text( "The instructed agent" )
 								pnz::bold( "must" )
 								pnz::text(
-									`validate the HVCS instruction in accordance with clauses 3.7 and 3.8
-									of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(Field 59: Instructed Agent Validation)" )
-							pnz::italic_div( "(Validation not required)" )
-						]
-						// Col3
-						[
-							[
-								pnz::text( "The instructed agent" )
-								pnz::bold( "must" )
-								pnz::text(
 									`validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures
 									and in accordance with MyStandards.`
 								)
@@ -870,18 +753,6 @@ import [
 						]
 						// Col2
 						[
-							[
-								pnz::text( "The instructed agent" )
-								pnz::bold( "must" )
-								pnz::text(
-									`validate the email address in accordance with clause 3.12 of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(Field 72: Instructed agent transformation)" )
-						]
-						// Col3
-						[
 							`Clause 4.3 of the MX Procedures shows the dedicated email address field.`
 							pnz::br
 							pnz::italic_div( "(SCP Customer notifications)" )
@@ -908,20 +779,6 @@ import [
 							)
 						]
 						// Col 2
-						[
-							[
-								pnz::text( "The instructed agent" )
-								pnz::bold( "must" )
-								pnz::text(
-									`validate the HVCS instruction in accordance with clauses 4.8 and 4.9
-									of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(Field 59: Instructed Agent Validation)" )
-							pnz::italic_div( "(Validation not required)" )
-						]
-						// Col 3
 						[
 							[
 								pnz::text( "The instructed agent" )
@@ -959,19 +816,6 @@ import [
 								pnz::text( "The instructed agent" )
 								pnz::bold( "must" )
 								pnz::text(
-									`validate the HVCS instruction in accordance with clauses 3.14, 4.14 and
-									5.11 of the MT procedures`
-								)
-							]
-							pnz::br
-							pnz::italic_div( "(Field 72: Return HVCS Payment: Timing, Format and Content)" )
-						]
-						// Col 3
-						[
-							[
-								pnz::text( "The instructed agent" )
-								pnz::bold( "must" )
-								pnz::text(
 									`validate the HVCS instruction in accordance with clause 2.1 of the
 									MX Procedures and in accordance with MyStandards.`
 								)
@@ -984,6 +828,7 @@ import [
 			)
 		)
 	)
+
 	pnz::nonumber_clause(
 		"1.6"
 		"No revoking after settlement"
@@ -1004,7 +849,9 @@ import [
 
 		pnz::level2(
 			`as soon as practicable after making the decision to return it, and`
-			`in accordance with Part F - Co-existence Procedures and the applicable message standards.`
+
+			pnz::comment( "UG2025", "RK", "Revised from Part F - Co-existence Procedures to Part D." )
+			`in accordance with Part D - MX Procedures and the applicable message standards.`
 		)
 	)
 
@@ -1025,6 +872,8 @@ import [
 		instruction.`
 		
 		`The following diagram summarises the processes that apply if the HVCS instruction contains an error.`	
+		
+		pnz::question( "UG2025", "RK", "Insert flow diagram here." )
 	)
 
 	pnz::tag_standards
@@ -1125,6 +974,7 @@ import [
 		"2.5"
 		"Request and response formats"
 
+		pnz::comment( "UG2025", "JW", "No change, though noting reference to MTn95 and MTn96." )
 		`If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common
 		Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by,
 		for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message
@@ -1145,6 +995,8 @@ import [
 
 		`The following diagram gives an overview of the processes that apply if the instructing agent proposes
 		to send an HVCS instruction after 16:45. The diagram has no legal effect.`
+
+		pnz::question( "UG2025", "RK", "Insert flow diagram here." )
 	)
 
 	pnz::tag_standards
@@ -1254,6 +1106,7 @@ import [
 		`Participants who send and receive financial institution credit transfers during the CLS evening
 		session are:`
 
+		pnz::question( "UG2025", "JW", "Checking the participant list - no ICBC, BOC AKL, CCB, or MUFG?" )
 		pnz::table(
 			#table(
 				[

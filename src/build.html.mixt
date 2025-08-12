@@ -9,43 +9,82 @@ import [
 	coexistence = "hvcs/coexistence.mixt"
 ]
 
-{
-	Overview = File.Write(
-		"docs/hvcs/overview.html"
-		Html.FromValue(
-			hvcs::document( "HVCS Overview", overview )
+let
+	//singleDocument = null
+	singleDocument = "Common"
+	documents = #table(
+		[
+			"id"
+			"title"
+			"target"
+			"source"
+		]
+		[
+			[
+				"Overview"
+				"HVCS Overview"
+				"docs/hvcs/overview.html"
+				overview
+			]
+			[
+				"Common"
+				"HVCS Common Procedures"
+				"docs/hvcs/overview.html"
+				common
+			]
+			[
+				"SCP"
+				"HVCS SCP Procedures"
+				"docs/hvcs/scp.html"
+				scp
+			]
+			[
+				"MX"
+				"HVCS MX Procedures"
+				"docs/hvcs/mx.html"
+				mx
+			]
+			[
+				"MT"
+				"HVCS MT Procedures"
+				"docs/hvcs/mt.html"
+				mt
+			]
+			[
+				"Coexistence"
+				"HVCS Coexistence Procedures"
+				"docs/hvcs/coexistence.html"
+				coexistence
+			]
+		]
+	),
+	asRecords = Table.ToRecords(
+		if singleDocument == null then
+			documents
+		else
+			Table.SelectRows(
+				documents
+				(doc) => doc{ id } == singleDocument
+			)
+	)
+	written = List.Accumulate(
+		asRecords
+		{}
+		( state, current ) => (
+			Record.AddField(
+				state
+				current{ id }
+				File.Write(
+					current{ target }
+					Html.FromValue(
+						hvcs::document(
+							current{ title }
+							current{ source }
+						)
+					)
+				)
+			)
 		)
 	)
-	/*
-	Common = File.Write(
-		"docs/hvcs/common.html"
-		Html.FromValue(
-			hvcs::document( "HVCS Common Procedures", common )
-		)
-	)
-	SCP = File.Write(
-		"docs/hvcs/scp.html"
-		Html.FromValue(
-			hvcs::document( "HVCS SCP Procedures", scp )
-		)
-	)
-	MX = File.Write(
-		"docs/hvcs/mx.html"
-		Html.FromValue(
-			hvcs::document( "HVCS MX Procedures", mx )
-		)
-	)
-	MT = File.Write(
-		"docs/hvcs/mt.html"
-		Html.FromValue(
-			hvcs::document( "HVCS MT Procedures", mt )
-		)
-	)
-	Coexistence = File.Write(
-		"docs/hvcs/coexistence.html"
-		Html.FromValue(
-			hvcs::document( "HVCS Coexistence Procedures", coexistence )
-		)
-	)
-	*/
-}
+in
+	written

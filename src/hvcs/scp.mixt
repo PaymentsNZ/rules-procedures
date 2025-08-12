@@ -6,10 +6,11 @@ import [
 [
 	pnz::logo
 	pnz::document_title(
-		"Appendix 14C: SCP procedures"
-		"2"
-		"20/11/2023"
+		"Appendix 14C: SCP procedures (UG2025)"
+		"3"
+		"22/11/2025"
 	)
+
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 
@@ -76,6 +77,7 @@ import [
 				)
 				`Part F — Co-existence Procedures`
 				pnz::list(
+					pnz::question( "UG2025", "RK", "Description requires revision (same for all documents)" )
 					`Provides binding procedures for participants during the co-existence phase of the migration
 					from sending and receiving MT messages to MX messages.`
 				)	

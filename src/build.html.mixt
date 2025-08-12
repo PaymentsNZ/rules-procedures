@@ -11,7 +11,7 @@ import [
 
 let
 	//singleDocument = null
-	singleDocument = "Common"
+	singleDocument = "MT"
 	documents = #table(
 		[
 			"id"

@@ -13,9 +13,9 @@
             <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
         </div>
         <div>
-            <div class="document-title">Appendix 14A: HVCS Overview</div>
-            <div class="document-meta">Version 2</div>
-            <div class="document-meta">Effective date: 24/02/2025</div>
+            <div class="document-title">Appendix 14A: HVCS Overview (UG2025)</div>
+            <div class="document-meta">Version 3</div>
+            <div class="document-meta">Effective date: 22/11/2025</div>
         </div>
         <h1 class="section-heading">Document purpose and overview</h1>
         <div class="tag-commentary"></div>
@@ -348,12 +348,42 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="1.1">Rationale for Change</div>
             <ol class="level1 level1-counter-reset">
-                <li>The introduction of MX messages to the High Value Clearing System (HVCS) introduces new
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>New paragraph for additional context</p>
+                    </div>
+                </div>
+                <li>The Appendix 14 procedures received significant revision during 2022 to support the introduction of
+		MX messaging for the High Value Clearing System (HVCS) and the coexistence period for MT and MX
+		messaging from 2023 through 2025.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Changed to past tense</p>
+                    </div>
+                </div>
+                <li>The introduction of MX messages to the High Value Clearing System (HVCS) introduced new
 		ISO standard terms.  Readers familiar with the previous Appendix 14 will note that many of
 		the terms used previously by the NZ payments industry have been replaced with their ISO
 		equivalents in both the HVCS rules and procedures.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Qualified the removal of messaging to payment messaging from November 2025.</p>
+                    </div>
+                </div>
                 <li>There are also many places where MT specific terms have been replaced by message system
-		agnostic terms.  This is necessary to prepare for the removal of MT messaging from November
+		agnostic terms.  This was necessary to prepare for the removal of MT payment messaging from November
 		2025.</li>
             </ol>
         </div>
@@ -499,8 +529,19 @@
                     <li>MX message format (ISO 20022)</li>
                     <li>MT message format (ISO 15022)</li>
                 </ol>
-                <li>MX messages are an XML-based replacement for MT messages which will be retired at the end of the co-existence phase (scheduled for November 2025).</li>
-                <li>Further information on how to send and receive HVCS instructions in either format is provided in the respective procedures:</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Changed to past tense, note MT payment messages retired</p>
+                    </div>
+                </div>
+                <li>MX messages are an XML-based replacement for MT messages.  MT payment messages were retired from the HVCS
+			at the end of the co-existence phase (November 2025).</li>
+                <li>Further information on how to send and receive HVCS instructions in either format is provided in
+			the respective procedures:</li>
                 <ol class="level2 level2-counter-reset">
                     <li>Part D MX Messaging Procedures (ISO 20022)</li>
                     <li>Part E MT Messaging Procedures (ISO 15022)</li>
@@ -511,14 +552,35 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="3.2">AVP Closed User Group (CUG)</div>
             <ol class="level1 level1-counter-reset">
-                <li>The AVP CUG is the closed user group provided by SWIFT for HVCS instruction processing. Members of the AVP CUG exchange payment messages and other HVCS instructions.</li>
-                <li>There are two AVP CUGs that participants must join. They are the AVP MX CUG which is used to send MX messages, and the AVP MT CUG which is used for sending MT messages.</li>
+                <li>The AVP CUG is the closed user group provided by SWIFT for HVCS instruction processing. Members of the
+			AVP CUG exchange payment messages and other HVCS instructions.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Requirement to join both CUGs retained for the time being.</p>
+                        <p>Requires discussion with RBNZ to understand whether they need Participants to remain in the longer term.</p>
+                    </div>
+                </div>
+                <li>There are two AVP CUGs that participants must join. They are the AVP MX CUG which is used to send MX
+			messages, and the AVP MT CUG which is used for sending MT messages.</li>
             </ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.3">HVCS payment categories</div>
             <ol class="level1 level1-counter-reset">
                 <li>An HVCS participant can make the following types of payment:</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Changed payment message requirements to AVP MX CUG Member</p>
+                    </div>
+                </div>
             </ol>
         </div>
         <table class="pnz-table payment-categories-table">
@@ -539,7 +601,7 @@
                     <td>1</td>
                     <td>Same Day Cleared Payment</td>
                     <td>NZD</td>
-                    <td>Participant</td>
+                    <td>AVP MX CUG Participant</td>
                     <td>Participant or financial institution customer of Participant</td>
                     <td>NZD SCP for settlement to customer of a Participant</td>
                 </tr>
@@ -564,7 +626,7 @@
                     <td>4</td>
                     <td>Initiated domestically for overseas creditor</td>
                     <td>NZD</td>
-                    <td>AVP CUG member</td>
+                    <td>AVP MX CUG member</td>
                     <td>Foreign financial institution</td>
                     <td>Payment message created by a participant routed to another participant prior to routing overseas</td>
                 </tr>
@@ -583,9 +645,9 @@
                     <td>6</td>
                     <td>Payment between two financial institutions</td>
                     <td>NZD</td>
-                    <td>AVP CUG member or financial institution customer of participant or foreign
+                    <td>AVP MX CUG member or financial institution customer of participant or foreign
 					financial institution</td>
-                    <td>AVP CUG member or financial institution customer of participant or foreign
+                    <td>AVP MX CUG member or financial institution customer of participant or foreign
 					financial institution</td>
                     <td>CLS Settlement, Vostro Payment</td>
                 </tr>
@@ -595,12 +657,12 @@
                     <td>Cover leg of direct and cover payment</td>
                     <td>NZD</td>
                     <td>
-                        <div>AVP CUG member or</div>
+                        <div>AVP MX CUG member or</div>
                         <br/>
                         <div>agent of participant or foreign financial institution</div>
                     </td>
                     <td>
-                        <div>AVP CUG member or</div>
+                        <div>AVP MX CUG member or</div>
                         <br/>
                         <div>financial institution customer of participant or foreign financial institution</div>
                     </td>
@@ -684,7 +746,16 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="3.6">Non-SCP Customer Credit Transfer</div>
             <ol class="level1 level1-counter-reset">
-                <li>This section applies to MX messages only.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed text:</p>
+                        <p>&quot;This section applies to MX messages only.&quot;</p>
+                    </div>
+                </div>
                 <li>A payment to a creditor that does not meet the SCP criteria can be sent a customer credit transfer without
 		the SCP designation by omitting the Local Instrument code.  Examples of where this could be used are:</li>
                 <ol class="level2 level2-counter-reset">
@@ -997,6 +1068,16 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="4.1">Message flows</div>
             <ol class="level1 level1-counter-reset">
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>For the sentence starting &quot;Authorised messages...&quot;, should this just state: &quot;Messages are only&quot;?
+			or perhaps &quot;Payment messages...&quot;</p>
+                    </div>
+                </div>
                 <li>The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode
 		requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the
 		recipient. Authorised messages are only delivered to the recipients once they have been authorised, and
@@ -1040,14 +1121,32 @@
                         <ul class="bullets">
                             <li>who participates in the CUG as a member,</li>
                             <li>the requirements for participating in the CUG, and</li>
-                            <li>the service parameters for the SWIFT FINCopy or SWIFT NetCopy service.</li>
+                            <div class="doc-comment" data-change-id="UG2025">
+                                <div class="doc-comment-meta">
+                                    <span class="doc-comment-id">UG2025</span>
+                                    <span class="doc-comment-initials">RK</span>
+                                </div>
+                                <div class="doc-comment-content">
+                                    <p>Removed refereence to &apos;or SWIFT NetCopy&apos;</p>
+                                </div>
+                            </div>
+                            <li>the service parameters for the SWIFT FINCopy service.</li>
                         </ul>
                         <br/>
-                        <div>Members of the AVP CUG exchange HVCS instructions with each other using SWIFT FINCopy or SWIFT NetCopy
-						in Y mode. Further information on how to prepare to join the AVP CUG and the process to join the AVP CUG
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Removed refereence to &apos;or SWIFT NetCopy&apos;</p>
+                            </div>
+                        </div>
+                        <div>Members of the AVP CUG exchange HVCS instructions with each other using SWIFT FINCopy in Y mode.
+						Further information on how to prepare to join the AVP CUG and the process to join the AVP CUG
 						is provided by the RBNZ here. AVP CUG members who are participants and their BICs are:</div>
                         <br/>
-                        <table class="pnz-table">
+                        <table class="pnz-table participants-table">
                             <thead>
                                 <th>Participants</th>
                                 <th>BIC</th>
@@ -1123,7 +1222,7 @@
                         <div>Participants should be aware there are also members of the AVP CUG that send and receive messages but
 						are not participants. Their BICs are:</div>
                         <br/>
-                        <table class="pnz-table">
+                        <table class="pnz-table participants-table">
                             <thead>
                                 <th>Non-HVCS participants</th>
                                 <th>BIC</th>
@@ -1159,14 +1258,25 @@
                 </tr>
                 <tr>
                     <td>CLS (Continuous Linked Settlement)</td>
-                    <td>Is the largest multicurrency cash settlement system in the world, with links to RTGS
-					systems in 18 currencies (including the NZ dollar). CLS settles payment instructions
-					relating to FX spot, forwards, swaps, option exercises, non-deliverable forwards and
-					credit derivatives. CLS offers a 5 hour window in each CLS daily settlement cycle,
-					during which linked RTGS systems are open and can make and receive payments using the
-					SWIFT network. CLS Bank International (a company incorporated in the United States)
-					operates CLS. Some participants operate a CLS evening session to settle and deliver
-					FI credit transfer messages (MT202) for payments to and from CLS Bank.</td>
+                    <td>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Replaced MT202 with pacs.009</p>
+                            </div>
+                        </div>
+                        <div>Is the largest multicurrency cash settlement system in the world, with links to RTGS
+						systems in 18 currencies (including the NZ dollar). CLS settles payment instructions
+						relating to FX spot, forwards, swaps, option exercises, non-deliverable forwards and
+						credit derivatives. CLS offers a 5 hour window in each CLS daily settlement cycle,
+						during which linked RTGS systems are open and can make and receive payments using the
+						SWIFT network. CLS Bank International (a company incorporated in the United States)
+						operates CLS. Some participants operate a CLS evening session to settle and deliver
+						FI credit transfer messages (pacs.009) for payments to and from CLS Bank.</div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Instructed agent</td>
@@ -1259,22 +1369,53 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>SWIFT FINplus</td>
+                    <td>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Added definition.</p>
+                            </div>
+                        </div>
+                        <div>Is a messaging service that enables financial institutions to exchange SWIFT messages in MX
+						format in store-and-forward mode. The FINplus service is typically used to send cross-border
+						payment messages between correspondent banking partners using the CBPR+ message format.</div>
+                        <br/>
+                        <div>SWIFT FINplus is owned, operated, and managed by SWIFT.</div>
+                    </td>
+                </tr>
+                <tr>
                     <td>SWIFT FINCopy</td>
                     <td>
-                        <div>Is a value-added feature of the SWIFT FIN service that enables the sender of an MT message to
-						copy the MT message to a specified third party for authorisation or processing.</div>
-                        <div>For the AVP CUG, SWIFT FINCopy partially copies MT messages and sends the copies to ESAS for
-						authorisation and processing before releasing the MT messages to the instructed agent. SWIFT
-						FINCopy for the AVP CUG is set up in Y-copy mode.</div>
-                        <div>SWIFT FINCopy is owned, operated, and managed by SWIFT.</div>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Removed definition.</p>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>SWIFTNet Copy</td>
                     <td>
-                        <div>The ISO 20022 equivalent of the SWIFT FINCopy service that delivers Y-copy capability for a
-						SWIFT Closed User Group (CUG). It is deployed when a market infrastructure needs its own
-						SWIFTNet service for MX messages.</div>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Removed reference to FINCopy.</p>
+                            </div>
+                        </div>
+                        <div>The ISO 20022 service that delivers Y-copy capability for a SWIFT Closed User Group (CUG).
+						It is deployed when a market infrastructure needs its own SWIFTNet service for MX messages.</div>
+                        <br/>
                         <div>SWIFTNet Copy is owned, operated, and managed by SWIFT.</div>
                     </td>
                 </tr>
@@ -1367,6 +1508,15 @@
                         <li>sanctions issued by the office of foreign asset control (OFAC) in the US, as well as other
 				bodies like the EU and UN who also issue prohibition notices; and</li>
                     </ul>
+                    <div class="doc-question" data-change-id="UG2025">
+                        <div class="doc-question-meta">
+                            <span class="doc-question-id">UG2025</span>
+                            <span class="doc-question-initials">PB</span>
+                        </div>
+                        <div class="doc-question-content">
+                            <p>Has the designation come into place yet? If so does this need to be updated?</p>
+                        </div>
+                    </div>
                     <li>Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a
 			designated FMI) which could cover clearing and settlement requirements.</li>
                 </ul>
@@ -1399,6 +1549,15 @@
                     <td>AVP CUG service parameters</td>
                     <td>
                         <div>For AVP MT CUG service parameters, please refer to Part E MT Messaging Procedures (ISO 15022).</div>
+                        <div class="doc-question" data-change-id="UG2025">
+                            <div class="doc-question-meta">
+                                <span class="doc-question-id">UG2025</span>
+                                <span class="doc-question-initials">PB</span>
+                            </div>
+                            <div class="doc-question-content">
+                                <p>What is the replacement for the RBNZ Confluence website?</p>
+                            </div>
+                        </div>
                         <div>For AVP MX CUG service parameters, please refer to the RBNZ Confluence website, here.</div>
                     </td>
                 </tr>
@@ -1606,19 +1765,30 @@
                 </tr>
                 <tr>
                     <td>Ordering customer</td>
-                    <td>is the MT terminology used to identify a customer who acts as a debtor and orders (requests) a
-					customer credit transfer.</td>
+                    <td>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">PB</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>MT terminology - removed.</p>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Ordering institution</td>
                     <td>
-                        <div>Is MT terminology used:</div>
-                        <ul class="bullets">
-                            <li>for customer credit transfer messages, the financial institution of the ordering customer if it is
-							different from the instructing agent.</li>
-                            <li>for other payment messages, the instructing institution if it is different from the instructing
-							agent.</li>
-                        </ul>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">PB</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>MT terminology - removed.</p>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>

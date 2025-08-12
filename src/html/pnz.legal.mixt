@@ -290,4 +290,61 @@ import [
 			class = "cross"
 		}
 	} @> "✘"
+
+	// pnz.legal::comment creates a document comment
+	pnz.legal::comment = (changeId as text, initials as text, ...content as any) => #( div =
+        {
+            html::attributes = {
+				 class = "doc-comment"
+				 data-change-id = changeId
+			}
+        } @> [
+            div = {
+				html::attributes = {
+					class = "doc-comment-meta"
+				}
+			} @> [
+				span = {
+					html::attributes = {
+						class = "doc-comment-id"
+					}
+				} @> changeId
+				span = {
+					html::attributes = {
+						class = "doc-comment-initials"
+					}
+				} @> initials
+            ]
+            
+			div = {
+				html::attributes = {
+					class = "doc-comment-content"
+				}
+			} @> content
+		]
+    )
+
+	// pnz.legal::question creates a document question
+	pnz.legal::question = (changeId as text, initials as text, ...content as any) => #( div =
+		{
+			html::attributes = {
+				class = "doc-question"
+				data-change-id = changeId
+			}
+		} @> [
+			div = {
+				html::attributes = { class = "doc-question-meta" }
+			} @> [
+				span = {
+					html::attributes = { class = "doc-question-id" }
+				} @> changeId
+				span = {
+					html::attributes = { class = "doc-question-initials" }
+				} @> initials
+			]
+			div = {
+				html::attributes = { class = "doc-question-content" }
+			} @> content
+		]
+	)	
 }

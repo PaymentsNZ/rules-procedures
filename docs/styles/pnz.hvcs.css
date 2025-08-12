@@ -84,6 +84,20 @@
 }
 
 /*
+** participants-table
+*/
+
+.participants-table {
+	table-layout: auto !important;
+	width: auto !important;
+}
+  
+.participants-table th,
+.participants-table td {
+	width: auto !important;
+}
+
+/*
 ** coexistence-notification-table
 */
 

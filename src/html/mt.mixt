@@ -316,14 +316,14 @@ import [
 					"3, 3a, 3b"
 					[
 						`SWIFT FINCopy (step 3):`
-						pnz::level1(
-							`identifies the message as an AVP message using the AVP code indicator in field 103 of
-							the user header block 3,`
+						
+						`(1) identifies the message as an AVP message using the AVP code indicator in field 103 of the
+						user header block 3,`
 
-							`checks that the instructing agent and the instructed agent are AVP MT CUG members, and`
-							
-							`validates the message content against the AVP MT CUG Service Profile on receipt.`
-						)					
+						`(2) checks that the instructing agent and the instructed agent are AVP MT CUG members, and`
+						
+						`(3) validates the message content against the AVP MT CUG Service Profile on receipt.`
+
 						pnz::table(
 							#table(
 								[
@@ -334,7 +334,7 @@ import [
 									[
 										"fails validation,"
 										[
-											pnz::continue_level1( 4
+											pnz::bullets(
 												"rejects the message (step 3a)"
 											)
 										]
@@ -342,7 +342,7 @@ import [
 									[
 										"passes validation,"
 										[
-											pnz::continue_level1( 5
+											pnz::bullets(
 												`holds the payment message in the instructed agent's store and forward queue,`
 
 												`copies information from the payment message as defined in the service profile, and`
@@ -361,25 +361,21 @@ import [
 					"4, 5a, 5b"
 					[
 						`ESAS (step 4):`
-						pnz::continue_level1( 8
-							`validates the structure of the MT096 message, and`
-
-							`if the structure is not valid, stops processing the message but does not notify FINCopy, and`
-							
-							[
-								`if the structure is valid, applies business rules to validate the content of the message,
-								by for example, checking that:`
-
-								pnz::dashes(
-									`both the instructing agent and the instructed agent have an active ESAS account, and`
-
-									`the content of specific data fields in the message is different from the content of the
-									same data fields in any other MT096 ESAS has validated in the last 4 days (refer to clause
-									6.4, ESAS rejection codes, code 66).`
-								)
-							]
-						)
 						
+						`(8) validates the structure of the MT096 message, and`
+
+						`(9) if the structure is not valid, stops processing the message but does not notify FINCopy, and`
+						
+						`(10) if the structure is valid, applies business rules to validate the content of the message,
+						by for example, checking that:`
+
+						pnz::dashes(
+							`both the instructing agent and the instructed agent have an active ESAS account, and`
+
+							`the content of specific data fields in the message is different from the content of the
+							same data fields in any other MT096 ESAS has validated in the last 4 days (refer to clause
+							6.4, ESAS rejection codes, code 66).`
+						)
 						pnz::table(
 							#table(
 								[
@@ -391,9 +387,9 @@ import [
 										"passes ESAS business rules validation"
 										[
 											pnz::continue_level1( 11
+												"ESAS:"
 												[
-													"ESAS:"
-													pnz::dashes(
+													pnz::bullets(
 														"generates an HVCS payment, and"
 														"enters the HVCS payment in the ESAS database."
 													)
@@ -405,19 +401,11 @@ import [
 									[
 										"fails ESAS business rules validation"
 										[
-											pnz::continue_level1( 13
-												`ESAS sends an MT097 FINCopy message authorisation/refusal notification message
-												to FINCopy containing the ESAS rejection code of the first error that ESAS finds
-												during business rules validation (see clause 6.4, ESAS rejection codes) (step 5a).`
-												
-												`FinCopy sends an MT019 - abort notification message - to the instructing agent
-												containing the ESAS rejection code in field tag 432 (step 5b).`
-
-												`FinCopy deletes the original unsettled payment message (MT103, MT202, MT202COV,
-												MT205, or MT205COV) from the queue.`
-												
-												`FINCopy does not notify the intended instructed agent that ESAS has rejected the
-												settlement request.`
+											pnz::bullets(
+												"ESAS sends an MT097 FINCopy message authorisation/refusal notification message to FINCopy containing the ESAS rejection code of the first error that ESAS finds during business rules validation (see clause 6.4, ESAS rejection codes) (step 5a)."
+												"FinCopy sends an MT019 - abort notification message - to the instructing agent containing the ESAS rejection code in field tag 432 (step 5b)."
+												"FinCopy deletes the original unsettled payment message (MT103, MT202, MT202COV, MT205, or MT205COV) from the queue."
+												"FINCopy does not notify the intended instructed agent that ESAS has rejected the settlement request."
 											)
 										]
 									]
@@ -440,48 +428,25 @@ import [
 									[
 										"occurs,"
 										[
-											pnz::continue_level1( 17
-												`ESAS debits the instructing agent's account and credits the instructed agent's account
-												with the amount of the HVCS payment (step 6).`
-												
-												`ESAS sends an MT097 FINCopy message authorisation/refusal notification message with the
-												ESAS settlement reference to SWIFT confirming settlement (step 7).`
-
-												`SWIFT FINCopy releases the payment message (MT103, MT202, MT202COV, MT205, or MT205COV)
-												to the instructed agent and includes the settlement date/time and ESA reference in field
-												tag 115 (step 8).`
-
-												`SWIFT FINCopy sends an MT012 - instructing agent notification message - to the instructing
-												agent confirming settlement and includes the settlement date/time and ESA reference in field
-												tag 114 (step 9).`
-
-												`If required by the original MT103, SWIFT FIN sends an MT011 - delivery notification message
-												- to the instructing agent confirming the payment message is delivered to the instructed agent
-												(step 9a).`
-												
-												`Instructed agent validates the payment message and either credits the creditor's account or,
-												if the payment message contains errors, returns the HVCS payment or amends the HVCS instruction
-												(step 10).`
+											pnz::bullets(
+												"ESAS debits the instructing agent's account and credits the instructed agent's account with the amount of the HVCS payment (step 6)."
+												"ESAS sends an MT097 FINCopy message authorisation/refusal notification message with the ESAS settlement reference to SWIFT confirming settlement (step 7)."
+												"SWIFT FINCopy releases the payment message (MT103, MT202, MT202COV, MT205, or MT205COV) to the instructed agent and includes the settlement date/time and ESA reference in field tag 115 (step 8)."
+												"SWIFT FINCopy sends an MT012 - instructing agent notification message - to the instructing agent confirming settlement and includes the settlement date/time and ESA reference in field tag 114 (step 9)."
+												"If required by the original MT103, SWIFT FIN sends an MT011 - delivery notification message - to the instructing agent confirming the payment message is delivered to the instructed agent (step 9a)."
+												"Instructed agent validates the payment message and either credits the creditor’s account or, if the payment message contains errors, returns the HVCS payment or amends the HVCS instruction (step 10)."
 											)
 										]
 									]
 									[
 										"does not occur, (cancelled by debtor or at ESAS end of day (08.30))"
 										[
-											pnz::continue_level1( 23
-												`ESAS sends an MT097 - FINCopy message authorisation/refusal notification message - to FINCopy
-												containing ESAS rejection code 60 or 62 (refer to clause 6.4, ESAS rejection codes) (step 5a).`
-
-												`The AVP MT CUG transaction delivery system will cancel the payment message.`
-
-												`The AVP MT CUG transaction delivery system sends an MT019 abort notification message to th
-												 instructing agent containing ESAS rejection code 60 or 62 in field tag 432 (step 5b).`
-
-												`FinCopy deletes the original unsettled payment message (MT103, MT202, MT202COV, MT205, or
-												MT205COV) from the queue.`
-
-												`FINCopy does not notify the intended instructed agent that ESAS has rejected the settlement
-												request.`
+											pnz::bullets(
+												"ESAS sends an MT097 - FINCopy message authorisation/refusal notification message - to FINCopy containing ESAS rejection code 60 or 62 (refer to clause 6.4, ESAS rejection codes) (step 5a)."
+												"The AVP MT CUG transaction delivery system will cancel the payment message."
+												"The AVP MT CUG transaction delivery system sends an MT019 abort notification message to the instructing agent containing ESAS rejection code 60 or 62 in field tag 432 (step 5b)."
+												"FinCopy deletes the original unsettled payment message (MT103, MT202, MT202COV, MT205, or MT205COV) from the queue."
+												"FINCopy does not notify the intended instructed agent that ESAS has rejected the settlement request."
 											)
 										]
 									]
@@ -493,6 +458,102 @@ import [
 			]
 		)
 	)
+
+	/*
+	
+	`Step`
+	`Action`
+	`1`
+	`The instructing agent prepares 1 of the following payment messages: MT103, MT202, MT202COV, MT205 or MT205COV and puts the service code AVP in field tag 103 of the message.`
+	`2`
+	`The instructing agent sends the payment message to the instructed agent through SWIFT for FINCopy (in Y mode) processing using the AVP MT CUG transaction delivery system.`
+	`3`
+	`3a`
+	`3b`
+	`SWIFT FINCopy (step 3):`
+	*/
+			`identifies the message as an AVP message using the AVP code indicator in field 103 of the user header block 3,`
+			`checks that the instructing agent and the instructed agent are AVP MT CUG members, and`
+			`validates the message content against the AVP MT CUG Service Profile on receipt.`
+//		)
+	/*
+	`If the message content…`
+	`Then FINCopy…`
+	`fails validation,`
+	*/
+			`rejects the message (step 3a)`
+//		)
+	/*
+	`passes validation,`
+	*/
+			`holds the payment message in the instructed agent's store and forward queue,`
+			`copies information from the payment message as defined in the service profile, and`
+			`sends a settlement request to ESAS in the form of an MT096-FINCopy to server destination message (step 3b)`
+//		)
+	/*
+	`4`
+	`5a`
+	`5b`
+	`ESAS (step 4):`
+	*/
+			`validates the structure of the MT096 message, and`
+			`if the structure is not valid, stops processing the message but does not notify FINCopy, and`
+			`if the structure is valid, applies business rules to validate the content of the message, by for example, checking that:`
+//		)
+	/*
+	`* both the instructing agent and the instructed agent have an active ESAS account, and`
+	`* the content of specific data fields in the message is different from the content of the same data fields in any other MT096 ESAS has validated in the last 4 days (refer to clause 6.4, ESAS rejection codes, code 66).`
+	`If the settlement request...`
+	`then...`
+	`passes ESAS business rules validation`
+	*/
+			`ESAS:`
+//		)
+	/*
+	`* generates an HVCS payment, and`
+	`* enters the HVCS payment in the ESAS database.`
+	*/
+			`the HVCS payment is eligible for settlement`
+//		)
+	/*
+	`fails ESAS business rules validation`
+	*/
+			`ESAS sends an MT097 FINCopy message authorisation/refusal notification message to FINCopy containing the ESAS rejection code of the first error that ESAS finds during business rules validation (see clause 6.4, ESAS rejection codes) (step 5a).`
+			`FinCopy sends an MT019 -abort notification message - to the instructing agent containing the ESAS rejection code in field tag 432 (step 5b).`
+			`FinCopy deletes the original unsettled payment message (MT103, MT202, MT202COV, MT205, or MT205COV) from the queue.`
+			`FINCopy does not notify the intended instructed agent that ESAS has rejected the settlement request.`
+//		)
+	/*
+	`6`
+	`7`
+	`8`
+	`9`
+	`10`
+	`5a`
+	`5b`
+	`ESAS attempts to complete the settlement.`
+	`If settlement`
+	`then...`
+	`occurs,`
+	*/
+			`ESAS debits the instructing agent's account and credits the instructed agent's account with the amount of the HVCS payment (step 6).`
+			`ESAS sends an MT097 FINCopy message authorisation/refusal notification message with the ESAS settlement reference to SWIFT confirming settlement (step 7).`
+			`SWIFT FINCopy releases the payment message (MT103, MT202, MT202COV, MT205, or MT205COV) to the instructed agent and includes the settlement date/time and ESA reference in field tag 115 (step 8).`
+			`SWIFT FINCopy sends an MT012 -instructing agent notification message - to the instructing agent confirming settlement and includes the settlement date/time and ESA reference in field tag 114 (step 9).`
+			`If required by the original MT103, SWIFT FIN sends an MT011 - delivery notification message - to the instructing agent confirming the payment message is delivered to the instructed agent (step 9a)`
+			`Instructed agent validates the payment message and either credits the creditor's account or, if the payment message contains errors, returns the HVCS payment or amends the HVCS instruction (step 10).`
+//		)
+	/*
+	`does not occur,`
+	*/
+				`by debtor or at ESAS end of day (08.30))`
+//			)
+			`ESAS sends an MT097 - FINCopy message authorisation/refusal notification message - to FINCopy containing ESAS rejection code 60 or 62 (refer to clause 6.4, ESAS rejection codes) (step 5a).`
+			`The AVP MT CUG transaction delivery system will cancel the payment message.`
+			`The AVP MT CUG transaction delivery system sends an MT019 abort notification message to the instructing agent containing ESAS rejection code 60 or 62 in field tag 432 (step 5b).`
+			`FinCopy deletes the original unsettled payment message (MT103, MT202, MT202COV, MT205, or MT205COV) from the queue`
+			`FINCopy does not notify the intended instructed agent that ESAS has rejected the settlement request.`
+//		)
 	
 	pnz::section_heading( "Chapter 2: SWIFT message header details" )
 	pnz::tag_standards

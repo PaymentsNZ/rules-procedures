@@ -676,7 +676,6 @@ import [
 	)
 
 	pnz::section_heading( "Chapter 3: ISO 20022 key concepts" )
-
 	pnz::tag_commentary
 
 	pnz::clause(

@@ -84,6 +84,22 @@ import [
 		)
 	)
 
+	// pnz.legal::level1 creates indented clauses numbered with the style (1) (2)
+	pnz.legal::level1 = (...content as any) => (
+		content <@ {
+			docx::level = 1
+			docx::levelCounter2 = 1
+		}
+	)
+
+	// pnz.legal::continue_level1 creates indented clauses numbered with the style (1) (2)
+	pnz.legal::continue_level1 = (startNumber as number, ...content as any) => (
+		content <@ {
+			docx::level = 1
+			docx::levelCounter1 = startNumber
+		}		
+	)
+
 	// pnz.legal::level2 creates indented clauses numbered with the style (a) (b)
 	pnz.legal::level2 = (...content as any) => (
 		content <@ {

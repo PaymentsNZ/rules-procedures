@@ -10,6 +10,7 @@ import [
 ]
 
 {
+	/*
 	Overview = File.Write(
 		"docs/hvcs/overview.html"
 		Html.FromValue(
@@ -33,17 +34,19 @@ import [
 		Html.FromValue(
 			hvcs::document( "HVCS MX Procedures", mx )
 		)
-	)
+	)*/
 	MT = File.Write(
 		"docs/hvcs/mt.html"
 		Html.FromValue(
 			hvcs::document( "HVCS MT Procedures", mt )
 		)
 	)
+	/*
 	Coexistence = File.Write(
 		"docs/hvcs/coexistence.html"
 		Html.FromValue(
 			hvcs::document( "HVCS Coexistence Procedures", coexistence )
 		)
 	)
+	*/
 }

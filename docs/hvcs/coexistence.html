@@ -13,9 +13,9 @@
             <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
         </div>
         <div>
-            <div class="document-title">Appendix 14F: HVCS Co-existence Procedures</div>
-            <div class="document-meta">Version 2</div>
-            <div class="document-meta">Effective date: 7/10/2024</div>
+            <div class="document-title">Appendix 14F: HVCS Co-existence Procedures (UG2025)</div>
+            <div class="document-meta">Version 3</div>
+            <div class="document-meta">Effective date: 22/11/2025</div>
         </div>
         <h1 class="section-heading">Document purpose and overview</h1>
         <div class="tag-commentary"></div>
@@ -154,9 +154,38 @@
                 <ol class="level2 level2-counter-reset">
                     <li>the HVCS instructions (MT and MX messages) that are in scope during the co-existence phase,</li>
                     <li>the timeline for migrating HVCS instructions as an MT message to an MX message,</li>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Changed to MT (MX was duplicated).</p>
+                        </div>
+                    </div>
+                    <div class="doc-question" data-change-id="UG2025">
+                        <div class="doc-question-meta">
+                            <span class="doc-question-id">UG2025</span>
+                            <span class="doc-question-initials">RK</span>
+                        </div>
+                        <div class="doc-question-content">
+                            <p>Should &apos;Specifications&apos; be &apos;Procedures&apos;?</p>
+                        </div>
+                    </div>
                     <li>the obligations for participants to send and receive HVCS instructions in accordance with the
-			MX Messaging Procedures and the MX Message Specifications,</li>
-                    <li>dates and times MX messaging will go live.</li>
+			MT Messaging Specifications and the MX Message Specifications,</li>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Changed:</p>
+                            <p>From: MX messaging will go live.</p>
+                            <p>To: when Standards are introduced and revoked.</p>
+                        </div>
+                    </div>
+                    <li>dates and times when Standards are introduced and revoked.</li>
                 </ol>
             </ol>
         </div>
@@ -164,16 +193,25 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="1.2">Defined terms</div>
             <div class="level1">
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Revised for second coexistence phase November 2025 to November 2026.</p>
+                    </div>
+                </div>
                 <p>
                     <span class="bold">Co-existence phase</span>
                     <span>means the period determined by Payments NZ in which the MT Messaging
 				Procedures, the MX Messaging Procedures, the MX Message Specifications and these Co-existence
-				Procedures all apply simultaneously beginning on 20 March 2023 and ending on a date:</span>
+				Procedures all apply simultaneously beginning on 22 November 2025 and ending on a date:</span>
                 </p>
                 <ol class="level2 level2-counter-reset">
-                    <li>in November 2025; or</li>
+                    <li>in November 2026; or</li>
                     <li>as determined by Payments NZ if all participants have fully migrated to using MX messages
-			prior to November 2025.</li>
+			prior to November 2026.</li>
                 </ol>
                 <p>
                     <span class="bold">On-send</span>
@@ -208,6 +246,20 @@
                     <span>means when the content of the address information within an MX message is not formatted in
 				accordance with the structured data requirements set out in the MX Message Specifications.</span>
                 </p>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Added Hybrid Address Line formatting.</p>
+                    </div>
+                </div>
+                <p>
+                    <span class="bold">Hybrid Address Line formatting</span>
+                    <span>means when the content of the address information within an MX message is formatted in
+				accordance with the hybrid data requirements set out in the MX Message Specifications.</span>
+                </p>
                 <p>Unless the context otherwise specifies, all other defined terms have the meanings given to them in
 		Part 19 of the Payments NZ Rules and the HVCS Common Procedures.</p>
             </div>
@@ -217,205 +269,127 @@
             <div class="clause-heading" data-number="1.3">Payment message scope</div>
             <ol class="level1 level1-counter-reset">
                 <li>The payment messages described below are in scope during the co-existence phase.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed:</p>
+                        <p>Participants will still be required to comply with all existing obligations in relation 
+			to receiving and processing MT messages until the end of the co-existence phase (currently scheduled
+			for November 2025).</p>
+                    </div>
+                </div>
                 <li>This table identifies new obligations that participants need to comply with in relation to MX
-		messages. Participants will still be required to comply with all existing obligations in relation 
-		o receiving and processing MT messages until the end of the co-existence phase (currently scheduled
-		for November 2025).</li>
+		messages.</li>
             </ol>
         </div>
         <div>
             <p>Messages exchanged between SWIFT message transfer service and participants:</p>
         </div>
-        <table class="pnz-table coexistence-table">
-            <thead>
-                <th>MT message</th>
-                <th>MX message</th>
-                <th>NZ HVCS timing</th>
-                <th>CBPR+ timing</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>MT 103 - Single Customer Credit Transfer</td>
-                    <td>
-                        <div>pacs.008 - FI to FI Customer Credit Transfer</div>
-                        <br/>
-                        <span class="bold">RETN</span>
-                        <div>pacs.004 — Payment Return</div>
-                    </td>
-                    <td rowspan="5">
-                        <div class="bold">
-                            <p>By the beginning of the co-existence phase:</p>
-                        </div>
-                        <div>
-                            <p>Participants must be able to receive and process HVCS instructions as
-							an MX message</p>
-                        </div>
-                        <div class="bold">
-                            <p>By the end of the co-existence phase:</p>
-                        </div>
-                        <div>
-                            <p>Participants must be able to send, receive and process HVCS instructions
-							as an MX message</p>
-                        </div>
-                    </td>
-                    <td rowspan="5">
-                        <div class="bold">
-                            <p>By the beginning of the co-existence phase:</p>
-                        </div>
-                        <div>
-                            <p>Participants acting as intermediaries5 must be able to receive and process
-							CBPR+ messages.</p>
-                            <p>Subject to clause 1.7(7)(a)(iv)of these Co-existence Procedures, participants
-							acting as intermediaries must be able to on-send a CBPR+ message to participants
-							as an MX message.</p>
-                        </div>
-                        <div class="bold">
-                            <p>By the end of the co-existence phase:</p>
-                        </div>
-                        <div>
-                            <p>Participants acting as intermediaries must be able to send CBPR+ messages
-							and on-send all CBPR+ messages to participants as an MX message.</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MT 202 - General Financial Institution Transfer</td>
-                    <td>
-                        <div>pacs.009 - Financial Institution Credit Transfer</div>
-                        <br/>
-                        <span class="bold">RETN</span>
-                        <div>pacs.004 — Payment Return</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MT 202 COV - General Financial Institution Cover</td>
-                    <td>
-                        <div>pacs.009 COV - Financial Institution Credit Transfer Cover</div>
-                        <br/>
-                        <span class="bold">RETN</span>
-                        <div>pacs.004 — Payment Return</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MT 205 - Financial Institution Transfer Execution</td>
-                    <td>
-                        <div>pacs.009 - Financial Institution Credit Transfer</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MT 205 COV - Financial Institution Transfer Execution Cover</td>
-                    <td>
-                        <div>pacs.009 COV - Financial Institution Credit Transfer Cover</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MT 012 - FIN-Copy Sender Notification</td>
-                    <td>xsys.002 - Authorisation Notification</td>
-                    <td>
-                        <div class="bold">
-                            <p>By the beginning of the co-existence phase:</p>
-                        </div>
-                        <div>
-                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
-                        </div>
-                    </td>
-                    <td>n/a</td>
-                </tr>
-                <tr>
-                    <td>MT 019 - FIN-Copy Abort Notification</td>
-                    <td>xsys.003 - Refusal Notification</td>
-                    <td>
-                        <div class="bold">
-                            <p>By the beginning of the co-existence phase:</p>
-                        </div>
-                        <div>
-                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
-                        </div>
-                    </td>
-                    <td>n/a</td>
-                </tr>
-            </tbody>
-        </table>
-        <div>
-            <p>Messages exchanged between SWIFT message transfer service and HVCS (RBNZ):</p>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>New content</p>
+            </div>
         </div>
         <table class="pnz-table coexistence-table">
             <thead>
-                <th>MT message</th>
                 <th>MX message</th>
                 <th>NZ HVCS timing</th>
                 <th>CBPR+ timing</th>
             </thead>
             <tbody>
                 <tr>
-                    <td>MT 096 - FIN-Copy to Central Institution Message</td>
-                    <td>xcop.xxx - SWIFTNet Copy message</td>
+                    <td>
+                        <div>pacs.008</div>
+                        <div>pacs.009 CORE</div>
+                        <div>pacs.009 COV</div>
+                        <div>pacs.004</div>
+                        <div>camt.056</div>
+                        <div>camt.029</div>
+                    </td>
                     <td>
                         <div class="bold">
                             <p>By the beginning of the co-existence phase:</p>
                         </div>
-                        <div>
-                            <p>RBNZ must be able to receive and process as an MX message</p>
+                        <div>Participants must be able to receive and process MX messages that use
+						hybrid postal address formatting.</div>
+                        <br/>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
                         </div>
+                        <div>Participants must be send MX all messages using either structured postal
+						address formatting or hybrid postal address formatting.</div>
                     </td>
-                    <td>n/a</td>
-                </tr>
-                <tr>
-                    <td>MT 097 - FIN-Copy to Message Authorisation / Refusal</td>
-                    <td>xsys.001 - Settlement Notification</td>
                     <td>
                         <div class="bold">
                             <p>By the beginning of the co-existence phase:</p>
                         </div>
-                        <div>
-                            <p>RBNZ must be able to send as an MX message</p>
+                        <div>Participants acting as intermediaries must be able to receive and process
+						CBPR+ messages that use hybrid postal address formatting.</div>
+                        <div class="doc-question" data-change-id="UG2025">
+                            <div class="doc-question-meta">
+                                <span class="doc-question-id">UG2025</span>
+                                <span class="doc-question-initials">RK</span>
+                            </div>
+                            <div class="doc-question-content">
+                                <p>Check clause reference: 1.7(7)(a)(iv)</p>
+                            </div>
                         </div>
+                        <div>Subject to clause 1.7(7)(a)(iv) of these Co-existence Procedures, participants
+						acting as intermediaries must be able to on-send a CBPR+ message that uses hybrid
+						postal address formatting to participants as an MX message.</div>
+                        <br/>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
+                        <div>Participants acting as intermediaries must be able to send all CBPR+ messages and
+						on-send all CBPR+ messages to participants as an MX message using either structured
+						postal address formatting or hybrid postal address formatting.</div>
                     </td>
-                    <td>n/a</td>
                 </tr>
             </tbody>
         </table>
-        <div>
-            <p>Messages exchanged between SWIFT and participants:</p>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed:</p>
+                <p>Messages exchanged between SWIFT message transfer service and HVCS (RBNZ)</p>
+                <p>Messages exchanged between SWIFT and participants</p>
+            </div>
         </div>
-        <table class="pnz-table coexistence-table">
-            <thead>
-                <th>MT message</th>
-                <th>MX message</th>
-                <th>NZ HVCS timing</th>
-                <th>CBPR+ timing</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>MT 010 - Non-Delivery Warning</td>
-                    <td>xsys.010 - Non-Delivery Warning</td>
-                    <td rowspan="2">
-                        <div class="bold">
-                            <p>By the beginning of the co-existence phase:</p>
-                        </div>
-                        <div>
-                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
-                        </div>
-                    </td>
-                    <td rowspan="2">
-                        <div class="bold">
-                            <p>By the beginning of the co-existence phase:</p>
-                        </div>
-                        <div>Participants acting as intermediaries must be able to receive from SWIFT as an MX message</div>
-                        <div></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MT 011 - Delivery Notification</td>
-                    <td>xsys.011 - Delivery Notification</td>
-                </tr>
-            </tbody>
-        </table>
         <div class="bold">
-            <p>1.4 Cash management message scope</p>
+            <p>1.4 Investigation message scope</p>
+        </div>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Renamed:</p>
+                <p>From: Cash management message scope</p>
+            </div>
+        </div>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Revised coexistence requirements per SWIFT&apos;s latest requirements.</p>
+            </div>
         </div>
         <div>
-            <p>The following cash management messages are in scope during the co-existence phase:</p>
+            <p>The following investigation messages are in scope during the co-existence phase:</p>
         </div>
         <table class="pnz-table coexistence-table">
             <thead>
@@ -435,6 +409,15 @@
                         <div>
                             <p>Participants must be able to receive from SWIFT and process as an MX message</p>
                         </div>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must send all requests as an MX mesage.</p>
+                        </div>
+                        <div>
+                            <p>Participants must send all requests to SWIFT&apos;s Case Manager BIC.</p>
+                        </div>
                     </td>
                     <td>
                         <div class="bold">
@@ -443,6 +426,12 @@
                         <div>
                             <p>Participants acting as intermediaries must accept CBPR+ camt.056 messages.
 							MX-&gt;MT and MT-&gt;MX translation will be available via the SWIFT Transaction Manager.</p>
+                        </div>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
+                        <div>
+                            <p>Participants must send all requests to SWIFT&apos;s Case Manager BIC.</p>
                         </div>
                     </td>
                 </tr>
@@ -453,44 +442,116 @@
                         <div class="bold">
                             <p>By the beginning of the co-existence phase:</p>
                         </div>
+                        <div>Participants must be able to receive from SWIFT and process as an MX message</div>
+                        <br/>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
                         <div>
-                            <p>Participants must be able to receive from SWIFT and process as an MX message</p>
+                            <p>Participants must send all responses as an MX mesage.</p>
+                        </div>
+                        <div>
+                            <p>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</p>
                         </div>
                     </td>
                     <td>
                         <div class="bold">
                             <p>By the beginning of the co-existence phase:</p>
                         </div>
-                        <div>
-                            <p>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX
-							translation will be available via the SWIFT Transaction Manager.</p>
+                        <div>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX
+						translation will be available via the SWIFT Transaction Manager.</div>
+                        <br/>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
                         </div>
+                        <div>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MT 199 / MT 299 - Investigation Request and Response</td>
+                    <td>camt.110 / camt.111 - Investigation Request and Response</td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>Participants must be able to receive from SWIFT and process as an MX message</div>
+                        <br/>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
+                        <div>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</div>
+                    </td>
+                    <td>
+                        <div class="bold">
+                            <p>By the beginning of the co-existence phase:</p>
+                        </div>
+                        <div>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX
+						translation will be available via the SWIFT Transaction Manager.</div>
+                        <br/>
+                        <div class="bold">
+                            <p>By the end of the co-existence phase:</p>
+                        </div>
+                        <div>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</div>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Revised timing, replaced diagram.</p>
+            </div>
+        </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.5">ISO 20022 migration timeline</div>
             <div class="level1">
-                <p>A phased adoption of MX Messaging Procedures will begin on 20 March 2023, with the full transition
-		to MX messaging mandated at the end of the co-existence phase (currently scheduled for November 2025).</p>
-                <div class="diagram">
-                    <img src="images/hvcs_coexistence_migration_timeline.png" alt="Coexistence Migration Timeline"></img>
-                </div>
+                <p>A phased adoption of MX Messaging Procedures will begin on 22 November 2025.</p>
             </div>
+        </div>
+        <div class="diagram">
+            <img src="images/hvcs_coexistence_migration_timeline.png" alt="Coexistence Migration Timeline"></img>
         </div>
         <div class="tag-standards"></div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.6">Obligations for participants to join CUGS</div>
             <ol class="level1 level1-counter-reset">
-                <li>During the co-existence phase a new AVP MX CUG will run alongside the AVP MT CUG.</li>
-                <li>Prior to 20 March 2023, before the co-existence phase, all participants must join the AVP MX CUG.</li>
-                <li>From 20 March 2023, during the co-existence phase, participants must:</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Reworded</p>
+                    </div>
+                </div>
+                <li>The AVP MT CUG will continue to exist through the co-existence phase alongside the AVP MX CUG.</li>
+                <li>From 22 November 2025, during the co-existence phase, participants must:</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Add option to terminate MT CUG earlier.</p>
+                    </div>
+                </div>
                 <ol class="level2 level2-counter-reset">
-                    <li>Be a member of the AVP MT CUG until the end of the co-existence phase; and</li>
-                    <li>Be a member of the AVP MX CUG.</li>
+                    <li>Be a member of the AVP MX CUG; and</li>
+                    <li>Be a member of the AVP MT CUG until the end of the co-existence phase.</li>
                 </ol>
             </ol>
+        </div>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Revised requirements.</p>
+            </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.7">Obligations for participants to send and receive messages during the co-existence phase</div>
@@ -506,40 +567,20 @@
                     <li>
                         <span>Participants</span>
                         <span class="bold">must</span>
-                        <span>send payment messages to other participants using</span>
-                        <span class="bold">either</span>
-                        <span>an MX message</span>
-                        <span class="bold">or</span>
-                        <span>an MT message as follows:</span>
+                        <span>send payment messages to other participants using an MX message as follows:</span>
                     </li>
                     <ol class="level3 level3-counter-reset">
                         <li>
-                            <span>FI to FI Customer Credit Transfer using</span>
-                            <span class="bold">either</span>
-                            <span>a pacs.008</span>
-                            <span class="bold">or</span>
-                            <span>MT 103;</span>
+                            <span>FI to FI Customer Credit Transfer using a pacs.008;</span>
                         </li>
                         <li>
-                            <span>Financial Institution Credit Transfer</span>
-                            <span class="bold">either</span>
-                            <span>a pacs.009</span>
-                            <span class="bold">or</span>
-                            <span>MT202 / MT205;</span>
+                            <span>Financial Institution Credit Transfer using a pacs.009;</span>
                         </li>
                         <li>
-                            <span>Financial Institution Credit Transfer Cover</span>
-                            <span class="bold">either</span>
-                            <span>a pacs.009 COV</span>
-                            <span class="bold">or</span>
-                            <span>MT202 COV / MT205 COV; and</span>
+                            <span>Financial Institution Credit Transfer Cover using a pacs.009 COV;</span>
                         </li>
                         <li>
-                            <span>A return message using</span>
-                            <span class="bold">either</span>
-                            <span>pacs.004</span>
-                            <span class="bold">or</span>
-                            <span>MT103 RETN / MT202 RETN / MT202COV RETN / MT205 RETN / MT205 COV RETN.</span>
+                            <span>A return message using a pacs.004.</span>
                         </li>
                     </ol>
                     <li>
@@ -553,15 +594,9 @@
                             <span class="bold">either</span>
                             <span>Unstructured Address Line formatting</span>
                             <span class="bold">or</span>
-                            <span>Structured Postal Address formatting; but</span>
-                        </li>
-                        <li>
-                            <span class="bold">Not</span>
-                            <span>send an address that contains</span>
-                            <span class="bold">both</span>
-                            <span>Unstructured Address Line formatting</span>
-                            <span class="bold">and</span>
-                            <span>Structured Postal Address formatting.</span>
+                            <span>Structured Postal Address formatting</span>
+                            <span class="bold">or</span>
+                            <span>Hybrid Postal Address formatting.</span>
                         </li>
                     </ol>
                 </ol>
@@ -610,12 +645,23 @@
                     </li>
                     <ol class="level3 level3-counter-reset">
                         <li>Structured Postal Address formatting; and</li>
-                        <li>Unstructured Address Line formatting.</li>
+                        <li>Unstructured Address Line formatting; and</li>
+                        <li>Hybrid Address Line formatting.</li>
                     </ol>
+                    <div class="doc-question" data-change-id="UG2025">
+                        <div class="doc-question-meta">
+                            <span class="doc-question-id">UG2025</span>
+                            <span class="doc-question-initials">RK</span>
+                        </div>
+                        <div class="doc-question-content">
+                            <p>Validate with ORWG.</p>
+                        </div>
+                    </div>
                     <li>
                         <span>Participants</span>
-                        <span class="bold">must</span>
-                        <span>receive and process the following MT payment messages from other participants:</span>
+                        <span class="bold">may</span>
+                        <span>receive and process the following MT payment messages from other participants</span>
+                        <span>for a period of 4 weeks from 22 November 2025:</span>
                     </li>
                     <ol class="level3 level3-counter-reset">
                         <li>MT103;</li>
@@ -632,53 +678,34 @@
                 </li>
                 <ol class="level2 level2-counter-reset">
                     <li>
-                        <span>if the original instructed agent receives a pacs.008 message, return by sending</span>
-                        <span class="bold">either</span>
-                        <span>a pacs.004 message</span>
-                        <span class="bold">or</span>
-                        <span>a MT103 RETN message;</span>
+                        <span>if the original instructed agent receives a pacs.008 message, return by sending a pacs.004 message;</span>
                     </li>
                     <li>
-                        <span>if the original instructed agent receives a pacs.009 message, return by sending</span>
-                        <span class="bold">either</span>
-                        <span>a pacs.004 messag</span>
-                        <span class="bold">or</span>
-                        <span>a MT202 RETN message;</span>
+                        <span>if the original instructed agent receives a pacs.009 message, return by sending a pacs.004 message;</span>
                     </li>
                     <li>
-                        <span>if the original instructed agent receives a pacs.009 COV message, return by sending</span>
-                        <span class="bold">either</span>
-                        <span>a pacs.004 message</span>
-                        <span class="bold">or</span>
-                        <span>a MT202 COV RETN message / MT205 COV RETN message;</span>
+                        <span>if the original instructed agent receives a pacs.009 COV message, return by sending a pacs.004 message;</span>
+                    </li>
+                    <div class="doc-question" data-change-id="UG2025">
+                        <div class="doc-question-meta">
+                            <span class="doc-question-id">UG2025</span>
+                            <span class="doc-question-initials">RK</span>
+                        </div>
+                        <div class="doc-question-content">
+                            <p>Do we need these for the 4 weeks after 22 November 2025?</p>
+                        </div>
+                    </div>
+                    <li>
+                        <span>if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;</span>
                     </li>
                     <li>
-                        <span>if the original instructed agent receives a MT103 message, return by sending</span>
-                        <span class="bold">either</span>
-                        <span>a MT103 RETN message</span>
-                        <span class="bold">or</span>
-                        <span>a pacs.004 message;</span>
+                        <span>if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;</span>
                     </li>
                     <li>
-                        <span>if the original instructed agent receives a MT202 message, return by sending</span>
-                        <span class="bold">either</span>
-                        <span>a MT202 RETN message</span>
-                        <span class="bold">or</span>
-                        <span>a pacs.004 message;</span>
+                        <span>if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message;</span>
                     </li>
                     <li>
-                        <span>if the original instructed agent receives a MT202 COV message, return by sending</span>
-                        <span class="bold">either</span>
-                        <span>a MT202 COV RETN message</span>
-                        <span class="bold">or</span>
-                        <span>a pacs.004 message; and</span>
-                    </li>
-                    <li>
-                        <span>if the original instructed agent receives a MT205 message, return by sending</span>
-                        <span class="bold">either</span>
-                        <span>a MT205 RETN message</span>
-                        <span class="bold">or</span>
-                        <span>a pacs.004 message.</span>
+                        <span>if the original instructed agent receives a MT205 message, return by sending a pacs.004 message;</span>
                     </li>
                 </ol>
                 <li>Receiving and processing other messages</li>
@@ -699,6 +726,15 @@
                         <span class="bold">must</span>
                         <span>receive and process MT messages including:</span>
                     </li>
+                    <div class="doc-question" data-change-id="UG2025">
+                        <div class="doc-question-meta">
+                            <span class="doc-question-id">UG2025</span>
+                            <span class="doc-question-initials">RK</span>
+                        </div>
+                        <div class="doc-question-content">
+                            <p>Do we need MT 012 / MT 019?</p>
+                        </div>
+                    </div>
                     <ol class="level3 level3-counter-reset">
                         <li>MT 192/ MT 292;</li>
                         <li>MT 196 / MT 296;</li>
@@ -733,95 +769,7 @@
                         <li>
                             <span>a pacs.004 SWIFT message received in CBPR+ format</span>
                             <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>a pacs.004 return message</span>
-                            <span class="bold">or</span>
-                            <span>an MT103RETN / MT202RETN / MT205RETN return message</span>
-                        </li>
-                    </ol>
-                    <li>
-                        <span>For SWIFT messages that accompany a payment received in FIN message format destined
-					for another participant, participants that are acting as intermediaries</span>
-                        <span class="bold">must</span>
-                        <span>on-send the FIN messages to the instructed agent using</span>
-                        <span class="bold">either</span>
-                        <span>an MT payment message</span>
-                        <span class="bold">or</span>
-                        <span>an MX payment message as follows:</span>
-                    </li>
-                    <ol class="level3 level3-counter-reset">
-                        <li>
-                            <span>an MT103 SWIFT message received in FIN message format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT103 payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.008 payment message;</span>
-                        </li>
-                        <li>
-                            <span>an MT202 SWIFT message received in FIN message format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT202 payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.009 payment message;</span>
-                        </li>
-                        <li>
-                            <span>an MT202 COV SWIFT message received in FIN message format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT202 COV payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.009 COV payment message;</span>
-                        </li>
-                        <li>
-                            <span>an MT205 COV SWIFT message received in FIN message format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT205 COV payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.009 COV payment message;</span>
-                        </li>
-                        <li>
-                            <span>an MT103 RETN SWIFT message received in FIN message format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT103 RETN payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.004 payment message;</span>
-                        </li>
-                        <li>
-                            <span>an MT202 RETN SWIFT message received in FIN message format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT202 RETN payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.004 payment message;</span>
-                        </li>
-                        <li>
-                            <span>an MT202 COV RETN SWIFT message received in FIN message format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT202 COV RETN payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.004 payment message; and</span>
-                        </li>
-                        <li>
-                            <span>an MT205 COV RETN SWIFT message received in FIN format</span>
-                            <span class="bold">must</span>
-                            <span>be on-sent as</span>
-                            <span class="bold">either</span>
-                            <span>an MT205 COV RETN payment message</span>
-                            <span class="bold">or</span>
-                            <span>a pacs.004 payment message.</span>
+                            <span>be on-sent as a pacs.004 return message</span>
                         </li>
                     </ol>
                     <li>For SWIFT messages that do not accompany a payment destined for another participant,
@@ -845,14 +793,34 @@
                     <li>Participants acting as intermediaries should:</li>
                     <ol class="level3 level3-counter-reset">
                         <li>be able to receive and process CBPR+ messages (either MX or MX with embedded MT);</li>
-                        <li>for MX payment messages received from another participant destined for a correspondent banking partner, on-send these as a CBPR+ message in accordance with SWIFT guidelines; and</li>
-                        <li>for MT payment messages received from another participant destined for a correspondent banking partner, on-send these as either a FIN message or a CBPR+ message in accordance with SWIFT guidelines.</li>
+                        <li>for MX payment messages received from another participant destined for a correspondent banking
+				partner, on-send these as a CBPR+ message in accordance with SWIFT guidelines; and</li>
                     </ol>
                 </ol>
                 <li>Participants that offer specific services to customers</li>
                 <ol class="level2 level2-counter-reset">
-                    <li>Participants that receive MX PAIN messages from their customers destined for another participant should create an MX payment message for that instruction.</li>
-                    <li>Participants that receive an HVCS instruction from their customers as an MT message or other non-MX message format destined for another participant may use either MX or MT messages.</li>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Retained &apos;should&apos; in case not destined for HVCS.</p>
+                        </div>
+                    </div>
+                    <li>Participants that receive MX PAIN messages from their customers destined for another participant
+			should create an MX payment message for that instruction.</li>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Revised to use MX</p>
+                        </div>
+                    </div>
+                    <li>Participants that receive an HVCS instruction from their customers as an MT message or other non-MX
+			message format destined for another HVCS participant must use an MX message.</li>
                 </ol>
             </ol>
         </div>
@@ -867,26 +835,28 @@
                 <ol class="level2 level2-counter-reset">
                     <li>send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX
 			Message Specifications for all message types that are in scope;</li>
-                    <li>send HVCS instructions containing Structured Postal Address formatting only; and</li>
+                    <li>send HVCS instructions containing Structured Postal Address formatting or Hybrid Postal Address formatting only; and</li>
                     <li>send and receive structured data for CBPR+ and HVCS instructions.</li>
                 </ol>
-                <li>The ability to send or receive MT category 1,2, and MTn99 messages will be retired. There is no foreseen
-		retirement date for MTn98 messages.</li>
+                <li>The ability to send or receive MTn92 and MTn96 MTn99 messages will be retired in November 2026.</li>
+                <li>The ability to send or receive MTn99 messages related to payments will be retired in November 2027.</li>
+                <li>There is no foreseen retirement date for MTn98 messages.</li>
             </ol>
+        </div>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Revised to MX only.</p>
+            </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.9">Continuous linked settlements</div>
             <ol class="level1 level1-counter-reset">
                 <li>This section is only relevant to CLS members.</li>
-                <li>CLS will participate in both the AVP MT CUG and AVP MX CUG during the co-existence phase in the
-		same way as HVCS participants.</li>
-                <li>CLS will be able to receive pay-in payment messages as an MT message through to the end of the
-		coexistence period</li>
-                <li>CLS will be able to receive pay-in payment messages as an MX message from the beginning of the
-		co-existence period.</li>
-                <li>CLS will send all pay- outs as an MT message until the ESAS v7.0 upgrade is completed, and then
-		all pay- outs will be sent as MX messages.</li>
-                <li>The timing of the ESAS v7 upgrade is yet to be confirmed, though likely late 2023 / early 2024.</li>
+                <li>All CLS pay-in and pay-out messages must be sent as an MX message.</li>
             </ol>
         </div>
         <h1 class="section-heading">Chapter 2: Dual CUGs</h1>
@@ -894,6 +864,15 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="2.1">Joining the AVP MX CUG</div>
             <div class="level1">
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>What is the replacement for the RBNZ Confluence website?</p>
+                    </div>
+                </div>
                 <p>Information on how to prepare for the AVP MX CUG and the process to join the CUG is provided by
 		the RBNZ Confluence website.</p>
             </div>
@@ -922,6 +901,15 @@
             <ol class="level1 level1-counter-reset">
                 <li>The following table describes the capabilities and functionality of the AVP MT CUG and AVP MX CUG
 		provided by SWIFT and RBNZ.</li>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Should we remove reference to the MT CUG here?</p>
+                    </div>
+                </div>
                 <table class="pnz-table cug-capabilities-table">
                     <thead>
                         <th>1</th>
@@ -1011,37 +999,32 @@
                         </tr>
                     </tbody>
                 </table>
-                <br/>
-                <li>The requirement to use Test and Production BICs will have implications for mixed message scenarios
-		as shown in the example below and identified in Chapter 5:</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>
-                        <span>The pacs.008 (message #0) that HVCS A sends to HVCS B must contain</span>
-                        <span class="bold">Productions BICs;</span>
-                        <span>and</span>
-                    </li>
-                    <li>
-                        <span>The MT103 RETN (message #1) that HVCS B sends to HVCS A must contain</span>
-                        <span class="bold">Test BICs.</span>
-                    </li>
-                </ol>
-                <li>In order to meet this requirement, HVCS B will need to translate the Production BICS received
-		into Test BICs for the return.</li>
-                <div class="diagram">
-                    <img src="images/hvcs_coexistence_bic_translation.png" alt="BIC Translation"></img>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed text related to mixed message scenarios for investigation messages, and
+			the picture has been removed (to be deleted: &apos;images/hvcs_coexistence_bic_translation.png&apos;</p>
+                    </div>
                 </div>
-                <li>This requirement should be factored into the design and implementation of participant&apos;s systems
-		and processes and participants should consider the translation implications.</li>
             </ol>
+        </div>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed MT references</p>
+            </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="2.5">Segregation of Test and Production Messaging</div>
             <ol class="level1 level1-counter-reset">
-                <li>For MT messages, the Test and Production environments require different log in credentials and
-		make use of different BICs in addressing. Together, these safeguards have acted to ensure test
-		messages do not escape into production, as they would fail validation and immediately be stopped.</li>
-                <li>In contrast, the MX test (pilot) service requires log in to a SWIFT production environment and uses
-		a published BIC8. The traditional addressing safeguards have been replaced with the Distinguished Name
+                <li>MX test services require a log in to a SWIFT production environment and use a published BIC8.
+		The traditional addressing safeguards employed within MT messaging have been replaced with the Distinguished Name
 		(DN) specified in the Interact Header to address messages to the participant&apos;s correct test environment.
 		This means that both test and production messages contain a live BIC and there is greater potential for
 		messages to be directed into the wrong environment.</li>
@@ -1061,9 +1044,18 @@
 		contained in HVCS instructions resulting in better quality data for screening and identifying customer
 		behaviour. This should lead to improved fraud detection, and richer remittance, name and address
 		information.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Added reference to hybrid</p>
+                    </div>
+                </div>
                 <li>Domestically, it is recommended that participants review their processes relating to obtaining
 		customer data and acquire any additional customer data needed to ensure all ISO 20022 schema elements
-		needed to provide structured name and address information are captured.</li>
+		needed to provide structured or hybrid name and address information are captured.</li>
                 <li>The following list outlines the agreed approach to use of structured data within HVCS instructions
 		(across remittance, name and address elements) for New Zealand&apos;s HVCS:</li>
                 <ol class="level2 level2-counter-reset">
@@ -1073,15 +1065,23 @@
                     <ol class="level3 level3-counter-reset">
                         <li>Participants must be able to receive and process MX messages that contain Unstructured
 				Address Line formatting.</li>
-                        <li>If an HVCS instruction using an MT message is converted to an MX message, the MX message must
-				contain Unstructured Address Line formatting.</li>
                         <li>Sending MX messages containing Structured Postal Address formatting is recommended.</li>
                     </ol>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Added reference to hybrid</p>
+                        </div>
+                    </div>
                     <li>
-                        <span class="bold">From the scheduled date of mandated use of MX messaging (the end of the co-existence phase),</span>
+                        <span class="bold">From the scheduled date of mandated use of MX structured or hybrid messaging (the end of the co-existence phase),</span>
                         <span>the capability to send MX messages containing Unstructured Address Line formatting will be
 					removed from the MX specification; therefore, participants must be able to send and receive MX
-					messages containing Structured Postal Address formatting for HVCS instructions.</span>
+					messages containing Structured Postal Address formatting or Hybrid Postal Address formatting
+					for HVCS instructions.</span>
                     </li>
                 </ol>
                 <li>Further clarification and guidelines for the use of structured remittance and structured name and
@@ -1093,50 +1093,38 @@
             <ol class="level1 level1-counter-reset">
                 <li>The following outlines the agreed approach to structured data for CBPR+:</li>
                 <ol class="level2 level2-counter-reset">
-                    <li>If a FIN message is converted to a CBPR+ message, the CBPR+ message must contain Unstructured Address
-			Line formatting.</li>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed reference to MT</p>
+                        </div>
+                    </div>
                     <li>During the co-existence phase, if a payment instruction is initiated by the debtor agent using a
 			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
 			for the debtor and creditor.</li>
                     <li>At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured
 			Address formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the
 			co-existence phase, all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing Structured Postal Address formatting.</li>
+			CBPR+ messages containing wither Structured Postal Address formatting or Hybrid Postal Address formatting.</li>
                 </ol>
             </ol>
         </div>
-        <h1 class="section-heading">Chapter 4: Forwarding data</h1>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Renamed Chapter 4: Forwarding data</p>
+            </div>
+        </div>
+        <h1 class="section-heading">Chapter 4: Using an MT Payments Processor</h1>
         <div class="tag-commentary"></div>
         <div class="clause-row">
-            <div class="clause-heading" data-number="4.1">Expectations for intermediaries</div>
-            <ol class="level1 level1-counter-reset">
-                <li>During the co-existence phase, participants acting as an intermediary are required to adhere to the
-		principle &apos;send on what you receive&apos; which requires participants to on-send payment message data in
-		the same format it is received.</li>
-                <li>This principle removes the risk of data truncation. It is acceptable to on-send an MX payment message
-		that was received as an MT payment message or FIN message as translating MT to MX for on-sending results
-		in no data loss. Except for return messages, it is not acceptable to on-send an MT payment message that
-		was received as an MX payment message or a CPBR+ message as not all MX data can be included in an MT
-		message when translating from MX to MT. The principle also enables agents further down the payment chain
-		to meet their compliance obligations more easily.</li>
-                <div class="diagram">
-                    <img src="images/hvcs_coexistence_intermediaries.png" alt="Intermediary Expectations"></img>
-                </div>
-                <li>This means for intermediaries that receive incoming cross-border payments in CBPR+ that, subject to
-		clause 1.7(7)(a)(iv) of these Co-existence Procedures, it will be mandatory to be able to pass those
-		messages in full (on-send), as an MX message from the beginning of the co-existence phase if they are
-		to be processed in the NZ HVCS.</li>
-                <li>It is recommended that participants who act as intermediaries ensure they review their terms and
-		conditions with their customers prior to the start of the co-existence phase to ensure they obtain
-		the relevant mandatory information from their customers to comply with the MX message format. For
-		example, when a payment is being sent cross border on behalf of a domestic customer, and the domestic
-		customer may need to provide more information than they have provided previously.</li>
-                <li>For information on expectations for participants acting as an intermediary agent please refer to
-		Part D — MX Messaging Procedures.</li>
-            </ol>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="4.2">Truncation</div>
+            <div class="clause-heading" data-number="4.1">Truncation</div>
             <ol class="level1 level1-counter-reset">
                 <li>If a participant needs to map MX messages to an MT message for their back office systems then they
 		should be aware that truncation can occur and should refer to the PMPG guidelines for basic principles
@@ -1155,152 +1143,23 @@
 		occurred and provides additional details of the truncation(s).</li>
             </ol>
         </div>
-        <h1 class="section-heading">Chapter 5: Transaction Manager</h1>
-        <div class="tag-commentary"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="5.1">Overview</div>
-            <ol class="level1 level1-counter-reset">
-                <div>
-                    <p>This section is relevant for intermediaries sending and receiving cross border payments and
-			instructions via the FINPlus CUG.</p>
-                </div>
-                <li>SWIFT&apos;s transaction management platform (Transaction Manager) will provide a set of common
-		transaction processing services that today are typically provided by each financial institution,
-		however SWIFT messages that travel across market infrastructure (including HVCS instructions through
-		the RBNZ&apos;s AVP MX CUG) are currently out of scope for the Transaction Manager.</li>
-                <li>The Transaction Manager platform will ensure interoperability between users of different data
-		formats and connectivity channels, but those that want to unlock the full benefits of richer data
-		and advanced Transaction Manager features will need to be able to receive and process CBPR+ messages
-		and connect to SWIFT&apos;s network using APIs.</li>
-                <li>The Transaction Manager will provide a useful reference to participants since:</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>it will show what mapping is used between CBPR+ messages and FIN messages;</li>
-                    <li>there is additional logic used to check the consistency of serial payments;</li>
-                    <li>there may be data enrichment applied to CBPR+ messages which may need to be understood for
-			cross-border payment instructions and transactions and</li>
-                    <li>the Transaction Manager can be used to see what has happened to a CBPR+ message either prior
-			to entering the HVCS, entering the AVP MX CUG as an HVCS instruction, or once it has left the HVCS.</li>
-                </ol>
-            </ol>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed Chapter 5: Transaction Manager</p>
+            </div>
         </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="5.2">Connecting to the Transaction Manger</div>
-            <ol class="level1 level1-counter-reset">
-                <li>Participants are encouraged to review SWIFT&apos;s Connectivity Guidance document to determine which
-		connectivity option makes the most sense for their organisation and the prerequisites to support
-		each option.</li>
-                <li>Participants can connect to the Transaction Manager at their own pace however, it is strongly
-		recommended this is completed prior to the Transaction Manager going live in order to process SWIFT
-		messages received that have been routed through the Transaction Manager.</li>
-            </ol>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="5.3">Transaction Manager traffic build-up</div>
-            <ol class="level1 level1-counter-reset">
-                <li>The ISO 20022 traffic volume will be gradually routed to the Transaction Manager as of a date in
-		March 2023 that will be notified to participants. SWIFT will control and execute the incremental
-		build-up of this traffic.</li>
-                <li>This build-up will start with a low volume from March 2023 and build up to cover all ISO 20022
-		traffic over six months. Addition of a new increment will be dependent on clear criteria and an
-		additional three-month contingency phase will be activated if at any point the criteria are not
-		met.</li>
-                <li>The build-up process will prioritise rich-data transactions first. Rich-data for pacs.008 and
-		pacs.009 is defined as:</li>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Message type</th>
-                        <th>Element</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>Category purpose</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>Ultimate debtor</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>Ultimate creditor</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>Structured remittance information</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>Purpose</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>Regulatory reporting</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>
-                                <div>Rich debtor or creditor information</div>
-                                <div>(structured address or LEI or Name with more than 70 characters)</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009</td>
-                            <td>Category purpose</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009</td>
-                            <td>Purpose</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009</td>
-                            <td>
-                                <div>Rich debtor or creditor information</div>
-                                <div>(structured address or LEI or Name with more than 70 characters)</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009</td>
-                            <td>Remittance information</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009 COV</td>
-                            <td>Purpose</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009 COV</td>
-                            <td>
-                                <div>Rich debtor or creditor information</div>
-                                <div>(structured address or LEI or Name with more than 70 characters)</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009 COV</td>
-                            <td>Remittance information</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009 COV</td>
-                            <td>
-                                <div>Underlying credit transfer:</div>
-                                <ul class="bullets">
-                                    <li>Ultimate debtor</li>
-                                    <li>Ultimate creditor</li>
-                                    <li>Structured remittance information</li>
-                                    <li>
-                                        <span>Rich debtor or creditor information</span>
-                                        <br/>
-                                        <span>(structured address or LEI or Name with more than 70 characters)</span>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br/>
-                <li>During this build-up phase, ISO 20022 messages that are not yet part of the build-up,
-		will not be processed by the Transaction Manager. They will be processed by in-flow
-		translation, meaning that they are received as an ISO 20022 message with embedded MT
-		format, but not stored in the central transaction copy.</li>
-            </ol>
+        <div class="doc-question" data-change-id="UG2025">
+            <div class="doc-question-meta">
+                <span class="doc-question-id">UG2025</span>
+                <span class="doc-question-initials">RK</span>
+            </div>
+            <div class="doc-question-content">
+                <p>Can we remove this complete section?</p>
+            </div>
         </div>
         <h1 class="section-heading">Chapter 6: Testing required during co-existence</h1>
         <div class="tag-commentary"></div>

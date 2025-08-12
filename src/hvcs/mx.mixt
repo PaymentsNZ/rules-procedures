@@ -6,9 +6,9 @@ import [
 [
 	pnz::logo
 	pnz::document_title(
-		"Appendix 14D: MX Messaging Procedures"
-		"2"
-		"5/05/2025"
+		"Appendix 14D: MX Messaging Procedures (UG2025)"
+		"3"
+		"22/11/2025"
 	)
 	/*
 	`Document control`
@@ -194,8 +194,10 @@ import [
 		standards. It also enables participants to compare the MX Message Specifications to other industry standards
 		such as CBPR+ and HVPS+.`
 	
+		pnz::comment( "UG2025", "RK", "Add link" )
 		`You can access Payments NZ's MyStandards Community here.`
 	
+		pnz::comment( "UG2025", "RK", "Add link" )
 		`The MyStandards Help page can be accessed here.`
 	)
 
@@ -247,7 +249,8 @@ import [
 				This includes the technical layout of the XML formatted messages, plus the expected content.`
 			)
 		]
-
+		
+		pnz::question( "UG2025", "RK", "Insert missing picture (ISO 20022 Standard + Restrictions == Usage Guideline.)" )
 		[
 			pnz::bold( "ISO 20022 base standards" )
 			pnz::text(
@@ -282,7 +285,7 @@ import [
 			)
 		]
 
-		`The MX Message Specifications(also sometimes referred to as message usage guidelines or MUGs), together with
+		`The MX Message Specifications (also sometimes referred to as message usage guidelines or MUGs), together with
 		sample MX messages, can be found in Payments NZ's HVCS Community on SWIFT's MyStandards website and are comprised
 		of different types of rules as described in the diagram below.`
 
@@ -313,7 +316,8 @@ import [
 		
 		`Schema changes will always be released with a new date.`
 		
-		`Technical versions can contain minor corrections to cross-element rules or navigation, though not be used for
+		pnz::comment( "UG2025", "RK", "Grammar: added 'must'" )
+		`Technical versions can contain minor corrections to cross-element rules or navigation, though must not be used for
 		schema changes.`
 
 		pnz::image( "images/hvcs_mx_mystandards.png", "MyStandards" )
@@ -325,6 +329,7 @@ import [
 
 		pnz::image( "images/hvcs_mx_mystandards_result_view.png", "Content View vs Result View" )
 
+		pnz::comment( "UG2025", "RK", "Added space (' ') between 'ISO 20022' and 'base'" )
 		[
 			pnz::bold( "Content View" )
 			pnz::text(
@@ -381,6 +386,7 @@ import [
 		`The Readiness Portal is an extension to MyStandards that participants can use to accelerate development and
 		verification of conformance to the new standards.`
 
+		pnz::comment( "UG2025", "RK", "Is iso20022@paymentsnz.co.nz the correct email address?" )
 		`A separate Readiness Portal has been created for each participant. Please email iso20022@paymentsnz.co.nz to
 		request access your organisation's Readiness Portal. Once access has been enabled, the Readiness Portal will appear
 		on your MyStandards home screen.`
@@ -413,11 +419,7 @@ import [
 		system applications or purposes. If the embedded MT format is chosen, some loss of data may occur in the MT message
 		itself, but full message details can be accessed via the Transaction Manager or in the MX portion of the message.`
 		
-		`Banks must maintain the ability to support cross-border MT traffic independently of the Transaction Manager until
-		2025, although SWIFT may enhance the platform to include MT messaging in future.`
-
-		`For more information on the Transaction Manager, including the build-up of traffic and a list of rich data see
-		Part F — Co-existence Procedures, chapter 5.`
+		pnz::comment( "UG2025", "RK", "Removed (4) and (5) - no longer relevant." )
 	)
 
 	pnz::section_heading( "Chapter 2: MX message specification" )
@@ -476,9 +478,12 @@ import [
 				`ensuring that the account number passes check digit validation in accordance with the SBI standards:
 				BACHO account numbers:`
 			)
-			`if the Creditor Account contains a credit card number or a scheme debit card number but no BIC, the
-			instructed agent must ensure that the card number is valid by checking the issuer identification number
-			(IIN) and the account check digit using the modulus 10 algorithm.`
+			pnz::comment( "XCARD", "RK",
+				"Removed (b):"
+				`if the Creditor Account contains a credit card number or a scheme debit card number but no BIC, the
+				instructed agent must ensure that the card number is valid by checking the issuer identification number
+				(IIN) and the account check digit using the modulus 10 algorithm.`
+			)
 		)
 	)
 	pnz::clause(
@@ -721,6 +726,7 @@ import [
 		`The combination of the Message Definition Identifier and the Usage Identifier are used to identify the Message
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.`
 
+		pnz::comment( "UG2025", "RK", "Changed all usage identifiers to version 2")
 		pnz::table(
 			#table(
 				[
@@ -732,7 +738,7 @@ import [
 				[
 					[
 						`pacs.008.001.09`
-						`pnz.hvcs.01`
+						`pnz.hvcs.02`
 						`pacs_008`
 						[
 							pnz::bullets(
@@ -743,7 +749,7 @@ import [
 					]
 					[
 						`pacs.008.001.09`
-						`pnz.hvcs.xbrdr.01`
+						`pnz.hvcs.xbrdr.02`
 						`pacs_008_xbrdr`
 						[
 							pnz::bullets(
@@ -753,7 +759,7 @@ import [
 					]
 					[
 						`pacs.004.001.10`
-						`pnz.hvcs.01`
+						`pnz.hvcs.02`
 						`pacs_004`
 						[
 							pnz::bullets(
@@ -765,7 +771,7 @@ import [
 					]
 					[
 						`pacs.004.001.10`
-						`pnz.hvcs.xbrdr.01`
+						`pnz.hvcs.xbrdr.02`
 						`pacs_004_xbrdr`
 						[
 							pnz::bullets(
@@ -777,7 +783,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.01`
+						`pnz.hvcs.02`
 						`pacs_009`
 						[
 							pnz::bullets(
@@ -787,7 +793,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.cov.01`
+						`pnz.hvcs.cov.02`
 						`pacs_009_cov`
 						[
 							pnz::bullets(
@@ -797,7 +803,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.xbrdr.01`
+						`pnz.hvcs.xbrdr.02`
 						`pacs_009_xbrdr`
 						[
 							pnz::bullets(
@@ -807,7 +813,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.xbrdr.cov.01`
+						`pnz.hvcs.xbrdr.cov.02`
 						`pacs_009_cov_xbrdr`
 						[
 							pnz::bullets(
@@ -819,6 +825,7 @@ import [
 			)
 		)
 		
+		pnz::br
 		`The Request Type and Message Definition Identifier must contain the same values. The Request Subtype and
 		Business Service must contain the same values.`
 		
@@ -878,6 +885,7 @@ import [
 			RBNZNZ);`
 		)
 
+		pnz::question( "UG2025", "RK", "What is the replacement for the RBNZ Confluence website?")
 		`This means that, although messages may pass SWIFT validation, they will be rejected by RTGS if they do not pass the
 		consistency checking. In the case of delivery failure, the reason code provided in the xsys.003 message will be RC05
 		(Invalid BIC Identifier). The full list of rejection codes is available on the RBNZ Confluence website.`
@@ -894,12 +902,14 @@ import [
 		"3.5"
 		"Distinguished name structure"
 
-		`The RBNZ have decided to adopt the Distinguished Name (DN) structure for transport of FINplus / CBPR+ messages.`
+		pnz::comment( "UG2025", "RK", "Previous wording could possibly be misinterpreted as RBNZ does not transport FINPlus or CBPR+ messages.")
+		`The RBNZ have decided to adopt the Distinguished Name (DN) structure for MX messages.`
 
 		`To enable ISO 20022 to work for multiple use cases and independent of networks, the general convention is to use DNs
 		to specify sender and receiver information. This will enable SWIFT to implement a consistency check between the
 		Interact Headers and the Business Application Headers for the Sender and Receiver.`
 
+		pnz::question( "UG2025", "RK", "Add hyperlink.")
 		`The sender and receiver address in FIN message services will be based on BIC11. However, for InterAct messaging
 		services, they will be based on DNs, namely Requestor DN and Responder DN. Further information can be accessed via
 		SWIFT.com Knowledge Centre SWIFTNet Name and Addressing Guide.`
@@ -927,6 +937,7 @@ import [
 		`When participants register for the AVP MX CUG, they also define one or more DNs that can then be used to identify the
 		participant within the service.`
 		
+		pnz::question( "UG2025", "RK", "Reference to RBNZ Confluence website")
 		`Published and previously registered DNs for the test AVP MX CUG can be found on the RBNZ Confluence website`
 	)
 
@@ -941,6 +952,7 @@ import [
 		`This is an optional element within the HVCS, however, if used, the LEI must be used in combination with Account number or
 		BIC or Name and Address to keep usage consistent with CBPR+.`
 
+		pnz::question( "UG2025", "RK", "Add hyperlink")
 		`The Payments Market Practice Group (PMPG) have provided extensive guidance in their paper Global adoption of the LEI
 		(Legal Entity Identifier) in ISO 20022 payment messages.`
 	)
@@ -952,6 +964,7 @@ import [
 		`There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.`
 		
+		pnz::question( "UG2025", "RK", "Check for changes in CBPR+ definition.")
 		`Unstructured remittance information <RmtInf/Ustrd> allows 1x140 characters (to align with HVPS+ and CBPR+).`
 
 		pnz::tag_standards
@@ -978,6 +991,7 @@ import [
 		20022 format in an overseas market infrastructure before transitioning to CBPR+ and then to NZ HVCS as part of its journey
 		through the chain of agencies.`
 
+		pnz::question( "UG2025", "RK", "Add hyperlink.")
 		`The Payments Market Practice Group (PMPG) publish the structured address format guidance for each country to SWIFT's
 		Document Centre. See ISO 20022 Structure Postal Address to download this. Note the content of the document is not validated
 		anywhere on the SWIFT network.`
@@ -1114,6 +1128,22 @@ import [
 		)
 	)
 
+	pnz::comment( "UG2025", "RK", "Added.")
+	pnz::clause(
+		"3.9B"
+		"HVCS hybrid address line formatting"
+
+		`Hybrid address line formatting is a fallback where structured address line formatting
+		cannot be implemented.`
+		
+		`A hybrid address allows simultaneous usage of structured and unstructured elements, with
+		a minimum of structured Town Name and Country.`
+
+		`A maximum of two occurences of Address Line is permitted within a postal address, and any
+		information contained within the structured postal address elements must not be repeated
+		within the unstructured address lines.`
+	)
+
 	pnz::clause(
 		"3.10"
 		"Using payment message identifiers"
@@ -1141,9 +1171,10 @@ import [
 		transaction per ESAS Business Day, as the RBNZ performs duplicate validation on the Instruction
 		Identification reference.`
 
+		pnz::comment( "UG2025", "RK", "Removed reference to end of coexistence, added when CBPR+ removes this restriction" )
 		`The Instruction Identification has been restricted to 16 characters using a formal rule, however,
-		HVCS has retained the 35-character length so that the specifications can be relaxed (e.g., end of
-		coexistence and support for MT message translation) without making a change to the schema.`
+		HVCS has retained the 35-character length so that the specifications can be relaxed when CBPR+
+		removes this restriction without making a change to the schema.`
 
 		`The clearing system reference is not used; this can be found in the third party to receiver/sender
 		information`
@@ -1319,6 +1350,7 @@ import [
 		pnz::image( "images/hvcs_mx_scp_local_instrument.png", "SCP Local Instrument" )
 	)
 
+	pnz::comment( "XCARD", "RK", "Removed references to payments to cards" )
 	pnz::clause(
 		"4.2"
 		"SCP account number format"
@@ -1327,16 +1359,14 @@ import [
 		a BIC for the creditor:`
 		
 		pnz::level2(
-			`The scheme name (DbtrAcct / Id / Other / SchmeNm / Cd) should be populated where the identifier
-			represents a NZ Basic Bank Account, a Debit Card or a Credit Card using one of the following values:`
+			`The scheme name (DbtrAcct / Id / Other / SchmeNm / Cd) must be populated where the identifier
+			represents a NZ Basic Bank Account using the following values:`
 			
 			pnz::level3(
 				`BBAN — Basic Bank Account Number identification`
 
-				`AIIN — Card Issuer Identification Number`
-
 				`Scheme Name should be omitted or use a Proprietary value (enabled through bilateral agreement) where
-				the identifier represents something other than a BBAN or AIIN.`
+				the identifier represents something other than a BBAN.`
 			)
 
 			`Where Scheme Name = BBAN (Basic Bank Account Number), the Identifier must be either 15 or 16 digits:`
@@ -1346,22 +1376,10 @@ import [
 				`4 digits — Branch number`
 				`7 digits — Account number, right aligned, padded with high order zeros`
 				`2 or 3 digits — Suffix, right aligned, padded with high order zeros`
-
-				pnz::nonumber(
-					[
-						pnz::bold( "Note:" )
-						`The account number format for MX messages must be 7 digits. This is different to the account
-						number format for MT messages which can be either 6 or 7 digits;`
-					]
-				)
+				pnz::comment( "UG2025", "RK", "Removed note" )
 			)
 
-			`Where Scheme Name = AIIN (Debit Card or Credit Card), the Identifier must be 16 digits:`
-			pnz::level3(
-				`6 digits — Issuer Identification Number (IIN) or Bank Identification Number (BIN)`
-				`9 digits — Account identifier / number`
-				`1 digit — Checksum`
-			)
+			pnz::comment( "XCARD", "RK", "Removed card sentences" )
 		)
 	)
 
@@ -1369,11 +1387,11 @@ import [
 		"4.3"
 		"SCP Customer notifications"
 
+		pnz::comment( "UG2025", "RK", "Removed MT character substitution references" )
 		pnz::nonumber(
 			`There is now a dedicated Email Address field (see the path element
 			/Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/CtctDtls/EmailAdr within the MX Message Specifications
-			for this purpose. The character substitution required under section 3.11 of the MT Messaging Procedures
-			is no longer necessary under ISO 20022.`
+			for this purpose.`
 		)
 	)
 
@@ -1449,9 +1467,9 @@ import [
 		"5.1"
 		"How to represent direct and cover payments"
 
-		`Several scenarios have been identified where domestic direct and cover MT messages have been used
-		to send payments to beneficiary accounts to ensure they are not identified as SCPs, and hence do not
-		trigger SCP obligations such as account number formatting or timing.`
+		`During the migration from MT to MX messaging, several scenarios were identified where domestic direct
+		and cover messages were used to send payments to beneficiary accounts to ensure they were not identified
+		as SCPs, and hence did not trigger SCP obligations such as account number formatting or timing.`
 
 		`This section discusses how these payments should be represented in an MX message.`
 
@@ -2205,7 +2223,8 @@ import [
 
 		`The Delivery Notification is reconciled with the InterAct request to which it applies.`
 
-		`The xsys.011 system message directly corresponds to the MT011 system message and is optional.`
+		pnz::comment( "UG2025", "RK", "Removed reference to MT" )
+		`The xsys.011 system message is optional.`
 
 		`The sender of an HVCS instruction may explicitly request the Delivery Notification. SWIFTNet
 		generates a Delivery Notification when it receives the technical delivery acknowledgement from the

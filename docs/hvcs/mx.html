@@ -13,9 +13,9 @@
             <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
         </div>
         <div>
-            <div class="document-title">Appendix 14D: MX Messaging Procedures</div>
-            <div class="document-meta">Version 2</div>
-            <div class="document-meta">Effective date: 5/05/2025</div>
+            <div class="document-title">Appendix 14D: MX Messaging Procedures (UG2025)</div>
+            <div class="document-meta">Version 3</div>
+            <div class="document-meta">Effective date: 22/11/2025</div>
         </div>
         <h1 class="section-heading">Document purpose and overview</h1>
         <div class="tag-commentary"></div>
@@ -179,7 +179,25 @@
                 <li>MyStandards is a website licensed by SWIFT to Payments NZ and participants for viewing draft and final
 		standards. It also enables participants to compare the MX Message Specifications to other industry standards
 		such as CBPR+ and HVPS+.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Add link</p>
+                    </div>
+                </div>
                 <li>You can access Payments NZ&apos;s MyStandards Community here.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Add link</p>
+                    </div>
+                </div>
                 <li>The MyStandards Help page can be accessed here.</li>
             </ol>
         </div>
@@ -221,6 +239,15 @@
                     <span>is the formal definition for the language used to exchange HVCS instructions and other SWIFT messages.
 				This includes the technical layout of the XML formatted messages, plus the expected content.</span>
                 </li>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Insert missing picture (ISO 20022 Standard + Restrictions == Usage Guideline.)</p>
+                    </div>
+                </div>
                 <li>
                     <span class="bold">ISO 20022 base standards</span>
                     <span>are developed by the ISO 20022 Standards Evaluation Group (SEG). ISO 20022 standards are available on
@@ -246,7 +273,7 @@
 				to explain how local instructions should be constructed for specific scenarios.  In the New Zealand context,
 				the Usage Guidelines that apply to HVCS are contained in the MX Message Specifications.</span>
                 </li>
-                <li>The MX Message Specifications(also sometimes referred to as message usage guidelines or MUGs), together with
+                <li>The MX Message Specifications (also sometimes referred to as message usage guidelines or MUGs), together with
 		sample MX messages, can be found in Payments NZ&apos;s HVCS Community on SWIFT&apos;s MyStandards website and are comprised
 		of different types of rules as described in the diagram below.</li>
                 <div class="diagram">
@@ -272,7 +299,16 @@
             <ol class="level1 level1-counter-reset">
                 <li>Specifications are released as a versioned set.</li>
                 <li>Schema changes will always be released with a new date.</li>
-                <li>Technical versions can contain minor corrections to cross-element rules or navigation, though not be used for
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Grammar: added &apos;must&apos;</p>
+                    </div>
+                </div>
+                <li>Technical versions can contain minor corrections to cross-element rules or navigation, though must not be used for
 		schema changes.</li>
                 <div class="diagram">
                     <img src="images/hvcs_mx_mystandards.png" alt="MyStandards"></img>
@@ -284,6 +320,15 @@
             <ol class="level1 level1-counter-reset">
                 <div class="diagram">
                     <img src="images/hvcs_mx_mystandards_result_view.png" alt="Content View vs Result View"></img>
+                </div>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Added space (&apos; &apos;) between &apos;ISO 20022&apos; and &apos;base&apos;</p>
+                    </div>
                 </div>
                 <li>
                     <span class="bold">Content View</span>
@@ -326,6 +371,15 @@
             <ol class="level1 level1-counter-reset">
                 <li>The Readiness Portal is an extension to MyStandards that participants can use to accelerate development and
 		verification of conformance to the new standards.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Is iso20022@paymentsnz.co.nz the correct email address?</p>
+                    </div>
+                </div>
                 <li>A separate Readiness Portal has been created for each participant. Please email iso20022@paymentsnz.co.nz to
 		request access your organisation&apos;s Readiness Portal. Once access has been enabled, the Readiness Portal will appear
 		on your MyStandards home screen.</li>
@@ -352,10 +406,15 @@
                 <li>Intermediaries will be able to receive their choice of API, MX or MX with embedded MT for different back office
 		system applications or purposes. If the embedded MT format is chosen, some loss of data may occur in the MT message
 		itself, but full message details can be accessed via the Transaction Manager or in the MX portion of the message.</li>
-                <li>Banks must maintain the ability to support cross-border MT traffic independently of the Transaction Manager until
-		2025, although SWIFT may enhance the platform to include MT messaging in future.</li>
-                <li>For more information on the Transaction Manager, including the build-up of traffic and a list of rich data see
-		Part F — Co-existence Procedures, chapter 5.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed (4) and (5) - no longer relevant.</p>
+                    </div>
+                </div>
             </ol>
         </div>
         <h1 class="section-heading">Chapter 2: MX message specification</h1>
@@ -400,9 +459,18 @@
                         <li>ensuring that the account number passes check digit validation in accordance with the SBI standards:
 				BACHO account numbers:</li>
                     </ol>
-                    <li>if the Creditor Account contains a credit card number or a scheme debit card number but no BIC, the
-			instructed agent must ensure that the card number is valid by checking the issuer identification number
-			(IIN) and the account check digit using the modulus 10 algorithm.</li>
+                    <div class="doc-comment" data-change-id="XCARD">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">XCARD</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed (b):</p>
+                            <p>if the Creditor Account contains a credit card number or a scheme debit card number but no BIC, the
+				instructed agent must ensure that the card number is valid by checking the issuer identification number
+				(IIN) and the account check digit using the modulus 10 algorithm.</p>
+                        </div>
+                    </div>
                 </ol>
             </ol>
         </div>
@@ -668,6 +736,15 @@
             <ol class="level1 level1-counter-reset">
                 <li>The combination of the Message Definition Identifier and the Usage Identifier are used to identify the Message
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Changed all usage identifiers to version 2</p>
+                    </div>
+                </div>
                 <table class="pnz-table">
                     <thead>
                         <th>Message Def&apos;n ID / Request Type</th>
@@ -678,7 +755,7 @@
                     <tbody>
                         <tr>
                             <td>pacs.008.001.09</td>
-                            <td>pnz.hvcs.01</td>
+                            <td>pnz.hvcs.02</td>
                             <td>pacs_008</td>
                             <td>
                                 <ul class="bullets">
@@ -689,7 +766,7 @@
                         </tr>
                         <tr>
                             <td>pacs.008.001.09</td>
-                            <td>pnz.hvcs.xbrdr.01</td>
+                            <td>pnz.hvcs.xbrdr.02</td>
                             <td>pacs_008_xbrdr</td>
                             <td>
                                 <ul class="bullets">
@@ -699,7 +776,7 @@
                         </tr>
                         <tr>
                             <td>pacs.004.001.10</td>
-                            <td>pnz.hvcs.01</td>
+                            <td>pnz.hvcs.02</td>
                             <td>pacs_004</td>
                             <td>
                                 <ul class="bullets">
@@ -711,7 +788,7 @@
                         </tr>
                         <tr>
                             <td>pacs.004.001.10</td>
-                            <td>pnz.hvcs.xbrdr.01</td>
+                            <td>pnz.hvcs.xbrdr.02</td>
                             <td>pacs_004_xbrdr</td>
                             <td>
                                 <ul class="bullets">
@@ -723,7 +800,7 @@
                         </tr>
                         <tr>
                             <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.01</td>
+                            <td>pnz.hvcs.02</td>
                             <td>pacs_009</td>
                             <td>
                                 <ul class="bullets">
@@ -733,7 +810,7 @@
                         </tr>
                         <tr>
                             <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.cov.01</td>
+                            <td>pnz.hvcs.cov.02</td>
                             <td>pacs_009_cov</td>
                             <td>
                                 <ul class="bullets">
@@ -743,7 +820,7 @@
                         </tr>
                         <tr>
                             <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.xbrdr.01</td>
+                            <td>pnz.hvcs.xbrdr.02</td>
                             <td>pacs_009_xbrdr</td>
                             <td>
                                 <ul class="bullets">
@@ -753,7 +830,7 @@
                         </tr>
                         <tr>
                             <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.xbrdr.cov.01</td>
+                            <td>pnz.hvcs.xbrdr.cov.02</td>
                             <td>pacs_009_cov_xbrdr</td>
                             <td>
                                 <ul class="bullets">
@@ -763,6 +840,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <br/>
                 <li>The Request Type and Message Definition Identifier must contain the same values. The Request Subtype and
 		Business Service must contain the same values.</li>
                 <li>The Request Type is from the Request Header/BAH and the Message Definition Identifier is from the Business
@@ -813,6 +891,15 @@
 			of the message payload unless the message is generated using the ESAS FSI function (sender BIC is prefixed with
 			RBNZNZ);</li>
                 </ol>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>What is the replacement for the RBNZ Confluence website?</p>
+                    </div>
+                </div>
                 <li>This means that, although messages may pass SWIFT validation, they will be rejected by RTGS if they do not pass the
 		consistency checking. In the case of delivery failure, the reason code provided in the xsys.003 message will be RC05
 		(Invalid BIC Identifier). The full list of rejection codes is available on the RBNZ Confluence website.</li>
@@ -826,10 +913,28 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="3.5">Distinguished name structure</div>
             <ol class="level1 level1-counter-reset">
-                <li>The RBNZ have decided to adopt the Distinguished Name (DN) structure for transport of FINplus / CBPR+ messages.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Previous wording could possibly be misinterpreted as RBNZ does not transport FINPlus or CBPR+ messages.</p>
+                    </div>
+                </div>
+                <li>The RBNZ have decided to adopt the Distinguished Name (DN) structure for MX messages.</li>
                 <li>To enable ISO 20022 to work for multiple use cases and independent of networks, the general convention is to use DNs
 		to specify sender and receiver information. This will enable SWIFT to implement a consistency check between the
 		Interact Headers and the Business Application Headers for the Sender and Receiver.</li>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Add hyperlink.</p>
+                    </div>
+                </div>
                 <li>The sender and receiver address in FIN message services will be based on BIC11. However, for InterAct messaging
 		services, they will be based on DNs, namely Requestor DN and Responder DN. Further information can be accessed via
 		SWIFT.com Knowledge Centre SWIFTNet Name and Addressing Guide.</li>
@@ -852,6 +957,15 @@
                 <li>DNs are service specific and must be used with the matching service and messages.</li>
                 <li>When participants register for the AVP MX CUG, they also define one or more DNs that can then be used to identify the
 		participant within the service.</li>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Reference to RBNZ Confluence website</p>
+                    </div>
+                </div>
                 <li>Published and previously registered DNs for the test AVP MX CUG can be found on the RBNZ Confluence website</li>
             </ol>
         </div>
@@ -863,6 +977,15 @@
 		structure, and is the globally recognized ISO 17442 standard.</li>
                 <li>This is an optional element within the HVCS, however, if used, the LEI must be used in combination with Account number or
 		BIC or Name and Address to keep usage consistent with CBPR+.</li>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Add hyperlink</p>
+                    </div>
+                </div>
                 <li>The Payments Market Practice Group (PMPG) have provided extensive guidance in their paper Global adoption of the LEI
 		(Legal Entity Identifier) in ISO 20022 payment messages.</li>
             </ol>
@@ -872,6 +995,15 @@
             <ol class="level1 level1-counter-reset">
                 <li>There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.</li>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Check for changes in CBPR+ definition.</p>
+                    </div>
+                </div>
                 <li>Unstructured remittance information &lt;RmtInf/Ustrd&gt; allows 1x140 characters (to align with HVPS+ and CBPR+).</li>
                 <div class="tag-standards"></div>
                 <li>Structured remittance information &lt;RmtInf/Strd&gt; must only be used for HVCS payments when it has been bilaterally or
@@ -891,6 +1023,15 @@
 		address within any ISO 20022 Usage Guideline. This aspect is important, because the address may be first placed into an ISO
 		20022 format in an overseas market infrastructure before transitioning to CBPR+ and then to NZ HVCS as part of its journey
 		through the chain of agencies.</li>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Add hyperlink.</p>
+                    </div>
+                </div>
                 <li>The Payments Market Practice Group (PMPG) publish the structured address format guidance for each country to SWIFT&apos;s
 		Document Centre. See ISO 20022 Structure Postal Address to download this. Note the content of the document is not validated
 		anywhere on the SWIFT network.</li>
@@ -1042,6 +1183,27 @@
                 </tr>
             </tbody>
         </table>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Added.</p>
+            </div>
+        </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="3.9B">HVCS hybrid address line formatting</div>
+            <ol class="level1 level1-counter-reset">
+                <li>Hybrid address line formatting is a fallback where structured address line formatting
+		cannot be implemented.</li>
+                <li>A hybrid address allows simultaneous usage of structured and unstructured elements, with
+		a minimum of structured Town Name and Country.</li>
+                <li>A maximum of two occurences of Address Line is permitted within a postal address, and any
+		information contained within the structured postal address elements must not be repeated
+		within the unstructured address lines.</li>
+            </ol>
+        </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.10">Using payment message identifiers</div>
             <ol class="level1 level1-counter-reset">
@@ -1063,9 +1225,18 @@
                 <li>The Instruction Identification must be populated with a unique reference for each ESAS settlement
 		transaction per ESAS Business Day, as the RBNZ performs duplicate validation on the Instruction
 		Identification reference.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed reference to end of coexistence, added when CBPR+ removes this restriction</p>
+                    </div>
+                </div>
                 <li>The Instruction Identification has been restricted to 16 characters using a formal rule, however,
-		HVCS has retained the 35-character length so that the specifications can be relaxed (e.g., end of
-		coexistence and support for MT message translation) without making a change to the schema.</li>
+		HVCS has retained the 35-character length so that the specifications can be relaxed when CBPR+
+		removes this restriction without making a change to the schema.</li>
                 <li>The clearing system reference is not used; this can be found in the third party to receiver/sender
 		information</li>
                 <li>A summary of payment message identifiers can be found in the table below</li>
@@ -1306,19 +1477,27 @@
                 </div>
             </ol>
         </div>
+        <div class="doc-comment" data-change-id="XCARD">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">XCARD</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed references to payments to cards</p>
+            </div>
+        </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.2">SCP account number format</div>
             <ol class="level1 level1-counter-reset">
                 <li>The following account number restrictions apply to Same-day Cleared Payments where the SCP does not specify
 		a BIC for the creditor:</li>
                 <ol class="level2 level2-counter-reset">
-                    <li>The scheme name (DbtrAcct / Id / Other / SchmeNm / Cd) should be populated where the identifier
-			represents a NZ Basic Bank Account, a Debit Card or a Credit Card using one of the following values:</li>
+                    <li>The scheme name (DbtrAcct / Id / Other / SchmeNm / Cd) must be populated where the identifier
+			represents a NZ Basic Bank Account using the following values:</li>
                     <ol class="level3 level3-counter-reset">
                         <li>BBAN — Basic Bank Account Number identification</li>
-                        <li>AIIN — Card Issuer Identification Number</li>
                         <li>Scheme Name should be omitted or use a Proprietary value (enabled through bilateral agreement) where
-				the identifier represents something other than a BBAN or AIIN.</li>
+				the identifier represents something other than a BBAN.</li>
                     </ol>
                     <li>Where Scheme Name = BBAN (Basic Bank Account Number), the Identifier must be either 15 or 16 digits:</li>
                     <ol class="level3 level3-counter-reset">
@@ -1326,31 +1505,44 @@
                         <li>4 digits — Branch number</li>
                         <li>7 digits — Account number, right aligned, padded with high order zeros</li>
                         <li>2 or 3 digits — Suffix, right aligned, padded with high order zeros</li>
-                        <div>
-                            <p>
-                                <span class="bold">Note:</span>
-                                <span>The account number format for MX messages must be 7 digits. This is different to the account
-						number format for MT messages which can be either 6 or 7 digits;</span>
-                            </p>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Removed note</p>
+                            </div>
                         </div>
                     </ol>
-                    <li>Where Scheme Name = AIIN (Debit Card or Credit Card), the Identifier must be 16 digits:</li>
-                    <ol class="level3 level3-counter-reset">
-                        <li>6 digits — Issuer Identification Number (IIN) or Bank Identification Number (BIN)</li>
-                        <li>9 digits — Account identifier / number</li>
-                        <li>1 digit — Checksum</li>
-                    </ol>
+                    <div class="doc-comment" data-change-id="XCARD">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">XCARD</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed card sentences</p>
+                        </div>
+                    </div>
                 </ol>
             </ol>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="4.3">SCP Customer notifications</div>
             <ol class="level1 level1-counter-reset">
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed MT character substitution references</p>
+                    </div>
+                </div>
                 <div>
                     <p>There is now a dedicated Email Address field (see the path element
 			/Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/CtctDtls/EmailAdr within the MX Message Specifications
-			for this purpose. The character substitution required under section 3.11 of the MT Messaging Procedures
-			is no longer necessary under ISO 20022.</p>
+			for this purpose.</p>
                 </div>
             </ol>
         </div>

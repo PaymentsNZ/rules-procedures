@@ -10,8 +10,9 @@ import [
 ]
 
 let
-	//singleDocument = null
-	singleDocument = "MT"
+	//selector = null
+	//selector = (id as text) => true
+	selector = (id as text) => (id == "MX" or id == "Coexistence")
 	documents = #table(
 		[
 			"id"
@@ -59,12 +60,12 @@ let
 		]
 	),
 	asRecords = Table.ToRecords(
-		if singleDocument == null then
+		if selector == null then
 			documents
 		else
 			Table.SelectRows(
 				documents
-				(doc) => doc{ id } == singleDocument
+				(doc) => selector( doc{ id } )
 			)
 	)
 	written = List.Accumulate(

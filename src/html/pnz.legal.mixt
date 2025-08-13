@@ -15,6 +15,12 @@ import [
 			"en",
 			[
 					;meta = html::meta( "UTF-8" )
+					;meta = {
+						html::attributes = {
+							name = "viewport"
+							content = "width=device-width, initial-scale=1"
+						}
+					} @> null
 					title = docTitle
 					link = html::stylesheet( "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" )
 					link = html::stylesheet( "../styles/pnz.legal.css" )

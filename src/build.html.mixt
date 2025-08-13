@@ -11,8 +11,8 @@ import [
 
 let
 	//selector = null
-	//selector = (id as text) => true
-	selector = (id as text) => (id == "MX" or id == "Coexistence")
+	selector = (id as text) => true
+	//selector = (id as text) => (id == "MX" or id == "Coexistence")
 	documents = #table(
 		[
 			"id"
@@ -30,7 +30,7 @@ let
 			[
 				"Common"
 				"HVCS Common Procedures"
-				"docs/hvcs/overview.html"
+				"docs/hvcs/common.html"
 				common
 			]
 			[

@@ -1608,9 +1608,9 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="5.1">How to represent direct and cover payments</div>
             <ol class="level1 level1-counter-reset">
-                <li>Several scenarios have been identified where domestic direct and cover MT messages have been used
-		to send payments to beneficiary accounts to ensure they are not identified as SCPs, and hence do not
-		trigger SCP obligations such as account number formatting or timing.</li>
+                <li>During the migration from MT to MX messaging, several scenarios were identified where domestic direct
+		and cover messages were used to send payments to beneficiary accounts to ensure they were not identified
+		as SCPs, and hence did not trigger SCP obligations such as account number formatting or timing.</li>
                 <li>This section discusses how these payments should be represented in an MX message.</li>
                 <table class="pnz-table">
                     <thead>
@@ -2251,7 +2251,16 @@
                 <li>The Delivery Notification message is an optional system message that indicates that a message for
 		which a delivery notification is requested, has been successfully delivered.</li>
                 <li>The Delivery Notification is reconciled with the InterAct request to which it applies.</li>
-                <li>The xsys.011 system message directly corresponds to the MT011 system message and is optional.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed reference to MT</p>
+                    </div>
+                </div>
+                <li>The xsys.011 system message is optional.</li>
                 <li>The sender of an HVCS instruction may explicitly request the Delivery Notification. SWIFTNet
 		generates a Delivery Notification when it receives the technical delivery acknowledgement from the
 		receiver&apos;s interface.</li>

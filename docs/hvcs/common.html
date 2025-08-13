@@ -13,9 +13,9 @@
             <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
         </div>
         <div>
-            <div class="document-title">Appendix 14B: HVCS Common Procedures</div>
-            <div class="document-meta">Version 1</div>
-            <div class="document-meta">Effective date: 20/11/2022</div>
+            <div class="document-title">Appendix 14B: HVCS Common Procedures (UG2025)</div>
+            <div class="document-meta">Version 2</div>
+            <div class="document-meta">Effective date: 22/11/2025</div>
         </div>
         <h1 class="section-heading">Document purpose and overview</h1>
         <div class="tag-commentary"></div>
@@ -144,17 +144,34 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="1.1">Defined terms</div>
             <div class="level1">
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Changed capitalisation of FINplus</p>
+                    </div>
+                </div>
                 <p>
                     <span class="bold">CBPR+</span>
-                    <span>means the ISO 20022-based messaging standard for sending a SWIFT message through the FinPlus CUG
+                    <span>means the ISO 20022-based messaging standard for sending a SWIFT message through the FINplus CUG
 				operated by SWIFT.</span>
                 </p>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">JW</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed MT103</p>
+                    </div>
+                </div>
                 <p>
                     <span class="bold">Customer credit transfer message</span>
                     <span>means the following payment messages used to facilitate an HVCS payment involving a customer of a
 				participant:</span>
                     <ul class="bullets">
-                        <li>MT103; and</li>
                         <li>pacs.008</li>
                     </ul>
                 </p>
@@ -170,15 +187,20 @@
                         <li>camt.029</li>
                     </ul>
                 </p>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">JW</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed MT202, MT202COV, MT205, MT205COV</p>
+                    </div>
+                </div>
                 <p>
                     <span class="bold">FI credit transfer message</span>
                     <span>means the following payment messages used to facilitate an HVCS payment involving a participant or
 				 financial institution customer of a participant:</span>
                     <ul class="bullets">
-                        <li>MT202;</li>
-                        <li>MT202COV;</li>
-                        <li>MT205;</li>
-                        <li>MT205COV;</li>
                         <li>pacs.009; and</li>
                         <li>pacs.009COV</li>
                     </ul>
@@ -203,15 +225,19 @@
 				ISO 20022 message specifications modified for New Zealand&apos;s HVCS and provided on the &quot;mystandards&quot;
 				webpage</span>
                 </p>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">JW</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed MT103 RETN, MT202 RETN, MT202COV RETN, MT205 RETN, and MT205COV RETN</p>
+                    </div>
+                </div>
                 <p>
                     <span class="bold">Return message</span>
                     <span>message means the following payment messages used to facilitate the return of an HVCS payment:</span>
                     <ul class="bullets">
-                        <li>MT103 RETN</li>
-                        <li>MT202 RETN;</li>
-                        <li>MT202COV RETN;</li>
-                        <li>MT205 RETN;</li>
-                        <li>MT205COV RETN; and</li>
                         <li>pacs.004</li>
                     </ul>
                 </p>
@@ -225,6 +251,15 @@
                         <li>FIN message</li>
                     </ul>
                 </p>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">JW</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Is it safe to remove MT010, MT011, MT012 and MT019?</p>
+                    </div>
+                </div>
                 <p>
                     <span class="bold">System message</span>
                     <span>means a message sent to a participant through SWIFT in relation to an HVCS instruction including:</span>
@@ -286,10 +321,18 @@
                 <li>For clarity, the obligations set out in the table below are cumulative.  Participants must comply with every
 		validation obligation that applies to the type of HVCS instruction that the participant sends or receives.</li>
                 <h2 class="subsection-heading">Instructing Agent</h2>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed MT Obligations</p>
+                    </div>
+                </div>
                 <table class="pnz-table validation-table">
                     <thead>
                         <th>Action</th>
-                        <th>MT Obligations</th>
                         <th>MX Obligations</th>
                     </thead>
                     <tbody>
@@ -298,7 +341,6 @@
                                 <span>Sending an HVCS instruction as an</span>
                                 <span class="bold">MX message</span>
                             </td>
-                            <td>No MT obligation</td>
                             <td>
                                 <div>The instructing agent:</div>
                                 <ul class="bullets">
@@ -338,20 +380,6 @@
                                 <span class="bold">SCP</span>
                             </td>
                             <td>
-                                <div>
-                                    <span>The instructing agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clause 1.5 of the SCP Procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>See section 3.1 of the MT Procedures</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(Swift and HVCS Rules)</p>
-                                </div>
-                            </td>
-                            <td>
                                 <div>The instructing agent:</div>
                                 <ul class="bullets">
                                     <li>
@@ -371,7 +399,6 @@
                                 <span>Sending an HVCS instruction as an</span>
                                 <span class="bold">Non-SCP</span>
                             </td>
-                            <td>N/A</td>
                             <td>
                                 <div>The instructing agent:</div>
                                 <ul class="bullets">
@@ -422,17 +449,6 @@
                             </td>
                             <td>
                                 <div>
-                                    <span>The instructing agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clause 3.4 of the MT Messaging Procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(SCP MT103: field 59: instructing agent: Option A)</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
                                     <span class="bold">XML Path</span>
                                     <span>for Creditor BIC:</span>
                                 </div>
@@ -476,16 +492,6 @@
                                         <span>(contains an account number or card number)</span>
                                     </li>
                                 </ul>
-                            </td>
-                            <td>
-                                <div>
-                                    <span>The instructing agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clause 3.5 or 3.6 of the MT
-									Messaging Procedures</span>
-                                </div>
-                                <br/>
-                                <span class="italic">(MT103: field 59: instructing agent)</span>
                             </td>
                             <td>
                                 <div>Clause 4.2 of the MX Procedures has commentary that documents what an account number
@@ -533,17 +539,6 @@
                                 </ul>
                             </td>
                             <td>
-                                <div>
-                                    <span>The instructing agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clause 3.11 of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(Field 72 Information: X Character set)</p>
-                                </div>
-                            </td>
-                            <td>
                                 <div>Clause 4.3 of the MX Procedures shows the dedicated email address field.</div>
                                 <br/>
                                 <div class="italic">
@@ -571,21 +566,6 @@
                                         <span class="bold">BIC</span>
                                     </li>
                                 </ul>
-                            </td>
-                            <td>
-                                <div>
-                                    <span>The instructing agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clause 4.1 and 4.5
-									of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(Swift and HVCS Rules)</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(Field 59: instructing agent)</p>
-                                </div>
                             </td>
                             <td>
                                 <div>
@@ -630,21 +610,6 @@
                             </td>
                             <td>
                                 <div>
-                                    <span>The instructing agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clause 4.1, 4.6 and 4.7
-									of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(Swift and HVCS Rules)</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(Field 59: instructing agent)</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
                                     <span class="bold">XML Path</span>
                                     <span>for Creditor BIC:</span>
                                 </div>
@@ -677,27 +642,6 @@
                                 <div>
                                     <span>The instructing agent</span>
                                     <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clauses 5.2-5.5 and 5.7
-									of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(MT 202 Swift and HVCS Rules)</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(MT202COV Swift and HVCS Requirements)</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(MT205)</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(MT205COV)</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <span>The instructing agent</span>
-                                    <span class="bold">must</span>
                                     <span>validate the HVCS instruction in accordance with clause 2.1 of the MX
 									Procedures and in accordance with MyStandards.</span>
                                 </div>
@@ -710,10 +654,18 @@
                     </tbody>
                 </table>
                 <h2 class="subsection-heading">Instructed Agent</h2>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed MT Obligations</p>
+                    </div>
+                </div>
                 <table class="pnz-table validation-table">
                     <thead>
                         <th>Action</th>
-                        <th>MT Obligations</th>
                         <th>MX Obligations</th>
                     </thead>
                     <tbody>
@@ -732,7 +684,6 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td>No MT obligation</td>
                             <td>
                                 <div>
                                     <span>The instructed agent</span>
@@ -767,21 +718,6 @@
                                 <div>
                                     <span>The instructed agent</span>
                                     <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clauses 3.7 and 3.8
-									of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(Field 59: Instructed Agent Validation)</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(Validation not required)</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <span>The instructed agent</span>
-                                    <span class="bold">must</span>
                                     <span>validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures
 									and in accordance with MyStandards.</span>
                                 </div>
@@ -806,17 +742,6 @@
                                         <span>for the beneficiary notification</span>
                                     </li>
                                 </ul>
-                            </td>
-                            <td>
-                                <div>
-                                    <span>The instructed agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the email address in accordance with clause 3.12 of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(Field 72: Instructed agent transformation)</p>
-                                </div>
                             </td>
                             <td>
                                 <div>Clause 4.3 of the MX Procedures shows the dedicated email address field.</div>
@@ -847,21 +772,6 @@
                                 <div>
                                     <span>The instructed agent</span>
                                     <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clauses 4.8 and 4.9
-									of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(Field 59: Instructed Agent Validation)</p>
-                                </div>
-                                <div class="italic">
-                                    <p>(Validation not required)</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <span>The instructed agent</span>
-                                    <span class="bold">must</span>
                                     <span>validate the HVCS instruction in accordance with clauses 2.3
 									of the MX Procedures.</span>
                                 </div>
@@ -885,18 +795,6 @@
                                         <span class="bold">field 72</span>
                                     </li>
                                 </ul>
-                            </td>
-                            <td>
-                                <div>
-                                    <span>The instructed agent</span>
-                                    <span class="bold">must</span>
-                                    <span>validate the HVCS instruction in accordance with clauses 3.14, 4.14 and
-									5.11 of the MT procedures</span>
-                                </div>
-                                <br/>
-                                <div class="italic">
-                                    <p>(Field 72: Return HVCS Payment: Timing, Format and Content)</p>
-                                </div>
                             </td>
                             <td>
                                 <div>
@@ -931,7 +829,16 @@
 		return an HVCS payment:</li>
                 <ol class="level2 level2-counter-reset">
                     <li>as soon as practicable after making the decision to return it, and</li>
-                    <li>in accordance with Part F - Co-existence Procedures and the applicable message standards.</li>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Revised from Part F - Co-existence Procedures to Part D.</p>
+                        </div>
+                    </div>
+                    <li>in accordance with Part D - MX Procedures and the applicable message standards.</li>
                 </ol>
             </ol>
         </div>
@@ -947,6 +854,15 @@
 		the HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS
 		instruction.</p>
                 <p>The following diagram summarises the processes that apply if the HVCS instruction contains an error.</p>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Insert flow diagram here.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="tag-standards"></div>
@@ -1022,6 +938,15 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="2.5">Request and response formats</div>
             <div class="level1">
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">JW</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>No change, though noting reference to MTn95 and MTn96.</p>
+                    </div>
+                </div>
                 <p>If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common
 		Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by,
 		for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message
@@ -1038,6 +963,15 @@
 		instruction no later than 16:45 on a business day unless standards 3.3 or 3.4 apply.</p>
                 <p>The following diagram gives an overview of the processes that apply if the instructing agent proposes
 		to send an HVCS instruction after 16:45. The diagram has no legal effect.</p>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">RK</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Insert flow diagram here.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="tag-standards"></div>
@@ -1122,6 +1056,15 @@
             <div class="level1">
                 <p>Participants who send and receive financial institution credit transfers during the CLS evening
 		session are:</p>
+                <div class="doc-question" data-change-id="UG2025">
+                    <div class="doc-question-meta">
+                        <span class="doc-question-id">UG2025</span>
+                        <span class="doc-question-initials">JW</span>
+                    </div>
+                    <div class="doc-question-content">
+                        <p>Checking the participant list - no ICBC, BOC AKL, CCB, or MUFG?</p>
+                    </div>
+                </div>
                 <table class="pnz-table">
                     <thead>
                         <th>Participants</th>

@@ -238,62 +238,64 @@
             <div class="level1">
                 <p>The Reserve Bank and SWIFT use the FINCopy MT messages described in the following table
 		to process HVCS instructions:</p>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Message type</th>
-                        <th>Message name</th>
-                        <th>Sender</th>
-                        <th>Receiver</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>MT012</td>
-                            <td>Sender notification.</td>
-                            <td>SWIFT</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>MT019</td>
-                            <td>Abort notification.</td>
-                            <td>SWIFT</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>MT028</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>FINCopy message status report.</li>
-                                    <li>Used for monitoring messages within a specific time range.</li>
-                                </ul>
-                            </td>
-                            <td>Reserve Bank</td>
-                            <td>SWIFT</td>
-                        </tr>
-                        <tr>
-                            <td>MT029</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>Copy message status report.</li>
-                                    <li>This message is the response to the MT028.</li>
-                                </ul>
-                            </td>
-                            <td>SWIFT</td>
-                            <td>Reserve Bank</td>
-                        </tr>
-                        <tr>
-                            <td>MT096</td>
-                            <td>FINCopy to server destination message.</td>
-                            <td>SWIFT</td>
-                            <td>Reserve Bank</td>
-                        </tr>
-                        <tr>
-                            <td>MT097</td>
-                            <td>FINCopy message authorisation/refusal notification.</td>
-                            <td>Reserve Bank</td>
-                            <td>SWIFT</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Message type</th>
+                            <th>Message name</th>
+                            <th>Sender</th>
+                            <th>Receiver</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MT012</td>
+                                <td>Sender notification.</td>
+                                <td>SWIFT</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>MT019</td>
+                                <td>Abort notification.</td>
+                                <td>SWIFT</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>MT028</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>FINCopy message status report.</li>
+                                        <li>Used for monitoring messages within a specific time range.</li>
+                                    </ul>
+                                </td>
+                                <td>Reserve Bank</td>
+                                <td>SWIFT</td>
+                            </tr>
+                            <tr>
+                                <td>MT029</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>Copy message status report.</li>
+                                        <li>This message is the response to the MT028.</li>
+                                    </ul>
+                                </td>
+                                <td>SWIFT</td>
+                                <td>Reserve Bank</td>
+                            </tr>
+                            <tr>
+                                <td>MT096</td>
+                                <td>FINCopy to server destination message.</td>
+                                <td>SWIFT</td>
+                                <td>Reserve Bank</td>
+                            </tr>
+                            <tr>
+                                <td>MT097</td>
+                                <td>FINCopy message authorisation/refusal notification.</td>
+                                <td>Reserve Bank</td>
+                                <td>SWIFT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="clause-row">
@@ -309,44 +311,46 @@
                         <p>Are delivery notifications relevant for MTn95/96?</p>
                     </div>
                 </div>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Message type</th>
-                        <th>Message name</th>
-                        <th>Sender</th>
-                        <th>Receiver</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>MTn95</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>A question.</li>
-                                    <li>Free text message.</li>
-                                </ul>
-                            </td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>MTn96</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>An answer.</li>
-                                    <li>Free text message.</li>
-                                </ul>
-                            </td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>MT011</td>
-                            <td>Delivery notification</td>
-                            <td>SWIFT</td>
-                            <td>Participant</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Message type</th>
+                            <th>Message name</th>
+                            <th>Sender</th>
+                            <th>Receiver</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MTn95</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>A question.</li>
+                                        <li>Free text message.</li>
+                                    </ul>
+                                </td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>MTn96</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>An answer.</li>
+                                        <li>Free text message.</li>
+                                    </ul>
+                                </td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>MT011</td>
+                                <td>Delivery notification</td>
+                                <td>SWIFT</td>
+                                <td>Participant</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="doc-comment" data-change-id="UG2025">
@@ -464,60 +468,62 @@
 		payment may not have settled. If the instructing agent doesn&apos;t settle the HVCS payment by the end of
 		the ESAS day, ESAS will cancel the HVCS payment.</li>
                 <li>The following table specifies the format for an MT012 system message:</li>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Rep</th>
-                        <th>Tag</th>
-                        <th>Field</th>
-                        <th>Content/Comments</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>175</td>
-                            <td>Time</td>
-                            <td>Input time (HHMM), local to the instructing agent, of the original user message.</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>106</td>
-                            <td>MIR</td>
-                            <td>Message Input Reference (MIR) identifying the instructing agent&apos;s copy message copied to and released by the CSI.</td>
-                        </tr>
-                        <tr>
-                            <td>0-1</td>
-                            <td>108</td>
-                            <td>MUR</td>
-                            <td>Message User Reference (MUR) used in the header of the original message.</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>102</td>
-                            <td>SWIFT address</td>
-                            <td>Destination BIC of the instructing agent&apos;s message. Includes the LT code.</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>103</td>
-                            <td>Service code</td>
-                            <td>AVP</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>114</td>
-                            <td>Payment release information (instructing agent)</td>
-                            <td>
-                                <div>Information from central institution (SWIFT) to instructing agent of payment message
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Rep</th>
+                            <th>Tag</th>
+                            <th>Field</th>
+                            <th>Content/Comments</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>175</td>
+                                <td>Time</td>
+                                <td>Input time (HHMM), local to the instructing agent, of the original user message.</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>106</td>
+                                <td>MIR</td>
+                                <td>Message Input Reference (MIR) identifying the instructing agent&apos;s copy message copied to and released by the CSI.</td>
+                            </tr>
+                            <tr>
+                                <td>0-1</td>
+                                <td>108</td>
+                                <td>MUR</td>
+                                <td>Message User Reference (MUR) used in the header of the original message.</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>102</td>
+                                <td>SWIFT address</td>
+                                <td>Destination BIC of the instructing agent&apos;s message. Includes the LT code.</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>103</td>
+                                <td>Service code</td>
+                                <td>AVP</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>114</td>
+                                <td>Payment release information (instructing agent)</td>
+                                <td>
+                                    <div>Information from central institution (SWIFT) to instructing agent of payment message
 							(from field 114 of the MT097) as follows:</div>
-                                <ul class="dashes">
-                                    <li>ESAS Date:</li>
-                                    <li>ESAS Time:</li>
-                                    <li>ESAS Reference Number.</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                    <ul class="dashes">
+                                        <li>ESAS Date:</li>
+                                        <li>ESAS Time:</li>
+                                        <li>ESAS Reference Number.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ol>
         </div>
         <div class="clause-row">
@@ -534,64 +540,66 @@
 			end of day) to the instructing agent.</li>
                 </ol>
                 <li>The following table specifies the format for an MT019 system message:</li>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Rep</th>
-                        <th>Tag</th>
-                        <th>Field</th>
-                        <th>Content/Comments</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>175</td>
-                            <td>Time</td>
-                            <td>Input time (HHMM), local to the instructing agent, of the original user message.</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>106</td>
-                            <td>MIR</td>
-                            <td>Message Input Reference (MIR) identifying the instructing agent&apos;s copy message
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Rep</th>
+                            <th>Tag</th>
+                            <th>Field</th>
+                            <th>Content/Comments</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>175</td>
+                                <td>Time</td>
+                                <td>Input time (HHMM), local to the instructing agent, of the original user message.</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>106</td>
+                                <td>MIR</td>
+                                <td>Message Input Reference (MIR) identifying the instructing agent&apos;s copy message
 						copied to and released by the CSI.</td>
-                        </tr>
-                        <tr>
-                            <td>0-1</td>
-                            <td>108</td>
-                            <td>MUR</td>
-                            <td>Message User Reference (MUR) used in the header of the original message.</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>102</td>
-                            <td>SWIFT address</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>Destination BIC of the aborted message.</li>
-                                    <li>Includes the LT code.</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>0-1</td>
-                            <td>107</td>
-                            <td>MOR</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>Message Output Reference (MOR) of the aborted message.</li>
-                                    <li>If several delivery attempts have been made, field 107 contains the last valid MOR.</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>432</td>
-                            <td>Abort reason</td>
-                            <td>Refer to the table in clause 6.4 containing ESAS rejection codes and the
+                            </tr>
+                            <tr>
+                                <td>0-1</td>
+                                <td>108</td>
+                                <td>MUR</td>
+                                <td>Message User Reference (MUR) used in the header of the original message.</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>102</td>
+                                <td>SWIFT address</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>Destination BIC of the aborted message.</li>
+                                        <li>Includes the LT code.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0-1</td>
+                                <td>107</td>
+                                <td>MOR</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>Message Output Reference (MOR) of the aborted message.</li>
+                                        <li>If several delivery attempts have been made, field 107 contains the last valid MOR.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>432</td>
+                                <td>Abort reason</td>
+                                <td>Refer to the table in clause 6.4 containing ESAS rejection codes and the
 						SWIFT FIN error codes for the SWIFT generated codes returned in this field.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ol>
         </div>
         <div class="clause-row">
@@ -602,345 +610,359 @@
 		fails business rules validation (refer to Clause 1.4 Message lifecycle):</p>
             </div>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Code</th>
-                <th>Reason Type</th>
-                <th>Summary</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>61</td>
-                    <td>The payment cannot be validated because of some serious or fundamental problem with the message</td>
-                    <td>The construction of the message does not conform to the ESAS application specifications.</td>
-                </tr>
-                <tr>
-                    <td>62</td>
-                    <td colspan="2">
-                        <div>AVP — Assured Value Payment</div>
-                        <div>The payment instruction has one or more validation errors, such as:</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>62.1</td>
-                    <td>Duplicate tags</td>
-                    <td>
-                        <div>A payment instruction will be validated against the following:</div>
-                        <ul class="bullets">
-                            <li>OCD — Originator BIC of the message (Instructing agent)</li>
-                            <li>ODT — Originator Date (Calendar Date) when message is submitted</li>
-                            <li>ORF — Originator Reference assigned by the settlement bank (MT Tag 20)</li>
-                            <li>FSVD — Funds Settlement value day in the RTGS.</li>
-                        </ul>
-                        <div>Then, if the above conditions are the same as a previously processed message, and if
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Code</th>
+                    <th>Reason Type</th>
+                    <th>Summary</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>61</td>
+                        <td>The payment cannot be validated because of some serious or fundamental problem with the message</td>
+                        <td>The construction of the message does not conform to the ESAS application specifications.</td>
+                    </tr>
+                    <tr>
+                        <td>62</td>
+                        <td colspan="2">
+                            <div>AVP — Assured Value Payment</div>
+                            <div>The payment instruction has one or more validation errors, such as:</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>62.1</td>
+                        <td>Duplicate tags</td>
+                        <td>
+                            <div>A payment instruction will be validated against the following:</div>
+                            <ul class="bullets">
+                                <li>OCD — Originator BIC of the message (Instructing agent)</li>
+                                <li>ODT — Originator Date (Calendar Date) when message is submitted</li>
+                                <li>ORF — Originator Reference assigned by the settlement bank (MT Tag 20)</li>
+                                <li>FSVD — Funds Settlement value day in the RTGS.</li>
+                            </ul>
+                            <div>Then, if the above conditions are the same as a previously processed message, and if
 						Block 4 (Tag 32A DATE/CCY/AMT) is different, the member will have an Error 62 - Duplicate
 						Tag returned.</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>62.2</td>
-                    <td>The Instructing or Instructed agents are inactivated or unknown.</td>
-                    <td>The instructing or instructed agent has been inactivated, or the BIC has not configured
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>62.2</td>
+                        <td>The Instructing or Instructed agents are inactivated or unknown.</td>
+                        <td>The instructing or instructed agent has been inactivated, or the BIC has not configured
 					for use in ESAS.</td>
-                </tr>
-                <tr>
-                    <td>62.3</td>
-                    <td>Invalid settlement date</td>
-                    <td>
-                        <div>The payment instruction Settlement Date must not exceed 14 business days from the date
+                    </tr>
+                    <tr>
+                        <td>62.3</td>
+                        <td>Invalid settlement date</td>
+                        <td>
+                            <div>The payment instruction Settlement Date must not exceed 14 business days from the date
 						the instruction was received in ESAS. The payment Settlement Date is a non-business date
 						or a date in the past.</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>62.4</td>
-                    <td>Instructing agent failed to activate an instruction</td>
-                    <td>The instructing agent does not activate the payment instruction in ESAS before end of day
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>62.4</td>
+                        <td>Instructing agent failed to activate an instruction</td>
+                        <td>The instructing agent does not activate the payment instruction in ESAS before end of day
 					(only applicable to payments that have the payer-to-activate flag applied).</td>
-                </tr>
-                <tr>
-                    <td>62.5</td>
-                    <td>Invalid amount</td>
-                    <td>The payment instruction must be in NZD</td>
-                </tr>
-                <tr>
-                    <td>63</td>
-                    <td>The payment was discarded due to insufficient funds (EOD cancellation)</td>
-                    <td>Payment instruction did not settle before the EOD event started in ESAS.</td>
-                </tr>
-                <tr>
-                    <td>65</td>
-                    <td>The payment was removed by the Settlement Bank</td>
-                    <td>The payment instruction was either removed or discarded from the ESAS by the Settlement Bank.</td>
-                </tr>
-                <tr>
-                    <td>66</td>
-                    <td>Duplicate SWIFT message — AVP (Assured Value Payment)</td>
-                    <td>
-                        <div>A payment instruction will be validated against the following:</div>
-                        <ul class="bullets">
-                            <li>OCD — Originator BIC of the message (Instructing agent)</li>
-                            <li>ODT — Originator Date (Calendar Date) when message is submitted</li>
-                            <li>ORF — Originator Reference assigned by the settlement bank (MT Tag 20)</li>
-                            <li>FSVD — Funds Settlement value day in the RTGS.</li>
-                        </ul>
-                        <div>Then, if the above conditions are the same, and if Block 4 (Tag 32A DATE/CCY/AMT) are
+                    </tr>
+                    <tr>
+                        <td>62.5</td>
+                        <td>Invalid amount</td>
+                        <td>The payment instruction must be in NZD</td>
+                    </tr>
+                    <tr>
+                        <td>63</td>
+                        <td>The payment was discarded due to insufficient funds (EOD cancellation)</td>
+                        <td>Payment instruction did not settle before the EOD event started in ESAS.</td>
+                    </tr>
+                    <tr>
+                        <td>65</td>
+                        <td>The payment was removed by the Settlement Bank</td>
+                        <td>The payment instruction was either removed or discarded from the ESAS by the Settlement Bank.</td>
+                    </tr>
+                    <tr>
+                        <td>66</td>
+                        <td>Duplicate SWIFT message — AVP (Assured Value Payment)</td>
+                        <td>
+                            <div>A payment instruction will be validated against the following:</div>
+                            <ul class="bullets">
+                                <li>OCD — Originator BIC of the message (Instructing agent)</li>
+                                <li>ODT — Originator Date (Calendar Date) when message is submitted</li>
+                                <li>ORF — Originator Reference assigned by the settlement bank (MT Tag 20)</li>
+                                <li>FSVD — Funds Settlement value day in the RTGS.</li>
+                            </ul>
+                            <div>Then, if the above conditions are the same, and if Block 4 (Tag 32A DATE/CCY/AMT) are
 						exactly the same, then the member will have an Error 66 Duplicate Instruction (Exact
 						Duplicate) returned.</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>66</td>
-                    <td>Duplicate SWIFT message — SBI (Settlement Before Interchange)</td>
-                    <td>
-                        <div>A payment instruction will be validated against the following:</div>
-                        <ul class="bullets">
-                            <li>ORF - Originator Reference = &lt;FileId&gt;</li>
-                            <li>ODT - Originator date &lt;IntrBkSttlmDt&gt;</li>
-                            <li>OCD - Originator BIC code - &lt;Instructing agent&gt;&lt;FullName&gt;&lt;X1&gt;</li>
-                        </ul>
-                        <div>The system will check for duplicates according to the following logic:</div>
-                        <ul class="bullets">
-                            <li>If the OCD, ORF and the ODT are the same as a previously processed instruction,
-							the system will reject the instruction immediately.</li>
-                            <li>If only the ORF is different, but the payment detail is the same as a previously
-							processed instruction then the system will process the instruction.</li>
-                            <li>If only the OCD is different, but the payment detail is the same as a previously
-							processed instruction then the system will process the instruction.</li>
-                        </ul>
-                        <div>The payment detail that is compared is the following:</div>
-                        <ul class="bullets">
-                            <li>Instructing agent Reference - &lt;Instructing agent Reference&gt;</li>
-                            <li>Originator Reference Number:&lt;UserReference&gt;</li>
-                            <li>Beneficiary Bank: &lt;Dbtr&gt;&lt;BIC&gt;</li>
-                            <li>Paying bank: &lt;Cdtr&gt;&lt;BIC&gt;</li>
-                            <li>Amount: &lt;TtlIntrBkSttlmAmt&gt;</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>67</td>
-                    <td>Discarded due to non-settlement day</td>
-                    <td>
-                        <div>The payment message must have a Settlement Date that is NZ business day for:</div>
-                        <div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>66</td>
+                        <td>Duplicate SWIFT message — SBI (Settlement Before Interchange)</td>
+                        <td>
+                            <div>A payment instruction will be validated against the following:</div>
                             <ul class="bullets">
-                                <li>AVP, and</li>
-                                <li>until 21 April 2023, SBI.</li>
+                                <li>ORF - Originator Reference = &lt;FileId&gt;</li>
+                                <li>ODT - Originator date &lt;IntrBkSttlmDt&gt;</li>
+                                <li>OCD - Originator BIC code - &lt;Instructing agent&gt;&lt;FullName&gt;&lt;X1&gt;</li>
                             </ul>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                            <div>The system will check for duplicates according to the following logic:</div>
+                            <ul class="bullets">
+                                <li>If the OCD, ORF and the ODT are the same as a previously processed instruction,
+							the system will reject the instruction immediately.</li>
+                                <li>If only the ORF is different, but the payment detail is the same as a previously
+							processed instruction then the system will process the instruction.</li>
+                                <li>If only the OCD is different, but the payment detail is the same as a previously
+							processed instruction then the system will process the instruction.</li>
+                            </ul>
+                            <div>The payment detail that is compared is the following:</div>
+                            <ul class="bullets">
+                                <li>Instructing agent Reference - &lt;Instructing agent Reference&gt;</li>
+                                <li>Originator Reference Number:&lt;UserReference&gt;</li>
+                                <li>Beneficiary Bank: &lt;Dbtr&gt;&lt;BIC&gt;</li>
+                                <li>Paying bank: &lt;Cdtr&gt;&lt;BIC&gt;</li>
+                                <li>Amount: &lt;TtlIntrBkSttlmAmt&gt;</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>67</td>
+                        <td>Discarded due to non-settlement day</td>
+                        <td>
+                            <div>The payment message must have a Settlement Date that is NZ business day for:</div>
+                            <div>
+                                <ul class="bullets">
+                                    <li>AVP, and</li>
+                                    <li>until 21 April 2023, SBI.</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <br/>
         <div class="bold">
             <p>6.5 AVP MT CUG service parameters</p>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Parameter</th>
-                <th>Value</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>FIN Copy service identifier code</td>
-                    <td>AVP</td>
-                </tr>
-                <tr>
-                    <td>Country</td>
-                    <td>New Zealand</td>
-                </tr>
-                <tr>
-                    <td>Service type</td>
-                    <td>Y-Copy</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FIN Copy service identifier code</td>
+                        <td>AVP</td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td>New Zealand</td>
+                    </tr>
+                    <tr>
+                        <td>Service type</td>
+                        <td>Y-Copy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <br/>
-        <table class="pnz-table">
-            <thead>
-                <th>Parameter</th>
-                <th>Live</th>
-                <th>Test and training</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Value added service identifier</td>
-                    <td>AVP</td>
-                    <td>AVP</td>
-                </tr>
-                <tr>
-                    <td>Live service flag</td>
-                    <td>Y</td>
-                    <td>N</td>
-                </tr>
-                <tr>
-                    <td>(live = Y, T&amp;T = N)</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Value added service number</td>
-                    <td>8</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>CID id</td>
-                    <td>ESASNZ2W</td>
-                    <td>ESASNZ20</td>
-                </tr>
-                <tr>
-                    <td>Authentication mode</td>
-                    <td>2</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>(normal = 1, double = 2)</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Full copy flag</td>
-                    <td>N</td>
-                    <td>N</td>
-                </tr>
-                <tr>
-                    <td>(full copy = Y, part copy = N)</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Value date range</td>
-                    <td>99</td>
-                    <td>99</td>
-                </tr>
-                <tr>
-                    <td>(same day = 0, day n = n, no check=99)</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Currency code</td>
-                    <td>NZD</td>
-                    <td>NZD</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Parameter</th>
+                    <th>Live</th>
+                    <th>Test and training</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Value added service identifier</td>
+                        <td>AVP</td>
+                        <td>AVP</td>
+                    </tr>
+                    <tr>
+                        <td>Live service flag</td>
+                        <td>Y</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>(live = Y, T&amp;T = N)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Value added service number</td>
+                        <td>8</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>CID id</td>
+                        <td>ESASNZ2W</td>
+                        <td>ESASNZ20</td>
+                    </tr>
+                    <tr>
+                        <td>Authentication mode</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>(normal = 1, double = 2)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Full copy flag</td>
+                        <td>N</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>(full copy = Y, part copy = N)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Value date range</td>
+                        <td>99</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>(same day = 0, day n = n, no check=99)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Currency code</td>
+                        <td>NZD</td>
+                        <td>NZD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <br/>
-        <table class="pnz-table">
-            <thead>
-                <th>MT103 Parameter</th>
-                <th>Live</th>
-                <th>Test and training</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>List of field tags to be copied</td>
-                    <td>20, 32A, 52</td>
-                    <td>20, 32A, 52</td>
-                </tr>
-                <tr>
-                    <td>Field Tag containing the Value Date</td>
-                    <td>NA</td>
-                    <td>NA</td>
-                </tr>
-                <tr>
-                    <td>Field Tag containing the Currency</td>
-                    <td>32A</td>
-                    <td>32A</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>MT103 Parameter</th>
+                    <th>Live</th>
+                    <th>Test and training</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>List of field tags to be copied</td>
+                        <td>20, 32A, 52</td>
+                        <td>20, 32A, 52</td>
+                    </tr>
+                    <tr>
+                        <td>Field Tag containing the Value Date</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Field Tag containing the Currency</td>
+                        <td>32A</td>
+                        <td>32A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <br/>
-        <table class="pnz-table">
-            <thead>
-                <th>MT202 Parameter</th>
-                <th>Live</th>
-                <th>Test and training</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>List of field tags to be copied</td>
-                    <td>20, 32A</td>
-                    <td>20, 32A</td>
-                </tr>
-                <tr>
-                    <td>Field Tag containing the Value Date</td>
-                    <td>NA</td>
-                    <td>NA</td>
-                </tr>
-                <tr>
-                    <td>Field Tag containing the Currency</td>
-                    <td>32A</td>
-                    <td>32A</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>MT202 Parameter</th>
+                    <th>Live</th>
+                    <th>Test and training</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>List of field tags to be copied</td>
+                        <td>20, 32A</td>
+                        <td>20, 32A</td>
+                    </tr>
+                    <tr>
+                        <td>Field Tag containing the Value Date</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Field Tag containing the Currency</td>
+                        <td>32A</td>
+                        <td>32A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <br/>
-        <table class="pnz-table">
-            <thead>
-                <th>MT205 Parameter</th>
-                <th>Live</th>
-                <th>Test and training</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>List of field tags to be copied</td>
-                    <td>20, 32A</td>
-                    <td>20, 32A</td>
-                </tr>
-                <tr>
-                    <td>Field Tag containing the Value Date</td>
-                    <td>NA</td>
-                    <td>NA</td>
-                </tr>
-                <tr>
-                    <td>Field Tag containing the Currency</td>
-                    <td>32A</td>
-                    <td>32A</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>MT205 Parameter</th>
+                    <th>Live</th>
+                    <th>Test and training</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>List of field tags to be copied</td>
+                        <td>20, 32A</td>
+                        <td>20, 32A</td>
+                    </tr>
+                    <tr>
+                        <td>Field Tag containing the Value Date</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Field Tag containing the Currency</td>
+                        <td>32A</td>
+                        <td>32A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <br/>
-        <table class="pnz-table">
-            <thead>
-                <th>Parameter</th>
-                <th>Live</th>
-                <th>Test and training</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>FIN Copy service mode</td>
-                    <td>Y</td>
-                    <td>Y</td>
-                </tr>
-                <tr>
-                    <td>FIN Copy fallback mode</td>
-                    <td>Bypass</td>
-                    <td>Bypass</td>
-                </tr>
-                <tr>
-                    <td>FIN-Copy primary server destination – SPA001 (101)</td>
-                    <td>ESASNZ2A</td>
-                    <td>ZYAMNZ20</td>
-                </tr>
-                <tr>
-                    <td>FIN-Copy secondary server destination – SPA002 (102)</td>
-                    <td>ESASNZ2A</td>
-                    <td>ZYANNZ20</td>
-                </tr>
-                <tr>
-                    <td>MT012</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>Start Date</td>
-                    <td>21-Nov-15</td>
-                    <td>2-May-15</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Parameter</th>
+                    <th>Live</th>
+                    <th>Test and training</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FIN Copy service mode</td>
+                        <td>Y</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>FIN Copy fallback mode</td>
+                        <td>Bypass</td>
+                        <td>Bypass</td>
+                    </tr>
+                    <tr>
+                        <td>FIN-Copy primary server destination – SPA001 (101)</td>
+                        <td>ESASNZ2A</td>
+                        <td>ZYAMNZ20</td>
+                    </tr>
+                    <tr>
+                        <td>FIN-Copy secondary server destination – SPA002 (102)</td>
+                        <td>ESASNZ2A</td>
+                        <td>ZYANNZ20</td>
+                    </tr>
+                    <tr>
+                        <td>MT012</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Start Date</td>
+                        <td>21-Nov-15</td>
+                        <td>2-May-15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

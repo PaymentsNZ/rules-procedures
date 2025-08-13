@@ -570,40 +570,42 @@
                 <div>
                     <p>Participants use the payment message types described in the following table to clear and settle HVCS payments:</p>
                 </div>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Message type</th>
-                        <th>Message name</th>
-                        <th>Sender</th>
-                        <th>Receiver</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>pacs.008</td>
-                            <td>Single customer credit transfer</td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009</td>
-                            <td>General financial institution transfer</td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009 COV</td>
-                            <td>General financial institution transfer</td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>pacs.004</td>
-                            <td>Payment return</td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Message type</th>
+                            <th>Message name</th>
+                            <th>Sender</th>
+                            <th>Receiver</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>pacs.008</td>
+                                <td>Single customer credit transfer</td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>pacs.009</td>
+                                <td>General financial institution transfer</td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>pacs.009 COV</td>
+                                <td>General financial institution transfer</td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>pacs.004</td>
+                                <td>Payment return</td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ol>
         </div>
         <div class="clause-row">
@@ -613,40 +615,42 @@
                     <p>The Reserve Bank and SWIFT use the system messages described in the following table to process HVCS
 			instructions.:</p>
                 </div>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Message type</th>
-                        <th>Message name</th>
-                        <th>Sender</th>
-                        <th>Receiver</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>xsys.002</td>
-                            <td>Y-Copy Authorisation Notification</td>
-                            <td>SWIFT</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>xsys.003</td>
-                            <td>Y-Copy Refusal Notification</td>
-                            <td>SWIFT</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>xcop.xxx</td>
-                            <td>SWIFTNet Copy message</td>
-                            <td>SWIFT</td>
-                            <td>Reserve Bank</td>
-                        </tr>
-                        <tr>
-                            <td>xsys.001</td>
-                            <td>Y-Copy Authorisation of Approval</td>
-                            <td>Reserve Bank</td>
-                            <td>SWIFT</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Message type</th>
+                            <th>Message name</th>
+                            <th>Sender</th>
+                            <th>Receiver</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>xsys.002</td>
+                                <td>Y-Copy Authorisation Notification</td>
+                                <td>SWIFT</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>xsys.003</td>
+                                <td>Y-Copy Refusal Notification</td>
+                                <td>SWIFT</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>xcop.xxx</td>
+                                <td>SWIFTNet Copy message</td>
+                                <td>SWIFT</td>
+                                <td>Reserve Bank</td>
+                            </tr>
+                            <tr>
+                                <td>xsys.001</td>
+                                <td>Y-Copy Authorisation of Approval</td>
+                                <td>Reserve Bank</td>
+                                <td>SWIFT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ol>
         </div>
         <div class="clause-row">
@@ -655,40 +659,42 @@
                 <div>
                     <p>Participants exchange the MX message types described in the following table:</p>
                 </div>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Message type</th>
-                        <th>Message name</th>
-                        <th>Sender</th>
-                        <th>Receiver</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>camt.056</td>
-                            <td>FI to FI Payment Cancellation Request</td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>camt.029</td>
-                            <td>Resolution of Investigation</td>
-                            <td>Participant</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>xsys.011</td>
-                            <td>Delivery notification</td>
-                            <td>SWIFT</td>
-                            <td>Participant</td>
-                        </tr>
-                        <tr>
-                            <td>xsys.010</td>
-                            <td>Non-Delivery Warning</td>
-                            <td>SWIFT</td>
-                            <td>Participant</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Message type</th>
+                            <th>Message name</th>
+                            <th>Sender</th>
+                            <th>Receiver</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>camt.056</td>
+                                <td>FI to FI Payment Cancellation Request</td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>camt.029</td>
+                                <td>Resolution of Investigation</td>
+                                <td>Participant</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>xsys.011</td>
+                                <td>Delivery notification</td>
+                                <td>SWIFT</td>
+                                <td>Participant</td>
+                            </tr>
+                            <tr>
+                                <td>xsys.010</td>
+                                <td>Non-Delivery Warning</td>
+                                <td>SWIFT</td>
+                                <td>Participant</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ol>
         </div>
         <h1 class="section-heading">Chapter 3: ISO 20022 key concepts</h1>
@@ -699,36 +705,38 @@
                 <div class="diagram">
                     <img src="images/hvcs_mx_message_structure.png" alt="MX Message Structure"></img>
                 </div>
-                <table class="definition-table">
-                    <tbody>
-                        <tr>
-                            <td>SWIFTNet Header</td>
-                            <td>Amongst other things, SWIFTNet Headers include RequestControl, RequestResponse, ExchangeRequest, Request,
+                <table class="table-scroll">
+                    <table class="definition-table">
+                        <tbody>
+                            <tr>
+                                <td>SWIFTNet Header</td>
+                                <td>Amongst other things, SWIFTNet Headers include RequestControl, RequestResponse, ExchangeRequest, Request,
 				and RequestHeader. They provide information to SWIFT on how to deliver the ISO 20022 message, configure
 				security elements and detail whether a delivery receipt is required.</td>
-                        </tr>
-                        <tr>
-                            <td>Request Payload</td>
-                            <td>The RequestPayload is the container for the business message and consists of the Business Application
+                            </tr>
+                            <tr>
+                                <td>Request Payload</td>
+                                <td>The RequestPayload is the container for the business message and consists of the Business Application
 				Header and the Business Document.</td>
-                        </tr>
-                        <tr>
-                            <td>Business Application Header</td>
-                            <td>The Business Application Header describes at a high level what the Business Document contains.  It is
+                            </tr>
+                            <tr>
+                                <td>Business Application Header</td>
+                                <td>The Business Application Header describes at a high level what the Business Document contains.  It is
 				intended to be used for routing purposes, plus identify the specific Usage Guideline to be used for message
 				validation (the MX Message Specification in the case of HVCS).</td>
-                        </tr>
-                        <tr>
-                            <td>Business Document</td>
-                            <td>The Business Document contains the ISO 20022 message, defined by an XML schema in alignment with ISO 20022
+                            </tr>
+                            <tr>
+                                <td>Business Document</td>
+                                <td>The Business Document contains the ISO 20022 message, defined by an XML schema in alignment with ISO 20022
 				standards. The MX message instance has a maximum payload of 100,000 bytes.</td>
-                        </tr>
-                        <tr>
-                            <td>Crypto</td>
-                            <td>Crypto forms part of the InterAct request. SWIFT Alliance Gateway (SAG) will create the authorisation
+                            </tr>
+                            <tr>
+                                <td>Crypto</td>
+                                <td>Crypto forms part of the InterAct request. SWIFT Alliance Gateway (SAG) will create the authorisation
 				context automatically and populate this element when processing the message.</td>
-                        </tr>
-                    </tbody>
+                            </tr>
+                        </tbody>
+                    </table>
                 </table>
             </ol>
         </div>
@@ -746,101 +754,103 @@
                         <p>Changed all usage identifiers to version 2</p>
                     </div>
                 </div>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Message Def&apos;n ID / Request Type</th>
-                        <th>Usage Identifier / Request Subtype</th>
-                        <th>Message Usage Guideline (MUG)</th>
-                        <th>Description</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>pacs.008.001.09</td>
-                            <td>pnz.hvcs.02</td>
-                            <td>pacs_008</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>Domestic payment to a customer — SCP</li>
-                                    <li>Domestic payment to a customer — non SCP</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.008.001.09</td>
-                            <td>pnz.hvcs.xbrdr.02</td>
-                            <td>pacs_008_xbrdr</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>Cross-border payment to a customer</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.004.001.10</td>
-                            <td>pnz.hvcs.02</td>
-                            <td>pacs_004</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>Return of domestic payment to a customer — SCP</li>
-                                    <li>Return of domestic payment to a customer — non SCP</li>
-                                    <li>Return of an FI to FI domestic payment</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.004.001.10</td>
-                            <td>pnz.hvcs.xbrdr.02</td>
-                            <td>pacs_004_xbrdr</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>Return of cross-border payment to an overseas customer</li>
-                                    <li>Return of an FI to FI cross-border payment</li>
-                                    <li>Return of an FI to FI cross-border cover payment</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.02</td>
-                            <td>pacs_009</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>FI to FI domestic payment</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.cov.02</td>
-                            <td>pacs_009_cov</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>FI to FI domestic cover payment</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.xbrdr.02</td>
-                            <td>pacs_009_xbrdr</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>FI to FI cross-border payment</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>pacs.009.001.09</td>
-                            <td>pnz.hvcs.xbrdr.cov.02</td>
-                            <td>pacs_009_cov_xbrdr</td>
-                            <td>
-                                <ul class="bullets">
-                                    <li>FI to FI cross-border cover payment</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Message Def&apos;n ID / Request Type</th>
+                            <th>Usage Identifier / Request Subtype</th>
+                            <th>Message Usage Guideline (MUG)</th>
+                            <th>Description</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>pacs.008.001.09</td>
+                                <td>pnz.hvcs.02</td>
+                                <td>pacs_008</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>Domestic payment to a customer — SCP</li>
+                                        <li>Domestic payment to a customer — non SCP</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pacs.008.001.09</td>
+                                <td>pnz.hvcs.xbrdr.02</td>
+                                <td>pacs_008_xbrdr</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>Cross-border payment to a customer</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pacs.004.001.10</td>
+                                <td>pnz.hvcs.02</td>
+                                <td>pacs_004</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>Return of domestic payment to a customer — SCP</li>
+                                        <li>Return of domestic payment to a customer — non SCP</li>
+                                        <li>Return of an FI to FI domestic payment</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pacs.004.001.10</td>
+                                <td>pnz.hvcs.xbrdr.02</td>
+                                <td>pacs_004_xbrdr</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>Return of cross-border payment to an overseas customer</li>
+                                        <li>Return of an FI to FI cross-border payment</li>
+                                        <li>Return of an FI to FI cross-border cover payment</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pacs.009.001.09</td>
+                                <td>pnz.hvcs.02</td>
+                                <td>pacs_009</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>FI to FI domestic payment</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pacs.009.001.09</td>
+                                <td>pnz.hvcs.cov.02</td>
+                                <td>pacs_009_cov</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>FI to FI domestic cover payment</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pacs.009.001.09</td>
+                                <td>pnz.hvcs.xbrdr.02</td>
+                                <td>pacs_009_xbrdr</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>FI to FI cross-border payment</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>pacs.009.001.09</td>
+                                <td>pnz.hvcs.xbrdr.cov.02</td>
+                                <td>pacs_009_cov_xbrdr</td>
+                                <td>
+                                    <ul class="bullets">
+                                        <li>FI to FI cross-border cover payment</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <br/>
                 <li>The Request Type and Message Definition Identifier must contain the same values. The Request Subtype and
 		Business Service must contain the same values.</li>
@@ -1045,145 +1055,147 @@
                 </ol>
             </ol>
         </div>
-        <table class="pnz-table structured-address-table">
-            <thead>
-                <th>Level</th>
-                <th>ISO 20022 tag</th>
-                <th>Element name</th>
-                <th>Definition</th>
-                <th>Usage</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2</td>
-                    <td>&lt;Dbtr&gt; or &lt;Cdtr&gt;</td>
-                    <td>Debtor or Creditor</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>&lt;Nm&gt;</td>
-                    <td>Name</td>
-                    <td></td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>&lt;PstlAdr&gt;</td>
-                    <td>Postal Address</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;Dept&gt;</td>
-                    <td>Department</td>
-                    <td>Identification of a division of a large organisation or building.</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;SubDept&gt;</td>
-                    <td>Sub Department</td>
-                    <td>Identification of a sub-division of a large organisation or building.</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;StrtNm&gt;</td>
-                    <td>Street Name</td>
-                    <td>Name of a street or thoroughfare</td>
-                    <td>E</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;BldgNb&gt;</td>
-                    <td>Building Number</td>
-                    <td>Number that identifies the position of a building on a street. Can be used where a building number contains
+        <div class="table-scroll">
+            <table class="pnz-table structured-address-table">
+                <thead>
+                    <th>Level</th>
+                    <th>ISO 20022 tag</th>
+                    <th>Element name</th>
+                    <th>Definition</th>
+                    <th>Usage</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>&lt;Dbtr&gt; or &lt;Cdtr&gt;</td>
+                        <td>Debtor or Creditor</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>&lt;Nm&gt;</td>
+                        <td>Name</td>
+                        <td></td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>&lt;PstlAdr&gt;</td>
+                        <td>Postal Address</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;Dept&gt;</td>
+                        <td>Department</td>
+                        <td>Identification of a division of a large organisation or building.</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;SubDept&gt;</td>
+                        <td>Sub Department</td>
+                        <td>Identification of a sub-division of a large organisation or building.</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;StrtNm&gt;</td>
+                        <td>Street Name</td>
+                        <td>Name of a street or thoroughfare</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;BldgNb&gt;</td>
+                        <td>Building Number</td>
+                        <td>Number that identifies the position of a building on a street. Can be used where a building number contains
 					multiple sites. For example, a single address that covers sites 234-238. Multiple types of characters can be
 					used to identify the range of sites, such as &apos;-&apos; &apos;&amp;&apos; &apos;,&apos;. If the address contains a unit number (ie a flat
 					number or apartment number) this is entered into the &lt;Room&gt; field.</td>
-                    <td>E</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;BldgNm&gt;</td>
-                    <td>Building Name</td>
-                    <td>Name of the building or house.</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;Flr&gt;</td>
-                    <td>Floor</td>
-                    <td>Floor or story within a building. Recommended where multiple different entities reside on different floors in
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;BldgNm&gt;</td>
+                        <td>Building Name</td>
+                        <td>Name of the building or house.</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;Flr&gt;</td>
+                        <td>Floor</td>
+                        <td>Floor or story within a building. Recommended where multiple different entities reside on different floors in
 					the same building.</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;PstBx&gt;</td>
-                    <td>Post Box</td>
-                    <td>Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;PstBx&gt;</td>
+                        <td>Post Box</td>
+                        <td>Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.
 					Non-compliant for the debtor and creditor address information because a physical address is expected to be used.</td>
-                    <td>Not to be used</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;Room&gt;</td>
-                    <td>Room</td>
-                    <td>Expected where the address is a unit (apartment, flat or shop number). This room or unit number can be
+                        <td>Not to be used</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;Room&gt;</td>
+                        <td>Room</td>
+                        <td>Expected where the address is a unit (apartment, flat or shop number). This room or unit number can be
 					derived from an address that contains the &apos;/&apos; character. The number preceding the &apos;/&apos; is the room or unit.</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;PstCd&gt;</td>
-                    <td>Post Code</td>
-                    <td>Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.</td>
-                    <td>E</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;TwnNm&gt;</td>
-                    <td>Town Name</td>
-                    <td>Name of a built-up area, with defined boundaries, and a local government. Town/City as per SWIFT and the
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;PstCd&gt;</td>
+                        <td>Post Code</td>
+                        <td>Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.</td>
+                        <td>E</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;TwnNm&gt;</td>
+                        <td>Town Name</td>
+                        <td>Name of a built-up area, with defined boundaries, and a local government. Town/City as per SWIFT and the
 					NZ Police Prescribed Transactions Reporting requirements.</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;TwnLctnNm&gt;</td>
-                    <td>Town Location Name</td>
-                    <td>Specific location name within the town. Used for the Suburb</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;DstrctNm&gt;</td>
-                    <td>District Name</td>
-                    <td>Identifies a subdivision within a country sub-division. Used where a district name is provided to give
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;TwnLctnNm&gt;</td>
+                        <td>Town Location Name</td>
+                        <td>Specific location name within the town. Used for the Suburb</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;DstrctNm&gt;</td>
+                        <td>District Name</td>
+                        <td>Identifies a subdivision within a country sub-division. Used where a district name is provided to give
 					extra information about the location. More likely to be used for addresses in rural areas.</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;CtrySubDvsn&gt;</td>
-                    <td>Country Sub Division</td>
-                    <td>Identifies a subdivision of a country such as state, region, county. Province names and regions
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;CtrySubDvsn&gt;</td>
+                        <td>Country Sub Division</td>
+                        <td>Identifies a subdivision of a country such as state, region, county. Province names and regions
 					should not be part of the address based upon the Universal Postal Union (UPU) guidance.</td>
-                    <td>Not to be used</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>&lt;Ctry&gt;</td>
-                    <td>Country</td>
-                    <td>Nation with its own government</td>
-                    <td>M</td>
-                </tr>
-            </tbody>
-        </table>
+                        <td>Not to be used</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>&lt;Ctry&gt;</td>
+                        <td>Country</td>
+                        <td>Nation with its own government</td>
+                        <td>M</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="doc-comment" data-change-id="UG2025">
             <div class="doc-comment-meta">
                 <span class="doc-comment-id">UG2025</span>
@@ -1243,132 +1255,134 @@
                 <li>A summary of payment message identifiers can be found in the table below</li>
             </ol>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Message</th>
-                <th>Path</th>
-                <th>Identifier</th>
-                <th>Mandatory / Optional</th>
-                <th>Point to Point (P2P) or End to End (E2E)</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="4">pacs.008</td>
-                    <td rowspan="4">CdtTrfTxInf / PmtId</td>
-                    <td>Instruction Identification</td>
-                    <td>M</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td>End To End Identification</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td>Transaction Identification</td>
-                    <td>O</td>
-                    <td>E2E (in the interbank chain)</td>
-                </tr>
-                <tr>
-                    <td>UETR</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">pacs.009 CORE</td>
-                    <td rowspan="4">CdtTrfTxInf / PmtId</td>
-                    <td>Instruction Identification</td>
-                    <td>M</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td>End To End Identification</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td>Transaction Identification</td>
-                    <td>O</td>
-                    <td>E2E (in the interbank chain)</td>
-                </tr>
-                <tr>
-                    <td>UETR</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">pacs.009 COV</td>
-                    <td rowspan="4">CdtTrfTxInf / PmtId</td>
-                    <td>Instruction Identification</td>
-                    <td>M</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td>End To End Identification (from pacs.008)</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td>Transaction Identification</td>
-                    <td>O</td>
-                    <td>E2E (in the interbank chain)</td>
-                </tr>
-                <tr>
-                    <td>UETR (from pacs.008)</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td rowspan="9">pacs.004</td>
-                    <td>TxInf</td>
-                    <td>Return Identification</td>
-                    <td>M</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">TxInf / OrgnlGrpInf (optional)</td>
-                    <td>Original Message Identification</td>
-                    <td>M</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td>Original Message Name Identification</td>
-                    <td>M</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td>Original Creation Date Time</td>
-                    <td>O</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td rowspan="5">TxInf</td>
-                    <td>Original Instruction Identification</td>
-                    <td>M</td>
-                    <td>P2P</td>
-                </tr>
-                <tr>
-                    <td>Original End To End Identification</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td>Original Transaction Identification</td>
-                    <td>O</td>
-                    <td>E2E (in the interbank chain)</td>
-                </tr>
-                <tr>
-                    <td>Original UETR</td>
-                    <td>M</td>
-                    <td>E2E</td>
-                </tr>
-                <tr>
-                    <td>Original Clearing System Reference</td>
-                    <td>O</td>
-                    <td>E2E</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Message</th>
+                    <th>Path</th>
+                    <th>Identifier</th>
+                    <th>Mandatory / Optional</th>
+                    <th>Point to Point (P2P) or End to End (E2E)</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">pacs.008</td>
+                        <td rowspan="4">CdtTrfTxInf / PmtId</td>
+                        <td>Instruction Identification</td>
+                        <td>M</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td>End To End Identification</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td>Transaction Identification</td>
+                        <td>O</td>
+                        <td>E2E (in the interbank chain)</td>
+                    </tr>
+                    <tr>
+                        <td>UETR</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">pacs.009 CORE</td>
+                        <td rowspan="4">CdtTrfTxInf / PmtId</td>
+                        <td>Instruction Identification</td>
+                        <td>M</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td>End To End Identification</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td>Transaction Identification</td>
+                        <td>O</td>
+                        <td>E2E (in the interbank chain)</td>
+                    </tr>
+                    <tr>
+                        <td>UETR</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">pacs.009 COV</td>
+                        <td rowspan="4">CdtTrfTxInf / PmtId</td>
+                        <td>Instruction Identification</td>
+                        <td>M</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td>End To End Identification (from pacs.008)</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td>Transaction Identification</td>
+                        <td>O</td>
+                        <td>E2E (in the interbank chain)</td>
+                    </tr>
+                    <tr>
+                        <td>UETR (from pacs.008)</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="9">pacs.004</td>
+                        <td>TxInf</td>
+                        <td>Return Identification</td>
+                        <td>M</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">TxInf / OrgnlGrpInf (optional)</td>
+                        <td>Original Message Identification</td>
+                        <td>M</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td>Original Message Name Identification</td>
+                        <td>M</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td>Original Creation Date Time</td>
+                        <td>O</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">TxInf</td>
+                        <td>Original Instruction Identification</td>
+                        <td>M</td>
+                        <td>P2P</td>
+                    </tr>
+                    <tr>
+                        <td>Original End To End Identification</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td>Original Transaction Identification</td>
+                        <td>O</td>
+                        <td>E2E (in the interbank chain)</td>
+                    </tr>
+                    <tr>
+                        <td>Original UETR</td>
+                        <td>M</td>
+                        <td>E2E</td>
+                    </tr>
+                    <tr>
+                        <td>Original Clearing System Reference</td>
+                        <td>O</td>
+                        <td>E2E</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="3.11">ISO 20022 base standards</div>
             <ol class="level1 level1-counter-reset">
@@ -1417,46 +1431,48 @@
                 </li>
                 <li>The following table shows the macron characters that are included in the MX message
 		specification along with their Unicode value:</li>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Latin lowercase letter with macron</th>
-                        <th>Lowercase Unicode value</th>
-                        <th>Latin uppercase letter with macron</th>
-                        <th>Uppercase Unicode value</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ā</td>
-                            <td>0101</td>
-                            <td>Ā</td>
-                            <td>0100</td>
-                        </tr>
-                        <tr>
-                            <td>ē</td>
-                            <td>0113</td>
-                            <td>Ē</td>
-                            <td>0112</td>
-                        </tr>
-                        <tr>
-                            <td>ī</td>
-                            <td>012b</td>
-                            <td>Ī</td>
-                            <td>012a</td>
-                        </tr>
-                        <tr>
-                            <td>ō</td>
-                            <td>014d</td>
-                            <td>Ō</td>
-                            <td>014c</td>
-                        </tr>
-                        <tr>
-                            <td>ū</td>
-                            <td>016b</td>
-                            <td>Ū</td>
-                            <td>016a</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Latin lowercase letter with macron</th>
+                            <th>Lowercase Unicode value</th>
+                            <th>Latin uppercase letter with macron</th>
+                            <th>Uppercase Unicode value</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ā</td>
+                                <td>0101</td>
+                                <td>Ā</td>
+                                <td>0100</td>
+                            </tr>
+                            <tr>
+                                <td>ē</td>
+                                <td>0113</td>
+                                <td>Ē</td>
+                                <td>0112</td>
+                            </tr>
+                            <tr>
+                                <td>ī</td>
+                                <td>012b</td>
+                                <td>Ī</td>
+                                <td>012a</td>
+                            </tr>
+                            <tr>
+                                <td>ō</td>
+                                <td>014d</td>
+                                <td>Ō</td>
+                                <td>014c</td>
+                            </tr>
+                            <tr>
+                                <td>ū</td>
+                                <td>016b</td>
+                                <td>Ū</td>
+                                <td>016a</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div>
                     <p>Emojis are not permitted in the HVCS Rules.</p>
                 </div>
@@ -1613,37 +1629,39 @@
 		and cover messages were used to send payments to beneficiary accounts to ensure they were not identified
 		as SCPs, and hence did not trigger SCP obligations such as account number formatting or timing.</li>
                 <li>This section discusses how these payments should be represented in an MX message.</li>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Scenario</th>
-                        <th>Recommendation</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1. Late payments made after 16:45 cut-off</td>
-                            <td rowspan="2">Use serial HVCS pacs.008 payment message and omit the Local Instrument code thus specifying
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Scenario</th>
+                            <th>Recommendation</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. Late payments made after 16:45 cut-off</td>
+                                <td rowspan="2">Use serial HVCS pacs.008 payment message and omit the Local Instrument code thus specifying
 						that the payment should not be treated as a SCP.</td>
-                        </tr>
-                        <tr>
-                            <td>2. Avoid account number formatting restrictions (e.g. NZD payment to a foreign currency account
+                            </tr>
+                            <tr>
+                                <td>2. Avoid account number formatting restrictions (e.g. NZD payment to a foreign currency account
 						of a domestic creditor)</td>
-                        </tr>
-                        <tr>
-                            <td>3. Send NZD to a domestic FI who is neither a participant nor AVP MX CUG member</td>
-                            <td rowspan="2">
-                                <div>If an RMA and D&amp;C agreement is in place, send as direct and cover payment using CBPR+ for the
+                            </tr>
+                            <tr>
+                                <td>3. Send NZD to a domestic FI who is neither a participant nor AVP MX CUG member</td>
+                                <td rowspan="2">
+                                    <div>If an RMA and D&amp;C agreement is in place, send as direct and cover payment using CBPR+ for the
 							direct leg and HVCS for the cover leg.</div>
-                                <br/>
-                                <div>If an RMA or D&amp;C agreement is not in place, send as serial HVCS pacs.008 payment message and
+                                    <br/>
+                                    <div>If an RMA or D&amp;C agreement is not in place, send as serial HVCS pacs.008 payment message and
 							omit the Local Instrument code thus specifying that the HVCS payment should not be treated
 							as a SCP.</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4. Send NZD to a foreign FI holding a Vostro account with another participant</td>
-                        </tr>
-                    </tbody>
-                </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4. Send NZD to a foreign FI holding a Vostro account with another participant</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ol>
         </div>
         <h1 class="section-heading">Chapter 6: Payment returns</h1>
@@ -1739,61 +1757,63 @@
                 </div>
             </ol>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Element</th>
-                <th>Relevant messages</th>
-                <th>Guidance</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div>Assignment / Identification</div>
-                        <div>&lt;AssgnmtId / Id&gt;</div>
-                    </td>
-                    <td>
-                        <div>camt.029</div>
-                        <div>camt.056</div>
-                    </td>
-                    <td>Uniquely identifies the exception and investigation message.</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>Case Identification</div>
-                        <div>&lt;Case / Id&gt;</div>
-                    </td>
-                    <td>camt.056</td>
-                    <td>Uniquely identifies the case. This identifier is assigned by the participant that creates the original Case
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Element</th>
+                    <th>Relevant messages</th>
+                    <th>Guidance</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>Assignment / Identification</div>
+                            <div>&lt;AssgnmtId / Id&gt;</div>
+                        </td>
+                        <td>
+                            <div>camt.029</div>
+                            <div>camt.056</div>
+                        </td>
+                        <td>Uniquely identifies the exception and investigation message.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>Case Identification</div>
+                            <div>&lt;Case / Id&gt;</div>
+                        </td>
+                        <td>camt.056</td>
+                        <td>Uniquely identifies the case. This identifier is assigned by the participant that creates the original Case
 					and is retained by participants that are on-sending.</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>Case Creator</div>
-                        <div>&lt;Case / Cretr&gt;</div>
-                    </td>
-                    <td>camt.056</td>
-                    <td>The participant that created the original case and assigned the case identifier.</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>ResolvedCase / Identification</div>
-                        <div>&lt;RslvdCase / Id&gt;</div>
-                    </td>
-                    <td>camt.029</td>
-                    <td>Uniquely identifies the case and must contain the same information available under the Case Identification of
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>Case Creator</div>
+                            <div>&lt;Case / Cretr&gt;</div>
+                        </td>
+                        <td>camt.056</td>
+                        <td>The participant that created the original case and assigned the case identifier.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>ResolvedCase / Identification</div>
+                            <div>&lt;RslvdCase / Id&gt;</div>
+                        </td>
+                        <td>camt.029</td>
+                        <td>Uniquely identifies the case and must contain the same information available under the Case Identification of
 					the underlying camt.056 (restricted to 16 characters).</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>Resolved Case / Creator</div>
-                        <div>&lt;RslvdCase / Cretr&gt;</div>
-                    </td>
-                    <td>camt.029</td>
-                    <td>The party that created the exception and investigation case. Must contain the same information available
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>Resolved Case / Creator</div>
+                            <div>&lt;RslvdCase / Cretr&gt;</div>
+                        </td>
+                        <td>camt.029</td>
+                        <td>The party that created the exception and investigation case. Must contain the same information available
 					under the Case / Creator of the underlying camt.056.</td>
-                </tr>
-            </tbody>
-        </table>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="7.3">Reason Codes and Use of Narrative</div>
             <ol class="level1 level1-counter-reset">
@@ -1926,75 +1946,77 @@
 		Specifications found in MyStandards.</li>
             </ol>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Element</th>
-                <th>Path</th>
-                <th>Mandatory / Optional</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Instruction ID</td>
-                    <td>CdtTrfTxInf / PmtId/ InstrId</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>End to End ID</td>
-                    <td>CdtTrfTxInf / PmtId / EndToEndId</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>UETR</td>
-                    <td>CdtTrfTxInf / PmtId / UETR</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Settlement Priority</td>
-                    <td>CdtTrfTxInf / PmtTpInf / SvcLvl / Prtry</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Settlement Agreement</td>
-                    <td>CdtTrfTxInf / PmtTpInf / SvcLvl / Prtry</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Service Identifier</td>
-                    <td>CdtTrfTxInf / PmtTpInf / LclInstrm / Cd</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Amount</td>
-                    <td>CdtTrfTxInf / IntrBkSttlmAmt</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Settlement Date</td>
-                    <td>CdtTrfTxInf / IntrBkSttlmDt</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Paying bank/ Authorised agent</td>
-                    <td>CdtTrfTxInf / InstgAgt / FinInstnId / BICFI</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Paying Bank</td>
-                    <td>CdtTrfTxInf / InstgAgt / FinInstnId / ClrSysMmbId / MmbId</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Receiving bank</td>
-                    <td>CdtTrfTxInf / InstdAgt / FinInstnId / BICFI</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Conditional Release</td>
-                    <td>CdtTrfTxInf / InstrForNxtAgt / InstrInf</td>
-                    <td>O</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Element</th>
+                    <th>Path</th>
+                    <th>Mandatory / Optional</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Instruction ID</td>
+                        <td>CdtTrfTxInf / PmtId/ InstrId</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>End to End ID</td>
+                        <td>CdtTrfTxInf / PmtId / EndToEndId</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>UETR</td>
+                        <td>CdtTrfTxInf / PmtId / UETR</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Settlement Priority</td>
+                        <td>CdtTrfTxInf / PmtTpInf / SvcLvl / Prtry</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Settlement Agreement</td>
+                        <td>CdtTrfTxInf / PmtTpInf / SvcLvl / Prtry</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Service Identifier</td>
+                        <td>CdtTrfTxInf / PmtTpInf / LclInstrm / Cd</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Amount</td>
+                        <td>CdtTrfTxInf / IntrBkSttlmAmt</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Settlement Date</td>
+                        <td>CdtTrfTxInf / IntrBkSttlmDt</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Paying bank/ Authorised agent</td>
+                        <td>CdtTrfTxInf / InstgAgt / FinInstnId / BICFI</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Paying Bank</td>
+                        <td>CdtTrfTxInf / InstgAgt / FinInstnId / ClrSysMmbId / MmbId</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Receiving bank</td>
+                        <td>CdtTrfTxInf / InstdAgt / FinInstnId / BICFI</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Conditional Release</td>
+                        <td>CdtTrfTxInf / InstrForNxtAgt / InstrInf</td>
+                        <td>O</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.6">Core data copied to ESAS — pacs.004</div>
             <ol class="level1 level1-counter-reset">
@@ -2006,80 +2028,82 @@
 		Specifications found in MyStandards.</li>
             </ol>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Element</th>
-                <th>Path</th>
-                <th>Mandatory / Optional</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Instruction ID</td>
-                    <td>TxInf / RtrId</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Original Message Type</td>
-                    <td>TxInf / OrgnlGrpInf / OrgnlMsgNmId</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Original Transaction ID</td>
-                    <td>TxInf / OrgnlInstrId</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>End to End ID</td>
-                    <td>TxInf / OrgnlEndToEndId</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>UETR</td>
-                    <td>TxInf / OrgnlUETR</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Currency and Amount</td>
-                    <td>TxInf / RtrdIntrBkSttlmAmt</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Settlement Date</td>
-                    <td>TxInf / IntrBkSttlmDt</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Return Reason</td>
-                    <td>TxInf / RtrRsnInf / Rsn / Cd</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Settlement Priority</td>
-                    <td>TxInf / OrgnlTxRef / PmtTpInf / SvcLvl / Prtry</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Service Identifier</td>
-                    <td>TxInf / OrgnlTxRef / PmtTpInf / LclInstrm / Cd</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Paying Bank or Authorised Agent</td>
-                    <td>TxInf / InstgAgt / FinInstnId / BICFI</td>
-                    <td>M</td>
-                </tr>
-                <tr>
-                    <td>Paying Bank</td>
-                    <td>TxInf / InstgAgt / FinInstnId / ClrSysMmbId / MmbId</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>Receiving Bank</td>
-                    <td>TxInf / InstdAgt / FinInstnId / BICFI</td>
-                    <td>M</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Element</th>
+                    <th>Path</th>
+                    <th>Mandatory / Optional</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Instruction ID</td>
+                        <td>TxInf / RtrId</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Original Message Type</td>
+                        <td>TxInf / OrgnlGrpInf / OrgnlMsgNmId</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Original Transaction ID</td>
+                        <td>TxInf / OrgnlInstrId</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>End to End ID</td>
+                        <td>TxInf / OrgnlEndToEndId</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>UETR</td>
+                        <td>TxInf / OrgnlUETR</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Currency and Amount</td>
+                        <td>TxInf / RtrdIntrBkSttlmAmt</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Settlement Date</td>
+                        <td>TxInf / IntrBkSttlmDt</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Return Reason</td>
+                        <td>TxInf / RtrRsnInf / Rsn / Cd</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Settlement Priority</td>
+                        <td>TxInf / OrgnlTxRef / PmtTpInf / SvcLvl / Prtry</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Service Identifier</td>
+                        <td>TxInf / OrgnlTxRef / PmtTpInf / LclInstrm / Cd</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Paying Bank or Authorised Agent</td>
+                        <td>TxInf / InstgAgt / FinInstnId / BICFI</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Paying Bank</td>
+                        <td>TxInf / InstgAgt / FinInstnId / ClrSysMmbId / MmbId</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>Receiving Bank</td>
+                        <td>TxInf / InstdAgt / FinInstnId / BICFI</td>
+                        <td>M</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <h2 class="subsection-heading">Authorisation response (xsys.001)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.7">Third party information</div>
@@ -2106,26 +2130,28 @@
 		settlement:</li>
             </ol>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Element</th>
-                <th>Purpose</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&lt;ClrSysRef&gt;</td>
-                    <td>Reports the ESAS transaction ID (settlement ID)</td>
-                </tr>
-                <tr>
-                    <td>&lt;InstrRcvdDtTm&gt;</td>
-                    <td>Reports the date and time the transaction was received by ESAS</td>
-                </tr>
-                <tr>
-                    <td>&lt;InstrSttldDtTm&gt;</td>
-                    <td>Reports the date and time the transaction was settled by ESAS</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Element</th>
+                    <th>Purpose</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;ClrSysRef&gt;</td>
+                        <td>Reports the ESAS transaction ID (settlement ID)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;InstrRcvdDtTm&gt;</td>
+                        <td>Reports the date and time the transaction was received by ESAS</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;InstrSttldDtTm&gt;</td>
+                        <td>Reports the date and time the transaction was settled by ESAS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.9">Settlement is unsuccessful</div>
             <ol class="level1 level1-counter-reset">
@@ -2140,51 +2166,53 @@
                 <li>The RBNZ will supply the following elements and data within the third party elements on rejection:</li>
             </ol>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Element</th>
-                <th>Purpose</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&lt;RefusalReason&gt;</td>
-                    <td>Reports the ESAS rejection code</td>
-                </tr>
-                <tr>
-                    <td>&lt;ClrSysRef&gt;</td>
-                    <td>
-                        <div>Reports the ESAS transaction ID (settlement ID).</div>
-                        <div>
-                            <span class="bold">Note:</span>
-                            <span>This is only provided if the payment message passes initial validation but
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Element</th>
+                    <th>Purpose</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;RefusalReason&gt;</td>
+                        <td>Reports the ESAS rejection code</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ClrSysRef&gt;</td>
+                        <td>
+                            <div>Reports the ESAS transaction ID (settlement ID).</div>
+                            <div>
+                                <span class="bold">Note:</span>
+                                <span>This is only provided if the payment message passes initial validation but
 								is subsequentlyrejected by ESAS (i.e. due to insufficient liquidity).</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;InstrRcvdDtTm&gt;</td>
-                    <td>
-                        <div>Reports the date and time the payment message was received by ESAS.</div>
-                        <div>
-                            <span class="bold">Note:</span>
-                            <span>This is only provided if the payment message passes initial validation but
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;InstrRcvdDtTm&gt;</td>
+                        <td>
+                            <div>Reports the date and time the payment message was received by ESAS.</div>
+                            <div>
+                                <span class="bold">Note:</span>
+                                <span>This is only provided if the payment message passes initial validation but
 								is subsequently rejected by ESAS (i.e. due to insufficient liquidity).</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&lt;InstrRjctdDtTm&gt;</td>
-                    <td>
-                        <div>Reports the date and time the payment message was rejected by ESAS.</div>
-                        <div>
-                            <span class="bold">Note:</span>
-                            <span>This is only provided if the payment message passes initial validation but
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;InstrRjctdDtTm&gt;</td>
+                        <td>
+                            <div>Reports the date and time the payment message was rejected by ESAS.</div>
+                            <div>
+                                <span class="bold">Note:</span>
+                                <span>This is only provided if the payment message passes initial validation but
 								issubsequently rejected by ESAS (i.e. due to insufficient liquidity).</span>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <h2 class="subsection-heading">Authorisation Notification (xsys.002)</h2>
         <div class="clause-row">
             <div class="clause-heading" data-number="8.10">Overview</div>
@@ -2281,46 +2309,48 @@
                 </div>
             </ol>
         </div>
-        <table class="pnz-table">
-            <thead>
-                <th>Rejection code</th>
-                <th>Description</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>61</td>
-                    <td>The payment message cannot be validated because of some serious or fundamental problem
+        <div class="table-scroll">
+            <table class="pnz-table">
+                <thead>
+                    <th>Rejection code</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>61</td>
+                        <td>The payment message cannot be validated because of some serious or fundamental problem
 					with the payment message.</td>
-                </tr>
-                <tr>
-                    <td>62</td>
-                    <td>
-                        <div>The payment message has one or more validation errors, such as:</div>
-                        <ul class="bullets">
-                            <li>Duplicate tags</li>
-                            <li>The instructing agents or instructed agents are inactivated or unknown.</li>
-                            <li>Invalid settlement date</li>
-                            <li>Invalid amount</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>63</td>
-                    <td>The payment message was rejected due to insufficient funds (EOD cancellation).</td>
-                </tr>
-                <tr>
-                    <td>65</td>
-                    <td>The payment message was rejected due to insufficient funds (EOD cancellation).</td>
-                </tr>
-                <tr>
-                    <td>66</td>
-                    <td>Duplicate payment message.</td>
-                </tr>
-                <tr>
-                    <td>67</td>
-                    <td>The payment message has been rejected due to a non-settlement day.</td>
-                </tr>
-            </tbody>
-        </table>
+                    </tr>
+                    <tr>
+                        <td>62</td>
+                        <td>
+                            <div>The payment message has one or more validation errors, such as:</div>
+                            <ul class="bullets">
+                                <li>Duplicate tags</li>
+                                <li>The instructing agents or instructed agents are inactivated or unknown.</li>
+                                <li>Invalid settlement date</li>
+                                <li>Invalid amount</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>63</td>
+                        <td>The payment message was rejected due to insufficient funds (EOD cancellation).</td>
+                    </tr>
+                    <tr>
+                        <td>65</td>
+                        <td>The payment message was rejected due to insufficient funds (EOD cancellation).</td>
+                    </tr>
+                    <tr>
+                        <td>66</td>
+                        <td>Duplicate payment message.</td>
+                    </tr>
+                    <tr>
+                        <td>67</td>
+                        <td>The payment message has been rejected due to a non-settlement day.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

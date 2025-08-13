@@ -33,10 +33,13 @@ body {
   font-size: 10pt;
   line-height: 1.4;
   color: #000;
-  margin: 2rem;
+
+  /* Centered, fluid wrapper */ 
+  width: 100%;  
   max-width: 960px;           /* Set your desired maximum width */
-  margin: 0 auto;             /* Center the content horizontally */
-  padding: 20px;              /* add space around edges */
+  margin-inline: auto;        /* center on wide screens */
+  padding: 20px;              /* page gutter */
+
   background-color: white;  /* gray backdrop like Word print view */
   position: relative;         /* establishes body as the positioning parent */
 }
@@ -60,6 +63,11 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+}
+
+pre, code, .xml-snippet {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .document-title {
@@ -98,15 +106,19 @@ h1 {
   margin: 1.5em 0 1em 0;
 }
 
+/* BASE (desktop/tablet): keep your 28% | content split, but make content shrinkable */
 .clause-row {
   display: grid;
-  grid-template-columns: 28% 1fr;
+  grid-template-columns: 28% minmax(0, 1fr);
   gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 0rem;
   align-items: start;
   counter-reset: level1;
 }
+
+/* Let grid children actually shrink in both wide and narrow layouts */
+.clause-row > * { min-width: 0; }
 
 .clause-heading {
   font-weight: bold;
@@ -117,9 +129,11 @@ h1 {
   content: attr(data-number) " ";
 }
 
+/* The right column is a flex container; allow it to shrink */
 .clause-content {
   display: flex;
   flex-direction: column;
+  min-width: 0;            /* critical: allow children to shrink */
 }
 
 .italic {
@@ -130,13 +144,29 @@ h1 {
   font-weight: bold;
 }
 
-.diagram img {
+/* Keep wide content from blowing out the viewport */
+img, table {
   max-width: 100%;
   height: auto;
+}
+
+/* The diagram block itself can also shrink */
+.diagram {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Diagram image — force it to track container width during layout */
+.diagram img {
   display: block;
+  width: 100%;      /* not just max-width — forces shrink */
+  max-width: 100%;
+  height: auto;
   border: 0px solid #ccc;
   padding: 0.5rem;
   background: #f9f9f9;
+  box-sizing: border-box;  /* include padding in the 100% width */
+
 }
 
 .logo {
@@ -342,21 +372,40 @@ h1 {
   white-space: pre; /* preserve indentation*/
 }
 
+/*
+** table
+*/
+
 .pnz-table {
   border-collapse: collapse;       /* Merge adjacent cell borders */
   width: 100%;                     /* Optional: make table full width */
   vertical-align: top;
+  margin-bottom: 1em;
 }
 
 .pnz-table th,
 .pnz-table td {
-  border: 1px solid black;         /* Thin black border */
-  padding: 4px 8px;                /* Optional: add some padding */
+  border: 1px solid black;          /* Thin black border */
+  padding: 4px 8px;                   /* Optional: add some padding */
   vertical-align: top;
 }
 
 .pnz-table th {
-  text-align: left;                /* Left-align heading text */
+  text-align: left;                   /* Left-align heading text */
+}
+
+/* Horizontal scroll wrapper */
+.table-scroll {
+  display: block;                     /* so max-width applies */
+  overflow-x: auto;                   /* scroll horizontally if needed */
+  max-width: 100%;                    /* never exceed viewport */
+  -webkit-overflow-scrolling: touch;  /* smooth scrolling on iOS */
+}
+
+/* Inside the wrapper, let the table be wider than the viewport if needed */
+.table-scroll > table {
+  width: max-content;   /* grow to fit content */
+  min-width: 100%;      /* but don’t shrink smaller than the viewport */
 }
 
 .center-col1 th:nth-child(1),
@@ -632,6 +681,13 @@ ul.dashes li::marker {
   margin-bottom: 0;
 }
 
+/*
+** Additional fixes to prevent width overflow
+*/
+
+/* Make all widths include padding/borders to avoid tiny overflows */
+*, *::before, *::after { box-sizing: border-box; }
+
 /* Print */
 @media print {
   * {
@@ -649,12 +705,14 @@ ul.dashes li::marker {
 ** @media - mobile
 */
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .clause-row {
     grid-template-columns: 1fr;   /* switch to a single column */
     gap: 0em;                     /* smaller vertical gap between header and content*/
   }
-  
+  .clause-row > * { min-width: 0; }     /* belt & braces in the MQ */
+  .clause-row .diagram { width: 100%; }  /* grid item, not just the img */
+
   .clause-heading {
     margin-right: 0;              /* remove right margin for full width */
     margin-bottom: 0.5em;         /* add a bit of spacing under heading */
@@ -662,27 +720,29 @@ ul.dashes li::marker {
 
   .clause-content {
     width: 100%;
+  } 
+
+  .pnz-table,
+  .participants-table,
+  .definition-table {
+    display: block;                 /* detach from layout width */
+    overflow-x: auto;               /* horizontal scroll on the table */
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch; /* smooth on iOS */
   }  
 }
 
+/* The tag ribbons: stop them from pushing outside their column */
 @media (min-width: 601px) {
   ol.level1 > .tag-standards,
   ol.level1 > .tag-bestpractice,
   ol.level1 > .tag-commentary {
-    position: absolute;
-    left: 0;
-    padding-left: 20px;
-    display: block;     /* makes it take the full line */
-    float: left;        /* sits on the left edge of the list column */
-    clear: left;        /* starts on its own line */
-    width: 100%;        /* forces a full-width “line” */
-  }
-  
-  /* Ensure OL height accounts for floated tag */
-  ol.level1::after {
-    content: "";
-    display: block;
-    clear: both;
+    position: relative;   /* was absolute */
+    left: auto;
+    float: none;          /* avoid weird flow interactions */
+    width: auto;          /* do not force 100% of the column + padding */
+    max-width: 100%;
+    padding-left: 0;      /* padding on a 100% element caused overflow */
   }
 }
 

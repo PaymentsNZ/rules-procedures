@@ -151,21 +151,39 @@ import [
 		html::class( "xml-snippet", content )
 	)
 
-	pnz.legal::table = (content as table) => #( table = 
-		html::class( "pnz-table", content )
+	pnz.legal::table = (content as table) => #( div =
+		{
+			html::attributes = {
+				class = "table-scroll"
+			}
+		} @> {
+			;table = html::class( "pnz-table", content )
+		}
 	)
 
-	pnz.legal::styled_table = (className as text, content as table) => #( table = 
-		html::class( $"pnz-table $(className)", content )
-	)
+	pnz.legal::styled_table = (className as text, content as table) => #( div =
+		{
+			html::attributes = {
+				class = "table-scroll"
+			}
+		} @> {
+			;table = html::class(  $"pnz-table $(className)", content )
+		}
+	)	
 
 	pnz.legal::definition_table = (...content as list) => #( table = 
-		html::class(
-			"definition-table"
-			[
-				tbody = content
-			]
-		)
+		{
+			html::attributes = {
+				class = "table-scroll"
+			}
+		} @> {
+			;table = html::class(
+				"definition-table"
+				[
+					tbody = content
+				]
+			)
+		}
 	)
 
 	pnz.legal::br = #( br = null )

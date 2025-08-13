@@ -273,44 +273,46 @@
                 <li>The following table identifies each notification type for an inter-bank SCP, the parties to the
 		notification, the progress of the SCP to which the notification relates, and the clauses that specify
 		requirements for the notification:</li>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Type</th>
-                        <th>Parties</th>
-                        <th>Progress</th>
-                        <th>Mandatory / Optional</th>
-                        <th>Clauses</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Remitter notification</td>
-                            <td>Instructing agent to debtor</td>
-                            <td rowspan="2">HVCS payment settled</td>
-                            <td>Optional</td>
-                            <td>1.7</td>
-                        </tr>
-                        <tr>
-                            <td>Sending confirmation</td>
-                            <td>Instructing agent to creditor</td>
-                            <td>Optional</td>
-                            <td>1.8</td>
-                        </tr>
-                        <tr>
-                            <td>Remitter confirmation</td>
-                            <td>Instructing agent to debtor</td>
-                            <td>Payment message delivered</td>
-                            <td>Optional</td>
-                            <td>1.9</td>
-                        </tr>
-                        <tr>
-                            <td>Beneficiary notification</td>
-                            <td>Instructed agent to creditor</td>
-                            <td>HVCS payment credited</td>
-                            <td>Mandatory</td>
-                            <td>1.10</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Type</th>
+                            <th>Parties</th>
+                            <th>Progress</th>
+                            <th>Mandatory / Optional</th>
+                            <th>Clauses</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Remitter notification</td>
+                                <td>Instructing agent to debtor</td>
+                                <td rowspan="2">HVCS payment settled</td>
+                                <td>Optional</td>
+                                <td>1.7</td>
+                            </tr>
+                            <tr>
+                                <td>Sending confirmation</td>
+                                <td>Instructing agent to creditor</td>
+                                <td>Optional</td>
+                                <td>1.8</td>
+                            </tr>
+                            <tr>
+                                <td>Remitter confirmation</td>
+                                <td>Instructing agent to debtor</td>
+                                <td>Payment message delivered</td>
+                                <td>Optional</td>
+                                <td>1.9</td>
+                            </tr>
+                            <tr>
+                                <td>Beneficiary notification</td>
+                                <td>Instructed agent to creditor</td>
+                                <td>HVCS payment credited</td>
+                                <td>Mandatory</td>
+                                <td>1.10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <li>The Remitter notification and Remitter confirmation notifications are both intended to communicate
 		settlement to the debtor (at slightly different trigger points in the process). Participants should
 		offer only one of these notifications to customers to avoid duplication of notifications.</li>
@@ -530,31 +532,33 @@
                     <li>if the account is identified by an account number formatted in accordance with the applicable
 			message standards, the components of the account number should be masked in accordance with the
 			following table:</li>
-                    <table class="pnz-table">
-                        <thead>
-                            <th>Component of account number</th>
-                            <th>Required for SCP notification?</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Interchange number</td>
-                                <td>Not required.</td>
-                            </tr>
-                            <tr>
-                                <td>Branch number</td>
-                                <td>Yes: all 4 digits of the branch number.</td>
-                            </tr>
-                            <tr>
-                                <td>Account number</td>
-                                <td>Yes: The final 4 digits of the account number and an asterisk substituted for
+                    <div class="table-scroll">
+                        <table class="pnz-table">
+                            <thead>
+                                <th>Component of account number</th>
+                                <th>Required for SCP notification?</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Interchange number</td>
+                                    <td>Not required.</td>
+                                </tr>
+                                <tr>
+                                    <td>Branch number</td>
+                                    <td>Yes: all 4 digits of the branch number.</td>
+                                </tr>
+                                <tr>
+                                    <td>Account number</td>
+                                    <td>Yes: The final 4 digits of the account number and an asterisk substituted for
 							each other digit of the account number to the left of the final 4 digits.</td>
-                            </tr>
-                            <tr>
-                                <td>Suffix</td>
-                                <td>Yes: All 2/3 digits of the suffix.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                </tr>
+                                <tr>
+                                    <td>Suffix</td>
+                                    <td>Yes: All 2/3 digits of the suffix.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <li>if the account is identified by the creditor&apos;s primary account number (PAN) linked to a
 			credit card or scheme debit card, the digits of the PAN are required to comply with PCI DSS
 			standards for masking the PAN.</li>
@@ -638,31 +642,33 @@
                 <li>The following table identifies each notification type for an on-us SCP, the parties to the
 		notification, the progress of the SCP to which the notification relates, and the clauses that specify
 		requirements for the notification in this chapter of this document:</li>
-                <table class="pnz-table">
-                    <thead>
-                        <th>Type</th>
-                        <th>Parties</th>
-                        <th>Trigger</th>
-                        <th>Mandatory / Optional</th>
-                        <th>Clauses</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>On-us beneficiary notification</td>
-                            <td>Participant to creditor customer</td>
-                            <td>HVCS payment credited</td>
-                            <td>Optional</td>
-                            <td>2.9</td>
-                        </tr>
-                        <tr>
-                            <td>On-us remitter confirmation</td>
-                            <td>Participant to debtor customer</td>
-                            <td>HVCS payment credited</td>
-                            <td>Optional</td>
-                            <td>2.10</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="pnz-table">
+                        <thead>
+                            <th>Type</th>
+                            <th>Parties</th>
+                            <th>Trigger</th>
+                            <th>Mandatory / Optional</th>
+                            <th>Clauses</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>On-us beneficiary notification</td>
+                                <td>Participant to creditor customer</td>
+                                <td>HVCS payment credited</td>
+                                <td>Optional</td>
+                                <td>2.9</td>
+                            </tr>
+                            <tr>
+                                <td>On-us remitter confirmation</td>
+                                <td>Participant to debtor customer</td>
+                                <td>HVCS payment credited</td>
+                                <td>Optional</td>
+                                <td>2.10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ol>
         </div>
         <div class="tag-bestpractice"></div>

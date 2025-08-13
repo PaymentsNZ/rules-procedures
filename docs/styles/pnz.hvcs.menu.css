@@ -59,14 +59,16 @@
 	font-size: 14px;
 	line-height: 1.3em;
 	display: inline-block;
+	text-align: center;
 	text-decoration: none;    /* removes the underline */
-	color: inherit;           /* inherits the text color from parent */    
+	color: inherit;           /* inherits the text color from parent */
+	min-width: 140px;
 }
 
 /* Highlighted active branch */
 .menu-branch.active {
 	background: #2b5f8a;        /* darker blue */
-	color: white;
+	color: white !important;	
 	font-weight: bold;
 	}
 

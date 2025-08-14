@@ -169,8 +169,8 @@
 
 		// --- Basic params (can still override owner/repo/branches via URL if you want) ---
 		const qs = new URLSearchParams(location.search);
-		const owner = qs.get('owner') || 'projectcatalysts';
-		const repo = qs.get('repo') || 'pnz';
+		const owner = qs.get('owner') || 'paymentsnz';
+		const repo = qs.get('repo') || 'rules-procedures';
 		let path = qs.get('path') || pathList[0];   // default to first item
 		const base = qs.get('base') || 'main';
 		const head = qs.get('head') || 'ug2025';

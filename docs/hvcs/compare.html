@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>HVCS Comparison</title>
+
+		<!-- Mergely -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mergely/5.0.0/mergely.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mergely/5.0.0/mergely.min.js"></script>
+
+		<style>
+			:root {
+				--bottom-gap: 16px;
+			}
+
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+			}
+
+			#status {
+				font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+				display: flex;
+				gap: 12px;
+				align-items: center;
+				flex-wrap: wrap;
+				padding: 8px 12px;
+				line-height: 1.4;
+				border-bottom: 1px solid #ddd;
+				background: #fafafa;
+			}
+
+			#status .grow {
+				flex: 1 1 auto;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			#controls {
+				display: inline-flex;
+				gap: 8px;
+				align-items: center;
+			}
+
+			select {
+				font: inherit;
+				padding: 4px 8px;
+				border-radius: 6px;
+				border: 1px solid #ccc;
+				background: #fff;
+			}
+
+			#compare {
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: var(--bottom-gap);
+				/* visible gap */
+				/* top is set dynamically based on #status height */
+			}
+
+			.error {
+				color: #b00020;
+			}
+
+			code {
+				background: #eee;
+				padding: 0 4px;
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="status">
+			<div id="controls">
+				<label for="doc">Document:</label>
+				<select id="doc" title="Choose document to compare">
+					<!-- options injected by JS -->
+				</select>
+			</div>
+			<div class="grow" id="msg">Loading…</div>
+		</div>
+		<div id="compare"></div>
+
+		<script>
+			// --- Repo defaults (override base/head/path via URL params) ---
+			const owner = 'projectcatalysts';
+			const repo = 'pnz';
+
+			const qs = new URLSearchParams(location.search);
+			const base = qs.get('base') || 'main';    // left
+			const head = qs.get('head') || 'ug2025';  // right
+			const defaultPath = 'src/hvcs/overview.mixt';
+
+			// Available docs
+			const docNames = [
+				'overview.mixt',
+				'common.mixt',
+				'scp.mixt',
+				'mx.mixt',
+				'mt.mixt',
+				'coexistence.mixt',
+			];
+
+			// Derive initial path
+			const initialPath = (() => {
+				const p = qs.get('path');
+				if (p && p.startsWith('src/hvcs/')) return p;
+				if (p && docNames.includes(p)) return 'src/hvcs/' + p;
+				return defaultPath;
+			})();
+
+			// Elements
+			const statusBar = document.getElementById('status');
+			const messageEl = document.getElementById('msg');
+			const selectEl = document.getElementById('doc');
+			const compareEl = document.getElementById('compare');
+
+			// Populate dropdown
+			selectEl.innerHTML = docNames.map(n => {
+				const full = 'src/hvcs/' + n;
+				const sel = (full === initialPath) ? ' selected' : '';
+				return `<option value="${full}"${sel}>${n}</option>`;
+			}).join('');
+
+			// Layout: make #compare fill from below #status to bottom gap
+			function relayout() { compareEl.style.top = statusBar.offsetHeight + 'px'; }
+			addEventListener('resize', relayout);
+			new ResizeObserver(relayout).observe(statusBar);
+			relayout();
+
+			// Fetch helper
+			async function fetchText(url) {
+				const res = await fetch(url, { mode: 'cors' });
+				if (!res.ok) {
+					const body = await res.text().catch(() => '');
+					throw new Error(`${res.status} ${res.statusText} — ${url}\n${body.slice(0, 500)}`);
+				}
+				return res.text();
+			}
+
+			// Build raw URLs for a given path
+			function urlsFor(path) {
+				const rawBase = `https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/${base}/${path}`;
+				const rawHead = `https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/${head}/${path}`;
+				return { rawBase, rawHead };
+			}
+
+			// Update URL (without reload) so the link stays shareable
+			function updateQueryParam(path) {
+				const params = new URLSearchParams(location.search);
+				params.set('path', path);
+				history.replaceState(null, '', `${location.pathname}?${params.toString()}`);
+			}
+
+			// Mergely instance
+			const doc = new Mergely('#compare');
+
+			async function loadAndCompare(path) {
+				try {
+					const { rawBase, rawHead } = urlsFor(path);
+					messageEl.className = '';
+					messageEl.textContent = `Fetching: ${rawBase}  •  ${rawHead}`;
+					relayout();
+
+					const [lhsText, rhsText] = await Promise.all([
+						fetchText(rawBase),
+						fetchText(rawHead),
+					]);
+
+					// Set texts immediately (works for initial + subsequent loads)
+					doc.lhs(lhsText);
+					doc.rhs(rhsText);
+
+					// After Mergely updates, jump to first change
+					doc.once('updated', () => doc.scrollToDiff('next'));
+
+					messageEl.textContent = `Comparing ${base} ↔ ${head} • ${path}`;
+					relayout();
+				} catch (err) {
+					messageEl.className = 'error';
+					messageEl.textContent = 'Error loading files:\n' + err.message;
+					console.error(err);
+					relayout();
+				}
+			}
+
+			// On dropdown change, reload diff and update URL
+			selectEl.addEventListener('change', (e) => {
+				const newPath = e.target.value;
+				updateQueryParam(newPath);
+				loadAndCompare(newPath);
+			});
+
+			// Initial load
+			updateQueryParam(initialPath);
+			loadAndCompare(initialPath);
+		</script>
+	</body>
+</html>

@@ -105,7 +105,7 @@ import [
 				messages) across the HVCS MT CUG.  This document also contains some non-binding commentary
 				and best practice.`
 			)
-			`Part F — Co-existence Procedures (this document)`
+			`Part F — Co-existence Procedures`
 			pnz::list(
 				`Provides binding procedures for participants during the co-existence phase of the migration
 				from sending and receiving MT messages to MX messages.`
@@ -230,13 +230,9 @@ import [
 							pnz::dashes(
 								`Customer credit transfer messages`
 								`Financial institution credit transfer messages`
-								pnz::dashes(
-									`return messages`
-								)
+								`Return messages`
 								`Exception and investigation messages`
-								pnz::dashes(
-									`system messages`
-								)
+								`System messages`
 							)
 							`Message flows`
 							`Roles of organisations and systems`
@@ -254,6 +250,7 @@ import [
 							pnz::dashes(
 								`Form, content and delivery of payment instruction`
 								`HVCS operating times`
+								`Agency arrangement obligations`
 								`Validating HVCS payments`
 								`No revoking after settlement`
 								`Returning HVCS payment: timing, format and content`
@@ -416,7 +413,7 @@ import [
 		"1.3"
 		"Senders / Receivers / Instructing Agents / Instructed Agents"
 		
-		`ISO 20022 introduces the terms instructing agent and instructed agent.  These terms are used to
+		`ISO 20022 introduced the terms instructing agent and instructed agent.  These terms are used to
 		describe the role of an HVCS participant in relation to a payment message that flows across the
 		HVCS.  During settlement, the instructing agent's ESAS account is debited, and the instructed
 		agent's ESAS account is credited.`
@@ -555,7 +552,8 @@ import [
 
 			pnz::comment( "UG2025", "RK", "Changed to past tense, note MT payment messages retired" )
 			`MX messages are an XML-based replacement for MT messages.  MT payment messages were retired from the HVCS
-			at the end of the co-existence phase (November 2025).`
+			at the end of the first co-existence phase (November 2025).  MT exception and investigations messages are
+			scheduledto be retired at the end of this co-existence phase (November 2026).`
 			
 			`Further information on how to send and receive HVCS instructions in either format is provided in
 			the respective procedures:`
@@ -1067,7 +1065,7 @@ import [
 		indicating whether the Payment Cancellation Request is pending, or if it has been accepted or rejected.`
 
 		`If the Payment Cancellation Request is accepted, the participant sends a return message and the returned
-		VCS payment to the instructing agent of the HVCS payment being returned along with the Resolution o
+		HVCS payment to the instructing agent of the HVCS payment being returned along with the Resolution o
 		Investigation.`
 
 		`The diagram below describes the message flow between participants when a Payment Cancellation Request
@@ -1139,13 +1137,12 @@ import [
 		"4.1"
 		"Message flows"
 		
-		pnz::question( "UG2025", "RK",
-			`For the sentence starting "Authorised messages...", should this just state: "Messages are only"?
-			or perhaps "Payment messages..."`
+		pnz::comment( "UG2025", "RK",
+			`For the sentence starting "Authorised messages...", changed to "Payment messages..."`
 		)
 		`The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode
 		requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the
-		recipient. Authorised messages are only delivered to the recipients once they have been authorised, and
+		recipient. Payment messages are only delivered to the recipients once they have been authorised, and
 		typically once settlement of the HVCS payment has been made within RTGS.`
 
 		`More detail about Y-copy can be found in the respective procedures:`
@@ -1485,18 +1482,23 @@ import [
 		pnz::bullets(
 			`the identification, verification, or sanctions compliance requirements for wire transfers in the:`
 			pnz::list(
-				`NZ Anti-Money Laundering and Countering Financing of Terrorism Act 2009,`
+				`NZ Anti-Money Laundering and Countering Financing of Terrorism Act 2009;`
 				
 				`United Nations security council sanctions enforced through the NZ United Nations Act 1946;`
 				
 				`other sanctions such as the Russia Sanctions Act 2022; and`
 				
 				`sanctions issued by the office of foreign asset control (OFAC) in the US, as well as other
-				bodies like the EU and UN who also issue prohibition notices; and`
+				bodies like the EU and UN who also issue prohibition notices;`
 			)
-			pnz::question( "UG2025", "PB", "Has the designation come into place yet? If so does this need to be updated?" )
+
 			`Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a
-			designated FMI) which could cover clearing and settlement requirements.`
+			designated FMI) which could cover clearing and settlement requirements;`
+
+			pnz::comment( "UG2025", "MT", "Added next two examples." )
+			`certain provisions of the Banking (Prudential Supervision) Act 1989 and the Corporations (Investigations
+			and Management) Act 1989 relating to statutory management; and`
+			`certain provisions of the Deposit Takers Act 2023, for example, Part 7.`
 		)
 	)
 
@@ -1724,13 +1726,13 @@ import [
 					`Global financial messaging service used by the SWIFTNet platform.`
 				]
 				[
-					"Intermediary institution"
+					"Intermediary agent"
 					[
 						`For a payment instruction sent through SWIFT, a financial institution:`
 						pnz::bullets(
-							`which is not the ordering institution or the beneficiary institution.`
+							`which is not the debtor agent or the creditor agent.`
 
-							`through which the payment must pass to reach the beneficiary institution.`
+							`through which the payment must pass to reach the creditor agent.`
 						)
 					]
 				]
@@ -1791,7 +1793,7 @@ import [
 				[
 					"Remitter confirmation"
 					[
-						`a notification to the debtor of an SCP:`
+						`A notification to the debtor of an SCP:`
 						pnz::bullets(
 							`for an SCP between customers of 2 participants, from the instructing agent that they have
 							instructed the instructed agent to credit the amount of the SCP to the creditor's account.`
@@ -1803,7 +1805,7 @@ import [
 				[
 					"Remitter notification"
 					[
-						`a notification to the debtor of an SCP:`
+						`A notification to the debtor of an SCP:`
 						pnz::bullets(
 							`for an SCP between customers of 2 participants, from the instructing agent that it has settled the
 							SCP with the instructed agent.`
@@ -1882,7 +1884,7 @@ import [
 
 	`The following table summarises amendments made to the former Appendix 14 procedures, prior to implementation of the
 	ISO 20022 message format. It has been retained here as a historical reference.`
-
+	pnz::br
 	pnz::styled_table(
 		"document-control-table"
 		#table(

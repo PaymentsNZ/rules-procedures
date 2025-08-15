@@ -693,7 +693,7 @@ import [
 		`Participants that offer specific services to customers`
 		pnz::level2(
 			pnz::comment( "UG2025", "RK", "Retained 'should' in case not destined for HVCS." )
-			`Participants that receive MX PAIN messages from their customers destined for another participant
+			`Participants that receive MX pain messages from their customers destined for another participant
 			should create an MX payment message for that instruction;`
 			pnz::comment( "UG2025", "RK", "Revised to use MX" )
 			`Participants that receive an HVCS instruction from their customers as an MT message or other non-MX
@@ -956,7 +956,7 @@ import [
 		pnz::level2(
 			`a CBPR+ message that has gone through in-flow translation,`
 			`a CBPR+ message that has gone through the Transaction Manager (The Transaction Manager scope is
-			limited to cross border payments sent via the FINPlus CUG).`
+			limited to cross border payments sent via the FINplus CUG).`
 		)
 		`For MT messages that have been translated in-flow or in the Transaction Manager, SWIFT provides the
 		delivery format “ISO 20022 with embedded MT”, this includes an indication of whether truncation has

@@ -902,7 +902,7 @@ import [
 		"3.5"
 		"Distinguished name structure"
 
-		pnz::comment( "UG2025", "RK", "Previous wording could possibly be misinterpreted as RBNZ does not transport FINPlus or CBPR+ messages.")
+		pnz::comment( "UG2025", "RK", "Previous wording could possibly be misinterpreted as RBNZ does not transport FINplus or CBPR+ messages.")
 		`The RBNZ have decided to adopt the Distinguished Name (DN) structure for MX messages.`
 
 		`To enable ISO 20022 to work for multiple use cases and independent of networks, the general convention is to use DNs

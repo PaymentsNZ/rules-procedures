@@ -104,7 +104,7 @@
 				messages) across the HVCS MT CUG.  This document also contains some non-binding commentary
 				and best practice.</li>
                     </ul>
-                    <li>Part F — Co-existence Procedures (this document)</li>
+                    <li>Part F — Co-existence Procedures</li>
                     <ul>
                         <li>Provides binding procedures for participants during the co-existence phase of the migration
 				from sending and receiving MT messages to MX messages.</li>
@@ -210,13 +210,9 @@
                                 <ul class="dashes">
                                     <li>Customer credit transfer messages</li>
                                     <li>Financial institution credit transfer messages</li>
-                                    <ul class="dashes">
-                                        <li>return messages</li>
-                                    </ul>
+                                    <li>Return messages</li>
                                     <li>Exception and investigation messages</li>
-                                    <ul class="dashes">
-                                        <li>system messages</li>
-                                    </ul>
+                                    <li>System messages</li>
                                 </ul>
                                 <li>Message flows</li>
                                 <li>Roles of organisations and systems</li>
@@ -233,6 +229,7 @@
                                 <ul class="dashes">
                                     <li>Form, content and delivery of payment instruction</li>
                                     <li>HVCS operating times</li>
+                                    <li>Agency arrangement obligations</li>
                                     <li>Validating HVCS payments</li>
                                     <li>No revoking after settlement</li>
                                     <li>Returning HVCS payment: timing, format and content</li>
@@ -407,7 +404,7 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="1.3">Senders / Receivers / Instructing Agents / Instructed Agents</div>
             <ol class="level1 level1-counter-reset">
-                <li>ISO 20022 introduces the terms instructing agent and instructed agent.  These terms are used to
+                <li>ISO 20022 introduced the terms instructing agent and instructed agent.  These terms are used to
 		describe the role of an HVCS participant in relation to a payment message that flows across the
 		HVCS.  During settlement, the instructing agent&apos;s ESAS account is debited, and the instructed
 		agent&apos;s ESAS account is credited.</li>
@@ -544,7 +541,8 @@
                     </div>
                 </div>
                 <li>MX messages are an XML-based replacement for MT messages.  MT payment messages were retired from the HVCS
-			at the end of the co-existence phase (November 2025).</li>
+			at the end of the first co-existence phase (November 2025).  MT exception and investigations messages are
+			scheduledto be retired at the end of this co-existence phase (November 2026).</li>
                 <li>Further information on how to send and receive HVCS instructions in either format is provided in
 			the respective procedures:</li>
                 <ol class="level2 level2-counter-reset">
@@ -1019,7 +1017,7 @@
 		the request and respond by sending a Resolution of Investigation message back to sender of the request
 		indicating whether the Payment Cancellation Request is pending, or if it has been accepted or rejected.</li>
                 <li>If the Payment Cancellation Request is accepted, the participant sends a return message and the returned
-		VCS payment to the instructing agent of the HVCS payment being returned along with the Resolution o
+		HVCS payment to the instructing agent of the HVCS payment being returned along with the Resolution o
 		Investigation.</li>
                 <li>The diagram below describes the message flow between participants when a Payment Cancellation Request
 		is sent by a debtor agent.</li>
@@ -1085,19 +1083,18 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="4.1">Message flows</div>
             <ol class="level1 level1-counter-reset">
-                <div class="doc-question" data-change-id="UG2025">
-                    <div class="doc-question-meta">
-                        <span class="doc-question-id">UG2025</span>
-                        <span class="doc-question-initials">RK</span>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
                     </div>
-                    <div class="doc-question-content">
-                        <p>For the sentence starting &quot;Authorised messages...&quot;, should this just state: &quot;Messages are only&quot;?
-			or perhaps &quot;Payment messages...&quot;</p>
+                    <div class="doc-comment-content">
+                        <p>For the sentence starting &quot;Authorised messages...&quot;, changed to &quot;Payment messages...&quot;</p>
                     </div>
                 </div>
                 <li>The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode
 		requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the
-		recipient. Authorised messages are only delivered to the recipients once they have been authorised, and
+		recipient. Payment messages are only delivered to the recipients once they have been authorised, and
 		typically once settlement of the HVCS payment has been made within RTGS.</li>
                 <li>More detail about Y-copy can be found in the respective procedures:</li>
                 <ol class="level2 level2-counter-reset">
@@ -1529,23 +1526,26 @@
                 <ul class="bullets">
                     <li>the identification, verification, or sanctions compliance requirements for wire transfers in the:</li>
                     <ul>
-                        <li>NZ Anti-Money Laundering and Countering Financing of Terrorism Act 2009,</li>
+                        <li>NZ Anti-Money Laundering and Countering Financing of Terrorism Act 2009;</li>
                         <li>United Nations security council sanctions enforced through the NZ United Nations Act 1946;</li>
                         <li>other sanctions such as the Russia Sanctions Act 2022; and</li>
                         <li>sanctions issued by the office of foreign asset control (OFAC) in the US, as well as other
-				bodies like the EU and UN who also issue prohibition notices; and</li>
+				bodies like the EU and UN who also issue prohibition notices;</li>
                     </ul>
-                    <div class="doc-question" data-change-id="UG2025">
-                        <div class="doc-question-meta">
-                            <span class="doc-question-id">UG2025</span>
-                            <span class="doc-question-initials">PB</span>
+                    <li>Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a
+			designated FMI) which could cover clearing and settlement requirements;</li>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">MT</span>
                         </div>
-                        <div class="doc-question-content">
-                            <p>Has the designation come into place yet? If so does this need to be updated?</p>
+                        <div class="doc-comment-content">
+                            <p>Added next two examples.</p>
                         </div>
                     </div>
-                    <li>Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a
-			designated FMI) which could cover clearing and settlement requirements.</li>
+                    <li>certain provisions of the Banking (Prudential Supervision) Act 1989 and the Corporations (Investigations
+			and Management) Act 1989 relating to statutory management; and</li>
+                    <li>certain provisions of the Deposit Takers Act 2023, for example, Part 7.</li>
                 </ul>
             </div>
         </div>
@@ -1765,12 +1765,12 @@
                         <td>Global financial messaging service used by the SWIFTNet platform.</td>
                     </tr>
                     <tr>
-                        <td>Intermediary institution</td>
+                        <td>Intermediary agent</td>
                         <td>
                             <div>For a payment instruction sent through SWIFT, a financial institution:</div>
                             <ul class="bullets">
-                                <li>which is not the ordering institution or the beneficiary institution.</li>
-                                <li>through which the payment must pass to reach the beneficiary institution.</li>
+                                <li>which is not the debtor agent or the creditor agent.</li>
+                                <li>through which the payment must pass to reach the creditor agent.</li>
                             </ul>
                         </td>
                     </tr>
@@ -1847,7 +1847,7 @@
                     <tr>
                         <td>Remitter confirmation</td>
                         <td>
-                            <div>a notification to the debtor of an SCP:</div>
+                            <div>A notification to the debtor of an SCP:</div>
                             <ul class="bullets">
                                 <li>for an SCP between customers of 2 participants, from the instructing agent that they have
 							instructed the instructed agent to credit the amount of the SCP to the creditor&apos;s account.</li>
@@ -1858,7 +1858,7 @@
                     <tr>
                         <td>Remitter notification</td>
                         <td>
-                            <div>a notification to the debtor of an SCP:</div>
+                            <div>A notification to the debtor of an SCP:</div>
                             <ul class="bullets">
                                 <li>for an SCP between customers of 2 participants, from the instructing agent that it has settled the
 							SCP with the instructed agent.</li>
@@ -1935,6 +1935,7 @@
         <h1 class="section-heading">Appendix 1: Document control</h1>
         <div>The following table summarises amendments made to the former Appendix 14 procedures, prior to implementation of the
 	ISO 20022 message format. It has been retained here as a historical reference.</div>
+        <br/>
         <div class="table-scroll">
             <table class="pnz-table document-control-table">
                 <thead>

@@ -57,7 +57,7 @@ import [
 		pnz::nonumber(
 			`This document MT Messaging Procedures (Part E) is one part of a suite of documentation to help participants
 			understand what is required to become a high value clearing system (HVCS) participant and how to send and
-			receive individual HVCS instructions.`
+			receive individual HVCS instructions that are exception and investigation messages.`
 		)
 	)
 
@@ -132,21 +132,27 @@ import [
 		""
 		"Document purpose and structure"
 
-		`This document discusses the MT Messaging Procedures that apply to HVCS instructions.`
+		pnz::comment( "UG2025", "RK", "Added: 'that are exception and investigation messages'" )
+		`This document discusses the MT Messaging Procedures that apply to HVCS instructions
+		that are exception and investigation messages.`
 		
-		`This document is divided into six chapters.`
+		`This document is divided into six chapters (noting chapters 3, 4 and 5 have been deleted).`
 		
 		`Chapter 1 provides an overview of the MT messages that are in scope and the explains the
 		message lifecycle.`
 		
 		`Chapter 2 specifies how to format block 3 (user header) of the SWIFT message header.`
-		
+
 		pnz::comment( "UG2025", "RK",
 			"Removed:"
 			`Chapter 3 specifies how to format customer credit transfers.`
 			`Chapter 4 specifies how to format cross border redirections.`
 			`Chapter 5 specifies how to format financial institution transfers.`
+			`Added: 'Chapters 3, 4 and 5 have been deleted.'`
 		)
+		
+		`Chapters 3, 4 and 5 have been deleted.`
+
 		pnz::comment( "UG2025", "RK",
 			"Removed:"
 			`the format of the notification messages that FINCopy sends to an HVCS
@@ -163,9 +169,8 @@ import [
 
 		`For the purposes of these MT Messaging Procedures, all references to the following defined
 		terms means an HVCS instruction that is an MT message:`
-		pnz::question( "UG2025", "RK",
+		pnz::comment( "UG2025", "RK",
 			"Removed:"
-			`I think we should remove from this list.`
 			pnz::dashes(
 				`Payment message;`
 				`Return message;`
@@ -175,12 +180,8 @@ import [
 		)
 		pnz::bullets(
 			`HVCS instruction;`
-			`Payment message;`
-			`Return message;`
-			`Exception and investigation message;`
-			`System message;`
-			`Customer credit transfer message; and`
-			`FI credit transfer message.`
+			`Exception and investigation message; and`
+			`System message.`
 		)
 	)
 
@@ -189,50 +190,28 @@ import [
 
 	pnz::comment( "UG2025", "RK", "Removed 1.1 MT messages for HVCS payments." )
 
-	pnz::question( "UG2025", "RK", "Identify which of these are still relevant." )
+	pnz::nonumber_clause(
+		"1.1"
+		"MT messages for HVCS payments"
+
+		pnz::bold( "This clause has been deleted (UG2025 November 2025)." )
+	)
 
 	pnz::nonumber_clause(
 		"1.2"
 		"Other FINCopy message types"
 
-		`The Reserve Bank and SWIFT use the FINCopy MT messages described in the following table
-		to process HVCS instructions:`
-
-		pnz::table(
-			#table(
-				[
-					"Message type", "Message name", "Sender", "Receiver"
-				]
-				[
-					[ "MT012", "Sender notification.", "SWIFT", "Participant" ]
-					[ "MT019", "Abort notification.", "SWIFT", "Participant" ]
-					[
-						"MT028"
-						[
-							pnz::bullets(
-								"FINCopy message status report."
-								"Used for monitoring messages within a specific time range."
-							)
-						]
-						"Reserve Bank"
-						"SWIFT"
-					]
-					[
-						"MT029"
-						[
-							pnz::bullets(
-								"Copy message status report."
-								"This message is the response to the MT028."
-							)
-						]
-						"SWIFT"
-						"Reserve Bank"
-					]
-					[ "MT096", "FINCopy to server destination message.", "SWIFT", "Reserve Bank" ]
-					[ "MT097", "FINCopy message authorisation/refusal notification.", "Reserve Bank", "SWIFT" ]
-				]
-			)
+		pnz::comment( "UG2025", "RK",
+			`Removed:`
+			`- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.`
+			`- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the <text-block>, and has been forced to abort it instead.`
+			`- MT028 - FINCopy message status report.`
+			`- MT029 - Copy message status report (response to the MT028).`
+			`- MT096 - FINCopy to server destination message.`
+			`- MT097 - FINCopy message authorisation/refusal notification.`
 		)
+		
+		"This clause has been deleted (UG2025 November 2025)."
 	)
 
 	pnz::nonumber_clause(
@@ -282,6 +261,13 @@ import [
 	)
 
 	pnz::comment( "UG2025", "RK", "Removed 1.4 Message lifecycle, as this relates to payments." )
+
+	pnz::nonumber_clause(
+		"1.4"
+		"Message lifecycle, as this relates to payments"
+
+		"This clause has been deleted (UG2025 November 2025)."
+	)	
 	
 	pnz::section_heading( "Chapter 2: SWIFT message header details" )
 	pnz::tag_standards
@@ -330,13 +316,34 @@ import [
 			HVCS clearing and settlement process.`
 		)
 
+		"This clause has been deleted (UG2025 November 2025)."
+		"This clause has been deleted (UG2025 November 2025)."
+		"This clause has been deleted (UG2025 November 2025)."
+		"This clause has been deleted (UG2025 November 2025)."
 	)
 
 	pnz::comment( "UG2025", "RK", "Removed - Chapter 3: Customer credit transfer (SCP)" )
+
+	pnz::section_heading( "Chapter 3: Customer credit transfer (SCP)" )
+	"This chapter has been deleted (UG2025 November 2025)."
+
 	pnz::comment( "UG2025", "RK", "Removed - Chapter 4: Customer Credit Transfer (Cross border redirection)" )
+
+	pnz::section_heading( "Chapter 4: Customer Credit Transfer (Cross border redirection)" )
+	"This chapter has been deleted (UG2025 November 2025)."
+
 	pnz::comment( "UG2025", "RK", "Removed - Chapter 5: Formats for financial institution transfers" )
 
-	pnz::question( "UG2025", "RK", "I am not sure we need to retain any of Chapter 6!" )
+	pnz::section_heading( "Chapter 5: Formats for financial institution transfers" )
+	"This chapter has been deleted (UG2025 November 2025)."
+
+	pnz::question( "UG2025", "RK",
+		`I am not sure we need to retain any of Chapter 6!`
+		`If this chapter specifies the format for 2 of the notification message types that FINCopy
+		sends to an instructing agent, and we are no longer using FINcopy, then we probably don't
+		need this at all.`
+		`We may just need to retain ESAS rejection codes.`
+	)
 
 	pnz::section_heading( "Chapter 6: FINCopy system messages advising HVCS payment status" )
 	pnz::tag_commentary
@@ -512,9 +519,10 @@ import [
 		"6.4"
 		"ESAS rejection codes"
 
+		pnz::comment( "UG2025", "RK", "Removed: ' (refer to Clause 1.4 Message lifecycle)'" )
 		`The following table contains ESAS rejection codes for AVP and SBI and explanations of why ESAS applies
 		each code when ESAS validates the structure of an MT096 system message but the content of the message
-		fails business rules validation (refer to Clause 1.4 Message lifecycle):`
+		fails business rules validation:`
 	)
 
 	pnz::table(
@@ -641,9 +649,9 @@ import [
 					[
 						`The payment message must have a Settlement Date that is NZ business day for:`
 						[
+							pnz::comment( "UG2025", "RK", "Removed: ', and until 21 April 2023, SBI." )
 							pnz::bullets(
-								"AVP, and"
-								"until 21 April 2023, SBI."
+								"AVP"
 							)
 						]
 					]
@@ -751,130 +759,8 @@ import [
 		)
 	)
 
-	pnz::br
-	pnz::table(
-		#table(
-			[
-				"MT103 Parameter"
-				"Live"
-				"Test and training"
-			]
-			[
-				[
-					"List of field tags to be copied"
-					"20, 32A, 52"
-					"20, 32A, 52"
-				]
-				[
-					"Field Tag containing the Value Date"
-					"NA"
-					"NA"
-				]
-				[
-					"Field Tag containing the Currency"
-					"32A"
-					"32A"
-				]
-			]
-		)
-	)
-
-	pnz::br
-	pnz::table(
-		#table(
-			[
-				"MT202 Parameter"
-				"Live"
-				"Test and training"
-			]
-			[
-				[
-					"List of field tags to be copied"
-					"20, 32A"
-					"20, 32A"
-				]
-				[
-					"Field Tag containing the Value Date"
-					"NA"
-					"NA"
-				]
-				[
-					"Field Tag containing the Currency"
-					"32A"
-					"32A"
-				]
-			]
-		)
-	)
-
-	pnz::br
-	pnz::table(
-		#table(
-			[
-				"MT205 Parameter"
-				"Live"
-				"Test and training"
-			]
-			[
-				[
-					"List of field tags to be copied"
-					"20, 32A"
-					"20, 32A"
-				]
-				[
-					"Field Tag containing the Value Date"
-					"NA"
-					"NA"
-				]
-				[
-					"Field Tag containing the Currency"
-					"32A"
-					"32A"
-				]
-			]
-		)
-	)
-
-	pnz::br
-	pnz::table(
-		#table(
-			[
-				"Parameter"
-				"Live"
-				"Test and training"
-			]
-			[
-				[
-					"FIN Copy service mode"
-					"Y"
-					"Y"
-				]
-				[
-					"FIN Copy fallback mode"
-					"Bypass"
-					"Bypass"
-				]
-				[
-					"FIN-Copy primary server destination – SPA001 (101)"
-					"ESASNZ2A"
-					"ZYAMNZ20"
-				]
-				[
-					"FIN-Copy secondary server destination – SPA002 (102)"
-					"ESASNZ2A"
-					"ZYANNZ20"
-				]
-				[
-					"MT012"
-					"Yes"
-					"Yes"
-				]
-				[
-					"Start Date"
-					"21-Nov-15"
-					"2-May-15"
-				]
-			]
-		)
-	)	
+	pnz::comment( "UG2025", "RK", "Removed: 'MT103 Parameter Table" )
+	pnz::comment( "UG2025", "RK", "Removed: 'MT202 Parameter Table" )
+	pnz::comment( "UG2025", "RK", "Removed: 'MT205 Parameter Table" )
+	pnz::comment( "UG2025", "RK", "Removed: 'FIN Copy Parameter Table" )
 ]

@@ -258,7 +258,20 @@
                         <span class="doc-question-initials">JW</span>
                     </div>
                     <div class="doc-question-content">
-                        <p>Is it safe to remove MT010, MT011, MT012 and MT019?</p>
+                        <p>Is it safe to remove:</p>
+                        <p>- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired.</p>
+                        <p>- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered.</p>
+                        <p>- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the &lt;text-block&gt;, and has been forced to abort it instead.</p>
+                    </div>
+                </div>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed:</p>
+                        <p>- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.</p>
                     </div>
                 </div>
                 <p>
@@ -267,7 +280,6 @@
                     <ul class="bullets">
                         <li>MT010;</li>
                         <li>MT011;</li>
-                        <li>MT012;</li>
                         <li>MT019;</li>
                         <li>xsys.002;</li>
                         <li>xsys.003;</li>
@@ -821,9 +833,19 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="1.6">No revoking after settlement</div>
             <div class="level1">
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Replaced: &apos;section 156R of the Banking (Prudential Supervision) Act 1989.&apos;</p>
+                        <p>With: &apos;section 55 of the Financial Markets Infrastructure Act 2021.&apos;</p>
+                    </div>
+                </div>
                 <p>As HVCS payments are made through the Reserve Bank&apos;s designated settlement system, ESAS, they cannot
 		be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms
-		and conditions and section 156R of the Banking (Prudential Supervision) Act 1989.2.</p>
+		and conditions and section 55 of the Financial Markets Infrastructure Act 2021.</p>
             </div>
         </div>
         <div class="tag-standards"></div>
@@ -840,10 +862,10 @@
                             <span class="doc-comment-initials">RK</span>
                         </div>
                         <div class="doc-comment-content">
-                            <p>Revised from Part F - Co-existence Procedures to Part D.</p>
+                            <p>Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications.</p>
                         </div>
                     </div>
-                    <li>in accordance with Part D - MX Procedures and the applicable message standards.</li>
+                    <li>in accordance with Part D - MX Procedures and the MX Message Specifications.</li>
                 </ol>
             </ol>
         </div>
@@ -859,16 +881,10 @@
 		the HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS
 		instruction.</p>
                 <p>The following diagram summarises the processes that apply if the HVCS instruction contains an error.</p>
-                <div class="doc-question" data-change-id="UG2025">
-                    <div class="doc-question-meta">
-                        <span class="doc-question-id">UG2025</span>
-                        <span class="doc-question-initials">RK</span>
-                    </div>
-                    <div class="doc-question-content">
-                        <p>Insert flow diagram here.</p>
-                    </div>
-                </div>
             </div>
+        </div>
+        <div class="diagram">
+            <img src="images/hvcs_common_error_process.png" alt="Error Process"></img>
         </div>
         <div class="tag-standards"></div>
         <div class="clause-row">
@@ -968,16 +984,10 @@
 		instruction no later than 16:45 on a business day unless standards 3.3 or 3.4 apply.</p>
                 <p>The following diagram gives an overview of the processes that apply if the instructing agent proposes
 		to send an HVCS instruction after 16:45. The diagram has no legal effect.</p>
-                <div class="doc-question" data-change-id="UG2025">
-                    <div class="doc-question-meta">
-                        <span class="doc-question-id">UG2025</span>
-                        <span class="doc-question-initials">RK</span>
-                    </div>
-                    <div class="doc-question-content">
-                        <p>Insert flow diagram here.</p>
-                    </div>
-                </div>
             </div>
+        </div>
+        <div class="diagram">
+            <img src="images/hvcs_common_late_processing.png" alt="Late Processing"></img>
         </div>
         <div class="tag-standards"></div>
         <div class="clause-row">
@@ -1059,55 +1069,7 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="3.5">Evening session participants</div>
             <div class="level1">
-                <p>Participants who send and receive financial institution credit transfers during the CLS evening
-		session are:</p>
-                <div class="doc-question" data-change-id="UG2025">
-                    <div class="doc-question-meta">
-                        <span class="doc-question-id">UG2025</span>
-                        <span class="doc-question-initials">JW</span>
-                    </div>
-                    <div class="doc-question-content">
-                        <p>Checking the participant list - no ICBC, BOC AKL, CCB, or MUFG?</p>
-                    </div>
-                </div>
-                <div class="table-scroll">
-                    <table class="pnz-table">
-                        <thead>
-                            <th>Participants</th>
-                            <th>Date</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ANZ Bank New Zealand Limited</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>ASB Bank Ltd</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>Bank of China (New Zealand) Limited</td>
-                                <td>4 December 2020</td>
-                            </tr>
-                            <tr>
-                                <td>Bank of New Zealand</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>Citibank, N.A.</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>HSBC</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>Westpac New Zealand Limited</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <span class="bold">This clause has been deleted (UG2025 November 2025).</span>
             </div>
         </div>
     </body>

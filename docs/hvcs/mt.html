@@ -46,7 +46,7 @@
                 <div>
                     <p>This document MT Messaging Procedures (Part E) is one part of a suite of documentation to help participants
 			understand what is required to become a high value clearing system (HVCS) participant and how to send and
-			receive individual HVCS instructions.</p>
+			receive individual HVCS instructions that are exception and investigation messages.</p>
                 </div>
             </ol>
         </div>
@@ -149,8 +149,18 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="">Document purpose and structure</div>
             <ol class="level1 level1-counter-reset">
-                <li>This document discusses the MT Messaging Procedures that apply to HVCS instructions.</li>
-                <li>This document is divided into six chapters.</li>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Added: &apos;that are exception and investigation messages&apos;</p>
+                    </div>
+                </div>
+                <li>This document discusses the MT Messaging Procedures that apply to HVCS instructions
+		that are exception and investigation messages.</li>
+                <li>This document is divided into six chapters (noting chapters 3, 4 and 5 have been deleted).</li>
                 <li>Chapter 1 provides an overview of the MT messages that are in scope and the explains the
 		message lifecycle.</li>
                 <li>Chapter 2 specifies how to format block 3 (user header) of the SWIFT message header.</li>
@@ -164,8 +174,10 @@
                         <p>Chapter 3 specifies how to format customer credit transfers.</p>
                         <p>Chapter 4 specifies how to format cross border redirections.</p>
                         <p>Chapter 5 specifies how to format financial institution transfers.</p>
+                        <p>Added: &apos;Chapters 3, 4 and 5 have been deleted.&apos;</p>
                     </div>
                 </div>
+                <li>Chapters 3, 4 and 5 have been deleted.</li>
                 <div class="doc-comment" data-change-id="UG2025">
                     <div class="doc-comment-meta">
                         <span class="doc-comment-id">UG2025</span>
@@ -186,14 +198,13 @@
             <div class="level1">
                 <p>For the purposes of these MT Messaging Procedures, all references to the following defined
 		terms means an HVCS instruction that is an MT message:</p>
-                <div class="doc-question" data-change-id="UG2025">
-                    <div class="doc-question-meta">
-                        <span class="doc-question-id">UG2025</span>
-                        <span class="doc-question-initials">RK</span>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
                     </div>
-                    <div class="doc-question-content">
+                    <div class="doc-comment-content">
                         <p>Removed:</p>
-                        <p>I think we should remove from this list.</p>
                         <ul class="dashes">
                             <li>Payment message;</li>
                             <li>Return message;</li>
@@ -204,12 +215,8 @@
                 </div>
                 <ul class="bullets">
                     <li>HVCS instruction;</li>
-                    <li>Payment message;</li>
-                    <li>Return message;</li>
-                    <li>Exception and investigation message;</li>
-                    <li>System message;</li>
-                    <li>Customer credit transfer message; and</li>
-                    <li>FI credit transfer message.</li>
+                    <li>Exception and investigation message; and</li>
+                    <li>System message.</li>
                 </ul>
             </div>
         </div>
@@ -224,78 +231,31 @@
                 <p>Removed 1.1 MT messages for HVCS payments.</p>
             </div>
         </div>
-        <div class="doc-question" data-change-id="UG2025">
-            <div class="doc-question-meta">
-                <span class="doc-question-id">UG2025</span>
-                <span class="doc-question-initials">RK</span>
-            </div>
-            <div class="doc-question-content">
-                <p>Identify which of these are still relevant.</p>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="1.1">MT messages for HVCS payments</div>
+            <div class="level1">
+                <span class="bold">This clause has been deleted (UG2025 November 2025).</span>
             </div>
         </div>
         <div class="clause-row">
             <div class="clause-heading" data-number="1.2">Other FINCopy message types</div>
             <div class="level1">
-                <p>The Reserve Bank and SWIFT use the FINCopy MT messages described in the following table
-		to process HVCS instructions:</p>
-                <div class="table-scroll">
-                    <table class="pnz-table">
-                        <thead>
-                            <th>Message type</th>
-                            <th>Message name</th>
-                            <th>Sender</th>
-                            <th>Receiver</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>MT012</td>
-                                <td>Sender notification.</td>
-                                <td>SWIFT</td>
-                                <td>Participant</td>
-                            </tr>
-                            <tr>
-                                <td>MT019</td>
-                                <td>Abort notification.</td>
-                                <td>SWIFT</td>
-                                <td>Participant</td>
-                            </tr>
-                            <tr>
-                                <td>MT028</td>
-                                <td>
-                                    <ul class="bullets">
-                                        <li>FINCopy message status report.</li>
-                                        <li>Used for monitoring messages within a specific time range.</li>
-                                    </ul>
-                                </td>
-                                <td>Reserve Bank</td>
-                                <td>SWIFT</td>
-                            </tr>
-                            <tr>
-                                <td>MT029</td>
-                                <td>
-                                    <ul class="bullets">
-                                        <li>Copy message status report.</li>
-                                        <li>This message is the response to the MT028.</li>
-                                    </ul>
-                                </td>
-                                <td>SWIFT</td>
-                                <td>Reserve Bank</td>
-                            </tr>
-                            <tr>
-                                <td>MT096</td>
-                                <td>FINCopy to server destination message.</td>
-                                <td>SWIFT</td>
-                                <td>Reserve Bank</td>
-                            </tr>
-                            <tr>
-                                <td>MT097</td>
-                                <td>FINCopy message authorisation/refusal notification.</td>
-                                <td>Reserve Bank</td>
-                                <td>SWIFT</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed:</p>
+                        <p>- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.</p>
+                        <p>- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the &lt;text-block&gt;, and has been forced to abort it instead.</p>
+                        <p>- MT028 - FINCopy message status report.</p>
+                        <p>- MT029 - Copy message status report (response to the MT028).</p>
+                        <p>- MT096 - FINCopy to server destination message.</p>
+                        <p>- MT097 - FINCopy message authorisation/refusal notification.</p>
+                    </div>
                 </div>
+                <p>This clause has been deleted (UG2025 November 2025).</p>
             </div>
         </div>
         <div class="clause-row">
@@ -362,6 +322,12 @@
                 <p>Removed 1.4 Message lifecycle, as this relates to payments.</p>
             </div>
         </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="1.4">Message lifecycle, as this relates to payments</div>
+            <div class="level1">
+                <p>This clause has been deleted (UG2025 November 2025).</p>
+            </div>
+        </div>
         <h1 class="section-heading">Chapter 2: SWIFT message header details</h1>
         <div class="tag-standards"></div>
         <div class="clause-row">
@@ -405,6 +371,10 @@
 			HVCS clearing and settlement process.</p>
                     </div>
                 </div>
+                <li>This clause has been deleted (UG2025 November 2025).</li>
+                <li>This clause has been deleted (UG2025 November 2025).</li>
+                <li>This clause has been deleted (UG2025 November 2025).</li>
+                <li>This clause has been deleted (UG2025 November 2025).</li>
             </ol>
         </div>
         <div class="doc-comment" data-change-id="UG2025">
@@ -416,6 +386,8 @@
                 <p>Removed - Chapter 3: Customer credit transfer (SCP)</p>
             </div>
         </div>
+        <h1 class="section-heading">Chapter 3: Customer credit transfer (SCP)</h1>
+        <div>This chapter has been deleted (UG2025 November 2025).</div>
         <div class="doc-comment" data-change-id="UG2025">
             <div class="doc-comment-meta">
                 <span class="doc-comment-id">UG2025</span>
@@ -425,6 +397,8 @@
                 <p>Removed - Chapter 4: Customer Credit Transfer (Cross border redirection)</p>
             </div>
         </div>
+        <h1 class="section-heading">Chapter 4: Customer Credit Transfer (Cross border redirection)</h1>
+        <div>This chapter has been deleted (UG2025 November 2025).</div>
         <div class="doc-comment" data-change-id="UG2025">
             <div class="doc-comment-meta">
                 <span class="doc-comment-id">UG2025</span>
@@ -434,6 +408,8 @@
                 <p>Removed - Chapter 5: Formats for financial institution transfers</p>
             </div>
         </div>
+        <h1 class="section-heading">Chapter 5: Formats for financial institution transfers</h1>
+        <div>This chapter has been deleted (UG2025 November 2025).</div>
         <div class="doc-question" data-change-id="UG2025">
             <div class="doc-question-meta">
                 <span class="doc-question-id">UG2025</span>
@@ -441,6 +417,10 @@
             </div>
             <div class="doc-question-content">
                 <p>I am not sure we need to retain any of Chapter 6!</p>
+                <p>If this chapter specifies the format for 2 of the notification message types that FINCopy
+		sends to an instructing agent, and we are no longer using FINcopy, then we probably don&apos;t
+		need this at all.</p>
+                <p>We may just need to retain ESAS rejection codes.</p>
             </div>
         </div>
         <h1 class="section-heading">Chapter 6: FINCopy system messages advising HVCS payment status</h1>
@@ -605,9 +585,18 @@
         <div class="clause-row">
             <div class="clause-heading" data-number="6.4">ESAS rejection codes</div>
             <div class="level1">
+                <div class="doc-comment" data-change-id="UG2025">
+                    <div class="doc-comment-meta">
+                        <span class="doc-comment-id">UG2025</span>
+                        <span class="doc-comment-initials">RK</span>
+                    </div>
+                    <div class="doc-comment-content">
+                        <p>Removed: &apos; (refer to Clause 1.4 Message lifecycle)&apos;</p>
+                    </div>
+                </div>
                 <p>The following table contains ESAS rejection codes for AVP and SBI and explanations of why ESAS applies
 		each code when ESAS validates the structure of an MT096 system message but the content of the message
-		fails business rules validation (refer to Clause 1.4 Message lifecycle):</p>
+		fails business rules validation:</p>
             </div>
         </div>
         <div class="table-scroll">
@@ -733,9 +722,17 @@
                         <td>
                             <div>The payment message must have a Settlement Date that is NZ business day for:</div>
                             <div>
+                                <div class="doc-comment" data-change-id="UG2025">
+                                    <div class="doc-comment-meta">
+                                        <span class="doc-comment-id">UG2025</span>
+                                        <span class="doc-comment-initials">RK</span>
+                                    </div>
+                                    <div class="doc-comment-content">
+                                        <p>Removed: &apos;, and until 21 April 2023, SBI.</p>
+                                    </div>
+                                </div>
                                 <ul class="bullets">
-                                    <li>AVP, and</li>
-                                    <li>until 21 April 2023, SBI.</li>
+                                    <li>AVP</li>
                                 </ul>
                             </div>
                         </td>
@@ -841,128 +838,41 @@
                 </tbody>
             </table>
         </div>
-        <br/>
-        <div class="table-scroll">
-            <table class="pnz-table">
-                <thead>
-                    <th>MT103 Parameter</th>
-                    <th>Live</th>
-                    <th>Test and training</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>List of field tags to be copied</td>
-                        <td>20, 32A, 52</td>
-                        <td>20, 32A, 52</td>
-                    </tr>
-                    <tr>
-                        <td>Field Tag containing the Value Date</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                    </tr>
-                    <tr>
-                        <td>Field Tag containing the Currency</td>
-                        <td>32A</td>
-                        <td>32A</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed: &apos;MT103 Parameter Table</p>
+            </div>
         </div>
-        <br/>
-        <div class="table-scroll">
-            <table class="pnz-table">
-                <thead>
-                    <th>MT202 Parameter</th>
-                    <th>Live</th>
-                    <th>Test and training</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>List of field tags to be copied</td>
-                        <td>20, 32A</td>
-                        <td>20, 32A</td>
-                    </tr>
-                    <tr>
-                        <td>Field Tag containing the Value Date</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                    </tr>
-                    <tr>
-                        <td>Field Tag containing the Currency</td>
-                        <td>32A</td>
-                        <td>32A</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed: &apos;MT202 Parameter Table</p>
+            </div>
         </div>
-        <br/>
-        <div class="table-scroll">
-            <table class="pnz-table">
-                <thead>
-                    <th>MT205 Parameter</th>
-                    <th>Live</th>
-                    <th>Test and training</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>List of field tags to be copied</td>
-                        <td>20, 32A</td>
-                        <td>20, 32A</td>
-                    </tr>
-                    <tr>
-                        <td>Field Tag containing the Value Date</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                    </tr>
-                    <tr>
-                        <td>Field Tag containing the Currency</td>
-                        <td>32A</td>
-                        <td>32A</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed: &apos;MT205 Parameter Table</p>
+            </div>
         </div>
-        <br/>
-        <div class="table-scroll">
-            <table class="pnz-table">
-                <thead>
-                    <th>Parameter</th>
-                    <th>Live</th>
-                    <th>Test and training</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>FIN Copy service mode</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                    </tr>
-                    <tr>
-                        <td>FIN Copy fallback mode</td>
-                        <td>Bypass</td>
-                        <td>Bypass</td>
-                    </tr>
-                    <tr>
-                        <td>FIN-Copy primary server destination – SPA001 (101)</td>
-                        <td>ESASNZ2A</td>
-                        <td>ZYAMNZ20</td>
-                    </tr>
-                    <tr>
-                        <td>FIN-Copy secondary server destination – SPA002 (102)</td>
-                        <td>ESASNZ2A</td>
-                        <td>ZYANNZ20</td>
-                    </tr>
-                    <tr>
-                        <td>MT012</td>
-                        <td>Yes</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td>Start Date</td>
-                        <td>21-Nov-15</td>
-                        <td>2-May-15</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Removed: &apos;FIN Copy Parameter Table</p>
+            </div>
         </div>
     </body>
 </html>

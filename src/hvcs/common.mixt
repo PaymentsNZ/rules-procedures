@@ -241,7 +241,16 @@ import [
 				`FIN message`
 			)
 		]
-		pnz::question( "UG2025", "JW", "Is it safe to remove MT010, MT011, MT012 and MT019?" )
+		pnz::question( "UG2025", "JW",
+			`Is it safe to remove:`
+			`- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired.`
+			`- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered.`
+			`- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the <text-block>, and has been forced to abort it instead.`
+		)
+		pnz::comment( "UG2025", "RK",
+			`Removed:`
+			`- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.`
+		)
 		[
 			pnz::bold( "System message" )
 			pnz::text(
@@ -250,7 +259,6 @@ import [
 			pnz::bullets(
 				`MT010;`
 				`MT011;`
-				`MT012;`
 				`MT019;`
 				`xsys.002;`
 				`xsys.003;`
@@ -833,9 +841,13 @@ import [
 		"1.6"
 		"No revoking after settlement"
 
+		pnz::comment( "UG2025", "RK",
+			`Replaced: 'section 156R of the Banking (Prudential Supervision) Act 1989.'`
+			`With: 'section 55 of the Financial Markets Infrastructure Act 2021.'`
+		)
 		`As HVCS payments are made through the Reserve Bank's designated settlement system, ESAS, they cannot
 		be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms
-		and conditions and section 156R of the Banking (Prudential Supervision) Act 1989.2.`
+		and conditions and section 55 of the Financial Markets Infrastructure Act 2021.`
 	)
 
 	pnz::tag_standards
@@ -850,8 +862,8 @@ import [
 		pnz::level2(
 			`as soon as practicable after making the decision to return it, and`
 
-			pnz::comment( "UG2025", "RK", "Revised from Part F - Co-existence Procedures to Part D." )
-			`in accordance with Part D - MX Procedures and the applicable message standards.`
+			pnz::comment( "UG2025", "RK", "Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications." )
+			`in accordance with Part D - MX Procedures and the MX Message Specifications.`
 		)
 	)
 
@@ -871,10 +883,10 @@ import [
 		the HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS
 		instruction.`
 		
-		`The following diagram summarises the processes that apply if the HVCS instruction contains an error.`	
-		
-		pnz::question( "UG2025", "RK", "Insert flow diagram here." )
+		`The following diagram summarises the processes that apply if the HVCS instruction contains an error.`		
 	)
+
+	pnz::image( "images/hvcs_common_error_process.png", "Error Process" )
 
 	pnz::tag_standards
 
@@ -995,9 +1007,8 @@ import [
 
 		`The following diagram gives an overview of the processes that apply if the instructing agent proposes
 		to send an HVCS instruction after 16:45. The diagram has no legal effect.`
-
-		pnz::question( "UG2025", "RK", "Insert flow diagram here." )
 	)
+	pnz::image( "images/hvcs_common_late_processing.png", "Late Processing" )
 
 	pnz::tag_standards
 
@@ -1103,48 +1114,7 @@ import [
 		"3.5"
 		"Evening session participants"
 
-		`Participants who send and receive financial institution credit transfers during the CLS evening
-		session are:`
-
-		pnz::question( "UG2025", "JW", "Checking the participant list - no ICBC, BOC AKL, CCB, or MUFG?" )
-		pnz::table(
-			#table(
-				[
-					"Participants"
-					"Date"
-				]
-				[
-					[
-						`ANZ Bank New Zealand Limited`
-						`1 October 2010`
-					]
-					[
-						`ASB Bank Ltd`
-						`1 October 2010`
-					]
-					[
-						`Bank of China (New Zealand) Limited`
-						`4 December 2020`
-					]
-					[
-						`Bank of New Zealand`
-						`1 October 2010`
-					]
-					[
-						`Citibank, N.A.`
-						`1 October 2010`
-					]
-					[
-						`HSBC`
-						`1 October 2010`
-					]
-					[
-						`Westpac New Zealand Limited`
-						`1 October 2010`
-					]
-				]
-			)
-		)
+		pnz::bold( "This clause has been deleted (UG2025 November 2025)." )
 	)
 	/*
 	`1 Participants should also carefully read Parts 1, 15 and 19 of the Payments NZ Rules to fully understand the operation of the HVCS Clearing and Settlement Rules.  Parts 5, 9-11A, 14 and 16-18 may also be relevant to HVCS instructions in certain circumstances.`

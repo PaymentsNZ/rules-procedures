@@ -159,14 +159,12 @@ img, table {
 /* Diagram image — force it to track container width during layout */
 .diagram img {
   display: block;
-  width: 100%;      /* not just max-width — forces shrink */
   max-width: 100%;
   height: auto;
   border: 0px solid #ccc;
   padding: 0.5rem;
   background: #f9f9f9;
   box-sizing: border-box;  /* include padding in the 100% width */
-
 }
 
 .logo {
@@ -358,8 +356,30 @@ img, table {
   display: inline-block;
 }
 
+/* The code block becomes a grid with one content-sized column */
+code.xml-snippet {
+  display: grid;
+  grid-template-columns: max-content; /* column width = widest content */
+  grid-auto-rows: auto;               /* one row per child */
+  justify-items: start;               /* DO NOT stretch items */
+  justify-content: start;             /* pin the grid to the left */
+  font-family: monospace;
+  overflow-x: auto;                   /* scroll if a single line is very long */
+
+  /* if the parent is flex/grid and centers children */
+  align-self: flex-start;             /* flex parent */
+  justify-self: start;                /* grid parent */
+}
+
+/* Each line: keep indentation, no extra spacing */
+code.xml-snippet div {
+  white-space: pre;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
 .xml-snippet {
-  display: block;
   font-family: monospace;
   background: #f7f7f7;
   padding: 0.75rem;
@@ -367,9 +387,6 @@ img, table {
   border-radius: 4px;
   overflow-x: auto;               /* long lines scroll, don’t wrap */
   tab-size: 2;
-}
-.xml-snippet div {
-  white-space: pre; /* preserve indentation*/
 }
 
 /*

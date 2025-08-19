@@ -194,11 +194,21 @@ import [
 		standards. It also enables participants to compare the MX Message Specifications to other industry standards
 		such as CBPR+ and HVPS+.`
 	
-		pnz::comment( "UG2025", "RK", "Add link" )
-		`You can access Payments NZ's MyStandards Community here.`
-	
-		pnz::comment( "UG2025", "RK", "Add link" )
-		`The MyStandards Help page can be accessed here.`
+		[
+			pnz::text( `You can access Payments NZ's MyStandards Community` )
+			pnz::external_link(
+				"here"
+				"https://www2.swift.com/mystandards/#/mp/mx/_UGFHcDffEeydxtAHaBBOTg!usage_guidelines"
+			)
+		]
+
+		[
+			pnz::text( `The MyStandards Help page can be accessed` )
+			pnz::external_link(
+				"here"
+				"https://www2.swift.com/mystandards/#/help"
+			)
+		]
 	)
 
 	pnz::clause(
@@ -249,8 +259,8 @@ import [
 				This includes the technical layout of the XML formatted messages, plus the expected content.`
 			)
 		]
-		
-		pnz::question( "UG2025", "RK", "Insert missing picture (ISO 20022 Standard + Restrictions == Usage Guideline.)" )
+
+		pnz::image( "images/hvcs_mx_standards_plus_restrictions.png", "ISO 20022 Standards + Restructions = Usage Guideline" )
 		[
 			pnz::bold( "ISO 20022 base standards" )
 			pnz::text(
@@ -333,7 +343,7 @@ import [
 		[
 			pnz::bold( "Content View" )
 			pnz::text(
-				`Content View shows the ISO 20022base standard and the restrictions that have been applied to it.`
+				`Content View shows the ISO 20022 base standard and the restrictions that have been applied to it.`
 			)
 		]
 
@@ -433,7 +443,7 @@ import [
 		— Co-existence Procedures must:`
 		
 		pnz::level2(
-			`send MX messages that conform with this part D and the MX Message Specifications, and`
+			`send MX messages that conform with this Part D and the MX Message Specifications, and`
 			`receive and process MX messages that conform with this Part D and the MX Message Specifications.`
 		)
 	)
@@ -448,7 +458,7 @@ import [
 			)
 			pnz::bold( "must" )
 			pnz::text(
-				`validate that the MX messages it sends conform to the approved MX Message Specifications`
+				`validate that the MX messages it sends conform to the approved MX Message Specifications.`
 			)
 		]
 		
@@ -490,16 +500,16 @@ import [
 		"2.4"
 		"Charges for cross border redirections"
 
-		`an instructing agent proposes to deduct a charge from an inward cross border redirection before sending the
+		`If an instructing agent proposes to deduct a charge from an inward cross border redirection before sending the
 		HVCS payment to the AVP MX CUG transaction delivery system for settlement,—`
 
 		pnz::level2(
 			`SWIFT requirements apply to the Interbank Settlement Amount, Instructed Amount and Exchange Rate plus the
-			associated charges fields of Charge Bearer and Charges Information and`
+			associated charges fields of Charge Bearer and Charges Information; and`
 			
 			`the amount of the charge is determined by the instructing agent and its overseas customer.`
 		)
-		`instructed agent that receives a cross border redirection must not deduct a charge from the HVCS payment.`
+		`An instructed agent that receives a cross border redirection must not deduct a charge from the HVCS payment.`
 	)
 	pnz::clause(
 		"2.5"
@@ -520,14 +530,14 @@ import [
 		]
 
 		pnz::level2(
-			`amount specified in Charges Information is the amount of the charge; and`
+			`the amount specified in Charges Information is the amount of the charge; and`
 			
-			`the amount in the Interbank Settlement Amount of the redirected message by the amount in Charges Information
+			`reduce the amount in the Interbank Settlement Amount of the redirected message by the amount in Charges Information
 			that is owed by referencing the BIC identified in the Agent sub-element of the Charges Information field; and`
 			
-			`content of Charge Bearer in the redirected message should remain as DEBT; and`
+			`the content of Charge Bearer in the redirected message should remain as DEBT; and`
 			
-			`content of the Charges Information field should remain unchanged throughout the entire payment chain.`
+			`the content of the Charges Information field should remain unchanged throughout the entire payment chain.`
 		)
 
 		[
@@ -538,12 +548,12 @@ import [
 		]		
 
 		pnz::level2(
-			`instructing agent may claim a charge from the debtor agent, but must not deduct the charge from the amount
+			`the instructing agent may claim a charge from the debtor agent, but must not deduct the charge from the amount
 			of the cross border redirection; and`
 
-			`content of Charge Bearer in the redirected message should remain as DEBT.`
+			`the content of Charge Bearer in the redirected message should remain as DEBT.`
 
-			`currency transactions redirected after conversion to NZD:  If an instructing agent proposes to deduct a charge
+			`Foreign currency transactions redirected after conversion to NZD:  If an instructing agent proposes to deduct a charge
 			from the Interbank Settlement Amount of a cross border redirection (even if Charge Bearer contains DEBT) the
 			following applies—`
 
@@ -591,18 +601,18 @@ import [
 			)
 		]
 
-		`an instructing agent proposes to deduct a charge from an inward cross border redirection before sending the HVCS
+		`If an instructing agent proposes to deduct a charge from an inward cross border redirection before sending the HVCS
 		payment to the AVP MX CUG transaction delivery system for settlement, the following rules apply:`
 		
 		pnz::level2(
 			`if the Instructed Amount is not present on the inward cross border redirection and the instructing agent
 			proposes to deduct the charge from the Interbank Settlement Amount, the instructing agent must create new
-			Instructed Amount element containing the Interbank Settlement Amount of the inward cross border redirection:`
+			Instructed Amount element containing the Interbank Settlement Amount of the inward cross border redirection;`
 
 			`if the Instructed Amount is present on the inward cross border redirection, the instructing agent must deduct
-			the charge from the Interbank Settlement amount with no action on Instructed Amount:`
+			the charge from the Interbank Settlement amount with no action on Instructed Amount;`
 
-			`the instructing agent must create new Instruction Information element and enter the amount deducted:`
+			`the instructing agent must create new Instruction Information element and enter the amount deducted; and`
 
 			`the instructing agent should leave the Charge Bearer unchanged as CRED or SHAR.`
 		)
@@ -842,20 +852,15 @@ import [
 		"External code lists"
 
 		pnz::nonumber(
-			`Several elements within the MX Message Specifications refer to 'External Code Lists'. These code lists are
-			 maintained by SWIFT (through their quarterly release cycle) and are published for use here. Unless otherwise
-			 stated in the MX Message Specifications, the HVCS does not restrict use of any of these codes.`
-		)
-	)
-
-	pnz::clause(
-		"3.3"
-		"External code lists"
-
-		pnz::nonumber(
-			`Several elements within the MX Message Specifications refer to 'External Code Lists'. These code lists are
-			 maintained by SWIFT (through their quarterly release cycle) and are published for use here. Unless otherwise
-			 stated in the MX Message Specifications, the HVCS does not restrict use of any of these codes.`
+			pnz::text( `Several elements within the MX Message Specifications refer to` )
+			pnz::external_link(
+				"External Code Lists"
+				"http://www.iso20022.org/catalogue-messages/additional-content-messages/external-code-sets"
+			)
+			pnz::text(
+			 `. These code lists are maintained by SWIFT (through their quarterly release cycle) and are published for use here. Unless
+			 otherwise stated in the MX Message Specifications, the HVCS does not restrict use of any of these codes.`
+			)
 		)
 	)
 
@@ -863,7 +868,8 @@ import [
 		"3.4"
 		"BICs"
 
-		`The BIC element will form a mandatory component in the SWIFTNet Header and BAH. The BIC must be a production BIC
+		pnz::comment( "UG2025", "RK", "Changed (1) to present tense." )
+		`The BIC element forms a mandatory component in the SWIFTNet Header and BAH. The BIC must be a production BIC
 		and contain 11 characters, either BIC11 or BIC8 + 'XXX'. The BIC8 used in both of these message components must
 		be identical in specific fields as outlined below, and published in the SWIFTNet Directory. Note that the
 		3-character Branch Identifier may be published or unpublished.`
@@ -882,7 +888,7 @@ import [
 			
 			`The BIC8 in the From element of the BAH must be identical to the corresponding BIC8 in the instructing agent
 			of the message payload unless the message is generated using the ESAS FSI function (sender BIC is prefixed with
-			RBNZNZ);`
+			RBNZNZ).`
 		)
 
 		pnz::question( "UG2025", "RK", "What is the replacement for the RBNZ Confluence website?")
@@ -910,9 +916,17 @@ import [
 		Interact Headers and the Business Application Headers for the Sender and Receiver.`
 
 		pnz::question( "UG2025", "RK", "Add hyperlink.")
-		`The sender and receiver address in FIN message services will be based on BIC11. However, for InterAct messaging
-		services, they will be based on DNs, namely Requestor DN and Responder DN. Further information can be accessed via
-		SWIFT.com Knowledge Centre SWIFTNet Name and Addressing Guide.`
+		[
+			pnz::text(
+				`The sender and receiver address in FIN message services will be based on BIC11. However, for InterAct messaging
+				services, they will be based on DNs, namely Requestor DN and Responder DN. Further information can be accessed via
+				SWIFT.com Knowledge Centre`
+			)
+			pnz::external_link(
+				"SWIFTNet Name and Addressing Guide."
+				"https://www2.swift.com/knowledgecentre/publications/sn_nam_addr_guid/1.0?topic=con_27467.htm"
+			)
+		]
 
 		`A DN follows a hierarchical naming principle and consists of LDAP attributes like cn (common name) ou
 		(organizational unit) uid (user identifier) and o (organization). These are given in comma separated order of hierarchy
@@ -953,8 +967,15 @@ import [
 		BIC or Name and Address to keep usage consistent with CBPR+.`
 
 		pnz::question( "UG2025", "RK", "Add hyperlink")
-		`The Payments Market Practice Group (PMPG) have provided extensive guidance in their paper Global adoption of the LEI
-		(Legal Entity Identifier) in ISO 20022 payment messages.`
+		[
+			pnz::text(
+				`The Payments Market Practice Group (PMPG) have provided extensive guidance in their paper`
+			)
+			pnz::external_link(
+				"Global adoption of the LEI (Legal Entity Identifier) in ISO 20022 payment messages."
+				"https://www.swift.com/about-us/community/swift-advisory-groups/payments-market-practice-group/disclaimer/swift-payments-market-practice-group-document-centre?category%5B0%5D=168961"
+			)
+		]
 	)
 
 	pnz::clause(
@@ -964,7 +985,7 @@ import [
 		`There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.`
 		
-		pnz::question( "UG2025", "RK", "Check for changes in CBPR+ definition.")
+		pnz::comment( "UG2025", "RK", "Confirmed no change in CBPR+ definition.")
 		`Unstructured remittance information <RmtInf/Ustrd> allows 1x140 characters (to align with HVPS+ and CBPR+).`
 
 		pnz::tag_standards
@@ -991,10 +1012,19 @@ import [
 		20022 format in an overseas market infrastructure before transitioning to CBPR+ and then to NZ HVCS as part of its journey
 		through the chain of agencies.`
 
-		pnz::question( "UG2025", "RK", "Add hyperlink.")
-		`The Payments Market Practice Group (PMPG) publish the structured address format guidance for each country to SWIFT's
-		Document Centre. See ISO 20022 Structure Postal Address to download this. Note the content of the document is not validated
-		anywhere on the SWIFT network.`
+		[
+			pnz::text(
+				`The Payments Market Practice Group (PMPG) publish the structured address format guidance for each country to SWIFT's
+				Document Centre. See`
+			)
+			pnz::external_link(
+				"ISO 20022 Structure Postal Address"
+				"https://www.swift.com/about-us/community/swift-advisory-groups/payments-market-practice-group/disclaimer/swift-payments-market-practice-group-document-centre"
+			)
+			pnz::text(
+				` to download this. Note the content of the document is not validated anywhere on the SWIFT network.`
+			)			
+		]
 
 		`Non-location addresses (for example PO Box addresses, Private Bags, Lobbies etc.) do not form part this guidance for debtor
 		and creditor identification because they are not expected to be used for this purpose.`
@@ -1130,7 +1160,7 @@ import [
 
 	pnz::comment( "UG2025", "RK", "Added.")
 	pnz::clause(
-		"3.9B"
+		"3.9A"
 		"HVCS hybrid address line formatting"
 
 		`Hybrid address line formatting is a fallback where structured address line formatting
@@ -1287,11 +1317,10 @@ import [
 		"3.13"
 		"HVCS character sets"
 		
-		""
-
+		pnz::comment( "UG2025", "RK", "Change 'HVCS specifications' to 'MX Message Specifications'" )
 		[
 			pnz::text(
-				`The character sets used within the HVCS specifications are aligned to CBPR+ though
+				`The character sets used within the MX Message Specifications are aligned to CBPR+ though
 				extended to support upper case and lower case Te Reo Māori macron characters within
 				the Name, Address and Remittance elements.  This technical capability for Te Reo is
 				for future proofing only and`
@@ -1305,8 +1334,9 @@ import [
 			)
 		]
 
-		`The following table shows the macron characters that are included in the MX message
-		specification along with their Unicode value:`
+		pnz::comment( "UG2025", "RK", "Capitalised: 'MX Message Specifications'" )
+		`The following table shows the macron characters that are included in the MX Message
+		Sspecification along with their Unicode value:`
 
 		pnz::table(
 			#table(
@@ -1360,7 +1390,7 @@ import [
 		
 		pnz::level2(
 			`The scheme name (DbtrAcct / Id / Other / SchmeNm / Cd) must be populated where the identifier
-			represents a NZ Basic Bank Account using the following values:`
+			represents a NZ Basic Bank Account using the following values; and`
 			
 			pnz::level3(
 				`BBAN — Basic Bank Account Number identification`
@@ -1410,8 +1440,8 @@ import [
 			represent particulars, code, and reference information ('PCR') as follows:`
 			
 			pnz::level3(
-				`occurence 1: particulars:`
-				`occurence 2: code:`
+				`occurence 1: particulars;`
+				`occurence 2: code;`
 				`occurence 3: reference; and`
 			)
 			
@@ -1715,7 +1745,7 @@ import [
 			`xsys.011 Delivery Notification`
 		)
 
-		`All system messages are exchanged outside of the AVP MX CUG`
+		`All system messages are exchanged outside of the AVP MX CUG.`
 
 		`The schemas for the xcop.001 and xsys.xxx system messages, together with some sample HVCS Y-Copy
 		messages, can be found on MyStandards.`
@@ -2098,7 +2128,7 @@ import [
 							pnz::bold( "Note:" )
 							pnz::text(
 								`This is only provided if the payment message passes initial validation but
-								is subsequentlyrejected by ESAS (i.e. due to insufficient liquidity).`
+								is subsequently rejected by ESAS (i.e. due to insufficient liquidity).`
 							)
 						]						
 					]
@@ -2148,7 +2178,7 @@ import [
 
 		`The HVCS Y-Copy will generate either an Authorisation Notification (xsys.002) or Refusal
 		Notification (xsys.003) system message in response to each pacs.008, pacs.009 (CORE/COV) or pacs.004
-		payment message sent for clearing, so the will always receive a system message confirming clearing
+		payment message sent for clearing, so the sender will always receive a system message confirming clearing
 		status of each payment message.`
 
 		`There are two options for linking an xsys.002 authorisation notification back to the original
@@ -2195,7 +2225,8 @@ import [
 		`The SWIFTNet Y-Copy service generates the Non-Delivery Warning (xsys.010) system message when a
 		message is considered to be overdue (not delivered within the time frame specified by the sender).`
 
-		`The xsys.010 system message directly corresponds to the MT010 system message and is optional.`
+		pnz::comment( "UG2025", "RK", "Removed: 'directly corresponds to the MT010 system message and'" )
+		`The xsys.010 system message is optional.`
 
 		`The sender of an HVCS instruction can select the Non-Delivery Warning feature indicating in the
 		SWIFTNet Header the period of time after which they require notification if the HVCS instruction
@@ -2267,9 +2298,9 @@ import [
 						`The payment message has one or more validation errors, such as:`
 						pnz::bullets(
 							`Duplicate tags`
-							`The instructing agents or instructed agents are inactivated or unknown.`
+							`The instructing agents or instructed agents are inactivated or unknown`
 							`Invalid settlement date`
-							`Invalid amount`
+							`Invalid amount.`
 						)
 					]
 				]

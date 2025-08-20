@@ -220,10 +220,7 @@ import [
 				of these SCP Procedures.`
 			)
 
-			`If the SCP does not specify a BIC for the creditor and the SCP specifies a credit card number
-			or a scheme debit card number for the creditor, the instructing agent must ensure that the
-			credit card number or scheme debit card number is a valid card number in accordance with the
-			requirements in the applicable message standards.`
+			`Clause 1.5(2)(b) has been deleted.`
 
 			`If the SCP does not specify a BIC for the creditor and the SCP specifies an account number for
 			the creditor, the instructing agent must ensure that the account number is a valid account
@@ -318,12 +315,6 @@ import [
 	pnz::clause(
 		"1.7"
 		"Overview of notifications for inter-bank SCPs"
-
-		`It is optional for the instructing agent to offer the service of providing the debtor with a 'remitter
-		notification'.  A remitter notification service requires the instructing agent to notify the debtor that
-		the instructing agent has settled the SCP.`
-
-		//pnz::industry_feedback( "ANZ", "Please review" )
 
 		`It is optional for the instructing agent to offer the service of providing the debtor with a 'remitter
 		notification'.  A remitter notification service requires the instructing agent to notify the debtor that
@@ -591,7 +582,7 @@ import [
 			`1.8(7)(g)`
 			`1.9(7)(g)`
 			`1.10(5)(g)`
-			`2.9(g)`
+			`2.9(6)(g)`
 		)
 
 		`The participant should:`
@@ -797,51 +788,51 @@ import [
 				`the participant cannot return the amount of the SCP to the debtor without the explicit consent
 				of the creditor.`
 			)
+		)
 
-			`The participant must send the on-us beneficiary notification to the creditor by email.`
+		`The participant must send the on-us beneficiary notification to the creditor by email.`
 
-			`If the participant tries to send the creditor the on-us beneficiary notification using an email
-			address but the email is not delivered (because, for example, the email address is not valid),
-			the participant is not required to—`
+		`If the participant tries to send the creditor the on-us beneficiary notification using an email
+		address but the email is not delivered (because, for example, the email address is not valid),
+		the participant is not required to—`
 
-			pnz::level3(
-				`try to use the email address again to notify the creditor; or`
-				`arrange to use another method of notification; or`
-				`ask the debtor to verify the email address provided by the debtor.`
-			)
+		pnz::level2(
+			`try to use the email address again to notify the creditor; or`
+			`arrange to use another method of notification; or`
+			`ask the debtor to verify the email address provided by the debtor.`
+		)
 
-			`The participant must ensure that the on-us beneficiary notification contains the following as a
-			minimum:`
+		`The participant must ensure that the on-us beneficiary notification contains the following as a
+		minimum:`
 
-			pnz::level3(
-				`the name of the participant:`
+		pnz::level2(
+			`the name of the participant:`
 
-				`the date of the notification:`
+			`the date of the notification:`
 
-				`a heading containing the words 'On-us Beneficiary notification' clearly at the top of the
-				notification:`
+			`a heading containing the words 'On-us Beneficiary notification' clearly at the top of the
+			notification:`
 
-				`a statement containing words with the following effect: 'We have credited the following
-				same-day cleared payment to the account specified. The payment is in cleared funds and we
-				cannot reverse it.':`
+			`a statement containing words with the following effect: 'We have credited the following
+			same-day cleared payment to the account specified. The payment is in cleared funds and we
+			cannot reverse it.':`
 
-				`the name of the debtor:`
+			`the name of the debtor:`
 
-				`the creditor's account name or BIC:`
+			`the creditor's account name or BIC:`
 
-				`enough information to enable the creditor to identify the creditor's account number, or,
-				for a credit card or scheme debit card, the creditor's primary account number (see clause
-				1.11 of these SCP Procedures for guidance):`
+			`enough information to enable the creditor to identify the creditor's account number, or,
+			for a credit card or scheme debit card, the creditor's primary account number (see clause
+			1.11 of these SCP Procedures for guidance):`
 
-				`the amount of the payment (NZD):`
+			`the amount of the payment (NZD):`
 
-				`a heading that states 'details' or words with a similar meaning followed by the contents
-				of the particulars field, the code field and the reference field.`
-			)
+			`a heading that states 'details' or words with a similar meaning followed by the contents
+			of the particulars field, the code field and the reference field.`
 		)
 	)
 
-	pnz::tag_standards
+	pnz::tag_bestpractice
 	pnz::clause(
 		"2.10"
 		"Notifying debtor of status of on-us SCP"

@@ -159,7 +159,10 @@
                     </div>
                 </div>
                 <li>Chapter 4 provides an overview on data truncation.</li>
-                <li>Chapter 5 provides information on SWIFT&apos;s Transaction Manager.</li>
+                <li>Chapter 5 has been deleted.</li>
+                <li>Chapter 6 has been deleted.</li>
+                <li>Chapter 7 provides a temporary right for participants to receive and process MT payment messages for 4 weeks
+		from the beginning of the co-existence phase.</li>
             </ol>
         </div>
         <h1 class="section-heading">Chapter 1: The journey from MT to MX</h1>
@@ -662,28 +665,6 @@
                         <li>Unstructured Address Line formatting; and</li>
                         <li>Hybrid Address Line formatting.</li>
                     </ol>
-                    <div class="doc-question" data-change-id="UG2025">
-                        <div class="doc-question-meta">
-                            <span class="doc-question-id">UG2025</span>
-                            <span class="doc-question-initials">RK</span>
-                        </div>
-                        <div class="doc-question-content">
-                            <p>Validate with ORWG.</p>
-                        </div>
-                    </div>
-                    <li>
-                        <span>Participants</span>
-                        <span class="bold">may</span>
-                        <span>receive and process the following MT payment messages from other participants</span>
-                        <span>for a period of 4 weeks from 22 November 2025:</span>
-                    </li>
-                    <ol class="level3 level3-counter-reset">
-                        <li>MT103;</li>
-                        <li>MT202;</li>
-                        <li>MT202 COV;</li>
-                        <li>MT205; and</li>
-                        <li>MT205 COV.</li>
-                    </ol>
                 </ol>
                 <li>
                     <span>Return messages:  If returning an HVCS payment, participants</span>
@@ -699,27 +680,6 @@
                     </li>
                     <li>
                         <span>if the original instructed agent receives a pacs.009 COV message, return by sending a pacs.004 message;</span>
-                    </li>
-                    <div class="doc-question" data-change-id="UG2025">
-                        <div class="doc-question-meta">
-                            <span class="doc-question-id">UG2025</span>
-                            <span class="doc-question-initials">RK</span>
-                        </div>
-                        <div class="doc-question-content">
-                            <p>Do we need these for the 4 weeks after 22 November 2025?</p>
-                        </div>
-                    </div>
-                    <li>
-                        <span>if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;</span>
-                    </li>
-                    <li>
-                        <span>if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;</span>
-                    </li>
-                    <li>
-                        <span>if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message;</span>
-                    </li>
-                    <li>
-                        <span>if the original instructed agent receives a MT205 message, return by sending a pacs.004 message;</span>
                     </li>
                 </ol>
                 <li>Receiving and processing other messages</li>
@@ -1136,5 +1096,72 @@
         <div>This chapter has been deleted (UG2025 November 2025).</div>
         <h1 class="section-heading">Chapter 6: Testing required during co-existence</h1>
         <div>This chapter has been deleted (UG2025 November 2025).</div>
+        <div class="doc-comment" data-change-id="UG2025">
+            <div class="doc-comment-meta">
+                <span class="doc-comment-id">UG2025</span>
+                <span class="doc-comment-initials">RK</span>
+            </div>
+            <div class="doc-comment-content">
+                <p>Chapter 7 is new for this coexistence period</p>
+            </div>
+        </div>
+        <h1 class="section-heading">Chapter 7: Receipt of MT payment messages during co-existence</h1>
+        <div class="tag-commentary"></div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="7.1">Purpose and overview</div>
+            <div class="level1">
+                <p>It is possible that some MT payment messages which were sent before 22 November 2025 may be received by
+		participants for a short period on or after 22 November 2025, for example, if an MT payment message took
+		longer than expected to be sent through SWIFT&apos;s messaging system.</p>
+            </div>
+        </div>
+        <div class="tag-standards"></div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="7.2">Effective Term</div>
+            <div class="level1">
+                <p>
+                    <span>This chapter is effective from the beginning of the co-existence phase on 22 November 2025 until the end
+				of the calendar day on 19 December 2025</span>
+                    <span class="bold">(Effective Term).</span>
+                    <span>This chapter ceases to have any effect on and from 20 December 2025.</span>
+                </p>
+            </div>
+        </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="7.3">Effect of Chapter 7</div>
+            <div class="level1">
+                <p>This Chapter 7 applies during the Effective Term notwithstanding any provision to the contrary expressed
+		in any Rule or Standard.</p>
+            </div>
+        </div>
+        <div class="clause-row">
+            <div class="clause-heading" data-number="7.4">Receiving and processing MT payment messages</div>
+            <ol class="level1 level1-counter-reset">
+                <li>
+                    <span>Participants</span>
+                    <span class="bold">may</span>
+                    <span>receive and process the following MT payment messages from other participants for the Effective Term:</span>
+                    <ol class="level2 level2-counter-reset">
+                        <li>MT103;</li>
+                        <li>MT202;</li>
+                        <li>MT202 COV;</li>
+                        <li>MT205; and</li>
+                        <li>MT205 COV.</li>
+                    </ol>
+                </li>
+                <li>
+                    <span>Return messages:  If returning an HVCS payment that was received in MT format during
+				the Effective Term, participants</span>
+                    <span class="bold">must</span>
+                    <span>return the HVCS payment by sending a return message to the original instructing agent as follows:</span>
+                </li>
+                <ol class="level2 level2-counter-reset">
+                    <li>if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;</li>
+                    <li>if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;</li>
+                    <li>if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message; and</li>
+                    <li>if the original instructed agent receives a MT205 message, return by sending a pacs.004 message.</li>
+                </ol>
+            </ol>
+        </div>
     </body>
 </html>

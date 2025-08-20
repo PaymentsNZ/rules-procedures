@@ -147,7 +147,12 @@ import [
 		pnz::comment( "UG2025", "RK", "Removed reference to intermediaries (forwarding data paragraphs removed from chapter 4)." )
 		`Chapter 4 provides an overview on data truncation.`
 
-		`Chapter 5 provides information on SWIFT's Transaction Manager.`
+		`Chapter 5 has been deleted.`
+
+		`Chapter 6 has been deleted.`
+
+		`Chapter 7 provides a temporary right for participants to receive and process MT payment messages for 4 weeks
+		from the beginning of the co-existence phase.`
 	)
 
 	pnz::section_heading( "Chapter 1: The journey from MT to MX" )
@@ -551,20 +556,6 @@ import [
 				`Unstructured Address Line formatting; and`
 				`Hybrid Address Line formatting.`
 			)
-			pnz::question( "UG2025", "RK", "Validate with ORWG." )
-			[
-				pnz::text( "Participants" )
-				pnz::bold( "may" )
-				pnz::text( "receive and process the following MT payment messages from other participants" )
-				pnz::text( "for a period of 4 weeks from 22 November 2025:" )
-			]			
-			pnz::level3(
-				`MT103;`
-				`MT202;`
-				`MT202 COV;`
-				`MT205; and`
-				`MT205 COV.`
-			)
 		)
 		[
 			pnz::text( "Return messages:  If returning an HVCS payment, participants" )
@@ -580,19 +571,6 @@ import [
 			]
 			[
 				pnz::text( "if the original instructed agent receives a pacs.009 COV message, return by sending a pacs.004 message;" )
-			]
-			pnz::question( "UG2025", "RK", "Do we need these for the 4 weeks after 22 November 2025?" )
-			[
-				pnz::text( "if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;" )
-			]
-			[
-				pnz::text( "if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;" )
-			]
-			[
-				pnz::text( "if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message;" )
-			]
-			[
-				pnz::text( "if the original instructed agent receives a MT205 message, return by sending a pacs.004 message;" )
 			]
 		)
 		`Receiving and processing other messages`
@@ -968,6 +946,79 @@ import [
 
 	pnz::section_heading( "Chapter 6: Testing required during co-existence" )
 	"This chapter has been deleted (UG2025 November 2025)."
+
+	pnz::comment( "UG2025", "RK", "Chapter 7 is new for this coexistence period" )
+	pnz::section_heading( "Chapter 7: Receipt of MT payment messages during co-existence" )
+	pnz::tag_commentary
+
+	pnz::nonumber_clause(
+		"7.1"
+		"Purpose and overview"
+	
+		`It is possible that some MT payment messages which were sent before 22 November 2025 may be received by
+		participants for a short period on or after 22 November 2025, for example, if an MT payment message took
+		longer than expected to be sent through SWIFT's messaging system.`
+	)
+
+	pnz::tag_standards
+
+	pnz::nonumber_clause(
+		"7.2"
+		"Effective Term"
+	
+		[
+			pnz::text(
+				`This chapter is effective from the beginning of the co-existence phase on 22 November 2025 until the end
+				of the calendar day on 19 December 2025`
+			)
+			pnz::bold( "(Effective Term)." )
+			pnz::text(
+				`This chapter ceases to have any effect on and from 20 December 2025.`
+			)
+		]
+	)
+	
+	pnz::nonumber_clause(
+		"7.3"
+		"Effect of Chapter 7"
+	
+		`This Chapter 7 applies during the Effective Term notwithstanding any provision to the contrary expressed
+		in any Rule or Standard.`
+	)
+
+	pnz::clause(
+		"7.4"
+		"Receiving and processing MT payment messages"
+	
+		[
+			pnz::text( "Participants" )
+			pnz::bold( "may" )
+			pnz::text(
+				`receive and process the following MT payment messages from other participants for the Effective Term:`
+			)
+			pnz::level2(
+				`MT103;`
+				`MT202;`
+				`MT202 COV;`
+				`MT205; and`
+				`MT205 COV.`
+			)
+		]
+		[
+			pnz::text(
+				`Return messages:  If returning an HVCS payment that was received in MT format during
+				the Effective Term, participants`
+			)
+			pnz::bold( "must" )
+			pnz::text( "return the HVCS payment by sending a return message to the original instructing agent as follows:" )
+		]
+		pnz::level2(
+			"if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;"
+			"if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;"
+			"if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message; and"
+			"if the original instructed agent receives a MT205 message, return by sending a pacs.004 message."
+		)
+	)
 
 	/*
 	`PNZ to reach out to RBNZ to confirm implementation plans for these message types`

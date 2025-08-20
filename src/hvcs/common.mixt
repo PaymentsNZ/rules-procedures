@@ -1114,7 +1114,7 @@ import [
 		"3.5"
 		"Evening session participants"
 
-		pnz::bold( "This clause has been deleted (UG2025 November 2025)." )
+		"This clause has been deleted (UG2025 November 2025)."
 	)
 	/*
 	`1 Participants should also carefully read Parts 1, 15 and 19 of the Payments NZ Rules to fully understand the operation of the HVCS Clearing and Settlement Rules.  Parts 5, 9-11A, 14 and 16-18 may also be relevant to HVCS instructions in certain circumstances.`

@@ -54,8 +54,15 @@ body.document {
 	padding: 0 1rem;
 }
 
+.hvcs-header-logo{
+	flex: 0 0 auto;
+}
+
 .hvcs-header-logo img {
-	height: 32px;
+	min-height: 40px;
+	max-height: 40px;
+	width: auto;             /* keep aspect ratio */
+	max-width: none;         /* override global img { max-width:100% } */
 	display: block;
 }
 
@@ -69,7 +76,15 @@ body.document {
     font-weight: 700;
 	color: #fff;
 	cursor: pointer;
-	line-height: calc(var(--hvcs-header-h) - 8px);
+}
+
+/* Title absorbs pressure (shrinks/ellipses instead of the logo) */
+.hvcs-header-title{
+	flex: 1 1 auto;          /* let title take remaining space */
+	min-width: 0;            /* allow flex item to actually shrink */
+	white-space: wrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .hvcs-header-toggle {
@@ -77,6 +92,7 @@ body.document {
 	margin-left: auto;
 	padding: 0rem .6rem;
 	border-radius: 0px;
+	line-height: calc(var(--hvcs-header-h) - 8px);
 
 	border-top:4px solid transparent;
 	border-bottom:4px solid transparent;          /* reserve space */

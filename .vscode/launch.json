@@ -33,7 +33,22 @@
 				"mixt",
 				"--pretty"
 			]
-		},	
+		},
+		{
+			"name": "View Navigation Definition",
+			"type": "mixt",
+			"request": "launch",
+			"mode": "run",
+			"program": "${workspaceFolder}/src/navigate.mixt",
+			"mixtFlags": [
+				"--logNoPid",
+				"--logLevel",
+				"Info",
+				"--format",
+				"mixt",
+				"--pretty"
+			]
+		},
 		{
 			"name": "Run Conversion",
 			"type": "mixt",

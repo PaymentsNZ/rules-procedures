@@ -1,0 +1,115 @@
+/* ====== Tokens (tweak later) ====== */
+:root{
+	--hvcs-header-h: 64px;
+	--hvcs-toc-w: 320px;
+	--hvcs-brand: #1a3a5b;
+	--hvcs-text: #1a2840;
+	--hvcs-panel: #fff;
+	--hvcs-line: #d7dde5;
+	--hvcs-hover: rgba(0,0,0,.05);
+  }
+  
+  /* Smooth anchor jumps + offset for fixed header */
+  html{ scroll-behavior:smooth; }
+  .section-heading, .clause-heading { scroll-margin-top: calc(var(--hvcs-header-h) + 12px); }
+  
+  /* ====== Header ====== */
+  .hvcs-header{
+	position: sticky; top: 0; z-index: 1000;
+	height: var(--hvcs-header-h);
+	background: var(--hvcs-brand); color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.06);
+  }
+  .hvcs-header-inner{ display:flex; align-items:center; gap:1rem; height:100%; padding:0 1rem; }
+  .hvcs-header-logo img{ height:32px; display:block; }
+  .hvcs-header-title{ font-weight:600; }
+  .hvcs-header-toggle{ display:none; margin-left:auto; color:#fff; cursor:pointer; padding:.35rem .6rem; border-radius:6px; }
+  
+  /* Header doc switcher */
+  .hvcs-docswitcher ul{ display:flex; gap:.5rem; list-style:none; margin:0 0 0 auto; padding:0; }
+  .hvcs-docswitcher a{
+	color:#fff; text-decoration:none; padding:.25rem .5rem; border-radius:6px;
+  }
+  .hvcs-docswitcher a.active{ background:rgba(255,255,255,.18); }
+  
+  /* ====== One NAV for all modes ====== */
+  .hvcs-toc{
+	background: var(--hvcs-panel);
+	border-right: 1px solid var(--hvcs-line);
+  }
+  
+  /* Desktop layout: sidebar + content using body grid */
+  @media (min-width: 1000px){
+	body.document{
+	  display:grid;
+	  grid-template-columns: var(--hvcs-toc-w) 1fr;
+	  grid-template-rows: var(--hvcs-header-h) auto;
+	  grid-template-areas: "header header" "toc main";
+	  column-gap: 0;
+	}
+	.hvcs-header{ grid-area: header; }
+	#hvcs-toc{
+	  grid-area: toc; position: sticky; top: var(--hvcs-header-h);
+	  align-self:start; max-height: calc(100dvh - var(--hvcs-header-h));
+	  overflow:auto; padding:1rem;
+	}
+	.hvcs-content{ grid-area: main; padding: 1.25rem; }
+	.hvcs-header-toggle{ display:none; }
+  }
+  
+  /* Mobile: off-canvas drawer (checkbox sibling) */
+  @media (max-width: 999px){
+	.hvcs-docswitcher{ display:none; }
+	.hvcs-header-toggle{ display:inline-block; }
+	#hvcs-toc{
+	  position: fixed; z-index: 1100;
+	  top: var(--hvcs-header-h); left: 0; bottom: 0;
+	  width: min(85vw, 360px); background: var(--hvcs-panel);
+	  border-right:1px solid var(--hvcs-line);
+	  transform: translateX(-100%); transition: transform .22s ease;
+	  overflow:auto; padding:1rem;
+	}
+	#hvcs-menu-toggle:checked ~ #hvcs-toc{ transform: translateX(0); }
+	.hvcs-content{ padding: 1rem; }
+  }
+  
+  /* Print: expand ToC and hide header */
+  @media print{
+	.hvcs-header, .hvcs-header-toggle, .hvcs-docswitcher{ display:none !important; }
+	#hvcs-toc{ position: static; border:0; padding:0 0 1rem 0; transform:none !important; }
+	/* Force details to behave expanded in print */
+	#hvcs-toc details{ display:block; }
+	#hvcs-toc details > summary{ font-weight:700; list-style:initial; }
+	#hvcs-toc details > *{ display:block !important; }
+  }
+  
+  /* ====== Nav internals ====== */
+  .toc-group{ margin-bottom: 1rem; }
+  .toc-heading{ font-weight:700; margin-bottom:.25rem; color: var(--hvcs-text); }
+  .toc-links{ list-style:none; margin:0; padding:0; }
+  .toc-links li a{
+	display:block; padding:.28rem .45rem; border-radius:6px;
+	color:inherit; text-decoration:none;
+  }
+  .toc-links li a:hover{ background: var(--hvcs-hover); }
+  .toc-links li a.active{ font-weight:600; outline:2px solid var(--hvcs-brand); outline-offset:0; }
+  
+  /* Summary styling */
+  #hvcs-toc summary{
+	cursor:pointer; padding:.4rem .25rem; border-radius:6px;
+  }
+  #hvcs-toc summary:hover{ background: var(--hvcs-hover); }
+  
+  /* Focus visibility */
+  .hvcs-header-toggle:focus,
+  .hvcs-docswitcher a:focus,
+  .toc-links a:focus,
+  #hvcs-toc summary:focus{ outline:2px solid var(--hvcs-brand); outline-offset:2px; }
+  
+  /* Optional badge for deleted items (if you add it) */
+  .badge-deleted{
+	display:inline-block; margin-left:.35rem; padding:.05rem .35rem;
+	font-size:.75em; border-radius:999px; background:#f3d6d6; color:#6b1212;
+  }
+  .is-deleted{ color:#6b1212; }
+  

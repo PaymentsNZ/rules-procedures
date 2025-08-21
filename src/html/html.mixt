@@ -4,6 +4,18 @@ meta {
 }
 
 {
+	// html::attr is used to constuct a html attributes metadata
+	html::attr = (metadata as record) => {
+		html::attributes = metadata
+	}
+
+	// html::attributed is used to constuct a html attributes metadata
+	html::attributed = (metadata as record, value as any) => (
+		value meta {
+			html::attributes = metadata
+		}
+	)
+
 	// html::document is used to constuct a html document
 	html::document = (doctype as text, language as text, head as list, body as list) => (
 		{

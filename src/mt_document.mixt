@@ -1,0 +1,1610 @@
+[
+    div = {
+        img = "" meta {
+            html::attributes = {
+                src = "../images/PNZ_OnWhite_rgb.gif"
+                alt = "PNZ Logo"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "logo"
+        }
+    }
+    [
+        div = "Appendix 14E: MT Messaging Procedures (UG2025)" meta {
+            html::attributes = {
+                class = "document-title"
+            }
+        }
+        div = "Version 2" meta {
+            html::attributes = {
+                class = "document-meta"
+            }
+        }
+        div = "Effective date: 22/11/2025" meta {
+            html::attributes = {
+                class = "document-meta"
+            }
+        }
+    ]
+    h1 = "Document purpose and overview" meta {
+        html::attributes = {
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "HVCS rules and procedures overview" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed reference to 'NZD HVCS payments'"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-question-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-question-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-meta"
+                    }
+                }
+                div = [
+                    "Is it correct to retain reference to 'HVCS instructions'?"
+                    "Exception and investigation message means an HVCS instruction sent between participants\n\t\t\tincluding: MT192, MT196, MT292, MT296..."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-question"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = [
+                "This document MT Messaging Procedures (Part E) is one part of a suite of documentation to help participants\n\t\t\tunderstand what is required to become a high value clearing system (HVCS) participant and how to send and\n\t\t\treceive individual HVCS instructions that are exception and investigation messages."
+            ]
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    [
+        div = [
+            div = [
+                "Payments NZ Rules"
+                "Part 9"
+                "HVCS Clearing and Settlement"
+            ] meta {
+                html::attributes = {
+                    class = "menu-root"
+                }
+            }
+            div = [
+                a = [
+                    "Part A"
+                    "HVCS Overview"
+                ] meta {
+                    html::attributes = {
+                        href = "overview.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part B"
+                    "HVCS Common Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "common.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part C"
+                    "SCP Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "scp.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part D"
+                    "MX Messaging Procedures (ISO 20022)"
+                ] meta {
+                    html::attributes = {
+                        href = "mx.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part E"
+                    "MT Messaging Procedures (ISO 15022)"
+                ] meta {
+                    html::attributes = {
+                        href = "mt.html"
+                        class = "menu-branch active"
+                    }
+                }
+                a = [
+                    "Part F"
+                    "Co-existence Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "coexistence.html"
+                        class = "menu-branch"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "menu-branches"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "menu-container"
+            }
+        }
+        div = "Diagram 01: HVCS Rules and Procedures documentation structure" meta {
+            html::attributes = {
+                class = "menu-caption"
+            }
+        }
+    ]
+    div = [
+        div = "" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        div = [
+            "This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).\n\t\tPart 9 contains the HVCS clearing and settlement rules which specify the requirements for participants\n\t\tto create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including\n\t\tSCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS."
+            "In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants\n\t\tcomply with Part 9 are comprised of:"
+            ul = [
+                "Part A — HVCS Overview"
+                ul = [
+                    "Provides a high-level overview of the HVCS community, message types, how HVCS clearing and \n\t\t\t\tettlement works, and the business, technical, and regulatory environment in which the process\n\t\t\t\toperates.  This is a non-binding document for use as guidance only."
+                ]
+                "Part B — HVCS Common Procedures"
+                ul = [
+                    "Provides binding procedures and product requirements that apply to all HVCS instructions at\n\t\t\t\tall times.  This document also contains some non-binding commentary and best practice."
+                ]
+                "Part C — SCP Procedures"
+                ul = [
+                    "Provides binding procedures and product requirements that apply only to an HVCS instruction\n\t\t\t\tthat is a same day cleared payment.  This document also contains some non-binding commentary\n\t\t\t\tand best practice, such as recommended terms and conditions with customers."
+                ]
+                "Part D — MX Messaging Procedures"
+                ul = [
+                    "Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022\n\t\t\t\tmessages) across the HVCS MX CUG.  This document also contains some non-binding commentary\n\t\t\t\tand best practice."
+                ]
+                "Part E — MT Messaging Procedures (this document)"
+                ul = [
+                    "Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022\n\t\t\t\tmessages) across the HVCS MT CUG.  This document also contains some non-binding commentary\n\t\t\t\tand best practice."
+                ]
+                "Part F — Co-existence Procedures"
+                ul = [
+                    "Provides binding procedures for participants during the co-existence phase of the migration\n\t\t\t\tfrom sending and receiving MT messages to MX messages."
+                ]
+            ] meta {
+                html::attributes = {
+                    class = "bullets"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Standards, best practices and commentary" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        div = [
+            [
+                "For information on how to determine whether the content of an applicable HVCS standard\n\t\t\tin Appendix 14 creates binding legal rights or obligations, please see"
+                span = "Part A - Overview." meta {
+                    html::attributes = {
+                        class = "italic"
+                    }
+                }
+            ]
+            "Notwithstanding anything in clause 1.8 of the Rules or in Part A — Overview, any reference\n\t\tto actions a person \"should\" take or anything a person \"should\" do is intended to convey a\n\t\tbest practice with which a person should comply with only, but which has no legal effect."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Document purpose and structure" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Added: 'that are exception and investigation messages'"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "This document discusses the MT Messaging Procedures that apply to HVCS instructions\n\t\tthat are exception and investigation messages."
+            "This document is divided into six chapters (noting chapters 3, 4 and 5 have been deleted)."
+            "Chapter 1 provides an overview of the MT messages that are in scope and the explains the\n\t\tmessage lifecycle."
+            "Chapter 2 specifies how to format block 3 (user header) of the SWIFT message header."
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed:"
+                    "Chapter 3 specifies how to format customer credit transfers."
+                    "Chapter 4 specifies how to format cross border redirections."
+                    "Chapter 5 specifies how to format financial institution transfers."
+                    "Added: 'Chapters 3, 4 and 5 have been deleted.'"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "Chapters 3, 4 and 5 have been deleted."
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed:"
+                    "the format of the notification messages that FINCopy sends to an HVCS\n\t\t\tinstructing agent and"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "Chapter 6 specifies provides the ESAS rejection codes for AVP."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Interpretation" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        div = [
+            "For the purposes of these MT Messaging Procedures, all references to the following defined\n\t\tterms means an HVCS instruction that is an MT message:"
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed:"
+                    ul = [
+                        "Payment message;"
+                        "Return message;"
+                        "Customer credit transfer message; and"
+                        "FI credit transfer message."
+                    ] meta {
+                        html::attributes = {
+                            class = "dashes"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            ul = [
+                "HVCS instruction;"
+                "Exception and investigation message; and"
+                "System message."
+            ] meta {
+                html::attributes = {
+                    class = "bullets"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 1: MT Messages in scope" meta {
+        html::attributes = {
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed 1.1 MT messages for HVCS payments."
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = "MT messages for HVCS payments" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "1.1"
+            }
+        }
+        div = [
+            span = "This clause has been deleted (UG2025 November 2025)." meta {
+                html::attributes = {
+                    class = "bold"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Other FINCopy message types" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "1.2"
+            }
+        }
+        div = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed:"
+                    "- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator."
+                    "- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the <text-block>, and has been forced to abort it instead."
+                    "- MT028 - FINCopy message status report."
+                    "- MT029 - Copy message status report (response to the MT028)."
+                    "- MT096 - FINCopy to server destination message."
+                    "- MT097 - FINCopy message authorisation/refusal notification."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "This clause has been deleted (UG2025 November 2025)."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Other FIN message types" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "1.3"
+            }
+        }
+        div = [
+            "Participants exchange the MT message types described in the following table:"
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-question-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-question-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-meta"
+                    }
+                }
+                div = [
+                    "Are delivery notifications relevant for MTn95/96?"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-question"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = {
+                ;table = #table(
+                    type table {
+                        ;Message type = any
+                        ;Message name = any
+                        Sender = any
+                        Receiver = any
+                    }
+                    [
+                        [
+                            "MTn95"
+                            [
+                                ul = [
+                                    "A question."
+                                    "Free text message."
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            "Participant"
+                            "Participant"
+                        ]
+                        [
+                            "MTn96"
+                            [
+                                ul = [
+                                    "An answer."
+                                    "Free text message."
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            "Participant"
+                            "Participant"
+                        ]
+                        [ "MT011", "Delivery notification", "SWIFT", "Participant" ]
+                    ]
+                ) meta {
+                    html::attributes = {
+                        class = "pnz-table"
+                    }
+                }
+            } meta {
+                html::attributes = {
+                    class = "table-scroll"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed 1.4 Message lifecycle, as this relates to payments."
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = "Message lifecycle, as this relates to payments" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "1.4"
+            }
+        }
+        div = [
+            "This clause has been deleted (UG2025 November 2025)."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 2: SWIFT message header details" meta {
+        html::attributes = {
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "SWIFT message header details" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "2.1"
+            }
+        }
+        div = [
+            "A SWIFT message contains the following headers:"
+            ul = [
+                "block 1 = basic header:"
+                "block 2 = application header:"
+                "block 3 = user header:"
+                "block 4 = text:"
+                "block 5 = trailers."
+            ] meta {
+                html::attributes = {
+                    class = "bullets"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "User header details" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "2.2"
+            }
+        }
+        ol = [
+            "The content and format of block 1 or block 2 is similar for all SWIFT messages (refer to the SWIFT\n\t\tUser Handbook)."
+            "Block 3—"
+            ol = [
+                "is mandatory for all MT messages; and"
+                "contains data that is specific to HVCS."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            [
+                span = "The instructing agent of a payment message"
+                span = "must" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "ensure that the service code (field tag 103) is AVP to ensure SWIFT know how\n\t\t\t\tto route the message through the RBNZ's CUG."
+            ]
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed (4), (5), (6), (7) + table"
+                    "The instructing agent of a payment message should ensure that MUR (field tag 108) contains the\n\t\t\ttransaction reference number (TRN) to provide an audit trail of the HVCS payment through the\n\t\t\tHVCS clearing and settlement process."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "This clause has been deleted (UG2025 November 2025)."
+            "This clause has been deleted (UG2025 November 2025)."
+            "This clause has been deleted (UG2025 November 2025)."
+            "This clause has been deleted (UG2025 November 2025)."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed - Chapter 3: Customer credit transfer (SCP)"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    h1 = "Chapter 3: Customer credit transfer (SCP)" meta {
+        html::attributes = {
+            class = "section-heading"
+        }
+    }
+    "This chapter has been deleted (UG2025 November 2025)."
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed - Chapter 4: Customer Credit Transfer (Cross border redirection)"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    h1 = "Chapter 4: Customer Credit Transfer (Cross border redirection)" meta {
+        html::attributes = {
+            class = "section-heading"
+        }
+    }
+    "This chapter has been deleted (UG2025 November 2025)."
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed - Chapter 5: Formats for financial institution transfers"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    h1 = "Chapter 5: Formats for financial institution transfers" meta {
+        html::attributes = {
+            class = "section-heading"
+        }
+    }
+    "This chapter has been deleted (UG2025 November 2025)."
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-question-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-question-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-question-meta"
+            }
+        }
+        div = [
+            "I am not sure we need to retain any of Chapter 6!"
+            "If this chapter specifies the format for 2 of the notification message types that FINCopy\n\t\tsends to an instructing agent, and we are no longer using FINcopy, then we probably don't\n\t\tneed this at all."
+            "We may just need to retain ESAS rejection codes."
+        ] meta {
+            html::attributes = {
+                class = "doc-question-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-question"
+            data-change-id = "UG2025"
+        }
+    }
+    h1 = "Chapter 6: FINCopy system messages advising HVCS payment status" meta {
+        html::attributes = {
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Purpose" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "6.1"
+            }
+        }
+        ol = [
+            div = [
+                "This chapter specifies—"
+            ]
+            "the format for 2 of the notification message types that FINCopy sends to an instructing agent—"
+            ol = [
+                "an MT012 system message - instructing agent notification; and"
+                "an MT019 system message - abort notification; and"
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "the ESAS rejection codes for AVP."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "MT012: instructing agent notification" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "6.2"
+            }
+        }
+        ol = [
+            "FINCopy sends an MT012 system message to notify the instructing agent that FINCopy has released\n\t\tthe HVCS payment to the instructed agent. In AVP this occurs after the HVCS payment settles in ESAS."
+            "If the instructing agent does not receive an MT012 system message from FINCopy by 17:15, the HVCS\n\t\tpayment may not have settled. If the instructing agent doesn't settle the HVCS payment by the end of\n\t\tthe ESAS day, ESAS will cancel the HVCS payment."
+            "The following table specifies the format for an MT012 system message:"
+            div = {
+                ;table = #table(
+                    type table {
+                        Rep = any
+                        Tag = any
+                        Field = any
+                        ;(Content/Comments) = any
+                    }
+                    [
+                        [ "1", "175", "Time", "Input time (HHMM), local to the instructing agent, of the original user message." ]
+                        [
+                            "1"
+                            "106"
+                            "MIR"
+                            "Message Input Reference (MIR) identifying the instructing agent's copy message copied to and released by the CSI."
+                        ]
+                        [ "0-1", "108", "MUR", "Message User Reference (MUR) used in the header of the original message." ]
+                        [ "1", "102", "SWIFT address", "Destination BIC of the instructing agent's message. Includes the LT code." ]
+                        [ "1", "103", "Service code", "AVP" ]
+                        [
+                            "1"
+                            "114"
+                            "Payment release information (instructing agent)"
+                            [
+                                "Information from central institution (SWIFT) to instructing agent of payment message\n\t\t\t\t\t\t\t(from field 114 of the MT097) as follows:"
+                                ul = [
+                                    "ESAS Date:"
+                                    "ESAS Time:"
+                                    "ESAS Reference Number."
+                                ] meta {
+                                    html::attributes = {
+                                        class = "dashes"
+                                    }
+                                }
+                            ]
+                        ]
+                    ]
+                ) meta {
+                    html::attributes = {
+                        class = "pnz-table"
+                    }
+                }
+            } meta {
+                html::attributes = {
+                    class = "table-scroll"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "MT019: abort notification" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "6.3"
+            }
+        }
+        ol = [
+            "If an unsettled HVCS payment in ESAS is cancelled by the instructing agent or by ESAS (at 08:30 end\n\t\tof day), FINCopy notifies the instructing agent of the cancellation by sending an MT019 system\n\t\tmessage to the instructing agent."
+            "An MT019 system message contains a code in field 432 specifying a reason for the abort."
+            "If the HVCS payment was not settled by the 08:30am end of day,—"
+            ol = [
+                "ESAS will cancel the HVCS payment; and"
+                "ESAS will send an abort notification MT019 system message (with error code 62 — Cancelled by ESAS\n\t\t\tend of day) to the instructing agent."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "The following table specifies the format for an MT019 system message:"
+            div = {
+                ;table = #table(
+                    type table {
+                        Rep = any
+                        Tag = any
+                        Field = any
+                        ;(Content/Comments) = any
+                    }
+                    [
+                        [ "1", "175", "Time", "Input time (HHMM), local to the instructing agent, of the original user message." ]
+                        [
+                            "1"
+                            "106"
+                            "MIR"
+                            "Message Input Reference (MIR) identifying the instructing agent's copy message\n\t\t\t\t\t\tcopied to and released by the CSI."
+                        ]
+                        [ "0-1", "108", "MUR", "Message User Reference (MUR) used in the header of the original message." ]
+                        [
+                            "1"
+                            "102"
+                            "SWIFT address"
+                            [
+                                ul = [
+                                    "Destination BIC of the aborted message."
+                                    "Includes the LT code."
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            "0-1"
+                            "107"
+                            "MOR"
+                            [
+                                ul = [
+                                    "Message Output Reference (MOR) of the aborted message."
+                                    "If several delivery attempts have been made, field 107 contains the last valid MOR."
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            "1"
+                            "432"
+                            "Abort reason"
+                            "Refer to the table in clause 6.4 containing ESAS rejection codes and the\n\t\t\t\t\t\tSWIFT FIN error codes for the SWIFT generated codes returned in this field."
+                        ]
+                    ]
+                ) meta {
+                    html::attributes = {
+                        class = "pnz-table"
+                    }
+                }
+            } meta {
+                html::attributes = {
+                    class = "table-scroll"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "ESAS rejection codes" meta {
+            html::attributes = {
+                class = "clause-heading"
+                data-number = "6.4"
+            }
+        }
+        div = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed: ' (refer to Clause 1.4 Message lifecycle)'"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "The following table contains ESAS rejection codes for AVP and SBI and explanations of why ESAS applies\n\t\teach code when ESAS validates the structure of an MT096 system message but the content of the message\n\t\tfails business rules validation:"
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = {
+        ;table = #table(
+            type table {
+                Code = any
+                ;Reason Type = any
+                Summary = any
+            }
+            [
+                [
+                    "61"
+                    "The payment cannot be validated because of some serious or fundamental problem with the message"
+                    "The construction of the message does not conform to the ESAS application specifications."
+                ]
+                [
+                    "62"
+                    [
+                        "AVP — Assured Value Payment"
+                        "The payment instruction has one or more validation errors, such as:"
+                    ] meta {
+                        html::attributes = {
+                            colspan = 2
+                        }
+                    }
+                    ""
+                ]
+                [
+                    "62.1"
+                    "Duplicate tags"
+                    [
+                        "A payment instruction will be validated against the following:"
+                        ul = [
+                            "OCD — Originator BIC of the message (Instructing agent)"
+                            "ODT — Originator Date (Calendar Date) when message is submitted"
+                            "ORF — Originator Reference assigned by the settlement bank (MT Tag 20)"
+                            "FSVD — Funds Settlement value day in the RTGS."
+                        ] meta {
+                            html::attributes = {
+                                class = "bullets"
+                            }
+                        }
+                        "Then, if the above conditions are the same as a previously processed message, and if\n\t\t\t\t\t\tBlock 4 (Tag 32A DATE/CCY/AMT) is different, the member will have an Error 62 - Duplicate\n\t\t\t\t\t\tTag returned."
+                    ]
+                ]
+                [
+                    "62.2"
+                    "The Instructing or Instructed agents are inactivated or unknown."
+                    "The instructing or instructed agent has been inactivated, or the BIC has not configured\n\t\t\t\t\tfor use in ESAS."
+                ]
+                [
+                    "62.3"
+                    "Invalid settlement date"
+                    [
+                        "The payment instruction Settlement Date must not exceed 14 business days from the date\n\t\t\t\t\t\tthe instruction was received in ESAS. The payment Settlement Date is a non-business date\n\t\t\t\t\t\tor a date in the past."
+                    ]
+                ]
+                [
+                    "62.4"
+                    "Instructing agent failed to activate an instruction"
+                    "The instructing agent does not activate the payment instruction in ESAS before end of day\n\t\t\t\t\t(only applicable to payments that have the payer-to-activate flag applied)."
+                ]
+                [ "62.5", "Invalid amount", "The payment instruction must be in NZD" ]
+                [
+                    "63"
+                    "The payment was discarded due to insufficient funds (EOD cancellation)"
+                    "Payment instruction did not settle before the EOD event started in ESAS."
+                ]
+                [
+                    "65"
+                    "The payment was removed by the Settlement Bank"
+                    "The payment instruction was either removed or discarded from the ESAS by the Settlement Bank."
+                ]
+                [
+                    "66"
+                    "Duplicate SWIFT message — AVP (Assured Value Payment)"
+                    [
+                        "A payment instruction will be validated against the following:"
+                        ul = [
+                            "OCD — Originator BIC of the message (Instructing agent)"
+                            "ODT — Originator Date (Calendar Date) when message is submitted"
+                            "ORF — Originator Reference assigned by the settlement bank (MT Tag 20)"
+                            "FSVD — Funds Settlement value day in the RTGS."
+                        ] meta {
+                            html::attributes = {
+                                class = "bullets"
+                            }
+                        }
+                        "Then, if the above conditions are the same, and if Block 4 (Tag 32A DATE/CCY/AMT) are\n\t\t\t\t\t\texactly the same, then the member will have an Error 66 Duplicate Instruction (Exact\n\t\t\t\t\t\tDuplicate) returned."
+                    ]
+                ]
+                [
+                    "66"
+                    "Duplicate SWIFT message — SBI (Settlement Before Interchange)"
+                    [
+                        "A payment instruction will be validated against the following:"
+                        ul = [
+                            "ORF - Originator Reference = <FileId>"
+                            "ODT - Originator date <IntrBkSttlmDt>"
+                            "OCD - Originator BIC code - <Instructing agent><FullName><X1>"
+                        ] meta {
+                            html::attributes = {
+                                class = "bullets"
+                            }
+                        }
+                        "The system will check for duplicates according to the following logic:"
+                        ul = [
+                            "If the OCD, ORF and the ODT are the same as a previously processed instruction,\n\t\t\t\t\t\t\tthe system will reject the instruction immediately."
+                            "If only the ORF is different, but the payment detail is the same as a previously\n\t\t\t\t\t\t\tprocessed instruction then the system will process the instruction."
+                            "If only the OCD is different, but the payment detail is the same as a previously\n\t\t\t\t\t\t\tprocessed instruction then the system will process the instruction."
+                        ] meta {
+                            html::attributes = {
+                                class = "bullets"
+                            }
+                        }
+                        "The payment detail that is compared is the following:"
+                        ul = [
+                            "Instructing agent Reference - <Instructing agent Reference>"
+                            "Originator Reference Number:<UserReference>"
+                            "Beneficiary Bank: <Dbtr><BIC>"
+                            "Paying bank: <Cdtr><BIC>"
+                            "Amount: <TtlIntrBkSttlmAmt>"
+                        ] meta {
+                            html::attributes = {
+                                class = "bullets"
+                            }
+                        }
+                    ]
+                ]
+                [
+                    "67"
+                    "Discarded due to non-settlement day"
+                    [
+                        "The payment message must have a Settlement Date that is NZ business day for:"
+                        [
+                            div = [
+                                div = [
+                                    span = "UG2025" meta {
+                                        html::attributes = {
+                                            class = "doc-comment-id"
+                                        }
+                                    }
+                                    span = "RK" meta {
+                                        html::attributes = {
+                                            class = "doc-comment-initials"
+                                        }
+                                    }
+                                ] meta {
+                                    html::attributes = {
+                                        class = "doc-comment-meta"
+                                    }
+                                }
+                                div = [
+                                    "Removed: ', and until 21 April 2023, SBI."
+                                ] meta {
+                                    html::attributes = {
+                                        class = "doc-comment-content"
+                                    }
+                                }
+                            ] meta {
+                                html::attributes = {
+                                    class = "doc-comment"
+                                    data-change-id = "UG2025"
+                                }
+                            }
+                            ul = [
+                                "AVP"
+                            ] meta {
+                                html::attributes = {
+                                    class = "bullets"
+                                }
+                            }
+                        ]
+                    ]
+                ]
+            ]
+        ) meta {
+            html::attributes = {
+                class = "pnz-table"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "table-scroll"
+        }
+    }
+    br = null
+    div = [
+        "6.5 AVP MT CUG service parameters"
+    ] meta {
+        html::attributes = {
+            class = "bold"
+        }
+    }
+    div = {
+        ;table = #table(
+            type table {
+                Parameter = any
+                Value = any
+            }
+            [
+                [ "FIN Copy service identifier code", "AVP" ]
+                [ "Country", "New Zealand" ]
+                [ "Service type", "Y-Copy" ]
+            ]
+        ) meta {
+            html::attributes = {
+                class = "pnz-table"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "table-scroll"
+        }
+    }
+    br = null
+    div = {
+        ;table = #table(
+            type table {
+                Parameter = any
+                Live = any
+                ;Test and training = any
+            }
+            [
+                [ "Value added service identifier", "AVP", "AVP" ]
+                [ "Live service flag", "Y", "N" ]
+                [ "(live = Y, T&T = N)", "", "" ]
+                [ "Value added service number", "8", "7" ]
+                [ "CID id", "ESASNZ2W", "ESASNZ20" ]
+                [ "Authentication mode", "2", "2" ]
+                [ "(normal = 1, double = 2)", "", "" ]
+                [ "Full copy flag", "N", "N" ]
+                [ "(full copy = Y, part copy = N)", "", "" ]
+                [ "Value date range", "99", "99" ]
+                [ "(same day = 0, day n = n, no check=99)", "", "" ]
+                [ "Currency code", "NZD", "NZD" ]
+            ]
+        ) meta {
+            html::attributes = {
+                class = "pnz-table"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "table-scroll"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed: 'MT103 Parameter Table"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed: 'MT202 Parameter Table"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed: 'MT205 Parameter Table"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed: 'FIN Copy Parameter Table"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+]

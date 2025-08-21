@@ -1,0 +1,131 @@
+namespace pnz.nav
+
+// TODO: If this is a list, we get errors with unresolved identifiers!
+{
+	// hasClass
+	hasClass = (value as any, className as text) => (
+		let
+			htmlAttributes = Identifier.FromText( "html", "attributes" )
+			metadata = Value.Metadata( value )
+			attributes = (
+				if metadata == null then
+					null
+				else
+					Record.FieldOrDefault( metadata, htmlAttributes, null )
+			)
+			class = (
+				if attributes == null then
+					""
+				else
+					Record.FieldOrDefault( attributes, "class", null )
+			)
+			hasClass = (
+				class == className or
+					Text.StartsWith( class, className & " " ) or
+					Text.EndsWith( class, " " & className) or
+					Text.Contains( class, Text.Flank( className, " " ) )
+			)
+		in
+			hasClass
+	)
+
+	// getClauseNumber
+	getClauseNumber = (clause as any) => (
+		let
+			htmlAttributes = Identifier.FromText( "html", "attributes" )
+			metadata = Value.Metadata( clause )
+			attributes = (
+				if metadata == null then
+					null
+				else
+					Record.FieldOrDefault( metadata, htmlAttributes, null )
+			)
+			id = (
+				if attributes == null then
+					""
+				else
+					Record.FieldOrDefault( attributes, "data-number", "" )
+			)
+		in
+			id
+	)
+
+	// appendClauses
+	appendClauses = (clauseList as list, contents as list) => (
+		List.Accumulate(
+			contents
+			clauseList
+			(clauses, content, itemIndex, name) => (
+				if Value.Is( content, type text ) and content <> "" then
+					if name == "div" and hasClass( content, "clause-heading" ) then
+						let
+							clauseNumber = getClauseNumber( content )
+							newClause = List.AddItem(
+								[]
+								clauseNumber
+								content & "" // Removes meta
+							)
+							result = clauses & newClause
+						in
+							result
+					else
+						clauses
+				else
+					clauses
+			)
+		)
+	)
+
+	// getChaptersAndClauses
+	pnz.nav::getChaptersAndClauses = (docContent as list) => (
+		let
+			// chaptersAndClauses
+			chaptersAndClauses = List.Accumulate(
+				docContent
+				{
+					Chapters = []
+					Chapter = ""
+					Clauses = []
+				}
+				(state, content, itemIndex, name) => (
+					if Value.Is( content, type text ) then
+						if name == "h1" /* and hasClass( content, "section-heading" )  */ then
+							if state{ Chapter } == "" then
+								state & {
+									Chapter = (content & "") // & "" Removes meta
+								}
+							else
+								let
+									completeChapter = {
+										Chapter = state{ Chapter }
+										Clauses = state{ Clauses }
+									}
+									newState = {
+										Chapters = state{ Chapters } & [
+											completeChapter
+										]
+										Chapter = (content & "") // & "" Removes meta
+										Clauses = []
+									}
+								in
+									newState
+						else
+							state
+					else if Value.Is( content, type list ) then
+						state & {
+							Clauses = appendClauses( state{ Clauses }, content )
+						}
+					else
+						state
+				)
+			)
+
+			finalChapter = {
+				Chapter = chaptersAndClauses{ Chapter }
+				Clauses = chaptersAndClauses{ Clauses }
+			}
+			return = chaptersAndClauses{ Chapters } & [ finalChapter ]
+		in
+			return
+	)
+}

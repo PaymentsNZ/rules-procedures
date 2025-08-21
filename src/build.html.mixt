@@ -1,5 +1,6 @@
 import [
 	pnz = "pnz.legal.mixt"
+	nav = "navigate.mixt"
 	hvcs = "hvcs/hvcs.mixt"
 	overview = "hvcs/overview.mixt"
 	common = "hvcs/common.mixt"
@@ -13,78 +14,93 @@ let
 	//selector = null
 	selector = (id as text) => true
 	//selector = (id as text) => (id == "MX" or id == "Coexistence")
-	documents = #table(
+	documentsTable = #table(
 		[
 			"id"
 			"title"
 			"target"
+			"path"
 			"source"
 		]
 		[
 			[
 				"Overview"
 				"HVCS Overview"
-				"docs/hvcs/overview.html"
+				"overview.html"
+				"docs/hvcs/"
 				overview
 			]
 			[
 				"Common"
 				"HVCS Common Procedures"
-				"docs/hvcs/common.html"
+				"common.html"
+				"docs/hvcs/"
 				common
 			]
 			[
 				"SCP"
 				"HVCS SCP Procedures"
-				"docs/hvcs/scp.html"
+				"scp.html"
+				"docs/hvcs/"
 				scp
 			]
 			[
 				"MX"
 				"HVCS MX Procedures"
-				"docs/hvcs/mx.html"
+				"mx.html"
+				"docs/hvcs/"
 				mx
 			]
 			[
 				"MT"
 				"HVCS MT Procedures"
-				"docs/hvcs/mt.html"
+				"mt.html"
+				"docs/hvcs/"
 				mt
 			]
 			[
 				"Coexistence"
 				"HVCS Coexistence Procedures"
-				"docs/hvcs/coexistence.html"
+				"coexistence.html"
+				"docs/hvcs/"
 				coexistence
 			]
 		]
 	),
-	asRecords = Table.ToRecords(
+	docSet = Table.ToRecords(
 		if selector == null then
-			documents
+			documentsTable
 		else
 			Table.SelectRows(
-				documents
+				documentsTable
 				(doc) => selector( doc{ id } )
 			)
 	)
 	written = List.Accumulate(
-		asRecords
+		docSet
 		{}
-		( state, current ) => (
-			Record.AddField(
-				state
-				current{ id }
-				File.Write(
-					current{ target }
-					Html.FromValue(
-						hvcs::document(
-							current{ title }
-							current{ source }
+		( state, current, docIndex ) => (
+			let
+				docContent = current{ source }
+				chaptersAndClauses = nav::getChaptersAndClauses( docContent )
+				result = Record.AddField(
+					state
+					current{ id }
+					File.Write(
+						FilePath.Join( current{ path }, current{ target } )
+						Html.FromValue(
+							hvcs::document(
+								current{ title }
+								docContent
+								docIndex
+								chaptersAndClauses
+								docSet
+							)
 						)
 					)
 				)
-			)
+			in
+				result
 		)
 	)
 in

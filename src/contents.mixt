@@ -1,0 +1,29 @@
+{
+    Chapters = [
+        "Document purpose and overview"
+        "Chapter 1: MT Messages in scope"
+        "Chapter 2: SWIFT message header details"
+        "Chapter 3: Customer credit transfer (SCP)"
+        "Chapter 4: Customer Credit Transfer (Cross border redirection)"
+        "Chapter 5: Formats for financial institution transfers"
+        "Chapter 6: FINCopy system messages advising HVCS payment status"
+    ]
+    Clauses = [
+        "Appendix 14E: MT Messaging Procedures (UG2025)"
+        "HVCS rules and procedures overview"
+        "Diagram 01: HVCS Rules and Procedures documentation structure"
+        "Standards, best practices and commentary"
+        "Document purpose and structure"
+        "Interpretation"
+        ;1.1 = "MT messages for HVCS payments"
+        ;1.2 = "Other FINCopy message types"
+        ;1.3 = "Other FIN message types"
+        ;1.4 = "Message lifecycle, as this relates to payments"
+        ;2.1 = "SWIFT message header details"
+        ;2.2 = "User header details"
+        ;6.1 = "Purpose"
+        ;6.2 = "MT012: instructing agent notification"
+        ;6.3 = "MT019: abort notification"
+        ;6.4 = "ESAS rejection codes"
+    ]
+}

@@ -3,29 +3,257 @@ namespace hvcs
 import [
 	html = "../html.mixt"
 ]
+
 {
-	//hvcs::document creates a PNZ HVCS legal document as HTML
-	hvcs::document = (docTitle as text, docContent as list) => (
+	useNavigation = false
+
+	makehref = (id as text, title as text) => (
+		let
+			//replaced = Text.Replace( Text.Lower( title ), " ", "-" )
+			replaced_dash = Text.Replace( title, " ", "-" )
+			replaced_colon = Text.Replace( replaced_dash, ":", "" )
+			replaced_open_paren = Text.Replace( replaced_colon, "(", "" )
+			replaced_close_paren = Text.Replace( replaced_open_paren, ")", "" )
+			replaced_comma = Text.Replace( replaced_close_paren, ",", "" )
+			replaced_ampersand = Text.Replace( replaced_comma, "&", "and" )
+		in
+			if id == "" then
+				$"#$(replaced_ampersand)"
+			else
+				$"#$(id)-$(replaced_ampersand)"
+	)
+
+	// hvcs::header
+	hvcs::header = (docTitle as text, docIndex as number, docSet as list) => html::attributed(
+		{
+			class = "hvcs-header"
+			role = "banner"
+		}
+		{
+			div = html::attributed(
+				{
+					class = "hvcs-header-inner"
+				}
+				[
+					a = html::attributed(
+						{
+							class = "hvcs-header-logo"
+							href = "../index.html"
+							aria-label = "Payments NZ Home"
+						}
+						{
+							img = html::attributed(
+								{
+									src = "../images/PNZ_OnWhite_rgb.gif"
+									alt = ""
+								}
+								null
+							)
+						}
+					)
+					div = html::class(
+						"hvcs-header-title"
+						docTitle
+					)
+					nav = html::attributed(
+						{
+							class="hvcs-docswitcher"
+							aria-label="HVCS documents"
+						}
+						[
+							ul = List.Transform(
+								docSet
+								(doc, i) => (
+									let 
+										target = doc{ target }
+										title = doc{ title }
+										transformed = #(li = {
+											a = html::attributed(
+												(
+													if i == docIndex then
+														{
+															href = target
+															class="active"
+															aria-current="page"
+														}
+													else
+														{
+															href = target
+														}
+												)
+												title
+											)
+										})
+									in
+										transformed
+								)
+							)
+						]
+					)
+					label = html::attributed(
+						{
+							for = "hvcs-menu-toggle"
+							class = "hvcs-header-toggle"
+           					aria-controls = "hvcs-toc"
+						}
+						"Menu"
+					)
+				]
+			)
+		}
+	)
+
+	// hvcs::nav
+	hvcs::nav = (
+		docTitle as text,
+		chaptersAndClauses as list,
+		docIndex as number,
+		docSet as list
+	) => html::attributed(
+		{
+			id = "hvcs-toc"
+			class = "hvcs-toc"
+			aria-label = "Table of contents"
+		}
+		[
+			// Document switcher (optional if header switcher is shown)
+			div = html::class(
+				"toc-group toc-docs"
+				[
+					div = html::class( "toc-heading", "Documents" )
+					ul = html::class(
+						"toc-links"
+						List.Transform(
+							docSet
+							(doc, i) => (
+								let 
+									target = doc{ target }
+									title = doc{ title }
+									transformed = #(li = {
+										a = html::attributed(
+											(
+												if i == docIndex then
+													{
+														href = target
+														class="active"
+														aria-current="page"
+													}
+												else
+													{
+														href = target
+													}
+											)
+											title
+										)
+									})
+								in
+									transformed
+							)
+						)
+					)
+				]
+			)
+
+			// Chapters
+			div = html::class(
+				"toc-group toc-chapters"
+				[
+					div = html::class( "toc-heading", "Chapters" )
+				]
+				&
+				List.Transform(
+					chaptersAndClauses
+					(chapterAndClauses) => (
+						#(details =
+							// TODO: Syntax error when this is a list?
+							{
+								summary = chapterAndClauses{ Chapter }
+								ul = html::class(
+									"toc-links"
+									List.Transform(
+										chapterAndClauses{ Clauses }
+										(clause, i, name) => #(li = {
+											a = html::attributed(
+												{
+													href = makehref( name, clause )
+												}
+												(
+													if name == "" then
+														clause
+													else
+														$"$(name) $(clause)"
+												)
+											)	
+										})
+									)
+								)
+							}
+						)
+					)
+				)
+			)
+		]
+	)
+
+	// hvcs::main
+	hvcs::main = (docContent as list) => html::class(
+		"hvcs-content"
+		docContent
+	)
+
+	// hvcs::document creates a PNZ HVCS legal document as HTML
+	hvcs::document = (
+		docTitle as text,
+		docContent as list,
+		docIndex as number,
+		chaptersAndClauses as list,
+		docSet as list
+	) => (
 		html::document(
 			"html",
 			"en",
 			[
-					;meta = html::meta( "UTF-8" )
-					;meta = {
-						html::attributes = {
-							name = "viewport"
-							content = "width=device-width, initial-scale=1"
-						}
-					} @> null
-					title = docTitle
-					link = html::stylesheet( "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" )
-					link = html::stylesheet( "../styles/pnz.legal.css" )
-					link = html::stylesheet( "../styles/pnz.hvcs.css" )
-					link = html::stylesheet( "../styles/pnz.hvcs.menu.css" )
-			]		
+				;meta = html::meta( "UTF-8" )
+				;meta = {
+					html::attributes = {
+						name = "viewport"
+						content = "width=device-width, initial-scale=1"
+					}
+				} @> null
+				title = docTitle
+				link = html::stylesheet( "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" )
+				link = html::stylesheet( "../styles/pnz.legal.css" )
+				link = html::stylesheet( "../styles/pnz.hvcs.css" )
+				link = html::stylesheet( "../styles/pnz.hvcs.menu.css" )
+			] & (
+				if useNavigation then
+					[
+						link = html::stylesheet( "../styles/pnz.hvcs.nav.css" )						
+					]
+				else
+					[]
+			)
 			html::class(
 				"document"
-				docContent
+				if useNavigation then
+					[
+						header = hvcs::header( docTitle, docIndex, docSet )
+						// Mobile toggle (checkbox/label)
+						input = html::attributed(
+							{
+								// TODO: Placing type first causes syntax error due to presence of ;
+								id = "hvcs-menu-toggle"
+								;type = "checkbox"
+								class = "hvcs-header-checkbox"
+								hidden = true
+							}
+							null
+						)
+						nav = hvcs::nav( docTitle, chaptersAndClauses, docIndex, docSet )
+						main = hvcs::main( docContent )
+					]
+				else
+					docContent
 			)
 		)
 	)

@@ -314,7 +314,7 @@ import [
 	pnz::tag_standards
 	pnz::clause(
 		"1.7"
-		"Overview of notifications for inter-bank SCPs"
+		"Remitter notification: SCP settled"
 
 		`It is optional for the instructing agent to offer the service of providing the debtor with a 'remitter
 		notification'.  A remitter notification service requires the instructing agent to notify the debtor that
@@ -695,7 +695,7 @@ import [
 
 	pnz::clause(
 		"2.6"
-		"On-us SCP payment complete between debtor and creditor"
+		"No reversal after payment"
 
 		pnz::nonumber(
 			`A participant must not, once an on-us SCP is credited to the creditor's account, reverse the

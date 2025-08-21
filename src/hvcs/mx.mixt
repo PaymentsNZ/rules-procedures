@@ -396,7 +396,6 @@ import [
 		`The Readiness Portal is an extension to MyStandards that participants can use to accelerate development and
 		verification of conformance to the new standards.`
 
-		pnz::comment( "UG2025", "RK", "Is iso20022@paymentsnz.co.nz the correct email address?" )
 		`A separate Readiness Portal has been created for each participant. Please email iso20022@paymentsnz.co.nz to
 		request access your organisation's Readiness Portal. Once access has been enabled, the Readiness Portal will appear
 		on your MyStandards home screen.`

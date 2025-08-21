@@ -8,23 +8,37 @@ import [
 ]
 
 {
+	// pnz.legal::href creates a href from an id and title
+	pnz.legal::href = (clauseNumber as text, title as text, prefix as text) => (
+		let
+			replaced_invalid = Text.Transform( title, ":(),", "" )
+			replaced_ampersand = Text.Transform( replaced_invalid, "&", "and" )
+			replaced_space = Text.Transform( replaced_ampersand, " .", "-" )
+			lcase = Text.Lower( replaced_space )
+		in
+			if clauseNumber == "" then
+				$"$(prefix)$(lcase)"
+			else
+				$"$(prefix)$(clauseNumber)-$(lcase)"
+	)
+
 	// pnz.legal::document creates a PNZ legal document as HTML
 	pnz.legal::document = (docTitle as text, docContent as list) => (
 		html::document(
 			"html",
 			"en",
 			[
-					;meta = html::meta( "UTF-8" )
-					;meta = {
-						html::attributes = {
-							name = "viewport"
-							content = "width=device-width, initial-scale=1"
-						}
-					} @> null
-					title = docTitle
-					link = html::stylesheet( "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" )
-					link = html::stylesheet( "../styles/pnz.legal.css" )
-					link = html::stylesheet( "../styles/pnz.hvcs.menu.css" )
+				;meta = html::meta( "UTF-8" )
+				;meta = {
+					html::attributes = {
+						name = "viewport"
+						content = "width=device-width, initial-scale=1"
+					}
+				} @> null
+				title = docTitle
+				link = html::stylesheet( "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" )
+				link = html::stylesheet( "../styles/pnz.legal.css" )
+				link = html::stylesheet( "../styles/pnz.hvcs.menu.css" )
 			]		
 			html::class(
 				"document"
@@ -50,13 +64,25 @@ import [
 	]
 
 	// pnz.legal::section_heading creates a section heading
-	pnz.legal::section_heading = (content as any) => #( h1 =
-		html::class( "section-heading", content )
+	pnz.legal::section_heading = (heading as text) => #( h1 =
+		html::attributed(
+			{
+				id = pnz.legal::href( "", heading, "" )
+				class = "section-heading"
+			}
+			heading
+		)
 	)
 
 	// pnz.legal::subsection_heading creates a sub-section heading
-	pnz.legal::subsection_heading = (content as any) => #( h2 = 
-		html::class( "subsection-heading", content )
+	pnz.legal::subsection_heading = (heading as any) => #( h2 = 
+		html::attributed(
+			{
+				id = pnz.legal::href( "", heading, "" )
+				class = "subsection-heading"
+			}
+			heading
+		)
 	)
 
 	// pnz.legal::tag_standards creates standards tag
@@ -76,14 +102,15 @@ import [
 
 	// pnz.legal::clause creates a clause with a header in the left column
 	// clauses numbered with the style (1) (2)
-	pnz.legal::clause = (id as text, heading as text, ...content as any) => #( div =
+	pnz.legal::clause = (clauseNumber as text, heading as text, ...content as any) => #( div =
 		html::class(
 			"clause-row",
 			[
 				div = {
 					html::attributes = {
+						id = pnz.legal::href( clauseNumber, heading, "" )
 						class = "clause-heading"
-						data-number = id
+						data-number = clauseNumber
 					}
 				} @> heading
 				ol = html::class( "level1 level1-counter-reset", content )
@@ -91,14 +118,15 @@ import [
 		)
 	)
 
-	pnz.legal::nonumber_clause = (id as text, heading as text, ...content as any) => #( div =
+	pnz.legal::nonumber_clause = (clauseNumber as text, heading as text, ...content as any) => #( div =
 		html::class(
 			"clause-row",
 			[
 				div = {
 					html::attributes = {
+						id = pnz.legal::href( clauseNumber, heading, "" )
 						class = "clause-heading"
-						data-number = id
+						data-number = clauseNumber
 					}
 				} @> heading
 				div = html::class( "level1", content )

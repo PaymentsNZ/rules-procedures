@@ -2,26 +2,10 @@ namespace hvcs
 
 import [
 	html = "../html.mixt"
+	pnz = "../pnz.legal.mixt"
 ]
 
 {
-	useNavigation = true
-
-	makehref = (id as text, title as text) => (
-		let
-			replaced_dash = Text.Replace( title, " ", "-" )
-			replaced_colon = Text.Replace( replaced_dash, ":", "" )
-			replaced_open_paren = Text.Replace( replaced_colon, "(", "" )
-			replaced_close_paren = Text.Replace( replaced_open_paren, ")", "" )
-			replaced_comma = Text.Replace( replaced_close_paren, ",", "" )
-			replaced_ampersand = Text.Replace( replaced_comma, "&", "and" )
-		in
-			if id == "" then
-				$"#$(replaced_ampersand)"
-			else
-				$"#$(id)-$(replaced_ampersand)"
-	)
-
 	// hvcs::header
 	hvcs::header = (docTitle as text, docIndex as number, docSet as list) => html::attributed(
 		{
@@ -142,7 +126,7 @@ import [
 										(clause, i, name) => #(li = {
 											a = html::attributed(
 												{
-													href = makehref( name, clause )
+													href = pnz::href( name, clause, "#" )
 												}
 												(
 													if name == "" then
@@ -193,38 +177,34 @@ import [
 				link = html::stylesheet( "../styles/pnz.legal.css" )
 				link = html::stylesheet( "../styles/pnz.hvcs.css" )
 				link = html::stylesheet( "../styles/pnz.hvcs.menu.css" )
-			] & (
-				if useNavigation then
-					[
-						link = html::stylesheet( "../styles/pnz.hvcs.nav.css" )						
-					]
-				else
-					[]
-			)
+				link = html::stylesheet( "../styles/pnz.hvcs.nav.css" )						
+				script =  html::attributed(
+					{
+						src = "../scripts/nav.js"
+						defer = true
+					}
+					""
+				)
+			]
 			// body (list)
 			html::class(
 				"document"
-				if useNavigation then
-					[
-						header = hvcs::header( docTitle, docIndex, docSet )
-						// Mobile toggle (checkbox/label)
-						input = html::attributed(
-							{
-								// TODO: Placing type first causes syntax error due to presence of ;
-								id = "hvcs-menu-toggle"
-								;type = "checkbox"
-								class = "hvcs-header-checkbox"
-								hidden = true
-							}
-							null
-						)
-						nav = hvcs::nav( docTitle, chaptersAndClauses, docIndex, docSet )
-						main = hvcs::main( docContent )
-					]
-				else
-					[
-						main = docContent
-					]
+				[
+					header = hvcs::header( docTitle, docIndex, docSet )
+					// Mobile toggle (checkbox/label)
+					input = html::attributed(
+						{
+							// TODO: Placing type first causes syntax error due to presence of ;
+							id = "hvcs-menu-toggle"
+							;type = "checkbox"
+							class = "hvcs-header-checkbox"
+							hidden = true
+						}
+						null
+					)
+					nav = hvcs::nav( docTitle, chaptersAndClauses, docIndex, docSet )
+					main = hvcs::main( docContent )
+				]
 			)
 		)
 	)

@@ -9,6 +9,7 @@
         <link href="../styles/pnz.hvcs.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.menu.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.nav.css" rel="stylesheet"/>
+        <script src="../scripts/nav.js" defer></script>
     </head>
     <body class="document">
         <header class="hvcs-header" role="banner">
@@ -51,22 +52,16 @@
                     <summary>Document purpose and overview</summary>
                     <ul class="toc-links">
                         <li>
-                            <a href="#Appendix-14E-MT-Messaging-Procedures-UG2025">Appendix 14E: MT Messaging Procedures (UG2025)</a>
+                            <a href="#hvcs-rules-and-procedures-overview">HVCS rules and procedures overview</a>
                         </li>
                         <li>
-                            <a href="#HVCS-rules-and-procedures-overview">HVCS rules and procedures overview</a>
+                            <a href="#standards-best-practices-and-commentary">Standards, best practices and commentary</a>
                         </li>
                         <li>
-                            <a href="#Diagram-01-HVCS-Rules-and-Procedures-documentation-structure">Diagram 01: HVCS Rules and Procedures documentation structure</a>
+                            <a href="#document-purpose-and-structure">Document purpose and structure</a>
                         </li>
                         <li>
-                            <a href="#Standards-best-practices-and-commentary">Standards, best practices and commentary</a>
-                        </li>
-                        <li>
-                            <a href="#Document-purpose-and-structure">Document purpose and structure</a>
-                        </li>
-                        <li>
-                            <a href="#Interpretation">Interpretation</a>
+                            <a href="#interpretation">Interpretation</a>
                         </li>
                     </ul>
                 </details>
@@ -74,16 +69,16 @@
                     <summary>Chapter 1: MT Messages in scope</summary>
                     <ul class="toc-links">
                         <li>
-                            <a href="#1.1-MT-messages-for-HVCS-payments">1.1 MT messages for HVCS payments</a>
+                            <a href="#1.1-mt-messages-for-hvcs-payments">1.1 MT messages for HVCS payments</a>
                         </li>
                         <li>
-                            <a href="#1.2-Other-FINCopy-message-types">1.2 Other FINCopy message types</a>
+                            <a href="#1.2-other-fincopy-message-types">1.2 Other FINCopy message types</a>
                         </li>
                         <li>
-                            <a href="#1.3-Other-FIN-message-types">1.3 Other FIN message types</a>
+                            <a href="#1.3-other-fin-message-types">1.3 Other FIN message types</a>
                         </li>
                         <li>
-                            <a href="#1.4-Message-lifecycle-as-this-relates-to-payments">1.4 Message lifecycle, as this relates to payments</a>
+                            <a href="#1.4-message-lifecycle-as-this-relates-to-payments">1.4 Message lifecycle, as this relates to payments</a>
                         </li>
                     </ul>
                 </details>
@@ -91,10 +86,10 @@
                     <summary>Chapter 2: SWIFT message header details</summary>
                     <ul class="toc-links">
                         <li>
-                            <a href="#2.1-SWIFT-message-header-details">2.1 SWIFT message header details</a>
+                            <a href="#2.1-swift-message-header-details">2.1 SWIFT message header details</a>
                         </li>
                         <li>
-                            <a href="#2.2-User-header-details">2.2 User header details</a>
+                            <a href="#2.2-user-header-details">2.2 User header details</a>
                         </li>
                     </ul>
                 </details>
@@ -114,34 +109,34 @@
                     <summary>Chapter 6: FINCopy system messages advising HVCS payment status</summary>
                     <ul class="toc-links">
                         <li>
-                            <a href="#6.1-Purpose">6.1 Purpose</a>
+                            <a href="#6.1-purpose">6.1 Purpose</a>
                         </li>
                         <li>
-                            <a href="#6.2-MT012-instructing-agent-notification">6.2 MT012: instructing agent notification</a>
+                            <a href="#6.2-mt012-instructing-agent-notification">6.2 MT012: instructing agent notification</a>
                         </li>
                         <li>
-                            <a href="#6.3-MT019-abort-notification">6.3 MT019: abort notification</a>
+                            <a href="#6.3-mt019-abort-notification">6.3 MT019: abort notification</a>
                         </li>
                         <li>
-                            <a href="#6.4-ESAS-rejection-codes">6.4 ESAS rejection codes</a>
+                            <a href="#6.4-esas-rejection-codes">6.4 ESAS rejection codes</a>
                         </li>
                     </ul>
                 </details>
             </div>
         </nav>
         <main class="hvcs-content">
-            <p class="logo">
+            <div class="logo">
                 <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
-            </p>
-            <p>
+            </div>
+            <div>
                 <div class="document-title">Appendix 14E: MT Messaging Procedures (UG2025)</div>
                 <div class="document-meta">Version 2</div>
                 <div class="document-meta">Effective date: 22/11/2025</div>
-            </p>
-            <p class="section-heading">Document purpose and overview</p>
-            <p class="tag-commentary"></p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="">HVCS rules and procedures overview</div>
+            </div>
+            <div id="document-purpose-and-overview" class="section-heading">Document purpose and overview</div>
+            <div class="tag-commentary"></div>
+            <div class="clause-row">
+                <div id="hvcs-rules-and-procedures-overview" class="clause-heading" data-number="">HVCS rules and procedures overview</div>
                 <ol class="level1 level1-counter-reset">
                     <div class="doc-comment" data-change-id="UG2025">
                         <div class="doc-comment-meta">
@@ -169,8 +164,8 @@
 			receive individual HVCS instructions that are exception and investigation messages.</p>
                     </div>
                 </ol>
-            </p>
-            <p>
+            </div>
+            <div>
                 <div class="menu-container">
                     <div class="menu-root">
                         <p>Payments NZ Rules</p>
@@ -205,9 +200,9 @@
                     </div>
                 </div>
                 <div class="menu-caption">Diagram 01: HVCS Rules and Procedures documentation structure</div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number=""></div>
+            </div>
+            <div class="clause-row">
+                <div id="" class="clause-heading" data-number=""></div>
                 <div class="level1">
                     <p>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).
 		Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants
@@ -252,9 +247,9 @@
                         </ul>
                     </ul>
                 </div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="">Standards, best practices and commentary</div>
+            </div>
+            <div class="clause-row">
+                <div id="standards-best-practices-and-commentary" class="clause-heading" data-number="">Standards, best practices and commentary</div>
                 <div class="level1">
                     <p>
                         <span>For information on how to determine whether the content of an applicable HVCS standard
@@ -265,9 +260,9 @@
 		to actions a person &quot;should&quot; take or anything a person &quot;should&quot; do is intended to convey a
 		best practice with which a person should comply with only, but which has no legal effect.</p>
                 </div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="">Document purpose and structure</div>
+            </div>
+            <div class="clause-row">
+                <div id="document-purpose-and-structure" class="clause-heading" data-number="">Document purpose and structure</div>
                 <ol class="level1 level1-counter-reset">
                     <div class="doc-comment" data-change-id="UG2025">
                         <div class="doc-comment-meta">
@@ -311,10 +306,10 @@
                     </div>
                     <li>Chapter 6 specifies provides the ESAS rejection codes for AVP.</li>
                 </ol>
-            </p>
-            <p class="tag-standards"></p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="">Interpretation</div>
+            </div>
+            <div class="tag-standards"></div>
+            <div class="clause-row">
+                <div id="interpretation" class="clause-heading" data-number="">Interpretation</div>
                 <div class="level1">
                     <p>For the purposes of these MT Messaging Procedures, all references to the following defined
 		terms means an HVCS instruction that is an MT message:</p>
@@ -339,10 +334,10 @@
                         <li>System message.</li>
                     </ul>
                 </div>
-            </p>
-            <p class="section-heading">Chapter 1: MT Messages in scope</p>
-            <p class="tag-commentary"></p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div id="chapter-1-mt-messages-in-scope" class="section-heading">Chapter 1: MT Messages in scope</div>
+            <div class="tag-commentary"></div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -350,15 +345,15 @@
                 <div class="doc-comment-content">
                     <p>Removed 1.1 MT messages for HVCS payments.</p>
                 </div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="1.1">MT messages for HVCS payments</div>
+            </div>
+            <div class="clause-row">
+                <div id="1.1-mt-messages-for-hvcs-payments" class="clause-heading" data-number="1.1">MT messages for HVCS payments</div>
                 <div class="level1">
                     <span class="bold">This clause has been deleted (UG2025 November 2025).</span>
                 </div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="1.2">Other FINCopy message types</div>
+            </div>
+            <div class="clause-row">
+                <div id="1.2-other-fincopy-message-types" class="clause-heading" data-number="1.2">Other FINCopy message types</div>
                 <div class="level1">
                     <div class="doc-comment" data-change-id="UG2025">
                         <div class="doc-comment-meta">
@@ -377,9 +372,9 @@
                     </div>
                     <p>This clause has been deleted (UG2025 November 2025).</p>
                 </div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="1.3">Other FIN message types</div>
+            </div>
+            <div class="clause-row">
+                <div id="1.3-other-fin-message-types" class="clause-heading" data-number="1.3">Other FIN message types</div>
                 <div class="level1">
                     <p>Participants exchange the MT message types described in the following table:</p>
                     <div class="doc-question" data-change-id="UG2025">
@@ -432,8 +427,8 @@
                         </table>
                     </div>
                 </div>
-            </p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -441,17 +436,17 @@
                 <div class="doc-comment-content">
                     <p>Removed 1.4 Message lifecycle, as this relates to payments.</p>
                 </div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="1.4">Message lifecycle, as this relates to payments</div>
+            </div>
+            <div class="clause-row">
+                <div id="1.4-message-lifecycle-as-this-relates-to-payments" class="clause-heading" data-number="1.4">Message lifecycle, as this relates to payments</div>
                 <div class="level1">
                     <p>This clause has been deleted (UG2025 November 2025).</p>
                 </div>
-            </p>
-            <p class="section-heading">Chapter 2: SWIFT message header details</p>
-            <p class="tag-standards"></p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="2.1">SWIFT message header details</div>
+            </div>
+            <div id="chapter-2-swift-message-header-details" class="section-heading">Chapter 2: SWIFT message header details</div>
+            <div class="tag-standards"></div>
+            <div class="clause-row">
+                <div id="2.1-swift-message-header-details" class="clause-heading" data-number="2.1">SWIFT message header details</div>
                 <div class="level1">
                     <p>A SWIFT message contains the following headers:</p>
                     <ul class="bullets">
@@ -462,9 +457,9 @@
                         <li>block 5 = trailers.</li>
                     </ul>
                 </div>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="2.2">User header details</div>
+            </div>
+            <div class="clause-row">
+                <div id="2.2-user-header-details" class="clause-heading" data-number="2.2">User header details</div>
                 <ol class="level1 level1-counter-reset">
                     <li>The content and format of block 1 or block 2 is similar for all SWIFT messages (refer to the SWIFT
 		User Handbook).</li>
@@ -496,8 +491,8 @@
                     <li>This clause has been deleted (UG2025 November 2025).</li>
                     <li>This clause has been deleted (UG2025 November 2025).</li>
                 </ol>
-            </p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -505,10 +500,10 @@
                 <div class="doc-comment-content">
                     <p>Removed - Chapter 3: Customer credit transfer (SCP)</p>
                 </div>
-            </p>
-            <p class="section-heading">Chapter 3: Customer credit transfer (SCP)</p>
-            <p>This chapter has been deleted (UG2025 November 2025).</p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div id="chapter-3-customer-credit-transfer-scp" class="section-heading">Chapter 3: Customer credit transfer (SCP)</div>
+            <div>This chapter has been deleted (UG2025 November 2025).</div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -516,10 +511,10 @@
                 <div class="doc-comment-content">
                     <p>Removed - Chapter 4: Customer Credit Transfer (Cross border redirection)</p>
                 </div>
-            </p>
-            <p class="section-heading">Chapter 4: Customer Credit Transfer (Cross border redirection)</p>
-            <p>This chapter has been deleted (UG2025 November 2025).</p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div id="chapter-4-customer-credit-transfer-cross-border-redirection" class="section-heading">Chapter 4: Customer Credit Transfer (Cross border redirection)</div>
+            <div>This chapter has been deleted (UG2025 November 2025).</div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -527,10 +522,10 @@
                 <div class="doc-comment-content">
                     <p>Removed - Chapter 5: Formats for financial institution transfers</p>
                 </div>
-            </p>
-            <p class="section-heading">Chapter 5: Formats for financial institution transfers</p>
-            <p>This chapter has been deleted (UG2025 November 2025).</p>
-            <p class="doc-question" data-change-id="UG2025">
+            </div>
+            <div id="chapter-5-formats-for-financial-institution-transfers" class="section-heading">Chapter 5: Formats for financial institution transfers</div>
+            <div>This chapter has been deleted (UG2025 November 2025).</div>
+            <div class="doc-question" data-change-id="UG2025">
                 <div class="doc-question-meta">
                     <span class="doc-question-id">UG2025</span>
                     <span class="doc-question-initials">RK</span>
@@ -542,11 +537,11 @@
 		need this at all.</p>
                     <p>We may just need to retain ESAS rejection codes.</p>
                 </div>
-            </p>
-            <p class="section-heading">Chapter 6: FINCopy system messages advising HVCS payment status</p>
-            <p class="tag-commentary"></p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="6.1">Purpose</div>
+            </div>
+            <div id="chapter-6-fincopy-system-messages-advising-hvcs-payment-status" class="section-heading">Chapter 6: FINCopy system messages advising HVCS payment status</div>
+            <div class="tag-commentary"></div>
+            <div class="clause-row">
+                <div id="6.1-purpose" class="clause-heading" data-number="6.1">Purpose</div>
                 <ol class="level1 level1-counter-reset">
                     <div>
                         <p>This chapter specifies—</p>
@@ -558,9 +553,9 @@
                     </ol>
                     <li>the ESAS rejection codes for AVP.</li>
                 </ol>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="6.2">MT012: instructing agent notification</div>
+            </div>
+            <div class="clause-row">
+                <div id="6.2-mt012-instructing-agent-notification" class="clause-heading" data-number="6.2">MT012: instructing agent notification</div>
                 <ol class="level1 level1-counter-reset">
                     <li>FINCopy sends an MT012 system message to notify the instructing agent that FINCopy has released
 		the HVCS payment to the instructed agent. In AVP this occurs after the HVCS payment settles in ESAS.</li>
@@ -625,9 +620,9 @@
                         </table>
                     </div>
                 </ol>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="6.3">MT019: abort notification</div>
+            </div>
+            <div class="clause-row">
+                <div id="6.3-mt019-abort-notification" class="clause-heading" data-number="6.3">MT019: abort notification</div>
                 <ol class="level1 level1-counter-reset">
                     <li>If an unsettled HVCS payment in ESAS is cancelled by the instructing agent or by ESAS (at 08:30 end
 		of day), FINCopy notifies the instructing agent of the cancellation by sending an MT019 system
@@ -701,9 +696,9 @@
                         </table>
                     </div>
                 </ol>
-            </p>
-            <p class="clause-row">
-                <div class="clause-heading" data-number="6.4">ESAS rejection codes</div>
+            </div>
+            <div class="clause-row">
+                <div id="6.4-esas-rejection-codes" class="clause-heading" data-number="6.4">ESAS rejection codes</div>
                 <div class="level1">
                     <div class="doc-comment" data-change-id="UG2025">
                         <div class="doc-comment-meta">
@@ -718,8 +713,8 @@
 		each code when ESAS validates the structure of an MT096 system message but the content of the message
 		fails business rules validation:</p>
                 </div>
-            </p>
-            <p class="table-scroll">
+            </div>
+            <div class="table-scroll">
                 <table class="pnz-table">
                     <thead>
                         <th>Code</th>
@@ -859,12 +854,12 @@
                         </tr>
                     </tbody>
                 </table>
-            </p>
+            </div>
             
-            <p class="bold">
-                <span>6.5 AVP MT CUG service parameters</span>
-            </p>
-            <p class="table-scroll">
+            <div class="bold">
+                <p>6.5 AVP MT CUG service parameters</p>
+            </div>
+            <div class="table-scroll">
                 <table class="pnz-table">
                     <thead>
                         <th>Parameter</th>
@@ -885,9 +880,9 @@
                         </tr>
                     </tbody>
                 </table>
-            </p>
+            </div>
             
-            <p class="table-scroll">
+            <div class="table-scroll">
                 <table class="pnz-table">
                     <thead>
                         <th>Parameter</th>
@@ -957,8 +952,8 @@
                         </tr>
                     </tbody>
                 </table>
-            </p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -966,8 +961,8 @@
                 <div class="doc-comment-content">
                     <p>Removed: &apos;MT103 Parameter Table</p>
                 </div>
-            </p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -975,8 +970,8 @@
                 <div class="doc-comment-content">
                     <p>Removed: &apos;MT202 Parameter Table</p>
                 </div>
-            </p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -984,8 +979,8 @@
                 <div class="doc-comment-content">
                     <p>Removed: &apos;MT205 Parameter Table</p>
                 </div>
-            </p>
-            <p class="doc-comment" data-change-id="UG2025">
+            </div>
+            <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
                     <span class="doc-comment-id">UG2025</span>
                     <span class="doc-comment-initials">RK</span>
@@ -993,7 +988,7 @@
                 <div class="doc-comment-content">
                     <p>Removed: &apos;FIN Copy Parameter Table</p>
                 </div>
-            </p>
+            </div>
         </main>
     </body>
 </html>

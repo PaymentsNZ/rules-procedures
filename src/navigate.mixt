@@ -22,8 +22,9 @@ namespace pnz.nav
 			hasClass = (
 				class == className or
 					Text.StartsWith( class, className & " " ) or
-					Text.EndsWith( class, " " & className) or
-					Text.Contains( class, Text.Flank( className, " " ) )
+					Text.EndsWith( class, " " & className) /* or
+					Text.Contains( class, Text.Flank( className, " " ) ) */
+					// TODO: Investigate Text.Contains behaviour
 			)
 		in
 			hasClass
@@ -89,7 +90,7 @@ namespace pnz.nav
 				}
 				(state, content, itemIndex, name) => (
 					if Value.Is( content, type text ) then
-						if name == "h1" /* and hasClass( content, "section-heading" )  */ then
+						if name == "h1" and hasClass( content, "section-heading" ) then
 							if state{ Chapter } == "" then
 								state & {
 									Chapter = (content & "") // & "" Removes meta

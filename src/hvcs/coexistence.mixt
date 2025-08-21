@@ -368,7 +368,7 @@ import [
 						)
 						pnz::bold_div( "By the end of the co-existence phase:" )
 						pnz::div( 
-							`Participants must be able to send all requests as an MX mesage.`
+							`Participants must be able to send all requests as an MX message.`
 						)						
 						pnz::div(
 							`Participants must send all requests to SWIFT's Case Manager BIC.`
@@ -396,7 +396,7 @@ import [
 						pnz::br
 						pnz::bold_div( "By the end of the co-existence phase:" )
 						pnz::div(
-							`Participants must send all responses as an MX mesage.`
+							`Participants must send all responses as an MX message.`
 						)						
 						pnz::div(
 							`Participants must send all responses to SWIFT's Case Manager BIC.`

@@ -915,7 +915,6 @@ import [
 		to specify sender and receiver information. This will enable SWIFT to implement a consistency check between the
 		Interact Headers and the Business Application Headers for the Sender and Receiver.`
 
-		pnz::question( "UG2025", "RK", "Add hyperlink.")
 		[
 			pnz::text(
 				`The sender and receiver address in FIN message services will be based on BIC11. However, for InterAct messaging
@@ -966,7 +965,6 @@ import [
 		`This is an optional element within the HVCS, however, if used, the LEI must be used in combination with Account number or
 		BIC or Name and Address to keep usage consistent with CBPR+.`
 
-		pnz::question( "UG2025", "RK", "Add hyperlink")
 		[
 			pnz::text(
 				`The Payments Market Practice Group (PMPG) have provided extensive guidance in their paper`

@@ -1114,7 +1114,56 @@ import [
 		"3.5"
 		"Evening session participants"
 
-		"This clause has been deleted (UG2025 November 2025)."
+		`Participants who send and receive financial institution credit transfers during the CLS evening
+		session are:`
+
+		pnz::comment( "UG2025", "RK", "Added ICBC, NZ Depository" )
+		pnz::table(
+			#table(
+				[
+					"Participants"
+					"Date"
+				]
+				[
+					[
+						`ANZ Bank New Zealand Limited`
+						`1 October 2010`
+					]
+					[
+						`ASB Bank Ltd`
+						`1 October 2010`
+					]
+					[
+						`Bank of China (New Zealand) Limited`
+						`4 December 2020`
+					]
+					[
+						`Bank of New Zealand`
+						`1 October 2010`
+					]
+					[
+						`Citibank, N.A.`
+						`1 October 2010`
+					]
+					[
+						`HSBC`
+						`1 October 2010`
+					]
+					[
+						`Industrial and Commercial Bank of China (New Zealand) Limited`
+						`26 March 2025`
+					]
+					[
+						`New Zealand Depository Limited`
+						`4 August 2025`
+					]
+					[
+						`Westpac New Zealand Limited`
+						`1 October 2010`
+					]
+				]
+			)
+		)
 	)
 	/*
 	`1 Participants should also carefully read Parts 1, 15 and 19 of the Payments NZ Rules to fully understand the operation of the HVCS Clearing and Settlement Rules.  Parts 5, 9-11A, 14 and 16-18 may also be relevant to HVCS instructions in certain circumstances.`

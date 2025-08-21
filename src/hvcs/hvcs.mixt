@@ -5,11 +5,10 @@ import [
 ]
 
 {
-	useNavigation = false
+	useNavigation = true
 
 	makehref = (id as text, title as text) => (
 		let
-			//replaced = Text.Replace( Text.Lower( title ), " ", "-" )
 			replaced_dash = Text.Replace( title, " ", "-" )
 			replaced_colon = Text.Replace( replaced_dash, ":", "" )
 			replaced_open_paren = Text.Replace( replaced_colon, "(", "" )
@@ -38,57 +37,25 @@ import [
 					a = html::attributed(
 						{
 							class = "hvcs-header-logo"
-							href = "../index.html"
+							href = "overview.html"
 							aria-label = "Payments NZ Home"
 						}
 						{
 							img = html::attributed(
 								{
-									src = "../images/PNZ_OnWhite_rgb.gif"
+									src = "../images/PNZ_OnBlack_rgb.gif"
 									alt = ""
 								}
 								null
 							)
 						}
 					)
-					div = html::class(
-						"hvcs-header-title"
-						docTitle
-					)
-					nav = html::attributed(
+					a = html::attributed(
 						{
-							class="hvcs-docswitcher"
-							aria-label="HVCS documents"
+							class = "hvcs-header-title"
+							href = "#"
 						}
-						[
-							ul = List.Transform(
-								docSet
-								(doc, i) => (
-									let 
-										target = doc{ target }
-										title = doc{ title }
-										transformed = #(li = {
-											a = html::attributed(
-												(
-													if i == docIndex then
-														{
-															href = target
-															class="active"
-															aria-current="page"
-														}
-													else
-														{
-															href = target
-														}
-												)
-												title
-											)
-										})
-									in
-										transformed
-								)
-							)
-						]
+						docTitle
 					)
 					label = html::attributed(
 						{
@@ -96,7 +63,7 @@ import [
 							class = "hvcs-header-toggle"
            					aria-controls = "hvcs-toc"
 						}
-						"Menu"
+						"Contents"
 					)
 				]
 			)
@@ -212,6 +179,7 @@ import [
 		html::document(
 			"html",
 			"en",
+			// head (list)
 			[
 				;meta = html::meta( "UTF-8" )
 				;meta = {
@@ -233,6 +201,7 @@ import [
 				else
 					[]
 			)
+			// body (list)
 			html::class(
 				"document"
 				if useNavigation then
@@ -253,7 +222,9 @@ import [
 						main = hvcs::main( docContent )
 					]
 				else
-					docContent
+					[
+						main = docContent
+					]
 			)
 		)
 	)

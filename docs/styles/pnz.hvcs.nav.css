@@ -1,115 +1,317 @@
-/* ====== Tokens (tweak later) ====== */
-:root{
+:root {
+	/* height of header */
 	--hvcs-header-h: 64px;
+	/* small grey gap under the header */
+	--hvcs-top-gap: 20px;
+	--hvcs-bottom-gap: 20px;
 	--hvcs-toc-w: 320px;
-	--hvcs-brand: #1a3a5b;
+	--hvcs-brand: #000;
 	--hvcs-text: #1a2840;
 	--hvcs-panel: #fff;
 	--hvcs-line: #d7dde5;
-	--hvcs-hover: rgba(0,0,0,.05);
-  }
-  
-  /* Smooth anchor jumps + offset for fixed header */
-  html{ scroll-behavior:smooth; }
-  .section-heading, .clause-heading { scroll-margin-top: calc(var(--hvcs-header-h) + 12px); }
-  
-  /* ====== Header ====== */
-  .hvcs-header{
-	position: sticky; top: 0; z-index: 1000;
+	--hvcs-hover: rgba(0, 0, 0, .05);
+
+	/* needed to place the ToC in the grey gutter */
+	--doc-max: 960px;
+	/* gap between page edge and the ToC panel */
+}
+
+/* Smooth anchor jumps + offset for fixed header */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Push the document down so it doesn't slide under the fixed header */
+body.document {
+  padding-top: 0;
+  margin-top: var(--hvcs-header-h);
+}
+
+.section-heading,
+.clause-heading {
+	scroll-margin-top: calc(var(--hvcs-header-h) + 12px);
+}
+
+/* Fixed, full-width header across the viewport */
+.hvcs-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1200;
+
 	height: var(--hvcs-header-h);
-	background: var(--hvcs-brand); color: #fff;
-	border-bottom: 1px solid rgba(0,0,0,.06);
-  }
-  .hvcs-header-inner{ display:flex; align-items:center; gap:1rem; height:100%; padding:0 1rem; }
-  .hvcs-header-logo img{ height:32px; display:block; }
-  .hvcs-header-title{ font-weight:600; }
-  .hvcs-header-toggle{ display:none; margin-left:auto; color:#fff; cursor:pointer; padding:.35rem .6rem; border-radius:6px; }
-  
-  /* Header doc switcher */
-  .hvcs-docswitcher ul{ display:flex; gap:.5rem; list-style:none; margin:0 0 0 auto; padding:0; }
-  .hvcs-docswitcher a{
-	color:#fff; text-decoration:none; padding:.25rem .5rem; border-radius:6px;
-  }
-  .hvcs-docswitcher a.active{ background:rgba(255,255,255,.18); }
-  
-  /* ====== One NAV for all modes ====== */
-  .hvcs-toc{
+	background: var(--hvcs-brand);
+	color: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, .06);
+}
+
+.hvcs-header-inner {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	height: 100%;
+	padding: 0 1rem;
+}
+
+.hvcs-header-logo img {
+	height: 32px;
+	display: block;
+}
+
+
+.hvcs-header-title,
+.hvcs-header-toggle {
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+    font-weight: 700;
+	color: #fff;
+	cursor: pointer;
+	line-height: calc(var(--hvcs-header-h) - 8px);
+}
+
+.hvcs-header-toggle {
+	box-sizing: border-box;
+	margin-left: auto;
+	padding: 0rem .6rem;
+	border-radius: 0px;
+
+	border-top:4px solid transparent;
+	border-bottom:4px solid transparent;          /* reserve space */
+	transition: border-color .18s ease;	
+}
+ 
+.hvcs-header-toggle:hover{
+	border-bottom-color:#fff;                      /* wide underline on hover */
+}
+
+/* keep underline when the drawer is open */
+#hvcs-menu-toggle:checked ~ header .hvcs-close{
+	border-bottom-color:#fff;
+}
+
+.hvcs-doc {
+	padding: 1.25rem;
+	padding-top: calc(var(--hvcs-header-h) + 1.25rem);
+}
+
+/* ====== One NAV for all modes ====== */
+.hvcs-toc {
 	background: var(--hvcs-panel);
 	border-right: 1px solid var(--hvcs-line);
-  }
-  
-  /* Desktop layout: sidebar + content using body grid */
-  @media (min-width: 1000px){
-	body.document{
-	  display:grid;
-	  grid-template-columns: var(--hvcs-toc-w) 1fr;
-	  grid-template-rows: var(--hvcs-header-h) auto;
-	  grid-template-areas: "header header" "toc main";
-	  column-gap: 0;
+}
+
+/* Desktop & wide screens: left rail for ToC, page centered in remaining space */
+@media (min-width: 1000px) {
+
+	/* Reserve a fixed rail at the left edge of the viewport */
+	html {
+		display: grid;
+		grid-template-columns: var(--hvcs-toc-w) 1fr;
+		/* rail | main area */
 	}
-	.hvcs-header{ grid-area: header; }
-	#hvcs-toc{
-	  grid-area: toc; position: sticky; top: var(--hvcs-header-h);
-	  align-self:start; max-height: calc(100dvh - var(--hvcs-header-h));
-	  overflow:auto; padding:1rem;
+
+	/* The white page (your 960px body) lives in the main area and stays centered */
+	body.document {
+		grid-column: 2;
+		padding-top: 0;
 	}
-	.hvcs-content{ grid-area: main; padding: 1.25rem; }
-	.hvcs-header-toggle{ display:none; }
-  }
-  
-  /* Mobile: off-canvas drawer (checkbox sibling) */
-  @media (max-width: 999px){
-	.hvcs-docswitcher{ display:none; }
-	.hvcs-header-toggle{ display:inline-block; }
-	#hvcs-toc{
-	  position: fixed; z-index: 1100;
-	  top: var(--hvcs-header-h); left: 0; bottom: 0;
-	  width: min(85vw, 360px); background: var(--hvcs-panel);
-	  border-right:1px solid var(--hvcs-line);
-	  transform: translateX(-100%); transition: transform .22s ease;
-	  overflow:auto; padding:1rem;
+
+	/* Pin the ToC to the left edge of the screen */
+	#hvcs-toc {
+		position: fixed;
+		left: 0;
+		top: var(--hvcs-header-h);
+		bottom: 0;
+		width: var(--hvcs-toc-w);
+
+		background: var(--hvcs-panel);
+		border-right: 1px solid var(--hvcs-line);
+		padding: 1rem;
+
+		overflow: auto;
+		max-height: calc(100dvh - var(--hvcs-header-h));
 	}
-	#hvcs-menu-toggle:checked ~ #hvcs-toc{ transform: translateX(0); }
-	.hvcs-content{ padding: 1rem; }
-  }
-  
-  /* Print: expand ToC and hide header */
-  @media print{
-	.hvcs-header, .hvcs-header-toggle, .hvcs-docswitcher{ display:none !important; }
-	#hvcs-toc{ position: static; border:0; padding:0 0 1rem 0; transform:none !important; }
+
+	/* Page content padding stays the same */
+	.hvcs-content {
+		padding: 1.25rem;
+	}
+
+	/* No hamburger on desktop */
+	.hvcs-header-toggle {
+		display: none;
+	}
+}
+
+/* EXTRA-WIDE screens: put the ToC in the grey gutter (doesn't steal page width) */
+@media (min-width: 1288px) {
+
+	/* Stop using the 2-col grid; return to a single, centered page */
+	body.document {
+		display: block;
+		margin-top: calc(var(--hvcs-header-h) + var(--hvcs-top-gap));
+		margin-bottom: var(--hvcs-bottom-gap);
+	}
+
+	/* Fix the ToC in the left gutter next to the centered document */
+	#hvcs-toc {
+		position: fixed;
+		z-index: 2;
+		top: var(--hvcs-header-h);
+		width: var(--hvcs-toc-w);
+		max-height: calc(100dvh - var(--hvcs-header-h));
+		overflow: auto;
+
+		/* Panel styling in the gutter */
+		background: #fff;
+		border: 1px solid var(--hvcs-line);
+		border-right: 1px solid var(--hvcs-line);
+		/* keep visual if you like */
+		border-radius: 8px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+		padding: 12px;
+	}
+
+	/* Content keeps its normal centered width/padding */
+	.hvcs-content {
+		padding: 1.25rem;
+	}
+}
+
+/* Mobile: off-canvas drawer (checkbox sibling) */
+@media (max-width: 999px) {
+	.hvcs-docswitcher {
+		display: none;
+	}
+
+	.hvcs-header-toggle {
+		display: inline-block;
+	}
+
+	#hvcs-toc {
+		position: fixed;
+		z-index: 1100;
+		top: var(--hvcs-header-h);
+		left: 0;
+		bottom: 0;
+		width: min(85vw, 360px);
+		background: var(--hvcs-panel);
+		border-right: 1px solid var(--hvcs-line);
+		transform: translateX(-100%);
+		transition: transform .22s ease;
+		overflow: auto;
+		padding: 1rem;
+	}
+
+	#hvcs-menu-toggle:checked~#hvcs-toc {
+		transform: translateX(0);
+	}
+
+	.hvcs-content {
+		padding: 1rem;
+	}
+}
+
+/* Print: expand ToC and hide header */
+@media print {
+
+	.hvcs-header,
+	.hvcs-header-toggle,
+	.hvcs-docswitcher {
+		display: none !important;
+	}
+
+	#hvcs-toc {
+		position: static;
+		border: 0;
+		padding: 0 0 1rem 0;
+		transform: none !important;
+	}
+
 	/* Force details to behave expanded in print */
-	#hvcs-toc details{ display:block; }
-	#hvcs-toc details > summary{ font-weight:700; list-style:initial; }
-	#hvcs-toc details > *{ display:block !important; }
-  }
-  
-  /* ====== Nav internals ====== */
-  .toc-group{ margin-bottom: 1rem; }
-  .toc-heading{ font-weight:700; margin-bottom:.25rem; color: var(--hvcs-text); }
-  .toc-links{ list-style:none; margin:0; padding:0; }
-  .toc-links li a{
-	display:block; padding:.28rem .45rem; border-radius:6px;
-	color:inherit; text-decoration:none;
-  }
-  .toc-links li a:hover{ background: var(--hvcs-hover); }
-  .toc-links li a.active{ font-weight:600; outline:2px solid var(--hvcs-brand); outline-offset:0; }
-  
-  /* Summary styling */
-  #hvcs-toc summary{
-	cursor:pointer; padding:.4rem .25rem; border-radius:6px;
-  }
-  #hvcs-toc summary:hover{ background: var(--hvcs-hover); }
-  
-  /* Focus visibility */
-  .hvcs-header-toggle:focus,
-  .hvcs-docswitcher a:focus,
-  .toc-links a:focus,
-  #hvcs-toc summary:focus{ outline:2px solid var(--hvcs-brand); outline-offset:2px; }
-  
-  /* Optional badge for deleted items (if you add it) */
-  .badge-deleted{
-	display:inline-block; margin-left:.35rem; padding:.05rem .35rem;
-	font-size:.75em; border-radius:999px; background:#f3d6d6; color:#6b1212;
-  }
-  .is-deleted{ color:#6b1212; }
-  
+	#hvcs-toc details {
+		display: block;
+	}
+
+	#hvcs-toc details>summary {
+		font-weight: 700;
+		list-style: initial;
+	}
+
+	#hvcs-toc details>* {
+		display: block !important;
+	}
+}
+
+/* ====== Nav internals ====== */
+.toc-group {
+	margin-bottom: 1rem;
+}
+
+.toc-heading {
+	font-weight: 700;
+	margin-bottom: .25rem;
+	color: var(--hvcs-text);
+}
+
+.toc-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.toc-links li a {
+	display: block;
+	padding: .28rem .45rem;
+	border-radius: 6px;
+	color: inherit;
+	text-decoration: none;
+}
+
+.toc-links li a:hover {
+	background: var(--hvcs-hover);
+}
+
+.toc-links li a.active {
+	font-weight: 600;
+	outline: 2px solid var(--hvcs-brand);
+	outline-offset: 0;
+}
+
+/* Summary styling */
+#hvcs-toc summary {
+	cursor: pointer;
+	padding: .4rem .25rem;
+	border-radius: 6px;
+}
+
+#hvcs-toc summary:hover {
+	background: var(--hvcs-hover);
+}
+
+/* Focus visibility */
+.hvcs-header-toggle:focus,
+.hvcs-docswitcher a:focus,
+.toc-links a:focus,
+#hvcs-toc summary:focus {
+	outline: 2px solid var(--hvcs-brand);
+	outline-offset: 2px;
+}
+
+/* Optional badge for deleted items */
+.badge-deleted {
+	display: inline-block;
+	margin-left: .35rem;
+	padding: .05rem .35rem;
+	font-size: .75em;
+	border-radius: 999px;
+	background: #f3d6d6;
+	color: #6b1212;
+}
+
+.is-deleted {
+	color: #6b1212;
+}

@@ -8,1125 +8,1252 @@
         <link href="../styles/pnz.legal.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.css" rel="stylesheet"/>
         <link href="../styles/pnz.hvcs.menu.css" rel="stylesheet"/>
+        <link href="../styles/pnz.hvcs.nav.css" rel="stylesheet"/>
     </head>
     <body class="document">
-        <div class="logo">
-            <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
-        </div>
-        <div>
-            <div class="document-title">Appendix 14B: HVCS Common Procedures (UG2025)</div>
-            <div class="document-meta">Version 2</div>
-            <div class="document-meta">Effective date: 22/11/2025</div>
-        </div>
-        <div class="section-heading">Document purpose and overview</div>
-        <div class="tag-commentary"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="">HVCS rules and procedures overview</div>
-            <ol class="level1 level1-counter-reset">
-                <div>
-                    <p>This document HVCS Common Procedures (Part B) is one part of a suite of documentation to help
+        <header class="hvcs-header" role="banner">
+            <div class="hvcs-header-inner">
+                <a class="hvcs-header-logo" href="overview.html" aria-label="Payments NZ Home">
+                    <img src="../images/PNZ_OnBlack_rgb.gif" alt=""/>
+                </a>
+                <a class="hvcs-header-title" href="#">HVCS Common Procedures</a>
+                <label for="hvcs-menu-toggle" class="hvcs-header-toggle" aria-controls="hvcs-toc">Contents</label>
+            </div>
+        </header>
+        <input id="hvcs-menu-toggle" type="checkbox" class="hvcs-header-checkbox" hidden/>
+        <nav id="hvcs-toc" class="hvcs-toc" aria-label="Table of contents">
+            <div class="toc-group toc-docs">
+                <div class="toc-heading">Documents</div>
+                <ul class="toc-links">
+                    <li>
+                        <a href="overview.html">HVCS Overview</a>
+                    </li>
+                    <li>
+                        <a href="common.html" class="active" aria-current="page">HVCS Common Procedures</a>
+                    </li>
+                    <li>
+                        <a href="scp.html">HVCS SCP Procedures</a>
+                    </li>
+                    <li>
+                        <a href="mx.html">HVCS MX Procedures</a>
+                    </li>
+                    <li>
+                        <a href="mt.html">HVCS MT Procedures</a>
+                    </li>
+                    <li>
+                        <a href="coexistence.html">HVCS Coexistence Procedures</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="toc-group toc-chapters">
+                <div class="toc-heading">Chapters</div>
+                <details>
+                    <summary>Document purpose and overview</summary>
+                    <ul class="toc-links">
+                        <li>
+                            <a href="#Appendix-14B-HVCS-Common-Procedures-UG2025">Appendix 14B: HVCS Common Procedures (UG2025)</a>
+                        </li>
+                        <li>
+                            <a href="#HVCS-rules-and-procedures-overview">HVCS rules and procedures overview</a>
+                        </li>
+                        <li>
+                            <a href="#Diagram-01-HVCS-Rules-and-Procedures-documentation-structure">Diagram 01: HVCS Rules and Procedures documentation structure</a>
+                        </li>
+                        <li>
+                            <a href="#Standards-best-practices-and-commentary">Standards, best practices and commentary</a>
+                        </li>
+                        <li>
+                            <a href="#Document-purpose-and-structure">Document purpose and structure</a>
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Chapter 1: Normal HVCS processing</summary>
+                    <ul class="toc-links">
+                        <li>
+                            <a href="#1.1-Defined-terms">1.1 Defined terms</a>
+                        </li>
+                        <li>
+                            <a href="#1.2-Form-content-and-delivery-of-payment-instruction">1.2 Form, content, and delivery of payment instruction</a>
+                        </li>
+                        <li>
+                            <a href="#1.3-Agency-arrangement-obligations">1.3 Agency arrangement obligations</a>
+                        </li>
+                        <li>
+                            <a href="#1.4-HVCS-operating-times">1.4 HVCS operating times</a>
+                        </li>
+                        <li>
+                            <a href="#1.5-Validating-HVCS-payments">1.5 Validating HVCS payments</a>
+                        </li>
+                        <li>
+                            <a href="#1.6-No-revoking-after-settlement">1.6 No revoking after settlement</a>
+                        </li>
+                        <li>
+                            <a href="#1.7-Return-HVCS-payment-timing-format-and-content">1.7 Return HVCS payment: timing, format and content</a>
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Chapter 2: Errors</summary>
+                    <ul class="toc-links">
+                        <li>
+                            <a href="#2.1-Errors">2.1 Errors</a>
+                        </li>
+                        <li>
+                            <a href="#2.2-Error-prevents-processing">2.2 Error prevents processing</a>
+                        </li>
+                        <li>
+                            <a href="#2.3-Instructed-agent-credits-wrong-account">2.3 Instructed agent credits wrong account</a>
+                        </li>
+                        <li>
+                            <a href="#2.4-Co-operate-to-resolve-processing-errors">2.4 Co-operate to resolve processing errors</a>
+                        </li>
+                        <li>
+                            <a href="#2.5-Request-and-response-formats">2.5 Request and response formats</a>
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Chapter 3: Late processing</summary>
+                    <ul class="toc-links">
+                        <li>
+                            <a href="#3.1-Late-processing">3.1 Late processing</a>
+                        </li>
+                        <li>
+                            <a href="#3.2-When-HVCS-payments-settle">3.2 When HVCS payments settle</a>
+                        </li>
+                        <li>
+                            <a href="#3.3-Sending-customer-HVCS-instructions-after-1645">3.3 Sending customer HVCS instructions after 16:45</a>
+                        </li>
+                        <li>
+                            <a href="#3.4-Sending-FI-HVCS-instructions-after-1645">3.4 Sending FI HVCS instructions after 16:45</a>
+                        </li>
+                        <li>
+                            <a href="#3.5-Evening-session-participants">3.5 Evening session participants</a>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+        </nav>
+        <main class="hvcs-content">
+            <p class="logo">
+                <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
+            </p>
+            <p>
+                <div class="document-title">Appendix 14B: HVCS Common Procedures (UG2025)</div>
+                <div class="document-meta">Version 2</div>
+                <div class="document-meta">Effective date: 22/11/2025</div>
+            </p>
+            <p class="section-heading">Document purpose and overview</p>
+            <p class="tag-commentary"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="">HVCS rules and procedures overview</div>
+                <ol class="level1 level1-counter-reset">
+                    <div>
+                        <p>This document HVCS Common Procedures (Part B) is one part of a suite of documentation to help
 			participants understand what is required to become a high value clearing system (HVCS) participant
 			and how to send and receive individual HVCS instructions and NZD HVCS payments that the participant
 			cannot revoke or reverse after settlement.</p>
+                    </div>
+                </ol>
+            </p>
+            <p>
+                <div class="menu-container">
+                    <div class="menu-root">
+                        <p>Payments NZ Rules</p>
+                        <p>Part 9</p>
+                        <p>HVCS Clearing and Settlement</p>
+                    </div>
+                    <div class="menu-branches">
+                        <a href="overview.html" class="menu-branch">
+                            <p>Part A</p>
+                            <p>HVCS Overview</p>
+                        </a>
+                        <a href="common.html" class="menu-branch active">
+                            <p>Part B</p>
+                            <p>HVCS Common Procedures</p>
+                        </a>
+                        <a href="scp.html" class="menu-branch">
+                            <p>Part C</p>
+                            <p>SCP Procedures</p>
+                        </a>
+                        <a href="mx.html" class="menu-branch">
+                            <p>Part D</p>
+                            <p>MX Messaging Procedures (ISO 20022)</p>
+                        </a>
+                        <a href="mt.html" class="menu-branch">
+                            <p>Part E</p>
+                            <p>MT Messaging Procedures (ISO 15022)</p>
+                        </a>
+                        <a href="coexistence.html" class="menu-branch">
+                            <p>Part F</p>
+                            <p>Co-existence Procedures</p>
+                        </a>
+                    </div>
                 </div>
-            </ol>
-        </div>
-        <div>
-            <div class="menu-container">
-                <div class="menu-root">
-                    <p>Payments NZ Rules</p>
-                    <p>Part 9</p>
-                    <p>HVCS Clearing and Settlement</p>
-                </div>
-                <div class="menu-branches">
-                    <a href="overview.html" class="menu-branch">
-                        <p>Part A</p>
-                        <p>HVCS Overview</p>
-                    </a>
-                    <a href="common.html" class="menu-branch active">
-                        <p>Part B</p>
-                        <p>HVCS Common Procedures</p>
-                    </a>
-                    <a href="scp.html" class="menu-branch">
-                        <p>Part C</p>
-                        <p>SCP Procedures</p>
-                    </a>
-                    <a href="mx.html" class="menu-branch">
-                        <p>Part D</p>
-                        <p>MX Messaging Procedures (ISO 20022)</p>
-                    </a>
-                    <a href="mt.html" class="menu-branch">
-                        <p>Part E</p>
-                        <p>MT Messaging Procedures (ISO 15022)</p>
-                    </a>
-                    <a href="coexistence.html" class="menu-branch">
-                        <p>Part F</p>
-                        <p>Co-existence Procedures</p>
-                    </a>
-                </div>
-            </div>
-            <div class="menu-caption">Diagram 01: HVCS Rules and Procedures documentation structure</div>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number=""></div>
-            <ol class="level1 level1-counter-reset">
-                <div>
-                    <p>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).
+                <div class="menu-caption">Diagram 01: HVCS Rules and Procedures documentation structure</div>
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number=""></div>
+                <ol class="level1 level1-counter-reset">
+                    <div>
+                        <p>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).
 			Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants
 			to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs)
 			through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</p>
-                    <p>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants
+                        <p>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants
 			comply with Part 9 are comprised of:</p>
-                    <ul class="bullets">
-                        <li>Part A — HVCS Overview</li>
-                        <ul>
-                            <li>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and
+                        <ul class="bullets">
+                            <li>Part A — HVCS Overview</li>
+                            <ul>
+                                <li>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and
 					settlement works, and the business, technical, and regulatory environment in which the process
 					operates.  This is a non-binding document for use as guidance only.</li>
-                        </ul>
-                        <li>Part B — HVCS Common Procedures (this document)</li>
-                        <ul>
-                            <li>Provides binding procedures and product requirements that apply to all HVCS instructions at all
+                            </ul>
+                            <li>Part B — HVCS Common Procedures (this document)</li>
+                            <ul>
+                                <li>Provides binding procedures and product requirements that apply to all HVCS instructions at all
 					times.  This document also contains some non-binding commentary and best practice.</li>
-                        </ul>
-                        <li>Part C — SCP Procedures</li>
-                        <ul>
-                            <li>Provides binding procedures and product requirements that apply only to an HVCS instruction that
+                            </ul>
+                            <li>Part C — SCP Procedures</li>
+                            <ul>
+                                <li>Provides binding procedures and product requirements that apply only to an HVCS instruction that
 					is a same day cleared payment.  This document also contains some non-binding commentary and best
 					practice, such as recommended terms and conditions with customers.</li>
-                        </ul>
-                        <li>Part D — MX Messaging Procedures</li>
-                        <ul>
-                            <li>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022
+                            </ul>
+                            <li>Part D — MX Messaging Procedures</li>
+                            <ul>
+                                <li>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022
 					messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and
 					best practice.</li>
-                        </ul>
-                        <li>Part E — MT Messaging Procedures</li>
-                        <ul>
-                            <li>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022
+                            </ul>
+                            <li>Part E — MT Messaging Procedures</li>
+                            <ul>
+                                <li>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022
 					messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and
 					best practice.</li>
-                        </ul>
-                        <li>Part F — Co-existence Procedures</li>
-                        <ul>
-                            <li>Provides binding procedures for participants during the co-existence phase of the migration from
+                            </ul>
+                            <li>Part F — Co-existence Procedures</li>
+                            <ul>
+                                <li>Provides binding procedures for participants during the co-existence phase of the migration from
 					sending and receiving MT messages to MX messages.</li>
+                            </ul>
                         </ul>
-                    </ul>
-                </div>
-            </ol>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="">Standards, best practices and commentary</div>
-            <ol class="level1 level1-counter-reset">
-                <p>
-                    <span>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14
-			creates binding legal rights or obligations, please see</span>
-                    <span class="italic">Part A - Overview.</span>
-                </p>
-            </ol>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="">Document purpose and structure</div>
-            <ol class="level1 level1-counter-reset">
-                <li>This document discusses the HVCS Common Procedures that apply to normal processing of all HVCS instructions
-		and the processing of errors and late HVCS payments.</li>
-                <li>This document is divided into three chapters.</li>
-                <li>Chapter 1 provides an overview on how to process HVCS instructions to settle and interchange HVCS payments
-		under normal conditions.</li>
-                <li>Chapter 2 specifies how to process HVCS instructions to settle and interchange HVCS payments that contain
-		errors.</li>
-                <li>Chapter 3 specifies how to process HVCS instructions to settle and interchange HVCS payments that have been
-		settled after 16:45.</li>
-            </ol>
-        </div>
-        <div class="section-heading">Chapter 1: Normal HVCS processing</div>
-        <div class="tag-standards"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.1">Defined terms</div>
-            <div class="level1">
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">RK</span>
                     </div>
-                    <div class="doc-comment-content">
-                        <p>Changed capitalisation of FINplus</p>
-                    </div>
-                </div>
-                <p>
-                    <span class="bold">CBPR+</span>
-                    <span>means the ISO 20022-based messaging standard for sending a SWIFT message through the FINplus CUG
-				operated by SWIFT.</span>
-                </p>
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">JW</span>
-                    </div>
-                    <div class="doc-comment-content">
-                        <p>Removed MT103</p>
-                    </div>
-                </div>
-                <p>
-                    <span class="bold">Customer credit transfer message</span>
-                    <span>means the following payment messages used to facilitate an HVCS payment involving a customer of a
-				participant:</span>
-                    <ul class="bullets">
-                        <li>pacs.008</li>
-                    </ul>
-                </p>
-                <p>
-                    <span class="bold">Exception and investigation message</span>
-                    <span>message means an HVCS instruction sent between participants including:</span>
-                    <ul class="bullets">
-                        <li>MT192;</li>
-                        <li>MT196</li>
-                        <li>MT292;</li>
-                        <li>MT296</li>
-                        <li>camt.056; or</li>
-                        <li>camt.029</li>
-                    </ul>
-                </p>
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">JW</span>
-                    </div>
-                    <div class="doc-comment-content">
-                        <p>Removed MT202, MT202COV, MT205, MT205COV</p>
-                    </div>
-                </div>
-                <p>
-                    <span class="bold">FI credit transfer message</span>
-                    <span>means the following payment messages used to facilitate an HVCS payment involving a participant or
-				 financial institution customer of a participant:</span>
-                    <ul class="bullets">
-                        <li>pacs.009; and</li>
-                        <li>pacs.009COV</li>
-                    </ul>
-                </p>
-                <p>
-                    <span class="bold">FIN message</span>
-                    <span>means the ISO 15022-based messaging standard for sending a SWIFT message through the general FIN CUG
-				operated by SWIFT.</span>
-                </p>
-                <p>
-                    <span class="bold">MT message</span>
-                    <span>means an HVCS instruction sent in accordance with the MT Messaging Procedures</span>
-                </p>
-                <p>
-                    <span class="bold">MX message</span>
-                    <span>means an HVCS instruction sent in accordance with the MX Messaging Procedures and the MX Message
-				Specifications</span>
-                </p>
-                <p>
-                    <span class="bold">MX Message Specifications</span>
-                    <span>means the applicable production version(s) of New Zealand&apos;s HVCS Usage Guidelines, being the base
-				ISO 20022 message specifications modified for New Zealand&apos;s HVCS and provided on the &quot;mystandards&quot;
-				webpage</span>
-                </p>
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">JW</span>
-                    </div>
-                    <div class="doc-comment-content">
-                        <p>Removed MT103 RETN, MT202 RETN, MT202COV RETN, MT205 RETN, and MT205COV RETN</p>
-                    </div>
-                </div>
-                <p>
-                    <span class="bold">Return message</span>
-                    <span>message means the following payment messages used to facilitate the return of an HVCS payment:</span>
-                    <ul class="bullets">
-                        <li>pacs.004</li>
-                    </ul>
-                </p>
-                <p>
-                    <span class="bold">SWIFT message</span>
-                    <span>message means messages that are sent through SWIFT including:</span>
-                    <ul class="bullets">
-                        <li>HVCS instruction;</li>
-                        <li>HVPS message;</li>
-                        <li>CBPR+; or</li>
-                        <li>FIN message</li>
-                    </ul>
-                </p>
-                <div class="doc-question" data-change-id="UG2025">
-                    <div class="doc-question-meta">
-                        <span class="doc-question-id">UG2025</span>
-                        <span class="doc-question-initials">JW</span>
-                    </div>
-                    <div class="doc-question-content">
-                        <p>Is it safe to remove:</p>
-                        <p>- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired.</p>
-                        <p>- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered.</p>
-                        <p>- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the &lt;text-block&gt;, and has been forced to abort it instead.</p>
-                    </div>
-                </div>
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">RK</span>
-                    </div>
-                    <div class="doc-comment-content">
-                        <p>Removed:</p>
-                        <p>- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.</p>
-                    </div>
-                </div>
-                <p>
-                    <span class="bold">System message</span>
-                    <span>means a message sent to a participant through SWIFT in relation to an HVCS instruction including:</span>
-                    <ul class="bullets">
-                        <li>MT010;</li>
-                        <li>MT011;</li>
-                        <li>MT019;</li>
-                        <li>xsys.002;</li>
-                        <li>xsys.003;</li>
-                        <li>xsys.010; or</li>
-                        <li>xsys.011</li>
-                    </ul>
-                </p>
-                <p>Unless the context otherwise specifies, all other defined terms have the meanings given to them in Part 19
-		of the Payments NZ Rules.</p>
-            </div>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.2">Form, content, and delivery of payment instruction</div>
-            <div class="level1">
-                <p>The instructing agent that sends an HVCS instruction may determine the form, content, and method of delivery
-		of the payment instruction from the debtor to the instructing agent.</p>
-            </div>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.3">Agency arrangement obligations</div>
-            <ol class="level1 level1-counter-reset">
-                <li>A participant that receives HVCS instructions on behalf of a creditor agent pursuant to an agency arrangement
-		must ensure that each creditor agent which it has an agency arrangement with has a SWIFT BIC to identify the
-		creditor agent that can be provided to the debtor for inclusion in the details of the debtor&apos;s payment
-		instruction.</li>
-                <li>A participant that sends HVCS instructions on behalf of a debtor agent pursuant to an agency arrangement must
-		ensure that each debtor agent which it has an agency arrangement with has a SWIFT BIC that can be used by the
-		Participant acting as an instructing agent to identify the debtor agent within the payment message.</li>
-            </ol>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.4">HVCS operating times</div>
-            <ol class="level1 level1-counter-reset">
-                <li>An HVCS participant must connect to the transaction delivery system—</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>every business day including every provincial holiday; and</li>
-                    <li>during the minimum time period commencing at 09:00 on a business day and ending at 17:15 on that business
-			day; and</li>
-                    <li>during a time period from 17:15 on a business day until such time as is necessary to receive any HVCS
-			instruction sent in accordance with clause 3.3 or 3.4 of these HVCS Common Procedures.</li>
                 </ol>
-                <li>The instructing agent may only send an HVCS instruction during the time period commencing at 09:00 on a
-		business day and ending at 16:45 on that business day unless clause 3.3 or 3.4 of these HVCS Common Procedures
-		apply.</li>
-            </ol>
-        </div>
-        <div class="tag-commentary"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.5">Validating HVCS payments</div>
-            <ol class="level1 level1-counter-reset">
-                <li>The following table sets out the validation requirements that apply to a range of HVCS instructions.</li>
-                <li>For clarity, the obligations set out in the table below are cumulative.  Participants must comply with every
-		validation obligation that applies to the type of HVCS instruction that the participant sends or receives.</li>
-                <h2 class="subsection-heading">Instructing Agent</h2>
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">RK</span>
-                    </div>
-                    <div class="doc-comment-content">
-                        <p>Removed MT Obligations</p>
-                    </div>
-                </div>
-                <div class="table-scroll">
-                    <table class="pnz-table validation-table">
-                        <thead>
-                            <th>Action</th>
-                            <th>MX Obligations</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction as an</span>
-                                    <span class="bold">MX message</span>
-                                </td>
-                                <td>
-                                    <div>The instructing agent:</div>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span class="bold">Must</span>
-                                            <span>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX
-										Messaging Procedures (in accordance with MX Message Specifications MyStandards
-										and Local Usage Guideline Validation); and</span>
-                                        </li>
-                                        <li>
-                                            <span class="bold">Should</span>
-                                            <span>validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX
-										Messaging Procedures</span>
-                                        </li>
-                                    </ul>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(MX Message Requirements)</p>
-                                    </div>
-                                    <div class="italic">
-                                        <p>(Instructing Agent Validation)</p>
-                                    </div>
-                                    <div>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the
-							MX procedures.</div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(Message Validation (Swift))</p>
-                                    </div>
-                                    <div class="italic">
-                                        <p>(Message Validation (Participant))</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction as an</span>
-                                    <span class="bold">SCP</span>
-                                </td>
-                                <td>
-                                    <div>The instructing agent:</div>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span class="bold">Must</span>
-                                            <span>validate the HVCS instruction in accordance with clause 1.5 of the SCP Procedures</span>
-                                        </li>
-                                        <li>
-                                            <span class="bold">Must</span>
-                                            <span>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the
-										MX Messaging Procedures (in accordance with MX Message Specifications)</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction as an</span>
-                                    <span class="bold">Non-SCP</span>
-                                </td>
-                                <td>
-                                    <div>The instructing agent:</div>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span class="bold">Must</span>
-                                            <span>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX
-										Messaging Procedures (in accordance with MX Message Specifications MyStandards
-										and Local Usage Guideline Validation); and</span>
-                                        </li>
-                                        <li>
-                                            <span class="bold">Should</span>
-                                            <span>validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX
-										Messaging Procedures</span>
-                                        </li>
-                                    </ul>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(MX Message Requirements)</p>
-                                    </div>
-                                    <div class="italic">
-                                        <p>(Instructing Agent Validation)</p>
-                                    </div>
-                                    <div>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the
-							MX procedures.</div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(Message Validation (Swift))</p>
-                                    </div>
-                                    <div class="italic">
-                                        <p>(Message Validation (Participant))</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction</span>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>As an</span>
-                                            <span class="bold">SCP</span>
-                                            <span>; and</span>
-                                        </li>
-                                        <li>
-                                            <span>Creditor identified by</span>
-                                            <span class="bold">BIC</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor BIC:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</div>
-                                    <br/>
-                                    <div class="bold">
-                                        <p>Rules:</p>
-                                    </div>
-                                    <div>HVCS_SDCL_BIC_Creditor_Account_Identification_1_FormalRule</div>
-                                    <div>HVCS_SDCL_BIC_Creditor_Account_Identification_2_FormalRule</div>
-                                    <br/>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor Account ID:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
-                                    <br/>
-                                    <div>
-                                        <span class="bold">Rules:</span>
-                                    </div>
-                                    <br/>
-                                    <div>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</div>
-                                    <div>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction</span>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>As an</span>
-                                            <span class="bold">SCP</span>
-                                            <span>; and</span>
-                                        </li>
-                                        <li>
-                                            <span class="bold">Does not</span>
-                                            <span>contain a</span>
-                                            <span class="bold">BIC</span>
-                                            <span>(contains an account number or card number)</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>Clause 4.2 of the MX Procedures has commentary that documents what an account number
-							should look like.</div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(SCP account number format)</p>
-                                    </div>
-                                    <br/>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor Account ID:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
-                                    <br/>
-                                    <div>Clause 2.3 of the MX Procedures includes requirements for Bacho format, check digit
-							for PAN etc</div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(Instructed agent validation)</p>
-                                    </div>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor Name:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Nm</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction</span>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>As an</span>
-                                            <span class="bold">SCP</span>
-                                            <span>; and</span>
-                                        </li>
-                                        <li>
-                                            <span>Includes an</span>
-                                            <span class="bold">email address</span>
-                                            <span>for the beneficiary notification</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>Clause 4.3 of the MX Procedures shows the dedicated email address field.</div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>SCP Customer notifications)</p>
-                                    </div>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Email Address:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction</span>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>As a customer credit transfer message — </span>
-                                            <span class="bold">cross border redirection</span>
-                                            <span>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and</span>
-                                        </li>
-                                        <li>
-                                            <span>Contains a</span>
-                                            <span class="bold">BIC</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor BIC:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</div>
-                                    <br/>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor Account ID:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
-                                    <br/>
-                                    <div class="bold">
-                                        <p>Rules:</p>
-                                    </div>
-                                    <div>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</div>
-                                    <br/>
-                                    <div>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction</span>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>As a customer credit transfer message — </span>
-                                            <span class="bold">cross border redirection</span>
-                                            <span>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and</span>
-                                        </li>
-                                        <li>
-                                            <span>Does</span>
-                                            <span class="bold">not</span>
-                                            <span>contain a</span>
-                                            <span class="bold">BIC</span>
-                                            <span>(contains an account number or card number)</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor BIC:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</div>
-                                    <br/>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Creditor Account ID:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
-                                    <br/>
-                                    <div class="bold">
-                                        <p>Rules:</p>
-                                    </div>
-                                    <div>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</div>
-                                    <br/>
-                                    <div>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Sending an HVCS instruction as an</span>
-                                    <span class="bold">FI credit transfer message</span>
-                                    <span>(as set out in clause 9.1(2)(b) of the Rules and as defined in the
-								HVCS Common Procedures</span>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span>The instructing agent</span>
-                                        <span class="bold">must</span>
-                                        <span>validate the HVCS instruction in accordance with clause 2.1 of the MX
-									Procedures and in accordance with MyStandards.</span>
-                                    </div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(MX Message Requirements)</p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <h2 class="subsection-heading">Instructed Agent</h2>
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">RK</span>
-                    </div>
-                    <div class="doc-comment-content">
-                        <p>Removed MT Obligations</p>
-                    </div>
-                </div>
-                <div class="table-scroll">
-                    <table class="pnz-table validation-table">
-                        <thead>
-                            <th>Action</th>
-                            <th>MX Obligations</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div>Has been sent an HVCS instruction:</div>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>As a customer credit transfer message — </span>
-                                            <span class="bold">cross border redirection</span>
-                                            <span>(as set out in clause 9.1(2)(a)(iii) of the Rules); and</span>
-                                        </li>
-                                        <li>
-                                            <span>Is also the</span>
-                                            <span class="bold">creditor agent</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span>The instructed agent</span>
-                                        <span class="bold">must</span>
-                                        <span>validate the HVCS instruction in accordance with clauses 2.1 and 2.3
-									of the MX Procedures and in accordance with MyStandards and Local Usage
-									Guideline Validation.</span>
-                                    </div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(MX Message Requirements)</p>
-                                    </div>
-                                    <div class="italic">
-                                        <p>(Instructed Agent Validation)</p>
-                                    </div>
-                                    <div>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures.</div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(Message Validation (Swift))</p>
-                                    </div>
-                                    <div class="italic">
-                                        <p>(Message Validation (Participant))</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Has been sent an HVCS instruction as an</span>
-                                    <span class="bold">SCP</span>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span>The instructed agent</span>
-                                        <span class="bold">must</span>
-                                        <span>validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures
-									and in accordance with MyStandards.</span>
-                                    </div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(Instructed agent validation)</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>Has been sent an HVCS instruction:</div>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>As an</span>
-                                            <span class="bold">SCP</span>
-                                            <span>; and</span>
-                                        </li>
-                                        <li>
-                                            <span>Includes an</span>
-                                            <span class="bold">email address</span>
-                                            <span>for the beneficiary notification</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>Clause 4.3 of the MX Procedures shows the dedicated email address field.</div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(SCP Customer notifications)</p>
-                                    </div>
-                                    <div>
-                                        <span class="bold">XML Path</span>
-                                        <span>for Email Address:</span>
-                                    </div>
-                                    <br/>
-                                    <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>Has been sent an HVCS instruction:</div>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>A customer credit transfer message — </span>
-                                            <span class="bold">cross border redirection</span>
-                                            <span>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span>The instructed agent</span>
-                                        <span class="bold">must</span>
-                                        <span>validate the HVCS instruction in accordance with clauses 2.3
-									of the MX Procedures.</span>
-                                    </div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(Instructed agent validation)</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <ul class="bullets">
-                                        <li>
-                                            <span>Needs to</span>
-                                            <span class="bold">return</span>
-                                            <span>an HVCS payment;</span>
-                                        </li>
-                                        <li>
-                                            <span class="bold">Chooses to</span>
-                                            <span>populate line number 4 and 5 of</span>
-                                            <span class="bold">field 72</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <div>
-                                        <span>The instructed agent</span>
-                                        <span class="bold">must</span>
-                                        <span>validate the HVCS instruction in accordance with clause 2.1 of the
-									MX Procedures and in accordance with MyStandards.</span>
-                                    </div>
-                                    <br/>
-                                    <div class="italic">
-                                        <p>(MX Message Requirements)</p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </ol>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.6">No revoking after settlement</div>
-            <div class="level1">
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">RK</span>
-                    </div>
-                    <div class="doc-comment-content">
-                        <p>Replaced: &apos;section 156R of the Banking (Prudential Supervision) Act 1989.&apos;</p>
-                        <p>With: &apos;section 55 of the Financial Markets Infrastructure Act 2021.&apos;</p>
-                    </div>
-                </div>
-                <p>As HVCS payments are made through the Reserve Bank&apos;s designated settlement system, ESAS, they cannot
-		be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms
-		and conditions and section 55 of the Financial Markets Infrastructure Act 2021.</p>
-            </div>
-        </div>
-        <div class="tag-standards"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="1.7">Return HVCS payment: timing, format and content</div>
-            <ol class="level1 level1-counter-reset">
-                <li>To comply with rule 9.21 and clause 2.2 of these HVCS Common Procedures , an instructed agent must
-		return an HVCS payment:</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>as soon as practicable after making the decision to return it, and</li>
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="">Standards, best practices and commentary</div>
+                <ol class="level1 level1-counter-reset">
+                    <p>
+                        <span>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14
+			creates binding legal rights or obligations, please see</span>
+                        <span class="italic">Part A - Overview.</span>
+                    </p>
+                </ol>
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="">Document purpose and structure</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>This document discusses the HVCS Common Procedures that apply to normal processing of all HVCS instructions
+		and the processing of errors and late HVCS payments.</li>
+                    <li>This document is divided into three chapters.</li>
+                    <li>Chapter 1 provides an overview on how to process HVCS instructions to settle and interchange HVCS payments
+		under normal conditions.</li>
+                    <li>Chapter 2 specifies how to process HVCS instructions to settle and interchange HVCS payments that contain
+		errors.</li>
+                    <li>Chapter 3 specifies how to process HVCS instructions to settle and interchange HVCS payments that have been
+		settled after 16:45.</li>
+                </ol>
+            </p>
+            <p class="section-heading">Chapter 1: Normal HVCS processing</p>
+            <p class="tag-standards"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="1.1">Defined terms</div>
+                <div class="level1">
                     <div class="doc-comment" data-change-id="UG2025">
                         <div class="doc-comment-meta">
                             <span class="doc-comment-id">UG2025</span>
                             <span class="doc-comment-initials">RK</span>
                         </div>
                         <div class="doc-comment-content">
-                            <p>Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications.</p>
+                            <p>Changed capitalisation of FINplus</p>
                         </div>
                     </div>
-                    <li>in accordance with Part D - MX Procedures and the MX Message Specifications.</li>
+                    <p>
+                        <span class="bold">CBPR+</span>
+                        <span>means the ISO 20022-based messaging standard for sending a SWIFT message through the FINplus CUG
+				operated by SWIFT.</span>
+                    </p>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">JW</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed MT103</p>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="bold">Customer credit transfer message</span>
+                        <span>means the following payment messages used to facilitate an HVCS payment involving a customer of a
+				participant:</span>
+                        <ul class="bullets">
+                            <li>pacs.008</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <span class="bold">Exception and investigation message</span>
+                        <span>message means an HVCS instruction sent between participants including:</span>
+                        <ul class="bullets">
+                            <li>MT192;</li>
+                            <li>MT196</li>
+                            <li>MT292;</li>
+                            <li>MT296</li>
+                            <li>camt.056; or</li>
+                            <li>camt.029</li>
+                        </ul>
+                    </p>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">JW</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed MT202, MT202COV, MT205, MT205COV</p>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="bold">FI credit transfer message</span>
+                        <span>means the following payment messages used to facilitate an HVCS payment involving a participant or
+				 financial institution customer of a participant:</span>
+                        <ul class="bullets">
+                            <li>pacs.009; and</li>
+                            <li>pacs.009COV</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <span class="bold">FIN message</span>
+                        <span>means the ISO 15022-based messaging standard for sending a SWIFT message through the general FIN CUG
+				operated by SWIFT.</span>
+                    </p>
+                    <p>
+                        <span class="bold">MT message</span>
+                        <span>means an HVCS instruction sent in accordance with the MT Messaging Procedures</span>
+                    </p>
+                    <p>
+                        <span class="bold">MX message</span>
+                        <span>means an HVCS instruction sent in accordance with the MX Messaging Procedures and the MX Message
+				Specifications</span>
+                    </p>
+                    <p>
+                        <span class="bold">MX Message Specifications</span>
+                        <span>means the applicable production version(s) of New Zealand&apos;s HVCS Usage Guidelines, being the base
+				ISO 20022 message specifications modified for New Zealand&apos;s HVCS and provided on the &quot;mystandards&quot;
+				webpage</span>
+                    </p>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">JW</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed MT103 RETN, MT202 RETN, MT202COV RETN, MT205 RETN, and MT205COV RETN</p>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="bold">Return message</span>
+                        <span>message means the following payment messages used to facilitate the return of an HVCS payment:</span>
+                        <ul class="bullets">
+                            <li>pacs.004</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <span class="bold">SWIFT message</span>
+                        <span>message means messages that are sent through SWIFT including:</span>
+                        <ul class="bullets">
+                            <li>HVCS instruction;</li>
+                            <li>HVPS message;</li>
+                            <li>CBPR+; or</li>
+                            <li>FIN message</li>
+                        </ul>
+                    </p>
+                    <div class="doc-question" data-change-id="UG2025">
+                        <div class="doc-question-meta">
+                            <span class="doc-question-id">UG2025</span>
+                            <span class="doc-question-initials">JW</span>
+                        </div>
+                        <div class="doc-question-content">
+                            <p>Is it safe to remove:</p>
+                            <p>- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired.</p>
+                            <p>- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered.</p>
+                            <p>- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the &lt;text-block&gt;, and has been forced to abort it instead.</p>
+                        </div>
+                    </div>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed:</p>
+                            <p>- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.</p>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="bold">System message</span>
+                        <span>means a message sent to a participant through SWIFT in relation to an HVCS instruction including:</span>
+                        <ul class="bullets">
+                            <li>MT010;</li>
+                            <li>MT011;</li>
+                            <li>MT019;</li>
+                            <li>xsys.002;</li>
+                            <li>xsys.003;</li>
+                            <li>xsys.010; or</li>
+                            <li>xsys.011</li>
+                        </ul>
+                    </p>
+                    <p>Unless the context otherwise specifies, all other defined terms have the meanings given to them in Part 19
+		of the Payments NZ Rules.</p>
+                </div>
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="1.2">Form, content, and delivery of payment instruction</div>
+                <div class="level1">
+                    <p>The instructing agent that sends an HVCS instruction may determine the form, content, and method of delivery
+		of the payment instruction from the debtor to the instructing agent.</p>
+                </div>
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="1.3">Agency arrangement obligations</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>A participant that receives HVCS instructions on behalf of a creditor agent pursuant to an agency arrangement
+		must ensure that each creditor agent which it has an agency arrangement with has a SWIFT BIC to identify the
+		creditor agent that can be provided to the debtor for inclusion in the details of the debtor&apos;s payment
+		instruction.</li>
+                    <li>A participant that sends HVCS instructions on behalf of a debtor agent pursuant to an agency arrangement must
+		ensure that each debtor agent which it has an agency arrangement with has a SWIFT BIC that can be used by the
+		Participant acting as an instructing agent to identify the debtor agent within the payment message.</li>
                 </ol>
-            </ol>
-        </div>
-        <div class="section-heading">Chapter 2: Errors</div>
-        <div class="tag-commentary"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="2.1">Errors</div>
-            <div class="level1">
-                <p>Sometimes an instructed agent cannot process an HVCS instruction because of, for example, a problem
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="1.4">HVCS operating times</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>An HVCS participant must connect to the transaction delivery system—</li>
+                    <ol class="level2 level2-counter-reset">
+                        <li>every business day including every provincial holiday; and</li>
+                        <li>during the minimum time period commencing at 09:00 on a business day and ending at 17:15 on that business
+			day; and</li>
+                        <li>during a time period from 17:15 on a business day until such time as is necessary to receive any HVCS
+			instruction sent in accordance with clause 3.3 or 3.4 of these HVCS Common Procedures.</li>
+                    </ol>
+                    <li>The instructing agent may only send an HVCS instruction during the time period commencing at 09:00 on a
+		business day and ending at 16:45 on that business day unless clause 3.3 or 3.4 of these HVCS Common Procedures
+		apply.</li>
+                </ol>
+            </p>
+            <p class="tag-commentary"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="1.5">Validating HVCS payments</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>The following table sets out the validation requirements that apply to a range of HVCS instructions.</li>
+                    <li>For clarity, the obligations set out in the table below are cumulative.  Participants must comply with every
+		validation obligation that applies to the type of HVCS instruction that the participant sends or receives.</li>
+                    <h2 class="subsection-heading">Instructing Agent</h2>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed MT Obligations</p>
+                        </div>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="pnz-table validation-table">
+                            <thead>
+                                <th>Action</th>
+                                <th>MX Obligations</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction as an</span>
+                                        <span class="bold">MX message</span>
+                                    </td>
+                                    <td>
+                                        <div>The instructing agent:</div>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span class="bold">Must</span>
+                                                <span>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX
+										Messaging Procedures (in accordance with MX Message Specifications MyStandards
+										and Local Usage Guideline Validation); and</span>
+                                            </li>
+                                            <li>
+                                                <span class="bold">Should</span>
+                                                <span>validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX
+										Messaging Procedures</span>
+                                            </li>
+                                        </ul>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(MX Message Requirements)</p>
+                                        </div>
+                                        <div class="italic">
+                                            <p>(Instructing Agent Validation)</p>
+                                        </div>
+                                        <div>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the
+							MX procedures.</div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(Message Validation (Swift))</p>
+                                        </div>
+                                        <div class="italic">
+                                            <p>(Message Validation (Participant))</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction as an</span>
+                                        <span class="bold">SCP</span>
+                                    </td>
+                                    <td>
+                                        <div>The instructing agent:</div>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span class="bold">Must</span>
+                                                <span>validate the HVCS instruction in accordance with clause 1.5 of the SCP Procedures</span>
+                                            </li>
+                                            <li>
+                                                <span class="bold">Must</span>
+                                                <span>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the
+										MX Messaging Procedures (in accordance with MX Message Specifications)</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction as an</span>
+                                        <span class="bold">Non-SCP</span>
+                                    </td>
+                                    <td>
+                                        <div>The instructing agent:</div>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span class="bold">Must</span>
+                                                <span>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX
+										Messaging Procedures (in accordance with MX Message Specifications MyStandards
+										and Local Usage Guideline Validation); and</span>
+                                            </li>
+                                            <li>
+                                                <span class="bold">Should</span>
+                                                <span>validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX
+										Messaging Procedures</span>
+                                            </li>
+                                        </ul>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(MX Message Requirements)</p>
+                                        </div>
+                                        <div class="italic">
+                                            <p>(Instructing Agent Validation)</p>
+                                        </div>
+                                        <div>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the
+							MX procedures.</div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(Message Validation (Swift))</p>
+                                        </div>
+                                        <div class="italic">
+                                            <p>(Message Validation (Participant))</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction</span>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>As an</span>
+                                                <span class="bold">SCP</span>
+                                                <span>; and</span>
+                                            </li>
+                                            <li>
+                                                <span>Creditor identified by</span>
+                                                <span class="bold">BIC</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor BIC:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</div>
+                                        <br/>
+                                        <div class="bold">
+                                            <p>Rules:</p>
+                                        </div>
+                                        <div>HVCS_SDCL_BIC_Creditor_Account_Identification_1_FormalRule</div>
+                                        <div>HVCS_SDCL_BIC_Creditor_Account_Identification_2_FormalRule</div>
+                                        <br/>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor Account ID:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
+                                        <br/>
+                                        <div>
+                                            <span class="bold">Rules:</span>
+                                        </div>
+                                        <br/>
+                                        <div>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</div>
+                                        <div>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction</span>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>As an</span>
+                                                <span class="bold">SCP</span>
+                                                <span>; and</span>
+                                            </li>
+                                            <li>
+                                                <span class="bold">Does not</span>
+                                                <span>contain a</span>
+                                                <span class="bold">BIC</span>
+                                                <span>(contains an account number or card number)</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>Clause 4.2 of the MX Procedures has commentary that documents what an account number
+							should look like.</div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(SCP account number format)</p>
+                                        </div>
+                                        <br/>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor Account ID:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
+                                        <br/>
+                                        <div>Clause 2.3 of the MX Procedures includes requirements for Bacho format, check digit
+							for PAN etc</div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(Instructed agent validation)</p>
+                                        </div>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor Name:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Nm</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction</span>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>As an</span>
+                                                <span class="bold">SCP</span>
+                                                <span>; and</span>
+                                            </li>
+                                            <li>
+                                                <span>Includes an</span>
+                                                <span class="bold">email address</span>
+                                                <span>for the beneficiary notification</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>Clause 4.3 of the MX Procedures shows the dedicated email address field.</div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>SCP Customer notifications)</p>
+                                        </div>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Email Address:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction</span>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>As a customer credit transfer message — </span>
+                                                <span class="bold">cross border redirection</span>
+                                                <span>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and</span>
+                                            </li>
+                                            <li>
+                                                <span>Contains a</span>
+                                                <span class="bold">BIC</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor BIC:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</div>
+                                        <br/>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor Account ID:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
+                                        <br/>
+                                        <div class="bold">
+                                            <p>Rules:</p>
+                                        </div>
+                                        <div>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</div>
+                                        <br/>
+                                        <div>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction</span>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>As a customer credit transfer message — </span>
+                                                <span class="bold">cross border redirection</span>
+                                                <span>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and</span>
+                                            </li>
+                                            <li>
+                                                <span>Does</span>
+                                                <span class="bold">not</span>
+                                                <span>contain a</span>
+                                                <span class="bold">BIC</span>
+                                                <span>(contains an account number or card number)</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor BIC:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</div>
+                                        <br/>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Creditor Account ID:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</div>
+                                        <br/>
+                                        <div class="bold">
+                                            <p>Rules:</p>
+                                        </div>
+                                        <div>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</div>
+                                        <br/>
+                                        <div>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Sending an HVCS instruction as an</span>
+                                        <span class="bold">FI credit transfer message</span>
+                                        <span>(as set out in clause 9.1(2)(b) of the Rules and as defined in the
+								HVCS Common Procedures</span>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span>The instructing agent</span>
+                                            <span class="bold">must</span>
+                                            <span>validate the HVCS instruction in accordance with clause 2.1 of the MX
+									Procedures and in accordance with MyStandards.</span>
+                                        </div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(MX Message Requirements)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h2 class="subsection-heading">Instructed Agent</h2>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Removed MT Obligations</p>
+                        </div>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="pnz-table validation-table">
+                            <thead>
+                                <th>Action</th>
+                                <th>MX Obligations</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>Has been sent an HVCS instruction:</div>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>As a customer credit transfer message — </span>
+                                                <span class="bold">cross border redirection</span>
+                                                <span>(as set out in clause 9.1(2)(a)(iii) of the Rules); and</span>
+                                            </li>
+                                            <li>
+                                                <span>Is also the</span>
+                                                <span class="bold">creditor agent</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span>The instructed agent</span>
+                                            <span class="bold">must</span>
+                                            <span>validate the HVCS instruction in accordance with clauses 2.1 and 2.3
+									of the MX Procedures and in accordance with MyStandards and Local Usage
+									Guideline Validation.</span>
+                                        </div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(MX Message Requirements)</p>
+                                        </div>
+                                        <div class="italic">
+                                            <p>(Instructed Agent Validation)</p>
+                                        </div>
+                                        <div>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures.</div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(Message Validation (Swift))</p>
+                                        </div>
+                                        <div class="italic">
+                                            <p>(Message Validation (Participant))</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Has been sent an HVCS instruction as an</span>
+                                        <span class="bold">SCP</span>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span>The instructed agent</span>
+                                            <span class="bold">must</span>
+                                            <span>validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures
+									and in accordance with MyStandards.</span>
+                                        </div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(Instructed agent validation)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>Has been sent an HVCS instruction:</div>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>As an</span>
+                                                <span class="bold">SCP</span>
+                                                <span>; and</span>
+                                            </li>
+                                            <li>
+                                                <span>Includes an</span>
+                                                <span class="bold">email address</span>
+                                                <span>for the beneficiary notification</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>Clause 4.3 of the MX Procedures shows the dedicated email address field.</div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(SCP Customer notifications)</p>
+                                        </div>
+                                        <div>
+                                            <span class="bold">XML Path</span>
+                                            <span>for Email Address:</span>
+                                        </div>
+                                        <br/>
+                                        <div>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>Has been sent an HVCS instruction:</div>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>A customer credit transfer message — </span>
+                                                <span class="bold">cross border redirection</span>
+                                                <span>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span>The instructed agent</span>
+                                            <span class="bold">must</span>
+                                            <span>validate the HVCS instruction in accordance with clauses 2.3
+									of the MX Procedures.</span>
+                                        </div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(Instructed agent validation)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul class="bullets">
+                                            <li>
+                                                <span>Needs to</span>
+                                                <span class="bold">return</span>
+                                                <span>an HVCS payment;</span>
+                                            </li>
+                                            <li>
+                                                <span class="bold">Chooses to</span>
+                                                <span>populate line number 4 and 5 of</span>
+                                                <span class="bold">field 72</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span>The instructed agent</span>
+                                            <span class="bold">must</span>
+                                            <span>validate the HVCS instruction in accordance with clause 2.1 of the
+									MX Procedures and in accordance with MyStandards.</span>
+                                        </div>
+                                        <br/>
+                                        <div class="italic">
+                                            <p>(MX Message Requirements)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ol>
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="1.6">No revoking after settlement</div>
+                <div class="level1">
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Replaced: &apos;section 156R of the Banking (Prudential Supervision) Act 1989.&apos;</p>
+                            <p>With: &apos;section 55 of the Financial Markets Infrastructure Act 2021.&apos;</p>
+                        </div>
+                    </div>
+                    <p>As HVCS payments are made through the Reserve Bank&apos;s designated settlement system, ESAS, they cannot
+		be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms
+		and conditions and section 55 of the Financial Markets Infrastructure Act 2021.</p>
+                </div>
+            </p>
+            <p class="tag-standards"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="1.7">Return HVCS payment: timing, format and content</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>To comply with rule 9.21 and clause 2.2 of these HVCS Common Procedures , an instructed agent must
+		return an HVCS payment:</li>
+                    <ol class="level2 level2-counter-reset">
+                        <li>as soon as practicable after making the decision to return it, and</li>
+                        <div class="doc-comment" data-change-id="UG2025">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">UG2025</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications.</p>
+                            </div>
+                        </div>
+                        <li>in accordance with Part D - MX Procedures and the MX Message Specifications.</li>
+                    </ol>
+                </ol>
+            </p>
+            <p class="section-heading">Chapter 2: Errors</p>
+            <p class="tag-commentary"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="2.1">Errors</div>
+                <div class="level1">
+                    <p>Sometimes an instructed agent cannot process an HVCS instruction because of, for example, a problem
 		with the content or the format of the instruction or an invalid account number.</p>
-                <p>If an instructed agent cannot process an HVCS instruction, rule 9.21 and clause 2.2 of these HVCS
+                    <p>If an instructed agent cannot process an HVCS instruction, rule 9.21 and clause 2.2 of these HVCS
 		Common Procedures, provides the instructed agent two options. The instructed agent can either return
 		the HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS
 		instruction.</p>
-                <p>The following diagram summarises the processes that apply if the HVCS instruction contains an error.</p>
-            </div>
-        </div>
-        <div class="diagram">
-            <img src="images/hvcs_common_error_process.png" alt="Error Process"></img>
-        </div>
-        <div class="tag-standards"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="2.2">Error prevents processing</div>
-            <ol class="level1 level1-counter-reset">
-                <li>This clause applies to an instructed agent who has received a settled HVCS payment but cannot process
+                    <p>The following diagram summarises the processes that apply if the HVCS instruction contains an error.</p>
+                </div>
+            </p>
+            <p class="diagram">
+                <img src="images/hvcs_common_error_process.png" alt="Error Process"></img>
+            </p>
+            <p class="tag-standards"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="2.2">Error prevents processing</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>This clause applies to an instructed agent who has received a settled HVCS payment but cannot process
 		the HVCS payment because of an error relating to the HVCS payment.</li>
-                <li>The instructed agent must do one of the following:</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>return the HVCS payment to the instructing agent in accordance with the applicable HVCS standards:</li>
-                    <li>require the instructing agent to send data to amend the HVCS payment:</li>
-                    <li>amend the HVCS payment without asking the instructing agent for amended data and, as soon as
+                    <li>The instructed agent must do one of the following:</li>
+                    <ol class="level2 level2-counter-reset">
+                        <li>return the HVCS payment to the instructing agent in accordance with the applicable HVCS standards:</li>
+                        <li>require the instructing agent to send data to amend the HVCS payment:</li>
+                        <li>amend the HVCS payment without asking the instructing agent for amended data and, as soon as
 			practicable after amendment is complete, process the HVCS payment.</li>
-                </ol>
-                <li>For a cross border redirection (as described in clause 9.1(2)(a)(iii) of the Rules), the instructed agent
+                    </ol>
+                    <li>For a cross border redirection (as described in clause 9.1(2)(a)(iii) of the Rules), the instructed agent
 		must not deduct any fees from the amount of the HVCS payment before returning it.</li>
-                <li>If an instructing agent of an HVCS payment receives a request from an instructed agent under subclause
+                    <li>If an instructing agent of an HVCS payment receives a request from an instructed agent under subclause
 		(2)(b), the instructing agent must, as soon as practicable after receiving the request, send data to amend
 		the HVCS payment to the instructed agent.</li>
-                <li>If the instructed agent receives amended data from an instructing agent under subclause (4), the
+                    <li>If the instructed agent receives amended data from an instructing agent under subclause (4), the
 		instructing agent must, as soon as practicable after receiving the data, use the data to amend the HVCS
 		payment.</li>
-            </ol>
-        </div>
-        <div class="tag-bestpractice"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="2.3">Instructed agent credits wrong account</div>
-            <ol class="level1 level1-counter-reset">
-                <li>If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS
+                </ol>
+            </p>
+            <p class="tag-bestpractice"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="2.3">Instructed agent credits wrong account</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS
 		payment and the instructing agent incurs loss as a direct result of the error, the instructed agent must
 		pay the instructing agent the amount of the loss up to the value of the HVCS payment if one of the
 		following applies:</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>the payment message specified the correct account number:</li>
-                    <li>the instructing agent sent data to the instructed agent to amend the payment message in accordance
+                    <ol class="level2 level2-counter-reset">
+                        <li>the payment message specified the correct account number:</li>
+                        <li>the instructing agent sent data to the instructed agent to amend the payment message in accordance
 			with clause 2.2 of these HVCS Common Procedures and the data specified the correct account number:</li>
-                    <li>the instructed agent—</li>
-                    <ol class="level3 level3-counter-reset">
-                        <li>could not process the HVCS instruction because of an error relating to the HVCS instruction; and</li>
-                        <li>did not obtain data from the instructing agent to amend the payment message under clause 2.2 of
+                        <li>the instructed agent—</li>
+                        <ol class="level3 level3-counter-reset">
+                            <li>could not process the HVCS instruction because of an error relating to the HVCS instruction; and</li>
+                            <li>did not obtain data from the instructing agent to amend the payment message under clause 2.2 of
 				these HVCS Common Procedures; and</li>
-                        <li>amended the HVCS payment with the wrong account number.</li>
+                            <li>amended the HVCS payment with the wrong account number.</li>
+                        </ol>
                     </ol>
-                </ol>
-                <li>If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS
+                    <li>If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS
 		payment because the instructing agent specified the wrong account number in the payment message the
 		instructing agent must, as soon as practicable after it becomes aware that the wrong account number has
 		been credited—</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>send the payment message to the instructed agent again; and</li>
-                    <li>ensure that the payment message contains the correct account number.</li>
+                    <ol class="level2 level2-counter-reset">
+                        <li>send the payment message to the instructed agent again; and</li>
+                        <li>ensure that the payment message contains the correct account number.</li>
+                    </ol>
                 </ol>
-            </ol>
-        </div>
-        <div class="tag-bestpractice"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="2.4">Co-operate to resolve processing errors</div>
-            <ol class="level1 level1-counter-reset">
-                <li>Participants should co-operate to resolve a problem caused by a processing error affecting a HVCS
+            </p>
+            <p class="tag-bestpractice"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="2.4">Co-operate to resolve processing errors</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>Participants should co-operate to resolve a problem caused by a processing error affecting a HVCS
 		instruction.</li>
-                <li>For example, if an instructed agent credits the amount of a HVCS payment to the wrong creditor&apos;s
+                    <li>For example, if an instructed agent credits the amount of a HVCS payment to the wrong creditor&apos;s
 		account number—</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>the instructing agent may ask the instructed agent to freeze funds in the creditor&apos;s account
+                    <ol class="level2 level2-counter-reset">
+                        <li>the instructing agent may ask the instructed agent to freeze funds in the creditor&apos;s account
 			until the problem is resolved; and</li>
-                    <li>the instructed agent should determine whether to comply with the request, including by having
+                        <li>the instructed agent should determine whether to comply with the request, including by having
 			regard to whether the instructed agent has the legal right to do so.</li>
+                    </ol>
                 </ol>
-            </ol>
-        </div>
-        <div class="tag-commentary"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="2.5">Request and response formats</div>
-            <div class="level1">
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">JW</span>
+            </p>
+            <p class="tag-commentary"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="2.5">Request and response formats</div>
+                <div class="level1">
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">JW</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>No change, though noting reference to MTn95 and MTn96.</p>
+                        </div>
                     </div>
-                    <div class="doc-comment-content">
-                        <p>No change, though noting reference to MTn95 and MTn96.</p>
-                    </div>
-                </div>
-                <p>If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common
+                    <p>If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common
 		Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by,
 		for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message
 		sends corrected data to the instructed agent under rule 9.21 and clause 2.2 of these HVCS Common
 		Procedures, the instructing agent can use, for example, SWIFT message MTn96-Answers.</p>
-            </div>
-        </div>
-        <div class="section-heading">Chapter 3: Late processing</div>
-        <div class="tag-commentary"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="3.1">Late processing</div>
-            <div class="level1">
-                <p>Rule 9.11 and clause 1.4 of these HVCS Common Procedures requires an instructing agent to send an HVCS
+                </div>
+            </p>
+            <p class="section-heading">Chapter 3: Late processing</p>
+            <p class="tag-commentary"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="3.1">Late processing</div>
+                <div class="level1">
+                    <p>Rule 9.11 and clause 1.4 of these HVCS Common Procedures requires an instructing agent to send an HVCS
 		instruction no later than 16:45 on a business day unless standards 3.3 or 3.4 apply.</p>
-                <p>The following diagram gives an overview of the processes that apply if the instructing agent proposes
+                    <p>The following diagram gives an overview of the processes that apply if the instructing agent proposes
 		to send an HVCS instruction after 16:45. The diagram has no legal effect.</p>
-            </div>
-        </div>
-        <div class="diagram">
-            <img src="images/hvcs_common_late_processing.png" alt="Late Processing"></img>
-        </div>
-        <div class="tag-standards"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="3.2">When HVCS payments settle</div>
-            <ol class="level1 level1-counter-reset">
-                <li>The effect of rule 9.14 is that if the instructing agent settles an HVCS payment after 17:15, unless
+                </div>
+            </p>
+            <p class="diagram">
+                <img src="images/hvcs_common_late_processing.png" alt="Late Processing"></img>
+            </p>
+            <p class="tag-standards"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="3.2">When HVCS payments settle</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>The effect of rule 9.14 is that if the instructing agent settles an HVCS payment after 17:15, unless
 		the late HVCS instruction requirements apply, the instructed agent:</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>is not required to process the HVCS instruction that business day, but</li>
-                    <li>may decide to process the HVCS instruction that business day to meet the requirements or the
+                    <ol class="level2 level2-counter-reset">
+                        <li>is not required to process the HVCS instruction that business day, but</li>
+                        <li>may decide to process the HVCS instruction that business day to meet the requirements or the
 			expectations of its customer.</li>
+                    </ol>
                 </ol>
-            </ol>
-        </div>
-        <div class="tag-standards"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="3.3">Sending customer HVCS instructions after 16:45</div>
-            <ol class="level1 level1-counter-reset">
-                <li>This clause applies to a customer credit transfer message that is an SCP or a cross border payment
+            </p>
+            <p class="tag-standards"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="3.3">Sending customer HVCS instructions after 16:45</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>This clause applies to a customer credit transfer message that is an SCP or a cross border payment
 		redirection if—</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>a technical problem or an operational problem prevents the instructing agent from sending the
+                    <ol class="level2 level2-counter-reset">
+                        <li>a technical problem or an operational problem prevents the instructing agent from sending the
 			customer credit transfer message by 16.45 on a business day; and</li>
-                    <li>the instructing agent requires the instructed agent to credit the creditor&apos;s account with the
+                        <li>the instructing agent requires the instructed agent to credit the creditor&apos;s account with the
 			amount of an HVCS payment that business day.</li>
-                </ol>
-                <li>The instructing agent—</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>must obtain the instructed agent&apos;s explicit consent to the time by which the instructing agent
+                    </ol>
+                    <li>The instructing agent—</li>
+                    <ol class="level2 level2-counter-reset">
+                        <li>must obtain the instructed agent&apos;s explicit consent to the time by which the instructing agent
 			must send a HVCS instruction to which this standard applies; and</li>
-                    <li>must use the contact people and method of communicating for the instructed agent specified in the
+                        <li>must use the contact people and method of communicating for the instructed agent specified in the
 			industry incident contact list; and</li>
-                    <li>is entitled to obtain the consent in written form or verbal form.</li>
-                </ol>
-                <li>The instructed agent is not required to consent to a request from an instructing agent to send a
+                        <li>is entitled to obtain the consent in written form or verbal form.</li>
+                    </ol>
+                    <li>The instructed agent is not required to consent to a request from an instructing agent to send a
 		customer credit transfer message after 16:45. For example, the instructed agent may not be able to
 		process the HVCS instruction at the time requested.</li>
-                <li>If the instructing agent obtains the instructed agent&apos;s consent to a time for sending the HVCS
+                    <li>If the instructing agent obtains the instructed agent&apos;s consent to a time for sending the HVCS
 		instruction and the instructing agent sends the HVCS instruction by the agreed time, the timeframe
 		in clause 1.4 of these HVCS Common Procedures does not apply to the HVCS instruction.</li>
-            </ol>
-        </div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="3.4">Sending FI HVCS instructions after 16:45</div>
-            <ol class="level1 level1-counter-reset">
-                <li>This clause applies to a participant who proposes to send and receive FI credit transfer messages
-		during the CLS evening session either—</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>as the creditor or the debtor; or</li>
-                    <li>on behalf of a FI customer.</li>
                 </ol>
-                <li>The participant may only send and receive FI credit transfer messages during the CLS evening session
+            </p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="3.4">Sending FI HVCS instructions after 16:45</div>
+                <ol class="level1 level1-counter-reset">
+                    <li>This clause applies to a participant who proposes to send and receive FI credit transfer messages
+		during the CLS evening session either—</li>
+                    <ol class="level2 level2-counter-reset">
+                        <li>as the creditor or the debtor; or</li>
+                        <li>on behalf of a FI customer.</li>
+                    </ol>
+                    <li>The participant may only send and receive FI credit transfer messages during the CLS evening session
 		on a business day if—</li>
-                <ol class="level2 level2-counter-reset">
-                    <li>no less than 1 month before that business day,—</li>
-                    <ol class="level3 level3-counter-reset">
-                        <li>the participant has notified the chief executive of Payments NZ that on and from a specified
+                    <ol class="level2 level2-counter-reset">
+                        <li>no less than 1 month before that business day,—</li>
+                        <ol class="level3 level3-counter-reset">
+                            <li>the participant has notified the chief executive of Payments NZ that on and from a specified
 				date the participant proposes to send and receive FI credit transfer messages during the CLS
 				evening session; and</li>
-                        <li>the chief executive has notified every other participant that on and from the specified date
+                            <li>the chief executive has notified every other participant that on and from the specified date
 				the participant proposes to send and receive FI credit transfer messages during the CLS evening
 				session; and</li>
-                    </ol>
-                    <li>the participant has, on and from the date specified in the chief executive&apos;s notification,
+                        </ol>
+                        <li>the participant has, on and from the date specified in the chief executive&apos;s notification,
 			participated in every CLS evening session; and</li>
-                    <li>the participant participates in the CLS evening session that business day during the time period
+                        <li>the participant participates in the CLS evening session that business day during the time period
 			commencing at 16:45 on the business day and ending 30 minutes after the final CLS pay out.</li>
-                </ol>
-                <li>If the participant sends an FI credit transfer message during the CLS evening session in accordance
+                    </ol>
+                    <li>If the participant sends an FI credit transfer message during the CLS evening session in accordance
 		with subclause (2), the timeframe in clause 1.4 of these HVCS Common Procedures do not apply to the
 		FI credit transfer messages.</li>
-                <li>If a participant proposes to cease sending and receiving FI credit transfer messages during the CLS
+                    <li>If a participant proposes to cease sending and receiving FI credit transfer messages during the CLS
 		evening session, no less than 1 month before the business day that the participant proposes to cease
 		sending and receiving the FI credit transfer messages, the participant must notify Payments NZ that
 		it proposes to cease.</li>
-            </ol>
-        </div>
-        <div class="tag-commentary"></div>
-        <div class="clause-row">
-            <div class="clause-heading" data-number="3.5">Evening session participants</div>
-            <div class="level1">
-                <p>Participants who send and receive financial institution credit transfers during the CLS evening
+                </ol>
+            </p>
+            <p class="tag-commentary"></p>
+            <p class="clause-row">
+                <div class="clause-heading" data-number="3.5">Evening session participants</div>
+                <div class="level1">
+                    <p>Participants who send and receive financial institution credit transfers during the CLS evening
 		session are:</p>
-                <div class="doc-comment" data-change-id="UG2025">
-                    <div class="doc-comment-meta">
-                        <span class="doc-comment-id">UG2025</span>
-                        <span class="doc-comment-initials">RK</span>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Added ICBC, NZ Depository</p>
+                        </div>
                     </div>
-                    <div class="doc-comment-content">
-                        <p>Added ICBC, NZ Depository</p>
+                    <div class="table-scroll">
+                        <table class="pnz-table">
+                            <thead>
+                                <th>Participants</th>
+                                <th>Date</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ANZ Bank New Zealand Limited</td>
+                                    <td>1 October 2010</td>
+                                </tr>
+                                <tr>
+                                    <td>ASB Bank Ltd</td>
+                                    <td>1 October 2010</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank of China (New Zealand) Limited</td>
+                                    <td>4 December 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank of New Zealand</td>
+                                    <td>1 October 2010</td>
+                                </tr>
+                                <tr>
+                                    <td>Citibank, N.A.</td>
+                                    <td>1 October 2010</td>
+                                </tr>
+                                <tr>
+                                    <td>HSBC</td>
+                                    <td>1 October 2010</td>
+                                </tr>
+                                <tr>
+                                    <td>Industrial and Commercial Bank of China (New Zealand) Limited</td>
+                                    <td>26 March 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>New Zealand Depository Limited</td>
+                                    <td>4 August 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Westpac New Zealand Limited</td>
+                                    <td>1 October 2010</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="table-scroll">
-                    <table class="pnz-table">
-                        <thead>
-                            <th>Participants</th>
-                            <th>Date</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ANZ Bank New Zealand Limited</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>ASB Bank Ltd</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>Bank of China (New Zealand) Limited</td>
-                                <td>4 December 2020</td>
-                            </tr>
-                            <tr>
-                                <td>Bank of New Zealand</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>Citibank, N.A.</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>HSBC</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                            <tr>
-                                <td>Industrial and Commercial Bank of China (New Zealand) Limited</td>
-                                <td>26 March 2025</td>
-                            </tr>
-                            <tr>
-                                <td>New Zealand Depository Limited</td>
-                                <td>4 August 2025</td>
-                            </tr>
-                            <tr>
-                                <td>Westpac New Zealand Limited</td>
-                                <td>1 October 2010</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+            </p>
+        </main>
     </body>
 </html>

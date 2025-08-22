@@ -65,7 +65,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-pre, code, .xml-snippet {
+pre, code {
   white-space: pre-wrap;
   word-break: break-word;
 }
@@ -356,37 +356,31 @@ img, table {
   display: inline-block;
 }
 
-/* The code block becomes a grid with one content-sized column */
-code.xml-snippet {
-  display: grid;
-  grid-template-columns: max-content; /* column width = widest content */
-  grid-auto-rows: auto;               /* one row per child */
-  justify-items: start;               /* DO NOT stretch items */
-  justify-content: start;             /* pin the grid to the left */
-  font-family: monospace;
-  overflow-x: auto;                   /* scroll if a single line is very long */
+.xml-snippet {
+  /* normal flow for the wrapper; scrolling will handle overflow */
+  white-space: normal;          /* override the pre-wrap */
+  word-break: normal;
+  overflow-wrap: normal;
 
-  /* if the parent is flex/grid and centers children */
-  align-self: flex-start;             /* flex parent */
-  justify-self: start;                /* grid parent */
+  overflow-x: auto;             /* horizontal scroll on phones */
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  background: #f7f7f7;
+  padding: .75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  tab-size: 2;
 }
 
-/* Each line: keep indentation, no extra spacing */
-code.xml-snippet div {
-  white-space: pre;
+/* each “line” */
+.xml-snippet p {
   margin: 0;
   padding: 0;
   line-height: 1.2;
-}
-
-.xml-snippet {
-  font-family: monospace;
-  background: #f7f7f7;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  overflow-x: auto;               /* long lines scroll, don’t wrap */
-  tab-size: 2;
+  white-space: pre;             /* preserve indentation; no wrapping */
+  font-family: inherit;
 }
 
 /*

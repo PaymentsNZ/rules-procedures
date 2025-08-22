@@ -185,8 +185,11 @@ import [
 	)
 
 	// pnz.legal::xml creates xml formatted content
-	pnz.legal::xml = (...content as any) => #( code = 
-		html::class( "xml-snippet", content )
+	pnz.legal::xml = (...content as any) => #( div = 
+		html::class(
+			"xml-snippet"
+			content
+		)
 	)
 
 	pnz.legal::table = (content as table) => #( div =

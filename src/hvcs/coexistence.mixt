@@ -339,7 +339,10 @@ import [
 		"Messages exchanged between SWIFT and participants"
 	)
 
-	pnz::bold_div( "1.4 Investigation message scope")
+	pnz::nonumber_clause(
+		"1.4"
+		"Investigation message scope"
+	)
 	pnz::comment( "UG2025", "RK",
 		"Renamed:"
 		"From: Cash management message scope"
@@ -368,11 +371,8 @@ import [
 						)
 						pnz::bold_div( "By the end of the co-existence phase:" )
 						pnz::div( 
-							`Participants must be able to send all requests as an MX message.`
+							`Participants must send all requests as an MX message.`
 						)						
-						pnz::div(
-							`Participants must send all requests to SWIFT's Case Manager BIC.`
-						)
 					]
 					[
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
@@ -398,9 +398,6 @@ import [
 						pnz::div(
 							`Participants must send all responses as an MX message.`
 						)						
-						pnz::div(
-							`Participants must send all responses to SWIFT's Case Manager BIC.`
-						)
 					]
 					[
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
@@ -417,20 +414,13 @@ import [
 					`MT 199 / MT 299 - Investigation Request and Response`
 					`camt.110 / camt.111 - Investigation Request and Response`
 					[
-						pnz::bold_div( "By the beginning of the co-existence phase:" )
-						`Participants must be able to receive from SWIFT and process as an MX message`
-						pnz::br
-						pnz::bold_div( "By the end of the co-existence phase:" )
-						`Participants must send all responses to SWIFT's Case Manager BIC.`
+						pnz::bold_div( "No decision has been taken in relation to use of camt.110/camt.111 for domestic payments." )
+						`Payments NZ will lead assessment of Case Manager capabilities for domestic
+						payments when SWIFT make this capability available for testing.`
 					]
 					[
-						pnz::bold_div( "By the beginning of the co-existence phase:" )
-						`Participants acting as intermediaries must accept CBPR+ camt.029.  MX->MT and MT->MX
-						translation will be available via the SWIFT Transaction Manager.`
-
-						pnz::br
 						pnz::bold_div( "By the end of the co-existence phase:" )
-						`Participants must send all responses to SWIFT's Case Manager BIC.`
+						`Participants must be able to receive from SWIFT and process as an MX message`
 					]
 				]				
 			]

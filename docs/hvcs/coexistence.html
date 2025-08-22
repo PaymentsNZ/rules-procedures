@@ -78,6 +78,9 @@
                             <a href="#1.3-payment-message-scope">1.3 Payment message scope</a>
                         </li>
                         <li>
+                            <a href="#1.4-investigation-message-scope">1.4 Investigation message scope</a>
+                        </li>
+                        <li>
                             <a href="#1.5-iso-20022-migration-timeline">1.5 ISO 20022 migration timeline</a>
                         </li>
                         <li>
@@ -540,8 +543,9 @@
                     <p>Messages exchanged between SWIFT and participants</p>
                 </div>
             </div>
-            <div class="bold">
-                <p>1.4 Investigation message scope</p>
+            <div class="clause-row">
+                <div id="1.4-investigation-message-scope" class="clause-heading" data-number="1.4">Investigation message scope</div>
+                <div class="level1"></div>
             </div>
             <div class="doc-comment" data-change-id="UG2025">
                 <div class="doc-comment-meta">
@@ -588,10 +592,7 @@
                                     <p>By the end of the co-existence phase:</p>
                                 </div>
                                 <div>
-                                    <p>Participants must be able to send all requests as an MX message.</p>
-                                </div>
-                                <div>
-                                    <p>Participants must send all requests to SWIFT&apos;s Case Manager BIC.</p>
+                                    <p>Participants must send all requests as an MX message.</p>
                                 </div>
                             </td>
                             <td>
@@ -625,9 +626,6 @@
                                 <div>
                                     <p>Participants must send all responses as an MX message.</p>
                                 </div>
-                                <div>
-                                    <p>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</p>
-                                </div>
                             </td>
                             <td>
                                 <div class="bold">
@@ -647,26 +645,16 @@
                             <td>camt.110 / camt.111 - Investigation Request and Response</td>
                             <td>
                                 <div class="bold">
-                                    <p>By the beginning of the co-existence phase:</p>
+                                    <p>No decision has been taken in relation to use of camt.110/camt.111 for domestic payments.</p>
                                 </div>
-                                <div>Participants must be able to receive from SWIFT and process as an MX message</div>
-                                <br/>
-                                <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
-                                </div>
-                                <div>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</div>
+                                <div>Payments NZ will lead assessment of Case Manager capabilities for domestic
+						payments when SWIFT make this capability available for testing.</div>
                             </td>
                             <td>
                                 <div class="bold">
-                                    <p>By the beginning of the co-existence phase:</p>
-                                </div>
-                                <div>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX
-						translation will be available via the SWIFT Transaction Manager.</div>
-                                <br/>
-                                <div class="bold">
                                     <p>By the end of the co-existence phase:</p>
                                 </div>
-                                <div>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</div>
+                                <div>Participants must be able to receive from SWIFT and process as an MX message</div>
                             </td>
                         </tr>
                     </tbody>

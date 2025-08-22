@@ -23,8 +23,8 @@ html {
 
 /* Push the document down so it doesn't slide under the fixed header */
 body.document {
-  padding-top: 0;
-  margin-top: var(--hvcs-header-h);
+	padding-top: 0;
+	margin-top: var(--hvcs-header-h);
 }
 
 .section-heading,
@@ -54,18 +54,30 @@ body.document {
 	padding: 0 1rem;
 }
 
-.hvcs-header-logo{
+.hvcs-header-brandmark {
+	flex: 0 0 auto;
+}
+
+.hvcs-header-brandmark img {
+	height: 40px;
+	width: auto;
+	max-width: none;
+	display: block;
+}
+
+.hvcs-header-logo {
 	flex: 0 0 auto;
 }
 
 .hvcs-header-logo img {
 	min-height: 40px;
 	max-height: 40px;
-	width: auto;             /* keep aspect ratio */
-	max-width: none;         /* override global img { max-width:100% } */
+	width: auto;
+	/* keep aspect ratio */
+	max-width: none;
+	/* override global img { max-width:100% } */
 	display: block;
 }
-
 
 .hvcs-header-title,
 .hvcs-header-toggle {
@@ -73,15 +85,17 @@ body.document {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 14px;
-    font-weight: 700;
+	font-weight: 700;
 	color: #fff;
 	cursor: pointer;
 }
 
 /* Title absorbs pressure (shrinks/ellipses instead of the logo) */
-.hvcs-header-title{
-	flex: 1 1 auto;          /* let title take remaining space */
-	min-width: 0;            /* allow flex item to actually shrink */
+.hvcs-header-title {
+	flex: 1 1 auto;
+	/* let title take remaining space */
+	min-width: 0;
+	/* allow flex item to actually shrink */
 	white-space: wrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -94,18 +108,20 @@ body.document {
 	border-radius: 0px;
 	line-height: calc(var(--hvcs-header-h) - 8px);
 
-	border-top:4px solid transparent;
-	border-bottom:4px solid transparent;          /* reserve space */
-	transition: border-color .18s ease;	
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	/* reserve space */
+	transition: border-color .18s ease;
 }
- 
-.hvcs-header-toggle:hover{
-	border-bottom-color:#fff;                      /* wide underline on hover */
+
+.hvcs-header-toggle:hover {
+	border-bottom-color: #fff;
+	/* wide underline on hover */
 }
 
 /* keep underline when the drawer is open */
-#hvcs-menu-toggle:checked ~ header .hvcs-close{
-	border-bottom-color:#fff;
+#hvcs-menu-toggle:checked~header .hvcs-close {
+	border-bottom-color: #fff;
 }
 
 .hvcs-doc {
@@ -158,6 +174,10 @@ body.document {
 
 	/* No hamburger on desktop */
 	.hvcs-header-toggle {
+		display: none;
+	}
+
+	.hvcs-header-brandmark {
 		display: none;
 	}
 }
@@ -229,6 +249,14 @@ body.document {
 	.hvcs-content {
 		padding: 1rem;
 	}
+
+	.hvcs-header-brandmark {
+		display: block !important;
+	}
+
+	.hvcs-header-logo {
+		display: none !important;
+	}
 }
 
 /* Print: expand ToC and hide header */
@@ -258,6 +286,14 @@ body.document {
 	}
 
 	#hvcs-toc details>* {
+		display: block !important;
+	}
+
+	.hvcs-header-brandmark {
+		display: none !important;
+	}
+
+	.hvcs-header-logo {
 		display: block !important;
 	}
 }

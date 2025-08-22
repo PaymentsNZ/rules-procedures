@@ -20,6 +20,21 @@ import [
 				[
 					a = html::attributed(
 						{
+							class = "hvcs-header-brandmark"
+							href = "overview.html"
+							aria-label = "Payments NZ Home"
+						}
+						{
+							img = html::attributed(
+								{
+									src = "../images/PNZ_Brandmark_Black.png"
+								}
+								null
+							)
+						}
+					)
+					a = html::attributed(
+						{
 							class = "hvcs-header-logo"
 							href = "overview.html"
 							aria-label = "Payments NZ Home"

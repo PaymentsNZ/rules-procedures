@@ -1,8 +1,8 @@
 namespace hvcs
 
 import [
-	html = "../html.mixt"
-	pnz = "../pnz.legal.mixt"
+	html = "html.mixt"
+	pnz = "pnz.legal.mixt"
 ]
 
 {
@@ -131,8 +131,7 @@ import [
 					chaptersAndClauses
 					(chapterAndClauses) => (
 						#(details =
-							// TODO: Syntax error when this is a list?
-							{
+							[
 								summary = chapterAndClauses{ Chapter }
 								ul = html::class(
 									"toc-links"
@@ -153,7 +152,7 @@ import [
 										})
 									)
 								)
-							}
+							]
 						)
 					)
 				)
@@ -209,9 +208,8 @@ import [
 					// Mobile toggle (checkbox/label)
 					input = html::attributed(
 						{
-							// TODO: Placing type first causes syntax error due to presence of ;
-							id = "hvcs-menu-toggle"
 							;type = "checkbox"
+							id = "hvcs-menu-toggle"
 							class = "hvcs-header-checkbox"
 							hidden = true
 						}

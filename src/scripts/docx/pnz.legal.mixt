@@ -9,6 +9,9 @@ import [
 ]
 
 {
+	// pnz.legal::href creates a href from an id and title
+	pnz.legal::href = (clauseNumber as text, title as text, prefix as text) => null
+
 	// pnz.legal::document creates a PNZ legal document as HTML
 	pnz.legal::document = (docTitle as text, docContent as list) => [
 		docTitle

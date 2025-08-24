@@ -1,7 +1,8 @@
 import [
-	pnz = "pnz.legal.mixt"
-	nav = "navigate.mixt"
-	hvcs = "hvcs/hvcs.mixt"
+	pnz = "scripts/html/pnz.legal.mixt"
+	hvcs = "scripts/html/pnz.hvcs.mixt"
+	nav = "scripts/html/navigate.mixt"
+	
 	overview = "hvcs/overview.mixt"
 	common = "hvcs/common.mixt"
 	scp = "hvcs/scp.mixt"	

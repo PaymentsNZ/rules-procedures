@@ -1,8 +1,7 @@
 
 import [
-	pnz = "../pnz.legal.mixt"
-	hvcs = "hvcs.mixt"
-	html = "../html/html.mixt"
+	pnz = "../scripts/pnz.legal.mixt"
+	hvcs = "../scripts/pnz.hvcs.mixt"
 ]
 
 [

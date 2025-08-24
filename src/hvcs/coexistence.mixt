@@ -367,7 +367,7 @@ import [
 					[
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
 						pnz::div( 
-							`Participants must be able to receive from SWIFT and process as an MX message`
+							`Participants must be able to receive from SWIFT as an MX message and process`
 						)
 						pnz::bold_div( "By the end of the co-existence phase:" )
 						pnz::div( 
@@ -378,7 +378,7 @@ import [
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
 						pnz::div( 
 							`Participants acting as intermediaries must accept CBPR+ camt.056 messages.
-							MX->MT and MT->MX translation will be available via the SWIFT Transaction Manager.`
+							MX->MT and MT->MX translation will be available via SWIFT's Inflow Translation.`
 						)
 						pnz::bold_div( "By the end of the co-existence phase:" )
 						pnz::div( 
@@ -392,7 +392,7 @@ import [
 					`camt.029 - Resolution of Investigation`
 					[
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
-						`Participants must be able to receive from SWIFT and process as an MX message`
+						`Participants must be able to receive from SWIFT as an MX message and process`
 						pnz::br
 						pnz::bold_div( "By the end of the co-existence phase:" )
 						pnz::div(
@@ -402,7 +402,7 @@ import [
 					[
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
 						`Participants acting as intermediaries must accept CBPR+ camt.029.  MX->MT and MT->MX
-						translation will be available via the SWIFT Transaction Manager.`
+						translation will be available via SWIFT's In-Flow Translation.`
 
 						pnz::br
 						pnz::bold_div( "By the end of the co-existence phase:" )

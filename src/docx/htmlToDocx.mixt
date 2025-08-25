@@ -1,43 +1,382 @@
 namespace htmltodocx
 
+import [
+	xml = "xml.mixt"
+]
+
 {
-	iterate = (results as list, listOrRecord as any) => (
-		if Value.Is( listOrRecord, type list ) then
-			List.Accumulate(
-				listOrRecord
-				results
-				( state, value, itemIndex, fieldName ) => (
-					if value == null then
-						state
-					else if Value.Is( value, type list ) then
-						@iterate( state, value )
-					else if Value.Is( value, type record ) then
-						@iterate( state, value )
+	skipOtherContent = true
+	defaultNumbering = 100
+	defaultBullets = 200
+	htmlAttributes = Identifier.FromText( "html", "attributes" )
+
+	// translateText
+	translateText = (t as text) => (
+		let
+			removedTabs = Text.Transform( t, "\t", "" )
+			replacedNewLines = Text.Transform( removedTabs, "\n", " ")
+		in
+			replacedNewLines
+	)
+
+	// getHtmlClass
+	getHtmlClass = ( value as any ) => (
+		if Value.HasMetadata( value ) then
+			let
+				attributes = Record.FieldOrDefault(
+					Value.Metadata( value )
+					Identifier.FromText( "html", "attributes" )
+					null
+				)
+				class = (
+					if attributes == null then
+						null
 					else
-						List.AddItem( state, fieldName, value )
+						Record.FieldOrDefault( attributes, "class", null )
 				)
-			)
+			in
+				class
 		else
-			List.Accumulate(
-				Record.FieldNames( listOrRecord )
-				results
-				( state, fieldName, itemIndex ) => (
-					let
-						value = Record.Field( listOrRecord, fieldName )
-						result = (
-							if value == null then
-								state
-							else if Value.Is( value, type list ) then
-								@iterate( state, value )
-							else if Value.Is( value, type record ) then
-								@iterate( state, value )
-							else
-								List.AddItem( state, fieldName, value )
-						)
-					in
-						result
-				)
+			""
+	)
+
+	// addSectionHeading
+	addSectionHeading = ( state as list, heading as text ) => (
+		state & [
+			w::p = [
+				w::r = [
+					w::t = $"SectionHeading: $(heading)"
+				]
+			]	
+		]
+	)
+
+	// addTagCommentary
+	addTagCommentary = ( state as list ) => (
+		state & [
+			w::p = [
+				w::r = [
+					w::t = "Commentary"
+				]
+			]	
+		]
+	)
+
+	// addTagStandards
+	addTagStandards = ( state as list ) => (
+		state & [
+			w::p = [
+				w::r = [
+					w::t = "Standards"
+				]
+			]	
+		]
+	)
+
+	// getParagraphText
+	getParagraphText = ( state as list, content as list ) => (
+		List.Accumulate(
+			content
+			state
+			( state, value, itemIndex, fieldName ) => (
+				if value == null then
+					state
+				else if Value.Is( value, type list ) then
+					@getParagraphText( state, value )
+				else if Value.Is( value, type text ) then
+					state & [
+						w::r = [
+							w::t = value
+						]
+					]
+				else
+					List.AddItem(
+						state
+						fieldName
+						value
+					)
 			)
+		)
+	)
+
+	// addBulletsForLevel
+	addBulletsForLevel = ( state as list, level as number, paragraphs as list ) => (
+		List.Accumulate(
+			paragraphs
+			state
+			( state, value, itemIndex, fieldName ) => (
+				if value == null then
+					state
+				else if Value.Is( value, type list ) then
+					if fieldName == "ul" then
+						@addBulletsForLevel( state, level + 1, value )
+					else
+						state & [
+							w::p = [
+								w::pPr = [
+									w::numPr = [
+										w::ilvl = xml::attributed( { w::val = level } )
+										w::numId = xml::attributed( { w::val = defaultBullets } )
+									]
+								]
+							] & getParagraphText( [], value )
+						]
+				else if Value.Is( value, type text ) then
+					state & [
+						w::p = [
+							w::pPr = [
+								w::numPr = [
+									w::ilvl = xml::attributed( { w::val = level } )
+									w::numId = xml::attributed( { w::val = defaultBullets } )
+								]
+							]
+							w::r = [
+								w::t = translateText( value )
+							]
+						]
+					]
+				else
+					translateValue( state, fieldName, itemIndex, value )
+			)
+		)		
+	)
+
+	// addBullets
+	addBullets = ( state as list, value as list ) => (
+		addBulletsForLevel( state, 0, value )
+	)
+
+	// addNumberingForLevel
+	addNumberingForLevel = ( state as list, level as number, paragraphs as list ) => (
+		List.Accumulate(
+			paragraphs
+			state
+			( state, value, itemIndex, fieldName ) => (
+				if value == null then
+					state
+				else if Value.Is( value, type list ) then
+					if fieldName == "ol" then
+						@addNumberingForLevel( state, level + 1, value )
+					else
+						state & [
+							w::p = [
+								w::pPr = [
+									w::numPr = [
+										w::ilvl = xml::attributed( { w::val = level } )
+										w::numId = xml::attributed( { w::val = defaultNumbering } )
+									]
+								]
+							] & getParagraphText( [], value )
+						]
+				else if Value.Is( value, type text ) then
+					state & [
+						w::p = [
+							w::pPr = [
+								w::numPr = [
+									w::ilvl = xml::attributed( { w::val = level } )
+									w::numId = xml::attributed( { w::val = defaultNumbering } )
+								]
+							]
+							w::r = [
+								w::t = translateText( value )
+							]
+						]
+					]
+				else
+					translateValue( state, fieldName, itemIndex, value )
+			)
+		)
+	)
+
+	// addNumbering
+	addNumbering = ( state as list, value as list ) => (
+		addNumberingForLevel( state, 1, value )
+	)
+
+	// translateValue
+	translateValue = ( state as list, fieldName as text, itemIndex as number, value as any ) => (
+		if Value.Is( value, type text ) then
+			let
+				class = getHtmlClass( value )
+				added = (
+					if class == "section-heading" then
+						addSectionHeading( state, translateText( value ) )
+					else if class == "tag-commentary" then
+						addTagCommentary( state )
+					else if class == "tag-standards" then
+						addTagStandards( state )
+					else if class == "bullets" then
+						addBullets( state, value )
+					else if skipOtherContent then
+						state
+					else if Value.HasMetadata( value ) then
+						List.AddItem(
+							state
+							fieldName
+							translateText( value ) meta Value.Metadata( value )
+						)					
+					else
+						List.AddItem(
+							state
+							fieldName
+							translateText( value )
+						)
+				)
+			in
+				added
+		else if skipOtherContent then
+			state
+		else
+			List.AddItem( state, fieldName, value )
+	)
+
+	// xmlAttributes
+	xmlAttributes = (r as record) => null meta {
+		xml::attributes = r
+	}
+
+	// getClauseNumber
+	getClauseNumber = ( value as any ) => (
+		if Value.HasMetadata( value ) then
+			let
+				attributes = Record.FieldOrDefault(
+					Value.Metadata( value )
+					Identifier.FromText( "html", "attributes" )
+					null
+				)
+				clauseNumber = (
+					if attributes == null then
+						null
+					else
+						Record.FieldOrDefault( attributes, "data-number", null )
+				)
+			in
+				clauseNumber
+		else
+			""
+	)
+
+	// addClause
+	addClause = (contents as list) => (
+		let
+			first = List.FirstOrDefault( contents, "" )
+			clauseNumber = getClauseNumber( first )
+			fullClause = (
+				if clauseNumber == "" then
+					first & "" // Remove metadata
+				else
+					$"$(clauseNumber) $(first)"
+			)
+			subsequent = List.RemoveFirstN( contents, 1 )
+			// 1 cm = 1440 / 2.54 ≈ 566.929 twips
+			result = [
+				w::tbl = [
+					w::tblPr = [
+						// FIXED layout + exact table width in twips
+						w::tblW = xml::attributed({ w::type = "dxa", w::w = 9638 }) //  preferred width: 17 cm
+						w::jc = xml::attributed({ w::val="left" }) // Alignment: left
+						w::tblInd = xml::attributed({ w::type = "dxa", w::w="0" }) // Indent from left: 0 cm
+						w::tblLayout = xml::attributed({ w::type = "fixed" }) // Respect exact column widths
+					]
+					w::tblGrid = [
+						w::gridCol = xml::attributed({ w::w = 1701 })  // 3 cm
+						w::gridCol = xml::attributed({ w::w = 7937 })  // 14 cm
+					]
+					w::tr = [
+						w::tc = [
+							w::p = [
+								// Reset numbering for each clause
+								w::pPr = [
+									w::numPr = [
+										w::ilvl = xml::attributed( { w::val = 0 } )
+										w::numId = xml::attributed( { w::val = defaultNumbering } )
+									]
+								]
+							] & (
+								if fullClause == "" then
+									[]
+								else
+									[
+										w::r =
+										[
+											w::t = fullClause
+										]
+									]
+							)
+						]
+						w::tc = (
+							let
+								children = iterate( [], "", subsequent )
+							in
+								if List.Count(children) == 0 then
+									[
+										w::p = null
+									]
+								else
+									children
+						)
+					]
+				]
+			]
+		in
+			result
+	)
+
+	// iterate
+	iterate = (results as list, id as text, listOrRecord as any) => (
+		let
+			class = getHtmlClass( listOrRecord )
+			added = (
+				if class == "logo"  or class == "doc-comment" then
+					results
+				else if class == "clause-row" then
+					results & addClause( listOrRecord )
+				else if Value.Is( listOrRecord, type list ) then
+					if id == "ol" and Text.StartsWith( class, "level1 " ) then
+						addNumbering( results, listOrRecord )
+					else if List.Count( listOrRecord ) == 0 then
+						results
+					else
+						List.Accumulate(
+							listOrRecord
+							results
+							( state, value, itemIndex, fieldName ) => (
+								if value == null then
+									state
+								else if Value.Is( value, type list ) then
+									@iterate( state, fieldName, value )
+								else if Value.Is( value, type record ) then
+									@iterate( state, fieldName, value )
+								else
+									translateValue( state, fieldName, itemIndex, value )
+							)
+						)				
+				else if Record.FieldCount( listOrRecord ) == 0 then
+					results
+				else
+					List.Accumulate(
+						Record.FieldNames( listOrRecord )
+						results
+						( state, fieldName, itemIndex ) => (
+							let
+								value = Record.Field( listOrRecord, fieldName )
+								result = (
+									if value == null then
+										state
+									else if Value.Is( value, type list ) then
+										@iterate( state, fieldName, value )
+									else if Value.Is( value, type record ) then
+										@iterate( state, fieldName, value )
+									else
+										translateValue( state, fieldName, itemIndex, value )
+								)
+							in
+								result
+						)
+					)
+			)
+		in
+			added
 	)
 
 	// wrapContents
@@ -50,7 +389,21 @@ namespace htmltodocx
 		w::document = {
 			xml::attributes = { xmlns::w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main" }
 		} @> [
-			w::body = body
+			w::body = body & [
+				// last child of w:body
+				w::sectPr = [
+					// A4 portrait: 210 mm × 297 mm
+					w::pgSz  = xml::attributed({ w::w = 11906, w::h = 16838 })
+					// Margins: top/bottom 2.5cm, left/right 2.2cm
+					w::pgMar = xml::attributed({
+						w::top    = 1417
+						w::bottom = 1417
+						w::left   = 1247
+						w::right  = 1247
+						// header/footer/gutter can be left to defaults
+					})
+				]
+			]
 		]
 	]
 
@@ -67,8 +420,12 @@ namespace htmltodocx
 	// htmltodocx::translateDocument
 	htmltodocx::translateDocument = ( doc as list ) => (
 		let
-			body = iterate( [], doc )
-			wrapped = wrapContents( sampleBody )
+			body = iterate( [], "", doc )
+			wrapped = wrapContents( body )
+			written = File.Write(
+				"translated.mixt"
+				wrapped
+			)
 		in
 			wrapped
 	)

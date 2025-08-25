@@ -20,7 +20,7 @@
 			]
 		},
 		{
-			"name": "Build DOCX",
+			"name": "Build DOCX (MIXT)",
 			"type": "mixt",
 			"request": "launch",
 			"mode": "run",
@@ -33,9 +33,24 @@
 				"mixt",
 				"--pretty"
 			]
-		},		
+		},
 		{
-			"name": "View MIXT Definition",
+			"name": "Build DOCX (XML)",
+			"type": "mixt",
+			"request": "launch",
+			"mode": "run",
+			"program": "${workspaceFolder}/src/build.docx.mixt",
+			"mixtFlags": [
+				"--logNoPid",
+				"--logLevel",
+				"Info",
+				"--format",
+				"xml",
+				"--pretty"
+			]
+		},
+		{
+			"name": "Run MIXT (MIXT)",
 			"type": "mixt",
 			"request": "launch",
 			"mode": "run",
@@ -49,6 +64,21 @@
 				"--pretty"
 			]
 		},
+		{
+			"name": "Run MIXT (XML)",
+			"type": "mixt",
+			"request": "launch",
+			"mode": "run",
+			"program": "${file}",
+			"mixtFlags": [
+				"--logNoPid",
+				"--logLevel",
+				"Info",
+				"--format",
+				"xml",
+				"--pretty"
+			]
+		},		
 		{
 			"name": "View Navigation Definition",
 			"type": "mixt",

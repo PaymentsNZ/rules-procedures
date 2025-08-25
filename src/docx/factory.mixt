@@ -7,7 +7,6 @@ import [
 	numbering = "content/word/numbering.mixt"
 	styles = "content/word/styles.mixt"
 	docRels = "content/word/docRels.mixt"
-	//document = "content/word/document.mixt"
 	rootRels = "content/rels.mixt"
 ]
 
@@ -26,7 +25,7 @@ import [
 					}			
 					word = {
 						document.xml = Xml.FromValue( docContent, noPrettyOption )
-						//numbering.xml = Xml.FromValue( numbering )
+						numbering.xml = Xml.FromValue( numbering )
 						styles.xml = Xml.FromValue( styles, noPrettyOption )
 						_rels = {
 							document.xml.rels = Xml.FromValue(docRels, noPrettyOption)

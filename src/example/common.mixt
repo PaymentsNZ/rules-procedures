@@ -1,0 +1,2170 @@
+[
+    div = {
+        img = "" meta {
+            html::attributes = {
+                src = "../images/PNZ_OnWhite_rgb.gif"
+                alt = "PNZ Logo"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "logo"
+        }
+    }
+    [
+        div = "Appendix 14B: HVCS Common Procedures (UG2025)" meta {
+            html::attributes = {
+                class = "document-title"
+            }
+        }
+        div = "Version 2" meta {
+            html::attributes = {
+                class = "document-meta"
+            }
+        }
+        div = "Effective date: 22/11/2025" meta {
+            html::attributes = {
+                class = "document-meta"
+            }
+        }
+    ]
+    h1 = "Document purpose and overview" meta {
+        html::attributes = {
+            id = "document-purpose-and-overview"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "HVCS rules and procedures overview" meta {
+            html::attributes = {
+                id = "hvcs-rules-and-procedures-overview"
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            div = [
+                "This document HVCS Common Procedures (Part B) is one part of a suite of documentation to help\n\t\t\tparticipants understand what is required to become a high value clearing system (HVCS) participant\n\t\t\tand how to send and receive individual HVCS instructions and NZD HVCS payments that the participant\n\t\t\tcannot revoke or reverse after settlement."
+            ]
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    [
+        div = [
+            div = [
+                "Payments NZ Rules"
+                "Part 9"
+                "HVCS Clearing and Settlement"
+            ] meta {
+                html::attributes = {
+                    class = "menu-root"
+                }
+            }
+            div = [
+                a = [
+                    "Part A"
+                    "HVCS Overview"
+                ] meta {
+                    html::attributes = {
+                        href = "overview.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part B"
+                    "HVCS Common Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "common.html"
+                        class = "menu-branch active"
+                    }
+                }
+                a = [
+                    "Part C"
+                    "SCP Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "scp.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part D"
+                    "MX Messaging Procedures (ISO 20022)"
+                ] meta {
+                    html::attributes = {
+                        href = "mx.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part E"
+                    "MT Messaging Procedures (ISO 15022)"
+                ] meta {
+                    html::attributes = {
+                        href = "mt.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part F"
+                    "Co-existence Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "coexistence.html"
+                        class = "menu-branch"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "menu-branches"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "menu-container"
+            }
+        }
+        div = "Diagram 01: HVCS Rules and Procedures documentation structure" meta {
+            html::attributes = {
+                class = "menu-caption"
+            }
+        }
+    ]
+    div = [
+        div = "" meta {
+            html::attributes = {
+                id = ""
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            div = [
+                "This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).\n\t\t\tPart 9 contains the HVCS clearing and settlement rules which specify the requirements for participants\n\t\t\tto create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs)\n\t\t\tthrough HVCS. Part 2 contains the access and participation rules for an entity to join HVCS."
+                "In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants\n\t\t\tcomply with Part 9 are comprised of:"
+                ul = [
+                    "Part A — HVCS Overview"
+                    ul = [
+                        "Provides a high-level overview of the HVCS community, message types, how HVCS clearing and\n\t\t\t\t\tsettlement works, and the business, technical, and regulatory environment in which the process\n\t\t\t\t\toperates.  This is a non-binding document for use as guidance only."
+                    ]
+                    "Part B — HVCS Common Procedures (this document)"
+                    ul = [
+                        "Provides binding procedures and product requirements that apply to all HVCS instructions at all\n\t\t\t\t\ttimes.  This document also contains some non-binding commentary and best practice."
+                    ]
+                    "Part C — SCP Procedures"
+                    ul = [
+                        "Provides binding procedures and product requirements that apply only to an HVCS instruction that\n\t\t\t\t\tis a same day cleared payment.  This document also contains some non-binding commentary and best\n\t\t\t\t\tpractice, such as recommended terms and conditions with customers."
+                    ]
+                    "Part D — MX Messaging Procedures"
+                    ul = [
+                        "Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022\n\t\t\t\t\tmessages) across the HVCS MX CUG.  This document also contains some non-binding commentary and\n\t\t\t\t\tbest practice."
+                    ]
+                    "Part E — MT Messaging Procedures"
+                    ul = [
+                        "Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022\n\t\t\t\t\tmessages) across the HVCS MT CUG.  This document also contains some non-binding commentary and\n\t\t\t\t\tbest practice."
+                    ]
+                    "Part F — Co-existence Procedures"
+                    ul = [
+                        "Provides binding procedures for participants during the co-existence phase of the migration from\n\t\t\t\t\tsending and receiving MT messages to MX messages."
+                    ]
+                ] meta {
+                    html::attributes = {
+                        class = "bullets"
+                    }
+                }
+            ]
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Standards, best practices and commentary" meta {
+            html::attributes = {
+                id = "standards-best-practices-and-commentary"
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            p = [
+                "For information on how to determine whether the content of an applicable HVCS standard in Appendix 14\n\t\t\tcreates binding legal rights or obligations, please see"
+                span = "Part A - Overview." meta {
+                    html::attributes = {
+                        class = "italic"
+                    }
+                }
+            ]
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Document purpose and structure" meta {
+            html::attributes = {
+                id = "document-purpose-and-structure"
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            "This document discusses the HVCS Common Procedures that apply to normal processing of all HVCS instructions\n\t\tand the processing of errors and late HVCS payments."
+            "This document is divided into three chapters."
+            "Chapter 1 provides an overview on how to process HVCS instructions to settle and interchange HVCS payments\n\t\tunder normal conditions."
+            "Chapter 2 specifies how to process HVCS instructions to settle and interchange HVCS payments that contain\n\t\terrors."
+            "Chapter 3 specifies how to process HVCS instructions to settle and interchange HVCS payments that have been\n\t\tsettled after 16:45."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 1: Normal HVCS processing" meta {
+        html::attributes = {
+            id = "chapter-1-normal-hvcs-processing"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Defined terms" meta {
+            html::attributes = {
+                id = "1.1-defined-terms"
+                class = "clause-heading"
+                data-number = "1.1"
+            }
+        }
+        div = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Changed capitalisation of FINplus"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            [
+                span = "CBPR+" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means the ISO 20022-based messaging standard for sending a SWIFT message through the FINplus CUG\n\t\t\t\toperated by SWIFT."
+            ]
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "JW" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed MT103"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            [
+                span = "Customer credit transfer message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means the following payment messages used to facilitate an HVCS payment involving a customer of a\n\t\t\t\tparticipant:"
+                ul = [
+                    "pacs.008"
+                ] meta {
+                    html::attributes = {
+                        class = "bullets"
+                    }
+                }
+            ]
+            [
+                span = "Exception and investigation message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "message means an HVCS instruction sent between participants including:"
+                ul = [
+                    "MT192;"
+                    "MT196"
+                    "MT292;"
+                    "MT296"
+                    "camt.056; or"
+                    "camt.029"
+                ] meta {
+                    html::attributes = {
+                        class = "bullets"
+                    }
+                }
+            ]
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "JW" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed MT202, MT202COV, MT205, MT205COV"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            [
+                span = "FI credit transfer message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means the following payment messages used to facilitate an HVCS payment involving a participant or\n\t\t\t\t financial institution customer of a participant:"
+                ul = [
+                    "pacs.009; and"
+                    "pacs.009COV"
+                ] meta {
+                    html::attributes = {
+                        class = "bullets"
+                    }
+                }
+            ]
+            [
+                span = "FIN message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means the ISO 15022-based messaging standard for sending a SWIFT message through the general FIN CUG\n\t\t\t\toperated by SWIFT."
+            ]
+            [
+                span = "MT message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means an HVCS instruction sent in accordance with the MT Messaging Procedures"
+            ]
+            [
+                span = "MX message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means an HVCS instruction sent in accordance with the MX Messaging Procedures and the MX Message\n\t\t\t\tSpecifications"
+            ]
+            [
+                span = "MX Message Specifications" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means the applicable production version(s) of New Zealand's HVCS Usage Guidelines, being the base\n\t\t\t\tISO 20022 message specifications modified for New Zealand's HVCS and provided on the \"mystandards\"\n\t\t\t\twebpage"
+            ]
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "JW" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed MT103 RETN, MT202 RETN, MT202COV RETN, MT205 RETN, and MT205COV RETN"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            [
+                span = "Return message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "message means the following payment messages used to facilitate the return of an HVCS payment:"
+                ul = [
+                    "pacs.004"
+                ] meta {
+                    html::attributes = {
+                        class = "bullets"
+                    }
+                }
+            ]
+            [
+                span = "SWIFT message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "message means messages that are sent through SWIFT including:"
+                ul = [
+                    "HVCS instruction;"
+                    "HVPS message;"
+                    "CBPR+; or"
+                    "FIN message"
+                ] meta {
+                    html::attributes = {
+                        class = "bullets"
+                    }
+                }
+            ]
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-question-id"
+                        }
+                    }
+                    span = "JW" meta {
+                        html::attributes = {
+                            class = "doc-question-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-meta"
+                    }
+                }
+                div = [
+                    "Is it safe to remove:"
+                    "- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired."
+                    "- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered."
+                    "- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the <text-block>, and has been forced to abort it instead."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-question"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed:"
+                    "- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            [
+                span = "System message" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means a message sent to a participant through SWIFT in relation to an HVCS instruction including:"
+                ul = [
+                    "MT010;"
+                    "MT011;"
+                    "MT019;"
+                    "xsys.002;"
+                    "xsys.003;"
+                    "xsys.010; or"
+                    "xsys.011"
+                ] meta {
+                    html::attributes = {
+                        class = "bullets"
+                    }
+                }
+            ]
+            "Unless the context otherwise specifies, all other defined terms have the meanings given to them in Part 19\n\t\tof the Payments NZ Rules."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Form, content, and delivery of payment instruction" meta {
+            html::attributes = {
+                id = "1.2-form-content-and-delivery-of-payment-instruction"
+                class = "clause-heading"
+                data-number = "1.2"
+            }
+        }
+        div = [
+            "The instructing agent that sends an HVCS instruction may determine the form, content, and method of delivery\n\t\tof the payment instruction from the debtor to the instructing agent."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Agency arrangement obligations" meta {
+            html::attributes = {
+                id = "1.3-agency-arrangement-obligations"
+                class = "clause-heading"
+                data-number = "1.3"
+            }
+        }
+        ol = [
+            "A participant that receives HVCS instructions on behalf of a creditor agent pursuant to an agency arrangement\n\t\tmust ensure that each creditor agent which it has an agency arrangement with has a SWIFT BIC to identify the\n\t\tcreditor agent that can be provided to the debtor for inclusion in the details of the debtor's payment\n\t\tinstruction."
+            "A participant that sends HVCS instructions on behalf of a debtor agent pursuant to an agency arrangement must\n\t\tensure that each debtor agent which it has an agency arrangement with has a SWIFT BIC that can be used by the\n\t\tParticipant acting as an instructing agent to identify the debtor agent within the payment message."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "HVCS operating times" meta {
+            html::attributes = {
+                id = "1.4-hvcs-operating-times"
+                class = "clause-heading"
+                data-number = "1.4"
+            }
+        }
+        ol = [
+            "An HVCS participant must connect to the transaction delivery system—"
+            ol = [
+                "every business day including every provincial holiday; and"
+                "during the minimum time period commencing at 09:00 on a business day and ending at 17:15 on that business\n\t\t\tday; and"
+                "during a time period from 17:15 on a business day until such time as is necessary to receive any HVCS\n\t\t\tinstruction sent in accordance with clause 3.3 or 3.4 of these HVCS Common Procedures."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "The instructing agent may only send an HVCS instruction during the time period commencing at 09:00 on a\n\t\tbusiness day and ending at 16:45 on that business day unless clause 3.3 or 3.4 of these HVCS Common Procedures\n\t\tapply."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Validating HVCS payments" meta {
+            html::attributes = {
+                id = "1.5-validating-hvcs-payments"
+                class = "clause-heading"
+                data-number = "1.5"
+            }
+        }
+        ol = [
+            "The following table sets out the validation requirements that apply to a range of HVCS instructions."
+            "For clarity, the obligations set out in the table below are cumulative.  Participants must comply with every\n\t\tvalidation obligation that applies to the type of HVCS instruction that the participant sends or receives."
+            h2 = "Instructing Agent" meta {
+                html::attributes = {
+                    id = "instructing-agent"
+                    class = "subsection-heading"
+                }
+            }
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed MT Obligations"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = {
+                ;table = #table(
+                    type table {
+                        Action = any
+                        ;MX Obligations = any
+                    }
+                    [
+                        [
+                            [
+                                span = "Sending an HVCS instruction as an"
+                                span = "MX message" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                            ]
+                            [
+                                "The instructing agent:"
+                                ul = [
+                                    [
+                                        span = "Must" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX\n\t\t\t\t\t\t\t\t\t\tMessaging Procedures (in accordance with MX Message Specifications MyStandards\n\t\t\t\t\t\t\t\t\t\tand Local Usage Guideline Validation); and"
+                                    ]
+                                    [
+                                        span = "Should" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX\n\t\t\t\t\t\t\t\t\t\tMessaging Procedures"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                                br = null
+                                div = [
+                                    "(MX Message Requirements)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                div = [
+                                    "(Instructing Agent Validation)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                "Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the\n\t\t\t\t\t\t\tMX procedures."
+                                br = null
+                                div = [
+                                    "(Message Validation (Swift))"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                div = [
+                                    "(Message Validation (Participant))"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction as an"
+                                span = "SCP" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                            ]
+                            [
+                                "The instructing agent:"
+                                ul = [
+                                    [
+                                        span = "Must" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "validate the HVCS instruction in accordance with clause 1.5 of the SCP Procedures"
+                                    ]
+                                    [
+                                        span = "Must" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the\n\t\t\t\t\t\t\t\t\t\tMX Messaging Procedures (in accordance with MX Message Specifications)"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction as an"
+                                span = "Non-SCP" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                            ]
+                            [
+                                "The instructing agent:"
+                                ul = [
+                                    [
+                                        span = "Must" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX\n\t\t\t\t\t\t\t\t\t\tMessaging Procedures (in accordance with MX Message Specifications MyStandards\n\t\t\t\t\t\t\t\t\t\tand Local Usage Guideline Validation); and"
+                                    ]
+                                    [
+                                        span = "Should" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX\n\t\t\t\t\t\t\t\t\t\tMessaging Procedures"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                                br = null
+                                div = [
+                                    "(MX Message Requirements)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                div = [
+                                    "(Instructing Agent Validation)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                "Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the\n\t\t\t\t\t\t\tMX procedures."
+                                br = null
+                                div = [
+                                    "(Message Validation (Swift))"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                div = [
+                                    "(Message Validation (Participant))"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction"
+                                ul = [
+                                    [
+                                        span = "As an"
+                                        span = "SCP" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "; and"
+                                    ]
+                                    [
+                                        span = "Creditor identified by"
+                                        span = "BIC" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor BIC:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC"
+                                br = null
+                                div = [
+                                    "Rules:"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                "HVCS_SDCL_BIC_Creditor_Account_Identification_1_FormalRule"
+                                "HVCS_SDCL_BIC_Creditor_Account_Identification_2_FormalRule"
+                                br = null
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor Account ID:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                br = null
+                                [
+                                    span = "Rules:" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                ]
+                                br = null
+                                "HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule"
+                                "HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule"
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction"
+                                ul = [
+                                    [
+                                        span = "As an"
+                                        span = "SCP" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "; and"
+                                    ]
+                                    [
+                                        span = "Does not" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "contain a"
+                                        span = "BIC" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "(contains an account number or card number)"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                "Clause 4.2 of the MX Procedures has commentary that documents what an account number\n\t\t\t\t\t\t\tshould look like."
+                                br = null
+                                div = [
+                                    "(SCP account number format)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                br = null
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor Account ID:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                br = null
+                                "Clause 2.3 of the MX Procedures includes requirements for Bacho format, check digit\n\t\t\t\t\t\t\tfor PAN etc"
+                                br = null
+                                div = [
+                                    "(Instructed agent validation)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor Name:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Nm"
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction"
+                                ul = [
+                                    [
+                                        span = "As an"
+                                        span = "SCP" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "; and"
+                                    ]
+                                    [
+                                        span = "Includes an"
+                                        span = "email address" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "for the beneficiary notification"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                "Clause 4.3 of the MX Procedures shows the dedicated email address field."
+                                br = null
+                                div = [
+                                    "SCP Customer notifications)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Email Address:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr"
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction"
+                                ul = [
+                                    [
+                                        span = "As a customer credit transfer message — "
+                                        span = "cross border redirection" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and"
+                                    ]
+                                    [
+                                        span = "Contains a"
+                                        span = "BIC" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor BIC:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC"
+                                br = null
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor Account ID:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                br = null
+                                div = [
+                                    "Rules:"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                "HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule"
+                                br = null
+                                "HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule"
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction"
+                                ul = [
+                                    [
+                                        span = "As a customer credit transfer message — "
+                                        span = "cross border redirection" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and"
+                                    ]
+                                    [
+                                        span = "Does"
+                                        span = "not" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "contain a"
+                                        span = "BIC" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "(contains an account number or card number)"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor BIC:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC"
+                                br = null
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Creditor Account ID:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                br = null
+                                div = [
+                                    "Rules:"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                "HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule"
+                                br = null
+                                "HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule"
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Sending an HVCS instruction as an"
+                                span = "FI credit transfer message" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                span = "(as set out in clause 9.1(2)(b) of the Rules and as defined in the\n\t\t\t\t\t\t\t\tHVCS Common Procedures"
+                            ]
+                            [
+                                [
+                                    span = "The instructing agent"
+                                    span = "must" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "validate the HVCS instruction in accordance with clause 2.1 of the MX\n\t\t\t\t\t\t\t\t\tProcedures and in accordance with MyStandards."
+                                ]
+                                br = null
+                                div = [
+                                    "(MX Message Requirements)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                            ]
+                        ]
+                    ]
+                ) meta {
+                    html::attributes = {
+                        class = "pnz-table validation-table"
+                    }
+                }
+            } meta {
+                html::attributes = {
+                    class = "table-scroll"
+                }
+            }
+            h2 = "Instructed Agent" meta {
+                html::attributes = {
+                    id = "instructed-agent"
+                    class = "subsection-heading"
+                }
+            }
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed MT Obligations"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = {
+                ;table = #table(
+                    type table {
+                        Action = any
+                        ;MX Obligations = any
+                    }
+                    [
+                        [
+                            [
+                                "Has been sent an HVCS instruction:"
+                                ul = [
+                                    [
+                                        span = "As a customer credit transfer message — "
+                                        span = "cross border redirection" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "(as set out in clause 9.1(2)(a)(iii) of the Rules); and"
+                                    ]
+                                    [
+                                        span = "Is also the"
+                                        span = "creditor agent" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                [
+                                    span = "The instructed agent"
+                                    span = "must" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "validate the HVCS instruction in accordance with clauses 2.1 and 2.3\n\t\t\t\t\t\t\t\t\tof the MX Procedures and in accordance with MyStandards and Local Usage\n\t\t\t\t\t\t\t\t\tGuideline Validation."
+                                ]
+                                br = null
+                                div = [
+                                    "(MX Message Requirements)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                div = [
+                                    "(Instructed Agent Validation)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                "Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures."
+                                br = null
+                                div = [
+                                    "(Message Validation (Swift))"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                div = [
+                                    "(Message Validation (Participant))"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            [
+                                span = "Has been sent an HVCS instruction as an"
+                                span = "SCP" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                            ]
+                            [
+                                [
+                                    span = "The instructed agent"
+                                    span = "must" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures\n\t\t\t\t\t\t\t\t\tand in accordance with MyStandards."
+                                ]
+                                br = null
+                                div = [
+                                    "(Instructed agent validation)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            [
+                                "Has been sent an HVCS instruction:"
+                                ul = [
+                                    [
+                                        span = "As an"
+                                        span = "SCP" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "; and"
+                                    ]
+                                    [
+                                        span = "Includes an"
+                                        span = "email address" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "for the beneficiary notification"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                "Clause 4.3 of the MX Procedures shows the dedicated email address field."
+                                br = null
+                                div = [
+                                    "(SCP Customer notifications)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                                [
+                                    span = "XML Path" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "for Email Address:"
+                                ]
+                                br = null
+                                "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr"
+                            ]
+                        ]
+                        [
+                            [
+                                "Has been sent an HVCS instruction:"
+                                ul = [
+                                    [
+                                        span = "A customer credit transfer message — "
+                                        span = "cross border redirection" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)"
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                [
+                                    span = "The instructed agent"
+                                    span = "must" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "validate the HVCS instruction in accordance with clauses 2.3\n\t\t\t\t\t\t\t\t\tof the MX Procedures."
+                                ]
+                                br = null
+                                div = [
+                                    "(Instructed agent validation)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                            ]
+                        ]
+                        [
+                            [
+                                ul = [
+                                    [
+                                        span = "Needs to"
+                                        span = "return" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "an HVCS payment;"
+                                    ]
+                                    [
+                                        span = "Chooses to" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                        span = "populate line number 4 and 5 of"
+                                        span = "field 72" meta {
+                                            html::attributes = {
+                                                class = "bold"
+                                            }
+                                        }
+                                    ]
+                                ] meta {
+                                    html::attributes = {
+                                        class = "bullets"
+                                    }
+                                }
+                            ]
+                            [
+                                [
+                                    span = "The instructed agent"
+                                    span = "must" meta {
+                                        html::attributes = {
+                                            class = "bold"
+                                        }
+                                    }
+                                    span = "validate the HVCS instruction in accordance with clause 2.1 of the\n\t\t\t\t\t\t\t\t\tMX Procedures and in accordance with MyStandards."
+                                ]
+                                br = null
+                                div = [
+                                    "(MX Message Requirements)"
+                                ] meta {
+                                    html::attributes = {
+                                        class = "italic"
+                                    }
+                                }
+                            ]
+                        ]
+                    ]
+                ) meta {
+                    html::attributes = {
+                        class = "pnz-table validation-table"
+                    }
+                }
+            } meta {
+                html::attributes = {
+                    class = "table-scroll"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "No revoking after settlement" meta {
+            html::attributes = {
+                id = "1.6-no-revoking-after-settlement"
+                class = "clause-heading"
+                data-number = "1.6"
+            }
+        }
+        div = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Replaced: 'section 156R of the Banking (Prudential Supervision) Act 1989.'"
+                    "With: 'section 55 of the Financial Markets Infrastructure Act 2021.'"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "As HVCS payments are made through the Reserve Bank's designated settlement system, ESAS, they cannot\n\t\tbe reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms\n\t\tand conditions and section 55 of the Financial Markets Infrastructure Act 2021."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Return HVCS payment: timing, format and content" meta {
+            html::attributes = {
+                id = "1.7-return-hvcs-payment-timing-format-and-content"
+                class = "clause-heading"
+                data-number = "1.7"
+            }
+        }
+        ol = [
+            "To comply with rule 9.21 and clause 2.2 of these HVCS Common Procedures , an instructed agent must\n\t\treturn an HVCS payment:"
+            ol = [
+                "as soon as practicable after making the decision to return it, and"
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications."
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                "in accordance with Part D - MX Procedures and the MX Message Specifications."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 2: Errors" meta {
+        html::attributes = {
+            id = "chapter-2-errors"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Errors" meta {
+            html::attributes = {
+                id = "2.1-errors"
+                class = "clause-heading"
+                data-number = "2.1"
+            }
+        }
+        div = [
+            "Sometimes an instructed agent cannot process an HVCS instruction because of, for example, a problem\n\t\twith the content or the format of the instruction or an invalid account number."
+            "If an instructed agent cannot process an HVCS instruction, rule 9.21 and clause 2.2 of these HVCS\n\t\tCommon Procedures, provides the instructed agent two options. The instructed agent can either return\n\t\tthe HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS\n\t\tinstruction."
+            "The following diagram summarises the processes that apply if the HVCS instruction contains an error."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = {
+        img = "" meta {
+            html::attributes = {
+                src = "images/hvcs_common_error_process.png"
+                alt = "Error Process"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "diagram"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Error prevents processing" meta {
+            html::attributes = {
+                id = "2.2-error-prevents-processing"
+                class = "clause-heading"
+                data-number = "2.2"
+            }
+        }
+        ol = [
+            "This clause applies to an instructed agent who has received a settled HVCS payment but cannot process\n\t\tthe HVCS payment because of an error relating to the HVCS payment."
+            "The instructed agent must do one of the following:"
+            ol = [
+                "return the HVCS payment to the instructing agent in accordance with the applicable HVCS standards:"
+                "require the instructing agent to send data to amend the HVCS payment:"
+                "amend the HVCS payment without asking the instructing agent for amended data and, as soon as\n\t\t\tpracticable after amendment is complete, process the HVCS payment."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "For a cross border redirection (as described in clause 9.1(2)(a)(iii) of the Rules), the instructed agent\n\t\tmust not deduct any fees from the amount of the HVCS payment before returning it."
+            "If an instructing agent of an HVCS payment receives a request from an instructed agent under subclause\n\t\t(2)(b), the instructing agent must, as soon as practicable after receiving the request, send data to amend\n\t\tthe HVCS payment to the instructed agent."
+            "If the instructed agent receives amended data from an instructing agent under subclause (4), the\n\t\tinstructing agent must, as soon as practicable after receiving the data, use the data to amend the HVCS\n\t\tpayment."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-bestpractice"
+        }
+    }
+    div = [
+        div = "Instructed agent credits wrong account" meta {
+            html::attributes = {
+                id = "2.3-instructed-agent-credits-wrong-account"
+                class = "clause-heading"
+                data-number = "2.3"
+            }
+        }
+        ol = [
+            "If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS\n\t\tpayment and the instructing agent incurs loss as a direct result of the error, the instructed agent must\n\t\tpay the instructing agent the amount of the loss up to the value of the HVCS payment if one of the\n\t\tfollowing applies:"
+            ol = [
+                "the payment message specified the correct account number:"
+                "the instructing agent sent data to the instructed agent to amend the payment message in accordance\n\t\t\twith clause 2.2 of these HVCS Common Procedures and the data specified the correct account number:"
+                "the instructed agent—"
+                ol = [
+                    "could not process the HVCS instruction because of an error relating to the HVCS instruction; and"
+                    "did not obtain data from the instructing agent to amend the payment message under clause 2.2 of\n\t\t\t\tthese HVCS Common Procedures; and"
+                    "amended the HVCS payment with the wrong account number."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS\n\t\tpayment because the instructing agent specified the wrong account number in the payment message the\n\t\tinstructing agent must, as soon as practicable after it becomes aware that the wrong account number has\n\t\tbeen credited—"
+            ol = [
+                "send the payment message to the instructed agent again; and"
+                "ensure that the payment message contains the correct account number."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-bestpractice"
+        }
+    }
+    div = [
+        div = "Co-operate to resolve processing errors" meta {
+            html::attributes = {
+                id = "2.4-co-operate-to-resolve-processing-errors"
+                class = "clause-heading"
+                data-number = "2.4"
+            }
+        }
+        ol = [
+            "Participants should co-operate to resolve a problem caused by a processing error affecting a HVCS\n\t\tinstruction."
+            "For example, if an instructed agent credits the amount of a HVCS payment to the wrong creditor's\n\t\taccount number—"
+            ol = [
+                "the instructing agent may ask the instructed agent to freeze funds in the creditor's account\n\t\t\tuntil the problem is resolved; and"
+                "the instructed agent should determine whether to comply with the request, including by having\n\t\t\tregard to whether the instructed agent has the legal right to do so."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Request and response formats" meta {
+            html::attributes = {
+                id = "2.5-request-and-response-formats"
+                class = "clause-heading"
+                data-number = "2.5"
+            }
+        }
+        div = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "JW" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "No change, though noting reference to MTn95 and MTn96."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common\n\t\tProcedures, to send data to correct an HVCS instruction, the instructed agent can request the data by,\n\t\tfor example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message\n\t\tsends corrected data to the instructed agent under rule 9.21 and clause 2.2 of these HVCS Common\n\t\tProcedures, the instructing agent can use, for example, SWIFT message MTn96-Answers."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 3: Late processing" meta {
+        html::attributes = {
+            id = "chapter-3-late-processing"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Late processing" meta {
+            html::attributes = {
+                id = "3.1-late-processing"
+                class = "clause-heading"
+                data-number = "3.1"
+            }
+        }
+        div = [
+            "Rule 9.11 and clause 1.4 of these HVCS Common Procedures requires an instructing agent to send an HVCS\n\t\tinstruction no later than 16:45 on a business day unless standards 3.3 or 3.4 apply."
+            "The following diagram gives an overview of the processes that apply if the instructing agent proposes\n\t\tto send an HVCS instruction after 16:45. The diagram has no legal effect."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = {
+        img = "" meta {
+            html::attributes = {
+                src = "images/hvcs_common_late_processing.png"
+                alt = "Late Processing"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "diagram"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "When HVCS payments settle" meta {
+            html::attributes = {
+                id = "3.2-when-hvcs-payments-settle"
+                class = "clause-heading"
+                data-number = "3.2"
+            }
+        }
+        ol = [
+            "The effect of rule 9.14 is that if the instructing agent settles an HVCS payment after 17:15, unless\n\t\tthe late HVCS instruction requirements apply, the instructed agent:"
+            ol = [
+                "is not required to process the HVCS instruction that business day, but"
+                "may decide to process the HVCS instruction that business day to meet the requirements or the\n\t\t\texpectations of its customer."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Sending customer HVCS instructions after 16:45" meta {
+            html::attributes = {
+                id = "3.3-sending-customer-hvcs-instructions-after-1645"
+                class = "clause-heading"
+                data-number = "3.3"
+            }
+        }
+        ol = [
+            "This clause applies to a customer credit transfer message that is an SCP or a cross border payment\n\t\tredirection if—"
+            ol = [
+                "a technical problem or an operational problem prevents the instructing agent from sending the\n\t\t\tcustomer credit transfer message by 16.45 on a business day; and"
+                "the instructing agent requires the instructed agent to credit the creditor's account with the\n\t\t\tamount of an HVCS payment that business day."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "The instructing agent—"
+            ol = [
+                "must obtain the instructed agent's explicit consent to the time by which the instructing agent\n\t\t\tmust send a HVCS instruction to which this standard applies; and"
+                "must use the contact people and method of communicating for the instructed agent specified in the\n\t\t\tindustry incident contact list; and"
+                "is entitled to obtain the consent in written form or verbal form."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "The instructed agent is not required to consent to a request from an instructing agent to send a\n\t\tcustomer credit transfer message after 16:45. For example, the instructed agent may not be able to\n\t\tprocess the HVCS instruction at the time requested."
+            "If the instructing agent obtains the instructed agent's consent to a time for sending the HVCS\n\t\tinstruction and the instructing agent sends the HVCS instruction by the agreed time, the timeframe\n\t\tin clause 1.4 of these HVCS Common Procedures does not apply to the HVCS instruction."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Sending FI HVCS instructions after 16:45" meta {
+            html::attributes = {
+                id = "3.4-sending-fi-hvcs-instructions-after-1645"
+                class = "clause-heading"
+                data-number = "3.4"
+            }
+        }
+        ol = [
+            "This clause applies to a participant who proposes to send and receive FI credit transfer messages\n\t\tduring the CLS evening session either—"
+            ol = [
+                "as the creditor or the debtor; or"
+                "on behalf of a FI customer."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "The participant may only send and receive FI credit transfer messages during the CLS evening session\n\t\ton a business day if—"
+            ol = [
+                "no less than 1 month before that business day,—"
+                ol = [
+                    "the participant has notified the chief executive of Payments NZ that on and from a specified\n\t\t\t\tdate the participant proposes to send and receive FI credit transfer messages during the CLS\n\t\t\t\tevening session; and"
+                    "the chief executive has notified every other participant that on and from the specified date\n\t\t\t\tthe participant proposes to send and receive FI credit transfer messages during the CLS evening\n\t\t\t\tsession; and"
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+                "the participant has, on and from the date specified in the chief executive's notification,\n\t\t\tparticipated in every CLS evening session; and"
+                "the participant participates in the CLS evening session that business day during the time period\n\t\t\tcommencing at 16:45 on the business day and ending 30 minutes after the final CLS pay out."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "If the participant sends an FI credit transfer message during the CLS evening session in accordance\n\t\twith subclause (2), the timeframe in clause 1.4 of these HVCS Common Procedures do not apply to the\n\t\tFI credit transfer messages."
+            "If a participant proposes to cease sending and receiving FI credit transfer messages during the CLS\n\t\tevening session, no less than 1 month before the business day that the participant proposes to cease\n\t\tsending and receiving the FI credit transfer messages, the participant must notify Payments NZ that\n\t\tit proposes to cease."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Evening session participants" meta {
+            html::attributes = {
+                id = "3.5-evening-session-participants"
+                class = "clause-heading"
+                data-number = "3.5"
+            }
+        }
+        div = [
+            "Participants who send and receive financial institution credit transfers during the CLS evening\n\t\tsession are:"
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Added ICBC, NZ Depository"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = {
+                ;table = #table(
+                    type table {
+                        Participants = any
+                        Date = any
+                    }
+                    [
+                        [ "ANZ Bank New Zealand Limited", "1 October 2010" ]
+                        [ "ASB Bank Ltd", "1 October 2010" ]
+                        [ "Bank of China (New Zealand) Limited", "4 December 2020" ]
+                        [ "Bank of New Zealand", "1 October 2010" ]
+                        [ "Citibank, N.A.", "1 October 2010" ]
+                        [ "HSBC", "1 October 2010" ]
+                        [ "Industrial and Commercial Bank of China (New Zealand) Limited", "26 March 2025" ]
+                        [ "New Zealand Depository Limited", "4 August 2025" ]
+                        [ "Westpac New Zealand Limited", "1 October 2010" ]
+                    ]
+                ) meta {
+                    html::attributes = {
+                        class = "pnz-table"
+                    }
+                }
+            } meta {
+                html::attributes = {
+                    class = "table-scroll"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+]

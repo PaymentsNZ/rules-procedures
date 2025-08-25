@@ -33,14 +33,12 @@
                 ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"
             }
         }
-        /*
         Override = null meta {
             xml::attributes = {
                 PartName = "/word/numbering.xml"
                 ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"
             }
         }
-        */
         Override = null meta {
             xml::attributes = {
                 PartName = "/word/styles.xml"

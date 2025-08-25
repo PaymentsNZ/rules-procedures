@@ -1,5 +1,5 @@
 import [
-	src = "example/coexistence.mixt"
+	src = "example/common.mixt"
 	htmltodocx = "docx/htmlToDocx.mixt"
 	factory = "docx/factory.mixt"
 	sampleContent = "docx/content/word/document.mixt"
@@ -7,6 +7,16 @@ import [
 let
 	outputFileName = "createdByMixt.docx"
 	translated = htmltodocx::translateDocument( src )
-	written = factory::writeDocx( outputFileName, translated )
+	writtenDOCX = factory::writeDocx( outputFileName, translated )
+	writtenMIXT = File.Write(
+		"createdByMixt.mixt"
+		Mixt.FromValue(translated)
+	)
+	writtenXml = File.Write(
+		"createdByMixt.xml"
+		Xml.FromValue(translated)
+	)	
 in
-	written
+	//writtenDOCX
+	writtenMIXT
+	//writtenXml

@@ -1,0 +1,14 @@
+namespace xml
+
+{
+	xml::attr = (attributes as record) => {
+		xml::attributes = attributes
+	}
+
+	// xml::attributed is used to constuct a xml attributes metadata
+	xml::attributed = (metadata as record, optional value as any) => (
+		value meta {
+			xml::attributes = metadata
+		}
+	)
+}

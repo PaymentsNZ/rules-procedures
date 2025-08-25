@@ -1,9 +1,0 @@
-namespace pnz.legal
-import [
-	pnz.legal.HTML = "html/pnz.legal.mixt"
-	pnz.legal.DOCX = "docx/pnz.legal.mixt"
-]
-if true then
-	pnz.legal.HTML
-else
-	pnz.legal.DOCX

@@ -1,0 +1,16 @@
+[
+	xml::declaration = {
+		version = "1.0"
+		encoding = "UTF-8"
+		standalone = "yes"
+	}
+	Properties = {
+		xml::attributes = {
+			xmlns = "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
+			// No vt namespace needed when no vectors are present
+		}
+	} @> [
+		Application = "MIXT"
+		Company = "Payments NZ"
+	]
+]

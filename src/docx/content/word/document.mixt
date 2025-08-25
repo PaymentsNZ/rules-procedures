@@ -1,0 +1,19 @@
+[
+    xml::declaration = {
+        version = "1.0"
+        encoding = "UTF-8"
+        standalone = "yes"
+    }
+	w::document = {
+		xml::attributes = { xmlns::w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main" }
+	} @> [
+		w::body = [
+			w::p = [
+				w::r = [
+					w::t = "Hello, DOCX"
+				]
+			]
+			w::sectPr = null
+		]
+	]
+]

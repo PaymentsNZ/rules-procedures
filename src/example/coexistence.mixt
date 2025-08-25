@@ -1,0 +1,2588 @@
+[
+    div = {
+        img = "" meta {
+            html::attributes = {
+                src = "../images/PNZ_OnWhite_rgb.gif"
+                alt = "PNZ Logo"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "logo"
+        }
+    }
+    [
+        div = "Appendix 14F: HVCS Co-existence Procedures (UG2025)" meta {
+            html::attributes = {
+                class = "document-title"
+            }
+        }
+        div = "Version 3" meta {
+            html::attributes = {
+                class = "document-meta"
+            }
+        }
+        div = "Effective date: 22/11/2025" meta {
+            html::attributes = {
+                class = "document-meta"
+            }
+        }
+    ]
+    h1 = "Document purpose and overview" meta {
+        html::attributes = {
+            id = "document-purpose-and-overview"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "HVCS rules and procedures overview" meta {
+            html::attributes = {
+                id = "hvcs-rules-and-procedures-overview"
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            div = [
+                "This document, the Co-Existence Procedures (Part F) is one part of a suite of documentation\n\t\t\tto help participants understand what is required to become a high value clearing system (HVCS)\n\t\t\tparticipant and how to send and receive individual HVCS instructions and NZD HVCS payments that\n\t\t\tthe participant cannot revoke or reverse after settlement."
+            ]
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    [
+        div = [
+            div = [
+                "Payments NZ Rules"
+                "Part 9"
+                "HVCS Clearing and Settlement"
+            ] meta {
+                html::attributes = {
+                    class = "menu-root"
+                }
+            }
+            div = [
+                a = [
+                    "Part A"
+                    "HVCS Overview"
+                ] meta {
+                    html::attributes = {
+                        href = "overview.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part B"
+                    "HVCS Common Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "common.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part C"
+                    "SCP Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "scp.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part D"
+                    "MX Messaging Procedures (ISO 20022)"
+                ] meta {
+                    html::attributes = {
+                        href = "mx.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part E"
+                    "MT Messaging Procedures (ISO 15022)"
+                ] meta {
+                    html::attributes = {
+                        href = "mt.html"
+                        class = "menu-branch"
+                    }
+                }
+                a = [
+                    "Part F"
+                    "Co-existence Procedures"
+                ] meta {
+                    html::attributes = {
+                        href = "coexistence.html"
+                        class = "menu-branch active"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "menu-branches"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "menu-container"
+            }
+        }
+        div = "Diagram 01: HVCS Rules and Procedures documentation structure" meta {
+            html::attributes = {
+                class = "menu-caption"
+            }
+        }
+    ]
+    div = [
+        div = "" meta {
+            html::attributes = {
+                id = ""
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        div = [
+            "This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).\n\t\tPart 9 contains the HVCS clearing and settlement rules which specify the requirements for participants\n\t\tto create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including\n\t\tSCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS."
+            "\tIn addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants\n\t\tcomply with Part 9 are comprised of:"
+            ul = [
+                "Part A — HVCS Overview"
+                ul = [
+                    "Provides a high-level overview of the HVCS community, message types, how HVCS clearing and\n\t\t\t\tsettlement works, and the business, technical, and regulatory environment in which the process\n\t\t\t\toperates.  This is a non-binding document for use as guidance only."
+                ]
+                "Part B — HVCS Common Procedures"
+                ul = [
+                    "Provides binding procedures and product requirements that apply to all HVCS instructions\n\t\t\t\tat all times.  This document also contains some non-binding commentary and best practice."
+                ]
+                "Part C — SCP Procedures"
+                ul = [
+                    "Provides binding procedures and product requirements that apply only to an HVCS instruction\n\t\t\t\tthat is a same day cleared payment.  This document also contains some non-binding commentary\n\t\t\t\tand best practice, such as recommended terms and conditions with customers."
+                ]
+                "Part D — MX Messaging Procedures"
+                ul = [
+                    "Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022\n\t\t\t\tmessages) across the HVCS MX CUG.  This document also contains some non-binding commentary\n\t\t\t\tand best practice."
+                ]
+                "Part E — MT Messaging Procedures"
+                ul = [
+                    "Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022\n\t\t\t\tmessages) across the HVCS MT CUG.  This document also contains some non-binding commentary\n\t\t\t\tand best practice."
+                ]
+                "Part F — Co-existence Procedures (this document)"
+                ul = [
+                    "Provides binding procedures for participants during the co-existence phase of the migration\n\t\t\t\tfrom sending and receiving MT messages to MX messages."
+                ]
+            ] meta {
+                html::attributes = {
+                    class = "bullets"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Standards, best practices and commentary" meta {
+            html::attributes = {
+                id = "standards-best-practices-and-commentary"
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            p = [
+                "For information on how to determine whether the content of an applicable HVCS standard in Appendix\n\t\t\t14 creates binding legal rights or obligations, please see"
+                span = "Part A - Overview." meta {
+                    html::attributes = {
+                        class = "italic"
+                    }
+                }
+            ]
+            p = [
+                "Notwithstanding anything in clause 1.8 of the Rules or in Part A — Overview, any reference to\n\t\t\tactions a person \"should\" take or anything a person \"should\" do is intended to convey a best practice\n\t\t\twith which a person should comply with only, but which has no legal effect."
+            ]
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Document purpose and structure" meta {
+            html::attributes = {
+                id = "document-purpose-and-structure"
+                class = "clause-heading"
+                data-number = ""
+            }
+        }
+        ol = [
+            "This document discusses the obligations that apply to participants during the co-existence period."
+            "This document is divided into five chapters."
+            "Chapter 1 provides defined terms, an overview of the HVCS instructions that are in scope during\n\t\tco-existence, the migration timeline and the obligations to send and receive HVCS instructions that\n\t\tapply to participants."
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed reference to MT"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "Chapter 2 provides information on how to join the MX CUG and specifies the types of BICs that can be used."
+            "Chapter 3 provides an overview on the New Zealand HVCS's approach to structured data during co-existence,\n\t\tand the approach of CBPR+."
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed reference to intermediaries (forwarding data paragraphs removed from chapter 4)."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "Chapter 4 provides an overview on data truncation."
+            "Chapter 5 has been deleted."
+            "Chapter 6 has been deleted."
+            "Chapter 7 provides a temporary right for participants to receive and process MT payment messages for 4 weeks\n\t\tfrom the beginning of the co-existence phase."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 1: The journey from MT to MX" meta {
+        html::attributes = {
+            id = "chapter-1-the-journey-from-mt-to-mx"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Introduction" meta {
+            html::attributes = {
+                id = "1.1-introduction"
+                class = "clause-heading"
+                data-number = "1.1"
+            }
+        }
+        ol = [
+            "This chapter gives an overview of:"
+            ol = [
+                "the HVCS instructions (MT and MX messages) that are in scope during the co-existence phase,"
+                "the timeline for migrating HVCS instructions as an MT message to an MX message,"
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Changed to 'applicable message standards'."
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                "the obligations for participants to send and receive HVCS instructions in accordance with the\n\t\t\tapplicable message standards,"
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Changed:"
+                        "From: MX messaging will go live."
+                        "To: when Standards are introduced and revoked."
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                "dates and times when Standards are introduced and revoked."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Defined terms" meta {
+            html::attributes = {
+                id = "1.2-defined-terms"
+                class = "clause-heading"
+                data-number = "1.2"
+            }
+        }
+        div = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Revised for second coexistence phase November 2025 to November 2026."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            [
+                span = "Co-existence phase" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means the period determined by Payments NZ in which the MT Messaging\n\t\t\t\tProcedures, the MX Messaging Procedures, the MX Message Specifications and these Co-existence\n\t\t\t\tProcedures all apply simultaneously beginning on 22 November 2025 and ending on a date:"
+            ]
+            ol = [
+                "in November 2026; or"
+                "as determined by Payments NZ if all participants have fully migrated to using MX messages\n\t\t\tprior to November 2026."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            [
+                span = "On-send" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means when a participant, in its capacity as an intermediary:"
+            ]
+            ol = [
+                "receives an MX message from another participant destined for a third party recipient and sends\n\t\t\tthat message as a CBPR+ message to that recipient;"
+                "receives an MT message from another participant destined for a third party recipient and sends\n\t\t\tthat message as a CBPR+ message or a FIN message to that recipient;"
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Removed 'subject to clause 1.7(7)(a)(iv)of these Co-existence Procedures'\n\t\t\t\t- superfluous"
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                "receives a CBPR+ message destined for another participant and sends that message as an MX message\n\t\t\tto that participant; or"
+                "receives a FIN message destined for another participant and sends that message as an HVCS\n\t\t\tinstruction to that participant."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            [
+                span = "Send" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means when an instructing agent delivers an HVCS instruction to an instructed agent,\n\t\t\t\tbeing either:"
+            ]
+            ol = [
+                "a payment message; or"
+                "an exception and investigation message."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            [
+                span = "Structured Postal Address formatting" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means when the content of the address information within an MX message is formatted in\n\t\t\t\taccordance with the structured data requirements set out in the MX Message Specifications."
+            ]
+            [
+                span = "Unstructured Address Line formatting" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means when the content of the address information within an MX message is not formatted in\n\t\t\t\taccordance with the structured data requirements set out in the MX Message Specifications."
+            ]
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Added Hybrid Address Line formatting."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            [
+                span = "Hybrid Address Line formatting" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "means when the content of the address information within an MX message is formatted in\n\t\t\t\taccordance with the hybrid data requirements set out in the MX Message Specifications."
+            ]
+            "Unless the context otherwise specifies, all other defined terms have the meanings given to them in\n\t\tPart 19 of the Payments NZ Rules and the HVCS Common Procedures."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Payment message scope" meta {
+            html::attributes = {
+                id = "1.3-payment-message-scope"
+                class = "clause-heading"
+                data-number = "1.3"
+            }
+        }
+        ol = [
+            "The payment messages described below are in scope during the co-existence phase."
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed:"
+                    "Participants will still be required to comply with all existing obligations in relation \n\t\t\tto receiving and processing MT messages until the end of the co-existence phase (currently scheduled\n\t\t\tfor November 2025)."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "This table identifies new obligations that participants need to comply with in relation to MX\n\t\tmessages."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        "Messages exchanged between SWIFT message transfer service and participants:"
+    ]
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "New content"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = {
+        ;table = #table(
+            type table {
+                ;MX message = any
+                ;NZ HVCS timing = any
+                ;(CBPR+ timing) = any
+            }
+            [
+                [
+                    [
+                        "pacs.008"
+                        "pacs.009 CORE"
+                        "pacs.009 COV"
+                        "pacs.004"
+                        "camt.056"
+                        "camt.029"
+                    ]
+                    [
+                        div = [
+                            "By the beginning of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants must be able to receive and process MX messages that use\n\t\t\t\t\t\thybrid postal address formatting."
+                        br = null
+                        div = [
+                            "By the end of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants must send all messages using either structured postal\n\t\t\t\t\t\taddress formatting or hybrid postal address formatting."
+                    ]
+                    [
+                        div = [
+                            "By the beginning of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants acting as intermediaries must be able to receive and process\n\t\t\t\t\t\tCBPR+ messages that use hybrid postal address formatting."
+                        div = [
+                            div = [
+                                span = "UG2025" meta {
+                                    html::attributes = {
+                                        class = "doc-comment-id"
+                                    }
+                                }
+                                span = "RK" meta {
+                                    html::attributes = {
+                                        class = "doc-comment-initials"
+                                    }
+                                }
+                            ] meta {
+                                html::attributes = {
+                                    class = "doc-comment-meta"
+                                }
+                            }
+                            div = [
+                                "Removed 'subject to clause 1.7(7)(a)(iv)'\n\t\t\t\t\t\t\t- superfluous"
+                            ] meta {
+                                html::attributes = {
+                                    class = "doc-comment-content"
+                                }
+                            }
+                        ] meta {
+                            html::attributes = {
+                                class = "doc-comment"
+                                data-change-id = "UG2025"
+                            }
+                        }
+                        "Participants acting as intermediaries must be able to on-send a CBPR+ message\n\t\t\t\t\t\tthat uses hybrid postal address formatting to participants as an MX message."
+                        br = null
+                        div = [
+                            "By the end of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants acting as intermediaries must send all CBPR+ messages and on-send\n\t\t\t\t\t\tall CBPR+ messages to participants as an MX message using either structured\n\t\t\t\t\t\tpostal address formatting or hybrid postal address formatting."
+                    ]
+                ]
+            ]
+        ) meta {
+            html::attributes = {
+                class = "pnz-table coexistence-table"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "table-scroll"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed:"
+            "Messages exchanged between SWIFT message transfer service and HVCS (RBNZ)"
+            "Messages exchanged between SWIFT and participants"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = "Investigation message scope" meta {
+            html::attributes = {
+                id = "1.4-investigation-message-scope"
+                class = "clause-heading"
+                data-number = "1.4"
+            }
+        }
+        div = [] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Renamed:"
+            "From: Cash management message scope"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Revised coexistence requirements per SWIFT's latest requirements."
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        "The following investigation messages are in scope during the co-existence phase:"
+    ]
+    div = {
+        ;table = #table(
+            type table {
+                ;MT message = any
+                ;MX message = any
+                ;NZ HVCS timing = any
+                ;(CBPR+ timing) = any
+            }
+            [
+                [
+                    "MT 192 / 292 - Request for Cancellation"
+                    "camt.056 - FI to FI Cancellation Request"
+                    [
+                        div = [
+                            "By the beginning of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        div = [
+                            "Participants must be able to receive from SWIFT as an MX message and process"
+                        ]
+                        div = [
+                            "By the end of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        div = [
+                            "Participants must send all requests as an MX message."
+                        ]
+                    ]
+                    [
+                        div = [
+                            "By the beginning of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        div = [
+                            "Participants acting as intermediaries must accept CBPR+ camt.056 messages.\n\t\t\t\t\t\t\tMX->MT and MT->MX translation will be available via SWIFT's Inflow Translation."
+                        ]
+                        div = [
+                            "By the end of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        div = [
+                            "Participants must send all requests to SWIFT's Case Manager BIC."
+                        ]
+                    ]
+                ]
+                [
+                    "MT 196 / 296 - Answers"
+                    "camt.029 - Resolution of Investigation"
+                    [
+                        div = [
+                            "By the beginning of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants must be able to receive from SWIFT as an MX message and process"
+                        br = null
+                        div = [
+                            "By the end of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        div = [
+                            "Participants must send all responses as an MX message."
+                        ]
+                    ]
+                    [
+                        div = [
+                            "By the beginning of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants acting as intermediaries must accept CBPR+ camt.029.  MX->MT and MT->MX\n\t\t\t\t\t\ttranslation will be available via SWIFT's In-Flow Translation."
+                        br = null
+                        div = [
+                            "By the end of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants must send all responses to SWIFT's Case Manager BIC."
+                    ]
+                ]
+                [
+                    "MT 199 / MT 299 - Investigation Request and Response"
+                    "camt.110 / camt.111 - Investigation Request and Response"
+                    [
+                        div = [
+                            "No decision has been taken in relation to use of camt.110/camt.111 for domestic payments."
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Payments NZ will lead assessment of Case Manager capabilities for domestic\n\t\t\t\t\t\tpayments when SWIFT make this capability available for testing."
+                    ]
+                    [
+                        div = [
+                            "By the end of the co-existence phase:"
+                        ] meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        "Participants must be able to receive from SWIFT and process as an MX message"
+                    ]
+                ]
+            ]
+        ) meta {
+            html::attributes = {
+                class = "pnz-table coexistence-table"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "table-scroll"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Revised timing, replaced diagram."
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = "ISO 20022 migration timeline" meta {
+            html::attributes = {
+                id = "1.5-iso-20022-migration-timeline"
+                class = "clause-heading"
+                data-number = "1.5"
+            }
+        }
+        div = [
+            "A phased adoption of MX Messaging Procedures will begin on 22 November 2025."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = {
+        img = "" meta {
+            html::attributes = {
+                src = "images/hvcs_coexistence_migration_timeline.png"
+                alt = "Coexistence Migration Timeline"
+            }
+        }
+    } meta {
+        html::attributes = {
+            class = "diagram"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Obligations for participants to join CUGS" meta {
+            html::attributes = {
+                id = "1.6-obligations-for-participants-to-join-cugs"
+                class = "clause-heading"
+                data-number = "1.6"
+            }
+        }
+        ol = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Reworded"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "The AVP MT CUG will continue to exist through the co-existence phase alongside the AVP MX CUG."
+            "From 22 November 2025, during the co-existence phase, participants must:"
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Add option to terminate MT CUG earlier."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            ol = [
+                "Be a member of the AVP MX CUG; and"
+                "Be a member of the AVP MT CUG until the end of the co-existence phase."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Revised requirements."
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = "Obligations for participants to send and receive messages during the co-existence phase" meta {
+            html::attributes = {
+                id = "1.7-obligations-for-participants-to-send-and-receive-messages-during-the-co-existence-phase"
+                class = "clause-heading"
+                data-number = "1.7"
+            }
+        }
+        ol = [
+            "The approach established for the New Zealand migration places obligations on participants in relation\n\t\tto sending and receiving MX messages."
+            [
+                span = "The following obligations in sub-paragraphs (3) to (7) apply to participants"
+                span = "during the co-existence phase." meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+            ]
+            "Sending payment messages:"
+            ol = [
+                [
+                    span = "Participants"
+                    span = "must" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "send payment messages to other participants using an MX message as follows:"
+                ]
+                ol = [
+                    "Customer Credit Transfer using a pacs.008;"
+                    "Financial Institution Credit Transfer using a pacs.009;"
+                    "Financial Institution Credit Transfer Cover using a pacs.009 COV;"
+                    "A return message using a pacs.004."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+                [
+                    span = "Where a participant sends a payment message as an MX message, the participant"
+                    span = "must" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = ":"
+                ]
+                ol = [
+                    [
+                        span = "Send an address that contains"
+                        span = "either" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "Unstructured Address Line formatting"
+                        span = "or" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "Structured Postal Address formatting"
+                        span = "or" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "Hybrid Postal Address formatting."
+                    ]
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            [
+                span = "Sending exception and investigation messages:  Participants"
+                span = "must" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "send exception and investigation messages to other participants using"
+                span = "either" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "an MX message"
+                span = "or" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "an MT message including:"
+            ]
+            ol = [
+                [
+                    span = "Request for Cancellation message using"
+                    span = "either" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "a camt.056"
+                    span = "or" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "MT192 / MT292; and"
+                ]
+                [
+                    span = "Resolution of Investigation message using"
+                    span = "either" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "a camt.029"
+                    span = "or" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "MT196 / MT296."
+                ]
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "Receiving and processing payment messages:"
+            ol = [
+                [
+                    span = "Participants"
+                    span = "must" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "receive and process the following MX payment messages from other participants:"
+                ]
+                ol = [
+                    "pacs.004 — Payment Return;"
+                    "pacs.008 — FI to FI Customer Credit Transfer;"
+                    "pacs.009 — Financial Institution Credit Transfer; and"
+                    "pacs.009 COV — Financial Institution Credit Transfer Cover."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+                [
+                    span = "Participants"
+                    span = "must" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "receive and process MX messages that contain:"
+                ]
+                ol = [
+                    "Structured Postal Address formatting; and"
+                    "Unstructured Address Line formatting; and"
+                    "Hybrid Address Line formatting."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            [
+                span = "Return messages:  If returning an HVCS payment, participants"
+                span = "must" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "return the HVCS payment by sending a return message to the original instructing agent as follows:"
+            ]
+            ol = [
+                [
+                    span = "if the original instructed agent receives a pacs.008 message, return by sending a pacs.004 message;"
+                ]
+                [
+                    span = "if the original instructed agent receives a pacs.009 message, return by sending a pacs.004 message;"
+                ]
+                [
+                    span = "if the original instructed agent receives a pacs.009 COV message, return by sending a pacs.004 message;"
+                ]
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "Receiving and processing other messages"
+            ol = [
+                [
+                    span = "Participants"
+                    span = "must" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "receive and process the following MX messages:"
+                ]
+                ol = [
+                    "camt.056 — Request for Cancellation;"
+                    "camt.029 — Resolution of Investigation;"
+                    "xsys.002 — Authorisation Notification; and"
+                    "xsys.003 — Refusal Notification."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+                [
+                    span = "Participants"
+                    span = "must" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "receive and process MT messages including:"
+                ]
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "MT 012 Sender Notification is an optional feature in the FINCopy service - no longer used.  Removed."
+                        "MT 019 Abort Notification - notifies the sender that the system has been unable to deliver the message\n\t\t\t\tspecified.  Could still apply to E&I.  Retained."
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                ol = [
+                    "MT 192/ MT 292;"
+                    "MT 196 / MT 296; and"
+                    "MT 019."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "Participants that act as intermediaries"
+            ol = [
+                [
+                    span = "For SWIFT messages that accompany a payment received in CBPR+ format destined\n\t\t\t\t\tfor another participant, participants that are acting as intermediaries"
+                    span = "must" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "on-send the CBPR+ messages to the instructed agent using a payment message as follows:"
+                ]
+                ol = [
+                    [
+                        span = "a pacs.008 SWIFT message received in CBPR+ format"
+                        span = "must" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "be on-sent as a pacs.008 payment message;"
+                    ]
+                    [
+                        span = "a pacs.009 SWIFT message received in CBPR+ format"
+                        span = "must" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "be on-sent as a pacs.009 payment message;"
+                    ]
+                    [
+                        span = "a pacs.009 COV SWIFT message received in CBPR+ format"
+                        span = "must" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "be on-sent as a pacs.009 COV payment message; and"
+                    ]
+                    [
+                        span = "a pacs.004 SWIFT message received in CBPR+ format"
+                        span = "must" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "be on-sent as a pacs.004 return message"
+                    ]
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+                "For SWIFT messages that do not accompany a payment destined for another participant,\n\t\t\tparticipants acting as an intermediary must:"
+                ol = [
+                    [
+                        span = "upon receiving a Request for Cancellation SWIFT message in any format, on-send"
+                        span = "either" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "a camt.056"
+                        span = "or" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "a MTn92 Request for Cancellation message to the instructed agent; and"
+                    ]
+                    [
+                        span = "upon receiving a Resolution of Investigation SWIFT message in any format,"
+                        span = "on-send as"
+                        span = "either" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "a camt.029"
+                        span = "or" meta {
+                            html::attributes = {
+                                class = "bold"
+                            }
+                        }
+                        span = "a MT196 / MT296 Resolution of Investigation message to the instructed agent."
+                    ]
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+                "Participants acting as intermediaries should:"
+                ol = [
+                    "be able to receive and process CBPR+ messages (either MX or MX with embedded MT); and"
+                    "for MX payment messages received from another participant destined for a correspondent banking\n\t\t\t\tpartner, on-send these as a CBPR+ message in accordance with SWIFT guidelines."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "Participants that offer specific services to customers"
+            ol = [
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Retained 'should' in case not destined for HVCS."
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                "Participants that receive MX pain messages from their customers destined for another participant\n\t\t\tshould create an MX payment message for that instruction;"
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Revised to use MX"
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                "Participants that receive an HVCS instruction from their customers as an MT message or other non-MX\n\t\t\tmessage format destined for another HVCS participant must use an MX message."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Obligations for participants to send and receive messages after the co-existence phase" meta {
+            html::attributes = {
+                id = "1.8-obligations-for-participants-to-send-and-receive-messages-after-the-co-existence-phase"
+                class = "clause-heading"
+                data-number = "1.8"
+            }
+        }
+        ol = [
+            [
+                span = "From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase)," meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "all participants will be required to: "
+            ]
+            ol = [
+                "send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX\n\t\t\tMessage Specifications for all message types that are in scope;"
+                "send HVCS instructions containing Structured Postal Address formatting or Hybrid Postal Address\n\t\t\tformatting only; and"
+                "send and receive structured data for CBPR+ and HVCS instructions."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "The ability to send or receive MTn92 and MTn96 MTn99 messages will be retired in November 2026."
+            "The ability to send or receive MTn99 messages related to payments will be retired in November 2027."
+            "There is no foreseen retirement date for MTn98 messages."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Revised to MX only."
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = "Continuous linked settlements" meta {
+            html::attributes = {
+                id = "1.9-continuous-linked-settlements"
+                class = "clause-heading"
+                data-number = "1.9"
+            }
+        }
+        ol = [
+            "This section is only relevant to CLS members."
+            "All CLS pay-in and pay-out messages must be sent as an MX message."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 2: Dual CUGs" meta {
+        html::attributes = {
+            id = "chapter-2-dual-cugs"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Joining the AVP MX CUG" meta {
+            html::attributes = {
+                id = "2.1-joining-the-avp-mx-cug"
+                class = "clause-heading"
+                data-number = "2.1"
+            }
+        }
+        div = [
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-question-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-question-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-meta"
+                    }
+                }
+                div = [
+                    "What is the replacement for the RBNZ Confluence website?"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-question-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-question"
+                    data-change-id = "UG2025"
+                }
+            }
+            "Information on how to prepare for the AVP MX CUG and the process to join the CUG is provided by\n\t\tthe RBNZ Confluence website."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "AVP MT CUG retirement" meta {
+            html::attributes = {
+                id = "2.2-avp-mt-cug-retirement"
+                class = "clause-heading"
+                data-number = "2.2"
+            }
+        }
+        div = [
+            "Clarification on the process to retire the AVP MT CUG will be developed with participants during\n\t\tthe co-existence phase."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Test and production BICs" meta {
+            html::attributes = {
+                id = "2.3-test-and-production-bics"
+                class = "clause-heading"
+                data-number = "2.3"
+            }
+        }
+        ol = [
+            "SWIFT requires participants to use a mix of Production and Test BICs throughout the co-existence phase:"
+            ol = [
+                "Production BICS must be used to send and receive MX messages; and"
+                "Test BICS must be used to send and receive MT messages across the Test CUG."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "see the table at clause 2.4 of these Co-existence Procedures to see where Production and Test BICs\n\t\tshould be used."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "MT and MX CUG capabilities" meta {
+            html::attributes = {
+                id = "2.4-mt-and-mx-cug-capabilities"
+                class = "clause-heading"
+                data-number = "2.4"
+            }
+        }
+        ol = [
+            "The following table describes the capabilities and functionality of the AVP MT CUG and AVP MX CUG\n\t\tprovided by SWIFT and RBNZ."
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed reference to the MT CUG."
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            div = {
+                ;table = #table(
+                    type table {
+                        ;1 = any
+                        ;2 = any
+                        ;3 = any
+                        ;4 = any
+                    }
+                    [
+                        [
+                            "" meta {
+                                html::attributes = {
+                                    rowspan = 2
+                                    colspan = 2
+                                }
+                            }
+                            ""
+                            [
+                                span = "MT Block 1, 2" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                br = null
+                                span = "MX InterAct Headers" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                br = null
+                                "Sender"
+                                "Receiver"
+                                "Instructing Agent"
+                                "Instructed Agent"
+                            ]
+                            [
+                                span = "MT Block 4" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                br = null
+                                span = "MX BAH / Business Document" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                br = null
+                                "Debtor Agent"
+                                "Creditor Agent"
+                                "Intermediaries"
+                            ]
+                        ]
+                        [ "", "", "Production BIC", "Production BIC" ]
+                        [
+                            "SWIFT"
+                            [
+                                span = "FINplus" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                br = null
+                                span = "Test CUG"
+                            ]
+                            "✓" meta {
+                                html::attributes = {
+                                    class = "tick"
+                                }
+                            }
+                            "✓" meta {
+                                html::attributes = {
+                                    class = "tick"
+                                }
+                            }
+                        ]
+                        [
+                            "RBNZ"
+                            [
+                                span = "AVP MX" meta {
+                                    html::attributes = {
+                                        class = "bold"
+                                    }
+                                }
+                                br = null
+                                span = "Test CUG"
+                            ]
+                            "✓" meta {
+                                html::attributes = {
+                                    class = "tick"
+                                }
+                            }
+                            "✓" meta {
+                                html::attributes = {
+                                    class = "tick"
+                                }
+                            }
+                        ]
+                    ]
+                ) meta {
+                    html::attributes = {
+                        class = "pnz-table cug-capabilities-table"
+                    }
+                }
+            } meta {
+                html::attributes = {
+                    class = "table-scroll"
+                }
+            }
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Removed text related to mixed message scenarios for investigation messages, and\n\t\t\tthe picture has been removed (to be deleted: 'images/hvcs_coexistence_bic_translation.png'"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Removed MT references"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    div = [
+        div = "Segregation of Test and Production Messaging" meta {
+            html::attributes = {
+                id = "2.5-segregation-of-test-and-production-messaging"
+                class = "clause-heading"
+                data-number = "2.5"
+            }
+        }
+        ol = [
+            "MX test services require a log in to a SWIFT production environment and use a published BIC8.\n\t\tThe traditional addressing safeguards employed within MT messaging have been replaced with the Distinguished Name\n\t\t(DN) specified in the Interact Header to address messages to the participant's correct test environment.\n\t\tThis means that both test and production messages contain a live BIC and there is greater potential for\n\t\tmessages to be directed into the wrong environment."
+            "Participants must ensure that their processes and systems have sufficient protections to ensure test\n\t\tmessages using live BICs do not escape into production, particularly when making technical changes,\n\t\tsuch as routing changes."
+            "The BIC is combined with the Service Name in the SWIFTNet Header (Network Header) of an InterAct\n\t\tmessage, to ensure correct addressing and separation of test and production traffic."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 3: Structured data" meta {
+        html::attributes = {
+            id = "chapter-3-structured-data"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "NZ HVCS approach to structured data" meta {
+            html::attributes = {
+                id = "3.1-nz-hvcs-approach-to-structured-data"
+                class = "clause-heading"
+                data-number = "3.1"
+            }
+        }
+        ol = [
+            "The move to structured data in MX messages will remove ambiguity around the meaning of the information\n\t\tcontained in HVCS instructions resulting in better quality data for screening and identifying customer\n\t\tbehaviour. This should lead to improved fraud detection, and richer remittance, name and address\n\t\tinformation."
+            div = [
+                div = [
+                    span = "UG2025" meta {
+                        html::attributes = {
+                            class = "doc-comment-id"
+                        }
+                    }
+                    span = "RK" meta {
+                        html::attributes = {
+                            class = "doc-comment-initials"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-meta"
+                    }
+                }
+                div = [
+                    "Added reference to hybrid"
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment-content"
+                    }
+                }
+            ] meta {
+                html::attributes = {
+                    class = "doc-comment"
+                    data-change-id = "UG2025"
+                }
+            }
+            "Domestically, it is recommended that participants review their processes relating to obtaining\n\t\tcustomer data and acquire any additional customer data needed to ensure all ISO 20022 schema elements\n\t\tneeded to provide structured or hybrid name and address information are captured."
+            "The following list outlines the agreed approach to use of structured data within HVCS instructions\n\t\t(across remittance, name and address elements) for New Zealand's HVCS:"
+            ol = [
+                [
+                    span = "During the co-existence phase:" meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                ]
+                ol = [
+                    "Participants must be able to receive and process MX messages that contain Unstructured\n\t\t\t\tAddress Line formatting."
+                    "Sending MX messages containing Structured Postal Address formatting is recommended."
+                ] meta {
+                    html::attributes = {
+                        class = "level3 level3-counter-reset"
+                    }
+                }
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Added reference to hybrid"
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                [
+                    span = "From the scheduled date of mandated use of MX structured or hybrid messaging (the end of the co-existence phase)," meta {
+                        html::attributes = {
+                            class = "bold"
+                        }
+                    }
+                    span = "the capability to send MX messages containing Unstructured Address Line formatting will be\n\t\t\t\t\tremoved from the MX specification; therefore, participants must be able to send and receive MX\n\t\t\t\t\tmessages containing Structured Postal Address formatting or Hybrid Postal Address formatting\n\t\t\t\t\tfor HVCS instructions."
+                ]
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "Further clarification and guidelines for the use of structured remittance and structured name and\n\t\taddress is provided in Part D — MX Messaging Procedures."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "CBPR+ approach to structured data" meta {
+            html::attributes = {
+                id = "3.2-cbpr+-approach-to-structured-data"
+                class = "clause-heading"
+                data-number = "3.2"
+            }
+        }
+        ol = [
+            "The following outlines the agreed approach to structured data for CBPR+:"
+            ol = [
+                div = [
+                    div = [
+                        span = "UG2025" meta {
+                            html::attributes = {
+                                class = "doc-comment-id"
+                            }
+                        }
+                        span = "RK" meta {
+                            html::attributes = {
+                                class = "doc-comment-initials"
+                            }
+                        }
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-meta"
+                        }
+                    }
+                    div = [
+                        "Removed reference to MT"
+                    ] meta {
+                        html::attributes = {
+                            class = "doc-comment-content"
+                        }
+                    }
+                ] meta {
+                    html::attributes = {
+                        class = "doc-comment"
+                        data-change-id = "UG2025"
+                    }
+                }
+                "During the co-existence phase, if a payment instruction is initiated by the debtor agent using a\n\t\t\tCBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting\n\t\t\tfor the debtor and creditor."
+                "At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured\n\t\t\tAddress formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the\n\t\t\tco-existence phase, all participants that act as intermediaries must be able to send and receive\n\t\t\tCBPR+ messages containing wither Structured Postal Address formatting or Hybrid Postal Address formatting."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Renamed Chapter 4: Forwarding data"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    h1 = "Chapter 4: Using an MT Payments Processor" meta {
+        html::attributes = {
+            id = "chapter-4-using-an-mt-payments-processor"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Truncation" meta {
+            html::attributes = {
+                id = "4.1-truncation"
+                class = "clause-heading"
+                data-number = "4.1"
+            }
+        }
+        ol = [
+            [
+                span = "If a participant needs to map MX messages to an MT message for their back office systems then they\n\t\t\t\tshould be aware that truncation can occur and should refer to the"
+                a = "PMPG guidelines" meta {
+                    html::attributes = {
+                        href = "https://www.swift.com/sites/default/files/documents/pmpg_structured_customer_data_mpg.pdf"
+                        target = "_blank"
+                    }
+                }
+                span = "for basic principles for mapping, prioritisation of elements and translation. SWIFT also provides\n\t\t\t\ttranslator and/or mapping libraries to define, map and validate HVCS instructions to and from any\n\t\t\t\tformat including MX messages and MT messages."
+            ]
+            "There are two scenarios where truncation can occur when receiving a CBPR+ message with embedded\n\t\tMT message:"
+            ol = [
+                "a CBPR+ message that has gone through in-flow translation,"
+                "a CBPR+ message that has gone through the Transaction Manager (The Transaction Manager scope is\n\t\t\tlimited to cross border payments sent via the FINplus CUG)."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+            "For MT messages that have been translated in-flow or in the Transaction Manager, SWIFT provides the\n\t\tdelivery format “ISO 20022 with embedded MT”, this includes an indication of whether truncation has\n\t\toccurred and provides additional details of the truncation(s)."
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    h1 = "Chapter 5: Transaction Manager" meta {
+        html::attributes = {
+            id = "chapter-5-transaction-manager"
+            class = "section-heading"
+        }
+    }
+    "This chapter has been deleted (UG2025 November 2025)."
+    h1 = "Chapter 6: Testing required during co-existence" meta {
+        html::attributes = {
+            id = "chapter-6-testing-required-during-co-existence"
+            class = "section-heading"
+        }
+    }
+    "This chapter has been deleted (UG2025 November 2025)."
+    div = [
+        div = [
+            span = "UG2025" meta {
+                html::attributes = {
+                    class = "doc-comment-id"
+                }
+            }
+            span = "RK" meta {
+                html::attributes = {
+                    class = "doc-comment-initials"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-meta"
+            }
+        }
+        div = [
+            "Chapter 7 is new for this coexistence period"
+        ] meta {
+            html::attributes = {
+                class = "doc-comment-content"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "doc-comment"
+            data-change-id = "UG2025"
+        }
+    }
+    h1 = "Chapter 7: Receipt of MT payment messages during co-existence" meta {
+        html::attributes = {
+            id = "chapter-7-receipt-of-mt-payment-messages-during-co-existence"
+            class = "section-heading"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-commentary"
+        }
+    }
+    div = [
+        div = "Purpose and overview" meta {
+            html::attributes = {
+                id = "7.1-purpose-and-overview"
+                class = "clause-heading"
+                data-number = "7.1"
+            }
+        }
+        div = [
+            "It is possible that some MT payment messages which were sent before 22 November 2025 may be received by\n\t\tparticipants for a short period on or after 22 November 2025, for example, if an MT payment message took\n\t\tlonger than expected to be sent through SWIFT's messaging system."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = "" meta {
+        html::attributes = {
+            class = "tag-standards"
+        }
+    }
+    div = [
+        div = "Effective Term" meta {
+            html::attributes = {
+                id = "7.2-effective-term"
+                class = "clause-heading"
+                data-number = "7.2"
+            }
+        }
+        div = [
+            [
+                span = "This chapter is effective from the beginning of the co-existence phase on 22 November 2025 until the end\n\t\t\t\tof the calendar day on 19 December 2025"
+                span = "(Effective Term)." meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "This chapter ceases to have any effect on and from 20 December 2025."
+            ]
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Effect of Chapter 7" meta {
+            html::attributes = {
+                id = "7.3-effect-of-chapter-7"
+                class = "clause-heading"
+                data-number = "7.3"
+            }
+        }
+        div = [
+            "This Chapter 7 applies during the Effective Term notwithstanding any provision to the contrary expressed\n\t\tin any Rule or Standard."
+        ] meta {
+            html::attributes = {
+                class = "level1"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+    div = [
+        div = "Receiving and processing MT payment messages" meta {
+            html::attributes = {
+                id = "7.4-receiving-and-processing-mt-payment-messages"
+                class = "clause-heading"
+                data-number = "7.4"
+            }
+        }
+        ol = [
+            [
+                span = "Participants"
+                span = "may" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "receive and process the following MT payment messages from other participants for the Effective Term:"
+                ol = [
+                    "MT103;"
+                    "MT202;"
+                    "MT202 COV;"
+                    "MT205; and"
+                    "MT205 COV."
+                ] meta {
+                    html::attributes = {
+                        class = "level2 level2-counter-reset"
+                    }
+                }
+            ]
+            [
+                span = "Return messages:  If returning an HVCS payment that was received in MT format during\n\t\t\t\tthe Effective Term, participants"
+                span = "must" meta {
+                    html::attributes = {
+                        class = "bold"
+                    }
+                }
+                span = "return the HVCS payment by sending a return message to the original instructing agent as follows:"
+            ]
+            ol = [
+                "if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;"
+                "if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;"
+                "if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message; and"
+                "if the original instructed agent receives a MT205 message, return by sending a pacs.004 message."
+            ] meta {
+                html::attributes = {
+                    class = "level2 level2-counter-reset"
+                }
+            }
+        ] meta {
+            html::attributes = {
+                class = "level1 level1-counter-reset"
+            }
+        }
+    ] meta {
+        html::attributes = {
+            class = "clause-row"
+        }
+    }
+]

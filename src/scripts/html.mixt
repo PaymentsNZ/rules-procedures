@@ -1,9 +1,0 @@
-namespace html
-import [
-	fmt.HTML = "html/html.mixt"
-	fmt.DOCX = "docx/html.mixt"
-]
-if true then
-	fmt.HTML
-else
-	fmt.DOCX

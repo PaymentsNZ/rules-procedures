@@ -1,9 +1,0 @@
-namespace pnz.hvcs
-import [
-	pnz.hvcs.HTML = "html/pnz.hvcs.mixt"
-	pnz.hvcs.DOCX = "docx/pnz.hvcs.mixt"
-]
-if true then
-	pnz.hvcs.HTML
-else
-	pnz.hvcs.DOCX

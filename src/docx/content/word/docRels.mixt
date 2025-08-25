@@ -1,0 +1,27 @@
+[
+    xml::declaration = {
+        version = "1.0"
+        encoding = "UTF-8"
+        standalone = "yes"
+    }
+	Relationships = {
+		xml::attributes = { xmlns = "http://schemas.openxmlformats.org/package/2006/relationships" }
+	} @> [
+		Relationship = {
+			xml::attributes = {
+				Id = "rStyles"
+				Type = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"
+				Target = "styles.xml"         // note: relative to /word/
+			}
+		} @> null
+		/*
+		Relationship = {
+			xml::attributes = {
+				Id = "rNumbering"
+				Type = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering"
+				Target = "numbering.xml"
+			} 
+		} @> null
+		*/
+	]
+]

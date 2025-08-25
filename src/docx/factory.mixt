@@ -1,0 +1,53 @@
+namespace docx.factory
+
+import [
+	contentTypes = "content/contentTypes.mixt"
+	app = "content/docProps/app.mixt"
+	core = "content/docProps/core.mixt"
+	numbering = "content/word/numbering.mixt"
+	styles = "content/word/styles.mixt"
+	docRels = "content/word/docRels.mixt"
+	//document = "content/word/document.mixt"
+	rootRels = "content/rels.mixt"
+]
+
+{
+	// zipFile
+	zipFile = (docContent as list) => (
+		let
+			// noPrettyOption
+			noPrettyOption = {
+				Pretty = false
+			}
+			zip = Archive.From(
+				{
+					_rels = {
+						;.rels = Xml.FromValue(rootRels, noPrettyOption)
+					}			
+					word = {
+						document.xml = Xml.FromValue( docContent, noPrettyOption )
+						//numbering.xml = Xml.FromValue( numbering )
+						styles.xml = Xml.FromValue( styles, noPrettyOption )
+						_rels = {
+							document.xml.rels = Xml.FromValue(docRels, noPrettyOption)
+						}				
+					}
+					docProps = {
+						core.xml = Xml.FromValue( core, noPrettyOption )
+						app.xml = Xml.FromValue( app, noPrettyOption )
+					}
+					;([Content_Types].xml) = Xml.FromValue( contentTypes, noPrettyOption )
+				}
+			)
+		in
+			zip
+	)	
+
+	// docx.factory::writeDocx
+	docx.factory::writeDocx = (outputFileName as text, docContent as list) => (
+		File.Write(
+			outputFileName
+			zipFile( docContent )
+		)
+	)
+}

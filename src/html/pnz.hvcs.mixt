@@ -1,4 +1,4 @@
-namespace hvcs
+namespace pnz.hvcs
 
 import [
 	html = "html.mixt"
@@ -6,8 +6,8 @@ import [
 ]
 
 {
-	// hvcs::header
-	hvcs::header = (docTitle as text, docIndex as number, docSet as list) => html::attributed(
+	// pnz.hvcs::header
+	pnz.hvcs::header = (docTitle as text, docIndex as number, docSet as list) => html::attributed(
 		{
 			class = "hvcs-header"
 			role = "banner"
@@ -69,8 +69,8 @@ import [
 		}
 	)
 
-	// hvcs::nav
-	hvcs::nav = (
+	// pnz.hvcs::nav
+	pnz.hvcs::nav = (
 		docTitle as text,
 		chaptersAndClauses as list,
 		docIndex as number,
@@ -160,14 +160,14 @@ import [
 		]
 	)
 
-	// hvcs::main
-	hvcs::main = (docContent as list) => html::class(
+	// pnz.hvcs::main
+	pnz.hvcs::main = (docContent as list) => html::class(
 		"hvcs-content"
 		docContent
 	)
 
-	// hvcs::document creates a PNZ HVCS legal document as HTML
-	hvcs::document = (
+	// pnz.hvcs::document creates a PNZ HVCS legal document as HTML
+	pnz.hvcs::document = (
 		docTitle as text,
 		docContent as list,
 		docIndex as number,
@@ -194,7 +194,7 @@ import [
 				link = html::stylesheet( "../styles/pnz.hvcs.nav.css" )						
 				script =  html::attributed(
 					{
-						src = "../scripts/nav.js"
+						src = "../nav.js"
 						defer = true
 					}
 					""
@@ -204,19 +204,19 @@ import [
 			html::class(
 				"document"
 				[
-					header = hvcs::header( docTitle, docIndex, docSet )
+					header = pnz.hvcs::header( docTitle, docIndex, docSet )
 					// Mobile toggle (checkbox/label)
 					input = html::attributed(
 						{
-							;type = "checkbox"
 							id = "hvcs-menu-toggle"
+							;type = "checkbox"
 							class = "hvcs-header-checkbox"
 							hidden = true
 						}
 						null
 					)
-					nav = hvcs::nav( docTitle, chaptersAndClauses, docIndex, docSet )
-					main = hvcs::main( docContent )
+					nav = pnz.hvcs::nav( docTitle, chaptersAndClauses, docIndex, docSet )
+					main = pnz.hvcs::main( docContent )
 				]
 			)
 		)
@@ -228,7 +228,7 @@ import [
 		else
 			"menu-branch"
 	)
-	hvcs::menu = (activeIndex as UInt64.Type) => [
+	pnz.hvcs::menu = (activeIndex as UInt64.Type) => [
 		div = html::class(
 			"menu-container"
 			[

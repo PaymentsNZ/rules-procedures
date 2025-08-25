@@ -1,23 +1,12 @@
 import [
-	scp = "hvcs/scp.mixt"	
+	src = "example/coexistence.mixt"
+	htmltodocx = "docx/htmlToDocx.mixt"
+	factory = "docx/factory.mixt"
+	sampleContent = "docx/content/word/document.mixt"
 ]
 let
-	iterate = (results as list, l as list) => (
-		List.Accumulate(
-			l,
-			results
-			( state, current ) => (
-				if current == null then
-					state
-				else if Value.Is( current, type list ) then
-					@iterate( state, current )
-				else
-					state & [
-						current
-					]
-			)
-		)
-	)
-	result = iterate( [], scp )
+	outputFileName = "createdByMixt.docx"
+	translated = htmltodocx::translateDocument( src )
+	written = factory::writeDocx( outputFileName, translated )
 in
-	result
+	written

@@ -1,0 +1,75 @@
+namespace htmltodocx
+
+{
+	iterate = (results as list, listOrRecord as any) => (
+		if Value.Is( listOrRecord, type list ) then
+			List.Accumulate(
+				listOrRecord
+				results
+				( state, value, itemIndex, fieldName ) => (
+					if value == null then
+						state
+					else if Value.Is( value, type list ) then
+						@iterate( state, value )
+					else if Value.Is( value, type record ) then
+						@iterate( state, value )
+					else
+						List.AddItem( state, fieldName, value )
+				)
+			)
+		else
+			List.Accumulate(
+				Record.FieldNames( listOrRecord )
+				results
+				( state, fieldName, itemIndex ) => (
+					let
+						value = Record.Field( listOrRecord, fieldName )
+						result = (
+							if value == null then
+								state
+							else if Value.Is( value, type list ) then
+								@iterate( state, value )
+							else if Value.Is( value, type record ) then
+								@iterate( state, value )
+							else
+								List.AddItem( state, fieldName, value )
+						)
+					in
+						result
+				)
+			)
+	)
+
+	// wrapContents
+	wrapContents = ( body as list ) => [
+		xml::declaration = {
+			version = "1.0"
+			encoding = "UTF-8"
+			standalone = "yes"
+		}
+		w::document = {
+			xml::attributes = { xmlns::w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main" }
+		} @> [
+			w::body = body
+		]
+	]
+
+	// sampleBody
+	sampleBody = [
+		w::p = [
+			w::r = [
+				w::t = "Hello, DOCX"
+			]
+		]
+		w::sectPr = null
+	]
+
+	// htmltodocx::translateDocument
+	htmltodocx::translateDocument = ( doc as list ) => (
+		let
+			body = iterate( [], doc )
+			wrapped = wrapContents( sampleBody )
+		in
+			wrapped
+	)
+}

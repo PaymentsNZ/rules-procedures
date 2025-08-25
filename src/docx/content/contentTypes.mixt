@@ -1,0 +1,63 @@
+[
+    xml::declaration = {
+        version = "1.0"
+        encoding = "UTF-8"
+        standalone = "yes"
+    }
+    Types = {
+        xml::attributes = {
+            xmlns = "http://schemas.openxmlformats.org/package/2006/content-types"
+        }
+    } @> [
+        Default = null meta {
+            xml::attributes = {
+                Extension = "png"
+                ContentType = "image/png"
+            }
+        }
+        Default = null meta {
+            xml::attributes = {
+                Extension = "rels"
+                ContentType = "application/vnd.openxmlformats-package.relationships+xml"
+            }
+        }
+        Default = null meta {
+            xml::attributes = {
+                Extension = "xml"
+                ContentType = "application/xml"
+            }
+        }
+        Override = null meta {
+            xml::attributes = {
+                PartName = "/word/document.xml"
+                ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"
+            }
+        }
+        /*
+        Override = null meta {
+            xml::attributes = {
+                PartName = "/word/numbering.xml"
+                ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"
+            }
+        }
+        */
+        Override = null meta {
+            xml::attributes = {
+                PartName = "/word/styles.xml"
+                ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"
+            }
+        }
+        Override = null meta {
+            xml::attributes = {
+                PartName = "/docProps/core.xml"
+                ContentType = "application/vnd.openxmlformats-package.core-properties+xml"
+            }
+        }
+        Override = null meta {
+            xml::attributes = {
+                PartName = "/docProps/app.xml"
+                ContentType = "application/vnd.openxmlformats-officedocument.extended-properties+xml"
+            }
+        }
+    ]
+]

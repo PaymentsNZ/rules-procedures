@@ -20,6 +20,21 @@
 			]
 		},
 		{
+			"name": "Build DOCX",
+			"type": "mixt",
+			"request": "launch",
+			"mode": "run",
+			"program": "${workspaceFolder}/src/build.docx.mixt",
+			"mixtFlags": [
+				"--logNoPid",
+				"--logLevel",
+				"Info",
+				"--format",
+				"mixt",
+				"--pretty"
+			]
+		},		
+		{
 			"name": "View MIXT Definition",
 			"type": "mixt",
 			"request": "launch",

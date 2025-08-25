@@ -1,0 +1,72 @@
+[
+    xml::declaration = {
+        version = "1.0"
+        encoding = "UTF-8"
+        standalone = "yes"
+    }
+	w::styles = {
+    	xml::attributes = {
+      		xmlns::w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    	}
+  	} @> [
+		// Default paragraph
+		w::style = {
+			xml::attributes = {
+				w::type = "paragraph"
+				w::default = "1"
+				w::styleId = "Normal"
+			}
+		} @> [
+			w::name = {
+				xml::attributes = {
+					w::val = "Normal"
+				}
+			} @> null
+			w::qFormat = null
+		]
+		// Default character
+		w::style = {
+			xml::attributes = {
+				w::type = "character"
+				w::default = "1"
+				w::styleId = "DefaultParagraphFont"
+			}
+		} @> [
+			w::name = {
+				xml::attributes = {
+					w::val = "Default Paragraph Font"
+				}
+			} @> null
+		]
+
+		// Default table
+		w::style = {
+			xml::attributes = {
+				w::type = "table"
+				w::default = "1"
+				w::styleId = "TableNormal"
+			}
+		} @> [
+			w::name = {
+				xml::attributes = {
+					w::val = "Normal Table"
+				}
+			} @> null
+		]
+
+		// Default numbering
+		w::style = {
+			xml::attributes = {
+				w::type = "numbering"
+				w::default = "1"
+				w::styleId = "NoList"
+			}
+		} @> [
+			w::name = {
+				xml::attributes = {
+					w::val = "No List"
+				}
+			} @> null
+		]
+	]
+]

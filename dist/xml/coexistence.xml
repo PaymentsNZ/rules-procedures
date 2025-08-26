@@ -1,0 +1,3549 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+    <w:body>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Document purpose and overview</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>HVCS rules and procedures overview</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document, the Co-Existence Procedures (Part F) is one part of a suite of documentation to help participants understand what is required to become a high value clearing system (HVCS) participant and how to send and receive individual HVCS instructions and NZD HVCS payments that the participant cannot revoke or reverse after settlement.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9). Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants comply with Part 9 are comprised of:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part A — HVCS Overview</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and settlement works, and the business, technical, and regulatory environment in which the process operates.  This is a non-binding document for use as guidance only.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part B — HVCS Common Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply to all HVCS instructions at all times.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part C — SCP Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply only to an HVCS instruction that is a same day cleared payment.  This document also contains some non-binding commentary and best practice, such as recommended terms and conditions with customers.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part D — MX Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022 messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part E — MT Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022 messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part F — Co-existence Procedures (this document)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures for participants during the co-existence phase of the migration from sending and receiving MT messages to MX messages.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Standards, best practices and commentary</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14 creates binding legal rights or obligations, please see</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:i/>
+                            </w:rPr>
+                            <w:t>Part A - Overview.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Notwithstanding anything in clause 1.8 of the Rules or in Part A — Overview, any reference to actions a person &quot;should&quot; take or anything a person &quot;should&quot; do is intended to convey a best practice with which a person should comply with only, but which has no legal effect.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Document purpose and structure</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document discusses the obligations that apply to participants during the co-existence period.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document is divided into five chapters.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 1 provides defined terms, an overview of the HVCS instructions that are in scope during co-existence, the migration timeline and the obligations to send and receive HVCS instructions that apply to participants.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 2 provides information on how to join the MX CUG and specifies the types of BICs that can be used.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 3 provides an overview on the New Zealand HVCS&apos;s approach to structured data during co-existence, and the approach of CBPR+.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 4 provides an overview on data truncation.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 5 has been deleted.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 6 has been deleted.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 7 provides a temporary right for participants to receive and process MT payment messages for 4 weeks from the beginning of the co-existence phase.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 1: The journey from MT to MX</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.1 Introduction</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This chapter gives an overview of:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the HVCS instructions (MT and MX messages) that are in scope during the co-existence phase,</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the timeline for migrating HVCS instructions as an MT message to an MX message,</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the obligations for participants to send and receive HVCS instructions in accordance with the applicable message standards,</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>dates and times when Standards are introduced and revoked.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.2 Defined terms</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Co-existence phase</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means the period determined by Payments NZ in which the MT Messaging Procedures, the MX Messaging Procedures, the MX Message Specifications and these Co-existence Procedures all apply simultaneously beginning on 22 November 2025 and ending on a date:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>in November 2026; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>as determined by Payments NZ if all participants have fully migrated to using MX messages prior to November 2026.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>On-send</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means when a participant, in its capacity as an intermediary:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>receives an MX message from another participant destined for a third party recipient and sends that message as a CBPR+ message to that recipient;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>receives an MT message from another participant destined for a third party recipient and sends that message as a CBPR+ message or a FIN message to that recipient;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>receives a CBPR+ message destined for another participant and sends that message as an MX message to that participant; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>receives a FIN message destined for another participant and sends that message as an HVCS instruction to that participant.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Send</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means when an instructing agent delivers an HVCS instruction to an instructed agent, being either:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>a payment message; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>an exception and investigation message.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Structured Postal Address formatting</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means when the content of the address information within an MX message is formatted in accordance with the structured data requirements set out in the MX Message Specifications.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Unstructured Address Line formatting</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means when the content of the address information within an MX message is not formatted in accordance with the structured data requirements set out in the MX Message Specifications.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Hybrid Address Line formatting</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means when the content of the address information within an MX message is formatted in accordance with the hybrid data requirements set out in the MX Message Specifications.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Unless the context otherwise specifies, all other defined terms have the meanings given to them in Part 19 of the Payments NZ Rules and the HVCS Common Procedures.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.3 Payment message scope</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The payment messages described below are in scope during the co-existence phase.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This table identifies new obligations that participants need to comply with in relation to MX messages.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:r>
+                <w:t>Messages exchanged between SWIFT message transfer service and participants:</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="pct" w:w="5000"/>
+                <w:jc w:val="left"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:color="000000"/>
+                    <w:left w:val="single" w:sz="4" w:color="000000"/>
+                    <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                    <w:right w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                </w:tblBorders>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>MX message</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>NZ HVCS timing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>CBPR+ timing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>pacs.008</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>pacs.009 CORE</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>pacs.009 COV</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>pacs.004</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>camt.056</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>camt.029</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the beginning of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must be able to receive and process MX messages that use hybrid postal address formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the end of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must send all messages using either structured postal address formatting or hybrid postal address formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the beginning of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants acting as intermediaries must be able to receive and process CBPR+ messages that use hybrid postal address formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants acting as intermediaries must be able to on-send a CBPR+ message that uses hybrid postal address formatting to participants as an MX message.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the end of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants acting as intermediaries must send all CBPR+ messages and on-send all CBPR+ messages to participants as an MX message using either structured postal address formatting or hybrid postal address formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p/>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.4 Investigation message scope</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:r>
+                <w:t>The following investigation messages are in scope during the co-existence phase:</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="pct" w:w="5000"/>
+                <w:jc w:val="left"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:color="000000"/>
+                    <w:left w:val="single" w:sz="4" w:color="000000"/>
+                    <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                    <w:right w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                </w:tblBorders>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>MT message</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>MX message</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>NZ HVCS timing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>CBPR+ timing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>MT 192 / 292 - Request for Cancellation</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>camt.056 - FI to FI Cancellation Request</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the beginning of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must be able to receive from SWIFT as an MX message and process</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the end of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must send all requests as an MX message.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the beginning of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants acting as intermediaries must accept CBPR+ camt.056 messages. MX-&gt;MT and MT-&gt;MX translation will be available via SWIFT&apos;s Inflow Translation.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the end of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must send all requests to SWIFT&apos;s Case Manager BIC.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>MT 196 / 296 - Answers</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>camt.029 - Resolution of Investigation</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the beginning of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must be able to receive from SWIFT as an MX message and process</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the end of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must send all responses as an MX message.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the beginning of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX translation will be available via SWIFT&apos;s In-Flow Translation.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the end of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>MT 199 / MT 299 - Investigation Request and Response</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>camt.110 / camt.111 - Investigation Request and Response</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>No decision has been taken in relation to use of camt.110/camt.111 for domestic payments.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Payments NZ will lead assessment of Case Manager capabilities for domestic payments when SWIFT make this capability available for testing.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>By the end of the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants must be able to receive from SWIFT and process as an MX message</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p/>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.5 ISO 20022 migration timeline</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>A phased adoption of MX Messaging Procedures will begin on 22 November 2025.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.6 Obligations for participants to join CUGS</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The AVP MT CUG will continue to exist through the co-existence phase alongside the AVP MX CUG.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>From 22 November 2025, during the co-existence phase, participants must:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Be a member of the AVP MX CUG; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Be a member of the AVP MT CUG until the end of the co-existence phase.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.7 Obligations for participants to send and receive messages during the co-existence phase</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The approach established for the New Zealand migration places obligations on participants in relation to sending and receiving MX messages.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following obligations in sub-paragraphs (3) to (7) apply to participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>during the co-existence phase.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Sending payment messages:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>send payment messages to other participants using an MX message as follows:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Customer Credit Transfer using a pacs.008;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Financial Institution Credit Transfer using a pacs.009;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Financial Institution Credit Transfer Cover using a pacs.009 COV;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A return message using a pacs.004.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Where a participant sends a payment message as an MX message, the participant</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Send an address that contains</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>either</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>Unstructured Address Line formatting</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>or</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>Structured Postal Address formatting</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>or</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>Hybrid Postal Address formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Sending exception and investigation messages:  Participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>send exception and investigation messages to other participants using</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>either</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>an MX message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>or</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>an MT message including:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Request for Cancellation message using</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>either</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>a camt.056</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>or</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>MT192 / MT292; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Resolution of Investigation message using</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>either</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>a camt.029</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>or</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>MT196 / MT296.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Receiving and processing payment messages:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>receive and process the following MX payment messages from other participants:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.004 — Payment Return;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.008 — FI to FI Customer Credit Transfer;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.009 — Financial Institution Credit Transfer; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.009 COV — Financial Institution Credit Transfer Cover.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>receive and process MX messages that contain:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Structured Postal Address formatting; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Unstructured Address Line formatting; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Hybrid Address Line formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Return messages:  If returning an HVCS payment, participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>return the HVCS payment by sending a return message to the original instructing agent as follows:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the original instructed agent receives a pacs.008 message, return by sending a pacs.004 message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the original instructed agent receives a pacs.009 message, return by sending a pacs.004 message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the original instructed agent receives a pacs.009 COV message, return by sending a pacs.004 message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Receiving and processing other messages</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>receive and process the following MX messages:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>camt.056 — Request for Cancellation;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>camt.029 — Resolution of Investigation;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>xsys.002 — Authorisation Notification; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>xsys.003 — Refusal Notification.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>receive and process MT messages including:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT 192/ MT 292;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT 196 / MT 296; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT 019.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants that act as intermediaries</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For SWIFT messages that accompany a payment received in CBPR+ format destined for another participant, participants that are acting as intermediaries</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>on-send the CBPR+ messages to the instructed agent using a payment message as follows:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a pacs.008 SWIFT message received in CBPR+ format</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>be on-sent as a pacs.008 payment message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a pacs.009 SWIFT message received in CBPR+ format</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>be on-sent as a pacs.009 payment message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a pacs.009 COV SWIFT message received in CBPR+ format</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>be on-sent as a pacs.009 COV payment message; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a pacs.004 SWIFT message received in CBPR+ format</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>be on-sent as a pacs.004 return message</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For SWIFT messages that do not accompany a payment destined for another participant, participants acting as an intermediary must:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>upon receiving a Request for Cancellation SWIFT message in any format, on-send</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>either</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>a camt.056</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>or</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>a MTn92 Request for Cancellation message to the instructed agent; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>upon receiving a Resolution of Investigation SWIFT message in any format,</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>on-send as</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>either</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>a camt.029</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>or</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>a MT196 / MT296 Resolution of Investigation message to the instructed agent.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants acting as intermediaries should:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>be able to receive and process CBPR+ messages (either MX or MX with embedded MT); and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>for MX payment messages received from another participant destined for a correspondent banking partner, on-send these as a CBPR+ message in accordance with SWIFT guidelines.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants that offer specific services to customers</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants that receive MX pain messages from their customers destined for another participant should create an MX payment message for that instruction;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants that receive an HVCS instruction from their customers as an MT message or other non-MX message format destined for another HVCS participant must use an MX message.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.8 Obligations for participants to send and receive messages after the co-existence phase</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase),</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>all participants will be required to: </w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX Message Specifications for all message types that are in scope;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>send HVCS instructions containing Structured Postal Address formatting or Hybrid Postal Address formatting only; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>send and receive structured data for CBPR+ and HVCS instructions.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The ability to send or receive MTn92 and MTn96 MTn99 messages will be retired in November 2026.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The ability to send or receive MTn99 messages related to payments will be retired in November 2027.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>There is no foreseen retirement date for MTn98 messages.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.9 Continuous linked settlements</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This section is only relevant to CLS members.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>All CLS pay-in and pay-out messages must be sent as an MX message.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 2: Dual CUGs</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.1 Joining the AVP MX CUG</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Information on how to prepare for the AVP MX CUG and the process to join the CUG is provided by the RBNZ Confluence website.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.2 AVP MT CUG retirement</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Clarification on the process to retire the AVP MT CUG will be developed with participants during the co-existence phase.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.3 Test and production BICs</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>SWIFT requires participants to use a mix of Production and Test BICs throughout the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Production BICS must be used to send and receive MX messages; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Test BICS must be used to send and receive MT messages across the Test CUG.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>see the table at clause 2.4 of these Co-existence Procedures to see where Production and Test BICs should be used.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.4 MT and MX CUG capabilities</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following table describes the capabilities and functionality of the AVP MT CUG and AVP MX CUG provided by SWIFT and RBNZ.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>2</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>3</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>4</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc></w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t></w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>MT Block 1, 2</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>MX InterAct Headers</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sender</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Receiver</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Instructing Agent</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Instructed Agent</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>MT Block 4</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>MX BAH / Business Document</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Debtor Agent</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Creditor Agent</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Intermediaries</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t></w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t></w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Production BIC</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Production BIC</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>SWIFT</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>FINplus</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Test CUG</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc></w:tc>
+                            <w:tc></w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>RBNZ</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>AVP MX</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Test CUG</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc></w:tc>
+                            <w:tc></w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.5 Segregation of Test and Production Messaging</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MX test services require a log in to a SWIFT production environment and use a published BIC8. The traditional addressing safeguards employed within MT messaging have been replaced with the Distinguished Name (DN) specified in the Interact Header to address messages to the participant&apos;s correct test environment. This means that both test and production messages contain a live BIC and there is greater potential for messages to be directed into the wrong environment.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants must ensure that their processes and systems have sufficient protections to ensure test messages using live BICs do not escape into production, particularly when making technical changes, such as routing changes.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The BIC is combined with the Service Name in the SWIFTNet Header (Network Header) of an InterAct message, to ensure correct addressing and separation of test and production traffic.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 3: Structured data</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.1 NZ HVCS approach to structured data</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The move to structured data in MX messages will remove ambiguity around the meaning of the information contained in HVCS instructions resulting in better quality data for screening and identifying customer behaviour. This should lead to improved fraud detection, and richer remittance, name and address information.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Domestically, it is recommended that participants review their processes relating to obtaining customer data and acquire any additional customer data needed to ensure all ISO 20022 schema elements needed to provide structured or hybrid name and address information are captured.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following list outlines the agreed approach to use of structured data within HVCS instructions (across remittance, name and address elements) for New Zealand&apos;s HVCS:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>During the co-existence phase:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants must be able to receive and process MX messages that contain Unstructured Address Line formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Sending MX messages containing Structured Postal Address formatting is recommended.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>From the scheduled date of mandated use of MX structured or hybrid messaging (the end of the co-existence phase),</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>the capability to send MX messages containing Unstructured Address Line formatting will be removed from the MX specification; therefore, participants must be able to send and receive MX messages containing Structured Postal Address formatting or Hybrid Postal Address formatting for HVCS instructions.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Further clarification and guidelines for the use of structured remittance and structured name and address is provided in Part D — MX Messaging Procedures.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.2 CBPR+ approach to structured data</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following outlines the agreed approach to structured data for CBPR+:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>During the co-existence phase, if a payment instruction is initiated by the debtor agent using a CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting for the debtor and creditor.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured Address formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the co-existence phase, all participants that act as intermediaries must be able to send and receive CBPR+ messages containing wither Structured Postal Address formatting or Hybrid Postal Address formatting.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 4: Using an MT Payments Processor</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>4.1 Truncation</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If a participant needs to map MX messages to an MT message for their back office systems then they should be aware that truncation can occur and should refer to the</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>PMPG guidelines</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>for basic principles for mapping, prioritisation of elements and translation. SWIFT also provides translator and/or mapping libraries to define, map and validate HVCS instructions to and from any format including MX messages and MT messages.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>There are two scenarios where truncation can occur when receiving a CBPR+ message with embedded MT message:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a CBPR+ message that has gone through in-flow translation,</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a CBPR+ message that has gone through the Transaction Manager (The Transaction Manager scope is limited to cross border payments sent via the FINplus CUG).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For MT messages that have been translated in-flow or in the Transaction Manager, SWIFT provides the delivery format “ISO 20022 with embedded MT”, this includes an indication of whether truncation has occurred and provides additional details of the truncation(s).</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 5: Transaction Manager</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:r>
+                <w:t>This chapter has been deleted (UG2025 November 2025).</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 6: Testing required during co-existence</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:r>
+                <w:t>This chapter has been deleted (UG2025 November 2025).</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 7: Receipt of MT payment messages during co-existence</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>7.1 Purpose and overview</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>It is possible that some MT payment messages which were sent before 22 November 2025 may be received by participants for a short period on or after 22 November 2025, for example, if an MT payment message took longer than expected to be sent through SWIFT&apos;s messaging system.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>7.2 Effective Term</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>This chapter is effective from the beginning of the co-existence phase on 22 November 2025 until the end of the calendar day on 19 December 2025</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>(Effective Term).</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>This chapter ceases to have any effect on and from 20 December 2025.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>7.3 Effect of Chapter 7</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>This Chapter 7 applies during the Effective Term notwithstanding any provision to the contrary expressed in any Rule or Standard.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>7.4 Receiving and processing MT payment messages</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>may</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>receive and process the following MT payment messages from other participants for the Effective Term:</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>MT103;</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>MT202;</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>MT202 COV;</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>MT205; and</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>MT205 COV.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Return messages:  If returning an HVCS payment that was received in MT format during the Effective Term, participants</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>return the HVCS payment by sending a return message to the original instructing agent as follows:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the original instructed agent receives a MT205 message, return by sending a pacs.004 message.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:sectPr>
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1417" w:bottom="1417" w:left="1247" w:right="1247"/>
+        </w:sectPr>
+    </w:body>
+</w:document>

@@ -1,0 +1,4444 @@
+[
+    xml::declaration = {
+        version = "1.0"
+        encoding = "UTF-8"
+        standalone = "yes"
+    }
+    w::document = [
+        w::body = [
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Document purpose and overview"
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "HVCS rules and procedures overview"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This document MT Messaging Procedures (Part E) is one part of a suite of documentation to help participants understand what is required to become a high value clearing system (HVCS) participant and how to send and receive individual HVCS instructions that are exception and investigation messages."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9). Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS."
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::t = "In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants comply with Part 9 are comprised of:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Part A — HVCS Overview"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Provides a high-level overview of the HVCS community, message types, how HVCS clearing and  ettlement works, and the business, technical, and regulatory environment in which the process operates.  This is a non-binding document for use as guidance only."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Part B — HVCS Common Procedures"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Provides binding procedures and product requirements that apply to all HVCS instructions at all times.  This document also contains some non-binding commentary and best practice."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Part C — SCP Procedures"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Provides binding procedures and product requirements that apply only to an HVCS instruction that is a same day cleared payment.  This document also contains some non-binding commentary and best practice, such as recommended terms and conditions with customers."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Part D — MX Messaging Procedures"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022 messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and best practice."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Part E — MT Messaging Procedures (this document)"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022 messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and best practice."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Part F — Co-existence Procedures"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Provides binding procedures for participants during the co-existence phase of the migration from sending and receiving MT messages to MX messages."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Standards, best practices and commentary"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "For information on how to determine whether the content of an applicable HVCS standard in Appendix 14 creates binding legal rights or obligations, please see"
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::i = null
+                                ]
+                                w::t = "Part A - Overview."
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::t = "Notwithstanding anything in clause 1.8 of the Rules or in Part A — Overview, any reference to actions a person \"should\" take or anything a person \"should\" do is intended to convey a best practice with which a person should comply with only, but which has no legal effect."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Document purpose and structure"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This document discusses the MT Messaging Procedures that apply to HVCS instructions that are exception and investigation messages."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This document is divided into six chapters (noting chapters 3, 4 and 5 have been deleted)."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Chapter 1 provides an overview of the MT messages that are in scope and the explains the message lifecycle."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Chapter 2 specifies how to format block 3 (user header) of the SWIFT message header."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Chapters 3, 4 and 5 have been deleted."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Chapter 6 specifies provides the ESAS rejection codes for AVP."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Interpretation"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "For the purposes of these MT Messaging Procedures, all references to the following defined terms means an HVCS instruction that is an MT message:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "HVCS instruction;"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Exception and investigation message; and"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "System message."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Chapter 1: MT Messages in scope"
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "1.1 MT messages for HVCS payments"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "This clause has been deleted (UG2025 November 2025)."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "1.2 Other FINCopy message types"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "This clause has been deleted (UG2025 November 2025)."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "1.3 Other FIN message types"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Participants exchange the MT message types described in the following table:"
+                            ]
+                        ]
+                        w::tbl = [
+                            w::tblPr = [
+                                w::tblW = null meta {
+                                    xml::attributes = {
+                                        w::type = "pct"
+                                        w::w = 5000
+                                    }
+                                }
+                                w::jc = null meta {
+                                    xml::attributes = {
+                                        w::val = "left"
+                                    }
+                                }
+                                w::tblBorders = [
+                                    w::top = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::left = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::bottom = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::right = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideH = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideV = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::tblGrid = [
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Message type"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Message name"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Sender"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Receiver"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MTn95"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "A question."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Free text message."
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Participant"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Participant"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MTn96"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "An answer."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Free text message."
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Participant"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Participant"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MT011"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Delivery notification"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "SWIFT"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Participant"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                        w::p = null
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "1.4 Message lifecycle, as this relates to payments"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "This clause has been deleted (UG2025 November 2025)."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Chapter 2: SWIFT message header details"
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "2.1 SWIFT message header details"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "A SWIFT message contains the following headers:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "block 1 = basic header:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "block 2 = application header:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "block 3 = user header:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "block 4 = text:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "block 5 = trailers."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "2.2 User header details"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "The content and format of block 1 or block 2 is similar for all SWIFT messages (refer to the SWIFT User Handbook)."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Block 3—"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 2
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "is mandatory for all MT messages; and"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 2
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "contains data that is specific to HVCS."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "The instructing agent of a payment message"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "must"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::t = "ensure that the service code (field tag 103) is AVP to ensure SWIFT know how to route the message through the RBNZ's CUG."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This clause has been deleted (UG2025 November 2025)."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This clause has been deleted (UG2025 November 2025)."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This clause has been deleted (UG2025 November 2025)."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This clause has been deleted (UG2025 November 2025)."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Chapter 3: Customer credit transfer (SCP)"
+                ]
+            ]
+            w::p = [
+                w::r = [
+                    w::t = "This chapter has been deleted (UG2025 November 2025)."
+                ]
+            ]
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Chapter 4: Customer Credit Transfer (Cross border redirection)"
+                ]
+            ]
+            w::p = [
+                w::r = [
+                    w::t = "This chapter has been deleted (UG2025 November 2025)."
+                ]
+            ]
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Chapter 5: Formats for financial institution transfers"
+                ]
+            ]
+            w::p = [
+                w::r = [
+                    w::t = "This chapter has been deleted (UG2025 November 2025)."
+                ]
+            ]
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Chapter 6: FINCopy system messages advising HVCS payment status"
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "6.1 Purpose"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "This chapter specifies—"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "the format for 2 of the notification message types that FINCopy sends to an instructing agent—"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 2
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "an MT012 system message - instructing agent notification; and"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 2
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "an MT019 system message - abort notification; and"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "the ESAS rejection codes for AVP."
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "6.2 MT012: instructing agent notification"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "FINCopy sends an MT012 system message to notify the instructing agent that FINCopy has released the HVCS payment to the instructed agent. In AVP this occurs after the HVCS payment settles in ESAS."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "If the instructing agent does not receive an MT012 system message from FINCopy by 17:15, the HVCS payment may not have settled. If the instructing agent doesn't settle the HVCS payment by the end of the ESAS day, ESAS will cancel the HVCS payment."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "The following table specifies the format for an MT012 system message:"
+                            ]
+                        ]
+                        w::tbl = [
+                            w::tblPr = [
+                                w::tblW = null meta {
+                                    xml::attributes = {
+                                        w::type = "pct"
+                                        w::w = 5000
+                                    }
+                                }
+                                w::jc = null meta {
+                                    xml::attributes = {
+                                        w::val = "left"
+                                    }
+                                }
+                                w::tblBorders = [
+                                    w::top = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::left = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::bottom = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::right = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideH = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideV = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::tblGrid = [
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Rep"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Tag"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Field"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Content/Comments"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "175"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Time"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Input time (HHMM), local to the instructing agent, of the original user message."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "106"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MIR"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Message Input Reference (MIR) identifying the instructing agent's copy message copied to and released by the CSI."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "0-1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "108"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MUR"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Message User Reference (MUR) used in the header of the original message."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "102"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "SWIFT address"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Destination BIC of the instructing agent's message. Includes the LT code."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "103"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Service code"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "AVP"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "114"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Payment release information (instructing agent)"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Information from central institution (SWIFT) to instructing agent of payment message (from field 114 of the MT097) as follows:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "ESAS Date:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "ESAS Time:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "ESAS Reference Number."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                        w::p = null
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "6.3 MT019: abort notification"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "If an unsettled HVCS payment in ESAS is cancelled by the instructing agent or by ESAS (at 08:30 end of day), FINCopy notifies the instructing agent of the cancellation by sending an MT019 system message to the instructing agent."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "An MT019 system message contains a code in field 432 specifying a reason for the abort."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "If the HVCS payment was not settled by the 08:30am end of day,—"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 2
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ESAS will cancel the HVCS payment; and"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 2
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ESAS will send an abort notification MT019 system message (with error code 62 — Cancelled by ESAS end of day) to the instructing agent."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 1
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "The following table specifies the format for an MT019 system message:"
+                            ]
+                        ]
+                        w::tbl = [
+                            w::tblPr = [
+                                w::tblW = null meta {
+                                    xml::attributes = {
+                                        w::type = "pct"
+                                        w::w = 5000
+                                    }
+                                }
+                                w::jc = null meta {
+                                    xml::attributes = {
+                                        w::val = "left"
+                                    }
+                                }
+                                w::tblBorders = [
+                                    w::top = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::left = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::bottom = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::right = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideH = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideV = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::tblGrid = [
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 1000
+                                    }
+                                }
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Rep"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Tag"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Field"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Content/Comments"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "175"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Time"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Input time (HHMM), local to the instructing agent, of the original user message."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "106"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MIR"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Message Input Reference (MIR) identifying the instructing agent's copy message copied to and released by the CSI."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "0-1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "108"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MUR"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Message User Reference (MUR) used in the header of the original message."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "102"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "SWIFT address"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Destination BIC of the aborted message."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Includes the LT code."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "0-1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "107"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MOR"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Message Output Reference (MOR) of the aborted message."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "If several delivery attempts have been made, field 107 contains the last valid MOR."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "432"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Abort reason"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Refer to the table in clause 6.4 containing ESAS rejection codes and the SWIFT FIN error codes for the SWIFT generated codes returned in this field."
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                        w::p = null
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = 9638
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblInd = null meta {
+                        xml::attributes = {
+                            w::type = "dxa"
+                            w::w = "0"
+                        }
+                    }
+                    w::tblLayout = null meta {
+                        xml::attributes = {
+                            w::type = "fixed"
+                        }
+                    }
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1701
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 7937
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 100
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "6.4 ESAS rejection codes"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The following table contains ESAS rejection codes for AVP and SBI and explanations of why ESAS applies each code when ESAS validates the structure of an MT096 system message but the content of the message fails business rules validation:"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "pct"
+                            w::w = 5000
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblBorders = [
+                        w::top = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::left = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::bottom = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::right = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::insideH = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::insideV = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                    ]
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Code"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Reason Type"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Summary"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "61"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment cannot be validated because of some serious or fundamental problem with the message"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The construction of the message does not conform to the ESAS application specifications."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "62"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "AVP — Assured Value Payment"
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment instruction has one or more validation errors, such as:"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "62.1"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Duplicate tags"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "A payment instruction will be validated against the following:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "OCD — Originator BIC of the message (Instructing agent)"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ODT — Originator Date (Calendar Date) when message is submitted"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ORF — Originator Reference assigned by the settlement bank (MT Tag 20)"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "FSVD — Funds Settlement value day in the RTGS."
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::t = "Then, if the above conditions are the same as a previously processed message, and if Block 4 (Tag 32A DATE/CCY/AMT) is different, the member will have an Error 62 - Duplicate Tag returned."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "62.2"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The Instructing or Instructed agents are inactivated or unknown."
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The instructing or instructed agent has been inactivated, or the BIC has not configured for use in ESAS."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "62.3"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Invalid settlement date"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment instruction Settlement Date must not exceed 14 business days from the date the instruction was received in ESAS. The payment Settlement Date is a non-business date or a date in the past."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "62.4"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Instructing agent failed to activate an instruction"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The instructing agent does not activate the payment instruction in ESAS before end of day (only applicable to payments that have the payer-to-activate flag applied)."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "62.5"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Invalid amount"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment instruction must be in NZD"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "63"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment was discarded due to insufficient funds (EOD cancellation)"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Payment instruction did not settle before the EOD event started in ESAS."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "65"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment was removed by the Settlement Bank"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment instruction was either removed or discarded from the ESAS by the Settlement Bank."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "66"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Duplicate SWIFT message — AVP (Assured Value Payment)"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "A payment instruction will be validated against the following:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "OCD — Originator BIC of the message (Instructing agent)"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ODT — Originator Date (Calendar Date) when message is submitted"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ORF — Originator Reference assigned by the settlement bank (MT Tag 20)"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "FSVD — Funds Settlement value day in the RTGS."
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::t = "Then, if the above conditions are the same, and if Block 4 (Tag 32A DATE/CCY/AMT) are exactly the same, then the member will have an Error 66 Duplicate Instruction (Exact Duplicate) returned."
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "66"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Duplicate SWIFT message — SBI (Settlement Before Interchange)"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "A payment instruction will be validated against the following:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ORF - Originator Reference = <FileId>"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "ODT - Originator date <IntrBkSttlmDt>"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "OCD - Originator BIC code - <Instructing agent><FullName><X1>"
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::t = "The system will check for duplicates according to the following logic:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "If the OCD, ORF and the ODT are the same as a previously processed instruction, the system will reject the instruction immediately."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "If only the ORF is different, but the payment detail is the same as a previously processed instruction then the system will process the instruction."
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "If only the OCD is different, but the payment detail is the same as a previously processed instruction then the system will process the instruction."
+                            ]
+                        ]
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment detail that is compared is the following:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Instructing agent Reference - <Instructing agent Reference>"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Originator Reference Number:<UserReference>"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Beneficiary Bank: <Dbtr><BIC>"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Paying bank: <Cdtr><BIC>"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "Amount: <TtlIntrBkSttlmAmt>"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "67"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Discarded due to non-settlement day"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "The payment message must have a Settlement Date that is NZ business day for:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
+                                w::t = "AVP"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::p = null
+            w::p = [
+                w::r = [
+                    w::t = "6.5 AVP MT CUG service parameters"
+                ]
+            ]
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "pct"
+                            w::w = 5000
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblBorders = [
+                        w::top = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::left = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::bottom = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::right = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::insideH = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::insideV = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                    ]
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Parameter"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Value"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "FIN Copy service identifier code"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "AVP"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Country"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "New Zealand"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Service type"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Y-Copy"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::p = null
+            w::tbl = [
+                w::tblPr = [
+                    w::tblW = null meta {
+                        xml::attributes = {
+                            w::type = "pct"
+                            w::w = 5000
+                        }
+                    }
+                    w::jc = null meta {
+                        xml::attributes = {
+                            w::val = "left"
+                        }
+                    }
+                    w::tblBorders = [
+                        w::top = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::left = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::bottom = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::right = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::insideH = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                        w::insideV = null meta {
+                            xml::attributes = {
+                                w::val = "single"
+                                w::sz = 4
+                                w::color = "000000"
+                            }
+                        }
+                    ]
+                ]
+                w::tblGrid = [
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                    w::gridCol = null meta {
+                        xml::attributes = {
+                            w::w = 1000
+                        }
+                    }
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Parameter"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Live"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Test and training"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Value added service identifier"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "AVP"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "AVP"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Live service flag"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Y"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "N"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "(live = Y, T&T = N)"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Value added service number"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "8"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "7"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "CID id"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "ESASNZ2W"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "ESASNZ20"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Authentication mode"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "2"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "2"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "(normal = 1, double = 2)"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Full copy flag"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "N"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "N"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "(full copy = Y, part copy = N)"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Value date range"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "99"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "99"
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "(same day = 0, day n = n, no check=99)"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = ""
+                            ]
+                        ]
+                    ]
+                ]
+                w::tr = [
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "Currency code"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "NZD"
+                            ]
+                        ]
+                    ]
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "NZD"
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+            w::p = null
+            w::sectPr = [
+                w::pgSz = null meta {
+                    xml::attributes = {
+                        w::w = 11906
+                        w::h = 16838
+                    }
+                }
+                w::pgMar = null meta {
+                    xml::attributes = {
+                        w::top = 1417
+                        w::bottom = 1417
+                        w::left = 1247
+                        w::right = 1247
+                    }
+                }
+            ]
+        ]
+    ] meta {
+        xml::attributes = {
+            xmlns::w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        }
+    }
+]

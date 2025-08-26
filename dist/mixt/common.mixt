@@ -7,13 +7,15 @@
     w::document = [
         w::body = [
             w::p = [
-                w::r = [
-                    w::t = "SectionHeading: Document purpose and overview"
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
                 ]
-            ]
-            w::p = [
                 w::r = [
-                    w::t = "Commentary"
+                    w::t = "Document purpose and overview"
                 ]
             ]
             w::tbl = [
@@ -71,6 +73,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "HVCS rules and procedures overview"
                             ]
                         ]
@@ -96,81 +101,6 @@
                             ]
                         ]
                     ]
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Payments NZ Rules"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Part 9"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "HVCS Clearing and Settlement"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Part A"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "HVCS Overview"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Part B"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "HVCS Common Procedures"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Part C"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "SCP Procedures"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Part D"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "MX Messaging Procedures (ISO 20022)"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Part E"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "MT Messaging Procedures (ISO 15022)"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Part F"
-                ]
-            ]
-            w::p = [
-                w::r = [
-                    w::t = "Co-existence Procedures"
                 ]
             ]
             w::tbl = [
@@ -554,6 +484,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "Standards, best practices and commentary"
                             ]
                         ]
@@ -649,6 +582,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "Document purpose and structure"
                             ]
                         ]
@@ -753,13 +689,15 @@
                 ]
             ]
             w::p = [
-                w::r = [
-                    w::t = "SectionHeading: Chapter 1: Normal HVCS processing"
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
                 ]
-            ]
-            w::p = [
                 w::r = [
-                    w::t = "Standards"
+                    w::t = "Chapter 1: Normal HVCS processing"
                 ]
             ]
             w::tbl = [
@@ -817,6 +755,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "1.1 Defined terms"
                             ]
                         ]
@@ -1270,21 +1211,6 @@
                         ]
                         w::p = [
                             w::r = [
-                                w::t = "UG2025"
-                            ]
-                            w::r = [
-                                w::t = " " meta {
-                                    xml::attributes = {
-                                        xml::space = "preserve"
-                                    }
-                                }
-                            ]
-                            w::r = [
-                                w::t = "JW"
-                            ]
-                        ]
-                        w::p = [
-                            w::r = [
                                 w::rPr = [
                                     w::b = null
                                 ]
@@ -1497,6 +1423,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "1.2 Form, content, and delivery of payment instruction"
                             ]
                         ]
@@ -1565,6 +1494,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "1.3 Agency arrangement obligations"
                             ]
                         ]
@@ -1666,6 +1598,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "1.4 HVCS operating times"
                             ]
                         ]
@@ -1769,11 +1704,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Commentary"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -1829,6 +1759,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "1.5 Validating HVCS payments"
                             ]
                         ]
@@ -1904,16 +1837,60 @@
                                         w::val = "left"
                                     }
                                 }
+                                w::tblBorders = [
+                                    w::top = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::left = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::bottom = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::right = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideH = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideV = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                ]
                             ]
                             w::tblGrid = [
                                 w::gridCol = null meta {
                                     xml::attributes = {
-                                        w::w = 5000
+                                        w::w = 1000
                                     }
                                 }
                                 w::gridCol = null meta {
                                     xml::attributes = {
-                                        w::w = 5000
+                                        w::w = 1000
                                     }
                                 }
                             ]
@@ -1921,6 +1898,9 @@
                                 w::tc = [
                                     w::p = [
                                         w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
                                             w::t = "Action"
                                         ]
                                     ]
@@ -1928,12 +1908,1203 @@
                                 w::tc = [
                                     w::p = [
                                         w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
                                             w::t = "MX Obligations"
                                         ]
                                     ]
                                 ]
                             ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction as an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "MX message"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructing agent:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX Messaging Procedures (in accordance with MX Message Specifications MyStandards and Local Usage Guideline Validation); and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Should"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX Messaging Procedures"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(MX Message Requirements)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Instructing Agent Validation)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Message Validation (Swift))"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Message Validation (Participant))"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction as an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "SCP"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructing agent:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clause 1.5 of the SCP Procedures"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX Messaging Procedures (in accordance with MX Message Specifications)"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction as an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Non-SCP"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructing agent:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX Messaging Procedures (in accordance with MX Message Specifications MyStandards and Local Usage Guideline Validation); and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Should"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX Messaging Procedures"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(MX Message Requirements)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Instructing Agent Validation)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Message Validation (Swift))"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Message Validation (Participant))"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "As an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "SCP"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "; and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Creditor identified by"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "BIC"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor BIC:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Rules:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_BIC_Creditor_Account_Identification_1_FormalRule"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_BIC_Creditor_Account_Identification_2_FormalRule"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor Account ID:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Rules:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "As an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "SCP"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "; and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Does not"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "contain a"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "BIC"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "(contains an account number or card number)"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Clause 4.2 of the MX Procedures has commentary that documents what an account number should look like."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(SCP account number format)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor Account ID:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Clause 2.3 of the MX Procedures includes requirements for Bacho format, check digit for PAN etc"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Instructed agent validation)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor Name:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Nm"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "As an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "SCP"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "; and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Includes an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "email address"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for the beneficiary notification"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Clause 4.3 of the MX Procedures shows the dedicated email address field."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "SCP Customer notifications)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Email Address:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "As a customer credit transfer message — "
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "cross border redirection"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Contains a"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "BIC"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor BIC:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor Account ID:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Rules:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "As a customer credit transfer message — "
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "cross border redirection"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Does"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "not"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "contain a"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "BIC"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "(contains an account number or card number)"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor BIC:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Creditor Account ID:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Rules:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Sending an HVCS instruction as an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "FI credit transfer message"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "(as set out in clause 9.1(2)(b) of the Rules and as defined in the HVCS Common Procedures"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructing agent"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clause 2.1 of the MX Procedures and in accordance with MyStandards."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(MX Message Requirements)"
+                                        ]
+                                    ]
+                                ]
+                            ]
                         ]
+                        w::p = null
                         w::p = [
                             w::pPr = [
                                 w::numPr = [
@@ -1966,16 +3137,60 @@
                                         w::val = "left"
                                     }
                                 }
+                                w::tblBorders = [
+                                    w::top = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::left = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::bottom = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::right = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideH = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideV = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                ]
                             ]
                             w::tblGrid = [
                                 w::gridCol = null meta {
                                     xml::attributes = {
-                                        w::w = 5000
+                                        w::w = 1000
                                     }
                                 }
                                 w::gridCol = null meta {
                                     xml::attributes = {
-                                        w::w = 5000
+                                        w::w = 1000
                                     }
                                 }
                             ]
@@ -1983,6 +3198,9 @@
                                 w::tc = [
                                     w::p = [
                                         w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
                                             w::t = "Action"
                                         ]
                                     ]
@@ -1990,12 +3208,551 @@
                                 w::tc = [
                                     w::p = [
                                         w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
                                             w::t = "MX Obligations"
                                         ]
                                     ]
                                 ]
                             ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Has been sent an HVCS instruction:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "As a customer credit transfer message — "
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "cross border redirection"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "(as set out in clause 9.1(2)(a)(iii) of the Rules); and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Is also the"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "creditor agent"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructed agent"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clauses 2.1 and 2.3 of the MX Procedures and in accordance with MyStandards and Local Usage Guideline Validation."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(MX Message Requirements)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Instructed Agent Validation)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Message Validation (Swift))"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Message Validation (Participant))"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Has been sent an HVCS instruction as an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "SCP"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructed agent"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures and in accordance with MyStandards."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Instructed agent validation)"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Has been sent an HVCS instruction:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "As an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "SCP"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "; and"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Includes an"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "email address"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for the beneficiary notification"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Clause 4.3 of the MX Procedures shows the dedicated email address field."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(SCP Customer notifications)"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "XML Path"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "for Email Address:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Has been sent an HVCS instruction:"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "A customer credit transfer message — "
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "cross border redirection"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructed agent"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(Instructed agent validation)"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::t = "Needs to"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "return"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "an HVCS payment;"
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::pPr = [
+                                            w::numPr = [
+                                                w::ilvl = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 0
+                                                    }
+                                                }
+                                                w::numId = null meta {
+                                                    xml::attributes = {
+                                                        w::val = 200
+                                                    }
+                                                }
+                                            ]
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "Chooses to"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "populate line number 4 and 5 of"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "field 72"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "The instructed agent"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
+                                            w::t = "must"
+                                        ]
+                                        w::r = [
+                                            w::t = " " meta {
+                                                xml::attributes = {
+                                                    xml::space = "preserve"
+                                                }
+                                            }
+                                        ]
+                                        w::r = [
+                                            w::t = "validate the HVCS instruction in accordance with clause 2.1 of the MX Procedures and in accordance with MyStandards."
+                                        ]
+                                    ]
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "(MX Message Requirements)"
+                                        ]
+                                    ]
+                                ]
+                            ]
                         ]
+                        w::p = null
                     ]
                 ]
             ]
@@ -2054,6 +3811,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "1.6 No revoking after settlement"
                             ]
                         ]
@@ -2067,11 +3827,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Standards"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -2127,6 +3882,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "1.7 Return HVCS payment: timing, format and content"
                             ]
                         ]
@@ -2193,13 +3951,15 @@
                 ]
             ]
             w::p = [
-                w::r = [
-                    w::t = "SectionHeading: Chapter 2: Errors"
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
                 ]
-            ]
-            w::p = [
                 w::r = [
-                    w::t = "Commentary"
+                    w::t = "Chapter 2: Errors"
                 ]
             ]
             w::tbl = [
@@ -2257,6 +4017,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "2.1 Errors"
                             ]
                         ]
@@ -2280,11 +4043,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Standards"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -2340,6 +4098,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "2.2 Error prevents processing"
                             ]
                         ]
@@ -2500,11 +4261,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Best Practice"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -2560,6 +4316,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "2.3 Instructed agent credits wrong account"
                             ]
                         ]
@@ -2758,11 +4517,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Best Practice"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -2818,6 +4572,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "2.4 Co-operate to resolve processing errors"
                             ]
                         ]
@@ -2902,11 +4659,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Commentary"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -2962,6 +4714,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "2.5 Request and response formats"
                             ]
                         ]
@@ -2976,13 +4731,15 @@
                 ]
             ]
             w::p = [
-                w::r = [
-                    w::t = "SectionHeading: Chapter 3: Late processing"
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading1"
+                        }
+                    }
                 ]
-            ]
-            w::p = [
                 w::r = [
-                    w::t = "Commentary"
+                    w::t = "Chapter 3: Late processing"
                 ]
             ]
             w::tbl = [
@@ -3040,6 +4797,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "3.1 Late processing"
                             ]
                         ]
@@ -3058,11 +4818,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Standards"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -3118,6 +4873,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "3.2 When HVCS payments settle"
                             ]
                         ]
@@ -3183,11 +4941,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Standards"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -3243,6 +4996,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "3.3 Sending customer HVCS instructions after 16:45"
                             ]
                         ]
@@ -3477,6 +5233,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "3.4 Sending FI HVCS instructions after 16:45"
                             ]
                         ]
@@ -3694,11 +5453,6 @@
                     ]
                 ]
             ]
-            w::p = [
-                w::r = [
-                    w::t = "Commentary"
-                ]
-            ]
             w::tbl = [
                 w::tblPr = [
                     w::tblW = null meta {
@@ -3754,6 +5508,9 @@
                                 ]
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "3.5 Evening session participants"
                             ]
                         ]
@@ -3777,16 +5534,60 @@
                                         w::val = "left"
                                     }
                                 }
+                                w::tblBorders = [
+                                    w::top = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::left = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::bottom = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::right = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideH = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                    w::insideV = null meta {
+                                        xml::attributes = {
+                                            w::val = "single"
+                                            w::sz = 4
+                                            w::color = "000000"
+                                        }
+                                    }
+                                ]
                             ]
                             w::tblGrid = [
                                 w::gridCol = null meta {
                                     xml::attributes = {
-                                        w::w = 5000
+                                        w::w = 1000
                                     }
                                 }
                                 w::gridCol = null meta {
                                     xml::attributes = {
-                                        w::w = 5000
+                                        w::w = 1000
                                     }
                                 }
                             ]
@@ -3794,6 +5595,9 @@
                                 w::tc = [
                                     w::p = [
                                         w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
                                             w::t = "Participants"
                                         ]
                                     ]
@@ -3801,12 +5605,160 @@
                                 w::tc = [
                                     w::p = [
                                         w::r = [
+                                            w::rPr = [
+                                                w::b = null
+                                            ]
                                             w::t = "Date"
                                         ]
                                     ]
                                 ]
                             ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "ANZ Bank New Zealand Limited"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1 October 2010"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "ASB Bank Ltd"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1 October 2010"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Bank of China (New Zealand) Limited"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "4 December 2020"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Bank of New Zealand"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1 October 2010"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Citibank, N.A."
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1 October 2010"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "HSBC"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1 October 2010"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Industrial and Commercial Bank of China (New Zealand) Limited"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "26 March 2025"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "New Zealand Depository Limited"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "4 August 2025"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Westpac New Zealand Limited"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1 October 2010"
+                                        ]
+                                    ]
+                                ]
+                            ]
                         ]
+                        w::p = null
                     ]
                 ]
             ]

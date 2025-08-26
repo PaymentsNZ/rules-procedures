@@ -1,22 +1,71 @@
 import [
-	src = "example/common.mixt"
 	htmltodocx = "docx/htmlToDocx.mixt"
 	factory = "docx/factory.mixt"
 	sampleContent = "docx/content/word/document.mixt"
+	documentsTable = "documents.mixt"
 ]
 let
-	outputFileName = "createdByMixt.docx"
-	translated = htmltodocx::translateDocument( src )
-	writtenDOCX = factory::writeDocx( outputFileName, translated )
-	writtenMIXT = File.Write(
-		"createdByMixt.mixt"
-		Mixt.FromValue(translated)
+	// targetFormat = "xml"
+	// targetFormat = "mixt"
+	targetFormat = "docx"
+
+	//selector = null
+	selector = (id as text) => true
+	//selector = (id as text) => (id == "SCP")
+
+	docSet = Table.ToRecords(
+		if selector == null then
+			documentsTable
+		else
+			Table.SelectRows(
+				documentsTable
+				(doc) => selector( doc{ id } )
+			)
 	)
-	writtenXml = File.Write(
-		"createdByMixt.xml"
-		Xml.FromValue(translated)
-	)	
+	written = List.Accumulate(
+		docSet
+		{}
+		( state, current, docIndex ) => (
+			let
+				docTitle = current{ title }
+				docContent = current{ source }
+				target = FilePath.Join(
+					FilePath.Join( "dist", targetFormat )
+					Text.Replace( current{ target }, ".html", "." & targetFormat )
+				)
+
+				translated = htmltodocx::translateDocument( docContent )
+
+				// Write options
+				writtenDOCX = factory::writeDocx(
+					target,
+					docTitle,
+					translated
+				)
+				writtenMIXT = File.Write(
+					target
+					Mixt.FromValue(translated)
+				)
+				writtenXml = File.Write(
+					target
+					Xml.FromValue(translated)
+				)	
+
+				result = Record.AddField(
+					state
+					current{ id }
+					(
+						if targetFormat == "xml" then
+							writtenXml
+						else if targetFormat == "mixt" then
+							writtenMIXT
+						else
+							writtenDOCX
+					)
+				)
+			in
+				result
+		)
+	)
 in
-	writtenDOCX
-	//writtenMIXT
-	//writtenXml
+	written

@@ -12,7 +12,7 @@ import [
 
 {
 	// zipFile
-	zipFile = (docContent as list) => (
+	zipFile = (docTitle as text, docContent as list) => (
 		let
 			// noPrettyOption
 			noPrettyOption = {
@@ -32,7 +32,7 @@ import [
 						}				
 					}
 					docProps = {
-						core.xml = Xml.FromValue( core, noPrettyOption )
+						core.xml = Xml.FromValue( core( docTitle ), noPrettyOption )
 						app.xml = Xml.FromValue( app, noPrettyOption )
 					}
 					;([Content_Types].xml) = Xml.FromValue( contentTypes, noPrettyOption )
@@ -40,13 +40,13 @@ import [
 			)
 		in
 			zip
-	)	
+	)
 
 	// docx.factory::writeDocx
-	docx.factory::writeDocx = (outputFileName as text, docContent as list) => (
+	docx.factory::writeDocx = (outputFileName as text, docTitle as text, docContent as list) => (
 		File.Write(
 			outputFileName
-			zipFile( docContent )
+			zipFile( docTitle, docContent )
 		)
 	)
 }

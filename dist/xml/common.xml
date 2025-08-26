@@ -1,0 +1,3572 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+    <w:body>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Document purpose and overview</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>HVCS rules and procedures overview</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document HVCS Common Procedures (Part B) is one part of a suite of documentation to help participants understand what is required to become a high value clearing system (HVCS) participant and how to send and receive individual HVCS instructions and NZD HVCS payments that the participant cannot revoke or reverse after settlement.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9). Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants comply with Part 9 are comprised of:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part A — HVCS Overview</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and settlement works, and the business, technical, and regulatory environment in which the process operates.  This is a non-binding document for use as guidance only.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part B — HVCS Common Procedures (this document)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply to all HVCS instructions at all times.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part C — SCP Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply only to an HVCS instruction that is a same day cleared payment.  This document also contains some non-binding commentary and best practice, such as recommended terms and conditions with customers.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part D — MX Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022 messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part E — MT Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022 messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part F — Co-existence Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures for participants during the co-existence phase of the migration from sending and receiving MT messages to MX messages.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Standards, best practices and commentary</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14 creates binding legal rights or obligations, please see</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:i/>
+                            </w:rPr>
+                            <w:t>Part A - Overview.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Document purpose and structure</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document discusses the HVCS Common Procedures that apply to normal processing of all HVCS instructions and the processing of errors and late HVCS payments.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document is divided into three chapters.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 1 provides an overview on how to process HVCS instructions to settle and interchange HVCS payments under normal conditions.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 2 specifies how to process HVCS instructions to settle and interchange HVCS payments that contain errors.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 3 specifies how to process HVCS instructions to settle and interchange HVCS payments that have been settled after 16:45.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 1: Normal HVCS processing</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.1 Defined terms</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>CBPR+</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means the ISO 20022-based messaging standard for sending a SWIFT message through the FINplus CUG operated by SWIFT.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Customer credit transfer message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means the following payment messages used to facilitate an HVCS payment involving a customer of a participant:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.008</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Exception and investigation message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>message means an HVCS instruction sent between participants including:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT192;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT196</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT292;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT296</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>camt.056; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>camt.029</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>FI credit transfer message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means the following payment messages used to facilitate an HVCS payment involving a participant or  financial institution customer of a participant:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.009; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.009COV</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>FIN message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means the ISO 15022-based messaging standard for sending a SWIFT message through the general FIN CUG operated by SWIFT.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>MT message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means an HVCS instruction sent in accordance with the MT Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>MX message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means an HVCS instruction sent in accordance with the MX Messaging Procedures and the MX Message Specifications</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>MX Message Specifications</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means the applicable production version(s) of New Zealand&apos;s HVCS Usage Guidelines, being the base ISO 20022 message specifications modified for New Zealand&apos;s HVCS and provided on the &quot;mystandards&quot; webpage</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Return message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>message means the following payment messages used to facilitate the return of an HVCS payment:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>pacs.004</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>SWIFT message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>message means messages that are sent through SWIFT including:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>HVCS instruction;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>HVPS message;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>CBPR+; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>FIN message</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>System message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>means a message sent to a participant through SWIFT in relation to an HVCS instruction including:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT010;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT011;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>MT019;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>xsys.002;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>xsys.003;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>xsys.010; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>xsys.011</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Unless the context otherwise specifies, all other defined terms have the meanings given to them in Part 19 of the Payments NZ Rules.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.2 Form, content, and delivery of payment instruction</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The instructing agent that sends an HVCS instruction may determine the form, content, and method of delivery of the payment instruction from the debtor to the instructing agent.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.3 Agency arrangement obligations</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A participant that receives HVCS instructions on behalf of a creditor agent pursuant to an agency arrangement must ensure that each creditor agent which it has an agency arrangement with has a SWIFT BIC to identify the creditor agent that can be provided to the debtor for inclusion in the details of the debtor&apos;s payment instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A participant that sends HVCS instructions on behalf of a debtor agent pursuant to an agency arrangement must ensure that each debtor agent which it has an agency arrangement with has a SWIFT BIC that can be used by the Participant acting as an instructing agent to identify the debtor agent within the payment message.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.4 HVCS operating times</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>An HVCS participant must connect to the transaction delivery system—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>every business day including every provincial holiday; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>during the minimum time period commencing at 09:00 on a business day and ending at 17:15 on that business day; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>during a time period from 17:15 on a business day until such time as is necessary to receive any HVCS instruction sent in accordance with clause 3.3 or 3.4 of these HVCS Common Procedures.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent may only send an HVCS instruction during the time period commencing at 09:00 on a business day and ending at 16:45 on that business day unless clause 3.3 or 3.4 of these HVCS Common Procedures apply.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.5 Validating HVCS payments</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following table sets out the validation requirements that apply to a range of HVCS instructions.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For clarity, the obligations set out in the table below are cumulative.  Participants must comply with every validation obligation that applies to the type of HVCS instruction that the participant sends or receives.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Instructing Agent</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Action</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>MX Obligations</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction as an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>MX message</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructing agent:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX Messaging Procedures (in accordance with MX Message Specifications MyStandards and Local Usage Guideline Validation); and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Should</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX Messaging Procedures</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(MX Message Requirements)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Instructing Agent Validation)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Message Validation (Swift))</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Message Validation (Participant))</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction as an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>SCP</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructing agent:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clause 1.5 of the SCP Procedures</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX Messaging Procedures (in accordance with MX Message Specifications)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction as an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Non-SCP</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructing agent:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clause 2.1 and 2.2 of the MX Messaging Procedures (in accordance with MX Message Specifications MyStandards and Local Usage Guideline Validation); and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Should</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clauses 8.2-8.3 of the MX Messaging Procedures</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(MX Message Requirements)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Instructing Agent Validation)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Message Validation (Swift))</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Message Validation (Participant))</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>As an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>SCP</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>; and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Creditor identified by</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>BIC</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor BIC:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Rules:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_BIC_Creditor_Account_Identification_1_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_BIC_Creditor_Account_Identification_2_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor Account ID:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Rules:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>As an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>SCP</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>; and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Does not</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>contain a</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>BIC</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>(contains an account number or card number)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Clause 4.2 of the MX Procedures has commentary that documents what an account number should look like.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(SCP account number format)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor Account ID:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Clause 2.3 of the MX Procedures includes requirements for Bacho format, check digit for PAN etc</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Instructed agent validation)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor Name:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Nm</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>As an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>SCP</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>; and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Includes an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>email address</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for the beneficiary notification</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Clause 4.3 of the MX Procedures shows the dedicated email address field.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>SCP Customer notifications)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Email Address:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>As a customer credit transfer message — </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>cross border redirection</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Contains a</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>BIC</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor BIC:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor Account ID:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Rules:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>As a customer credit transfer message — </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>cross border redirection</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Does</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>not</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>contain a</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>BIC</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>(contains an account number or card number)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor BIC:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / Id / OrgId / AnyBIC</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Creditor Account ID:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Rules:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending an HVCS instruction as an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>FI credit transfer message</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>(as set out in clause 9.1(2)(b) of the Rules and as defined in the HVCS Common Procedures</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructing agent</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clause 2.1 of the MX Procedures and in accordance with MyStandards.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(MX Message Requirements)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Instructed Agent</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Action</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>MX Obligations</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Has been sent an HVCS instruction:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>As a customer credit transfer message — </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>cross border redirection</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>(as set out in clause 9.1(2)(a)(iii) of the Rules); and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Is also the</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>creditor agent</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructed agent</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clauses 2.1 and 2.3 of the MX Procedures and in accordance with MyStandards and Local Usage Guideline Validation.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(MX Message Requirements)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Instructed Agent Validation)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Further information regarding usage guidelines can be found in clauses 8.2-8.3 of the MX procedures.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Message Validation (Swift))</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Message Validation (Participant))</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Has been sent an HVCS instruction as an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>SCP</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructed agent</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures and in accordance with MyStandards.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Instructed agent validation)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Has been sent an HVCS instruction:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>As an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>SCP</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>; and</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Includes an</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>email address</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for the beneficiary notification</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Clause 4.3 of the MX Procedures shows the dedicated email address field.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(SCP Customer notifications)</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>XML Path</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>for Email Address:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls / EmailAdr</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Has been sent an HVCS instruction:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>A customer credit transfer message — </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>cross border redirection</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructed agent</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clauses 2.3 of the MX Procedures.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(Instructed agent validation)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Needs to</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>return</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>an HVCS payment;</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Chooses to</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>populate line number 4 and 5 of</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>field 72</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>The instructed agent</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>must</w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t xml:space="preserve"> </w:t>
+                                    </w:r>
+                                    <w:r>
+                                        <w:t>validate the HVCS instruction in accordance with clause 2.1 of the MX Procedures and in accordance with MyStandards.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>(MX Message Requirements)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.6 No revoking after settlement</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>As HVCS payments are made through the Reserve Bank&apos;s designated settlement system, ESAS, they cannot be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms and conditions and section 55 of the Financial Markets Infrastructure Act 2021.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.7 Return HVCS payment: timing, format and content</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>To comply with rule 9.21 and clause 2.2 of these HVCS Common Procedures , an instructed agent must return an HVCS payment:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>as soon as practicable after making the decision to return it, and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>in accordance with Part D - MX Procedures and the MX Message Specifications.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 2: Errors</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.1 Errors</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Sometimes an instructed agent cannot process an HVCS instruction because of, for example, a problem with the content or the format of the instruction or an invalid account number.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>If an instructed agent cannot process an HVCS instruction, rule 9.21 and clause 2.2 of these HVCS Common Procedures, provides the instructed agent two options. The instructed agent can either return the HVCS instruction to the instructing agent or the instructed agent can arrange to correct the HVCS instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The following diagram summarises the processes that apply if the HVCS instruction contains an error.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.2 Error prevents processing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This clause applies to an instructed agent who has received a settled HVCS payment but cannot process the HVCS payment because of an error relating to the HVCS payment.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructed agent must do one of the following:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>return the HVCS payment to the instructing agent in accordance with the applicable HVCS standards:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>require the instructing agent to send data to amend the HVCS payment:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>amend the HVCS payment without asking the instructing agent for amended data and, as soon as practicable after amendment is complete, process the HVCS payment.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For a cross border redirection (as described in clause 9.1(2)(a)(iii) of the Rules), the instructed agent must not deduct any fees from the amount of the HVCS payment before returning it.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If an instructing agent of an HVCS payment receives a request from an instructed agent under subclause (2)(b), the instructing agent must, as soon as practicable after receiving the request, send data to amend the HVCS payment to the instructed agent.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructed agent receives amended data from an instructing agent under subclause (4), the instructing agent must, as soon as practicable after receiving the data, use the data to amend the HVCS payment.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.3 Instructed agent credits wrong account</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS payment and the instructing agent incurs loss as a direct result of the error, the instructed agent must pay the instructing agent the amount of the loss up to the value of the HVCS payment if one of the following applies:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the payment message specified the correct account number:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the instructing agent sent data to the instructed agent to amend the payment message in accordance with clause 2.2 of these HVCS Common Procedures and the data specified the correct account number:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the instructed agent—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>could not process the HVCS instruction because of an error relating to the HVCS instruction; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>did not obtain data from the instructing agent to amend the payment message under clause 2.2 of these HVCS Common Procedures; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>amended the HVCS payment with the wrong account number.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructed agent of an HVCS payment credits the wrong account number with the amount of the HVCS payment because the instructing agent specified the wrong account number in the payment message the instructing agent must, as soon as practicable after it becomes aware that the wrong account number has been credited—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>send the payment message to the instructed agent again; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ensure that the payment message contains the correct account number.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.4 Co-operate to resolve processing errors</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants should co-operate to resolve a problem caused by a processing error affecting a HVCS instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For example, if an instructed agent credits the amount of a HVCS payment to the wrong creditor&apos;s account number—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the instructing agent may ask the instructed agent to freeze funds in the creditor&apos;s account until the problem is resolved; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the instructed agent should determine whether to comply with the request, including by having regard to whether the instructed agent has the legal right to do so.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.5 Request and response formats</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by, for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message sends corrected data to the instructed agent under rule 9.21 and clause 2.2 of these HVCS Common Procedures, the instructing agent can use, for example, SWIFT message MTn96-Answers.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 3: Late processing</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.1 Late processing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Rule 9.11 and clause 1.4 of these HVCS Common Procedures requires an instructing agent to send an HVCS instruction no later than 16:45 on a business day unless standards 3.3 or 3.4 apply.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The following diagram gives an overview of the processes that apply if the instructing agent proposes to send an HVCS instruction after 16:45. The diagram has no legal effect.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.2 When HVCS payments settle</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The effect of rule 9.14 is that if the instructing agent settles an HVCS payment after 17:15, unless the late HVCS instruction requirements apply, the instructed agent:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>is not required to process the HVCS instruction that business day, but</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>may decide to process the HVCS instruction that business day to meet the requirements or the expectations of its customer.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.3 Sending customer HVCS instructions after 16:45</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This clause applies to a customer credit transfer message that is an SCP or a cross border payment redirection if—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a technical problem or an operational problem prevents the instructing agent from sending the customer credit transfer message by 16.45 on a business day; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the instructing agent requires the instructed agent to credit the creditor&apos;s account with the amount of an HVCS payment that business day.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>must obtain the instructed agent&apos;s explicit consent to the time by which the instructing agent must send a HVCS instruction to which this standard applies; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>must use the contact people and method of communicating for the instructed agent specified in the industry incident contact list; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>is entitled to obtain the consent in written form or verbal form.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructed agent is not required to consent to a request from an instructing agent to send a customer credit transfer message after 16:45. For example, the instructed agent may not be able to process the HVCS instruction at the time requested.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent obtains the instructed agent&apos;s consent to a time for sending the HVCS instruction and the instructing agent sends the HVCS instruction by the agreed time, the timeframe in clause 1.4 of these HVCS Common Procedures does not apply to the HVCS instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.4 Sending FI HVCS instructions after 16:45</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This clause applies to a participant who proposes to send and receive FI credit transfer messages during the CLS evening session either—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>as the creditor or the debtor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>on behalf of a FI customer.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The participant may only send and receive FI credit transfer messages during the CLS evening session on a business day if—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>no less than 1 month before that business day,—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the participant has notified the chief executive of Payments NZ that on and from a specified date the participant proposes to send and receive FI credit transfer messages during the CLS evening session; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the chief executive has notified every other participant that on and from the specified date the participant proposes to send and receive FI credit transfer messages during the CLS evening session; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the participant has, on and from the date specified in the chief executive&apos;s notification, participated in every CLS evening session; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the participant participates in the CLS evening session that business day during the time period commencing at 16:45 on the business day and ending 30 minutes after the final CLS pay out.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the participant sends an FI credit transfer message during the CLS evening session in accordance with subclause (2), the timeframe in clause 1.4 of these HVCS Common Procedures do not apply to the FI credit transfer messages.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If a participant proposes to cease sending and receiving FI credit transfer messages during the CLS evening session, no less than 1 month before the business day that the participant proposes to cease sending and receiving the FI credit transfer messages, the participant must notify Payments NZ that it proposes to cease.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.5 Evening session participants</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants who send and receive financial institution credit transfers during the CLS evening session are:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Participants</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Date</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>ANZ Bank New Zealand Limited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1 October 2010</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>ASB Bank Ltd</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1 October 2010</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Bank of China (New Zealand) Limited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>4 December 2020</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Bank of New Zealand</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1 October 2010</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Citibank, N.A.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1 October 2010</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HSBC</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1 October 2010</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Industrial and Commercial Bank of China (New Zealand) Limited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>26 March 2025</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>New Zealand Depository Limited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>4 August 2025</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Westpac New Zealand Limited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1 October 2010</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:sectPr>
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1417" w:bottom="1417" w:left="1247" w:right="1247"/>
+        </w:sectPr>
+    </w:body>
+</w:document>

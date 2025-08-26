@@ -1,72 +1,126 @@
+import [
+	xml = "../../xml.mixt"
+]
+
 [
     xml::declaration = {
         version = "1.0"
         encoding = "UTF-8"
         standalone = "yes"
     }
-	w::styles = {
-    	xml::attributes = {
+	w::styles = xml::attributed(
+		{ 
       		xmlns::w = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
     	}
-  	} @> [
-		// Default paragraph
-		w::style = {
-			xml::attributes = {
-				w::type = "paragraph"
-				w::default = "1"
-				w::styleId = "Normal"
-			}
-		} @> [
-			w::name = {
-				xml::attributes = {
-					w::val = "Normal"
-				}
-			} @> null
-			w::qFormat = null
-		]
-		// Default character
-		w::style = {
-			xml::attributes = {
-				w::type = "character"
-				w::default = "1"
-				w::styleId = "DefaultParagraphFont"
-			}
-		} @> [
-			w::name = {
-				xml::attributes = {
-					w::val = "Default Paragraph Font"
-				}
-			} @> null
-		]
+		[
+			// Global defaults (affect all styles unless overridden)
+			w::docDefaults = [
+				w::rPrDefault = [
+					w::rPr = [
+						w::rFonts = xml::attributed({
+							w::ascii = "Open Sans"
+							w::hAnsi = "Open Sans"
+							w::cs    = "Open Sans"
+							w::eastAsia = "Open Sans"  // or a CJK fallback if you need it
+						})
+						w::sz   = xml::attributed({ w::val = "20" })   // 10 pt
+						w::szCs = xml::attributed({ w::val = "20" })
+					]
+				]
+				w::pPrDefault = [ w::pPr = [] ]
+			]
 
-		// Default table
-		w::style = {
-			xml::attributes = {
-				w::type = "table"
-				w::default = "1"
-				w::styleId = "TableNormal"
-			}
-		} @> [
-			w::name = {
-				xml::attributes = {
-					w::val = "Normal Table"
+			// Default paragraph (Normal)
+			w::style = xml::attributed(
+				{
+					w::type = "paragraph"
+					w::default = "1"
+					w::styleId = "Normal"
 				}
-			} @> null
-		]
+				[
+					w::name = xml::attributed({ w::val = "Normal" })
+					w::qFormat = null
+					w::rPr = [
+						w::rFonts = xml::attributed(
+							{
+								w::ascii="Open Sans"
+								w::hAnsi="Open Sans"
+								w::cs = "Open Sans"
+								w::eastAsia = "Open Sans"
+							}
+						)
+						w::sz = xml::attributed( { w::val = "20" } )
+						w::szCs = xml::attributed( { w::val = "20" } )
+					]
+				]
+			)
 
-		// Default numbering
-		w::style = {
-			xml::attributes = {
-				w::type = "numbering"
-				w::default = "1"
-				w::styleId = "NoList"
-			}
-		} @> [
-			w::name = {
-				xml::attributes = {
-					w::val = "No List"
+			// Default character
+			w::style = xml::attributed(
+				{
+					w::type = "character"
+					w::default = "1"
+					w::styleId = "DefaultParagraphFont"
 				}
-			} @> null
+				[
+					w::name = xml::attributed({ w::val = "Default Paragraph Font" })
+				]
+			)
+
+			// Default table
+			w::style = xml::attributed(
+				{
+					w::type = "table"
+					w::default = "1"
+					w::styleId = "TableNormal"
+				}
+				[
+					w::name = xml::attributed({ w::val = "Normal Table" })
+				]
+			)
+
+			// Default numbering
+			w::style = xml::attributed(
+				{
+					w::type = "numbering"
+					w::default = "1"
+					w::styleId = "NoList"
+				}
+				[
+					w::name = xml::attributed({ w::val = "No List" })
+				]
+			)
+
+			// Heading 1: Rockwell 16pt, centered, 12pt after, #009FDF
+			w::style = xml::attributed(
+				{
+					w::type = "paragraph"
+					w::styleId = "Heading1"
+				}
+				[
+					w::name       = xml::attributed({ w::val = "heading 1" })
+					w::basedOn    = xml::attributed({ w::val = "Normal" })
+					w::next       = xml::attributed({ w::val = "Normal" })
+					w::uiPriority = xml::attributed({ w::val = 9 })
+					w::qFormat    = null
+					w::pPr = [
+						w::jc        = xml::attributed({ w::val = "center" })     				// centered
+						w::spacing   = xml::attributed({ w::before = 240, w::after = 240 })     // 12 pt (20 twips/pt)
+						w::outlineLvl= xml::attributed({ w::val = 0 })            				// makes it a true heading
+					]
+					w::rPr = [
+						w::rFonts = xml::attributed({
+							w::ascii   = "Rockwell"
+							w::hAnsi   = "Rockwell"
+							w::cs      = "Rockwell"
+							w::eastAsia= "Rockwell"
+						})
+						w::sz   = xml::attributed({ w::val = 32 })                // 16 pt (half-points)
+						w::szCs = xml::attributed({ w::val = 32 })
+						w::color= xml::attributed({ w::val = "009FDF" })          // hex without '#'
+					]
+				]
+			)			
 		]
-	]
+	)
 ]

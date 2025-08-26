@@ -40,12 +40,79 @@ import [
 			""
 	)
 
+	// addTag is a single-cell table styled as a tag
+	addTag = (heading as text, fill as text) => [
+		w::p = null
+		w::tbl = [
+			w::tblPr = [
+				w::tblW       = xml::attributed({ w::type = "auto", w::w = 0 })
+				w::tblBorders = [
+				w::top    = xml::attributed({ w::val="nil" })
+				w::left   = xml::attributed({ w::val="nil" })
+				w::bottom = xml::attributed({ w::val="nil" })
+				w::right  = xml::attributed({ w::val="nil" })
+				w::insideH= xml::attributed({ w::val="nil" })
+				w::insideV= xml::attributed({ w::val="nil" })
+				]
+				w::tblLayout  = xml::attributed({ w::type="auto" }) // no auto-reflow surprises
+			]
+			w::tr = [
+				w::tc = [
+				w::tcPr = [
+					// Fit to content
+					w::tcW = xml::attributed({ w::type="auto", w::w=300 })
+					// Background fill (purple); use your brand color
+					w::shd = xml::attributed({ w::val="clear", w::color="auto", w::fill=fill })
+					// Padding (cell margins) ~5pt
+					w::tcMar = [
+					w::top    = xml::attributed({ w::w=100, w::type="dxa" })
+					w::bottom = xml::attributed({ w::w=100, w::type="dxa" })
+					w::left   = xml::attributed({ w::w=160, w::type="dxa" })
+					w::right  = xml::attributed({ w::w=160, w::type="dxa" })
+					]
+				]
+				w::p = [
+					w::pPr = [ w::jc = xml::attributed({ w::val="center" }) ]
+					w::r = [
+						w::rPr = [
+							w::b    = null
+							w::color= xml::attributed({ w::val="FFFFFF" })
+							// optional: force font/size
+							// w::rFonts = xml::attributed({ w::ascii="Open Sans", w::hAnsi="Open Sans" })
+							// w::sz = xml::attributed({ w::val=20 })
+						]
+						w::t = heading
+					]
+				]
+				]
+			]
+		]
+		w::p = null
+	]
+
 	// addSectionHeading
 	addSectionHeading = ( state as list, heading as text ) => (
 		state & [
 			w::p = [
+				w::pPr = [
+					w::pStyle = xml::attributed({ w::val = "Heading1" })
+				]
 				w::r = [
-					w::t = $"SectionHeading: $(heading)"
+					w::t = heading
+				]
+			]	
+		]
+	)
+
+	// addSubsectionHeading
+	addSubsectionHeading = ( state as list, heading as text ) => (
+		state & [
+			w::p = [
+				w::pPr = [
+					w::pStyle = xml::attributed({ w::val = "Heading2" })
+				]
+				w::r = [
+					w::t = heading
 				]
 			]	
 		]
@@ -53,35 +120,17 @@ import [
 
 	// addTagCommentary
 	addTagCommentary = ( state as list ) => (
-		state & [
-			w::p = [
-				w::r = [
-					w::t = "Commentary"
-				]
-			]	
-		]
+		state & addTag( "Commentary", "7B3FC5" )
 	)
 
 	// addTagStandards
 	addTagStandards = ( state as list ) => (
-		state & [
-			w::p = [
-				w::r = [
-					w::t = "Standards"
-				]
-			]	
-		]
+		state & addTag( "Standards", "009FDF" )
 	)
 
 	// addTagBestPractice
 	addTagBestPractice = ( state as list ) => (
-		state & [
-			w::p = [
-				w::r = [
-					w::t = "Best Practice"
-				]
-			]	
-		]
+		state & addTag( "Best Practice", "00B050" )
 	)
 
 	// formatAndTranslateText
@@ -206,7 +255,7 @@ import [
 						]
 					]
 				else
-					translateValue( state, fieldName, itemIndex, value )
+					transformValue( state, fieldName, itemIndex, value )
 			)
 		)
 	)
@@ -233,7 +282,7 @@ import [
 						let
 							class = getHtmlClass( value )
 						in
-							if class == "doc-comment" or class == "doc-question-content" then
+							if class == "doc-comment" or class == "doc-question" then
 								state
 							else
 								@addNumberingForLevel( state, level, value )
@@ -261,7 +310,7 @@ import [
 						]
 					]
 				else
-					translateValue( state, fieldName, itemIndex, value )
+					transformValue( state, fieldName, itemIndex, value )
 			)
 		)
 	)
@@ -279,13 +328,22 @@ import [
 			transformed = [
 				w::tbl = [
 					w::tblPr = [
+						// Percentages are expressed in 1/50th of a percent.
 						w::tblW = xml::attributed({ w::type = "pct", w::w = 5000 })
 						w::jc = xml::attributed({ w::val="left" }) // Alignment: left
+						w::tblBorders = [
+							w::top     = xml::attributed({ w::val = "single", w::sz = 4, w::color = "000000" })
+							w::left    = xml::attributed({ w::val = "single", w::sz = 4, w::color = "000000" })
+							w::bottom  = xml::attributed({ w::val = "single", w::sz = 4, w::color = "000000" })
+							w::right   = xml::attributed({ w::val = "single", w::sz = 4, w::color = "000000" })
+							w::insideH = xml::attributed({ w::val = "single", w::sz = 4, w::color = "000000" })
+							w::insideV = xml::attributed({ w::val = "single", w::sz = 4, w::color = "000000" })
+						]
 					]
 					w::tblGrid = List.Transform(
 						columnNames
 						(columnName) => #(w::gridCol = xml::attributed(
-							{ w::w = 5000 }
+							{ w::w = 1000 } // Sizing hints
 						))
 					)
 					w::tr = List.Transform(
@@ -293,19 +351,45 @@ import [
 						(columnName) => #(w::tc = [
 							w::p = [
 								w::r = [
+									w::rPr = [
+										w::b = null
+									]
 									w::t = columnName
 								]
 							]
 						])
 					)
-				]
-			]
+				] & List.Transform(
+					Table.ToRecords(t)
+					(r as record) => #(w::tr =
+						List.Transform(
+							Record.FieldNames(r)
+							(fieldName as any, fieldIndex as number) => #(w::tc = 
+								(
+									let
+										// fieldName is not relevant in this context
+										content = transformValue( [], "", fieldIndex, Record.Field( r, fieldName ))
+									in
+										if List.Count( content ) == 0 then
+											[
+												w::p = null
+											]
+										else
+											content
+								)
+							)
+						)
+					)
+				)
+				// https://stackoverflow.com/questions/74989943/why-do-i-get-word-found-unreadable-content-in-doc-when-adding-a-nested-table
+				w::p = null
+			] 
 		in
-			state // & transformed
+			state & transformed
 	)
 
-	// translateValue
-	translateValue = ( state as list, fieldName as text, itemIndex as number, value as any ) => (
+	// transformValue
+	transformValue = ( state as list, fieldName as text, itemIndex as number, value as any ) => (
 		if Value.Is( value, type text ) then
 			let
 				class = getHtmlClass( value )
@@ -318,6 +402,8 @@ import [
 						]
 					else if class == "section-heading" then
 						addSectionHeading( state, translateText( value ) )
+					else if class == "subsection-heading" then
+						addSubsectionHeading( state, translateText( value ) )
 					else if class == "tag-commentary" then
 						addTagCommentary( state )
 					else if class == "tag-bestpractice" then
@@ -419,6 +505,9 @@ import [
 								else
 									[
 										w::r = [
+											w::rPr = [
+												w::b = null
+											]
 											w::t = fullClause
 										]
 									]
@@ -438,6 +527,7 @@ import [
 					]
 				]
 			]
+			w::p = null
 		in
 			result
 	)
@@ -474,7 +564,7 @@ import [
 								else if Value.Is( value, type record ) then
 									@iterate( [], fieldName, value )
 								else
-									translateValue( [], fieldName, itemIndex, value )
+									transformValue( [], fieldName, itemIndex, value )
 							)
 						in
 							{
@@ -495,14 +585,16 @@ import [
 		in
 			combined
 	)
-		
+
 	// iterate
 	iterate = (results as list, id as text, container as any) => (
 		let
 			class = getHtmlClass( container )
 			added = (
-				if class == "logo"  or class == "doc-comment" or class == "doc-question-content" then
+				if class == "logo"  or class == "doc-comment" or class == "doc-question" then
 					results
+				else if class == "menu-container" then
+					results					
 				else if class == "clause-row" then
 					results & addClause( container )
 				else if Value.Is( container, type list ) then
@@ -535,7 +627,7 @@ import [
 									else if Value.Is( value, type record ) then
 										@iterate( state, fieldName, value )
 									else
-										translateValue( state, fieldName, itemIndex, value )
+										transformValue( state, fieldName, itemIndex, value )
 								)
 							in
 								result

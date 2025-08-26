@@ -1,0 +1,2902 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+    <w:body>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Document purpose and overview</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>HVCS rules and procedures overview</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document MT Messaging Procedures (Part E) is one part of a suite of documentation to help participants understand what is required to become a high value clearing system (HVCS) participant and how to send and receive individual HVCS instructions that are exception and investigation messages.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9). Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants comply with Part 9 are comprised of:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part A — HVCS Overview</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and  ettlement works, and the business, technical, and regulatory environment in which the process operates.  This is a non-binding document for use as guidance only.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part B — HVCS Common Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply to all HVCS instructions at all times.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part C — SCP Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply only to an HVCS instruction that is a same day cleared payment.  This document also contains some non-binding commentary and best practice, such as recommended terms and conditions with customers.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part D — MX Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022 messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part E — MT Messaging Procedures (this document)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022 messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part F — Co-existence Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures for participants during the co-existence phase of the migration from sending and receiving MT messages to MX messages.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Standards, best practices and commentary</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14 creates binding legal rights or obligations, please see</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:i/>
+                            </w:rPr>
+                            <w:t>Part A - Overview.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Notwithstanding anything in clause 1.8 of the Rules or in Part A — Overview, any reference to actions a person &quot;should&quot; take or anything a person &quot;should&quot; do is intended to convey a best practice with which a person should comply with only, but which has no legal effect.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Document purpose and structure</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document discusses the MT Messaging Procedures that apply to HVCS instructions that are exception and investigation messages.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document is divided into six chapters (noting chapters 3, 4 and 5 have been deleted).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 1 provides an overview of the MT messages that are in scope and the explains the message lifecycle.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 2 specifies how to format block 3 (user header) of the SWIFT message header.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapters 3, 4 and 5 have been deleted.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 6 specifies provides the ESAS rejection codes for AVP.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Interpretation</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>For the purposes of these MT Messaging Procedures, all references to the following defined terms means an HVCS instruction that is an MT message:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>HVCS instruction;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Exception and investigation message; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>System message.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 1: MT Messages in scope</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.1 MT messages for HVCS payments</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>This clause has been deleted (UG2025 November 2025).</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.2 Other FINCopy message types</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>This clause has been deleted (UG2025 November 2025).</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.3 Other FIN message types</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Participants exchange the MT message types described in the following table:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Message type</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Message name</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Sender</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Receiver</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MTn95</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>A question.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Free text message.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Participant</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Participant</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MTn96</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>An answer.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Free text message.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Participant</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Participant</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MT011</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Delivery notification</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>SWIFT</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Participant</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.4 Message lifecycle, as this relates to payments</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>This clause has been deleted (UG2025 November 2025).</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 2: SWIFT message header details</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.1 SWIFT message header details</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>A SWIFT message contains the following headers:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>block 1 = basic header:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>block 2 = application header:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>block 3 = user header:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>block 4 = text:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>block 5 = trailers.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.2 User header details</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The content and format of block 1 or block 2 is similar for all SWIFT messages (refer to the SWIFT User Handbook).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Block 3—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>is mandatory for all MT messages; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>contains data that is specific to HVCS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent of a payment message</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>must</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>ensure that the service code (field tag 103) is AVP to ensure SWIFT know how to route the message through the RBNZ&apos;s CUG.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This clause has been deleted (UG2025 November 2025).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This clause has been deleted (UG2025 November 2025).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This clause has been deleted (UG2025 November 2025).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This clause has been deleted (UG2025 November 2025).</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 3: Customer credit transfer (SCP)</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:r>
+                <w:t>This chapter has been deleted (UG2025 November 2025).</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 4: Customer Credit Transfer (Cross border redirection)</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:r>
+                <w:t>This chapter has been deleted (UG2025 November 2025).</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 5: Formats for financial institution transfers</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:r>
+                <w:t>This chapter has been deleted (UG2025 November 2025).</w:t>
+            </w:r>
+        </w:p>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 6: FINCopy system messages advising HVCS payment status</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>6.1 Purpose</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This chapter specifies—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the format for 2 of the notification message types that FINCopy sends to an instructing agent—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>an MT012 system message - instructing agent notification; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>an MT019 system message - abort notification; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the ESAS rejection codes for AVP.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>6.2 MT012: instructing agent notification</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>FINCopy sends an MT012 system message to notify the instructing agent that FINCopy has released the HVCS payment to the instructed agent. In AVP this occurs after the HVCS payment settles in ESAS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent does not receive an MT012 system message from FINCopy by 17:15, the HVCS payment may not have settled. If the instructing agent doesn&apos;t settle the HVCS payment by the end of the ESAS day, ESAS will cancel the HVCS payment.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following table specifies the format for an MT012 system message:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Rep</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Tag</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Field</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Content/Comments</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>175</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Time</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Input time (HHMM), local to the instructing agent, of the original user message.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>106</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MIR</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Message Input Reference (MIR) identifying the instructing agent&apos;s copy message copied to and released by the CSI.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>0-1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>108</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MUR</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Message User Reference (MUR) used in the header of the original message.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>102</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>SWIFT address</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Destination BIC of the instructing agent&apos;s message. Includes the LT code.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>103</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Service code</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>AVP</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>114</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Payment release information (instructing agent)</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Information from central institution (SWIFT) to instructing agent of payment message (from field 114 of the MT097) as follows:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>ESAS Date:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>ESAS Time:</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>ESAS Reference Number.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>6.3 MT019: abort notification</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If an unsettled HVCS payment in ESAS is cancelled by the instructing agent or by ESAS (at 08:30 end of day), FINCopy notifies the instructing agent of the cancellation by sending an MT019 system message to the instructing agent.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>An MT019 system message contains a code in field 432 specifying a reason for the abort.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the HVCS payment was not settled by the 08:30am end of day,—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ESAS will cancel the HVCS payment; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ESAS will send an abort notification MT019 system message (with error code 62 — Cancelled by ESAS end of day) to the instructing agent.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following table specifies the format for an MT019 system message:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Rep</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Tag</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Field</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Content/Comments</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>175</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Time</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Input time (HHMM), local to the instructing agent, of the original user message.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>106</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MIR</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Message Input Reference (MIR) identifying the instructing agent&apos;s copy message copied to and released by the CSI.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>0-1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>108</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MUR</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Message User Reference (MUR) used in the header of the original message.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>102</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>SWIFT address</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Destination BIC of the aborted message.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Includes the LT code.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>0-1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>107</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>MOR</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>Message Output Reference (MOR) of the aborted message.</w:t>
+                                    </w:r>
+                                </w:p>
+                                <w:p>
+                                    <w:pPr>
+                                        <w:numPr>
+                                            <w:ilvl w:val="0"/>
+                                            <w:numId w:val="200"/>
+                                        </w:numPr>
+                                    </w:pPr>
+                                    <w:r>
+                                        <w:t>If several delivery attempts have been made, field 107 contains the last valid MOR.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>432</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Abort reason</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Refer to the table in clause 6.4 containing ESAS rejection codes and the SWIFT FIN error codes for the SWIFT generated codes returned in this field.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>6.4 ESAS rejection codes</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The following table contains ESAS rejection codes for AVP and SBI and explanations of why ESAS applies each code when ESAS validates the structure of an MT096 system message but the content of the message fails business rules validation:</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="pct" w:w="5000"/>
+                <w:jc w:val="left"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:color="000000"/>
+                    <w:left w:val="single" w:sz="4" w:color="000000"/>
+                    <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                    <w:right w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                </w:tblBorders>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Code</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Reason Type</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Summary</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>61</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment cannot be validated because of some serious or fundamental problem with the message</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The construction of the message does not conform to the ESAS application specifications.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>62</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>AVP — Assured Value Payment</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment instruction has one or more validation errors, such as:</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>62.1</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Duplicate tags</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>A payment instruction will be validated against the following:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>OCD — Originator BIC of the message (Instructing agent)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ODT — Originator Date (Calendar Date) when message is submitted</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ORF — Originator Reference assigned by the settlement bank (MT Tag 20)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>FSVD — Funds Settlement value day in the RTGS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Then, if the above conditions are the same as a previously processed message, and if Block 4 (Tag 32A DATE/CCY/AMT) is different, the member will have an Error 62 - Duplicate Tag returned.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>62.2</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The Instructing or Instructed agents are inactivated or unknown.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The instructing or instructed agent has been inactivated, or the BIC has not configured for use in ESAS.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>62.3</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Invalid settlement date</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment instruction Settlement Date must not exceed 14 business days from the date the instruction was received in ESAS. The payment Settlement Date is a non-business date or a date in the past.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>62.4</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Instructing agent failed to activate an instruction</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The instructing agent does not activate the payment instruction in ESAS before end of day (only applicable to payments that have the payer-to-activate flag applied).</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>62.5</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Invalid amount</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment instruction must be in NZD</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>63</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment was discarded due to insufficient funds (EOD cancellation)</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Payment instruction did not settle before the EOD event started in ESAS.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>65</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment was removed by the Settlement Bank</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment instruction was either removed or discarded from the ESAS by the Settlement Bank.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>66</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Duplicate SWIFT message — AVP (Assured Value Payment)</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>A payment instruction will be validated against the following:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>OCD — Originator BIC of the message (Instructing agent)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ODT — Originator Date (Calendar Date) when message is submitted</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ORF — Originator Reference assigned by the settlement bank (MT Tag 20)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>FSVD — Funds Settlement value day in the RTGS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Then, if the above conditions are the same, and if Block 4 (Tag 32A DATE/CCY/AMT) are exactly the same, then the member will have an Error 66 Duplicate Instruction (Exact Duplicate) returned.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>66</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Duplicate SWIFT message — SBI (Settlement Before Interchange)</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>A payment instruction will be validated against the following:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ORF - Originator Reference = &lt;FileId&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ODT - Originator date &lt;IntrBkSttlmDt&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>OCD - Originator BIC code - &lt;Instructing agent&gt;&lt;FullName&gt;&lt;X1&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The system will check for duplicates according to the following logic:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the OCD, ORF and the ODT are the same as a previously processed instruction, the system will reject the instruction immediately.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If only the ORF is different, but the payment detail is the same as a previously processed instruction then the system will process the instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If only the OCD is different, but the payment detail is the same as a previously processed instruction then the system will process the instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment detail that is compared is the following:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Instructing agent Reference - &lt;Instructing agent Reference&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Originator Reference Number:&lt;UserReference&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Beneficiary Bank: &lt;Dbtr&gt;&lt;BIC&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Paying bank: &lt;Cdtr&gt;&lt;BIC&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Amount: &lt;TtlIntrBkSttlmAmt&gt;</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>67</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Discarded due to non-settlement day</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payment message must have a Settlement Date that is NZ business day for:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>AVP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p/>
+        <w:p>
+            <w:r>
+                <w:t>6.5 AVP MT CUG service parameters</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="pct" w:w="5000"/>
+                <w:jc w:val="left"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:color="000000"/>
+                    <w:left w:val="single" w:sz="4" w:color="000000"/>
+                    <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                    <w:right w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                </w:tblBorders>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Parameter</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Value</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>FIN Copy service identifier code</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>AVP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Country</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>New Zealand</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Service type</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Y-Copy</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p/>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="pct" w:w="5000"/>
+                <w:jc w:val="left"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:color="000000"/>
+                    <w:left w:val="single" w:sz="4" w:color="000000"/>
+                    <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                    <w:right w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                    <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                </w:tblBorders>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+                <w:gridCol w:w="1000"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Parameter</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Live</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Test and training</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Value added service identifier</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>AVP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>AVP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Live service flag</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Y</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>N</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>(live = Y, T&amp;T = N)</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Value added service number</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>8</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>7</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>CID id</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>ESASNZ2W</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>ESASNZ20</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Authentication mode</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>2</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>2</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>(normal = 1, double = 2)</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Full copy flag</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>N</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>N</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>(full copy = Y, part copy = N)</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Value date range</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>99</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>99</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>(same day = 0, day n = n, no check=99)</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t></w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>Currency code</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>NZD</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>NZD</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p/>
+        <w:sectPr>
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1417" w:bottom="1417" w:left="1247" w:right="1247"/>
+        </w:sectPr>
+    </w:body>
+</w:document>

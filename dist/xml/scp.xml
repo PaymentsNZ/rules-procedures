@@ -1,0 +1,3925 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+    <w:body>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Document purpose and overview</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>HVCS rules and procedures overview</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document SCP Procedures (Part C) is one part of a suite of documentation to help participants understand what is required to become a high value clearing system (HVCS) participant and how to send and receive individual HVCS instructions and NZD HVCS payments that the participant cannot revoke or reverse after settlement.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9). Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Participants should also carefully read Parts 1, 15 and 19 of the Payments NZ Rules to fully understand the operation of the HVCS Clearing and Settlement Rules.  Parts 5, 9-11A, 14 and 16-18 may also be relevant to HVCS instructions in certain circumstances.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants comply with Part 9 are comprised of:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part A — HVCS Overview</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and settlement works, and the business, technical, and regulatory environment in which the process operates.  This is a non-binding document for use as guidance only.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part B — HVCS Common Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply to all HVCS instructions at all times.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part C — SCP Procedures (this document)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures and product requirements that apply only to an HVCS instruction that is a same day cleared payment.  This document also contains some non-binding commentary and best practice, such as recommended terms and conditions with customers.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part D — MX Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022 messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part E — MT Messaging Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022 messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and best practice.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Part F — Co-existence Procedures</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>UG2025</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>RK</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>Description requires revision (same for all documents)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="200"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Provides binding procedures for participants during the co-existence phase of the migration from sending and receiving MT messages to MX messages.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Standards, best practices and commentary</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For information on how to determine whether the content of an applicable HVCS Standard in Appendix 14 creates binding legal rights or obligations, please see</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:i/>
+                            </w:rPr>
+                            <w:t>Part A - Overview.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Document purpose and structure</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document discusses the SCP procedures that apply to SCP payment instructions.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This document is divided into three chapters.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 1 provides an overview on processing inter-bank SCPs and inter-bank customer notifications.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 2 provides an overview on processing on-us SCPs and on-us customer notifications.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Chapter 3 specifies the terms and conditions for debtors and creditors.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 1: Inter-bank SCPs</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.1 Application of this chapter</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This chapter applies to an SCP if the debtor and the creditor are customers of different participants where the SCP is settled using the transaction delivery system.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading2"/>
+            </w:pPr>
+            <w:r>
+                <w:t>SCP processing</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.2 60 minute SCP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent that sends an SCP and the instructed agent that receives an SCP must ensure that the time period for processing the SCP is no more than 60 minutes.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For the purposes of subclause (1)—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period commences when the instructing agent debits the debtor&apos;s account with the amount of the SCP; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period ends—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the instructing agent requires the instructed agent to notify the creditor that the instructed agent has credited the creditor&apos;s account with the amount of the SCP (beneficiary notification), when the instructed agent sends the beneficiary notification to the creditor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the instructing agent does not require the instructed agent to send the creditor a beneficiary notification, when the instructed agent credits the creditor&apos;s account with the amount of the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.3 Instructing agent: 30 minute processing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent should take no more than 30 minutes to process the SCP on the business day that the debtor gives the instructing agent the SCP payment instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For the purposes of subclause (1)—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period commences when the instructing agent debits the debtor&apos;s account with the amount of the SCP; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period ends when the SCP settles.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The best practice processing time period applies to SCP payment instructions that a debtor sends to the instructing agent manually or electronically.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.4 Instructed agent: 30 minute processing</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructed agent that receives an SCP should take no more than 30 minutes to process the SCP on the business day that the debtor gives the instructing agent the SCP payment instruction.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For the purposes of subclause (1)—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period commences when the SCP settles; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period ends—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the instructing agent requires the instructed agent to send the creditor a beneficiary notification, when the instructed agent sends the beneficiary notification to the creditor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the instructing agent does not require the instructed agent to send the creditor a beneficiary notification, when the instructed agent credits the creditor&apos;s account with the amount of the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.5 Validating content of SCPs before sending</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must ensure that the SCP specifies one of the following to identify the creditor before sending the SCP for settlement:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a BIC; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>one of the account number types described in the applicable message standards.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>To comply with clause 1.5(1), the instructing agent must ensure the following before sending the SCP for settlement:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the SCP specifies a BIC for the creditor, the instructing agent:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>must ensure that the BIC contains a valid BIC (SWIFT validation); and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>is entitled to include an account number for the creditor but the instructing agent is not required to validate the account number in the manner described in clause 1.5(2)(c) of these SCP Procedures.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Clause 1.5(2)(b) has been deleted.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the SCP does not specify a BIC for the creditor and the SCP specifies an account number for the creditor, the instructing agent must ensure that the account number is a valid account number by:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>performing interchange number and branch number interlock checking;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ensuring that the account number passes check digit validation in accordance with appendix 3C of the SBI procedures; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ensuring that the format of the account number is valid in the manner set out in the applicable message standards.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the SCP specifies the creditor&apos;s email address for a beneficiary notification, the instructing agent must ensure that the format of the email address complies with the requirements set out in the applicable message standards.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent is required to validate any other content of the SCP before sending the SCP for settlement in the manner set out in the applicable message standards.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading2"/>
+            </w:pPr>
+            <w:r>
+                <w:t>SCP customer notifications</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.6 Overview of notifications for inter-bank SCPs</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A feature of the SCP product is the notifications that participants send to SCP customers on the  progress of SCPs.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following table identifies each notification type for an inter-bank SCP, the parties to the notification, the progress of the SCP to which the notification relates, and the clauses that specify requirements for the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Type</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Parties</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Progress</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Mandatory / Optional</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Clauses</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Remitter notification</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Instructing agent to debtor</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc></w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Optional</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1.7</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Sending confirmation</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Instructing agent to creditor</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t></w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Optional</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1.8</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Remitter confirmation</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Instructing agent to debtor</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Payment message delivered</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Optional</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1.9</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Beneficiary notification</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Instructed agent to creditor</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS payment credited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Mandatory</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>1.10</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The Remitter notification and Remitter confirmation notifications are both intended to communicate settlement to the debtor (at slightly different trigger points in the process). Participants should offer only one of these notifications to customers to avoid duplication of notifications.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following diagram shows when the notification is sent for an inter-bank SCP:</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.7 Remitter notification: SCP settled</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>It is optional for the instructing agent to offer the service of providing the debtor with a &apos;remitter notification&apos;.  A remitter notification service requires the instructing agent to notify the debtor that the instructing agent has settled the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent offers the debtor the remitter notification service and the instructing agent is required by the debtor to send a remitter notification, the instructing agent will notify the debtor that the instructing agent has settled the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent sends a remitter notification under subclause (2), the instructing agent—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>may only send the notification after the instructing agent has received a system message from the transaction delivery system confirming settlement of the SCP; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>must ensure that the remitter notification complies with the requirements in subclauses (4) to (7).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must send the remitter confirmation to the debtor as soon as practicable after the  instructing agent receives the system message confirming settlement of the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must send the remitter confirmation to the debtor by email.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent tries to notify the debtor using an email address but the email is not delivered (because, for example, the email address is not valid), the instructing agent is not required to—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>try to use the email address again to notify the debtor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>arrange to use another method of notification.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must ensure that the remitter notification contains the following as a minimum:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the instructing agent:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the date of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading containing the words &apos;Remitter notification&apos; clearly at the top of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a statement containing words with the following effect: &apos;We have sent the following same-day cleared  payment to the payee&apos;s financial institution to credit the account specified. Although we cannot  reverse the payment, the payment will be cleared funds only when the payee&apos;s financial institution  credits the payee&apos;s account with the amount of the payment.&apos;: </w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the debtor:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the creditor&apos;s account name or BIC: </w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>enough information to enable the debtor to identify the creditor&apos;s account number or, for a credit card or scheme debit card, the creditor&apos;s primary account number (see clause 1.11 of these SCP Procedures for guidance):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the amount of the payment (NZD):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading that states &apos;details&apos; or words with a similar meaning followed by the contents of the particulars field, code field, and reference field.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.8 Sending confirmation: SCP settled</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>It is optional for the instructing agent to offer the service of providing the creditor with a &apos;sending confirmation&apos;.  A sending confirmation service enables the debtor to require the instructing agent to notify the creditor that the instructing agent has settled the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent offers the sending confirmation service and the debtor of an SCP requires the instructing agent to send the creditor a sending confirmation, the instructing agent will notify the creditor that the instructing agent has settled the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent sends a sending confirmation under subclause (2), the instructing agent—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>may only send the sending confirmation after the instructing agent has received a system message from the transaction delivery system confirming settlement of the SCP; and </w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>must ensure that the sending confirmation complies with the requirements in subclauses (4) to (7).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must send the sending confirmation to the creditor as soon as practicable after the instructing agent receives the system message confirming settlement of the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must send the sending confirmation to the creditor by email.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent tries to notify the creditor using an email address but the email is not delivered (because, for example, the email address is not valid), the instructing agent is not required to—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>try to use the email address again to notify the creditor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>arrange to use another method of notification.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must ensure that the sending confirmation contains the following as a minimum:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the instructing agent:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the date of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading containing the  words &apos;Sending confirmation&apos; clearly at the top of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a statement containing words with the following effect: &apos;We have sent the following same-day cleared payment to your financial institution to credit the account specified. Although we cannot reverse the payment, the payment will be cleared funds only when your financial institution credits the payee&apos;s account with the amount of the payment.&apos;:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the debtor:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the creditor&apos;s account name or BIC:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>enough information to enable the creditor to identify the creditor&apos;s account number, or, for a credit card or scheme debit card, the creditor&apos;s primary account number (see clause 1.11 of these SCP Procedures for guidance):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the amount of the payment (NZD):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading that states &apos;details&apos; or words with a similar meaning followed by the contents of the particulars field, the code field and the reference field.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.9 Remitter confirmation: SCP instruction received</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>It is optional for the instructing agent to offer the service of providing a debtor with a &apos;remitter confirmation&apos;.  A remitter confirmation service requires the instructing agent to notify the debtor that the instructed agent has been instructed to credit the SCP to the creditor&apos;s account.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent offers the debtor the remitter confirmation service and the debtor of an SCP requires the instructing agent to send the debtor a remitter confirmation, the instructing agent will notify the debtor that the instructed agent been instructed to credit the SCP to the creditor&apos;s account.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent gives a remitter confirmation under subclause (2), the instructing agent—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>may only give the remitter confirmation notification after the instructing agent has received a &apos;delivery notification&apos; system message from the transaction delivery system confirming that SWIFT&apos;s system has effectively delivered the payment message or HVCS instruction to the instructed agent; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>must ensure that the remitter confirmation complies with the requirements for a remitter confirmation in subclauses (4) to (7).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must send the remitter confirmation to the debtor as soon as practicable after the instructing agent has received a system message from the transaction delivery system confirming that the additional settlement information from ESAS has been released to the instructed agent.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must send the remitter confirmation to a debtor by email.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent tries to send the debtor the remitter confirmation using an email address but the email is not delivered (because, for example, the email address is not valid), the instructing agent is not required to—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>try to use the email address again to notify the debtor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>arrange to use another method of notification.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must ensure that the remitter confirmation contains the following as a minimum:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the instructing agent:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the date of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading containing the words &apos;Remitter confirmation&apos; clearly at the top of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a statement containing words with the following effect: &quot;The following same-day cleared payment was delivered to the payee&apos;s financial institution to credit the account specified. Although we cannot reverse the payment, the payment will be cleared funds only when the payee&apos;s financial institution credits the payee&apos;s account with the amount of the payment.&apos;:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the debtor:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the creditor&apos;s account name or BIC:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>enough information to enable the debtor to identify the creditor&apos;s account number or, for a credit card or scheme debit card, the creditor&apos;s primary account number (see clause 1.11 of these SCP Procedures for guidance):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the amount of the payment (NZD):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading that states &apos;details&apos; or words with a similar meaning followed by the contents of the particulars field, the code field and the reference field.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.10 Beneficiary notification: SCP credited</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructing agent must require the instructed agent to notify the creditor that the instructed agent has credited the creditor&apos;s account with the amount of the SCP, if required to do so by the debtor (beneficiary notification).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructing agent requires the instructed agent to send a beneficiary notification, the instructed agent must notify the creditor in accordance with subclauses (3) to (5) as soon as practicable after crediting the creditor&apos;s account.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructed agent must send the beneficiary notification to the creditor in writing—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>by email; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>by a reasonably secure electronic communication method that is agreed to by the creditor.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the instructed agent tries to send the creditor the beneficiary notification using an email address but the email is not delivered (because, for example, the email address is not valid), the instructed agent is not required to—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>try to use the email address again to notify the creditor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>arrange to use another method of notification; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>tell the instructing agent that delivery failed; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ask the instructing agent to verify the email address provided by the instructing agent.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The instructed agent must ensure that the beneficiary notification contains the following as a minimum:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the instructed agent:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the date of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading containing words &apos;Beneficiary notification&apos; clearly at the top of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a statement containing words with the following effect: &apos;We have credited the following same-day cleared payment to the account specified. The payment is in cleared funds. We cannot return the payment and the payer&apos;s financial institution cannot reverse it.&apos;:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the debtor:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the creditor&apos;s account name or BIC:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>enough information to enable the creditor to identify the creditor&apos;s account number, or, for a credit card or scheme debit card, the creditor&apos;s primary account number (see clause 1.11 of these SCP Procedures for guidance):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the amount of the payment (NZD):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading that states &apos;details&apos; or words with a similar meaning followed by the contents of the particulars field, the code field and the reference field.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>1.11 SBI account number masking: minimum</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For each notification specified in this chapter, the following clauses require a participant sending the notification to ensure it contains enough information for the debtor or the creditor receiving the notification to identify the creditor&apos;s account being credited with the amount of the SCP:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>1.7(7)(g)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>1.8(7)(g)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>1.9(7)(g)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>1.10(5)(g)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>2.9(6)(g)</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The participant should:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the account is identified by an account number formatted in accordance with the applicable message standards, the components of the account number should be masked in accordance with the following table:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Component of account number</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Required for SCP notification?</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Interchange number</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Not required.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Branch number</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Yes: all 4 digits of the branch number.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Account number</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Yes: The final 4 digits of the account number and an asterisk substituted for each other digit of the account number to the left of the final 4 digits.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Suffix</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Yes: All 2/3 digits of the suffix.</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the account is identified by the creditor&apos;s primary account number (PAN) linked to a credit card or scheme debit card, the digits of the PAN are required to comply with PCI DSS standards for masking the PAN.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 2: On-us SCPs</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.1 Application of this chapter</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>This chapter applies to an SCP if the debtor and the creditor are customers of the same participant (on-us SCP).</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading2"/>
+            </w:pPr>
+            <w:r>
+                <w:t>On-us SCP processing</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.2 60 minute on-us SCP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A participant must ensure that the time period for processing an on-us SCP is no more than 60 minutes.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>For the purposes of subclause (1)—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period commences when the participant debits the debtor&apos;s account with the amount of the SCP; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the time period ends—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the participant notifies the creditor that it has credited the creditor&apos;s account with the amount of the SCP under clause 2.9 (on-us beneficiary notification), when the participant sends the on-us beneficiary notification to the creditor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>if the participant is not required to send an on-us beneficiary notification in accordance with  clause 2.9, when the participant credits the creditor&apos;s account with the amount of the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.3 Form, content, and delivery of on-us SCP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A participant may determine the form, content, and method of delivery of an SCP instruction from a debtor to the participant.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The participant will send the creditor an on-us beneficiary notification if required to do so by the debtor.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.4 Making an on-us SCP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A participant must make an on-us SCP by debiting the account of the debtor and crediting the account of the creditor with the amount of the SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.5 On-us SCP payment complete between debtor and creditor</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Crediting of the amount of an on-us SCP to the creditor&apos;s account is deemed to be receipt by the creditor from the debtor of cleared funds of the amount credited.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.6 No reversal after payment</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A participant must not, once an on-us SCP is credited to the creditor&apos;s account, reverse the on-us SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading2"/>
+            </w:pPr>
+            <w:r>
+                <w:t>On-us SCP customer notifications</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.7 Overview of notifications for on-us SCPs</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>A feature of the SCP product is the notifications that participants send to SCP customers on the progress of SCPs.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The following table identifies each notification type for an on-us SCP, the parties to the notification, the progress of the SCP to which the notification relates, and the clauses that specify requirements for the notification in this chapter of this document:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:tbl>
+                        <w:tblPr>
+                            <w:tblW w:type="pct" w:w="5000"/>
+                            <w:jc w:val="left"/>
+                            <w:tblBorders>
+                                <w:top w:val="single" w:sz="4" w:color="000000"/>
+                                <w:left w:val="single" w:sz="4" w:color="000000"/>
+                                <w:bottom w:val="single" w:sz="4" w:color="000000"/>
+                                <w:right w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideH w:val="single" w:sz="4" w:color="000000"/>
+                                <w:insideV w:val="single" w:sz="4" w:color="000000"/>
+                            </w:tblBorders>
+                        </w:tblPr>
+                        <w:tblGrid>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                            <w:gridCol w:w="1000"/>
+                        </w:tblGrid>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Type</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Parties</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Trigger</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Mandatory / Optional</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:rPr>
+                                            <w:b/>
+                                        </w:rPr>
+                                        <w:t>Clauses</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>On-us beneficiary notification</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Participant to creditor customer</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS payment credited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Optional</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>2.9</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                        <w:tr>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>On-us remitter confirmation</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Participant to debtor customer</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>HVCS payment credited</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>Optional</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                            <w:tc>
+                                <w:p>
+                                    <w:r>
+                                        <w:t>2.10</w:t>
+                                    </w:r>
+                                </w:p>
+                            </w:tc>
+                        </w:tr>
+                    </w:tbl>
+                    <w:p/>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.8 SBI account number masking: minimum</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>Please apply the same masking in accordance with clause 1.11(2) in these SCP Procedures.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.9 On-us beneficiary notification</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>It is optional for a participant to offer the service of providing the creditor with an &apos;on-us beneficiary notification&apos;.  An on-us beneficiary notification service requires the participant to notify the creditor that the participant has credited the creditor&apos;s account with the amount of the on-us SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the participant offers its customers an on-us beneficiary notification service and the debtor of an on-us SCP requires the participant to send the creditor an on-us beneficiary notification, the participant will notify the creditor that the participant has credited the creditor&apos;s account with the amount of the on-us SCP.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the participant sends an on-us beneficiary notification under subclause (1) the participant must—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ensure that the on-us beneficiary notification complies with the requirements in subclauses (3) to (5); and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>send the on-us beneficiary notification as soon as practicable after crediting the creditor&apos;s account; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>allow the creditor to rely on the on-us beneficiary notification as confirmation that—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the participant has credited the amount of the on-us SCP to the creditor&apos;s account;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the payment represents cleared funds and the participant cannot reverse the payment; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="3"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the participant cannot return the amount of the SCP to the debtor without the explicit consent of the creditor.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The participant must send the on-us beneficiary notification to the creditor by email.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the participant tries to send the creditor the on-us beneficiary notification using an email address but the email is not delivered (because, for example, the email address is not valid), the participant is not required to—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>try to use the email address again to notify the creditor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>arrange to use another method of notification; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ask the debtor to verify the email address provided by the debtor.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The participant must ensure that the on-us beneficiary notification contains the following as a minimum:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the participant:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the date of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading containing the words &apos;On-us Beneficiary notification&apos; clearly at the top of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a statement containing words with the following effect: &apos;We have credited the following same-day cleared payment to the account specified. The payment is in cleared funds and we cannot reverse it.&apos;:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the debtor:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the creditor&apos;s account name or BIC:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>enough information to enable the creditor to identify the creditor&apos;s account number, or, for a credit card or scheme debit card, the creditor&apos;s primary account number (see clause 1.11 of these SCP Procedures for guidance):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the amount of the payment (NZD):</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading that states &apos;details&apos; or words with a similar meaning followed by the contents of the particulars field, the code field and the reference field.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>2.10 Notifying debtor of status of on-us SCP</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the debtor of an on-us SCP asks a participant to notify the debtor of the status of the on-us SCP, the participant should notify the debtor in accordance with subclauses (2) to (5) (on-us remitter confirmation).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the debtor of an on-us SCP makes a request under sub-clause (1), the participant should give an on-us remitter confirmation to the debtor no more than 60 minutes after the debtor has made the request under sub-clause (1).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The participant should send an on-us remitter confirmation to the debtor by email.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>If the participant tries to send the debtor the on-us remitter confirmation using an email address but the email is not delivered (because, for example, the email address is not valid), the participant is not required to:—</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>try to use the email address again to notify the debtor; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>arrange to use another method of notification; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>ask the debtor to verify the email address provided by the debtor.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>The participant should ensure that the on-us remitter confirmation contains the following as a minimum:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the participant:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the date of the confirmation:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading containing the words &apos;On-us Remitter confirmation&apos; clearly at the top of the notification:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a statement containing the words with the following effect:</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:i/>
+                            </w:rPr>
+                            <w:t>&apos;We have processed the following same-day cleared payment for payment to the account specified. The payment is in cleared funds and we cannot reverse it.&apos;</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t xml:space="preserve"> </w:t>
+                        </w:r>
+                        <w:r>
+                            <w:t>:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the name of the debtor:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the creditor&apos;s account name or BIC: </w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>enough information to enable the debtor to identify the creditor&apos;s account number, or, for a credit card or scheme debit card, the creditor&apos;s primary account number:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>the amount of the payment (NZD): </w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>a heading that states &apos;details&apos; or words with a similar meaning followed by the contents of the particulars field, the code field and the reference field.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Heading1"/>
+            </w:pPr>
+            <w:r>
+                <w:t>Chapter 3: Customer terms and conditions</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.1 Ts &amp; Cs with debtor</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The terms and conditions between an HVCS participant and a customer who is the debtor of an SCP should contain the following terms and conditions:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>These Terms and Conditions are in addition to, and are without prejudice to, any other terms of use to which you are subject when using Same Day Cleared Payments (SCPs). If there is a conflict between these Terms and Conditions and any other terms of use for SCP to which you are subject, these Terms and Conditions will prevail to the extent of that conflict.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>WARNING — SCPs are intended to provide the payee with funds it can draw upon as soon as they are credited to the payee&apos;s account and are generally credited within 60 minutes of receiving the instruction. It is vital you take care in completing the payment instruction because you may not be able to recover any payments made as a result of your errors.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Authority:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>You may authorise the Bank to make a same day cleared payment to another person (the payee) on your behalf by giving the Bank a payment instruction:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>during same day cleared payment operating hours (operating hours);</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>in the form and in the way that the Bank notifies you of from time to time; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the same day cleared payment service is unavailable for any reason, including due to operational or technical difficulties.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The Bank will submit the same day cleared payment for processing on the same Business Day that the Bank receives the payment instruction from you. Unless you request otherwise, it will generally do this within [one hour] of receipt of your payment instruction. However, the Bank may not be able to process your payment instruction on the same Business Day if:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the Bank receives the payment instruction outside operating hours; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the same day cleared payment service is unavailable for any reason, including due to operational or technical difficulties.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The Bank does not have to act upon any payment instruction it receives from you including if:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the Bank cannot validate the account number you have instructed the Bank to make the same day cleared payment to;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the Bank has any reason to believe that the information contained in the payment instruction is not complete, accurate or correct; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the payment instruction is subject to any conditions.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>[You may revoke or amend your authority in respect of a same day cleared payment at any time until [the Bank has settled that payment instruction with the payee&apos;s bank] or [the Bank has submitted the same day cleared payment for processing].] OR [Once given, you may not revoke an SCP payment instruction.]</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Returned Payments:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payee&apos;s bank may return payments to the Bank for a number of reasons, even after you have received notification that the payee&apos;s bank has received the transaction (for example, because the payee&apos;s account has been closed or blocked). In this case, the funds will be re-credited to your account and the payee will not have received good value for the amount of the payment from you.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Your Obligations:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>You must ensure that all the information you provide the Bank in relation to your payment instruction is complete, accurate and correct.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>You must pay the Bank&apos;s fees for processing same day cleared payments and debiting your account.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The Bank may change these fees from time to time by giving you at least 14 days&apos; notice or such longer notice as is required by law.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Notifications:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>You may request any of the following notifications in relation to your payment instruction:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>notification to be provided to you or the payee when the Bank has received confirmation that the Bank has settled the payment with the payee&apos;s bank;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>notification to be provided to you when the Bank receives confirmation that the payee&apos;s bank has received the transaction; and/or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>notification to be provided to the payee [by the payee&apos;s bank] when the payee&apos;s bank has credited the funds into the payee&apos;s account.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Where you have requested that the Bank provides the notifications in (a) and/or (b) above, the Bank will notify you or the payee (as the case may be) as soon as reasonably possible after the Bank has received confirmation of the relevant matter. Where you have requested a notification under (c) above, the Bank will request that the payee&apos;s bank notifies the payee as soon as reasonably possible after the payee&apos;s account has been credited.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>Liability:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Except in the case of fraud, crediting the amount of a payment to the payee&apos;s account will deemed to be receipt by the payee from you of good value for the amount credited.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>Subject to the Bank acting with reasonable care and skill, the Bank is not liable for any loss (whether arising in contract, tort (including negligence), equity or otherwise) to you or anyone else, including indirect, consequential, or special damages or losses (including but not limited to loss of profit or loss of business opportunity) suffered or incurred as a result of:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>any payment that is credited to the wrong person because you have provided the wrong account number. Neither the Bank or the payee&apos;s bank are required to validate the account number with any other information you have provided such as the payee&apos;s name;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the Bank acting or failing to act in accordance with a same day cleared payment instruction, even if the Bank is advised, or becomes aware, of the possibility that such damage or loss has occurred or may occur;</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the unavailability of, or any failure in, the same day cleared payment service; </w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>any same day cleared payment not being credited to the payee&apos;s account by the payee&apos;s bank for any reason; and</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the payee not being notified by the payee&apos;s bank that the payment has been credited to the payee&apos;s account.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The Bank will take reasonable steps to remedy the mistake and refund you any fees paid for the processing of a payment instruction if:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the Bank fails to act with reasonable care on a payment instruction received from you; or</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>the Bank does not make the payment (except where the failure to make the payment is due to causes beyond the reasonable control of the Bank) in accordance with the information provided in the payment instruction, including by paying the wrong amount of money, paying the wrong account number or accidentally duplicating the payment.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>If, as a result of any error or omission on your part in completing the payment instructions (such as including the wrong account information), either the Bank or the payee&apos;s bank suffers a loss, you will be liable to compensate the Bank or the payee&apos;s bank for that loss.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>For the purposes of subpart 1 of Part 2 of the Contract and Commercial Law Act 2017, you acknowledge that these terms confer benefits on, and are intended to be enforceable by, the payee&apos;s bank.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:type="dxa" w:w="9638"/>
+                <w:jc w:val="left"/>
+                <w:tblInd w:type="dxa" w:w="0"/>
+                <w:tblLayout w:type="fixed"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1701"/>
+                <w:gridCol w:w="7937"/>
+            </w:tblGrid>
+            <w:tr>
+                <w:tc>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="0"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:b/>
+                            </w:rPr>
+                            <w:t>3.2 Ts &amp; Cs with creditor</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:p>
+                        <w:r>
+                            <w:t>The terms and conditions between an HVCS participant and a customer who is the creditor of an SCP should contain the terms and conditions:</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>When another person makes a same day cleared payment to you, the funds will be deposited into your account as cleared funds (usually within 60 minutes of the payer&apos;s account being debited). When the funds are credited to your account, the payment cannot be reversed by the payer, the payer&apos;s bank or us (except in our case in the circumstances discussed below). There are some circumstances in which we may receive a same day cleared payment intended for you but we are unable to process that payment and deposit the funds into your account (for example, if we are not provided with the correct account number). When this occurs, the funds will be returned to the  payer&apos;s bank. The payer or the payer&apos;s bank will need to correct the error before resending the same day cleared payment to us.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payer may have requested that their bank notify you when the same day cleared payment has been sent to us. You cannot rely on this notification as confirmation that you have cleared funds in your account. We may return the same day cleared payment to the payer&apos;s bank for a number of reasons (for example, if we are not provided with the correct account number).</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>The payer may also have requested that we notify you when we credit your account. You may rely on this notification as confirmation that you have received the same day cleared payment in cleared funds and that this cannot be reversed.</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t>If we have reasonable grounds to suspect that funds have been deposited into your account in error or as a result of fraud, you agree that we may freeze funds in your account to the value of the amount we believe has been credited in error or as a result of fraud. We will take reasonable steps to notify you in advance of the funds in your account being frozen. However, this may not always be possible. If following an appropriate investigation, we reasonably believe that the funds have been credited in error or as a result of fraud, you agree that we may debit your account with the amount of the funds. We will take reasonable steps to notify you in advance of your account being debited, although, this may not always be possible.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:sectPr>
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1417" w:bottom="1417" w:left="1247" w:right="1247"/>
+        </w:sectPr>
+    </w:body>
+</w:document>

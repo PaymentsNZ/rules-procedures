@@ -1,0 +1,62 @@
+import [
+	overview = "hvcs/overview.mixt"
+	common = "hvcs/common.mixt"
+	scp = "hvcs/scp.mixt"	
+	mx = "hvcs/mx.mixt"
+	mt = "hvcs/mt.mixt"
+	coexistence = "hvcs/coexistence.mixt"
+]
+
+#table(
+	[
+		"id"
+		"title"
+		"target"
+		"path"
+		"source"
+	]
+	[
+		[
+			"Overview"
+			"HVCS Overview"
+			"overview.html"
+			"docs/hvcs/"
+			overview
+		]
+		[
+			"Common"
+			"HVCS Common Procedures"
+			"common.html"
+			"docs/hvcs/"
+			common
+		]
+		[
+			"SCP"
+			"HVCS SCP Procedures"
+			"scp.html"
+			"docs/hvcs/"
+			scp
+		]
+		[
+			"MX"
+			"HVCS MX Procedures"
+			"mx.html"
+			"docs/hvcs/"
+			mx
+		]
+		[
+			"MT"
+			"HVCS MT Procedures"
+			"mt.html"
+			"docs/hvcs/"
+			mt
+		]
+		[
+			"Coexistence"
+			"HVCS Coexistence Procedures"
+			"coexistence.html"
+			"docs/hvcs/"
+			coexistence
+		]
+	]
+)

@@ -920,11 +920,11 @@
                                 <span class="doc-comment-initials">RK</span>
                             </div>
                             <div class="doc-comment-content">
-                                <p>Retained &apos;should&apos; in case not destined for HVCS.</p>
+                                <p>Retained &apos;must&apos; though qualified send requirements as limited to HVCS participants.</p>
                             </div>
                         </div>
-                        <li>Participants that receive MX pain messages from their customers destined for another participant
-			should create an MX payment message for that instruction;</li>
+                        <li>Participants that receive MX pain messages from their customers destined for another HVCS participant
+			must create an MX payment message for that instruction;</li>
                         <div class="doc-comment" data-change-id="UG2025">
                             <div class="doc-comment-meta">
                                 <span class="doc-comment-id">UG2025</span>
@@ -1252,6 +1252,15 @@
                     <p>It is possible that some MT payment messages which were sent before 22 November 2025 may be received by
 		participants for a short period on or after 22 November 2025, for example, if an MT payment message took
 		longer than expected to be sent through SWIFT&apos;s messaging system.</p>
+                    <p>Payments NZ discussed with the ISO 20022 Industry and Operational Working Group (ORWG) that during the
+		window immediately following go-live, Participants may receive MT payments from SWIFT that were held in a
+		SWIFT outbound sanctions queue at the time of go-live 22 November. These may be any of the MT payment types
+		or their return variants. Some Participants may be able to receive and process the incoming MT payment instruction;
+		some may not and would be forced to reject the payment instruction. If the payment was accepted, and subsequently
+		needed to be returned, it would have to be returned as a pacs.004.</p>
+                    <p>Payments NZ are highlighting the potential to receive these MT instructions though expect volumes will be low to
+		none. Payments NZ to not expect any Participant to build capability to handle this scenario and any occurrences to
+		be handled manually via operations teams.</p>
                 </div>
             </div>
             <div class="tag-standards"></div>

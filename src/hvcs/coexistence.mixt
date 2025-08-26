@@ -660,9 +660,9 @@ import [
 		)
 		`Participants that offer specific services to customers`
 		pnz::level2(
-			pnz::comment( "UG2025", "RK", "Retained 'should' in case not destined for HVCS." )
-			`Participants that receive MX pain messages from their customers destined for another participant
-			should create an MX payment message for that instruction;`
+			pnz::comment( "UG2025", "RK", "Retained 'must' though qualified send requirements as limited to HVCS participants." )
+			`Participants that receive MX pain messages from their customers destined for another HVCS participant
+			must create an MX payment message for that instruction;`
 			pnz::comment( "UG2025", "RK", "Revised to use MX" )
 			`Participants that receive an HVCS instruction from their customers as an MT message or other non-MX
 			message format destined for another HVCS participant must use an MX message.`
@@ -948,6 +948,17 @@ import [
 		`It is possible that some MT payment messages which were sent before 22 November 2025 may be received by
 		participants for a short period on or after 22 November 2025, for example, if an MT payment message took
 		longer than expected to be sent through SWIFT's messaging system.`
+
+		`Payments NZ discussed with the ISO 20022 Industry and Operational Working Group (ORWG) that during the
+		window immediately following go-live, Participants may receive MT payments from SWIFT that were held in a
+		SWIFT outbound sanctions queue at the time of go-live 22 November. These may be any of the MT payment types
+		or their return variants. Some Participants may be able to receive and process the incoming MT payment instruction;
+		some may not and would be forced to reject the payment instruction. If the payment was accepted, and subsequently
+		needed to be returned, it would have to be returned as a pacs.004.`
+		
+		`Payments NZ are highlighting the potential to receive these MT instructions though expect volumes will be low to
+		none. Payments NZ to not expect any Participant to build capability to handle this scenario and any occurrences to
+		be handled manually via operations teams.`
 	)
 
 	pnz::tag_standards

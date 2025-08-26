@@ -73,6 +73,36 @@ import [
 		]
 	)
 
+	// addTagBestPractice
+	addTagBestPractice = ( state as list ) => (
+		state & [
+			w::p = [
+				w::r = [
+					w::t = "Best Practice"
+				]
+			]	
+		]
+	)
+
+	// joinParagraphText
+	joinParagraphText = ( runs as list, t as text ) => (
+		if List.Count( runs ) == 0 then
+			runs & [
+				w::r = [
+					w::t = translateText( t )
+				]
+			]
+		else
+			runs & [
+				w::r = [
+					w::t = xml::attributed({ xml::space = "preserve" }, " " )
+				]
+				w::r = [
+					w::t = translateText( t )
+				]
+			]
+	)
+
 	// getParagraphText
 	getParagraphText = ( state as list, content as list ) => (
 		List.Accumulate(
@@ -84,21 +114,7 @@ import [
 				else if Value.Is( value, type list ) then
 					@getParagraphText( state, value )
 				else if Value.Is( value, type text ) then
-					if itemIndex == 0 then
-						state & [
-							w::r = [
-								w::t = translateText( value )
-							]
-						]
-					else
-						state & [
-							w::r = [
-								w::t = xml::attributed({ xml::space = "preserve" }, " " )
-							]
-							w::r = [
-								w::t = translateText( value )
-							]
-						]
+					joinParagraphText( state, value )
 				else
 					List.AddItem(
 						state
@@ -107,6 +123,25 @@ import [
 					)
 			)
 		)
+	)
+
+	// getParagraphs
+	getParagraphs = (value as list) => (
+		let
+			spans = List.Select(
+				value
+				(childValue as any, itemIndex as number, fieldName as text) => fieldName == "span"
+			)
+			paragraphs = (
+				if List.Count( spans ) == List.Count( value ) then
+					[
+						w::p = getParagraphText( [], value )
+					]
+				else
+					iterate( [], "paragraphs", value )
+			)
+		in
+			paragraphs
 	)
 
 	// addBulletsForLevel
@@ -170,7 +205,13 @@ import [
 					else if fieldName == "ul" then
 						addBullets( state, value )
 					else if fieldName == "div" then
-						@addNumberingForLevel( state, level, value )
+						let
+							class = getHtmlClass( value )
+						in
+							if class == "doc-comment" or class == "doc-question-content" then
+								state
+							else
+								@addNumberingForLevel( state, level, value )
 					else
 						state & [
 							w::p = [
@@ -213,10 +254,20 @@ import [
 			let
 				class = getHtmlClass( value )
 				added = (
-					if class == "section-heading" then
+					if class == "" and fieldName == "" then
+						state & [
+							w::p = [
+								w::r = [
+									w::t = translateText( value )
+								]
+							]
+						]
+					else if class == "section-heading" then
 						addSectionHeading( state, translateText( value ) )
 					else if class == "tag-commentary" then
 						addTagCommentary( state )
+					else if class == "tag-bestpractice" then
+						addTagBestPractice( state )
 					else if class == "tag-standards" then
 						addTagStandards( state )
 					else if class == "bullets" then
@@ -232,7 +283,7 @@ import [
 					else
 						List.AddItem(
 							state
-							fieldName
+							fieldName & "!!!"
 							translateText( value )
 						)
 				)
@@ -241,7 +292,8 @@ import [
 		else if skipOtherContent then
 			state
 		else
-			List.AddItem( state, fieldName, value )
+			// TODO: Add support for tables
+			List.AddItem( state, fieldName & "???", value )
 	)
 
 	// xmlAttributes
@@ -319,7 +371,7 @@ import [
 						]
 						w::tc = (
 							let
-								children = iterate( [], "", subsequent )
+								children = iterate( [], "clause", subsequent )
 							in
 								if List.Count(children) == 0 then
 									[
@@ -335,35 +387,80 @@ import [
 			result
 	)
 
+	// accumulatePieces
+	accumulatePieces = (l as list) => (
+		let
+			accumulated = List.Accumulate(
+				l,
+				{
+					runs = []
+					items = []
+				}
+				( state, value, itemIndex, fieldName ) => (
+					if value == null then
+						state
+					else if fieldName == "span" and Value.Is( value, type text ) then
+						state & {
+							runs = joinParagraphText( state{ runs }, value )
+						}
+					else 
+						let
+							combinedItems = (
+								if List.Count( state{ runs } ) == 0 then
+									state{ items }
+								else
+									state{ items } & [
+										w::p = state{ runs }
+									]
+							)
+							transformed = (
+								if Value.Is( value, type list ) then
+									@iterate( [], fieldName, value )
+								else if Value.Is( value, type record ) then
+									@iterate( [], fieldName, value )
+								else
+									translateValue( [], fieldName, itemIndex, value )
+							)
+						in
+							{
+								runs = []
+								items = combinedItems & transformed
+							}
+				)
+			)
+			// Handle if we finished with one or more spans
+			combined = (
+				if List.Count( accumulated{ runs } ) == 0 then
+					accumulated{ items }
+				else
+					accumulated{ items } & [
+						w::p = accumulated{ runs }
+					]
+			)
+		in
+			combined
+	)
+		
 	// iterate
 	iterate = (results as list, id as text, listOrRecord as any) => (
 		let
 			class = getHtmlClass( listOrRecord )
 			added = (
-				if class == "logo"  or class == "doc-comment" then
+				if class == "logo"  or class == "doc-comment" or class == "doc-question-content" then
 					results
 				else if class == "clause-row" then
 					results & addClause( listOrRecord )
 				else if Value.Is( listOrRecord, type list ) then
-					if id == "ol" and Text.StartsWith( class, "level1 " ) then
+					if List.Count( listOrRecord ) == 0 then
+						results
+					else if id == "ol" and Text.StartsWith( class, "level1" ) then
 						addNumbering( results, listOrRecord )
+					else if id == "ul" and Text.StartsWith( class, "bullets" ) then
+						addBullets( results, listOrRecord )
 					else if List.Count( listOrRecord ) == 0 then
 						results
 					else
-						List.Accumulate(
-							listOrRecord
-							results
-							( state, value, itemIndex, fieldName ) => (
-								if value == null then
-									state
-								else if Value.Is( value, type list ) then
-									@iterate( state, fieldName, value )
-								else if Value.Is( value, type record ) then
-									@iterate( state, fieldName, value )
-								else
-									translateValue( state, fieldName, itemIndex, value )
-							)
-						)				
+						results & accumulatePieces( listOrRecord )
 				else if Record.FieldCount( listOrRecord ) == 0 then
 					results
 				else
@@ -433,7 +530,7 @@ import [
 	// htmltodocx::translateDocument
 	htmltodocx::translateDocument = ( doc as list ) => (
 		let
-			body = iterate( [], "", doc )
+			body = iterate( [], "root", doc )
 			wrapped = wrapContents( body )
 			written = File.Write(
 				"translated.mixt"

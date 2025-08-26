@@ -585,6 +585,9 @@
                                 }
                             ]
                             w::r = [
+                                w::rPr = [
+                                    w::i = null
+                                ]
                                 w::t = "Part A - Overview."
                             ]
                         ]
@@ -821,6 +824,9 @@
                     w::tc = [
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "CBPR+"
                             ]
                             w::r = [
@@ -836,51 +842,234 @@
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Customer credit transfer message"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::t = "means the following payment messages used to facilitate an HVCS payment involving a customer of a participant:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
                                 w::t = "pacs.008"
                             ]
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Exception and investigation message"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::t = "message means an HVCS instruction sent between participants including:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
                                 w::t = "MT192;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "MT196"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "MT292;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "MT296"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "camt.056; or"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "camt.029"
                             ]
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "FI credit transfer message"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::t = "means the following payment messages used to facilitate an HVCS payment involving a participant or  financial institution customer of a participant:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
                                 w::t = "pacs.009; and"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "pacs.009COV"
                             ]
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "FIN message"
                             ]
                             w::r = [
@@ -896,6 +1085,9 @@
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "MT message"
                             ]
                             w::r = [
@@ -911,6 +1103,9 @@
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "MX message"
                             ]
                             w::r = [
@@ -926,6 +1121,9 @@
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
                                 w::t = "MX Message Specifications"
                             ]
                             w::r = [
@@ -941,80 +1139,297 @@
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "Return message"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::t = "message means the following payment messages used to facilitate the return of an HVCS payment:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
                                 w::t = "pacs.004"
                             ]
                         ]
                         w::p = [
                             w::r = [
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "SWIFT message"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::t = "message means messages that are sent through SWIFT including:"
+                            ]
+                        ]
+                        w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
+                            w::r = [
                                 w::t = "HVCS instruction;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "HVPS message;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "CBPR+; or"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "FIN message"
                             ]
                         ]
                         w::p = [
                             w::r = [
-                                w::t = "Is it safe to remove:"
+                                w::t = "UG2025"
+                            ]
+                            w::r = [
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
+                            ]
+                            w::r = [
+                                w::t = "JW"
                             ]
                         ]
                         w::p = [
                             w::r = [
-                                w::t = "- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired."
+                                w::rPr = [
+                                    w::b = null
+                                ]
+                                w::t = "System message"
                             ]
-                        ]
-                        w::p = [
                             w::r = [
-                                w::t = "- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered."
+                                w::t = " " meta {
+                                    xml::attributes = {
+                                        xml::space = "preserve"
+                                    }
+                                }
                             ]
-                        ]
-                        w::p = [
                             w::r = [
-                                w::t = "- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the <text-block>, and has been forced to abort it instead."
+                                w::t = "means a message sent to a participant through SWIFT in relation to an HVCS instruction including:"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "MT010;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "MT011;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "MT019;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "xsys.002;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "xsys.003;"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "xsys.010; or"
                             ]
                         ]
                         w::p = [
+                            w::pPr = [
+                                w::numPr = [
+                                    w::ilvl = null meta {
+                                        xml::attributes = {
+                                            w::val = 0
+                                        }
+                                    }
+                                    w::numId = null meta {
+                                        xml::attributes = {
+                                            w::val = 200
+                                        }
+                                    }
+                                ]
+                            ]
                             w::r = [
                                 w::t = "xsys.011"
                             ]
@@ -1476,6 +1891,49 @@
                                 w::t = "Instructing Agent"
                             ]
                         ]
+                        w::tbl = [
+                            w::tblPr = [
+                                w::tblW = null meta {
+                                    xml::attributes = {
+                                        w::type = "pct"
+                                        w::w = 5000
+                                    }
+                                }
+                                w::jc = null meta {
+                                    xml::attributes = {
+                                        w::val = "left"
+                                    }
+                                }
+                            ]
+                            w::tblGrid = [
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 5000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 5000
+                                    }
+                                }
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Action"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MX Obligations"
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
                         w::p = [
                             w::pPr = [
                                 w::numPr = [
@@ -1493,6 +1951,49 @@
                             ]
                             w::r = [
                                 w::t = "Instructed Agent"
+                            ]
+                        ]
+                        w::tbl = [
+                            w::tblPr = [
+                                w::tblW = null meta {
+                                    xml::attributes = {
+                                        w::type = "pct"
+                                        w::w = 5000
+                                    }
+                                }
+                                w::jc = null meta {
+                                    xml::attributes = {
+                                        w::val = "left"
+                                    }
+                                }
+                            ]
+                            w::tblGrid = [
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 5000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 5000
+                                    }
+                                }
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Action"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "MX Obligations"
+                                        ]
+                                    ]
+                                ]
                             ]
                         ]
                     ]
@@ -3261,6 +3762,49 @@
                         w::p = [
                             w::r = [
                                 w::t = "Participants who send and receive financial institution credit transfers during the CLS evening session are:"
+                            ]
+                        ]
+                        w::tbl = [
+                            w::tblPr = [
+                                w::tblW = null meta {
+                                    xml::attributes = {
+                                        w::type = "pct"
+                                        w::w = 5000
+                                    }
+                                }
+                                w::jc = null meta {
+                                    xml::attributes = {
+                                        w::val = "left"
+                                    }
+                                }
+                            ]
+                            w::tblGrid = [
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 5000
+                                    }
+                                }
+                                w::gridCol = null meta {
+                                    xml::attributes = {
+                                        w::w = 5000
+                                    }
+                                }
+                            ]
+                            w::tr = [
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Participants"
+                                        ]
+                                    ]
+                                ]
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "Date"
+                                        ]
+                                    ]
+                                ]
                             ]
                         ]
                     ]

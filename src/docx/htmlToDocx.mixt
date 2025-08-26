@@ -84,22 +84,49 @@ import [
 		]
 	)
 
+	// formatAndTranslateText
+	formatAndTranslateText = ( t as text ) => (
+		if Value.HasMetadata( t ) then
+			let
+				class = getHtmlClass( t )
+				style = (
+					if class == "bold" then
+						[
+							w::rPr = [
+								w::b = null
+							]
+						]
+					else if class == "italic" then
+						[
+							w::rPr = [
+								w::i = null
+							]
+						]
+					else
+						[]
+				)
+			in
+				style & [
+					w::t = translateText( t )
+				]
+		else
+			[
+				w::t = translateText( t )
+			]
+	)
+
 	// joinParagraphText
 	joinParagraphText = ( runs as list, t as text ) => (
 		if List.Count( runs ) == 0 then
 			runs & [
-				w::r = [
-					w::t = translateText( t )
-				]
+				w::r = formatAndTranslateText( t )
 			]
 		else
 			runs & [
 				w::r = [
 					w::t = xml::attributed({ xml::space = "preserve" }, " " )
 				]
-				w::r = [
-					w::t = translateText( t )
-				]
+				w::r = formatAndTranslateText( t )
 			]
 	)
 
@@ -175,9 +202,7 @@ import [
 									w::numId = xml::attributed( { w::val = defaultBullets } )
 								]
 							]
-							w::r = [
-								w::t = translateText( value )
-							]
+							w::r = formatAndTranslateText( value )
 						]
 					]
 				else
@@ -232,9 +257,7 @@ import [
 									w::numId = xml::attributed( { w::val = defaultNumbering } )
 								]
 							]
-							w::r = [
-								w::t = translateText( value )
-							]
+							w::r = formatAndTranslateText( value )
 						]
 					]
 				else
@@ -248,6 +271,39 @@ import [
 		addNumberingForLevel( state, 1, value )
 	)
 
+	// transformTable
+	transformTable = (state as list, t as table ) => (
+		let
+			columnNames = Table.ColumnNames( t )
+			columnCount = List.Count( columnNames )
+			transformed = [
+				w::tbl = [
+					w::tblPr = [
+						w::tblW = xml::attributed({ w::type = "pct", w::w = 5000 })
+						w::jc = xml::attributed({ w::val="left" }) // Alignment: left
+					]
+					w::tblGrid = List.Transform(
+						columnNames
+						(columnName) => #(w::gridCol = xml::attributed(
+							{ w::w = 5000 }
+						))
+					)
+					w::tr = List.Transform(
+						columnNames
+						(columnName) => #(w::tc = [
+							w::p = [
+								w::r = [
+									w::t = columnName
+								]
+							]
+						])
+					)
+				]
+			]
+		in
+			state // & transformed
+	)
+
 	// translateValue
 	translateValue = ( state as list, fieldName as text, itemIndex as number, value as any ) => (
 		if Value.Is( value, type text ) then
@@ -257,9 +313,7 @@ import [
 					if class == "" and fieldName == "" then
 						state & [
 							w::p = [
-								w::r = [
-									w::t = translateText( value )
-								]
+								w::r = formatAndTranslateText( value )
 							]
 						]
 					else if class == "section-heading" then
@@ -289,17 +343,18 @@ import [
 				)
 			in
 				added
+		else if Value.Is( value, type list ) then
+			iterate( state, fieldName, value )
+		else if Value.Is( value, type record ) then
+			iterate( state, fieldName, value )
+		else if Value.Is( value, type table ) then
+			transformTable( state, value )
 		else if skipOtherContent then
 			state
 		else
 			// TODO: Add support for tables
 			List.AddItem( state, fieldName & "???", value )
 	)
-
-	// xmlAttributes
-	xmlAttributes = (r as record) => null meta {
-		xml::attributes = r
-	}
 
 	// getClauseNumber
 	getClauseNumber = ( value as any ) => (
@@ -442,34 +497,36 @@ import [
 	)
 		
 	// iterate
-	iterate = (results as list, id as text, listOrRecord as any) => (
+	iterate = (results as list, id as text, container as any) => (
 		let
-			class = getHtmlClass( listOrRecord )
+			class = getHtmlClass( container )
 			added = (
 				if class == "logo"  or class == "doc-comment" or class == "doc-question-content" then
 					results
 				else if class == "clause-row" then
-					results & addClause( listOrRecord )
-				else if Value.Is( listOrRecord, type list ) then
-					if List.Count( listOrRecord ) == 0 then
+					results & addClause( container )
+				else if Value.Is( container, type list ) then
+					if List.Count( container ) == 0 then
 						results
 					else if id == "ol" and Text.StartsWith( class, "level1" ) then
-						addNumbering( results, listOrRecord )
+						addNumbering( results, container )
 					else if id == "ul" and Text.StartsWith( class, "bullets" ) then
-						addBullets( results, listOrRecord )
-					else if List.Count( listOrRecord ) == 0 then
+						addBullets( results, container )
+					else if List.Count( container ) == 0 then
 						results
 					else
-						results & accumulatePieces( listOrRecord )
-				else if Record.FieldCount( listOrRecord ) == 0 then
+						results & accumulatePieces( container )
+				else if Value.Is( container, type table ) then
+					transformTable( results, container )
+				else if Record.FieldCount( container ) == 0 then
 					results
 				else
 					List.Accumulate(
-						Record.FieldNames( listOrRecord )
+						Record.FieldNames( container )
 						results
 						( state, fieldName, itemIndex ) => (
 							let
-								value = Record.Field( listOrRecord, fieldName )
+								value = Record.Field( container, fieldName )
 								result = (
 									if value == null then
 										state

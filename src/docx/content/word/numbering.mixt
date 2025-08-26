@@ -29,7 +29,7 @@ import [
 							w::start = xml::attributed({ w::val = 1 })
 							w::numFmt = xml::attributed({ w::val = "decimal" })
 							w::lvlText = xml::attributed({ w::val = "" })
-							w::suff = xml::attributed({ w::val = "none" })
+							w::suff = xml::attributed({ w::val = "tab" })
 							w::pPr = [
 								w::ind = xml::attributed({ w::left = 0, w::hanging = 0 })
 							]
@@ -100,14 +100,13 @@ import [
 						[
 							w::start = xml::attributed({ w::val = 1 })
 							w::numFmt = xml::attributed({ w::val = "bullet" })
-							w::lvlText = xml::attributed({ w::val = "•" })  // U+2022
+							w::lvlText = xml::attributed({ w::val = "\u2022" })  // U+2022 = •
 							w::suff = xml::attributed({ w::val = "tab" })
 							w::pPr = [
-								w::ind = xml::attributed({ w::left = 720, w::hanging = 360 })
+								w::ind = xml::attributed({ w::left = 430, w::hanging = 430 })
 							]
-							// ensure the bullet uses Symbol font everywhere
 							w::rPr = [
-								w::rFonts = xml::attributed({ w::ascii = "Symbol", w::hAnsi = "Symbol" })
+								w::rFonts = xml::attributed({ w::ascii = "Calibri", w::hAnsi = "Calibri" })
 							]
 						]
 					)
@@ -118,13 +117,13 @@ import [
 						[
 							w::start = xml::attributed({ w::val = 1 })
 							w::numFmt = xml::attributed({ w::val = "bullet" })
-							w::lvlText = xml::attributed({ w::val = "◦" })  // U+25E6 (alternatives: "○" U+25CB or "o")
+							w::lvlText = xml::attributed({ w::val = "\u25E6" })  // U+25E6 = ◦
 							w::suff = xml::attributed({ w::val = "tab" })
 							w::pPr = [
-								w::ind = xml::attributed({ w::left = 1440, w::hanging = 360 })
+								w::ind = xml::attributed({ w::left = 860, w::hanging = 430 })
 							]
 							w::rPr = [
-								w::rFonts = xml::attributed({ w::ascii = "Symbol", w::hAnsi = "Symbol" })
+								w::rFonts = xml::attributed({ w::ascii = "Calibri", w::hAnsi = "Calibri" })
 							]
 						]
 					)
@@ -139,7 +138,10 @@ import [
 							w::suff = xml::attributed({ w::val = "tab" })
 							w::lvlJc = xml::attributed({ w::val = "left" })
 							w::pPr = [
-								w::ind = xml::attributed({ w::left = 2160, w::hanging = 360 })
+								w::ind = xml::attributed({ w::left = 1290, w::hanging = 430 })
+							]
+							w::rPr = [
+								w::rFonts = xml::attributed({ w::ascii = "Calibri", w::hAnsi = "Calibri" })
 							]
 						]
 					)

@@ -45,10 +45,7 @@
                             </w:numPr>
                         </w:pPr>
                         <w:r>
-                            <w:t>This document HVCS Common Procedures (Part B) is one part of a suite of documentation to help
-			participants understand what is required to become a high value clearing system (HVCS) participant
-			and how to send and receive individual HVCS instructions and NZD HVCS payments that the participant
-			cannot revoke or reverse after settlement.</w:t>
+                            <w:t>This document HVCS Common Procedures (Part B) is one part of a suite of documentation to help participants understand what is required to become a high value clearing system (HVCS) participant and how to send and receive individual HVCS instructions and NZD HVCS payments that the participant cannot revoke or reverse after settlement.</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -85,60 +82,78 @@
                             </w:numPr>
                         </w:pPr>
                         <w:r>
-                            <w:t>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9).
-			Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants
-			to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs)
-			through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</w:t>
+                            <w:t>This document should be read in conjunction with the Payments NZ Rules (in particular, Part 9). Part 9 contains the HVCS clearing and settlement rules which specify the requirements for participants to create, exchange, settle, deliver and receive HVCS instructions and make HVCS payments (including SCPs) through HVCS. Part 2 contains the access and participation rules for an entity to join HVCS.</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
                         <w:r>
-                            <w:t>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants
-			comply with Part 9 are comprised of:</w:t>
+                            <w:t>In addition to the Rules, the applicable HVCS standards (Appendix 14) which specify how participants comply with Part 9 are comprised of:</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
                             <w:t>Part A — HVCS Overview</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
-                            <w:t>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and
-					settlement works, and the business, technical, and regulatory environment in which the process
-					operates.  This is a non-binding document for use as guidance only.</w:t>
+                            <w:t>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and settlement works, and the business, technical, and regulatory environment in which the process operates.  This is a non-binding document for use as guidance only.</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
                             <w:t>Part B — HVCS Common Procedures (this document)</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
-                            <w:t>Provides binding procedures and product requirements that apply to all HVCS instructions at all
-					times.  This document also contains some non-binding commentary and best practice.</w:t>
+                            <w:t>Provides binding procedures and product requirements that apply to all HVCS instructions at all times.  This document also contains some non-binding commentary and best practice.</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
                             <w:t>Part C — SCP Procedures</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
-                            <w:t>Provides binding procedures and product requirements that apply only to an HVCS instruction that
-					is a same day cleared payment.  This document also contains some non-binding commentary and best
-					practice, such as recommended terms and conditions with customers.</w:t>
+                            <w:t>Provides binding procedures and product requirements that apply only to an HVCS instruction that is a same day cleared payment.  This document also contains some non-binding commentary and best practice, such as recommended terms and conditions with customers.</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
                             <w:t>Part D — MX Messaging Procedures</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
-                            <w:t>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022
-					messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and
-					best practice.</w:t>
+                            <w:t>Provides binding procedures on how to send and receive MX messages (ie, NZ HVCS ISO 20022 messages) across the HVCS MX CUG.  This document also contains some non-binding commentary and best practice.</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
                             <w:t>Part E — MT Messaging Procedures</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
-                            <w:t>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022
-					messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and
-					best practice.</w:t>
+                            <w:t>Provides binding procedures on how to send and receive MT messages (ie, NZ HVCS ISO 15022 messages) across the HVCS MT CUG.  This document also contains some non-binding commentary and best practice.</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
                             <w:t>Part F — Co-existence Procedures</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
                         <w:r>
-                            <w:t>Provides binding procedures for participants during the co-existence phase of the migration from
-					sending and receiving MT messages to MX messages.</w:t>
+                            <w:t>Provides binding procedures for participants during the co-existence phase of the migration from sending and receiving MT messages to MX messages.</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -178,8 +193,7 @@
                             </w:numPr>
                         </w:pPr>
                         <w:r>
-                            <w:t>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14
-			creates binding legal rights or obligations, please see</w:t>
+                            <w:t>For information on how to determine whether the content of an applicable HVCS standard in Appendix 14 creates binding legal rights or obligations, please see</w:t>
                         </w:r>
                         <w:r>
                             <w:t>Part A - Overview.</w:t>
@@ -551,9 +565,25 @@
                         <w:r>
                             <w:t>UG2025</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
                         <w:r>
                             <w:t>RK</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
                         <w:r>
                             <w:t>Removed MT Obligations</w:t>
                         </w:r>
@@ -579,9 +609,25 @@
                         <w:r>
                             <w:t>UG2025</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
                         <w:r>
                             <w:t>RK</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="1"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
                         <w:r>
                             <w:t>Removed MT Obligations</w:t>
                         </w:r>
@@ -682,9 +728,25 @@
                         <w:r>
                             <w:t>UG2025</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
                         <w:r>
                             <w:t>RK</w:t>
                         </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:pPr>
+                            <w:numPr>
+                                <w:ilvl w:val="2"/>
+                                <w:numId w:val="100"/>
+                            </w:numPr>
+                        </w:pPr>
                         <w:r>
                             <w:t>Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications.</w:t>
                         </w:r>

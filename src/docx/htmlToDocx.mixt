@@ -84,11 +84,21 @@ import [
 				else if Value.Is( value, type list ) then
 					@getParagraphText( state, value )
 				else if Value.Is( value, type text ) then
-					state & [
-						w::r = [
-							w::t = value
+					if itemIndex == 0 then
+						state & [
+							w::r = [
+								w::t = translateText( value )
+							]
 						]
-					]
+					else
+						state & [
+							w::r = [
+								w::t = xml::attributed({ xml::space = "preserve" }, " " )
+							]
+							w::r = [
+								w::t = translateText( value )
+							]
+						]
 				else
 					List.AddItem(
 						state
@@ -138,7 +148,7 @@ import [
 				else
 					translateValue( state, fieldName, itemIndex, value )
 			)
-		)		
+		)
 	)
 
 	// addBullets
@@ -157,6 +167,10 @@ import [
 				else if Value.Is( value, type list ) then
 					if fieldName == "ol" then
 						@addNumberingForLevel( state, level + 1, value )
+					else if fieldName == "ul" then
+						addBullets( state, value )
+					else if fieldName == "div" then
+						@addNumberingForLevel( state, level, value )
 					else
 						state & [
 							w::p = [
@@ -297,8 +311,7 @@ import [
 									[]
 								else
 									[
-										w::r =
-										[
+										w::r = [
 											w::t = fullClause
 										]
 									]

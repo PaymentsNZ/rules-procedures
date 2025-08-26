@@ -17,6 +17,6 @@ let
 		Xml.FromValue(translated)
 	)	
 in
-	//writtenDOCX
-	writtenMIXT
+	writtenDOCX
+	//writtenMIXT
 	//writtenXml

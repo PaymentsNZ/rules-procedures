@@ -10,8 +10,8 @@ let
 	targetFormat = "docx"
 
 	//selector = null
-	selector = (id as text) => true
-	//selector = (id as text) => (id == "SCP")
+	//selector = (id as text) => true
+	selector = (id as text) => (id == "Overview")
 
 	docSet = Table.ToRecords(
 		if selector == null then

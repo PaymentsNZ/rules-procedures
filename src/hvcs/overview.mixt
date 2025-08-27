@@ -459,7 +459,7 @@ import [
 						"9.10"
 					]
 					[
-						`3`
+						3
 						`SWIFT's transaction delivery system sends a settlement request to ESAS.`
 						`N/A`
 					]
@@ -469,7 +469,7 @@ import [
 							`ESAS—`
 							pnz::dashes(
 								`settles the HVCS payment by debiting the instructing agent's settlement account
-								andcrediting the instructed agent's settlement account with the amount of the
+								and crediting the instructed agent's settlement account with the amount of the
 								HVCS payment; and`
 								`notifies SWIFT's transaction delivery system of settlement of the HVCS payment.`
 							)
@@ -477,12 +477,12 @@ import [
 						"9.13"
 					]
 					[
-						`5`
+						5
 						`The transaction delivery system delivers the payment message to the instructed agent.`
 						`N/A`
 					]
 					[
-						`6`
+						6
 						`The instructed agent credits the creditor's account.`
 						`N/A`
 					]
@@ -770,6 +770,8 @@ import [
 			)
 		)
 	)
+
+	pnz::subsection_heading( "Customer credit transfer (non-SCP)" )
 
 	pnz::clause(
 		"3.6"
@@ -1396,7 +1398,7 @@ import [
 		"5.3"
 		"Roles within the sequence of a payment"
 
-		`is important to be familiar with the terminology used in MX messaging Technical Terms for a definition
+		`It is important to be familiar with the terminology used in MX messaging Technical Terms for a definition
 		of the terms below.`
 	)
 

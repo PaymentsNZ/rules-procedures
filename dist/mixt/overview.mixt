@@ -3376,7 +3376,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -3393,7 +3399,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "2"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -3433,7 +3445,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "4"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -3442,7 +3460,7 @@
                                     ]
                                     w::p = [
                                         w::r = [
-                                            w::t = "settles the HVCS payment by debiting the instructing agent's settlement account andcrediting the instructed agent's settlement account with the amount of the HVCS payment; and"
+                                            w::t = "settles the HVCS payment by debiting the instructing agent's settlement account and crediting the instructed agent's settlement account with the amount of the HVCS payment; and"
                                         ]
                                     ]
                                     w::p = [
@@ -4512,8 +4530,12 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
-                    w::tc = []
+                    w::tc = [
+                        w::p = null
+                    ]
+                    w::tc = [
+                        w::p = null
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -4623,7 +4645,9 @@
                             ]
                         ]
                     ]
-                    w::tc = []
+                    w::tc = [
+                        w::p = null
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -4784,7 +4808,9 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = null
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -5341,7 +5367,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5351,7 +5383,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "2"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5366,7 +5404,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "3"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5381,7 +5425,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "4"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5393,6 +5443,18 @@
                         ]
                         w::p = null
                     ]
+                ]
+            ]
+            w::p = [
+                w::pPr = [
+                    w::pStyle = null meta {
+                        xml::attributes = {
+                            w::val = "Heading2"
+                        }
+                    }
+                ]
+                w::r = [
+                    w::t = "Customer credit transfer (non-SCP)"
                 ]
             ]
             w::tbl = [
@@ -5743,7 +5805,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "1"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5753,7 +5821,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "2"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5768,7 +5842,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "3"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5778,7 +5858,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "4"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -5793,7 +5879,13 @@
                                 ]
                             ]
                             w::tr = [
-                                w::tc = []
+                                w::tc = [
+                                    w::p = [
+                                        w::r = [
+                                            w::t = "5"
+                                        ]
+                                    ]
+                                ]
                                 w::tc = [
                                     w::p = [
                                         w::r = [
@@ -6132,7 +6224,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "1"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6185,7 +6283,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "2"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6195,7 +6299,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "3"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6205,7 +6315,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "4"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6215,7 +6331,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "5"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6530,7 +6652,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "1"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6540,7 +6668,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "2"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6588,7 +6722,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "3"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6598,7 +6738,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "4"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6608,7 +6754,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "5"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -6618,7 +6770,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "6"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -7264,7 +7422,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "1"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -7274,7 +7438,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "2"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -7284,7 +7454,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "3"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -7294,7 +7470,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "4"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -7304,7 +7486,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "5"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -7765,45 +7953,6 @@
                             ]
                             w::r = [
                                 w::t = "the requirements for participating in the CUG, and"
-                            ]
-                        ]
-                        w::p = [
-                            w::pPr = [
-                                w::numPr = [
-                                    w::ilvl = null meta {
-                                        xml::attributes = {
-                                            w::val = 0
-                                        }
-                                    }
-                                    w::numId = null meta {
-                                        xml::attributes = {
-                                            w::val = 200
-                                        }
-                                    }
-                                ]
-                            ]
-                            w::r = [
-                                w::t = "UG2025"
-                            ]
-                            w::r = [
-                                w::t = " " meta {
-                                    xml::attributes = {
-                                        xml::space = "preserve"
-                                    }
-                                }
-                            ]
-                            w::r = [
-                                w::t = "RK"
-                            ]
-                            w::r = [
-                                w::t = " " meta {
-                                    xml::attributes = {
-                                        xml::space = "preserve"
-                                    }
-                                }
-                            ]
-                            w::r = [
-                                w::t = "Removed refereence to 'or SWIFT NetCopy'"
                             ]
                         ]
                         w::p = [
@@ -8889,7 +9038,9 @@
                             ]
                         ]
                     ]
-                    w::tc = []
+                    w::tc = [
+                        w::p = null
+                    ]
                 ]
                 w::tr = [
                     w::tc = [
@@ -8993,7 +9144,7 @@
                                 ]
                             ]
                             w::r = [
-                                w::t = "is important to be familiar with the terminology used in MX messaging Technical Terms for a definition of the terms below."
+                                w::t = "It is important to be familiar with the terminology used in MX messaging Technical Terms for a definition of the terms below."
                             ]
                         ]
                     ]
@@ -9107,7 +9258,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "1"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9124,7 +9281,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "2"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9141,7 +9304,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "3"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9158,7 +9327,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "4"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9175,7 +9350,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "5"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9192,7 +9373,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "6"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9209,7 +9396,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "7"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9226,7 +9419,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "8"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9243,7 +9442,13 @@
                     ]
                 ]
                 w::tr = [
-                    w::tc = []
+                    w::tc = [
+                        w::p = [
+                            w::r = [
+                                w::t = "9"
+                            ]
+                        ]
+                    ]
                     w::tc = [
                         w::p = [
                             w::r = [
@@ -9524,45 +9729,6 @@
                             ]
                             w::r = [
                                 w::t = "Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a designated FMI) which could cover clearing and settlement requirements;"
-                            ]
-                        ]
-                        w::p = [
-                            w::pPr = [
-                                w::numPr = [
-                                    w::ilvl = null meta {
-                                        xml::attributes = {
-                                            w::val = 0
-                                        }
-                                    }
-                                    w::numId = null meta {
-                                        xml::attributes = {
-                                            w::val = 200
-                                        }
-                                    }
-                                ]
-                            ]
-                            w::r = [
-                                w::t = "UG2025"
-                            ]
-                            w::r = [
-                                w::t = " " meta {
-                                    xml::attributes = {
-                                        xml::space = "preserve"
-                                    }
-                                }
-                            ]
-                            w::r = [
-                                w::t = "MT"
-                            ]
-                            w::r = [
-                                w::t = " " meta {
-                                    xml::attributes = {
-                                        xml::space = "preserve"
-                                    }
-                                }
-                            ]
-                            w::r = [
-                                w::t = "Added next two examples."
                             ]
                         ]
                         w::p = [
@@ -10817,7 +10983,9 @@
                             ]
                         ]
                     ]
-                    w::tc = []
+                    w::tc = [
+                        w::p = null
+                    ]
                 ]
                 w::tr = [
                     w::tc = [
@@ -10827,7 +10995,9 @@
                             ]
                         ]
                     ]
-                    w::tc = []
+                    w::tc = [
+                        w::p = null
+                    ]
                 ]
                 w::tr = [
                     w::tc = [

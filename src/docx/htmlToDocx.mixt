@@ -226,36 +226,44 @@ import [
 			paragraphs
 			state
 			( state, value, itemIndex, fieldName ) => (
-				if value == null then
-					state
-				else if Value.Is( value, type list ) then
-					if fieldName == "ul" then
-						@addBulletsForLevel( state, level + 1, value )
-					else
-						state & [
-							w::p = [
-								w::pPr = [
-									w::numPr = [
-										w::ilvl = xml::attributed( { w::val = level } )
-										w::numId = xml::attributed( { w::val = defaultBullets } )
-									]
+				let
+					class = getHtmlClass( value )
+					result = (
+						if value == null then
+							state
+						else if class == "doc-comment" or class == "doc-question" then
+							state
+						else if Value.Is( value, type list ) then
+							if fieldName == "ul" then
+								@addBulletsForLevel( state, level + 1, value )
+							else
+								state & [
+									w::p = [
+										w::pPr = [
+											w::numPr = [
+												w::ilvl = xml::attributed( { w::val = level } )
+												w::numId = xml::attributed( { w::val = defaultBullets } )
+											]
+										]
+									] & getParagraphText( [], value )
 								]
-							] & getParagraphText( [], value )
-						]
-				else if Value.Is( value, type text ) then
-					state & [
-						w::p = [
-							w::pPr = [
-								w::numPr = [
-									w::ilvl = xml::attributed( { w::val = level } )
-									w::numId = xml::attributed( { w::val = defaultBullets } )
+						else if Value.Is( value, type text ) then
+							state & [
+								w::p = [
+									w::pPr = [
+										w::numPr = [
+											w::ilvl = xml::attributed( { w::val = level } )
+											w::numId = xml::attributed( { w::val = defaultBullets } )
+										]
+									]
+									w::r = formatAndTranslateText( value )
 								]
 							]
-							w::r = formatAndTranslateText( value )
-						]
-					]
-				else
-					transformValue( state, fieldName, itemIndex, value )
+						else
+							transformValue( state, fieldName, itemIndex, value )
+					)
+				in
+					result
 			)
 		)
 	)
@@ -429,6 +437,12 @@ import [
 				)
 			in
 				added
+		else if Value.Is( value, type number ) then
+			state & [
+				w::p = [
+					w::r = formatAndTranslateText( Text.From( value) )
+				]
+			]		
 		else if Value.Is( value, type list ) then
 			iterate( state, fieldName, value )
 		else if Value.Is( value, type record ) then

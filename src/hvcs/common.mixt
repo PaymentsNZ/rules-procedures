@@ -167,7 +167,7 @@ import [
 		[
 			pnz::bold( "Exception and investigation message" )
 			pnz::text(
-				`message means an HVCS instruction sent between participants including:`
+				`means an HVCS instruction sent between participants including:`
 			)
 			pnz::bullets(
 				`MT192;`
@@ -222,7 +222,7 @@ import [
 		[
 			pnz::bold( "Return message" )
 			pnz::text(
-				`message means the following payment messages used to facilitate the return of an HVCS payment:`
+				`means the following payment messages used to facilitate the return of an HVCS payment:`
 			)
 			pnz::bullets(
 				`pacs.004`
@@ -231,7 +231,7 @@ import [
 		[
 			pnz::bold( "SWIFT message" )
 			pnz::text(
-				`message means messages that are sent through SWIFT including:`
+				`means messages that are sent through SWIFT including:`
 			)
 			pnz::bullets(
 				`HVCS instruction;`
@@ -919,8 +919,6 @@ import [
 		payment.`
 	)
 
-	pnz::tag_bestpractice
-
 	pnz::clause(
 		"2.3"
 		"Instructed agent credits wrong account"
@@ -1008,8 +1006,6 @@ import [
 		to send an HVCS instruction after 16:45. The diagram has no legal effect.`
 	)
 	pnz::image( "images/hvcs_common_late_processing.png", "Late Processing" )
-
-	pnz::tag_standards
 
 	pnz::clause(
 		"3.2"

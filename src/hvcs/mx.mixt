@@ -1166,7 +1166,7 @@ import [
 		`A hybrid address allows simultaneous usage of structured and unstructured elements, with
 		a minimum of structured Town Name and Country.`
 
-		`A maximum of two occurences of Address Line is permitted within a postal address, and any
+		`A maximum of two occurrences of Address Line is permitted within a postal address, and any
 		information contained within the structured postal address elements must not be repeated
 		within the unstructured address lines.`
 	)
@@ -1298,7 +1298,7 @@ import [
 		`While ISO 20022 base standards support non-Latin characters, CBPR+ will only
 		support Latin characters in the initial service implementation.`
 
-		`Non-Latin characters (including Mandarin, Cantonese, Arabic, Cyrillic character
+		`Non-Latin characters (including Mandarin, Cantonese, Arabic, Cyrillic characters
 		 etc.) are not to be used. Translation of these, or any special character (noting
 		 exceptions above) will be represented by a . (Full Stop).`
 
@@ -1333,7 +1333,7 @@ import [
 
 		pnz::comment( "UG2025", "RK", "Capitalised: 'MX Message Specifications'" )
 		`The following table shows the macron characters that are included in the MX Message
-		Sspecification along with their Unicode value:`
+		Specification along with their Unicode value:`
 
 		pnz::table(
 			#table(
@@ -1445,9 +1445,9 @@ import [
 			represent particulars, code, and reference information ('PCR') as follows:`
 			
 			pnz::level3(
-				`occurence 1: particulars;`
-				`occurence 2: code;`
-				`occurence 3: reference; and`
+				`occurrence 1: particulars;`
+				`occurrence 2: code;`
+				`occurrence 3: reference; and`
 			)
 			
 			`the value provided within each additional remittance information element can be longer than 12 characters,
@@ -2159,7 +2159,7 @@ import [
 							pnz::bold( "Note:" )
 							pnz::text(
 								`This is only provided if the payment message passes initial validation but
-								issubsequently rejected by ESAS (i.e. due to insufficient liquidity).`
+								is subsequently rejected by ESAS (i.e. due to insufficient liquidity).`
 							)
 						]
 					]
@@ -2315,7 +2315,7 @@ import [
 				]
 				[
 					65
-					`The payment message was rejected due to insufficient funds (EOD cancellation).`
+					`The payment message was cancelled by the account holder.`
 				]
 				[
 					66

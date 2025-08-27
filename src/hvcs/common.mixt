@@ -779,7 +779,7 @@ import [
 							`Has been sent an HVCS instruction:`
 							pnz::bullets(
 								[
-									pnz::text( "A customer credit transfer message — " )
+									pnz::text( "As a customer credit transfer message — " )
 									pnz::bold( "cross border redirection" )
 									pnz::text( "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)" )
 								]

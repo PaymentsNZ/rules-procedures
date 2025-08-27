@@ -422,7 +422,7 @@ import [
 			`a statement containing words with the following effect: 'We have sent the following same-day
 			cleared payment to your financial institution to credit the account specified. Although we cannot
 			reverse the payment, the payment will be cleared funds only when your financial institution
-			credits the payee's account with the amount of the payment.':`
+			credits the payee's account with the amount of the payment.:`
 
 			`the name of the debtor:`
 

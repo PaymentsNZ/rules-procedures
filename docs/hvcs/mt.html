@@ -81,7 +81,7 @@
                             <a href="#1.3-other-fin-message-types">1.3 Other FIN message types</a>
                         </li>
                         <li>
-                            <a href="#1.4-message-lifecycle-as-this-relates-to-payments">1.4 Message lifecycle, as this relates to payments</a>
+                            <a href="#1.4-message-lifecycle">1.4 Message lifecycle</a>
                         </li>
                     </ul>
                 </details>
@@ -217,7 +217,7 @@
                         <li>Part A — HVCS Overview</li>
                         <ul>
                             <li>Provides a high-level overview of the HVCS community, message types, how HVCS clearing and 
-				ettlement works, and the business, technical, and regulatory environment in which the process
+				settlement works, and the business, technical, and regulatory environment in which the process
 				operates.  This is a non-binding document for use as guidance only.</li>
                         </ul>
                         <li>Part B — HVCS Common Procedures</li>
@@ -352,7 +352,7 @@
             <div class="clause-row">
                 <div id="1.1-mt-messages-for-hvcs-payments" class="clause-heading" data-number="1.1">MT messages for HVCS payments</div>
                 <div class="level1">
-                    <span class="bold">This clause has been deleted (UG2025 November 2025).</span>
+                    <p>This clause has been deleted (UG2025 November 2025).</p>
                 </div>
             </div>
             <div class="clause-row">
@@ -441,7 +441,7 @@
                 </div>
             </div>
             <div class="clause-row">
-                <div id="1.4-message-lifecycle-as-this-relates-to-payments" class="clause-heading" data-number="1.4">Message lifecycle, as this relates to payments</div>
+                <div id="1.4-message-lifecycle" class="clause-heading" data-number="1.4">Message lifecycle</div>
                 <div class="level1">
                     <p>This clause has been deleted (UG2025 November 2025).</p>
                 </div>
@@ -899,14 +899,12 @@
                             <td>AVP</td>
                         </tr>
                         <tr>
-                            <td>Live service flag</td>
+                            <td>
+                                <div>Live service flag</div>
+                                <div>(live = Y, T&amp;T = N)</div>
+                            </td>
                             <td>Y</td>
                             <td>N</td>
-                        </tr>
-                        <tr>
-                            <td>(live = Y, T&amp;T = N)</td>
-                            <td></td>
-                            <td></td>
                         </tr>
                         <tr>
                             <td>Value added service number</td>
@@ -919,34 +917,28 @@
                             <td>ESASNZ20</td>
                         </tr>
                         <tr>
-                            <td>Authentication mode</td>
+                            <td>
+                                <div>Authentication mode</div>
+                                <div>(normal = 1, double = 2)</div>
+                            </td>
                             <td>2</td>
                             <td>2</td>
                         </tr>
                         <tr>
-                            <td>(normal = 1, double = 2)</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Full copy flag</td>
+                            <td>
+                                <div>Full copy flag</div>
+                                <div>(full copy = Y, part copy = N)</div>
+                            </td>
                             <td>N</td>
                             <td>N</td>
                         </tr>
                         <tr>
-                            <td>(full copy = Y, part copy = N)</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Value date range</td>
+                            <td>
+                                <div>Value date range</div>
+                                <div>(same day = 0, day n = n, no check=99)</div>
+                            </td>
                             <td>99</td>
                             <td>99</td>
-                        </tr>
-                        <tr>
-                            <td>(same day = 0, day n = n, no check=99)</td>
-                            <td></td>
-                            <td></td>
                         </tr>
                         <tr>
                             <td>Currency code</td>

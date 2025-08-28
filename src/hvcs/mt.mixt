@@ -79,7 +79,7 @@ import [
 			`Part A — HVCS Overview`
 			pnz::list(
 				`Provides a high-level overview of the HVCS community, message types, how HVCS clearing and 
-				ettlement works, and the business, technical, and regulatory environment in which the process
+				settlement works, and the business, technical, and regulatory environment in which the process
 				operates.  This is a non-binding document for use as guidance only.`
 			)
 			`Part B — HVCS Common Procedures`
@@ -194,7 +194,7 @@ import [
 		"1.1"
 		"MT messages for HVCS payments"
 
-		pnz::bold( "This clause has been deleted (UG2025 November 2025)." )
+		"This clause has been deleted (UG2025 November 2025)."
 	)
 
 	pnz::nonumber_clause(
@@ -264,7 +264,7 @@ import [
 
 	pnz::nonumber_clause(
 		"1.4"
-		"Message lifecycle, as this relates to payments"
+		"Message lifecycle"
 
 		"This clause has been deleted (UG2025 November 2025)."
 	)	
@@ -701,14 +701,12 @@ import [
 					"AVP"
 				]
 				[
-					"Live service flag"
+					[
+						"Live service flag"
+						"(live = Y, T&T = N)"
+					]
 					"Y"
 					"N"
-				]
-				[
-					"(live = Y, T&T = N)"
-					""
-					""
 				]
 				[
 					"Value added service number"
@@ -721,34 +719,28 @@ import [
 					"ESASNZ20"
 				]
 				[
-					"Authentication mode"
+					[
+						"Authentication mode"
+						"(normal = 1, double = 2)"
+					]
 					"2"
 					"2"
 				]
 				[
-					"(normal = 1, double = 2)"
-					""
-					""
-				]
-				[
-					"Full copy flag"
+					[
+						"Full copy flag"
+						"(full copy = Y, part copy = N)"
+					]
 					"N"
 					"N"
 				]
 				[
-					"(full copy = Y, part copy = N)"
-					""
-					""
-				]
-				[
-					"Value date range"
+					[
+						"Value date range"
+						"(same day = 0, day n = n, no check=99)"
+					]
 					"99"
 					"99"
-				]
-				[
-					"(same day = 0, day n = n, no check=99)"
-					""
-					""
 				]
 				[
 					"Currency code"

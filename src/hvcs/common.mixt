@@ -326,7 +326,7 @@ import [
 
 		pnz::subsection_heading( "Instructing Agent" )
 
-		pnz::comment( "UG2025", "RK", "Removed MT Obligations" )
+		pnz::comment( "UG2025", "RK", "Removed MT Obligations and referencees to card numbers" )
 		pnz::styled_table(
 			"validation-table"
 			#table(
@@ -495,7 +495,7 @@ import [
 									pnz::bold("Does not")
 									pnz::text("contain a")
 									pnz::bold("BIC")
-									pnz::text("(contains an account number or card number)")
+									pnz::text("(contains an account number)")
 								]
 							)
 						]
@@ -513,8 +513,7 @@ import [
 							pnz::br
 							`/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id`
 							pnz::br
-							`Clause 2.3 of the MX Procedures includes requirements for Bacho format, check digit
-							for PAN etc`
+							`Clause 2.3 of the MX Procedures includes requirements for Bacho format`
 							pnz::br
 							pnz::italic_div( `(Instructed agent validation)` )
 							[
@@ -612,7 +611,7 @@ import [
 									pnz::bold( "not" )
 									pnz::text( "contain a" )
 									pnz::bold( "BIC" )
-									pnz::text( "(contains an account number or card number)" )
+									pnz::text( "(contains an account number)" )
 								]
 							)
 						]

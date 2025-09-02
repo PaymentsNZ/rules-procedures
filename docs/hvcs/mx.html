@@ -1147,18 +1147,9 @@
 			of the message payload unless the message is generated using the ESAS FSI function (sender BIC is prefixed with
 			RBNZNZ).</li>
                     </ol>
-                    <div class="doc-question" data-change-id="UG2025">
-                        <div class="doc-question-meta">
-                            <span class="doc-question-id">UG2025</span>
-                            <span class="doc-question-initials">RK</span>
-                        </div>
-                        <div class="doc-question-content">
-                            <p>What is the replacement for the RBNZ Confluence website?</p>
-                        </div>
-                    </div>
                     <li>This means that, although messages may pass SWIFT validation, they will be rejected by RTGS if they do not pass the
 		consistency checking. In the case of delivery failure, the reason code provided in the xsys.003 message will be RC05
-		(Invalid BIC Identifier). The full list of rejection codes is available on the RBNZ Confluence website.</li>
+		(Invalid BIC Identifier). The full list of rejection codes is available from the RBNZ.</li>
                     <li>The BIC elements are expected to be the same except for the following circumstances:</li>
                     <ol class="level2 level2-counter-reset">
                         <li>when the Copy/Duplicate indicator is set to COPY or CODU,</li>
@@ -1207,16 +1198,7 @@
                     <li>DNs are service specific and must be used with the matching service and messages.</li>
                     <li>When participants register for the AVP MX CUG, they also define one or more DNs that can then be used to identify the
 		participant within the service.</li>
-                    <div class="doc-question" data-change-id="UG2025">
-                        <div class="doc-question-meta">
-                            <span class="doc-question-id">UG2025</span>
-                            <span class="doc-question-initials">RK</span>
-                        </div>
-                        <div class="doc-question-content">
-                            <p>Reference to RBNZ Confluence website</p>
-                        </div>
-                    </div>
-                    <li>Published and previously registered DNs for the test AVP MX CUG can be found on the RBNZ Confluence website</li>
+                    <li>Published and previously registered DNs for the test AVP MX CUG can be sourced from the RBNZ.</li>
                 </ol>
             </div>
             <div class="clause-row">
@@ -2099,8 +2081,8 @@
 			following message types; pacs.008, pacs.009 (CORE/COV) and pacs.004.</li>
                         <li>In Y-Copy mode, SWIFT intercepts the pacs.008, pacs.009 (CORE/COV) and pacs.004 messages
 			(flow 1) and copies prescribed fields from these payment messages to the destination, RBNZ
-			(flow 2), using the xcop.001 message. More information is available on the Reserve Bank&apos;s
-			Confluence website, here.</li>
+			(flow 2), using the xcop.001 message. More information is available within the ESAS Partial
+			Copy Specification available from the RBNZ.</li>
                         <li>SWIFT holds the payment message in a temporary queue until the RBNZ sends the appropriate
 			authorisation or rejection (flow 3) using the xsys.001 message.</li>
                         <li>If the RBNZ authorises the payment message, SWIFT releases and forwards the pacs.008 / pacs.009
@@ -2475,8 +2457,8 @@
 		pacs.008, pacs.009 or pacs.004 payment message:</li>
                     <ol class="level2 level2-counter-reset">
                         <li>one using a SWIFT generated reference (this is the recommended option); and</li>
-                        <li>the other using user input reference. More information on either option can be found on the
-			RBNZ&apos;s Confluence Website.</li>
+                        <li>the other using user input reference. Please refer to the RBNZ for further information on either
+			option.</li>
                     </ol>
                 </ol>
             </div>
@@ -2493,8 +2475,8 @@
 		or pacs.004 payment message:</li>
                     <ol class="level2 level2-counter-reset">
                         <li>one using a SWIFT generated reference (this is the recommended option); and</li>
-                        <li>the other using user input reference. More information on either option can be found on the
-			RBNZ&apos;s Confluence Website.</li>
+                        <li>the other using user input reference. Please refer to the RBNZ for further information on either
+			option.</li>
                     </ol>
                 </ol>
             </div>

@@ -420,7 +420,7 @@ import [
 					]
 					[
 						pnz::bold_div( "By the end of the co-existence phase:" )
-						`Participants must be able to receive from SWIFT and process as an MX message`
+						`Participants must be able to receive from SWIFT as an MX message and process`
 					]
 				]				
 			]
@@ -758,8 +758,6 @@ import [
 						"" <@ pnz::rowcolspan(2,2)
 						""
 						[
-							pnz::bold("MT Block 1, 2")
-							pnz::br
 							pnz::bold("MX InterAct Headers")
 							pnz::br
 							"Sender"
@@ -768,8 +766,6 @@ import [
 							"Instructed Agent"
 						]
 						[
-							pnz::bold("MT Block 4")
-							pnz::br
 							pnz::bold("MX BAH / Business Document")
 							pnz::br
 							"Debtor Agent"
@@ -926,9 +922,9 @@ import [
 			`a CBPR+ message that has gone through the Transaction Manager (The Transaction Manager scope is
 			limited to cross border payments sent via the FINplus CUG).`
 		)
-		`For MT messages that have been translated in-flow or in the Transaction Manager, SWIFT provides the
-		delivery format “ISO 20022 with embedded MT”, this includes an indication of whether truncation has
-		occurred and provides additional details of the truncation(s).`
+		`For MT messages that have been in-flow translated, SWIFT provides the delivery format “ISO 20022
+		with embedded MT”, this includes an indication of whether truncation has occurred and provides
+		additional details of the truncation(s).`
 	)
 
 	pnz::section_heading( "Chapter 5: Transaction Manager" )

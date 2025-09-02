@@ -654,7 +654,7 @@
                                 <div class="bold">
                                     <p>By the end of the co-existence phase:</p>
                                 </div>
-                                <div>Participants must be able to receive from SWIFT and process as an MX message</div>
+                                <div>Participants must be able to receive from SWIFT as an MX message and process</div>
                             </td>
                         </tr>
                     </tbody>
@@ -1038,8 +1038,6 @@
                                 <tr>
                                     <td rowspan="2" colspan="2"></td>
                                     <td>
-                                        <span class="bold">MT Block 1, 2</span>
-                                        <br/>
                                         <span class="bold">MX InterAct Headers</span>
                                         <br/>
                                         <div>Sender</div>
@@ -1048,8 +1046,6 @@
                                         <div>Instructed Agent</div>
                                     </td>
                                     <td>
-                                        <span class="bold">MT Block 4</span>
-                                        <br/>
                                         <span class="bold">MX BAH / Business Document</span>
                                         <br/>
                                         <div>Debtor Agent</div>
@@ -1226,9 +1222,9 @@
                         <li>a CBPR+ message that has gone through the Transaction Manager (The Transaction Manager scope is
 			limited to cross border payments sent via the FINplus CUG).</li>
                     </ol>
-                    <li>For MT messages that have been translated in-flow or in the Transaction Manager, SWIFT provides the
-		delivery format “ISO 20022 with embedded MT”, this includes an indication of whether truncation has
-		occurred and provides additional details of the truncation(s).</li>
+                    <li>For MT messages that have been in-flow translated, SWIFT provides the delivery format “ISO 20022
+		with embedded MT”, this includes an indication of whether truncation has occurred and provides
+		additional details of the truncation(s).</li>
                 </ol>
             </div>
             <h1 id="chapter-5-transaction-manager" class="section-heading">Chapter 5: Transaction Manager</h1>

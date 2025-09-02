@@ -476,7 +476,6 @@ import [
 								pnz::bold("Rules:")
 							]							
 							pnz::br
-							`HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule`
 							`HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule`
 						]
 					]
@@ -593,8 +592,6 @@ import [
 							`/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id`
 							pnz::br
 							pnz::bold_div( "Rules:" )
-							`HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule`
-							pnz::br
 							`HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule`
 						]
 					]
@@ -636,8 +633,6 @@ import [
 							`/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id`
 							pnz::br
 							pnz::bold_div( "Rules:" )
-							`HVCS_SDCL_AIIN_Creditor_Account_Identification_FormalRule`
-							pnz::br
 							`HVCS_SDCL_BBAN_Creditor_Account_Identification_FormalRule`
 						]
 					]

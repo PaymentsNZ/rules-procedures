@@ -1535,8 +1535,7 @@ import [
 					"AVP CUG service parameters"
 					[
 						`For AVP MT CUG service parameters, please refer to Part E MT Messaging Procedures (ISO 15022).`
-						pnz::question( "UG2025", "PB", "What is the replacement for the RBNZ Confluence website?" )
-						`For AVP MX CUG service parameters, please refer to the RBNZ Confluence website, here.`
+						`For AVP MX CUG service parameters, please reach out to the RBNZ for further informtion.`
 					]
 				]
 				[

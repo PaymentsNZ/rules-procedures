@@ -713,9 +713,8 @@ import [
 		"2.1"
 		"Joining the AVP MX CUG"
 
-		pnz::question( "UG2025", "RK", "What is the replacement for the RBNZ Confluence website?" )
 		`Information on how to prepare for the AVP MX CUG and the process to join the CUG is provided by
-		the RBNZ Confluence website.`
+		the RBNZ.`
 	)
 
 	pnz::nonumber_clause(

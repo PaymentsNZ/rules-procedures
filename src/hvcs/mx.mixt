@@ -890,10 +890,9 @@ import [
 			RBNZNZ).`
 		)
 
-		pnz::question( "UG2025", "RK", "What is the replacement for the RBNZ Confluence website?")
 		`This means that, although messages may pass SWIFT validation, they will be rejected by RTGS if they do not pass the
 		consistency checking. In the case of delivery failure, the reason code provided in the xsys.003 message will be RC05
-		(Invalid BIC Identifier). The full list of rejection codes is available on the RBNZ Confluence website.`
+		(Invalid BIC Identifier). The full list of rejection codes is available from the RBNZ.`
 
 		`The BIC elements are expected to be the same except for the following circumstances:`
 
@@ -949,8 +948,7 @@ import [
 		`When participants register for the AVP MX CUG, they also define one or more DNs that can then be used to identify the
 		participant within the service.`
 		
-		pnz::question( "UG2025", "RK", "Reference to RBNZ Confluence website")
-		`Published and previously registered DNs for the test AVP MX CUG can be found on the RBNZ Confluence website`
+		`Published and previously registered DNs for the test AVP MX CUG can be sourced from the RBNZ.`
 	)
 
 	pnz::clause(
@@ -1768,8 +1766,8 @@ import [
 			
 			`In Y-Copy mode, SWIFT intercepts the pacs.008, pacs.009 (CORE/COV) and pacs.004 messages
 			(flow 1) and copies prescribed fields from these payment messages to the destination, RBNZ
-			(flow 2), using the xcop.001 message. More information is available on the Reserve Bank's
-			Confluence website, here.`
+			(flow 2), using the xcop.001 message. More information is available within the ESAS Partial
+			Copy Specification available from the RBNZ.`
 
 			`SWIFT holds the payment message in a temporary queue until the RBNZ sends the appropriate
 			authorisation or rejection (flow 3) using the xsys.001 message.`
@@ -2192,8 +2190,8 @@ import [
 		pnz::level2(
 			`one using a SWIFT generated reference (this is the recommended option); and`
 
-			`the other using user input reference. More information on either option can be found on the
-			RBNZ's Confluence Website.`
+			`the other using user input reference. Please refer to the RBNZ for further information on either
+			option.`
 		)
 	)
 
@@ -2216,8 +2214,8 @@ import [
 		pnz::level2(
 			`one using a SWIFT generated reference (this is the recommended option); and`
 			
-			`the other using user input reference. More information on either option can be found on the
-			RBNZ's Confluence Website.`
+			`the other using user input reference. Please refer to the RBNZ for further information on either
+			option.`
 		)
 	)
 

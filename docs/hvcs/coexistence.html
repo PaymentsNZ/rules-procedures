@@ -110,7 +110,7 @@
                             <a href="#2.3-test-and-production-bics">2.3 Test and production BICs</a>
                         </li>
                         <li>
-                            <a href="#2.4-mt-and-mx-cug-capabilities">2.4 MT and MX CUG capabilities</a>
+                            <a href="#2.4-mx-cug-capabilities">2.4 MX CUG capabilities</a>
                         </li>
                         <li>
                             <a href="#2.5-segregation-of-test-and-production-messaging">2.5 Segregation of Test and Production Messaging</a>
@@ -1004,7 +1004,7 @@
                 </ol>
             </div>
             <div class="clause-row">
-                <div id="2.4-mt-and-mx-cug-capabilities" class="clause-heading" data-number="2.4">MT and MX CUG capabilities</div>
+                <div id="2.4-mx-cug-capabilities" class="clause-heading" data-number="2.4">MX CUG capabilities</div>
                 <ol class="level1 level1-counter-reset">
                     <li>The following table describes the capabilities and functionality of the AVP MT CUG and AVP MX CUG
 		provided by SWIFT and RBNZ.</li>
@@ -1216,6 +1216,10 @@
                     <li>For MT messages that have been in-flow translated, SWIFT provides the delivery format “ISO 20022
 		with embedded MT”, this includes an indication of whether truncation has occurred and provides
 		additional details of the truncation(s).</li>
+                    <li>Intermediaries that use an MT Payments Processor must ensure that any payment message that is on-sent
+		includes Debtor and Creditor information in the original MX form received as per the &apos;travel
+		rule&apos; requirements (FATF Recommendation 16 as adopted by the NZ Anti-Money Laundering and Countering Financing of
+		Terrorism Act 2009 and associated Regulations).</li>
                 </ol>
             </div>
             <h1 id="chapter-5-transaction-manager" class="section-heading">Chapter 5: Transaction Manager</h1>
@@ -1236,18 +1240,22 @@
             <div class="clause-row">
                 <div id="7.1-purpose-and-overview" class="clause-heading" data-number="7.1">Purpose and overview</div>
                 <div class="level1">
-                    <p>It is possible that some MT payment messages which were sent before 22 November 2025 may be received by
-		participants for a short period on or after 22 November 2025, for example, if an MT payment message took
-		longer than expected to be sent through SWIFT&apos;s messaging system.</p>
-                    <p>Payments NZ discussed with the ISO 20022 Industry and Operational Working Group (ORWG) that during the
-		window immediately following go-live, Participants may receive MT payments from SWIFT that were held in a
-		SWIFT outbound sanctions queue at the time of go-live 22 November. These may be any of the MT payment types
-		or their return variants. Some Participants may be able to receive and process the incoming MT payment instruction;
-		some may not and would be forced to reject the payment instruction. If the payment was accepted, and subsequently
-		needed to be returned, it would have to be returned as a pacs.004.</p>
-                    <p>Payments NZ are highlighting the potential to receive these MT instructions though expect volumes will be low to
-		none. Payments NZ to not expect any Participant to build capability to handle this scenario and any occurrences to
-		be handled manually via operations teams.</p>
+                    <p>It is possible that some MT payment messages which were sent before 22 November 2025
+		may be received by participants for a short period on or after 22 November 2025, for
+		example, if an MT payment message took longer than expected to be sent through SWIFT&apos;s
+		messaging system.</p>
+                    <p>Payments NZ discussed with the ISO 20022 Operations and Readines Working Group (ORWG)
+		that during the window immediately following go-live, Participants may receive MT payments
+		from SWIFT that were held in a SWIFT outbound sanctions queue at the time of go-live 22
+		November. These may be any of the MT payment types or their return variants.</p>
+                    <p>Some Participants may be able to receive and process the incoming MT payment instruction;
+		some may not and would be forced to reject the payment instruction. If the MT103 or MT202
+		payment was accepted, and subsequently needed to be returned, it would have to be returned
+		as a pacs.004.  If an MT return payment is received in this manner after go-live and the
+		original payment was required to be sent again it would have to be sent as an MX message.</p>
+                    <p>Payments NZ are highlighting the potential to receive these MT instructions though expect
+		volumes will be low to none. Payments NZ to not expect any Participant to build capability
+		to handle this scenario and any occurrences to be handled manually via operations teams.</p>
                 </div>
             </div>
             <div class="tag-standards"></div>
@@ -1275,7 +1283,8 @@
                     <li>
                         <span>Participants</span>
                         <span class="bold">may</span>
-                        <span>receive and process the following MT payment messages from other participants for the Effective Term:</span>
+                        <span>receive and process the following MT payment messages or their return (RETN) variants from
+				other participants for the Effective Term:</span>
                         <ol class="level2 level2-counter-reset">
                             <li>MT103;</li>
                             <li>MT202;</li>
@@ -1296,6 +1305,8 @@
                         <li>if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message; and</li>
                         <li>if the original instructed agent receives a MT205 message, return by sending a pacs.004 message.</li>
                     </ol>
+                    <li>If return payment was received in MT message format during the Effective Term, and the payment requires
+		resending, it must be sent as an MX message.</li>
                 </ol>
             </div>
         </main>

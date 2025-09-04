@@ -235,7 +235,6 @@ import [
 			)
 			pnz::bullets(
 				`HVCS instruction;`
-				`HVPS message;`
 				`CBPR+; or`
 				`FIN message`
 			)

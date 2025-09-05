@@ -373,6 +373,20 @@
 				Procedures, the MX Messaging Procedures, the MX Message Specifications and these Co-existence
 				Procedures all apply simultaneously beginning on 22 November 2025 and ending on a date:</span>
                     </p>
+                    <div class="doc-comment" data-change-id="UG2025">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">UG2025</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Added Hybrid Address Line formatting.</p>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="bold">Hybrid Address Line</span>
+                        <span>formatting means when the content of the address information within an MX message is formatted
+				in accordance with the hybrid data requirements set out in the MX Message Specifications.</span>
+                    </p>
                     <ol class="level2 level2-counter-reset">
                         <li>in November 2026; or</li>
                         <li>as determined by Payments NZ if all participants have fully migrated to using MX messages
@@ -420,20 +434,6 @@
                         <span class="bold">Unstructured Address Line formatting</span>
                         <span>means when the content of the address information within an MX message is not formatted in
 				accordance with the structured data requirements set out in the MX Message Specifications.</span>
-                    </p>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Added Hybrid Address Line formatting.</p>
-                        </div>
-                    </div>
-                    <p>
-                        <span class="bold">Hybrid Address Line formatting</span>
-                        <span>means when the content of the address information within an MX message is formatted in
-				accordance with the hybrid data requirements set out in the MX Message Specifications.</span>
                     </p>
                     <p>Unless the context otherwise specifies, all other defined terms have the meanings given to them in
 		Part 19 of the Payments NZ Rules and the HVCS Common Procedures.</p>
@@ -494,20 +494,20 @@
                                     <p>By the beginning of the co-existence phase:</p>
                                 </div>
                                 <div>Participants must be able to receive and process MX messages that use
-						hybrid postal address formatting.</div>
+						Hybrid Postal Address formatting.</div>
                                 <br/>
                                 <div class="bold">
                                     <p>By the end of the co-existence phase:</p>
                                 </div>
-                                <div>Participants must send all messages using either structured postal
-						address formatting or hybrid postal address formatting.</div>
+                                <div>Participants must send all messages using either Structured Postal
+						Address formatting or Hybrid Postal Address formatting.</div>
                             </td>
                             <td>
                                 <div class="bold">
                                     <p>By the beginning of the co-existence phase:</p>
                                 </div>
                                 <div>Participants acting as intermediaries must be able to receive and process
-						CBPR+ messages that use hybrid postal address formatting.</div>
+						CBPR+ messages that use Hybrid Postal Address formatting.</div>
                                 <div class="doc-comment" data-change-id="UG2025">
                                     <div class="doc-comment-meta">
                                         <span class="doc-comment-id">UG2025</span>
@@ -519,14 +519,14 @@
                                     </div>
                                 </div>
                                 <div>Participants acting as intermediaries must be able to on-send a CBPR+ message
-						that uses hybrid postal address formatting to participants as an MX message.</div>
+						that uses Hybrid Postal Address formatting to participants as an MX message.</div>
                                 <br/>
                                 <div class="bold">
                                     <p>By the end of the co-existence phase:</p>
                                 </div>
                                 <div>Participants acting as intermediaries must send all CBPR+ messages and on-send
 						all CBPR+ messages to participants as an MX message using either structured
-						postal address formatting or hybrid postal address formatting.</div>
+						postal address formatting or Hybrid Postal Address formatting.</div>
                             </td>
                         </tr>
                     </tbody>
@@ -692,7 +692,7 @@
                         </div>
                     </div>
                     <li>The AVP MT CUG will continue to exist through the co-existence phase alongside the AVP MX CUG.</li>
-                    <li>From 22 November 2025, during the co-existence phase, participants must:</li>
+                    <li>From 22 November 2025, during the co-existence phase, any participant must:</li>
                     <div class="doc-comment" data-change-id="UG2025">
                         <div class="doc-comment-meta">
                             <span class="doc-comment-id">UG2025</span>
@@ -706,6 +706,7 @@
                         <li>Be a member of the AVP MX CUG; and</li>
                         <li>Be a member of the AVP MT CUG until the end of the co-existence phase.</li>
                     </ol>
+                    <li>Any participant that becomes a participant after 22 November 2025 must be a member of the AVP MX CUG.</li>
                 </ol>
             </div>
             <div class="doc-comment" data-change-id="UG2025">

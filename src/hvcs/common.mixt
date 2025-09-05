@@ -512,7 +512,7 @@ import [
 							pnz::br
 							`/ Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id / Othr / Id`
 							pnz::br
-							`Clause 2.3 of the MX Procedures includes requirements for Bacho format`
+							`Clause 2.3 of the MX Procedures includes requirements for Bacho format.`
 							pnz::br
 							pnz::italic_div( `(Instructed agent validation)` )
 							[
@@ -565,7 +565,7 @@ import [
 								[
 									pnz::text( "As a customer credit transfer message — " )
 									pnz::bold( "cross border redirection" )
-									pnz::text( "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and" )
+									pnz::text( "(as set out in clause 9.1(2)(a)(iii) of the Rules); and" )
 								]
 								[
 									pnz::text( "Contains a" )
@@ -603,7 +603,7 @@ import [
 								[
 									pnz::text( "As a customer credit transfer message — " )
 									pnz::bold( "cross border redirection" )
-									pnz::text( "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules); and" )
+									pnz::text( "(as set out in clause 9.1(2)(a)(iii) of the Rules); and" )
 								]
 								[
 									pnz::text( "Does" )
@@ -774,7 +774,7 @@ import [
 								[
 									pnz::text( "As a customer credit transfer message — " )
 									pnz::bold( "cross border redirection" )
-									pnz::text( "(as set out is defined in clause 9.1(2)(a)(iii) of the Rules)" )
+									pnz::text( "(as set out in clause 9.1(2)(a)(iii) of the Rules)" )
 								]
 							)
 						]

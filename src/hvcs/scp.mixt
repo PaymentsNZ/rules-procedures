@@ -581,43 +581,38 @@ import [
 			`2.9(6)(g)`
 		)
 
-		`The participant should:`
+		`The participant should ensure that if the account is identified by an account number formatted in
+		accordance with the applicable message standards, the components of the account number should be
+		masked in accordance with the following table:`
 
-		pnz::level2(
-			`if the account is identified by an account number formatted in accordance with the applicable
-			message standards, the components of the account number should be masked in accordance with the
-			following table:`
-
-			pnz::table(
-				#table(
+		pnz::table(
+			#table(
+				[
+					"Component of account number"
+					"Required for SCP notification?"
+				]
+				[
 					[
-						"Component of account number"
-						"Required for SCP notification?"
+						"Interchange number"
+						"Not required."
 					]
 					[
-						[
-							"Interchange number"
-							"Not required."
-						]
-						[
-							"Branch number"
-							"Yes: all 4 digits of the branch number."
-						]
-						[
-							"Account number"
-							`Yes: The final 4 digits of the account number and an asterisk substituted for
-							each other digit of the account number to the left of the final 4 digits.`
-						]
-						[
-							"Suffix"
-							"Yes: All 2/3 digits of the suffix."
-						]
+						"Branch number"
+						"Yes: all 4 digits of the branch number."
 					]
-				)
+					[
+						"Account number"
+						`Yes: The final 4 digits of the account number and an asterisk substituted for
+						each other digit of the account number to the left of the final 4 digits.`
+					]
+					[
+						"Suffix"
+						"Yes: All 2/3 digits of the suffix."
+					]
+				]
 			)
-			pnz::comment( "XCARD", "RK", "Removed 'if the account is identified by the creditor's primary account number (PAN)...'" )
-
 		)
+		pnz::comment( "XCARD", "RK", "Removed 'if the account is identified by the creditor's primary account number (PAN)...'" )
 	)
 
 	pnz::section_heading( "Chapter 2: On-us SCPs" )

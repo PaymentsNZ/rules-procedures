@@ -195,6 +195,16 @@ import [
 				Procedures all apply simultaneously beginning on 22 November 2025 and ending on a date:`				
 			)
 		]
+
+		pnz::comment( "UG2025", "RK", "Added Hybrid Address Line formatting." )
+		[
+			pnz::bold( "Hybrid Address Line" )
+			pnz::text(
+				`formatting means when the content of the address information within an MX message is formatted
+				in accordance with the hybrid data requirements set out in the MX Message Specifications.`
+			)
+		]
+
 		pnz::level2(
 			`in November 2026; or`
 			`as determined by Payments NZ if all participants have fully migrated to using MX messages
@@ -248,15 +258,6 @@ import [
 			)
 		]
 
-		pnz::comment( "UG2025", "RK", "Added Hybrid Address Line formatting." )
-		[
-			pnz::bold( "Hybrid Address Line formatting" )
-			pnz::text(
-				`means when the content of the address information within an MX message is formatted in
-				accordance with the hybrid data requirements set out in the MX Message Specifications.`
-			)
-		]
-
 		`Unless the context otherwise specifies, all other defined terms have the meanings given to them in
 		Part 19 of the Payments NZ Rules and the HVCS Common Procedures.`
 	)
@@ -304,29 +305,29 @@ import [
 					[
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
 						`Participants must be able to receive and process MX messages that use
-						hybrid postal address formatting.`
+						Hybrid Postal Address formatting.`
 						pnz::br
 						pnz::bold_div( "By the end of the co-existence phase:" )
-						`Participants must send all messages using either structured postal
-						address formatting or hybrid postal address formatting.`
+						`Participants must send all messages using either Structured Postal
+						Address formatting or Hybrid Postal Address formatting.`
 					]
 					[
 						pnz::bold_div( "By the beginning of the co-existence phase:" )
 						`Participants acting as intermediaries must be able to receive and process
-						CBPR+ messages that use hybrid postal address formatting.`
+						CBPR+ messages that use Hybrid Postal Address formatting.`
 
 						pnz::comment( "UG2025", "RK",
 							`Removed 'subject to clause 1.7(7)(a)(iv)'
 							- superfluous`
 						)
 						`Participants acting as intermediaries must be able to on-send a CBPR+ message
-						that uses hybrid postal address formatting to participants as an MX message.`
+						that uses Hybrid Postal Address formatting to participants as an MX message.`
 
 						pnz::br
 						pnz::bold_div( "By the end of the co-existence phase:" )
 						`Participants acting as intermediaries must send all CBPR+ messages and on-send
 						all CBPR+ messages to participants as an MX message using either structured
-						postal address formatting or hybrid postal address formatting.`
+						postal address formatting or Hybrid Postal Address formatting.`
 					]
 				]
 			]
@@ -446,13 +447,14 @@ import [
 		pnz::comment( "UG2025", "RK", "Reworded" )
 		`The AVP MT CUG will continue to exist through the co-existence phase alongside the AVP MX CUG.`
 
-		`From 22 November 2025, during the co-existence phase, participants must:`
+		`From 22 November 2025, during the co-existence phase, any participant must:`
 
 		pnz::comment( "UG2025", "RK", "Add option to terminate MT CUG earlier." )
 		pnz::level2(
 			`Be a member of the AVP MX CUG; and`
 			`Be a member of the AVP MT CUG until the end of the co-existence phase.`
 		)
+		`Any participant that becomes a participant after 22 November 2025 must be a member of the AVP MX CUG.`
 	)
 
 	pnz::comment( "UG2025", "RK", "Revised requirements." )

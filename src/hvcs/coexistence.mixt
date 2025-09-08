@@ -196,9 +196,9 @@ import [
 			)
 		]
 
-		pnz::comment( "UG2025", "RK", "Added Hybrid Address Line formatting." )
+		pnz::comment( "UG2025", "RK", "Added Hybrid Postal Address formatting." )
 		[
-			pnz::bold( "Hybrid Address Line" )
+			pnz::bold( "Hybrid Postal Address" )
 			pnz::text(
 				`formatting means when the content of the address information within an MX message is formatted
 				in accordance with the hybrid data requirements set out in the MX Message Specifications.`
@@ -447,7 +447,7 @@ import [
 		pnz::comment( "UG2025", "RK", "Reworded" )
 		`The AVP MT CUG will continue to exist through the co-existence phase alongside the AVP MX CUG.`
 
-		`From 22 November 2025, during the co-existence phase, any participant must:`
+		`From 22 November 2025, during the co-existence phase, any participant as of 22 November 2025 must:`
 
 		pnz::comment( "UG2025", "RK", "Add option to terminate MT CUG earlier." )
 		pnz::level2(
@@ -546,7 +546,7 @@ import [
 			pnz::level3(
 				`Structured Postal Address formatting; and`
 				`Unstructured Address Line formatting; and`
-				`Hybrid Address Line formatting.`
+				`Hybrid Postal Address formatting.`
 			)
 		)
 		[

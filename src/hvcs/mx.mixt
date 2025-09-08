@@ -1156,9 +1156,9 @@ import [
 	pnz::comment( "UG2025", "RK", "Added.")
 	pnz::clause(
 		"3.9A"
-		"HVCS hybrid address line formatting"
+		"HVCS Hybrid Postal Address formatting"
 
-		`Hybrid address line formatting is a fallback where structured address line formatting
+		`Hybrid Postal Address formatting is a fallback where structured address line formatting
 		cannot be implemented.`
 		
 		`A hybrid address allows simultaneous usage of structured and unstructured elements, with

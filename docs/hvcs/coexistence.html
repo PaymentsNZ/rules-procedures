@@ -164,6 +164,10 @@
             </div>
         </nav>
         <main class="hvcs-content">
+            <div class="pdf-vars">
+                <span id="pdf-effective-date" class="run-effdate">Effective date: 22/11/2025</span>
+                <span id="pdf-doc-title" class="run-doctitle">Appendix 14F: HVCS Co-existence Procedures</span>
+            </div>
             <div class="logo">
                 <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
             </div>
@@ -172,7 +176,172 @@
                 <div class="document-meta">Version 3</div>
                 <div class="document-meta">Effective date: 22/11/2025</div>
             </div>
-            <h1 id="document-purpose-and-overview" class="section-heading">Document purpose and overview</h1>
+            <div class="document-heading">Document Control</div>
+            <dl class="doc-meta">
+                <dt>Title</dt>
+                <dd>HVCS Co-existence Procedures</dd>
+                <dt>Version</dt>
+                <dd>3</dd>
+                <dt>Effective date</dt>
+                <dd>22/11/2025</dd>
+                <dt>Circulation</dt>
+                <dd>Payments NZ participants, Buddle Findlay, Reserve Bank</dd>
+            </dl>
+            <br/>
+            <div>The following table summarises amendments to this overview.</div>
+            <br/>
+            <div class="table-scroll">
+                <table class="pnz-table document-control-table">
+                    <thead>
+                        <th>Version number and description of amendment</th>
+                        <th>Amendment methood and date</th>
+                        <th>Amendment notice date</th>
+                        <th>Effective date of amendment</th>
+                        <th>Authors</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Version 1. New document created as a result of restructure of the HVCS rules and
+				standards to implement ISO 20022 MX messaging.</td>
+                            <td>Board resolutions 21-Sep-2022 and 11-Nov-2022</td>
+                            <td>21-Sep-2022 and 11-Nov-2022</td>
+                            <td>20-Nov-2022</td>
+                            <td>Payments NZ, Buddle Findlay</td>
+                        </tr>
+                        <tr>
+                            <td>Version 2. Amendments to provide a more co-ordinated structure for participant testing
+				during the ISO 20022 co-existence phase.</td>
+                            <td>Board resolution 30-Jul-2024</td>
+                            <td>06-Aug-2024</td>
+                            <td>07-Aug-2024</td>
+                            <td>Payments NZ, Buddle Findlay</td>
+                        </tr>
+                        <tr>
+                            <td>Version 3: Usage Guidelines 2025</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Payments NZ, Buddle Findlay</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="toc">
+                <p class="document-heading">Table of contents</p>
+                <ol class="toc-level-1">
+                    <li>
+                        <a href="#document-purpose-and-overview">Document purpose and overview</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#hvcs-rules-and-procedures-overview">HVCS rules and procedures overview</a>
+                            </li>
+                            <li>
+                                <a href="#standards-best-practices-and-commentary">Standards, best practices and commentary</a>
+                            </li>
+                            <li>
+                                <a href="#document-purpose-and-structure">Document purpose and structure</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-1-the-journey-from-mt-to-mx">Chapter 1: The journey from MT to MX</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#1.1-introduction">1.1 - Introduction</a>
+                            </li>
+                            <li>
+                                <a href="#1.2-defined-terms">1.2 - Defined terms</a>
+                            </li>
+                            <li>
+                                <a href="#1.3-payment-message-scope">1.3 - Payment message scope</a>
+                            </li>
+                            <li>
+                                <a href="#1.4-investigation-message-scope">1.4 - Investigation message scope</a>
+                            </li>
+                            <li>
+                                <a href="#1.5-iso-20022-migration-timeline">1.5 - ISO 20022 migration timeline</a>
+                            </li>
+                            <li>
+                                <a href="#1.6-obligations-for-participants-to-join-cugs">1.6 - Obligations for participants to join CUGS</a>
+                            </li>
+                            <li>
+                                <a href="#1.7-obligations-for-participants-to-send-and-receive-messages-during-the-co-existence-phase">1.7 - Obligations for participants to send and receive messages during the co-existence phase</a>
+                            </li>
+                            <li>
+                                <a href="#1.8-obligations-for-participants-to-send-and-receive-messages-after-the-co-existence-phase">1.8 - Obligations for participants to send and receive messages after the co-existence phase</a>
+                            </li>
+                            <li>
+                                <a href="#1.9-continuous-linked-settlements">1.9 - Continuous linked settlements</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-2-dual-cugs">Chapter 2: Dual CUGs</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#2.1-joining-the-avp-mx-cug">2.1 - Joining the AVP MX CUG</a>
+                            </li>
+                            <li>
+                                <a href="#2.2-avp-mt-cug-retirement">2.2 - AVP MT CUG retirement</a>
+                            </li>
+                            <li>
+                                <a href="#2.3-test-and-production-bics">2.3 - Test and production BICs</a>
+                            </li>
+                            <li>
+                                <a href="#2.4-mx-cug-capabilities">2.4 - MX CUG capabilities</a>
+                            </li>
+                            <li>
+                                <a href="#2.5-segregation-of-test-and-production-messaging">2.5 - Segregation of Test and Production Messaging</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-3-structured-data">Chapter 3: Structured data</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#3.1-nz-hvcs-approach-to-structured-data">3.1 - NZ HVCS approach to structured data</a>
+                            </li>
+                            <li>
+                                <a href="#3.2-cbpr+-approach-to-structured-data">3.2 - CBPR+ approach to structured data</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-4-using-an-mt-payments-processor">Chapter 4: Using an MT Payments Processor</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#4.1-truncation">4.1 - Truncation</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-5-transaction-manager">Chapter 5: Transaction Manager</a>
+                        <ol class="toc-level-2"></ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-6-testing-required-during-co-existence">Chapter 6: Testing required during co-existence</a>
+                        <ol class="toc-level-2"></ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-7-receipt-of-mt-payment-messages-during-co-existence">Chapter 7: Receipt of MT payment messages during co-existence</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#7.1-purpose-and-overview">7.1 - Purpose and overview</a>
+                            </li>
+                            <li>
+                                <a href="#7.2-effective-term">7.2 - Effective Term</a>
+                            </li>
+                            <li>
+                                <a href="#7.3-effect-of-chapter-7">7.3 - Effect of Chapter 7</a>
+                            </li>
+                            <li>
+                                <a href="#7.4-receiving-and-processing-mt-payment-messages">7.4 - Receiving and processing MT payment messages</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <div id="document-purpose-and-overview" class="section-heading">Document purpose and overview</div>
             <div class="tag-commentary"></div>
             <div class="clause-row">
                 <div id="hvcs-rules-and-procedures-overview" class="clause-heading" data-number="">HVCS rules and procedures overview</div>

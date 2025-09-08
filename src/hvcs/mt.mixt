@@ -4,43 +4,38 @@ import [
 	hvcs = "../html/pnz.hvcs.mixt"
 ]
 
-[
-	pnz::logo
-	pnz::document_title(
-		"Appendix 14E: MT Messaging Procedures (UG2025)"
-		"2"
-		"22/11/2025"
+{
+	appendix = "14E"
+	title = "HVCS MT Procedures"
+	document_version = "2"
+	effective_date = "22/11/2025"
+	document_control = #table(
+		[
+			"Version number and description of amendment"
+			"Amendment methood and date"
+			"Amendment notice date"
+			"Effective date of amendment"
+			"Authors"
+		]
+		[
+			[
+				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				to implement ISO 20022 MX messaging.`
+				"Board resolution 21-Sep-2022"
+				"21-Sep-2022"
+				"20-Nov-2022"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 2: Usage Guidelines 2025`
+				""
+				""
+				""
+				"Payments NZ, Buddle Findlay"
+			]			
+		]
 	)
-	/*
-	`Document control`
-	`Title: 			MT Messaging Procedures`
-	`Version:		1`
-	`Effective date:		20/11/2022`
-	`Circulation:		Payments NZ participants, Buddle Findlay, Reserve Bank`
-	`The following table summarises amendments to these procedures.`
-	`Version number and description of amendment`
-	`Amendment method and date`
-	`Amendment notice date`
-	`Effective date of amendment`
-	`Authors`
-	`Version 1. New document created as a result of restructure of the HVCS rules and standards to implement ISO 20022 MX messaging.`
-	`Board resolution 21/09/22`
-	`21/09/22`
-	`20/11/22`
-	`Payments NZ, Buddle Findlay`
-	`Table of contents`
-	`Document purpose and overview	4`
-	`Chapter 1: MT Messages in scope	7`
-	`Chapter 2: SWIFT message header details	11`
-	`Chapter 3: Customer credit transfer (SCP)	12`
-	`Chapter 4: Customer Credit Transfer (Cross border redirection)	21`
-	`Chapter 5: Formats for financial institution transfers	28`
-	`MT202 and MT202COV	28`
-	`MT205 and MT205COV	30`
-	`Field content: MT2nn series	32`
-	`Chapter 6: FINCopy system messages advising HVCS payment status	36`
-	*/
-
+} @> [
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 

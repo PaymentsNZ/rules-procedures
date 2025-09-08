@@ -4,49 +4,52 @@ import [
 	hvcs = "../html/pnz.hvcs.mixt"
 ]
 
-[
-	pnz::logo
-	pnz::document_title(
-		"Appendix 14A: HVCS Overview (UG2025)"
-		"3"
-		"22/11/2025"
-	)	
-	/*
-	`Document control`
-	`Title: 			HVCS Overview`
-	`Version:		2`
-	`Effective date:		24/02/2025`
-	`Circulation:		Payments NZ participants, Buddle Findlay, Reserve Bank`
-	`The following table summarises amendments to this overview.`
-	`Version number and description of amendment`
-	`Amendment method and date`
-	`Amendment notice date`
-	`Effective date of amendment`
-	`Authors`
-	`Version 1. New document:`
-	`• created as a result of restructure of the HVCS rules and standards to implement ISO 20022 MX messaging, and`
-	`• based on the non-binding content of deleted HVCS procedures v 19, chapter 1`
-	`Board resolution 21/09/22`
-	`21/09/22`
-	`20/11/22`
-	`Payments NZ, Buddle Findlay`
-	`Version 2: Minor amendments`
-	`CE amendment: 11/12/24`
-	`11/12/24`
-	`24/02/25`
-	`Table of contents`
-	`Document purpose and overview	4`
-	`Chapter 1: Terminology	8`
-	`Chapter 2: HVCS Overview	10`
-	`Chapter 3: HVCS message types	12`
-	`Customer credit transfer	14`
-	`Financial institution credit transfer	18`
-	`Exception and investigation messages	21`
-	`Chapter 4: Message flows	24`
-	`Chapter 5: Roles of organisations and systems	25`
-	`Chapter 6: Regulating HVCS payments	28`
-	*/
-
+{
+	appendix = "14A"
+	title = "HVCS Overview"
+	document_version = "3"
+	effective_date = "22/11/2025"
+	document_control = #table(
+		[
+			"Version number and description of amendment"
+			"Amendment methood and date"
+			"Amendment notice date"
+			"Effective date of amendment"
+			"Authors"
+		]
+		[
+			[
+				[
+					"Version 1. New document:"
+					pnz::bullets(
+						`created as a result of restructure of the HVCS rules and standards to implement
+						ISO 20022 MX messaging, and`
+						
+						`based on the non-binding content of deleted HVCS procedures v 19, chapter 1`
+					)
+				]
+				"Board resolution 21-Sep-2022"
+				"21-Sep-2022"
+				"20-Nov-2022"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 2: Minor amendments`
+				"CE amendment: 11-Dec-2024"
+				"11-Dec-2024"
+				"24-Feb-2025"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 3: Usage Guidelines 2025`
+				""
+				""
+				""
+				"Payments NZ, Buddle Findlay"
+			]
+		]
+	)
+} @> [
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 
@@ -196,6 +199,7 @@ import [
 		of the technical terms used by the HVCS.`
 	)
 
+	/*
 	pnz::subsection_heading( "Documentation map" )
 
 	pnz::styled_table(
@@ -368,6 +372,7 @@ import [
 			]
 		)
 	)
+	*/
 
 	pnz::section_heading( "Chapter 1: Terminology" )
 
@@ -881,7 +886,7 @@ import [
 			the applicable message standards.`
 		)
 
-		`A participant may send an FI credit transfer message to pay the creditor who is also a financial
+		`A participant-May-send an FI credit transfer message to pay the creditor who is also a financial
 		institution.`
 
 		`The following diagram and table show at a high level how financial institutions interact to send
@@ -1079,10 +1084,10 @@ import [
 		"3.14"
 		"Payment return"
 
-		`Exception and investigation messages may result in a return message being sent by an agent to the
+		`Exception and investigation messages-May-result in a return message being sent by an agent to the
 		previous agent in the payment chain to return a payment previously settled.`
 
-		`Return messages may be the consequence of a payment message cancellation requested by the debtor
+		`Return messages-May-be the consequence of a payment message cancellation requested by the debtor
 		agent or one of the intermediary agents of the HVCS payment or sent by a creditor agent or instructed
 		agent due to a failure to process the payment message.`
 
@@ -1470,7 +1475,7 @@ import [
 		"Legislation, contracts, and standards"
 		
 		`The following table lists some of the legislation, rules, standards, procedures, by-laws,
-		codes and contracts that may apply to clearing and settlement of an HVCS instruction.`
+		codes and contracts that-May-apply to clearing and settlement of an HVCS instruction.`
 	)
 
 	pnz::nonumber_clause(
@@ -1899,26 +1904,26 @@ import [
 				[
 					`Version 2. Amendments to remove testing requirements in chapter 3 and to transfer
 					substance of appendix 3 to version 1 of appendix 1, access procedures.`
-					`Board resolution: 19 February 2013`
-					`25 Feb 13`
-					`20 May 13`
+					`Board resolution: 19-Feb-2013`
+					`25-Feb-2013`
+					`20-May-2013`
 					`Payments NZ`
 				]
 
 				[
 					`Version 3. Amendments to change title and appendix no.`
-					`Chief executive amendment: 14 May 2013`
-					`14 May 13`
-					`10 Jul 13`
+					`Chief executive amendment: 14-May-2013`
+					`14-May-2013`
+					`10-Jul-2013`
 					`Payments NZ`
 				]
 
 				[
 					`Version 4 Amendments to change title and appendix no. as a consequence of the creation
 					of the mobile device standards`
-					`Chief executive amendment: 13 March 2014`
-					`13 Mar 2014`
-					`14 May 2014`
+					`Chief executive amendment: 13-Mar-2014`
+					`13-Mar-2014`
+					`14-May-2014`
 					`Caroline Kidd Frank Susko`
 				]
 
@@ -1926,9 +1931,9 @@ import [
 					`Version 5: Rewrite to create end-to-end clearing and settlement procedures linked to
 					Part 9 of the rules for HVCS and to capture improvements to SCPs Reformat in information
 					mapping style.`
-					`Board resolution: 2-Dec-14`
-					`8 Dec 2014`
-					`16 Feb 2015`
+					`Board resolution: 02-Dec-2014`
+					`08-Dec-2014`
+					`16-Feb-2015`
 					`Simon Jensen, Katie Williams, Caroline Kidd, Frank Susko`
 				]
 
@@ -1941,10 +1946,10 @@ import [
 					]
 					[
 						`Board resolution: 15-Dec-15`
-						`Chief executive amendment: 21 December 2015`
+						`Chief executive amendment: 21-Dec-2015`
 					]
-					`21 Dec 2015`
-					`29 Feb 2016`
+					`21-Dec-2015`
+					`29-Feb-2016`
 					`Caroline Kidd, Frank Susko`
 				]
 
@@ -1955,19 +1960,19 @@ import [
 						out-of-date references to facsimile notices`
 					]
 					[
-						`CE amendment 17 November 2016`
-						`MC amendment 17 November 2016`
+						`CE amendment 17-Nov-2016`
+						`MC amendment 17-Nov-2016`
 					]
-					`17 Nov 2016`
-					`31 Jan 2017`
+					`17-Nov-2016`
+					`31-Jan-2017`
 					`Simon Jensen, Katie Williams, Caroline Kidd Frank Susko`
 				]
 
 				[
 					`Version 8: Amendments to remove references to Deutsche Bank`
 					`CE amendment 19 December 2016`
-					`19 Dec 2016`
-					`27 Feb 2017`
+					`19-Dec-2016`
+					`27-Feb-2017`
 					`Jade Ford`
 				]
 
@@ -1977,8 +1982,8 @@ import [
 					operational problems, compliance testing and compliance reporting and transfer to new
 					operational problem procedures and new compliance procedures.`
 					`Board resolution: 11 April 2017`
-					`10 May 2017`
-					`10 Jul 2017`
+					`10-May-2017`
+					`10-Jul-2017`
 					`Buddle Findlay: Simon Jensen, Katie Williams, Payments NZ: Caroline Kidd, Frank Susko`
 				]
 
@@ -1987,8 +1992,8 @@ import [
 					the SWIFT standard change (SR2020).`
 					`HVCS management committee notice to the chief executive and approval by the chief
 					executive: 18-Jul-2017`
-					`19 Jul 2017`
-					`25 Sep 2017`
+					`19-Jul-2017`
+					`25-Sep-2017`
 					`Murray Goold, Martin Quin`
 				]
 
@@ -1997,69 +2002,69 @@ import [
 					regime.`
 					`Board resolution: 26 February 2018 (technical or minor changes approved by the chief
 					executive)`
-					`5 Mar 2018`
-					`14 May 2018`
+					`05-Mar-2018`
+					`14-May-2018`
 					`Payments NZ`
 				]
 
 				[
 					`Version 12: Amendments to appendix 14A to ensure standards align with SWIFT standards`
 					[
-						`Management committee resolution: 6 June 2018`
-						`Chief executive amendment: 6 Jun 2018`
+						`Management committee resolution: 06-Jun-2018`
+						`Chief executive amendment: 06-Jun-2018`
 					]
-					`6 Jun 2018`
-					`13 Aug 2018`
+					`06-Jun-2018`
+					`13-Aug-2018`
 					`Murray Goold, Gary Lloyd, Martin Quin`
 				]
 
 				[
 					`Version 13: Amendments in relation to field 72 in the HVCS message formats to, amongst
 					other things, allow participants to manage liquidity in their ESAS accounts.`
-					`Management committee amendment: 22 Feb 2019`
-					`27 Feb 2019`
-					`6 May 2019`
+					`Management committee amendment: 22-Feb-2019`
+					`27-Feb-2019`
+					`06-May-2019`
 					`Buddle Findlay, Payments NZ`
 				]
 
 				[
 					`Version 14: Amendments as result of changes to ESAS`
 					`Board resolution: 11 December 2019`
-					`17 Dec 2019`
-					`24 Feb 2020`
+					`17-Dec-2019`
+					`24-Feb-2020`
 					`Buddle Findlay, Payments NZ Ltd`
 				]
 
 				[
 					`Version 15: Add reference to ASX in the table at, ch 1, B1.`
-					`CE amendment 21 May 2020`
-					`21 May 2020`
-					`27 Jul 2020`
+					`CE amendment 21-May-2020`
+					`21-May-2020`
+					`27-Jul-2020`
 					`Payments NZ Ltd`
 				]
 
 				[
 					`Version 16: Minor amendments to the use of the term ESAS`
-					`Board resolution 7 December 2020`
-					`10 Dec 2020`
-					`1 Mar 2021`
+					`Board resolution 07-Dec-2020`
+					`10-Dec-2020`
+					`01-Mar-2021`
 					`Buddle Findlay, Payments NZ Ltd`
 				]
 
 				[
 					`Version 17: Minor amendments to references to the SBI procedures as a result of the
 					settlement windows provisions.`
-					`Board resolution 7 December 2020`
-					`10 Dec 2020`
-					`31 May 2021`
+					`Board resolution 07-Dec-2020`
+					`10-Dec-2020`
+					`31-May-2021`
 					`Buddle Findlay, Payments NZ Ltd`
 				]
 
 				[
 					`Version 18: Minor updates to commentary including recording of ESAS rejection codes`
-					`Board resolution 3 May 21 and chief executive amendment 7 May 2021`
-					`7 May 2021`
-					`12 Jul 2021`
+					`Board resolution 03-May-21 and chief executive amendment 07-May-2021`
+					`07-May-2021`
+					`12-Jul-2021`
 					`Buddle Findlay, Payments NZ Ltd`
 				]
 			]

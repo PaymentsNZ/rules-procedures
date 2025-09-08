@@ -118,6 +118,18 @@ import [
 		)
 	)
 
+	// pnz.legal::continue_clause creates a clause with space for a header in the left column
+	// clauses numbered with the style (1) (2)
+	pnz.legal::continue_clause = (startNumber as number, ...content as any) => #( div =
+		html::class(
+			"clause-row",
+			[
+				div = ""
+				ol = pnz.legal::continue_level1( startNumber, content... )
+			]
+		)
+	)
+
 	pnz.legal::nonumber_clause = (clauseNumber as text, heading as text, ...content as any) => #( div =
 		html::class(
 			"clause-row",
@@ -411,5 +423,55 @@ import [
 				html::attributes = { class = "doc-question-content" }
 			} @> content
 		]
-	)	
+	)
+
+	// pnz.legal::contents_table creates a table of contents
+	pnz.legal::contents_table = (chaptersAndClauses as list) => [
+		div = html::class(
+			"toc"
+			[
+				html::class(
+					"document-heading"
+					"Table of contents"
+				)
+				ol = html::class(
+					"toc-level-1"
+					List.Transform(
+						chaptersAndClauses
+						(chapterAndClauses as any) => #(li =
+							[
+								a = html::attributed(
+									{
+										href = pnz.legal::href( "", chapterAndClauses{ Chapter }, "#" )
+									}
+									chapterAndClauses{ Chapter }
+								)
+								ol = html::class(
+									"toc-level-2"
+									List.Transform(
+										chapterAndClauses{ Clauses }
+										(clause as text, index as number, id as text) => #(li =
+											[
+												a = html::attributed(
+													{
+														href = pnz.legal::href( id, clause, "#" )
+													}
+													(
+														if id == "" then
+															clause
+														else
+															$"$(id) - $(clause)"
+													)
+												)
+											]
+										)
+									)
+								)
+							]
+						)
+					)
+				)
+			]
+		)
+	]
 }

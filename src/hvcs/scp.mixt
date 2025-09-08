@@ -3,14 +3,45 @@ import [
 	hvcs = "../html/pnz.hvcs.mixt"
 ]
 
-[
-	pnz::logo
-	pnz::document_title(
-		"Appendix 14C: SCP procedures (UG2025)"
-		"3"
-		"22/11/2025"
+{
+	appendix = "14C"
+	title = "HVCS SCP Procedures"
+	document_version = "3"
+	effective_date = "22/11/2025"
+	document_control = #table(
+		[
+			"Version number and description of amendment"
+			"Amendment methood and date"
+			"Amendment notice date"
+			"Effective date of amendment"
+			"Authors"
+		]
+		[
+			[
+				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				to implement ISO 20022 MX messaging.`
+				"Board resolution 21-Sep-2022"
+				"21-Sep-2022"
+				"20-Nov-2022"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 2: Amendments increase flexibility of methods of delivering SCP beneficiary notifications`
+				"Board resolution 15-Sep-2023"
+				"20-Sep-2023"
+				"20-Nov-2023"
+				"Payments NZ, Buddle Findlay"
+			]	
+			[
+				`Version 3: Usage Guidelines 2025`
+				""
+				""
+				""
+				"Payments NZ, Buddle Findlay"
+			]			
+		]
 	)
-
+} @> [
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 

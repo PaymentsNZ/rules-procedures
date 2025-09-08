@@ -3,47 +3,45 @@ import [
 	hvcs = "../html/pnz.hvcs.mixt"
 ]
 
-[
-	pnz::logo
-	pnz::document_title(
-		"Appendix 14D: MX Messaging Procedures (UG2025)"
-		"3"
-		"22/11/2025"
+{
+	appendix = "14D"
+	title = "HVCS MX Procedures"
+	document_version = "3"
+	effective_date = "22/11/2025"
+	document_control = #table(
+		[
+			"Version number and description of amendment"
+			"Amendment methood and date"
+			"Amendment notice date"
+			"Effective date of amendment"
+			"Authors"
+		]
+		[
+			[
+				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				to implement ISO 20022 MX messaging.`
+				"Board resolution 21-Sep-2022"
+				"21-Sep-2022"
+				"20-Nov-2022"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 2: Amendments increase flexibility of methods of delivering SCP beneficiary notifications`
+				"Board resolution 15-Sep-2023"
+				"20-Sep-2023"
+				"20-Nov-2023"
+				"Payments NZ, Buddle Findlay"
+			]	
+			[
+				`Version 3: Usage Guidelines 2025`
+				""
+				""
+				""
+				"Payments NZ, Buddle Findlay"
+			]			
+		]
 	)
-	/*
-	`Document control`
-	`Title: 			MX Messaging Procedures`
-	`Version:		2`
-	`Effective date:		5/05/2025`
-	`Circulation:		Payments NZ participants, Buddle Findlay, Reserve Bank`
-	`The following table summarises amendments to these procedures.`
-	`Version number and description of amendment`
-	`Amendment method and date`
-	`Amendment notice date`
-	`Effective date of amendment`
-	`Authors`
-	`Version 1. New document created as a result of restructure of the HVCS rules and standards to implement ISO 20022 MX messaging.`
-	`Board resolution 21/09/22`
-	`21/09/22`
-	`20/11/22`
-	`Payments NZ, Buddle Findlay`
-	`Version 2. Amendments to ensure that remittance information is effectively transmitted`
-	`Management committee notice 19/02/25`
-	`20/02/25`
-	`5/05/25`
-	`Payments NZ`
-	`Table of contents`
-	`Document purpose and overview	4`
-	`Chapter 1: Introduction to MX message specifications	7`
-	`Chapter 2: MX message specification	13`
-	`Chapter 3: ISO 20022 key concepts	17`
-	`Chapter 4: Same-day Cleared Payments	28`
-	`Chapter 5: Direct and cover payments	30`
-	`Chapter 6: Payment returns	31`
-	`Chapter 7: Exception and Investigation messages	34`
-	`Chapter 8: SWIFTNet Y-Copy Messages	36`
-	*/
-
+} @> [
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 
@@ -736,7 +734,8 @@ import [
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.`
 
 		pnz::comment( "UG2025", "RK", "Changed all usage identifiers to version 2")
-		pnz::table(
+		pnz::styled_table(
+			"message-types-table"
 			#table(
 				[
 					"Message Def'n ID / Request Type"
@@ -833,8 +832,7 @@ import [
 				]
 			)
 		)
-		
-		pnz::br
+
 		`The Request Type and Message Definition Identifier must contain the same values. The Request Subtype and
 		Business Service must contain the same values.`
 		

@@ -261,10 +261,14 @@ body.document {
 
 /* Print: expand ToC and hide header */
 @media print {
-
+	body.document {
+		margin-top: 0;
+	}
+	
 	.hvcs-header,
 	.hvcs-header-toggle,
-	.hvcs-docswitcher {
+	.hvcs-docswitcher,
+	.hvcs-toc {
 		display: none !important;
 	}
 
@@ -295,6 +299,10 @@ body.document {
 
 	.hvcs-header-logo {
 		display: block !important;
+	}
+
+	.hvcs-content {
+		padding: 0;
 	}
 }
 

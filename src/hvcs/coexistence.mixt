@@ -4,44 +4,46 @@ import [
 	hvcs = "../html/pnz.hvcs.mixt"
 ]
 
-[
-	pnz::logo
-	pnz::document_title(
-		"Appendix 14F: HVCS Co-existence Procedures (UG2025)"
-		"3"
-		"22/11/2025"
+{
+	appendix = "14F"
+	title = "HVCS Co-existence Procedures"
+	document_version = "3"
+	effective_date = "22/11/2025"
+	document_control = #table(
+		[
+			"Version number and description of amendment"
+			"Amendment methood and date"
+			"Amendment notice date"
+			"Effective date of amendment"
+			"Authors"
+		]
+		[
+			[
+				`Version 1. New document created as a result of restructure of the HVCS rules and
+				standards to implement ISO 20022 MX messaging.`
+				"Board resolutions 21-Sep-2022 and 11-Nov-2022"
+				"21-Sep-2022 and 11-Nov-2022"
+				"20-Nov-2022"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 2. Amendments to provide a more co-ordinated structure for participant testing
+				during the ISO 20022 co-existence phase.`
+				"Board resolution 30-Jul-2024"
+				"06-Aug-2024"
+				"07-Aug-2024"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 3: Usage Guidelines 2025`
+				""
+				""
+				""
+				"Payments NZ, Buddle Findlay"
+			]			
+		]
 	)
-	/*
-	`Document control`
-	`Title: 		Co-existence Procedures`
-	`Version:		2`
-	`Effective date:	7/10/2024`
-	`Circulation:	Payments NZ participants, Buddle Findlay, Reserve Bank`
-	`The following table summarises amendments to these procedures.`
-	`Version number and description of amendment`
-	`Amendment method and date`
-	`Amendment notice date`
-	`Effective date of amendment`
-	`Authors`
-	`Version 1. New document created as a result of restructure of the HVCS rules and standards to implement ISO 20022 MX messaging.`
-	`Board resolutions 21/09/22 and 11/11/22`
-	`21/09/22 and 11/11/22`
-	`20/11/22`
-	`Payments NZ, Buddle Findlay`
-	`Version 2. Amendments to provide a more co-ordinated structure for participant testing during the ISO 20022 co-existence phase.`
-	`Board resolution 30 July 24`
-	`6 August 24`
-	`7 October 24`
-	`Table of contents`
-	`Document purpose and overview	4`
-	`Chapter 1: The journey from MT to MX	6`
-	`Chapter 2: Dual CUGs	16`
-	`Chapter 3: Structured data	18`
-	`Chapter 4: Forwarding data	19`
-	`Chapter 5: Transaction Manager	21`
-	`Chapter 6: Testing required during co-existence	23`
-	*/
-
+} @> [
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 

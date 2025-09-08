@@ -140,6 +140,17 @@
 }
 
 /*
+** payment-categories-table
+*/
+
+@media print {
+  .message-types-table,
+  .payment-categories-table {
+	font-size: 9pt;
+  }
+}
+
+/*
 ** documentation-map
 */
 .documentation-map {

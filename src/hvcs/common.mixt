@@ -3,37 +3,38 @@ import [
 	hvcs = "../html/pnz.hvcs.mixt"
 ]
 
-[
-	pnz::logo
-	pnz::document_title(
-		"Appendix 14B: HVCS Common Procedures (UG2025)"
-		"2"
-		"22/11/2025"
+{
+	appendix = "14B"
+	title = "HVCS Common Procedures"
+	document_version = "2"
+	effective_date = "22/11/2025"
+	document_control = #table(
+		[
+			"Version number and description of amendment"
+			"Amendment methood and date"
+			"Amendment notice date"
+			"Effective date of amendment"
+			"Authors"
+		]
+		[
+			[
+				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				to implement ISO 20022 MX messaging.`
+				"Board resolution 21-Sep-2022"
+				"21-Sep-2022"
+				"20-Nov-2022"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 2: Usage Guidelines 2025`
+				""
+				""
+				""
+				"Payments NZ, Buddle Findlay"
+			]			
+		]
 	)
-	/*
-	`Document control`
-	`Title: 			HVCS Common Procedures`
-	`Version:		1`
-	`Effective date:		20/11/2022`
-	`Circulation:		Payments NZ Participants, Buddle Findlay, Reserve Bank`
-	`The following table summarises amendments to these procedures.`
-	`Version number and description of amendment`
-	`Amendment method and date`
-	`Amendment notice date`
-	`Effective date of amendment`
-	`Authors`
-	`Version 1. New document created as a result of restructure of the HVCS rules and standards to implement ISO 20022 MX messaging.`
-	`Board resolution 21 Sept 22`
-	`21 Sept 22`
-	`20 Nov 22`
-	`Payments NZ, Buddle Findlay`
-	`Table of contents`
-	`Document purpose and overview	4`
-	`Chapter 1: Normal HVCS processing	6`
-	`Chapter 2: Errors	17`
-	`Chapter 3: Late processing	20`
-	*/
-
+} @> [
 	pnz::section_heading( "Document purpose and overview" )
 	pnz::tag_commentary
 

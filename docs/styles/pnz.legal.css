@@ -1,5 +1,6 @@
 :root {
   --pnz-blue: #009FDF;
+  --pnz-grey: #6b6b6b;  
   --indent-level1: 0.75cm;
   --indent-level2: 0.75cm;
   --indent-level3: 0.75cm;
@@ -70,13 +71,23 @@ pre, code {
   word-break: break-word;
 }
 
-.document-title {
+.document-title,
+.document-heading {
   font-family: Cambria, Georgia, serif;
   font-weight: bold;
   text-align: center;
   font-size: 16pt;
   color: black;
   margin: 1.5em 0 1em 0;
+}
+
+.document-title {
+  text-align: center;
+}
+
+.document-heading {
+  break-before: page;
+  text-align: left;
 }
 
 .document-meta {
@@ -94,6 +105,7 @@ pre, code {
   font-size: 16pt;
   color: var(--pnz-blue);
   margin: 1.5em 0 1em 0;
+  break-before: page;
 }
 
 .subsection-heading {
@@ -114,7 +126,6 @@ pre, code {
   margin-top: 1rem;
   margin-bottom: 0rem;
   align-items: start;
-  counter-reset: level1;
 }
 
 /* Let grid children actually shrink in both wide and narrow layouts */
@@ -258,7 +269,7 @@ img, table {
 }
 
 .level1-counter-reset {
-  counter-reset: level;
+  counter-reset: level1;
 }
 
 .level1 > li {
@@ -591,10 +602,6 @@ ul.dashes li::marker {
 
 /* Print: keep colour, remove shadow */
 @media print {
-  * {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
   .doc-comment {
     box-shadow: none;
     background: var(--pnz-green-10);
@@ -686,10 +693,67 @@ ul.dashes li::marker {
 }
 .doc-question-content p {
   margin-top: 0;
-  margin-bottom: .5em;
-}
+  margin-bottom: .5em;}
 .doc-question-content p:last-child {
   margin-bottom: 0;
+}
+
+
+/* Print: keep colour, remove shadow */
+@media print {
+  .doc-question {
+    box-shadow: none;
+    background: var(--pnz-question-10);
+    border-color: #000;
+  }
+  .doc-question-id {
+    background: var(--pnz-question);
+    color: #fff;
+  }
+  .doc-question-initials {
+    background: #fff;
+    border-color: var(--pnz-question);
+    color: var(--pnz-question);
+  }
+}
+
+/*
+** Document metadata
+*/
+
+.doc-meta{
+  /* tweak width to match your design */
+  --label-w: 14ch;
+
+  display: grid;
+  grid-template-columns: var(--label-w) 1fr;
+  column-gap: 1.2rem;
+  row-gap: .45rem;
+  margin: 0;
+}
+.doc-meta dt{
+  margin: 0;
+  font-weight: 600;
+  align-self: start;            /* top-align multi-line values */
+}
+.doc-meta dt::after{ content: ":"; }
+
+.doc-meta dd{
+  margin: 0;
+}
+
+/* Print: keep the block together */
+@media print{
+  .doc-meta{ break-inside: avoid; page-break-inside: avoid; }
+}
+
+/*
+** Table of contents
+*/
+
+/* Make ToC entries look like a single line with leaders + page number */
+.toc {
+  display: none;
 }
 
 /*
@@ -705,18 +769,90 @@ ul.dashes li::marker {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  .doc-question {
-    box-shadow: none;
-    background: var(--pnz-question-10);
-    border-color: #000;
+
+  /* Prevent body margins from stacking with page margins */
+  html, body { margin: 0; }
+
+  @page {
+    margin-top: 2.54cm;
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 2cm;
   }
+
+  .toc {
+    display: block;
+    margin: 0 0 1.5rem;
+    break-inside: avoid;
+    /* Force the document body to start on a new page after the ToC */
+    break-after: page;
+  }
+
+  .toc > p {
+    margin: 0 0 .6rem;
+    font-weight: 600;
+  }
+
+  .toc ol,
+  .toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc li {
+    margin: .15rem 0;
+    break-inside: avoid;
+  }
+
+  .toc a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Dotted leaders + page number of the target */
+  .toc a::after {
+    content: leader('.') target-counter(attr(href), page);
+  }
+
+  /* Nested lists (if you add subsections later) */
+  .toc ol ol { margin-left: 1.5em; }
+
+  .clause-row {
+    grid-template-columns: 15% minmax(0, 1fr);
+  }
+
+  .doc-question,
+  .doc-comment {
+    display: none;
+  }
+
+  /* Kill browser defaults so @page margins are the only margins */
+  html, body { margin: 0 !important; padding: 0 !important; }
+
+  /* Remove screen gutters that add inner space */
+  .container, .content, .wrap, .page, .document, main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  /* Prevent top-margin collapse from the first child on a page */
+  .document > :first-child { margin-top: 0 !important; }
+
+  /*  Neutralize any fixed-header push used on screen */
+  .site-header, .app-header, header[role="banner"] { display: none !important; }
+  body.document { padding-top: 0 !important; margin-top: 0 !important; }  
 }
 
 /*
 ** @media - mobile
 */
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .clause-row {
     grid-template-columns: 1fr;   /* switch to a single column */
     gap: 0em;                     /* smaller vertical gap between header and content*/
@@ -770,4 +906,60 @@ ul.dashes li::marker {
     -webkit-print-color-adjust: exact;   /* Force Chrome to print colors */
     print-color-adjust: exact;           /* Modern browsers */
   }
+}
+
+/* Make the values available to margin boxes */
+.run-effdate  { position: running(effdate);  }
+.run-doctitle { position: running(doctitle); }
+
+/* Optional: keep the source elements out of the normal layout */
+.pdf-vars { height: 0; overflow: hidden; }
+
+@page {
+  size: A4;
+  margin: 20mm;
+
+  /* Page header */
+  @top-left {
+  }
+
+  @top-center {
+  }
+
+  @top-right {
+    content: element(doctitle);
+    font-size: 9pt;
+    text-align: right;
+    color: var(--pnz-blue);
+  }
+
+  /* Page footer */
+  @bottom-left {
+    content: element(effdate);
+    font-size: 9pt;
+    color: var(--pnz-grey);
+  }
+
+  @bottom-center {
+    content: element(doctitle);
+    font-size: 9pt;
+    text-align: center;
+    color: var(--pnz-blue);
+  }
+
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-size: 9pt;
+    color: var(--pnz-grey);
+  }
+}
+
+/* Example: suppress footer on the very first page (cover) */
+@page:first {
+  @top-left  { content: none; }
+  @top-center{ content: none; }
+  @top-right { content: none; }
+  @bottom-left  { content: none; }
+  @bottom-center{ content: none; }
+  @bottom-right { content: none; }
 }

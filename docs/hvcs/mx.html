@@ -282,15 +282,301 @@
             </div>
         </nav>
         <main class="hvcs-content">
+            <div class="pdf-vars">
+                <span id="pdf-effective-date" class="run-effdate">Effective date: 22/11/2025</span>
+                <span id="pdf-doc-title" class="run-doctitle">Appendix 14D: HVCS MX Procedures</span>
+            </div>
             <div class="logo">
                 <img src="../images/PNZ_OnWhite_rgb.gif" alt="PNZ Logo"></img>
             </div>
             <div>
-                <div class="document-title">Appendix 14D: MX Messaging Procedures (UG2025)</div>
+                <div class="document-title">Appendix 14D: HVCS MX Procedures (UG2025)</div>
                 <div class="document-meta">Version 3</div>
                 <div class="document-meta">Effective date: 22/11/2025</div>
             </div>
-            <h1 id="document-purpose-and-overview" class="section-heading">Document purpose and overview</h1>
+            <div class="document-heading">Document Control</div>
+            <dl class="doc-meta">
+                <dt>Title</dt>
+                <dd>HVCS MX Procedures</dd>
+                <dt>Version</dt>
+                <dd>3</dd>
+                <dt>Effective date</dt>
+                <dd>22/11/2025</dd>
+                <dt>Circulation</dt>
+                <dd>Payments NZ participants, Buddle Findlay, Reserve Bank</dd>
+            </dl>
+            <br/>
+            <div>The following table summarises amendments to this overview.</div>
+            <br/>
+            <div class="table-scroll">
+                <table class="pnz-table document-control-table">
+                    <thead>
+                        <th>Version number and description of amendment</th>
+                        <th>Amendment methood and date</th>
+                        <th>Amendment notice date</th>
+                        <th>Effective date of amendment</th>
+                        <th>Authors</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Version 1. New document created as a result of restructure of the HVCS rules and standards
+				to implement ISO 20022 MX messaging.</td>
+                            <td>Board resolution 21-Sep-2022</td>
+                            <td>21-Sep-2022</td>
+                            <td>20-Nov-2022</td>
+                            <td>Payments NZ, Buddle Findlay</td>
+                        </tr>
+                        <tr>
+                            <td>Version 2: Amendments increase flexibility of methods of delivering SCP beneficiary notifications</td>
+                            <td>Board resolution 15-Sep-2023</td>
+                            <td>20-Sep-2023</td>
+                            <td>20-Nov-2023</td>
+                            <td>Payments NZ, Buddle Findlay</td>
+                        </tr>
+                        <tr>
+                            <td>Version 3: Usage Guidelines 2025</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Payments NZ, Buddle Findlay</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="toc">
+                <p class="document-heading">Table of contents</p>
+                <ol class="toc-level-1">
+                    <li>
+                        <a href="#document-purpose-and-overview">Document purpose and overview</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#hvcs-rules-and-procedures-overview">HVCS rules and procedures overview</a>
+                            </li>
+                            <li>
+                                <a href="#standards-best-practices-and-commentary">Standards, best practices and commentary</a>
+                            </li>
+                            <li>
+                                <a href="#document-purpose-and-structure">Document purpose and structure</a>
+                            </li>
+                            <li>
+                                <a href="#interpretation">Interpretation</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-1-introduction-to-mx-message-specifications">Chapter 1: Introduction to MX message specifications</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#1.1-mystandards">1.1 - MyStandards</a>
+                            </li>
+                            <li>
+                                <a href="#1.2-alignment-with-cbpr+-and-hvcs-rules-specifications">1.2 - Alignment with CBPR+ and HVCS Rules specifications</a>
+                            </li>
+                            <li>
+                                <a href="#1.3-intermediaries">1.3 - Intermediaries</a>
+                            </li>
+                            <li>
+                                <a href="#1.4-usage-guidelines">1.4 - Usage Guidelines</a>
+                            </li>
+                            <li>
+                                <a href="#1.5-mystandards-exports">1.5 - MyStandards exports</a>
+                            </li>
+                            <li>
+                                <a href="#1.6-specification-versioning">1.6 - Specification versioning</a>
+                            </li>
+                            <li>
+                                <a href="#1.7-content-view-vs-result-view">1.7 - Content view vs Result view</a>
+                            </li>
+                            <li>
+                                <a href="#1.8-mystandards-compare-function">1.8 - MyStandards compare function</a>
+                            </li>
+                            <li>
+                                <a href="#1.9-readiness-portal">1.9 - Readiness portal</a>
+                            </li>
+                            <li>
+                                <a href="#1.10-transaction-manager">1.10 - Transaction Manager</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-2-mx-message-specification">Chapter 2: MX message specification</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#2.1-mx-message-requirements">2.1 - MX message requirements</a>
+                            </li>
+                            <li>
+                                <a href="#2.2-instructing-agent-validation">2.2 - Instructing agent validation</a>
+                            </li>
+                            <li>
+                                <a href="#2.3-instructed-agent-validation">2.3 - Instructed agent validation</a>
+                            </li>
+                            <li>
+                                <a href="#2.4-charges-for-cross-border-redirections">2.4 - Charges for cross border redirections</a>
+                            </li>
+                            <li>
+                                <a href="#2.5-cross-border-redirection-charge-bearer-contains-debt-nzd-or-converted-to-nzd">2.5 - Cross border redirection: Charge Bearer contains DEBT (NZD or converted to NZD)</a>
+                            </li>
+                            <li>
+                                <a href="#2.6-cross-border-redirection-charge-bearer-cred-or-shar">2.6 - Cross border redirection: Charge Bearer CRED or SHAR</a>
+                            </li>
+                            <li>
+                                <a href="#2.7-messages-for-hvcs-payments">2.7 - Messages for HVCS payments</a>
+                            </li>
+                            <li>
+                                <a href="#2.8-other-swiftnet-message-types">2.8 - Other SWIFTNet message types</a>
+                            </li>
+                            <li>
+                                <a href="#2.9-other-fin-message-types">2.9 - Other FIN message types</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-3-iso-20022-key-concepts">Chapter 3: ISO 20022 key concepts</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#3.1-iso-20022-message-structure">3.1 - ISO 20022 message structure</a>
+                            </li>
+                            <li>
+                                <a href="#3.2-identifying-message-types-and-usage-guidelines">3.2 - Identifying message types and usage guidelines</a>
+                            </li>
+                            <li>
+                                <a href="#3.3-external-code-lists">3.3 - External code lists</a>
+                            </li>
+                            <li>
+                                <a href="#3.4-bics">3.4 - BICs</a>
+                            </li>
+                            <li>
+                                <a href="#3.5-distinguished-name-structure">3.5 - Distinguished name structure</a>
+                            </li>
+                            <li>
+                                <a href="#3.6-distinguished-name-registry">3.6 - Distinguished name registry</a>
+                            </li>
+                            <li>
+                                <a href="#3.7-legal-entity-identifier">3.7 - Legal Entity Identifier</a>
+                            </li>
+                            <li>
+                                <a href="#3.8-remittance-information-pacs-008-and-pacs-004">3.8 - Remittance information (pacs.008 and pacs.004)</a>
+                            </li>
+                            <li>
+                                <a href="#3.9-hvcs-structured-address-line-formatting">3.9 - HVCS structured address line formatting</a>
+                            </li>
+                            <li>
+                                <a href="#3.9A-hvcs-hybrid-postal-address-formatting">3.9A - HVCS Hybrid Postal Address formatting</a>
+                            </li>
+                            <li>
+                                <a href="#3.10-using-payment-message-identifiers">3.10 - Using payment message identifiers</a>
+                            </li>
+                            <li>
+                                <a href="#3.11-iso-20022-base-standards">3.11 - ISO 20022 base standards</a>
+                            </li>
+                            <li>
+                                <a href="#3.12-cbpr+-character-sets">3.12 - CBPR+ character sets</a>
+                            </li>
+                            <li>
+                                <a href="#3.13-hvcs-character-sets">3.13 - HVCS character sets</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-4-same-day-cleared-payments">Chapter 4: Same-day Cleared Payments</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#4.1-identifying-scps">4.1 - Identifying SCPs</a>
+                            </li>
+                            <li>
+                                <a href="#4.2-scp-account-number-format">4.2 - SCP account number format</a>
+                            </li>
+                            <li>
+                                <a href="#4.3-scp-customer-notifications">4.3 - SCP Customer notifications</a>
+                            </li>
+                            <li>
+                                <a href="#4.4-scp-remittance-information">4.4 - SCP remittance information</a>
+                            </li>
+                            <li>
+                                <a href="#4.5-pcr-examples">4.5 - PCR examples</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-5-direct-and-cover-payments">Chapter 5: Direct and cover payments</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#5.1-how-to-represent-direct-and-cover-payments">5.1 - How to represent direct and cover payments</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-6-payment-returns">Chapter 6: Payment returns</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#6.1-overview">6.1 - Overview</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-7-exception-and-investigation-messages">Chapter 7: Exception and Investigation messages</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#7.1-overview">7.1 - Overview</a>
+                            </li>
+                            <li>
+                                <a href="#7.2-element-guidance">7.2 - Element guidance</a>
+                            </li>
+                            <li>
+                                <a href="#7.3-reason-codes-and-use-of-narrative">7.3 - Reason Codes and Use of Narrative</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#chapter-8-swiftnet-y-copy-messages">Chapter 8: SWIFTNet Y-Copy Messages</a>
+                        <ol class="toc-level-2">
+                            <li>
+                                <a href="#8.1-overview">8.1 - Overview</a>
+                            </li>
+                            <li>
+                                <a href="#8.2-message-validation-swift">8.2 - Message validation (SWIFT)</a>
+                            </li>
+                            <li>
+                                <a href="#8.3-message-validation-participant">8.3 - Message validation (Participant)</a>
+                            </li>
+                            <li>
+                                <a href="#8.4-conditional-release">8.4 - Conditional release</a>
+                            </li>
+                            <li>
+                                <a href="#8.5-core-data-copied-to-esas-—-pacs-008-and-pacs-009">8.5 - Core data copied to ESAS — pacs.008 and pacs.009</a>
+                            </li>
+                            <li>
+                                <a href="#8.6-core-data-copied-to-esas-—-pacs-004">8.6 - Core data copied to ESAS — pacs.004</a>
+                            </li>
+                            <li>
+                                <a href="#8.7-third-party-information">8.7 - Third party information</a>
+                            </li>
+                            <li>
+                                <a href="#8.8-settlement-is-successful">8.8 - Settlement is successful</a>
+                            </li>
+                            <li>
+                                <a href="#8.9-settlement-is-unsuccessful">8.9 - Settlement is unsuccessful</a>
+                            </li>
+                            <li>
+                                <a href="#8.10-overview">8.10 - Overview</a>
+                            </li>
+                            <li>
+                                <a href="#8.11-overview">8.11 - Overview</a>
+                            </li>
+                            <li>
+                                <a href="#8.12-overview">8.12 - Overview</a>
+                            </li>
+                            <li>
+                                <a href="#8.13-overview">8.13 - Overview</a>
+                            </li>
+                            <li>
+                                <a href="#8.14-overview">8.14 - Overview</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <div id="document-purpose-and-overview" class="section-heading">Document purpose and overview</div>
             <div class="tag-commentary"></div>
             <div class="clause-row">
                 <div id="hvcs-rules-and-procedures-overview" class="clause-heading" data-number="">HVCS rules and procedures overview</div>
@@ -1000,7 +1286,7 @@
                         </div>
                     </div>
                     <div class="table-scroll">
-                        <table class="pnz-table">
+                        <table class="pnz-table message-types-table">
                             <thead>
                                 <th>Message Def&apos;n ID / Request Type</th>
                                 <th>Usage Identifier / Request Subtype</th>
@@ -1096,7 +1382,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <br/>
                     <li>The Request Type and Message Definition Identifier must contain the same values. The Request Subtype and
 		Business Service must contain the same values.</li>
                     <li>The Request Type is from the Request Header/BAH and the Message Definition Identifier is from the Business

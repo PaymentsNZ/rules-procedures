@@ -161,9 +161,91 @@ import [
 	)
 
 	// pnz.hvcs::main
-	pnz.hvcs::main = (docContent as list) => html::class(
-		"hvcs-content"
-		docContent
+	pnz.hvcs::main = (
+		docContent as list,
+		chaptersAndClauses as list
+	) => (
+		let
+			docMeta = Value.Metadata( docContent )
+			docId = Record.FieldOrDefault( docMeta, "appendix", "?appendix?" )
+			docTitle = Record.FieldOrDefault( docMeta, "title", "?title?" )
+			docVersion = Record.FieldOrDefault( docMeta, "document_version", "?document_version?" )
+			docEffectiveDate = Record.FieldOrDefault( docMeta, "effective_date", "?effective_date?" )
+			docControl = Record.FieldOrDefault(
+				docMeta
+				"document_control"
+				#table(
+					[
+						"Version number and description of amendment"
+						"Amendment methood and date"
+						"Amendment notice date"
+						"Effective date of amendment"
+						"Authors"
+					]
+					[]
+				)
+			)
+
+			completeContents = html::class(
+				"hvcs-content"
+				[
+					div = html::attributed(
+						{
+							class = "pdf-vars"
+						}
+						[
+							span = html::attributed(
+								{
+									id = "pdf-effective-date"
+									class = "run-effdate"
+								}
+								$"Effective date: $(docEffectiveDate)"
+							)
+							span = html::attributed(
+								{
+									id = "pdf-doc-title"
+									class = "run-doctitle"
+								}
+								$"Appendix $(docId): $(docTitle)"
+							)
+						]
+					)
+					pnz::logo
+					pnz::document_title(
+						$"Appendix $(docId): $(docTitle) (UG2025)"
+						docVersion
+						docEffectiveDate
+					)
+					html::class(
+						"document-heading"
+						"Document Control"
+					)
+					dl = html::class(
+						"doc-meta"
+						[
+							dt = "Title"
+							dd = docTitle
+							dt = "Version"
+							dd = docVersion
+							dt = "Effective date"
+							dd = docEffectiveDate
+							dt = "Circulation"
+							dd = "Payments NZ participants, Buddle Findlay, Reserve Bank"
+						]
+					)
+					pnz::br
+					"The following table summarises amendments to this overview."
+					pnz::br
+					pnz::styled_table(
+						"document-control-table"
+						docControl
+					)
+				]
+				& pnz::contents_table( chaptersAndClauses )
+				& docContent
+			)
+		in
+			completeContents
 	)
 
 	// pnz.hvcs::document creates a PNZ HVCS legal document as HTML
@@ -216,7 +298,7 @@ import [
 						null
 					)
 					nav = pnz.hvcs::nav( docTitle, chaptersAndClauses, docIndex, docSet )
-					main = pnz.hvcs::main( docContent )
+					main = pnz.hvcs::main( docContent, chaptersAndClauses )
 				]
 			)
 		)

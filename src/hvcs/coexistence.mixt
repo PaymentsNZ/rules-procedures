@@ -188,6 +188,7 @@ import [
 		"1.2"
 		"Defined terms"
 
+		// Co-existence phase
 		pnz::comment( "UG2025", "RK", "Revised for second coexistence phase November 2025 to November 2026." )
 		[
 			pnz::bold( "Co-existence phase" )
@@ -197,7 +198,13 @@ import [
 				Procedures all apply simultaneously beginning on 22 November 2025 and ending on a date:`				
 			)
 		]
+		pnz::level2(
+			`in November 2026; or`
+			`as determined by Payments NZ if all participants have fully migrated to using MX messages
+			prior to November 2026.`
+		)
 
+		// Hybrid Postal Address
 		pnz::comment( "UG2025", "RK", "Added Hybrid Postal Address formatting." )
 		[
 			pnz::bold( "Hybrid Postal Address" )
@@ -207,11 +214,7 @@ import [
 			)
 		]
 
-		pnz::level2(
-			`in November 2026; or`
-			`as determined by Payments NZ if all participants have fully migrated to using MX messages
-			prior to November 2026.`
-		)
+		// On-send
 		[
 			pnz::bold( "On-send" )
 			pnz::text(
@@ -234,6 +237,8 @@ import [
 			`receives a FIN message destined for another participant and sends that message as an HVCS
 			instruction to that participant.`
 		)
+
+		// Send
 		[
 			pnz::bold( "Send" )
 			pnz::text(
@@ -245,6 +250,8 @@ import [
 			`a payment message; or`
 			`an exception and investigation message.`
 		)
+
+		// Structured Postal Address formatting
 		[
 			pnz::bold( "Structured Postal Address formatting" )
 			pnz::text(
@@ -252,6 +259,8 @@ import [
 				accordance with the structured data requirements set out in the MX Message Specifications.`				
 			)
 		]
+
+		// Unstructured Address Line formatting
 		[
 			pnz::bold( "Unstructured Address Line formatting" )
 			pnz::text(
@@ -888,9 +897,9 @@ import [
 			for the debtor and creditor.`
 
 			`At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured
-			Address formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the
+			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the
 			co-existence phase, all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing wither Structured Postal Address formatting or Hybrid Postal Address formatting.`
+			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting.`
 		)
 	)
 

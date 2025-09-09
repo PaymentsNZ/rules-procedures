@@ -1760,6 +1760,7 @@ import [
 					`Legal Entity Identifier. A 20 character unique identifier allocated to organisations using the
 					ISO 17442 format.`
 				]
+				/*
 				[
 					"Ordering customer"
 					[
@@ -1772,6 +1773,7 @@ import [
 						pnz::comment( "UG2025", "PB", "MT terminology - removed." )
 					]
 				]
+				*/
 				[
 					"pacs"
 					`A subset of the ISO 20022 base standard message definitions for payment clearing and settlement.`

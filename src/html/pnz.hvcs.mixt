@@ -234,7 +234,7 @@ import [
 						]
 					)
 					pnz::br
-					"The following table summarises amendments to this overview."
+					"The following table summarises amendments to this document."
 					pnz::br
 					pnz::styled_table(
 						"document-control-table"

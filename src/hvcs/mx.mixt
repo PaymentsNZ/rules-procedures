@@ -11,14 +11,14 @@ import [
 	document_control = #table(
 		[
 			"Version number and description of amendment"
-			"Amendment methood and date"
+			"Amendment method and date"
 			"Amendment notice date"
 			"Effective date of amendment"
 			"Authors"
 		]
 		[
 			[
-				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				`Version 1: New document created as a result of restructure of the HVCS rules and standards
 				to implement ISO 20022 MX messaging.`
 				"Board resolution 21-Sep-2022"
 				"21-Sep-2022"
@@ -31,14 +31,14 @@ import [
 				"20-Sep-2023"
 				"20-Nov-2023"
 				"Payments NZ, Buddle Findlay"
-			]	
+			]
 			[
 				`Version 3: Usage Guidelines 2025`
-				""
-				""
-				""
+				"Board resolution 15-Sep-2025"
+				"19-Sep-2025"
+				"22-Nov-2025"
 				"Payments NZ, Buddle Findlay"
-			]			
+			]
 		]
 	)
 } @> [
@@ -102,8 +102,8 @@ import [
 				)
 				`Part F — Co-existence Procedures`
 				pnz::list(
-					`Provides binding procedures for participants during the co-existence phase of the migration from
-					sending and receiving MT messages to MX messages.`
+					`Provides binding procedures for participants during the co-existence phase of the migration
+					from sending and receiving MT messages to MX messages.`
 				)
 			)
 		)
@@ -324,7 +324,6 @@ import [
 		
 		`Schema changes will always be released with a new date.`
 		
-		pnz::comment( "UG2025", "RK", "Grammar: added 'must'" )
 		`Technical versions can contain minor corrections to cross-element rules or navigation, though must not be used for
 		schema changes.`
 
@@ -337,7 +336,6 @@ import [
 
 		pnz::image( "images/hvcs_mx_mystandards_result_view.png", "Content View vs Result View" )
 
-		pnz::comment( "UG2025", "RK", "Added space (' ') between 'ISO 20022' and 'base'" )
 		[
 			pnz::bold( "Content View" )
 			pnz::text(
@@ -425,8 +423,6 @@ import [
 		`Intermediaries will be able to receive their choice of API, MX or MX with embedded MT for different back office
 		system applications or purposes. If the embedded MT format is chosen, some loss of data may occur in the MT message
 		itself, but full message details can be accessed via the Transaction Manager or in the MX portion of the message.`
-		
-		pnz::comment( "UG2025", "RK", "Removed (4) and (5) - no longer relevant." )
 	)
 
 	pnz::section_heading( "Chapter 2: MX message specification" )
@@ -484,12 +480,6 @@ import [
 
 				`ensuring that the account number passes check digit validation in accordance with the SBI standards:
 				BACHO account numbers:`
-			)
-			pnz::comment( "XCARD", "RK",
-				"Removed (b):"
-				`if the Creditor Account contains a credit card number or a scheme debit card number but no BIC, the
-				instructed agent must ensure that the card number is valid by checking the issuer identification number
-				(IIN) and the account check digit using the modulus 10 algorithm.`
 			)
 		)
 	)
@@ -733,7 +723,6 @@ import [
 		`The combination of the Message Definition Identifier and the Usage Identifier are used to identify the Message
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.`
 
-		pnz::comment( "UG2025", "RK", "Changed all usage identifiers to version 2")
 		pnz::styled_table(
 			"message-types-table"
 			#table(
@@ -865,7 +854,6 @@ import [
 		"3.4"
 		"BICs"
 
-		pnz::comment( "UG2025", "RK", "Changed (1) to present tense." )
 		`The BIC element forms a mandatory component in the SWIFTNet Header and BAH. The BIC must be a production BIC
 		and contain 11 characters, either BIC11 or BIC8 + 'XXX'. The BIC8 used in both of these message components must
 		be identical in specific fields as outlined below, and published in the SWIFTNet Directory. Note that the
@@ -904,7 +892,6 @@ import [
 		"3.5"
 		"Distinguished name structure"
 
-		pnz::comment( "UG2025", "RK", "Previous wording could possibly be misinterpreted as RBNZ does not transport FINplus or CBPR+ messages.")
 		`The RBNZ have decided to adopt the Distinguished Name (DN) structure for MX messages.`
 
 		`To enable ISO 20022 to work for multiple use cases and independent of networks, the general convention is to use DNs
@@ -978,7 +965,6 @@ import [
 		`There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.`
 		
-		pnz::comment( "UG2025", "RK", "Confirmed no change in CBPR+ definition.")
 		`Unstructured remittance information <RmtInf/Ustrd> allows 1x140 characters (to align with HVPS+ and CBPR+).`
 
 		pnz::tag_standards
@@ -1151,7 +1137,6 @@ import [
 		)
 	)
 
-	pnz::comment( "UG2025", "RK", "Added.")
 	pnz::clause(
 		"3.9A"
 		"HVCS Hybrid Postal Address formatting"
@@ -1194,7 +1179,6 @@ import [
 		transaction per ESAS Business Day, as the RBNZ performs duplicate validation on the Instruction
 		Identification reference.`
 
-		pnz::comment( "UG2025", "RK", "Removed reference to end of coexistence, added when CBPR+ removes this restriction" )
 		`The Instruction Identification has been restricted to 16 characters using a formal rule, however,
 		HVCS has retained the 35-character length so that the specifications can be relaxed when CBPR+
 		removes this restriction without making a change to the schema.`
@@ -1310,7 +1294,6 @@ import [
 		"3.13"
 		"HVCS character sets"
 		
-		pnz::comment( "UG2025", "RK", "Change 'HVCS specifications' to 'MX Message Specifications'" )
 		[
 			pnz::text(
 				`The character sets used within the MX Message Specifications are aligned to CBPR+ though
@@ -1327,7 +1310,6 @@ import [
 			)
 		]
 
-		pnz::comment( "UG2025", "RK", "Capitalised: 'MX Message Specifications'" )
 		`The following table shows the macron characters that are included in the MX Message
 		Specification along with their Unicode value:`
 
@@ -1373,7 +1355,6 @@ import [
 		pnz::image( "images/hvcs_mx_scp_local_instrument.png", "SCP Local Instrument" )
 	)
 
-	pnz::comment( "XCARD", "RK", "Removed references to payments to cards" )
 	pnz::clause(
 		"4.2"
 		"SCP account number format"
@@ -1399,10 +1380,7 @@ import [
 				`4 digits — Branch number`
 				`7 digits — Account number, right aligned, padded with high order zeros`
 				`2 or 3 digits — Suffix, right aligned, padded with high order zeros`
-				pnz::comment( "UG2025", "RK", "Removed note" )
 			)
-
-			pnz::comment( "XCARD", "RK", "Removed card sentences" )
 		)
 	)
 
@@ -1410,7 +1388,6 @@ import [
 		"4.3"
 		"SCP Customer notifications"
 
-		pnz::comment( "UG2025", "RK", "Removed MT character substitution references" )
 		pnz::nonumber(
 			[
 				pnz::text(
@@ -2226,7 +2203,6 @@ import [
 		`The SWIFTNet Y-Copy service generates the Non-Delivery Warning (xsys.010) system message when a
 		message is considered to be overdue (not delivered within the time frame specified by the sender).`
 
-		pnz::comment( "UG2025", "RK", "Removed: 'directly corresponds to the MT010 system message and'" )
 		`The xsys.010 system message is optional.`
 
 		`The sender of an HVCS instruction can select the Non-Delivery Warning feature indicating in the
@@ -2255,7 +2231,6 @@ import [
 
 		`The Delivery Notification is reconciled with the InterAct request to which it applies.`
 
-		pnz::comment( "UG2025", "RK", "Removed reference to MT" )
 		`The xsys.011 system message is optional.`
 
 		`The sender of an HVCS instruction may explicitly request the Delivery Notification. SWIFTNet

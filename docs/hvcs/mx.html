@@ -312,14 +312,14 @@
                 <table class="pnz-table document-control-table">
                     <thead>
                         <th>Version number and description of amendment</th>
-                        <th>Amendment methood and date</th>
+                        <th>Amendment method and date</th>
                         <th>Amendment notice date</th>
                         <th>Effective date of amendment</th>
                         <th>Authors</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Version 1. New document created as a result of restructure of the HVCS rules and standards
+                            <td>Version 1: New document created as a result of restructure of the HVCS rules and standards
 				to implement ISO 20022 MX messaging.</td>
                             <td>Board resolution 21-Sep-2022</td>
                             <td>21-Sep-2022</td>
@@ -335,9 +335,9 @@
                         </tr>
                         <tr>
                             <td>Version 3: Usage Guidelines 2025</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>Board resolution 15-Sep-2025</td>
+                            <td>19-Sep-2025</td>
+                            <td>22-Nov-2025</td>
                             <td>Payments NZ, Buddle Findlay</td>
                         </tr>
                     </tbody>
@@ -576,7 +576,7 @@
                     </li>
                 </ol>
             </div>
-            <div id="document-purpose-and-overview" class="section-heading">Document purpose and overview</div>
+            <h1 id="document-purpose-and-overview" class="section-heading">Document purpose and overview</h1>
             <div class="tag-commentary"></div>
             <div class="clause-row">
                 <div id="hvcs-rules-and-procedures-overview" class="clause-heading" data-number="">HVCS rules and procedures overview</div>
@@ -665,8 +665,8 @@
                             </ul>
                             <li>Part F — Co-existence Procedures</li>
                             <ul>
-                                <li>Provides binding procedures for participants during the co-existence phase of the migration from
-					sending and receiving MT messages to MX messages.</li>
+                                <li>Provides binding procedures for participants during the co-existence phase of the migration
+					from sending and receiving MT messages to MX messages.</li>
                             </ul>
                         </ul>
                     </div>
@@ -840,15 +840,6 @@
                 <ol class="level1 level1-counter-reset">
                     <li>Specifications are released as a versioned set.</li>
                     <li>Schema changes will always be released with a new date.</li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Grammar: added &apos;must&apos;</p>
-                        </div>
-                    </div>
                     <li>Technical versions can contain minor corrections to cross-element rules or navigation, though must not be used for
 		schema changes.</li>
                     <div class="diagram">
@@ -861,15 +852,6 @@
                 <ol class="level1 level1-counter-reset">
                     <div class="diagram">
                         <img src="images/hvcs_mx_mystandards_result_view.png" alt="Content View vs Result View"></img>
-                    </div>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Added space (&apos; &apos;) between &apos;ISO 20022&apos; and &apos;base&apos;</p>
-                        </div>
                     </div>
                     <li>
                         <span class="bold">Content View</span>
@@ -938,15 +920,6 @@
                     <li>Intermediaries will be able to receive their choice of API, MX or MX with embedded MT for different back office
 		system applications or purposes. If the embedded MT format is chosen, some loss of data may occur in the MT message
 		itself, but full message details can be accessed via the Transaction Manager or in the MX portion of the message.</li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed (4) and (5) - no longer relevant.</p>
-                        </div>
-                    </div>
                 </ol>
             </div>
             <h1 id="chapter-2-mx-message-specification" class="section-heading">Chapter 2: MX message specification</h1>
@@ -991,18 +964,6 @@
                             <li>ensuring that the account number passes check digit validation in accordance with the SBI standards:
 				BACHO account numbers:</li>
                         </ol>
-                        <div class="doc-comment" data-change-id="XCARD">
-                            <div class="doc-comment-meta">
-                                <span class="doc-comment-id">XCARD</span>
-                                <span class="doc-comment-initials">RK</span>
-                            </div>
-                            <div class="doc-comment-content">
-                                <p>Removed (b):</p>
-                                <p>if the Creditor Account contains a credit card number or a scheme debit card number but no BIC, the
-				instructed agent must ensure that the card number is valid by checking the issuer identification number
-				(IIN) and the account check digit using the modulus 10 algorithm.</p>
-                            </div>
-                        </div>
                     </ol>
                 </ol>
             </div>
@@ -1276,15 +1237,6 @@
                 <ol class="level1 level1-counter-reset">
                     <li>The combination of the Message Definition Identifier and the Usage Identifier are used to identify the Message
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.</li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Changed all usage identifiers to version 2</p>
-                        </div>
-                    </div>
                     <div class="table-scroll">
                         <table class="pnz-table message-types-table">
                             <thead>
@@ -1407,15 +1359,6 @@
             <div class="clause-row">
                 <div id="3.4-bics" class="clause-heading" data-number="3.4">BICs</div>
                 <ol class="level1 level1-counter-reset">
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Changed (1) to present tense.</p>
-                        </div>
-                    </div>
                     <li>The BIC element forms a mandatory component in the SWIFTNet Header and BAH. The BIC must be a production BIC
 		and contain 11 characters, either BIC11 or BIC8 + &apos;XXX&apos;. The BIC8 used in both of these message components must
 		be identical in specific fields as outlined below, and published in the SWIFTNet Directory. Note that the
@@ -1445,15 +1388,6 @@
             <div class="clause-row">
                 <div id="3.5-distinguished-name-structure" class="clause-heading" data-number="3.5">Distinguished name structure</div>
                 <ol class="level1 level1-counter-reset">
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Previous wording could possibly be misinterpreted as RBNZ does not transport FINplus or CBPR+ messages.</p>
-                        </div>
-                    </div>
                     <li>The RBNZ have decided to adopt the Distinguished Name (DN) structure for MX messages.</li>
                     <li>To enable ISO 20022 to work for multiple use cases and independent of networks, the general convention is to use DNs
 		to specify sender and receiver information. This will enable SWIFT to implement a consistency check between the
@@ -1505,15 +1439,6 @@
                 <ol class="level1 level1-counter-reset">
                     <li>There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.</li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Confirmed no change in CBPR+ definition.</p>
-                        </div>
-                    </div>
                     <li>Unstructured remittance information &lt;RmtInf/Ustrd&gt; allows 1x140 characters (to align with HVPS+ and CBPR+).</li>
                     <div class="tag-standards"></div>
                     <li>Structured remittance information &lt;RmtInf/Strd&gt; must only be used for HVCS payments when it has been bilaterally or
@@ -1689,15 +1614,6 @@
                     </tbody>
                 </table>
             </div>
-            <div class="doc-comment" data-change-id="UG2025">
-                <div class="doc-comment-meta">
-                    <span class="doc-comment-id">UG2025</span>
-                    <span class="doc-comment-initials">RK</span>
-                </div>
-                <div class="doc-comment-content">
-                    <p>Added.</p>
-                </div>
-            </div>
             <div class="clause-row">
                 <div id="3.9A-hvcs-hybrid-postal-address-formatting" class="clause-heading" data-number="3.9A">HVCS Hybrid Postal Address formatting</div>
                 <ol class="level1 level1-counter-reset">
@@ -1731,15 +1647,6 @@
                     <li>The Instruction Identification must be populated with a unique reference for each ESAS settlement
 		transaction per ESAS Business Day, as the RBNZ performs duplicate validation on the Instruction
 		Identification reference.</li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed reference to end of coexistence, added when CBPR+ removes this restriction</p>
-                        </div>
-                    </div>
                     <li>The Instruction Identification has been restricted to 16 characters using a formal rule, however,
 		HVCS has retained the 35-character length so that the specifications can be relaxed when CBPR+
 		removes this restriction without making a change to the schema.</li>
@@ -1912,15 +1819,6 @@
             <div class="clause-row">
                 <div id="3.13-hvcs-character-sets" class="clause-heading" data-number="3.13">HVCS character sets</div>
                 <ol class="level1 level1-counter-reset">
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Change &apos;HVCS specifications&apos; to &apos;MX Message Specifications&apos;</p>
-                        </div>
-                    </div>
                     <li>
                         <span>The character sets used within the MX Message Specifications are aligned to CBPR+ though
 				extended to support upper case and lower case Te Reo Māori macron characters within
@@ -1930,15 +1828,6 @@
                         <span>by participants in accordance
 				with the MX Message Specifications.</span>
                     </li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Capitalised: &apos;MX Message Specifications&apos;</p>
-                        </div>
-                    </div>
                     <li>The following table shows the macron characters that are included in the MX Message
 		Specification along with their Unicode value:</li>
                     <div class="table-scroll">
@@ -2004,15 +1893,6 @@
                     </div>
                 </ol>
             </div>
-            <div class="doc-comment" data-change-id="XCARD">
-                <div class="doc-comment-meta">
-                    <span class="doc-comment-id">XCARD</span>
-                    <span class="doc-comment-initials">RK</span>
-                </div>
-                <div class="doc-comment-content">
-                    <p>Removed references to payments to cards</p>
-                </div>
-            </div>
             <div class="clause-row">
                 <div id="4.2-scp-account-number-format" class="clause-heading" data-number="4.2">SCP account number format</div>
                 <ol class="level1 level1-counter-reset">
@@ -2032,40 +1912,13 @@
                             <li>4 digits — Branch number</li>
                             <li>7 digits — Account number, right aligned, padded with high order zeros</li>
                             <li>2 or 3 digits — Suffix, right aligned, padded with high order zeros</li>
-                            <div class="doc-comment" data-change-id="UG2025">
-                                <div class="doc-comment-meta">
-                                    <span class="doc-comment-id">UG2025</span>
-                                    <span class="doc-comment-initials">RK</span>
-                                </div>
-                                <div class="doc-comment-content">
-                                    <p>Removed note</p>
-                                </div>
-                            </div>
                         </ol>
-                        <div class="doc-comment" data-change-id="XCARD">
-                            <div class="doc-comment-meta">
-                                <span class="doc-comment-id">XCARD</span>
-                                <span class="doc-comment-initials">RK</span>
-                            </div>
-                            <div class="doc-comment-content">
-                                <p>Removed card sentences</p>
-                            </div>
-                        </div>
                     </ol>
                 </ol>
             </div>
             <div class="clause-row">
                 <div id="4.3-scp-customer-notifications" class="clause-heading" data-number="4.3">SCP Customer notifications</div>
                 <ol class="level1 level1-counter-reset">
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed MT character substitution references</p>
-                        </div>
-                    </div>
                     <div>
                         <p>
                             <span>There is now a dedicated Email Address field for this purpose (see the path element</span>
@@ -2771,15 +2624,6 @@
                 <ol class="level1 level1-counter-reset">
                     <li>The SWIFTNet Y-Copy service generates the Non-Delivery Warning (xsys.010) system message when a
 		message is considered to be overdue (not delivered within the time frame specified by the sender).</li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed: &apos;directly corresponds to the MT010 system message and&apos;</p>
-                        </div>
-                    </div>
                     <li>The xsys.010 system message is optional.</li>
                     <li>The sender of an HVCS instruction can select the Non-Delivery Warning feature indicating in the
 		SWIFTNet Header the period of time after which they require notification if the HVCS instruction
@@ -2801,15 +2645,6 @@
                     <li>The Delivery Notification message is an optional system message that indicates that a message for
 		which a delivery notification is requested, has been successfully delivered.</li>
                     <li>The Delivery Notification is reconciled with the InterAct request to which it applies.</li>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed reference to MT</p>
-                        </div>
-                    </div>
                     <li>The xsys.011 system message is optional.</li>
                     <li>The sender of an HVCS instruction may explicitly request the Delivery Notification. SWIFTNet
 		generates a Delivery Notification when it receives the technical delivery acknowledgement from the

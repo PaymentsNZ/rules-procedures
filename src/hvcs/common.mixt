@@ -11,14 +11,14 @@ import [
 	document_control = #table(
 		[
 			"Version number and description of amendment"
-			"Amendment methood and date"
+			"Amendment method and date"
 			"Amendment notice date"
 			"Effective date of amendment"
 			"Authors"
 		]
 		[
 			[
-				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				`Version 1: New document created as a result of restructure of the HVCS rules and standards
 				to implement ISO 20022 MX messaging.`
 				"Board resolution 21-Sep-2022"
 				"21-Sep-2022"
@@ -27,9 +27,9 @@ import [
 			]
 			[
 				`Version 2: Usage Guidelines 2025`
-				""
-				""
-				""
+				"Board resolution 15-Sep-2025"
+				"19-Sep-2025"
+				"22-Nov-2025"
 				"Payments NZ, Buddle Findlay"
 			]			
 		]
@@ -102,8 +102,8 @@ import [
 
 				`Part F — Co-existence Procedures`
 				pnz::list(
-					`Provides binding procedures for participants during the co-existence phase of the migration from
-					sending and receiving MT messages to MX messages.`
+					`Provides binding procedures for participants during the co-existence phase of the migration
+					from sending and receiving MT messages to MX messages.`
 				)
 			)
 		)
@@ -146,7 +146,6 @@ import [
 		"1.1"
 		"Defined terms"
 
-		pnz::comment( "UG2025", "RK", "Changed capitalisation of FINplus" )
 		[
 			pnz::bold( "CBPR+" )
 			pnz::text(
@@ -154,7 +153,6 @@ import [
 				operated by SWIFT.`
 			)
 		]
-		pnz::comment( "UG2025", "JW", "Removed MT103" )
 		[
 			pnz::bold( "Customer credit transfer message" )
 			pnz::text(
@@ -179,7 +177,6 @@ import [
 				`camt.029`
 			)
 		]
-		pnz::comment( "UG2025", "JW", "Removed MT202, MT202COV, MT205, MT205COV" )
 		[
 			pnz::bold( "FI credit transfer message" )
 			pnz::text(
@@ -219,7 +216,6 @@ import [
 				webpage`
 			)
 		]
-		pnz::comment( "UG2025", "JW", "Removed MT103 RETN, MT202 RETN, MT202COV RETN, MT205 RETN, and MT205COV RETN" )
 		[
 			pnz::bold( "Return message" )
 			pnz::text(
@@ -240,16 +236,6 @@ import [
 				`FIN message`
 			)
 		]
-		pnz::question( "UG2025", "JW",
-			`Is it safe to remove:`
-			`- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired.`
-			`- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered.`
-			`- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the <text-block>, and has been forced to abort it instead.`
-		)
-		pnz::comment( "UG2025", "RK",
-			`Removed:`
-			`- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.`
-		)
 		[
 			pnz::bold( "System message" )
 			pnz::text(
@@ -326,7 +312,6 @@ import [
 
 		pnz::subsection_heading( "Instructing Agent" )
 
-		pnz::comment( "UG2025", "RK", "Removed MT Obligations and referencees to card numbers" )
 		pnz::styled_table(
 			"validation-table"
 			#table(
@@ -667,7 +652,6 @@ import [
 
 		pnz::subsection_heading( "Instructed Agent" )
 
-		pnz::comment( "UG2025", "RK", "Removed MT Obligations" )
 		pnz::styled_table(
 			"validation-table"
 			#table(
@@ -834,10 +818,6 @@ import [
 		"1.6"
 		"No revoking after settlement"
 
-		pnz::comment( "UG2025", "RK",
-			`Replaced: 'section 156R of the Banking (Prudential Supervision) Act 1989.'`
-			`With: 'section 55 of the Financial Markets Infrastructure Act 2021.'`
-		)
 		`As HVCS payments are made through the Reserve Bank's designated settlement system, ESAS, they cannot
 		be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms
 		and conditions and section 55 of the Financial Markets Infrastructure Act 2021.`
@@ -855,7 +835,6 @@ import [
 		pnz::level2(
 			`as soon as practicable after making the decision to return it, and`
 
-			pnz::comment( "UG2025", "RK", "Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications." )
 			`in accordance with Part D - MX Procedures and the MX Message Specifications.`
 		)
 	)
@@ -977,7 +956,6 @@ import [
 		"2.5"
 		"Request and response formats"
 
-		pnz::comment( "UG2025", "JW", "No change, though noting reference to MTn95 and MTn96." )
 		`If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common
 		Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by,
 		for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message
@@ -1106,7 +1084,6 @@ import [
 		`Participants who send and receive financial institution credit transfers during the CLS evening
 		session are:`
 
-		pnz::comment( "UG2025", "RK", "Added ICBC, NZ Depository" )
 		pnz::table(
 			#table(
 				[

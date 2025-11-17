@@ -164,14 +164,14 @@
                 <table class="pnz-table document-control-table">
                     <thead>
                         <th>Version number and description of amendment</th>
-                        <th>Amendment methood and date</th>
+                        <th>Amendment method and date</th>
                         <th>Amendment notice date</th>
                         <th>Effective date of amendment</th>
                         <th>Authors</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Version 1. New document created as a result of restructure of the HVCS rules and standards
+                            <td>Version 1: New document created as a result of restructure of the HVCS rules and standards
 				to implement ISO 20022 MX messaging.</td>
                             <td>Board resolution 21-Sep-2022</td>
                             <td>21-Sep-2022</td>
@@ -180,9 +180,9 @@
                         </tr>
                         <tr>
                             <td>Version 2: Usage Guidelines 2025</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>Board resolution 15-Sep-2025</td>
+                            <td>19-Sep-2025</td>
+                            <td>22-Nov-2025</td>
                             <td>Payments NZ, Buddle Findlay</td>
                         </tr>
                     </tbody>
@@ -273,7 +273,7 @@
                     </li>
                 </ol>
             </div>
-            <div id="document-purpose-and-overview" class="section-heading">Document purpose and overview</div>
+            <h1 id="document-purpose-and-overview" class="section-heading">Document purpose and overview</h1>
             <div class="tag-commentary"></div>
             <div class="clause-row">
                 <div id="hvcs-rules-and-procedures-overview" class="clause-heading" data-number="">HVCS rules and procedures overview</div>
@@ -364,8 +364,8 @@
                             </ul>
                             <li>Part F — Co-existence Procedures</li>
                             <ul>
-                                <li>Provides binding procedures for participants during the co-existence phase of the migration from
-					sending and receiving MT messages to MX messages.</li>
+                                <li>Provides binding procedures for participants during the co-existence phase of the migration
+					from sending and receiving MT messages to MX messages.</li>
                             </ul>
                         </ul>
                     </div>
@@ -400,29 +400,11 @@
             <div class="clause-row">
                 <div id="1.1-defined-terms" class="clause-heading" data-number="1.1">Defined terms</div>
                 <div class="level1">
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Changed capitalisation of FINplus</p>
-                        </div>
-                    </div>
                     <p>
                         <span class="bold">CBPR+</span>
                         <span>means the ISO 20022-based messaging standard for sending a SWIFT message through the FINplus CUG
 				operated by SWIFT.</span>
                     </p>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">JW</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed MT103</p>
-                        </div>
-                    </div>
                     <p>
                         <span class="bold">Customer credit transfer message</span>
                         <span>means the following payment messages used to facilitate an HVCS payment involving a customer of a
@@ -443,15 +425,6 @@
                             <li>camt.029</li>
                         </ul>
                     </p>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">JW</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed MT202, MT202COV, MT205, MT205COV</p>
-                        </div>
-                    </div>
                     <p>
                         <span class="bold">FI credit transfer message</span>
                         <span>means the following payment messages used to facilitate an HVCS payment involving a participant or
@@ -481,15 +454,6 @@
 				ISO 20022 message specifications modified for New Zealand&apos;s HVCS and provided on the &quot;mystandards&quot;
 				webpage</span>
                     </p>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">JW</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed MT103 RETN, MT202 RETN, MT202COV RETN, MT205 RETN, and MT205COV RETN</p>
-                        </div>
-                    </div>
                     <p>
                         <span class="bold">Return message</span>
                         <span>means the following payment messages used to facilitate the return of an HVCS payment:</span>
@@ -506,28 +470,6 @@
                             <li>FIN message</li>
                         </ul>
                     </p>
-                    <div class="doc-question" data-change-id="UG2025">
-                        <div class="doc-question-meta">
-                            <span class="doc-question-id">UG2025</span>
-                            <span class="doc-question-initials">JW</span>
-                        </div>
-                        <div class="doc-question-content">
-                            <p>Is it safe to remove:</p>
-                            <p>- MT010 - Non-Delivery Warning - a message that was being monitored in case of non-delivery, was not delivered before its obsolescence period expired.</p>
-                            <p>- MT011 - Delivery Notification - a message being monitored for delivery has actually been delivered.</p>
-                            <p>- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the &lt;text-block&gt;, and has been forced to abort it instead.</p>
-                        </div>
-                    </div>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed:</p>
-                            <p>- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.</p>
-                        </div>
-                    </div>
                     <p>
                         <span class="bold">System message</span>
                         <span>means a message sent to a participant through SWIFT in relation to an HVCS instruction including:</span>
@@ -588,15 +530,6 @@
                     <li>For clarity, the obligations set out in the table below are cumulative.  Participants must comply with every
 		validation obligation that applies to the type of HVCS instruction that the participant sends or receives.</li>
                     <h2 id="instructing-agent" class="subsection-heading">Instructing Agent</h2>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed MT Obligations and referencees to card numbers</p>
-                        </div>
-                    </div>
                     <div class="table-scroll">
                         <table class="pnz-table validation-table">
                             <thead>
@@ -917,15 +850,6 @@
                         </table>
                     </div>
                     <h2 id="instructed-agent" class="subsection-heading">Instructed Agent</h2>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Removed MT Obligations</p>
-                        </div>
-                    </div>
                     <div class="table-scroll">
                         <table class="pnz-table validation-table">
                             <thead>
@@ -1081,16 +1005,6 @@
             <div class="clause-row">
                 <div id="1.6-no-revoking-after-settlement" class="clause-heading" data-number="1.6">No revoking after settlement</div>
                 <div class="level1">
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Replaced: &apos;section 156R of the Banking (Prudential Supervision) Act 1989.&apos;</p>
-                            <p>With: &apos;section 55 of the Financial Markets Infrastructure Act 2021.&apos;</p>
-                        </div>
-                    </div>
                     <p>As HVCS payments are made through the Reserve Bank&apos;s designated settlement system, ESAS, they cannot
 		be reversed, repaid, recovered, or set aside under the terms of the Exchange Settlement Account terms
 		and conditions and section 55 of the Financial Markets Infrastructure Act 2021.</p>
@@ -1104,15 +1018,6 @@
 		return an HVCS payment:</li>
                     <ol class="level2 level2-counter-reset">
                         <li>as soon as practicable after making the decision to return it, and</li>
-                        <div class="doc-comment" data-change-id="UG2025">
-                            <div class="doc-comment-meta">
-                                <span class="doc-comment-id">UG2025</span>
-                                <span class="doc-comment-initials">RK</span>
-                            </div>
-                            <div class="doc-comment-content">
-                                <p>Revised from Part F - Co-existence Procedures to Part D, plus MX Message Specifications.</p>
-                            </div>
-                        </div>
                         <li>in accordance with Part D - MX Procedures and the MX Message Specifications.</li>
                     </ol>
                 </ol>
@@ -1206,15 +1111,6 @@
             <div class="clause-row">
                 <div id="2.5-request-and-response-formats" class="clause-heading" data-number="2.5">Request and response formats</div>
                 <div class="level1">
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">JW</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>No change, though noting reference to MTn95 and MTn96.</p>
-                        </div>
-                    </div>
                     <p>If an instructed agent asks an instructing agent under rule 9.21 and clause 2.2 of these HVCS Common
 		Procedures, to send data to correct an HVCS instruction, the instructed agent can request the data by,
 		for example, phone or using SWIFT message MTn95-Queries.  If the instructing agent of a payment message
@@ -1317,15 +1213,6 @@
                 <div class="level1">
                     <p>Participants who send and receive financial institution credit transfers during the CLS evening
 		session are:</p>
-                    <div class="doc-comment" data-change-id="UG2025">
-                        <div class="doc-comment-meta">
-                            <span class="doc-comment-id">UG2025</span>
-                            <span class="doc-comment-initials">RK</span>
-                        </div>
-                        <div class="doc-comment-content">
-                            <p>Added ICBC, NZ Depository</p>
-                        </div>
-                    </div>
                     <div class="table-scroll">
                         <table class="pnz-table">
                             <thead>

@@ -11,14 +11,14 @@ import [
 	document_control = #table(
 		[
 			"Version number and description of amendment"
-			"Amendment methood and date"
+			"Amendment method and date"
 			"Amendment notice date"
 			"Effective date of amendment"
 			"Authors"
 		]
 		[
 			[
-				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				`Version 1: New document created as a result of restructure of the HVCS rules and standards
 				to implement ISO 20022 MX messaging.`
 				"Board resolution 21-Sep-2022"
 				"21-Sep-2022"
@@ -31,14 +31,14 @@ import [
 				"20-Sep-2023"
 				"20-Nov-2023"
 				"Payments NZ, Buddle Findlay"
-			]	
+			]
 			[
 				`Version 3: Usage Guidelines 2025`
-				""
-				""
-				""
+				"Board resolution 15-Sep-2025"
+				"19-Sep-2025"
+				"22-Nov-2025"
 				"Payments NZ, Buddle Findlay"
-			]			
+			]
 		]
 	)
 } @> [
@@ -108,10 +108,9 @@ import [
 				)
 				`Part F — Co-existence Procedures`
 				pnz::list(
-					pnz::question( "UG2025", "RK", "Description requires revision (same for all documents)" )
 					`Provides binding procedures for participants during the co-existence phase of the migration
 					from sending and receiving MT messages to MX messages.`
-				)	
+				)
 			)
 		)
 	)
@@ -643,7 +642,6 @@ import [
 				]
 			)
 		)
-		pnz::comment( "XCARD", "RK", "Removed 'if the account is identified by the creditor's primary account number (PAN)...'" )
 	)
 
 	pnz::section_heading( "Chapter 2: On-us SCPs" )

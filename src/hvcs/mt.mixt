@@ -12,14 +12,14 @@ import [
 	document_control = #table(
 		[
 			"Version number and description of amendment"
-			"Amendment methood and date"
+			"Amendment method and date"
 			"Amendment notice date"
 			"Effective date of amendment"
 			"Authors"
 		]
 		[
 			[
-				`Version 1. New document created as a result of restructure of the HVCS rules and standards
+				`Version 1: New document created as a result of restructure of the HVCS rules and standards
 				to implement ISO 20022 MX messaging.`
 				"Board resolution 21-Sep-2022"
 				"21-Sep-2022"
@@ -28,11 +28,11 @@ import [
 			]
 			[
 				`Version 2: Usage Guidelines 2025`
-				""
-				""
-				""
+				"Board resolution 15-Sep-2025"
+				"19-Sep-2025"
+				"22-Nov-2025"
 				"Payments NZ, Buddle Findlay"
-			]			
+			]
 		]
 	)
 } @> [
@@ -43,12 +43,6 @@ import [
 		""
 		"HVCS rules and procedures overview"
 
-		pnz::comment( "UG2025", "RK", "Removed reference to 'NZD HVCS payments'" )
-		pnz::question( "UG2025", "RK",
-			"Is it correct to retain reference to 'HVCS instructions'?"
-			`Exception and investigation message means an HVCS instruction sent between participants
-			including: MT192, MT196, MT292, MT296...`
-		)
 		pnz::nonumber(
 			`This document MT Messaging Procedures (Part E) is one part of a suite of documentation to help participants
 			understand what is required to become a high value clearing system (HVCS) participant and how to send and
@@ -127,7 +121,6 @@ import [
 		""
 		"Document purpose and structure"
 
-		pnz::comment( "UG2025", "RK", "Added: 'that are exception and investigation messages'" )
 		`This document discusses the MT Messaging Procedures that apply to HVCS instructions
 		that are exception and investigation messages.`
 		
@@ -138,21 +131,8 @@ import [
 		
 		`Chapter 2 specifies how to format block 3 (user header) of the SWIFT message header.`
 
-		pnz::comment( "UG2025", "RK",
-			"Removed:"
-			`Chapter 3 specifies how to format customer credit transfers.`
-			`Chapter 4 specifies how to format cross border redirections.`
-			`Chapter 5 specifies how to format financial institution transfers.`
-			`Added: 'Chapters 3, 4 and 5 have been deleted.'`
-		)
-		
 		`Chapters 3, 4 and 5 have been deleted.`
 
-		pnz::comment( "UG2025", "RK",
-			"Removed:"
-			`the format of the notification messages that FINCopy sends to an HVCS
-			instructing agent and`
-		)
 		`Chapter 6 specifies provides the ESAS rejection codes for AVP.`
 	)
 
@@ -164,15 +144,7 @@ import [
 
 		`For the purposes of these MT Messaging Procedures, all references to the following defined
 		terms means an HVCS instruction that is an MT message:`
-		pnz::comment( "UG2025", "RK",
-			"Removed:"
-			pnz::dashes(
-				`Payment message;`
-				`Return message;`
-				`Customer credit transfer message; and`
-				`FI credit transfer message.`
-			)
-		)
+		
 		pnz::bullets(
 			`HVCS instruction;`
 			`Exception and investigation message; and`
@@ -182,8 +154,6 @@ import [
 
 	pnz::section_heading( "Chapter 1: MT Messages in scope" )
 	pnz::tag_commentary
-
-	pnz::comment( "UG2025", "RK", "Removed 1.1 MT messages for HVCS payments." )
 
 	pnz::nonumber_clause(
 		"1.1"
@@ -196,16 +166,6 @@ import [
 		"1.2"
 		"Other FINCopy message types"
 
-		pnz::comment( "UG2025", "RK",
-			`Removed:`
-			`- MT012 - Sender Notification - an optional feature in the FIN Copy and FIN Inform service. It notifies the sender when the message has been released by the service administrator.`
-			`- MT019 - Abort Notification -  notifies the sender that the system has been unable to deliver the message specified in the <text-block>, and has been forced to abort it instead.`
-			`- MT028 - FINCopy message status report.`
-			`- MT029 - Copy message status report (response to the MT028).`
-			`- MT096 - FINCopy to server destination message.`
-			`- MT097 - FINCopy message authorisation/refusal notification.`
-		)
-		
 		"This clause has been deleted (UG2025 November 2025)."
 	)
 
@@ -215,7 +175,6 @@ import [
 
 		`Participants exchange the MT message types described in the following table:`
 
-		pnz::question( "UG2025", "RK", "Are delivery notifications relevant for MTn95/96?" )
 		pnz::table(
 			#table(
 				[
@@ -254,8 +213,6 @@ import [
 			)
 		)		
 	)
-
-	pnz::comment( "UG2025", "RK", "Removed 1.4 Message lifecycle, as this relates to payments." )
 
 	pnz::nonumber_clause(
 		"1.4"
@@ -303,42 +260,20 @@ import [
 			)
 		]
 
-		pnz::comment(
-			"UG2025", "RK",
-			"Removed (4), (5), (6), (7) + table"
-			`The instructing agent of a payment message should ensure that MUR (field tag 108) contains the
-			transaction reference number (TRN) to provide an audit trail of the HVCS payment through the
-			HVCS clearing and settlement process.`
-		)
-
 		"This clause has been deleted (UG2025 November 2025)."
 		"This clause has been deleted (UG2025 November 2025)."
 		"This clause has been deleted (UG2025 November 2025)."
 		"This clause has been deleted (UG2025 November 2025)."
 	)
-
-	pnz::comment( "UG2025", "RK", "Removed - Chapter 3: Customer credit transfer (SCP)" )
 
 	pnz::section_heading( "Chapter 3: Customer credit transfer (SCP)" )
 	"This chapter has been deleted (UG2025 November 2025)."
 
-	pnz::comment( "UG2025", "RK", "Removed - Chapter 4: Customer Credit Transfer (Cross border redirection)" )
-
 	pnz::section_heading( "Chapter 4: Customer Credit Transfer (Cross border redirection)" )
 	"This chapter has been deleted (UG2025 November 2025)."
 
-	pnz::comment( "UG2025", "RK", "Removed - Chapter 5: Formats for financial institution transfers" )
-
 	pnz::section_heading( "Chapter 5: Formats for financial institution transfers" )
 	"This chapter has been deleted (UG2025 November 2025)."
-
-	pnz::question( "UG2025", "RK",
-		`I am not sure we need to retain any of Chapter 6!`
-		`If this chapter specifies the format for 2 of the notification message types that FINCopy
-		sends to an instructing agent, and we are no longer using FINcopy, then we probably don't
-		need this at all.`
-		`We may just need to retain ESAS rejection codes.`
-	)
 
 	pnz::section_heading( "Chapter 6: FINCopy system messages advising HVCS payment status" )
 	pnz::tag_commentary
@@ -514,7 +449,6 @@ import [
 		"6.4"
 		"ESAS rejection codes"
 
-		pnz::comment( "UG2025", "RK", "Removed: ' (refer to Clause 1.4 Message lifecycle)'" )
 		`The following table contains ESAS rejection codes for AVP and SBI and explanations of why ESAS applies
 		each code when ESAS validates the structure of an MT096 system message but the content of the message
 		fails business rules validation:`
@@ -644,7 +578,6 @@ import [
 					[
 						`The payment message must have a Settlement Date that is NZ business day for:`
 						[
-							pnz::comment( "UG2025", "RK", "Removed: ', and until 21 April 2023, SBI." )
 							pnz::bullets(
 								"AVP"
 							)
@@ -745,9 +678,4 @@ import [
 			]
 		)
 	)
-
-	pnz::comment( "UG2025", "RK", "Removed: 'MT103 Parameter Table" )
-	pnz::comment( "UG2025", "RK", "Removed: 'MT202 Parameter Table" )
-	pnz::comment( "UG2025", "RK", "Removed: 'MT205 Parameter Table" )
-	pnz::comment( "UG2025", "RK", "Removed: 'FIN Copy Parameter Table" )
 ]

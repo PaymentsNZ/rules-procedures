@@ -12,7 +12,7 @@ import [
 	document_control = #table(
 		[
 			"Version number and description of amendment"
-			"Amendment methood and date"
+			"Amendment method and date"
 			"Amendment notice date"
 			"Effective date of amendment"
 			"Authors"
@@ -20,7 +20,7 @@ import [
 		[
 			[
 				[
-					"Version 1. New document:"
+					"Version 1: New document:"
 					pnz::bullets(
 						`created as a result of restructure of the HVCS rules and standards to implement
 						ISO 20022 MX messaging, and`
@@ -42,9 +42,9 @@ import [
 			]
 			[
 				`Version 3: Usage Guidelines 2025`
-				""
-				""
-				""
+				"Board resolution 15-Sep-2025"
+				"19-Sep-2025"
+				"22-Nov-2025"
 				"Payments NZ, Buddle Findlay"
 			]
 		]
@@ -380,18 +380,15 @@ import [
 		"1.1"
 		"Rationale for Change"
 
-		pnz::comment( "UG2025", "RK", "New paragraph for additional context" )
 		`The Appendix 14 procedures received significant revision during 2022 to support the introduction of
 		MX messaging for the High Value Clearing System (HVCS) and the coexistence period for MT and MX
 		messaging from 2023 through 2025.`
 		
-		pnz::comment( "UG2025", "RK", "Changed to past tense" )
 		`The introduction of MX messages to the High Value Clearing System (HVCS) introduced new
 		ISO standard terms.  Readers familiar with the previous Appendix 14 will note that many of
 		the terms used previously by the NZ payments industry have been replaced with their ISO
 		equivalents in both the HVCS rules and procedures.`
 
-		pnz::comment( "UG2025", "RK", "Qualified the removal of messaging to payment messaging from November 2025." )
 		`There are also many places where MT specific terms have been replaced by message system
 		agnostic terms.  This was necessary to prepare for the removal of MT payment messaging from November
 		2025.`
@@ -554,7 +551,6 @@ import [
 				`MT message format (ISO 15022)`
 			)
 
-			pnz::comment( "UG2025", "RK", "Changed to past tense, note MT payment messages retired" )
 			`MX messages are an XML-based replacement for MT messages.  MT payment messages were retired from the HVCS
 			at the end of the first co-existence phase (November 2025).  MT exception and investigations messages
 			and system messages are scheduled to be retired at the end of this co-existence phase (November 2026).`
@@ -574,10 +570,6 @@ import [
 			`The AVP CUG is the closed user group provided by SWIFT for HVCS instruction processing. Members of the
 			AVP CUG exchange payment messages and other HVCS instructions.`
 
-			pnz::comment( "UG2025", "RK",
-				"Requirement to join both CUGs retained for the time being."
-				"Requires discussion with RBNZ to understand whether they need Participants to remain in the longer term."
-			)
 			`There are two AVP CUGs that participants must join. They are the AVP MX CUG which is used to send MX
 			messages, and the AVP MT CUG which is used for sending MT messages.`
 		)
@@ -586,7 +578,6 @@ import [
 			"HVCS payment categories"
 
 			`An HVCS participant can make the following types of payment:`
-			pnz::comment( "UG2025", "RK", "Changed payment message requirements to AVP MX CUG Member" )
 		)
 
 	pnz::styled_table(
@@ -782,11 +773,6 @@ import [
 		"3.6"
 		"Non-SCP Customer Credit Transfer"
 
-		pnz::comment( "UG2025", "RK",
-			`Removed text:`
-			`"This section applies to MX messages only."`
-		)
-		
 		`A payment to a creditor that does not meet the SCP criteria can be sent a customer credit transfer without
 		the SCP designation by omitting the Local Instrument code.  Examples of where this could be used are:`
 
@@ -1143,9 +1129,6 @@ import [
 		"4.1"
 		"Message flows"
 		
-		pnz::comment( "UG2025", "RK",
-			`For the sentence starting "Authorised messages...", changed to "Payment messages..."`
-		)
 		`The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode
 		requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the
 		recipient. Payment messages are only delivered to the recipients once they have been authorised, and
@@ -1194,11 +1177,9 @@ import [
 						pnz::bullets(
 							`who participates in the CUG as a member,`
 							`the requirements for participating in the CUG, and`
-							pnz::comment( "UG2025", "RK", "Removed refereence to 'or SWIFT NetCopy'" )
 							`the service parameters for the SWIFT FINCopy service.`
 						)
 						pnz::br
-						pnz::comment( "UG2025", "RK", "Removed refereence to 'or SWIFT NetCopy'" )
 						`Members of the AVP CUG exchange HVCS instructions with each other using SWIFT FINCopy in Y mode.
 						Further information on how to prepare to join the AVP CUG and the process to join the AVP CUG
 						is provided by the RBNZ here. AVP CUG members who are participants and their BICs are:`
@@ -1257,7 +1238,6 @@ import [
 				[
 					"CLS (Continuous Linked Settlement)"
 					[
-						pnz::comment( "UG2025", "RK", "Replaced MT202 with pacs.009" )
 						`Is the largest multicurrency cash settlement system in the world, with links to RTGS
 						systems in 18 currencies (including the NZ dollar). CLS settles payment instructions
 						relating to FX spot, forwards, swaps, option exercises, non-deliverable forwards and
@@ -1371,7 +1351,6 @@ import [
 				[
 					"SWIFT FINplus"
 					[
-						pnz::comment( "UG2025", "RK", "Added definition." )
 						`Is a messaging service that enables financial institutions to exchange SWIFT messages in MX
 						format in store-and-forward mode. The FINplus service is typically used to send cross-border
 						payment messages between correspondent banking partners using the CBPR+ message format.`
@@ -1380,15 +1359,8 @@ import [
 					]
 				]
 				[
-					"SWIFT FINCopy"
-					[
-						pnz::comment( "UG2025", "RK", "Removed definition." )
-					]
-				]
-				[
 					"SWIFTNet Copy"
 					[
-						pnz::comment( "UG2025", "RK", "Removed reference to FINCopy." )
 						`The ISO 20022 service that delivers Y-copy capability for a SWIFT Closed User Group (CUG).
 						It is deployed when a market infrastructure needs its own SWIFTNet service for MX messages.`
 						pnz::br
@@ -1501,7 +1473,6 @@ import [
 			`Financial Markets Infrastructure Act 2021, which is likely to impose standards on HVCS (as a
 			designated FMI) which could cover clearing and settlement requirements;`
 
-			pnz::comment( "UG2025", "MT", "Added next two examples." )
 			`certain provisions of the Banking (Prudential Supervision) Act 1989 and the Corporations (Investigations
 			and Management) Act 1989 relating to statutory management; and`
 			`certain provisions of the Deposit Takers Act 2023, for example, Part 7.`
@@ -1760,20 +1731,6 @@ import [
 					`Legal Entity Identifier. A 20 character unique identifier allocated to organisations using the
 					ISO 17442 format.`
 				]
-				/*
-				[
-					"Ordering customer"
-					[
-						pnz::comment( "UG2025", "PB", "MT terminology - removed." )
-					]
-				]
-				[
-					"Ordering institution"
-					[
-						pnz::comment( "UG2025", "PB", "MT terminology - removed." )
-					]
-				]
-				*/
 				[
 					"pacs"
 					`A subset of the ISO 20022 base standard message definitions for payment clearing and settlement.`

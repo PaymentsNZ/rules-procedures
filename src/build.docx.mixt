@@ -42,9 +42,9 @@ let
 					docTitle,
 					translated
 				)
-				writtenMIXT = File.Write(
+				writtenMIXD = File.Write(
 					target
-					Mixt.FromValue(translated)
+					Mixd.FromValue(translated)
 				)
 				writtenXml = File.Write(
 					target
@@ -57,8 +57,8 @@ let
 					(
 						if targetFormat == "xml" then
 							writtenXml
-						else if targetFormat == "mixt" then
-							writtenMIXT
+						else if targetFormat == "mixd" then
+							writtenMIXD
 						else
 							writtenDOCX
 					)

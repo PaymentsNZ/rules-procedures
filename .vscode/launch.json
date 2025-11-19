@@ -50,6 +50,40 @@
 			]
 		},
 		{
+			"name": "Build PDF (test)",
+			"type": "mixt",
+			"request": "launch",
+			"mode": "run",
+			"program": "${workspaceFolder}/src/build.pdf.mixt",
+			"mixtFlags": [
+				"--logNoPid",
+				"--logLevel",
+				"Info",
+				"--format",
+				"mixt",
+				"--pretty",
+				"-a",
+				"isTest=true",
+			]
+		},
+		{
+			"name": "Build PDF (prod)",
+			"type": "mixt",
+			"request": "launch",
+			"mode": "run",
+			"program": "${workspaceFolder}/src/build.pdf.mixt",
+			"mixtFlags": [
+				"--logNoPid",
+				"--logLevel",
+				"Info",
+				"--format",
+				"mixt",
+				"--pretty",
+				"-a",
+				"isTest=false",
+			]
+		},
+		{
 			"name": "Run MIXT (MIXT)",
 			"type": "mixt",
 			"request": "launch",

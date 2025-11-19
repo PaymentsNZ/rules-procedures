@@ -1,0 +1,117 @@
+import [
+	documentsTable = "documents.mixt"
+]
+let
+	apiUrl = "https://api.europdf.eu/v1/docs"
+	docUrl = "https://paymentsnz.github.io/rules-procedures/hvcs"
+	targetFormat = "pdf"
+	directory = FilePath.Join( "dist", targetFormat )
+	apiKey = Secret.FromEnvironment( "EUROPDF_API_KEY" )
+	isTest = (
+		if Record.FieldOrDefault( OS.Arguments(), "isTest", "true" ) == "false" then
+			false
+		else
+			true
+	)
+
+	selector = null
+	//selector = (id as text) => true
+	//selector = (id as text) => (id == "Overview")
+
+	getTarget = (doc as text) => (
+		// ensure the directory exists before returning the combined file path
+		List.Coalesce(
+			[
+				FilePath.MakeAll( directory )
+				FilePath.Join( directory, doc )
+			]
+		)
+	)
+
+	// getDocumentUrl
+	getDocumentUrl = (doc as text) as text => (
+		$"$(docUrl)/$(doc)"
+	)
+
+	// getHeaderRecord
+	getHeaderRecord = (apiKey as text) as record => (
+		let
+			// europdf requires the API key in the username with a blank password
+			// https://www.europdf.eu/docs/api/#/
+			auth = Http.BasicAuth( apiKey, "" )
+		in
+			{
+				Authorization = auth
+			}
+	)
+
+	// getAuthorizationHeader
+	getAuthorizationHeader = (apiKey as secret) as text => (
+		let
+			// europdf requires the API key in the username with a blank password
+			// https://www.europdf.eu/docs/api/#/
+			auth = Http.BasicAuth( apiKey, null )
+		in
+			$"Authorization: $(auth)"
+	)
+
+	docSet = Table.ToRecords(
+		if selector == null then
+			documentsTable
+		else
+			Table.SelectRows(
+				documentsTable
+				(doc) => selector( doc{ id } )
+			)
+	)
+
+	transformed = List.Transform(
+		docSet
+		( doc, docIndex ) => (
+			let
+				docTitle = doc{ title }
+				docContent = doc{ source }
+				target = getTarget( doc{ pdf } )
+				payload = Json.FromValue(
+					{
+						document_url = getDocumentUrl( doc{ target } )
+						test = isTest
+						name = docTitle
+						tag = doc{ pdf }
+					}
+				)
+				command = {
+					Executable = "curl"
+					Arguments = [
+						"--fail-with-body"
+						"-sS"
+						"--header"
+						getAuthorizationHeader( apiKey )
+						"--header"
+  						"Accept: */*, application/json"
+						"--header"
+  						"Content-Type: application/json"
+						"--url"
+						apiUrl
+						"--json"
+						payload
+						"--output"
+						target
+					]
+				}
+			in
+				command
+		)
+	)
+	downloaded = OS.Execute(
+		transformed
+		{
+			WriteStderr = true
+			WriteStdout = true
+		}
+	)
+in
+	if Value.Is( apiKey, type secret ) then
+		downloaded
+	else
+		apiKey

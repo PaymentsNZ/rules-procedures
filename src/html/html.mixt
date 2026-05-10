@@ -56,11 +56,25 @@ meta {
 
 	// html::class is used to provide a class name to an HTML element
 	html::class = (className as text, content as any ) => (
-		{
-			html::attributes = {
-				class = className
-			}
-		} @> content
+		let
+			listCandidate = Value.Is( content, type list ) and List.Count( content ) == 1
+			listItem = content[0]
+			listItemMeta = Value.Metadata( listItem )
+			dialect = Record.FieldOrDefault( listItemMeta, "dialect", null )
+			isMixtText = (dialect == "mtxt")
+			value = (
+				if listCandidate and isMixtText then
+					listItem
+				else
+					content
+			)
+			return = {
+				html::attributes = {
+					class = className
+				}
+			} @> value
+		in
+			return
 	)
 
 	// html::link is used to provide a class name to an HTML element

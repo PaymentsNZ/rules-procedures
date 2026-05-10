@@ -84,7 +84,7 @@
 			]
 		},
 		{
-			"name": "Run MIXT (MIXT)",
+			"name": "Run MIXT (MIXD)",
 			"type": "mixt",
 			"request": "launch",
 			"mode": "run",
@@ -94,7 +94,7 @@
 				"--logLevel",
 				"Info",
 				"--format",
-				"mixt",
+				"mixd",
 				"--pretty"
 			]
 		},

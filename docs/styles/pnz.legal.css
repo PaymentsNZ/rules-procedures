@@ -260,6 +260,87 @@ img, table {
   margin-bottom: 0.1em;
 }
 
+/* 
+MTXT rendered markers / hierarchy.
+*/
+
+span[data-list-marker="true"] {
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+}
+
+:is(ol, ul):has(> li > span[data-list-marker="true"]) {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+:is(ol, ul):has(> li > span[data-list-marker="true"]) > li {
+  list-style: none;
+  position: relative;
+}
+
+:is(ol, ul):has(> li > span[data-list-marker="true"]) > li > p:first-of-type {
+  margin-top: 0;
+}
+
+:is(ol, ul):has(> li > span[data-list-marker="true"]) > li > span[data-list-marker="true"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+}
+
+/* Level 1 */
+:is(ol, ul)[data-numbering-level="1"]:has(> li > span[data-list-marker="true"]) > li {
+  padding-left: var(--indent-level1);
+}
+
+:is(ol, ul)[data-numbering-level="1"]:has(> li > span[data-list-marker="true"]) > li > span[data-list-marker="true"] {
+  width: var(--indent-level1);
+}
+
+/* Level 2 */
+:is(ol, ul)[data-numbering-level="2"]:has(> li > span[data-list-marker="true"]) > li {
+  padding-left: var(--indent-level2);
+}
+
+:is(ol, ul)[data-numbering-level="2"]:has(> li > span[data-list-marker="true"]) > li > span[data-list-marker="true"] {
+  width: var(--indent-level2);
+}
+
+/* Level 3 */
+:is(ol, ul)[data-numbering-level="3"]:has(> li > span[data-list-marker="true"]) > li {
+  padding-left: var(--indent-level3);
+}
+
+:is(ol, ul)[data-numbering-level="3"]:has(> li > span[data-list-marker="true"]) > li > span[data-list-marker="true"] {
+  width: var(--indent-level3);
+}
+
+/* Level 4 */
+:is(ol, ul)[data-numbering-level="4"]:has(> li > span[data-list-marker="true"]) > li {
+  padding-left: var(--indent-level4);
+}
+
+:is(ol, ul)[data-numbering-level="4"]:has(> li > span[data-list-marker="true"]) > li > span[data-list-marker="true"] {
+  width: var(--indent-level4);
+}
+
+/* Level 5 */
+:is(ol, ul)[data-numbering-level="5"]:has(> li > span[data-list-marker="true"]) > li {
+  padding-left: var(--indent-level5);
+}
+
+:is(ol, ul)[data-numbering-level="5"]:has(> li > span[data-list-marker="true"]) > li > span[data-list-marker="true"] {
+  width: var(--indent-level5);
+}
+
+/* 
+Original HTML rendered markers / hierarchy.
+*/
+
 /* --- Level 1: (1) --- */
 .level1 {
   list-style: none;

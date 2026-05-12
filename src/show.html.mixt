@@ -1,0 +1,32 @@
+import [
+	pnz = "html/pnz.legal.mixt"
+	hvcs = "html/pnz.hvcs.mixt"
+	nav = "html/navigate.mixt"
+	documentsTable = "documents.mixt"
+]
+
+let
+	selector = (id as text) => (id == "SCP")
+
+	docSet = Table.ToRecords(
+		if selector == null then
+			documentsTable
+		else
+			Table.SelectRows(
+				documentsTable
+				(doc) => selector( doc{ id } )
+			)
+	)
+	current = List.First(docSet)
+	docContent = current{ source }
+	chaptersAndClauses = nav::getChaptersAndClauses( docContent )
+	docIndex = 0
+	result = hvcs::document(
+		current{ title }
+		docContent
+		docIndex
+		chaptersAndClauses
+		docSet
+	)
+in
+	result

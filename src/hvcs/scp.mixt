@@ -151,34 +151,36 @@ import [
 	)
 
 	pnz::subsection_heading( "SCP processing" )
-	pnz::clause(
+	pnz::nonumber_clause(
 		"1.2"
 		"60 minute SCP"
 
-		`The instructing agent that sends an SCP and the instructed agent that receives an SCP
-		must ensure that the time period for processing the SCP is no more than 60 minutes.`
+		@@mtxt
+		-- {{legal+
+		-- The instructing agent that sends an SCP and the instructed agent that receives an SCP
+		   must ensure that the time period for processing the SCP is no more than 60 minutes.
 
-		`For the purposes of subclause (1)—`
+		-- For the purposes of subclause (1)—
+		
+		--- the time period commences when the instructing agent debits the debtor's account
+			with the amount of the SCP; and
 
-		pnz::level2(
-			`the time period commences when the instructing agent debits the debtor's account
-			with the amount of the SCP; and`
+		--- the time period ends—
 
-			`the time period ends—`
+		---- if the instructing agent requires the instructed agent to notify the
+			 creditor that the instructed agent has credited the creditor's account
+			 with the amount of the SCP (beneficiary notification), when the instructed
+			 agent sends the beneficiary notification to the creditor; or
 
-			pnz::level3(
-				`if the instructing agent requires the instructed agent to notify the
-				creditor that the instructed agent has credited the creditor's account
-				with the amount of the SCP (beneficiary notification), when the instructed
-				agent sends the beneficiary notification to the creditor; or`
-
-				`if the instructing agent does not require the instructed agent to send the
-				creditor a beneficiary notification, when the instructed agent credits the
-				creditor's account with the amount of the SCP.`
-			)
-		)
+		---- if the instructing agent does not require the instructed agent to send the
+			 creditor a beneficiary notification, when the instructed agent credits the
+			 creditor's account with the amount of the SCP.
+		--!
+		@@
 	)
+
 	pnz::tag_bestpractice
+
 	pnz::clause(
 		"1.3"
 		"Instructing agent: 30 minute processing"

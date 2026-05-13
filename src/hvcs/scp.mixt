@@ -911,6 +911,7 @@ import [
 
 	pnz::section_heading( "Chapter 3: Customer terms and conditions" )
 	pnz::tag_bestpractice
+
 	pnz::nonumber_clause(
 		"3.1"
 		"Ts & Cs with debtor"
@@ -933,157 +934,122 @@ import [
 
 		You may authorise the Bank to make a same day cleared payment to another person (the payee)
 		on your behalf by giving the Bank a payment instruction:
+
+		-- {{a
+		-- during same day cleared payment operating hours (operating hours);
+		-- in the form and in the way that the Bank notifies you of from time to time; and
+		-- that contains all the information that the Bank requires to process the payment.
+
+
+		The Bank will submit the same day cleared payment for processing on the same Business Day
+		that the Bank receives the payment instruction from you. Unless you request otherwise, it
+		will generally do this within [one hour] of receipt of your payment instruction. However,
+		the Bank may not be able to process your payment instruction on the same Business Day if:
+
+		-- {{a
+		-- the Bank receives the payment instruction outside operating hours; or
+		-- the same day cleared payment service is unavailable for any reason, including due to
+		   operational or technical difficulties.
+
+
+		The Bank does not have to act upon any payment instruction it receives from you including
+		if:
+
+		-- {{a
+		-- the Bank cannot validate the account number you have instructed the Bank to make the same
+		   day cleared payment to;
+		-- the Bank has any reason to believe that the information contained in the payment
+		   instruction is not complete, accurate or correct; or
+		-- the payment instruction is subject to any conditions.
+
+
+		[You may revoke or amend your authority in respect of a same day cleared payment at any
+		time until [the Bank has settled that payment instruction with the payee's bank] or [the
+		Bank has submitted the same day cleared payment for processing].] OR [Once given, you may
+		not revoke an SCP payment instruction.]
+
+		{{b Returned Payments: {{!b
+
+		The payee's bank may return payments to the Bank for a number of reasons, even after you
+		have received notification that the payee's bank has received the transaction (for example,
+		because the payee's account has been closed or blocked). In this case, the funds will be
+		re-credited to your account and the payee will not have received good value for the amount
+		of the payment from you.
+
+		{{b Your Obligations: {{!b
+
+		You must ensure that all the information you provide the Bank in relation to your payment
+		instruction is complete, accurate and correct.
+
+		You must pay the Bank's fees for processing same day cleared payments and debiting your
+		account.
+
+		The Bank may change these fees from time to time by giving you at least 14 days' notice or
+		such longer notice as is required by law.
+
+		{{b Notifications: {{!b
+
+		You may request any of the following notifications in relation to your payment instruction:
+
+		-- {{a
+		-- notification to be provided to you or the payee when the Bank has received confirmation
+		   that the Bank has settled the payment with the payee's bank;
+		-- notification to be provided to you when the Bank receives confirmation that the payee's
+		   bank has received the transaction; and/or
+		-- notification to be provided to the payee [by the payee's bank] when the payee's bank has
+		   credited the funds into the payee's account.
+
+		Where you have requested that the Bank provides the notifications in (a) and/or (b) above,
+		the Bank will notify you or the payee (as the case may be) as soon as reasonably possible
+		after the Bank has received confirmation of the relevant matter. Where you have requested
+		a notification under (c) above, the Bank will request that the payee's bank notifies the
+		payee as soon as reasonably possible after the payee's account has been credited.
+
+		{{b Liability: {{!b
+
+		Except in the case of fraud, crediting the amount of a payment to the payee's account will
+		deemed to be receipt by the payee from you of good value for the amount credited.
+
+		Subject to the Bank acting with reasonable care and skill, the Bank is not liable for any
+		loss (whether arising in contract, tort (including negligence), equity or otherwise) to you
+		or anyone else, including indirect, consequential, or special damages or losses (including
+		but not limited to loss of profit or loss of business opportunity) suffered or incurred as
+		a result of:
+
+		-- {{a
+		-- any payment that is credited to the wrong person because you have provided the wrong
+		   account number. Neither the Bank or the payee's bank are required to validate the account
+		   number with any other information you have provided such as the payee's name;
+		-- the Bank acting or failing to act in accordance with a same day cleared payment instruction,
+		   even if the Bank is advised, or becomes aware, of the possibility that such damage or loss has
+		   occurred or may occur;
+		-- the unavailability of, or any failure in, the same day cleared payment service;
+		-- any same day cleared payment not being credited to the payee's account by the payee's bank
+		   for any reason; and
+		-- the payee not being notified by the payee's bank that the payment has been credited to the
+		   payee's account.
+
+
+		The Bank will take reasonable steps to remedy the mistake and refund you any fees paid for the
+		processing of a payment instruction if:
+
+		-- {{a
+		-- the Bank fails to act with reasonable care on a payment instruction received from you; or
+		-- the Bank does not make the payment (except where the failure to make the payment is due to
+		   causes beyond the reasonable control of the Bank) in accordance with the information provided
+		   in the payment instruction, including by paying the wrong amount of money, paying the wrong
+		   account number or accidentally duplicating the payment.
+
+
+		If, as a result of any error or omission on your part in completing the payment instructions
+		(such as including the wrong account information), either the Bank or the payee's bank suffers
+		a loss, you will be liable to compensate the Bank or the payee's bank for that loss.
+
+		For the purposes of subpart 1 of Part 2 of the Contract and Commercial Law Act 2017, you
+		acknowledge that these terms confer benefits on, and are intended to be enforceable by, the
+		payee's bank.
 		@@
 
-		pnz::italic_div(
-
-			pnz::level2(
-				@@mtxt
-				during same day cleared payment operating hours (operating hours);
-
-				in the form and in the way that the Bank notifies you of from time to time; and
-
-				that contains all the information that the Bank requires to process the payment.
-				@@
-			)
-
-			`The Bank will submit the same day cleared payment for processing on the same Business Day
-			that the Bank receives the payment instruction from you. Unless you request otherwise, it
-			will generally do this within [one hour] of receipt of your payment instruction. However,
-			the Bank may not be able to process your payment instruction on the same Business Day if:`
-
-			pnz::level2(
-				@@mtxt
-				the Bank receives the payment instruction outside operating hours; or
-
-				the same day cleared payment service is unavailable for any reason, including due to
-				operational or technical difficulties.
-				@@
-			)
-
-			`The Bank does not have to act upon any payment instruction it receives from you including
-			if:`
-
-			pnz::level2(
-				@@mtxt
-				the Bank cannot validate the account number you have instructed the Bank to make the same
-				day cleared payment to;
-
-				the Bank has any reason to believe that the information contained in the payment
-				instruction is not complete, accurate or correct; or
-
-				the payment instruction is subject to any conditions.
-				@@
-			)
-
-			@@mtxt
-			[You may revoke or amend your authority in respect of a same day cleared payment at any
-			time until [the Bank has settled that payment instruction with the payee's bank] or [the
-			Bank has submitted the same day cleared payment for processing].] OR [Once given, you may
-			not revoke an SCP payment instruction.]
-
-			{{b Returned Payments: {{!b
-
-			The payee's bank may return payments to the Bank for a number of reasons, even after you
-			have received notification that the payee's bank has received the transaction (for example,
-			because the payee's account has been closed or blocked). In this case, the funds will be
-			re-credited to your account and the payee will not have received good value for the amount
-			of the payment from you.
-
-			{{b Your Obligations: {{!b
-
-			You must ensure that all the information you provide the Bank in relation to your payment
-			instruction is complete, accurate and correct.
-
-			You must pay the Bank's fees for processing same day cleared payments and debiting your
-			account.
-
-			The Bank may change these fees from time to time by giving you at least 14 days' notice or
-			such longer notice as is required by law.
-
-			{{b Notifications: {{!b
-
-			You may request any of the following notifications in relation to your payment instruction:
-			@@
-
-			pnz::level2(
-				@@mtxt
-				notification to be provided to you or the payee when the Bank has received confirmation
-				that the Bank has settled the payment with the payee's bank;
-
-				notification to be provided to you when the Bank receives confirmation that the payee's
-				bank has received the transaction; and/or
-
-				notification to be provided to the payee [by the payee's bank] when the payee's bank has
-				credited the funds into the payee's account.
-				@@
-			)
-
-			@@mtxt
-			Where you have requested that the Bank provides the notifications in (a) and/or (b) above,
-			the Bank will notify you or the payee (as the case may be) as soon as reasonably possible
-			after the Bank has received confirmation of the relevant matter. Where you have requested
-			a notification under (c) above, the Bank will request that the payee's bank notifies the
-			payee as soon as reasonably possible after the payee's account has been credited.
-
-			{{b Liability: {{!b
-
-			Except in the case of fraud, crediting the amount of a payment to the payee's account will
-			deemed to be receipt by the payee from you of good value for the amount credited.
-
-			Subject to the Bank acting with reasonable care and skill, the Bank is not liable for any
-			loss (whether arising in contract, tort (including negligence), equity or otherwise) to you
-			or anyone else, including indirect, consequential, or special damages or losses (including
-			but not limited to loss of profit or loss of business opportunity) suffered or incurred as
-			a result of:
-			@@
-
-			pnz::level2(
-				@@mtxt
-				any payment that is credited to the wrong person because you have provided the wrong
-				account number. Neither the Bank or the payee's bank are required to validate the account
-				number with any other information you have provided such as the payee's name;
-
-				the Bank acting or failing to act in accordance with a same day cleared payment instruction,
-				even if the Bank is advised, or becomes aware, of the possibility that such damage or loss has
-				occurred or may occur;
-
-				the unavailability of, or any failure in, the same day cleared payment service;
-
-				any same day cleared payment not being credited to the payee's account by the payee's bank
-				for any reason; and
-
-				the payee not being notified by the payee's bank that the payment has been credited to the
-				payee's account.
-				@@
-			)
-
-			@@mtxt
-			The Bank will take reasonable steps to remedy the mistake and refund you any fees paid for the
-			processing of a payment instruction if:
-			@@
-
-			pnz::level2(
-				@@mtxt
-				the Bank fails to act with reasonable care on a payment instruction received from you; or
-
-				the Bank does not make the payment (except where the failure to make the payment is due to
-				causes beyond the reasonable control of the Bank) in accordance with the information provided
-				in the payment instruction, including by paying the wrong amount of money, paying the wrong
-				account number or accidentally duplicating the payment.
-				@@
-			)
-
-			@@mtxt
-			If, as a result of any error or omission on your part in completing the payment instructions
-			(such as including the wrong account information), either the Bank or the payee's bank suffers
-			a loss, you will be liable to compensate the Bank or the payee's bank for that loss.
-
-			For the purposes of subpart 1 of Part 2 of the Contract and Commercial Law Act 2017, you
-			acknowledge that these terms confer benefits on, and are intended to be enforceable by, the
-			payee's bank.
-			@@
-		)
 	)
 
 	pnz::nonumber_clause(

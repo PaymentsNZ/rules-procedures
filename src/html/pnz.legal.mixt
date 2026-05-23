@@ -442,14 +442,14 @@ import [
 							[
 								a = html::attributed(
 									{
-										href = pnz.legal::href( "", chapterAndClauses{ Chapter }, "#" )
+										href = pnz.legal::href( "", chapterAndClauses[ Chapter ], "#" )
 									}
-									chapterAndClauses{ Chapter }
+									chapterAndClauses[ Chapter ]
 								)
 								ol = html::class(
 									"toc-level-2"
 									List.Transform(
-										chapterAndClauses{ Clauses }
+										chapterAndClauses[ Clauses ]
 										(clause as text, index as number, id as text) => #(li =
 											[
 												a = html::attributed(

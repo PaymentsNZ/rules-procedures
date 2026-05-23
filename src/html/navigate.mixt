@@ -91,18 +91,18 @@ namespace pnz.nav
 				(state, content, itemIndex, name) => (
 					if Value.Is( content, type text ) then
 						if name == "h1" and hasClass( content, "section-heading" ) then
-							if state{ Chapter } == "" then
+							if state[ Chapter ] == "" then
 								state & {
 									Chapter = (content & "") // & "" Removes meta
 								}
 							else
 								let
 									completeChapter = {
-										Chapter = state{ Chapter }
-										Clauses = state{ Clauses }
+										Chapter = state[ Chapter ]
+										Clauses = state[ Clauses ]
 									}
 									newState = {
-										Chapters = state{ Chapters } & [
+										Chapters = state[ Chapters ] & [
 											completeChapter
 										]
 										Chapter = (content & "") // & "" Removes meta
@@ -114,7 +114,7 @@ namespace pnz.nav
 							state
 					else if Value.Is( content, type list ) then
 						state & {
-							Clauses = appendClauses( state{ Clauses }, content )
+							Clauses = appendClauses( state[ Clauses ], content )
 						}
 					else
 						state
@@ -122,10 +122,10 @@ namespace pnz.nav
 			)
 
 			finalChapter = {
-				Chapter = chaptersAndClauses{ Chapter }
-				Clauses = chaptersAndClauses{ Clauses }
+				Chapter = chaptersAndClauses[ Chapter ]
+				Clauses = chaptersAndClauses[ Clauses ]
 			}
-			return = chaptersAndClauses{ Chapters } & [ finalChapter ]
+			return = chaptersAndClauses[ Chapters ] & [ finalChapter ]
 		in
 			return
 	)

@@ -14,15 +14,15 @@ let
 		else
 			Table.SelectRows(
 				documentsTable
-				(doc) => selector( doc{ id } )
+				(doc) => selector( doc[ id ] )
 			)
 	)
 	current = List.First(docSet)
-	docContent = current{ source }
+	docContent = current[ source ]
 	chaptersAndClauses = nav::getChaptersAndClauses( docContent )
 	docIndex = 0
 	result = hvcs::document(
-		current{ title }
+		current[ title ]
 		docContent
 		docIndex
 		chaptersAndClauses

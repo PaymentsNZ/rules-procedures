@@ -560,16 +560,16 @@ import [
 						state
 					else if fieldName == "span" and Value.Is( value, type text ) then
 						state & {
-							runs = joinParagraphText( state{ runs }, value )
+							runs = joinParagraphText( state[ runs ], value )
 						}
 					else 
 						let
 							combinedItems = (
-								if List.Count( state{ runs } ) == 0 then
-									state{ items }
+								if List.Count( state[ runs ] ) == 0 then
+									state[ items ]
 								else
-									state{ items } & [
-										w::p = state{ runs }
+									state[ items ] & [
+										w::p = state[ runs ]
 									]
 							)
 							transformed = (
@@ -589,11 +589,11 @@ import [
 			)
 			// Handle if we finished with one or more spans
 			combined = (
-				if List.Count( accumulated{ runs } ) == 0 then
-					accumulated{ items }
+				if List.Count( accumulated[ runs ] ) == 0 then
+					accumulated[ items ]
 				else
-					accumulated{ items } & [
-						w::p = accumulated{ runs }
+					accumulated[ items ] & [
+						w::p = accumulated[ runs ]
 					]
 			)
 		in
@@ -655,6 +655,7 @@ import [
 	// wrapContents
 	wrapContents = ( body as list ) => [
 		xml::declaration = {
+			
 			version = "1.0"
 			encoding = "UTF-8"
 			standalone = "yes"

@@ -16,7 +16,7 @@ let
 		else
 			Table.SelectRows(
 				documentsTable
-				(doc) => selector( doc{ id } )
+				(doc) => selector( doc[ id ] )
 			)
 	)
 	
@@ -25,16 +25,16 @@ let
 		{}
 		( state, current, docIndex ) => (
 			let
-				docContent = current{ source }
+				docContent = current[ source ]
 				chaptersAndClauses = nav::getChaptersAndClauses( docContent )
 				result = Record.AddField(
 					state
-					current{ id }
+					current[ id ]
 					File.Write(
-						FilePath.Join( current{ path }, current{ target } )
+						FilePath.Join( current[ path ], current[ target ] )
 						Html.FromValue(
 							hvcs::document(
-								current{ title }
+								current[ title ]
 								docContent
 								docIndex
 								chaptersAndClauses

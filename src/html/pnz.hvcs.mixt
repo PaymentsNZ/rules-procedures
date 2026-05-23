@@ -93,8 +93,8 @@ import [
 							docSet
 							(doc, i) => (
 								let 
-									target = doc{ target }
-									title = doc{ title }
+									target = doc[ target ]
+									title = doc[ title ]
 									transformed = #(li = {
 										a = html::attributed(
 											(
@@ -132,11 +132,11 @@ import [
 					(chapterAndClauses) => (
 						#(details =
 							[
-								summary = chapterAndClauses{ Chapter }
+								summary = chapterAndClauses[ Chapter ]
 								ul = html::class(
 									"toc-links"
 									List.Transform(
-										chapterAndClauses{ Clauses }
+										chapterAndClauses[ Clauses ]
 										(clause, i, name) => #(li = {
 											a = html::attributed(
 												{

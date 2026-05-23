@@ -61,7 +61,7 @@ let
 		else
 			Table.SelectRows(
 				documentsTable
-				(doc) => selector( doc{ id } )
+				(doc) => selector( doc[ id ] )
 			)
 	)
 
@@ -69,15 +69,15 @@ let
 		docSet
 		( doc, docIndex ) => (
 			let
-				docTitle = doc{ title }
-				docContent = doc{ source }
-				target = getTarget( doc{ pdf } )
+				docTitle = doc[ title ]
+				docContent = doc[ source ]
+				target = getTarget( doc[ pdf ] )
 				payload = Json.FromValue(
 					{
-						document_url = getDocumentUrl( doc{ target } )
+						document_url = getDocumentUrl( doc[ target ] )
 						test = isTest
 						name = docTitle
-						tag = doc{ pdf }
+						tag = doc[ pdf ]
 					}
 				)
 				command = {

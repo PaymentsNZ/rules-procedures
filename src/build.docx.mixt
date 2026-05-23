@@ -19,7 +19,7 @@ let
 		else
 			Table.SelectRows(
 				documentsTable
-				(doc) => selector( doc{ id } )
+				(doc) => selector( doc[ id ] )
 			)
 	)
 	written = List.Accumulate(
@@ -27,11 +27,11 @@ let
 		{}
 		( state, current, docIndex ) => (
 			let
-				docTitle = current{ title }
-				docContent = current{ source }
+				docTitle = current[ title ]
+				docContent = current[ source ]
 				target = FilePath.Join(
 					FilePath.Join( "dist", targetFormat )
-					Text.Replace( current{ target }, ".html", "." & targetFormat )
+					Text.Replace( current[ target ], ".html", "." & targetFormat )
 				)
 
 				translated = htmltodocx::translateDocument( docContent )
@@ -53,7 +53,7 @@ let
 
 				result = Record.AddField(
 					state
-					current{ id }
+					current[ id ]
 					(
 						if targetFormat == "xml" then
 							writtenXml

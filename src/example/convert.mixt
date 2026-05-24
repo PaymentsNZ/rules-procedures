@@ -222,7 +222,7 @@ import [
 						closedState = setState( state, "none" )
 						newState = setState( closedState, "clause" )
 						result = newState & {
-							buffer = newState{ buffer }
+							buffer = newState[ buffer ]
 								|> Text.Append( "\tpnz::clause(\n\t\t\"" )
 								|> Text.Append( Text.BeforeDelimiter( line, " " ) )  // clause number
 								|> Text.Append( "\"\n\t\t\"" )
@@ -235,7 +235,7 @@ import [
 					let
 						newState = setState( state, "clause" )
 						result = newState & {
-							buffer = newState{ buffer }
+							buffer = newState[ buffer ]
 								|> Text.Append( "\t\t`" )
 								|> Text.Append( Text.AfterDelimiter( line, " " ) )
 								|> Text.Append( "`\n" )
@@ -246,7 +246,7 @@ import [
 					let
 						newState = setState( state, "level2" )
 						result = newState & {
-							buffer = newState{ buffer }
+							buffer = newState[ buffer ]
 							|> Text.Append( "\t\t\t`" )
 							|> Text.Append( Text.AfterDelimiter( line, " " ) )
 							|> Text.Append( "`\n" )
@@ -257,7 +257,7 @@ import [
 					let
 						newState = setState( state, "level3" )
 						result = newState & {
-							buffer = newState{ buffer }
+							buffer = newState[ buffer ]
 							|> Text.Append( "\t\t\t\t`" )
 							|> Text.Append( Text.AfterDelimiter( line, " " ) )
 							|> Text.Append( "`\n" )
@@ -268,7 +268,7 @@ import [
 					let
 						newState = setState( state, "comment" )
 						result = newState & {
-							buffer = newState{ buffer }
+							buffer = newState[ buffer ]
 								|> Text.Append( "`" )
 								|> Text.Append( line )
 								|> Text.Append( "`" )
@@ -299,7 +299,7 @@ import [
     // Close remaining blocks
     finalState = setState( transformed, "none" )
 	finalBuffer = (
-		finalState{ buffer }
+		finalState[ buffer ]
 		|> Text.Append( "]\n" )
 	)
 in

@@ -278,16 +278,19 @@ import [
 	)
 	pnz::subsection_heading( "SCP customer notifications" )
 	pnz::tag_commentary
-	pnz::clause(
+	pnz::nonumber_clause(
 		"1.6"
 		"Overview of notifications for inter-bank SCPs"
 
-		`A feature of the SCP product is the notifications that participants send to SCP customers on the 
-		progress of SCPs.`
-		
-		`The following table identifies each notification type for an inter-bank SCP, the parties to the
+		@@mtxt
+		-- {{legal+
+		-- A feature of the SCP product is the notifications that participants send to SCP customers on the 
+		progress of SCPs.
+
+		-- The following table identifies each notification type for an inter-bank SCP, the parties to the
 		notification, the progress of the SCP to which the notification relates, and the clauses that specify
-		requirements for the notification:`
+		requirements for the notification:
+		@@
 
 		pnz::table(
 			#table(
@@ -331,14 +334,15 @@ import [
 			)
 		)
 
-		`The Remitter notification and Remitter confirmation notifications are both intended to communicate
+		@@mtxt
+		-- {{>
+		-- The Remitter notification and Remitter confirmation notifications are both intended to communicate
 		settlement to the debtor (at slightly different trigger points in the process). Participants should
-		offer only one of these notifications to customers to avoid duplication of notifications.`
+		offer only one of these notifications to customers to avoid duplication of notifications.
 
-		pnz::nonumber(
-			pnz::br
-			`The following diagram shows when the notification is sent for an inter-bank SCP:`
-		)
+		{{@comment: legal | Wouldn't this be awesome? }}
+		The following diagram shows when the notification is sent for an inter-bank SCP:
+		@@
 
 		pnz::image( "images/hvcs_scp_notifications.png", "SCP Notifications" )
 	)

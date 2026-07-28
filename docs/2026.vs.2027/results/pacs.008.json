@@ -1,0 +1,908 @@
+[
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf",
+        "ElementName": "AccptncDtTm",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"AcceptanceDateTime\"\n        Definition = \"Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A particular point in the progression of time defined by a mandatory date and a mandatory time component, expressed in either UTC time format (YYYY-MM-DDThh:mm:ss.sssZ), local time with UTC offset format (YYYY-MM-DDThh:mm:ss.sss+/-hh:mm), or local time format (YYYY-MM-DDThh:mm:ss.sss). These representations are defined in \\\"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\\\" which is aligned with ISO 8601.\\nNote on the time format:\\n1) beginning / end of calendar day\\n00:00:00 = the beginning of a calendar day\\n24:00:00 = the end of a calendar day\\n2) fractions of second in time format\\nDecimal fractions of seconds may be included. In this case, the involved parties shall agree on the maximum number of digits that are allowed.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:dateTime\"\n    }\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf",
+        "ElementName": "AddtlDtTm",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"AdditionalDateTime\"\n        Definition = \"Series of additional date and time data that can be applied to the payment.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    AccptncDtTm = {\n        __meta = {\n            Name = \"AcceptanceDateTime\"\n            Definition = \"Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Simple\"\n        }\n        Definition = \"A particular point in the progression of time defined by a mandatory date and a mandatory time component, expressed in either UTC time format (YYYY-MM-DDThh:mm:ss.sssZ), local time with UTC offset format (YYYY-MM-DDThh:mm:ss.sss+/-hh:mm), or local time format (YYYY-MM-DDThh:mm:ss.sss). These representations are defined in \\\"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\\\" which is aligned with ISO 8601.\\nNote on the time format:\\n1) beginning / end of calendar day\\n00:00:00 = the beginning of a calendar day\\n24:00:00 = the end of a calendar day\\n2) fractions of second in time format\\nDecimal fractions of seconds may be included. In this case, the involved parties shall agree on the maximum number of digits that are allowed.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:dateTime\"\n        }\n    }\n    PoolgAdjstmntDt = {\n        __meta = {\n            Name = \"PoolingAdjustmentDate\"\n            Definition = \"Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Simple\"\n        }\n        Definition = \"A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in \\\"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\\\" which is aligned with ISO 8601.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:date\"\n        }\n    }\n    XpryDtTm = {\n        __meta = {\n            Name = \"ExpiryDateTime\"\n            Definition = \"Date and time on which the payment should be expired if it has not settled.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Simple\"\n        }\n        Definition = \"A particular point in the progression of time defined by a mandatory date and a mandatory time component, expressed in either UTC time format (YYYY-MM-DDThh:mm:ss.sssZ), local time with UTC offset format (YYYY-MM-DDThh:mm:ss.sss+/-hh:mm), or local time format (YYYY-MM-DDThh:mm:ss.sss). These representations are defined in \\\"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\\\" which is aligned with ISO 8601.\\nNote on the time format:\\n1) beginning / end of calendar day\\n00:00:00 = the beginning of a calendar day\\n24:00:00 = the end of a calendar day\\n2) fractions of second in time format\\nDecimal fractions of seconds may be included. In this case, the involved parties shall agree on the maximum number of digits that are allowed.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:dateTime\"\n        }\n    }\n}",
+        "DescendantElementCount": 3,
+        "DescendantElementDepth": 1
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf",
+        "ElementName": "AgrdRate",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"AgreedRate\"\n        Definition = \"Set of elements providing information about a pre-agreed exchange rate.\\r\\n\\r\\nUsage: This element can only be used where agreed either bilaterally or multilaterally as part of a payment scheme.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    UnitCcy = {\n        __meta = {\n            Name = \"UnitCurrency\"\n            Definition = \"Currency in which the rate of exchange is expressed in a currency exchange. In the example GBP 1.00 = USD 1.30, the unit currency is GBP.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Simple\"\n        }\n        Definition = \"A code allocated to a currency by a Maintenance Agency under an international identification scheme, as described in the latest edition of the international standard ISO 4217 \\\"Codes for the representation of currencies and funds\\\".\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            Pattern = \"[A-Z]{3,3}\"\n        }\n    }\n    QtdCcy = {\n        __meta = {\n            Name = \"QuotedCurrency\"\n            Definition = \"Currency into which the base (unit) currency is converted. In the example GBP 1.00 = USD 1.30, the unit currency is USD.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Simple\"\n        }\n        Definition = \"A code allocated to a currency by a Maintenance Agency under an international identification scheme, as described in the latest edition of the international standard ISO 4217 \\\"Codes for the representation of currencies and funds\\\".\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            Pattern = \"[A-Z]{3,3}\"\n        }\n    }\n    PreAgrdXchgRate = {\n        __meta = {\n            Name = \"PreAgreedExchangeRate\"\n            Definition = \"The value of one currency expressed in relation to another currency. ExchangeRate\\r\\nexpresses the ratio between UnitCurrency and QuotedCurrency. (Amount in UnitCurrency * ExchangeRate = Amount in QuotedCurrency)\"\n            Content = \"Simple\"\n        }\n        Definition = \"Rate expressed as a decimal, for example, 0.7 is 7/10 and 70%.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:decimal\"\n            FractionDigits = \"10\"\n            TotalDigits = \"11\"\n        }\n    }\n    QtnDtTm = {\n        __meta = {\n            Name = \"QuotationDateTime\"\n            Definition = \"Date and time at which an exchange rate is quoted.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Simple\"\n        }\n        Definition = \"A particular point in the progression of time defined by a mandatory date and a mandatory time component, expressed in either UTC time format (YYYY-MM-DDThh:mm:ss.sssZ), local time with UTC offset format (YYYY-MM-DDThh:mm:ss.sss+/-hh:mm), or local time format (YYYY-MM-DDThh:mm:ss.sss). These representations are defined in \\\"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\\\" which is aligned with ISO 8601.\\nNote on the time format:\\n1) beginning / end of calendar day\\n00:00:00 = the beginning of a calendar day\\n24:00:00 = the end of a calendar day\\n2) fractions of second in time format\\nDecimal fractions of seconds may be included. In this case, the involved parties shall agree on the maximum number of digits that are allowed.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:dateTime\"\n        }\n    }\n    QtId = {\n        __meta = {\n            Name = \"QuoteIdentification\"\n            Definition = \"Unique identification to unambiguously identify the quote issued by the ForeignExchangeAgent.\\r\\n\\r\\nUsage: This identification must be passed on throughout the entire end-to-end chain.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Simple\"\n        }\n        Definition = \"Universally Unique IDentifier (UUID) version 4, as described in IETC RFC 4122 \\\"Universally Unique IDentifier (UUID) URN Namespace\\\".\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            Pattern = \"[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}\"\n        }\n    }\n    FXAgt = {\n        __meta = {\n            Name = \"ForeignExchangeAgent\"\n            Definition = \"Agent who undertakes the conversion of funds from the unit currency to the quoted currency.\\r\\n\\r\\nUsage: The ForeignExchangeAgent must receive the AgreedRate block unchanged.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Sequence\"\n        }\n        FinInstnId = {\n            __meta = {\n                Name = \"FinancialInstitutionIdentification\"\n                Definition = \"Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.\"\n                Content = \"Sequence\"\n            }\n            BICFI = {\n                __meta = {\n                    Name = \"BICFI\"\n                    Definition = \"Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \\\"Banking - Banking telecommunication messages - Business identifier code (BIC)\\\".\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Simple\"\n                }\n                Definition = \"Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362: 2014 - \\\"Banking - Banking telecommunication messages - Business identifier code (BIC)\\\".\"\n                SchemaType = \"simpleType\"\n                Restriction = {\n                    Base = \"xs:string\"\n                    Pattern = \"[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}\"\n                }\n            }\n            ClrSysMmbId = {\n                __meta = {\n                    Name = \"ClearingSystemMemberIdentification\"\n                    Definition = \"Information used to identify a member within a clearing system.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Sequence\"\n                }\n                ClrSysId = {\n                    __meta = {\n                        Name = \"ClearingSystemIdentification\"\n                        Definition = \"Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Choice\"\n                    }\n                    Cd = {\n                        __meta = {\n                            Name = \"Code\"\n                            Definition = \"Identification of a clearing system, in a coded form as published in an external list.\"\n                            Content = \"Simple\"\n                        }\n                        Definition = \"Specifies the clearing system identification code, as published in an external clearing system identification code list.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n                        SchemaType = \"simpleType\"\n                        Restriction = {\n                            Base = \"xs:string\"\n                            minLength = \"1\"\n                            maxLength = \"5\"\n                        }\n                    }\n                    Prtry = {\n                        __meta = {\n                            Name = \"Proprietary\"\n                            Definition = \"Identification code for a clearing system, that has not yet been identified in the list of clearing systems.\"\n                            Content = \"Simple\"\n                        }\n                        Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                        SchemaType = \"simpleType\"\n                        Restriction = {\n                            Base = \"xs:string\"\n                            minLength = \"1\"\n                            maxLength = \"35\"\n                        }\n                    }\n                }\n                MmbId = {\n                    __meta = {\n                        Name = \"MemberIdentification\"\n                        Definition = \"Identification of a member of a clearing system.\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"35\"\n                    }\n                }\n            }\n            LEI = {\n                __meta = {\n                    Name = \"LEI\"\n                    Definition = \"Legal entity identifier of the financial institution.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Simple\"\n                }\n                Definition = \"Legal Entity Identifier is a code allocated to a party as described in ISO 17442 \\\"Financial Services - Legal Entity Identifier (LEI)\\\".\"\n                SchemaType = \"simpleType\"\n                Restriction = {\n                    Base = \"xs:string\"\n                    Pattern = \"[A-Z0-9]{18,18}[0-9]{2,2}\"\n                }\n            }\n            Nm = {\n                __meta = {\n                    Name = \"Name\"\n                    Definition = \"Name by which an agent is known and which is usually used to identify that agent.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Simple\"\n                }\n                Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                SchemaType = \"simpleType\"\n                Restriction = {\n                    Base = \"xs:string\"\n                    minLength = \"1\"\n                    maxLength = \"140\"\n                }\n            }\n            PstlAdr = {\n                __meta = {\n                    Name = \"PostalAddress\"\n                    Definition = \"Information that locates and identifies a specific address, as defined by postal services.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Sequence\"\n                }\n                AdrTp = {\n                    __meta = {\n                        Name = \"AddressType\"\n                        Definition = \"Identifies the nature of the postal address.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Choice\"\n                    }\n                    Cd = {\n                        __meta = {\n                            Name = \"Code\"\n                            Definition = \"Type of address expressed as a code.\"\n                            Content = \"Simple\"\n                        }\n                        Definition = \"Specifies the type of address.\"\n                        SchemaType = \"simpleType\"\n                        Restriction = {\n                            Base = \"xs:string\"\n                            Enumeration = {\n                                ADDR = {\n                                    Name = \"Postal\"\n                                    Definition = \"Address is the complete postal address.\"\n                                }\n                                PBOX = {\n                                    Name = \"POBox\"\n                                    Definition = \"Address is a postal office (PO) box.\"\n                                }\n                                HOME = {\n                                    Name = \"Residential\"\n                                    Definition = \"Address is the home address.\"\n                                }\n                                BIZZ = {\n                                    Name = \"Business\"\n                                    Definition = \"Address is the business address.\"\n                                }\n                                MLTO = {\n                                    Name = \"MailTo\"\n                                    Definition = \"Address is the address to which mail is sent.\"\n                                }\n                                DLVY = {\n                                    Name = \"DeliveryTo\"\n                                    Definition = \"Address is the address to which delivery is to take place.\"\n                                }\n                            }\n                        }\n                    }\n                    Prtry = {\n                        __meta = {\n                            Name = \"Proprietary\"\n                            Definition = \"Type of address expressed as a proprietary code.\"\n                            Content = \"Sequence\"\n                        }\n                        Id = {\n                            __meta = {\n                                Name = \"Identification\"\n                                Definition = \"Proprietary information, often a code, issued by the data source scheme issuer.\"\n                                Content = \"Simple\"\n                            }\n                            Definition = \"Specifies an alphanumeric string with a length of 4 characters.\"\n                            SchemaType = \"simpleType\"\n                            Restriction = {\n                                Base = \"xs:string\"\n                                Pattern = \"[a-zA-Z0-9]{4}\"\n                            }\n                        }\n                        Issr = {\n                            __meta = {\n                                Name = \"Issuer\"\n                                Definition = \"Entity that assigns the identification.\"\n                                Content = \"Simple\"\n                            }\n                            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                            SchemaType = \"simpleType\"\n                            Restriction = {\n                                Base = \"xs:string\"\n                                minLength = \"1\"\n                                maxLength = \"35\"\n                            }\n                        }\n                        SchmeNm = {\n                            __meta = {\n                                Name = \"SchemeName\"\n                                Definition = \"Short textual description of the scheme.\"\n                                MaxOccurs = \"1\"\n                                MinOccurs = \"0\"\n                                Content = \"Simple\"\n                            }\n                            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                            SchemaType = \"simpleType\"\n                            Restriction = {\n                                Base = \"xs:string\"\n                                minLength = \"1\"\n                                maxLength = \"35\"\n                            }\n                        }\n                    }\n                }\n                CareOf = {\n                    __meta = {\n                        Name = \"CareOf\"\n                        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                Dept = {\n                    __meta = {\n                        Name = \"Department\"\n                        Definition = \"Identification of a division of a large organisation or building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                SubDept = {\n                    __meta = {\n                        Name = \"SubDepartment\"\n                        Definition = \"Identification of a sub-division of a large organisation or building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                StrtNm = {\n                    __meta = {\n                        Name = \"StreetName\"\n                        Definition = \"Name of a street or thoroughfare.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                BldgNb = {\n                    __meta = {\n                        Name = \"BuildingNumber\"\n                        Definition = \"Number that identifies the position of a building on a street.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                BldgNm = {\n                    __meta = {\n                        Name = \"BuildingName\"\n                        Definition = \"Name of the building or house.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                Flr = {\n                    __meta = {\n                        Name = \"Floor\"\n                        Definition = \"Floor or storey within a building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                UnitNb = {\n                    __meta = {\n                        Name = \"UnitNumber\"\n                        Definition = \"Identifies a flat or dwelling within the building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                PstBx = {\n                    __meta = {\n                        Name = \"PostBox\"\n                        Definition = \"Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                Room = {\n                    __meta = {\n                        Name = \"Room\"\n                        Definition = \"Building room number.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                PstCd = {\n                    __meta = {\n                        Name = \"PostCode\"\n                        Definition = \"Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                TwnNm = {\n                    __meta = {\n                        Name = \"TownName\"\n                        Definition = \"Name of a built-up area, with defined boundaries, and a local government.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                TwnLctnNm = {\n                    __meta = {\n                        Name = \"TownLocationName\"\n                        Definition = \"Specific location name within the town.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                DstrctNm = {\n                    __meta = {\n                        Name = \"DistrictName\"\n                        Definition = \"Identifies a subdivision within a country sub-division.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                CtrySubDvsn = {\n                    __meta = {\n                        Name = \"CountrySubDivision\"\n                        Definition = \"Identifies a subdivision of a country such as state, region, county.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"35\"\n                    }\n                }\n                Ctry = {\n                    __meta = {\n                        Name = \"Country\"\n                        Definition = \"Nation with its own government.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-2 code).\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        Pattern = \"[A-Z]{2,2}\"\n                    }\n                }\n                AdrLine = {\n                    __meta = {\n                        Name = \"AddressLine\"\n                        Definition = \"Information that locates and identifies a specific address, as defined by postal services, presented in free format text.\"\n                        MaxOccurs = \"7\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n            }\n            Othr = {\n                __meta = {\n                    Name = \"Other\"\n                    Definition = \"Unique identification of an agent, as assigned by an institution, using an identification scheme.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Sequence\"\n                }\n                Id = {\n                    __meta = {\n                        Name = \"Identification\"\n                        Definition = \"Unique and unambiguous identification of a person.\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"35\"\n                    }\n                }\n                SchmeNm = {\n                    __meta = {\n                        Name = \"SchemeName\"\n                        Definition = \"Name of the identification scheme.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Choice\"\n                    }\n                    Cd = {\n                        __meta = {\n                            Name = \"Code\"\n                            Definition = \"Name of the identification scheme, in a coded form as published in an external list.\"\n                            Content = \"Simple\"\n                        }\n                        Definition = \"Specifies the external financial institution identification scheme name code in the format of character string with a maximum length of 4 characters.\\r\\nThe list of valid codes is an external code list published separately.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n                        SchemaType = \"simpleType\"\n                        Restriction = {\n                            Base = \"xs:string\"\n                            minLength = \"1\"\n                            maxLength = \"4\"\n                        }\n                    }\n                    Prtry = {\n                        __meta = {\n                            Name = \"Proprietary\"\n                            Definition = \"Name of the identification scheme, in a free text form.\"\n                            Content = \"Simple\"\n                        }\n                        Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                        SchemaType = \"simpleType\"\n                        Restriction = {\n                            Base = \"xs:string\"\n                            minLength = \"1\"\n                            maxLength = \"35\"\n                        }\n                    }\n                }\n                Issr = {\n                    __meta = {\n                        Name = \"Issuer\"\n                        Definition = \"Entity that assigns the identification.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"35\"\n                    }\n                }\n            }\n        }\n        BrnchId = {\n            __meta = {\n                Name = \"BranchIdentification\"\n                Definition = \"Identifies a specific branch of a financial institution.\\n\\nUsage: This component should be used in case the identification information in the financial institution component does not provide identification up to branch level.\"\n                MaxOccurs = \"1\"\n                MinOccurs = \"0\"\n                Content = \"Sequence\"\n            }\n            Id = {\n                __meta = {\n                    Name = \"Identification\"\n                    Definition = \"Unique and unambiguous identification of a branch of a financial institution.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Simple\"\n                }\n                Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                SchemaType = \"simpleType\"\n                Restriction = {\n                    Base = \"xs:string\"\n                    minLength = \"1\"\n                    maxLength = \"35\"\n                }\n            }\n            LEI = {\n                __meta = {\n                    Name = \"LEI\"\n                    Definition = \"Legal entity identification for the branch of the financial institution.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Simple\"\n                }\n                Definition = \"Legal Entity Identifier is a code allocated to a party as described in ISO 17442 \\\"Financial Services - Legal Entity Identifier (LEI)\\\".\"\n                SchemaType = \"simpleType\"\n                Restriction = {\n                    Base = \"xs:string\"\n                    Pattern = \"[A-Z0-9]{18,18}[0-9]{2,2}\"\n                }\n            }\n            Nm = {\n                __meta = {\n                    Name = \"Name\"\n                    Definition = \"Name by which an agent is known and which is usually used to identify that agent.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Simple\"\n                }\n                Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                SchemaType = \"simpleType\"\n                Restriction = {\n                    Base = \"xs:string\"\n                    minLength = \"1\"\n                    maxLength = \"140\"\n                }\n            }\n            PstlAdr = {\n                __meta = {\n                    Name = \"PostalAddress\"\n                    Definition = \"Information that locates and identifies a specific address, as defined by postal services.\"\n                    MaxOccurs = \"1\"\n                    MinOccurs = \"0\"\n                    Content = \"Sequence\"\n                }\n                AdrTp = {\n                    __meta = {\n                        Name = \"AddressType\"\n                        Definition = \"Identifies the nature of the postal address.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Choice\"\n                    }\n                    Cd = {\n                        __meta = {\n                            Name = \"Code\"\n                            Definition = \"Type of address expressed as a code.\"\n                            Content = \"Simple\"\n                        }\n                        Definition = \"Specifies the type of address.\"\n                        SchemaType = \"simpleType\"\n                        Restriction = {\n                            Base = \"xs:string\"\n                            Enumeration = {\n                                ADDR = {\n                                    Name = \"Postal\"\n                                    Definition = \"Address is the complete postal address.\"\n                                }\n                                PBOX = {\n                                    Name = \"POBox\"\n                                    Definition = \"Address is a postal office (PO) box.\"\n                                }\n                                HOME = {\n                                    Name = \"Residential\"\n                                    Definition = \"Address is the home address.\"\n                                }\n                                BIZZ = {\n                                    Name = \"Business\"\n                                    Definition = \"Address is the business address.\"\n                                }\n                                MLTO = {\n                                    Name = \"MailTo\"\n                                    Definition = \"Address is the address to which mail is sent.\"\n                                }\n                                DLVY = {\n                                    Name = \"DeliveryTo\"\n                                    Definition = \"Address is the address to which delivery is to take place.\"\n                                }\n                            }\n                        }\n                    }\n                    Prtry = {\n                        __meta = {\n                            Name = \"Proprietary\"\n                            Definition = \"Type of address expressed as a proprietary code.\"\n                            Content = \"Sequence\"\n                        }\n                        Id = {\n                            __meta = {\n                                Name = \"Identification\"\n                                Definition = \"Proprietary information, often a code, issued by the data source scheme issuer.\"\n                                Content = \"Simple\"\n                            }\n                            Definition = \"Specifies an alphanumeric string with a length of 4 characters.\"\n                            SchemaType = \"simpleType\"\n                            Restriction = {\n                                Base = \"xs:string\"\n                                Pattern = \"[a-zA-Z0-9]{4}\"\n                            }\n                        }\n                        Issr = {\n                            __meta = {\n                                Name = \"Issuer\"\n                                Definition = \"Entity that assigns the identification.\"\n                                Content = \"Simple\"\n                            }\n                            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                            SchemaType = \"simpleType\"\n                            Restriction = {\n                                Base = \"xs:string\"\n                                minLength = \"1\"\n                                maxLength = \"35\"\n                            }\n                        }\n                        SchmeNm = {\n                            __meta = {\n                                Name = \"SchemeName\"\n                                Definition = \"Short textual description of the scheme.\"\n                                MaxOccurs = \"1\"\n                                MinOccurs = \"0\"\n                                Content = \"Simple\"\n                            }\n                            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                            SchemaType = \"simpleType\"\n                            Restriction = {\n                                Base = \"xs:string\"\n                                minLength = \"1\"\n                                maxLength = \"35\"\n                            }\n                        }\n                    }\n                }\n                CareOf = {\n                    __meta = {\n                        Name = \"CareOf\"\n                        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                Dept = {\n                    __meta = {\n                        Name = \"Department\"\n                        Definition = \"Identification of a division of a large organisation or building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                SubDept = {\n                    __meta = {\n                        Name = \"SubDepartment\"\n                        Definition = \"Identification of a sub-division of a large organisation or building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                StrtNm = {\n                    __meta = {\n                        Name = \"StreetName\"\n                        Definition = \"Name of a street or thoroughfare.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                BldgNb = {\n                    __meta = {\n                        Name = \"BuildingNumber\"\n                        Definition = \"Number that identifies the position of a building on a street.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                BldgNm = {\n                    __meta = {\n                        Name = \"BuildingName\"\n                        Definition = \"Name of the building or house.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                Flr = {\n                    __meta = {\n                        Name = \"Floor\"\n                        Definition = \"Floor or storey within a building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                UnitNb = {\n                    __meta = {\n                        Name = \"UnitNumber\"\n                        Definition = \"Identifies a flat or dwelling within the building.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                PstBx = {\n                    __meta = {\n                        Name = \"PostBox\"\n                        Definition = \"Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                Room = {\n                    __meta = {\n                        Name = \"Room\"\n                        Definition = \"Building room number.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n                PstCd = {\n                    __meta = {\n                        Name = \"PostCode\"\n                        Definition = \"Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"16\"\n                    }\n                }\n                TwnNm = {\n                    __meta = {\n                        Name = \"TownName\"\n                        Definition = \"Name of a built-up area, with defined boundaries, and a local government.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                TwnLctnNm = {\n                    __meta = {\n                        Name = \"TownLocationName\"\n                        Definition = \"Specific location name within the town.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                DstrctNm = {\n                    __meta = {\n                        Name = \"DistrictName\"\n                        Definition = \"Identifies a subdivision within a country sub-division.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"140\"\n                    }\n                }\n                CtrySubDvsn = {\n                    __meta = {\n                        Name = \"CountrySubDivision\"\n                        Definition = \"Identifies a subdivision of a country such as state, region, county.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"35\"\n                    }\n                }\n                Ctry = {\n                    __meta = {\n                        Name = \"Country\"\n                        Definition = \"Nation with its own government.\"\n                        MaxOccurs = \"1\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-2 code).\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        Pattern = \"[A-Z]{2,2}\"\n                    }\n                }\n                AdrLine = {\n                    __meta = {\n                        Name = \"AddressLine\"\n                        Definition = \"Information that locates and identifies a specific address, as defined by postal services, presented in free format text.\"\n                        MaxOccurs = \"7\"\n                        MinOccurs = \"0\"\n                        Content = \"Simple\"\n                    }\n                    Definition = \"Specifies a character string with a maximum length of 70characters.\"\n                    SchemaType = \"simpleType\"\n                    Restriction = {\n                        Base = \"xs:string\"\n                        minLength = \"1\"\n                        maxLength = \"70\"\n                    }\n                }\n            }\n        }\n    }\n}",
+        "DescendantElementCount": 73,
+        "DescendantElementDepth": 6
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / CtctDtls",
+        "ElementName": "URLAdr",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"URLAddress\"\n        Definition = \"Address for the Universal Resource Locator (URL), for example an address used over the www (HTTP) service.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 2048 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"2048\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Cdtr / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAcct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAgt / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAgt / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAgtAcct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / CdtrAgtAcct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / ChrgsInf / Agt / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / ChrgsInf / Agt / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / ChrgsInf",
+        "ElementName": "Tp",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"Type\"\n        Definition = \"Defines the type of charges.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Choice\"\n    }\n    Cd = {\n        __meta = {\n            Name = \"Code\"\n            Definition = \"Charge type, in a coded form.\"\n            Content = \"Simple\"\n        }\n        Definition = \"Specifies the nature, or use, of the charges in the format of character string with a maximum length of 4 characters.\\r\\nThe list of valid codes is an external code list published separately.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            minLength = \"1\"\n            maxLength = \"4\"\n        }\n    }\n    Prtry = {\n        __meta = {\n            Name = \"Proprietary\"\n            Definition = \"Type of charge in a proprietary form, as defined by the issuer.\"\n            Content = \"Sequence\"\n        }\n        Id = {\n            __meta = {\n                Name = \"Identification\"\n                Definition = \"Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n        Issr = {\n            __meta = {\n                Name = \"Issuer\"\n                Definition = \"Entity that assigns the identification.\"\n                MaxOccurs = \"1\"\n                MinOccurs = \"0\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n    }\n}",
+        "DescendantElementCount": 4,
+        "DescendantElementDepth": 2
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Dbtr / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / Dbtr / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / DbtrAcct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / DbtrAcct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / DbtrAgt / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / DbtrAgt / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / DbtrAgtAcct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / DbtrAgtAcct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / InitgPty / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / InitgPty / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt1 / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt1 / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt1Acct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt1Acct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt2 / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt2 / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt2Acct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt2Acct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt3 / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt3 / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt3Acct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / IntrmyAgt3Acct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf",
+        "ElementName": "PmtSgntr",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"PaymentSignature\"\n        Definition = \"Cryptographic key identifying terms agreed by agents within the payment chain pre-settlement. This key can also be used post-settlement to confirm the payment has been credited as intended.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Choice\"\n    }\n    ILPV4 = {\n        __meta = {\n            Name = \"ILPV4\"\n            Definition = \"Cryptographic key represented as a ILP V4 packet.\"\n            Content = \"Simple\"\n        }\n        Definition = \"Specifies a character string with hexadecimal text characters.\\r\\n\\r\\nUsed for hex binary data only, supports only characters A-F, a-f and 0-9.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            Pattern = \"[0-9a-fA-F]+\"\n        }\n    }\n    Sgntr = {\n        __meta = {\n            Name = \"Signature\"\n            Definition = \"Cryptographic key represented as a signature.\"\n            Content = \"Simple\"\n        }\n        Definition = \"Specifies a character string with an exact length of 32 binary bytes (64 hexadecimal text characters).\\r\\n\\r\\nUsed only for hex binary data only, supports only characters A-F and 0-9.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            Pattern = \"([0-9A-F][0-9A-F]){32}\"\n        }\n    }\n}",
+        "DescendantElementCount": 2,
+        "DescendantElementDepth": 1
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt1 / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt1 / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt1",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Agent immediately prior to the instructing agent.",
+        "Current": "Agent between the debtor's agent and the instructing agent. \r\n\r\nUsage: If more than one previous instructing agent is present, then PreviousInstructingAgent1 identifies the agent between the DebtorAgent and the PreviousInstructingAgent2."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt1Acct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt1Acct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt2 / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt2 / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt2",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Agent immediately prior to the instructing agent.",
+        "Current": "Agent between the debtor's agent and the instructing agent. \r\n\r\nUsage: If more than two previous instructing agent are present, then PreviousInstructingAgent2 identifies the agent between the PreviousInstructingAgent1 and the PreviousInstructingAgent3."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt2Acct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt2Acct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt3 / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt3 / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt3",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Agent immediately prior to the instructing agent.",
+        "Current": "Agent between the debtor's agent and the instructing agent. \r\n\r\nUsage: If PreviousInstructingAgent3 is present, then PreviousInstructingAgent3 identifies the agent between the PreviousInstructingAgent2 and the InstructingAgent."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt3Acct / Id",
+        "ElementName": "MaxOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MaxOccurs": "1"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / PrvsInstgAgt3Acct / Id",
+        "ElementName": "MinOccurs",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"0\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0,
+        "MinOccurs": "0"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / CdtrRefInf / Tp / CdOrPrtry / Cd",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Specifies a type of financial or commercial document.",
+        "Current": "Specifies the type of creditor reference as published in an external creditor reference type code set.\r\nExternal code sets can be downloaded from www.iso20022.org."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / CdtrRefInf / Tp / CdOrPrtry / Cd / Restriction",
+        "ElementName": "Enumeration",
+        "Operation": "Remove",
+        "Previous": "{\n    RADM = {\n        Name = \"RemittanceAdviceMessage\"\n        Definition = \"Document is a remittance advice sent separately from the current transaction.\"\n    }\n    RPIN = {\n        Name = \"RelatedPaymentInstruction\"\n        Definition = \"Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.\"\n    }\n    FXDR = {\n        Name = \"ForeignExchangeDealReference\"\n        Definition = \"Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers.\"\n    }\n    DISP = {\n        Name = \"DispatchAdvice\"\n        Definition = \"Document is a dispatch advice.\"\n    }\n    PUOR = {\n        Name = \"PurchaseOrder\"\n        Definition = \"Document is a purchase order.\"\n    }\n    SCOR = {\n        Name = \"StructuredCommunicationReference\"\n        Definition = \"Document is a structured communication reference provided by the creditor to identify the referred transaction.\"\n    }\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / CdtrRefInf / Tp / CdOrPrtry / Cd / Restriction",
+        "ElementName": "maxLength",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"4\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / CdtrRefInf / Tp / CdOrPrtry / Cd / Restriction",
+        "ElementName": "minLength",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / CdtrRefInf / Tp / CdOrPrtry / Cd",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Type of creditor reference, in a coded form.",
+        "Current": "Type of creditor reference, as published in an external creditor reference type code set."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / CdtrRefInf / Tp / CdOrPrtry / Prtry",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Creditor reference type, in a proprietary form.",
+        "Current": "Type of creditor reference, in a proprietary form."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / GrnshmtRmt / Grnshee / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / GrnshmtRmt / Grnshee / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / GrnshmtRmt / GrnshmtAdmstr / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / GrnshmtRmt / GrnshmtAdmstr / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / Invcee / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / Invcee / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / Invcr / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / Invcr / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocAmt / AdjstmntAmtAndRsn",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Specifies detailed information on the amount and reason of the document adjustment.",
+        "Current": "Specifies detailed information on the amount and reason of the adjustment."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocAmt",
+        "ElementName": "CdtNoteAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"CreditNoteAmount\"\n        Definition = \"Amount specified for the referred document is the amount of a credit note.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n    SchemaType = \"complexType\"\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocAmt",
+        "ElementName": "DscntApldAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"DiscountAppliedAmount\"\n        Definition = \"Amount specified for the referred document is the amount of discount to be applied to the amount due and payable to the creditor.\"\n        MaxOccurs = \"unbounded\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    Tp = {\n        __meta = {\n            Name = \"Type\"\n            Definition = \"Specifies the type of the amount.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Choice\"\n        }\n        Cd = {\n            __meta = {\n                Name = \"Code\"\n                Definition = \"Specifies the amount type, in a coded form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.\\r\\nThe list of valid codes is an external code list published separately.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"4\"\n            }\n        }\n        Prtry = {\n            __meta = {\n                Name = \"Proprietary\"\n                Definition = \"Specifies the amount type, in a free-text form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a minimum length of 1, and a maximum length of 35 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\\\";<>@[\\\\]\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                Pattern = \"[0-9a-zA-Z/\\\\-\\\\?:\\\\(\\\\)\\\\.,'\\\\+ !#$%&\\\\*=^_`\\\\{\\\\|\\\\}~\\\";<>@\\\\[\\\\\\\\\\\\]]+\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n    }\n    Amt = {\n        __meta = {\n            Name = \"Amount\"\n            Definition = \"Amount of money, which has been typed.\"\n            Content = \"Simple\"\n        }\n        Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n        SchemaType = \"complexType\"\n    }\n}",
+        "Current": null,
+        "DescendantElementCount": 4,
+        "DescendantElementDepth": 2
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocAmt",
+        "ElementName": "DuePyblAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"DuePayableAmount\"\n        Definition = \"Amount specified is the exact amount due and payable to the creditor.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n    SchemaType = \"complexType\"\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocAmt",
+        "ElementName": "RmtAmtAndTp",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"RemittanceAmountAndType\"\n        Definition = \"Type and amount of money for the referred document.\"\n        MaxOccurs = \"unbounded\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    Tp = {\n        __meta = {\n            Name = \"Type\"\n            Definition = \"Defines the type of amount.\"\n            Content = \"Choice\"\n        }\n        Cd = {\n            __meta = {\n                Name = \"Code\"\n                Definition = \"Specifies the amount type, as published in an external referred amount code set.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies the nature, or use, of the amount, as published in an external document amount type code set.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"4\"\n            }\n        }\n        Prtry = {\n            __meta = {\n                Name = \"Proprietary\"\n                Definition = \"Specifies the amount type, in a free-text form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n    }\n    Amt = {\n        __meta = {\n            Name = \"Amount\"\n            Definition = \"Amount of money for the referred document.\"\n            Content = \"Simple\"\n        }\n        Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n        SchemaType = \"complexType\"\n    }\n}",
+        "DescendantElementCount": 4,
+        "DescendantElementDepth": 2
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocAmt",
+        "ElementName": "RmtdAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"RemittedAmount\"\n        Definition = \"Amount of money remitted for the referred document.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n    SchemaType = \"complexType\"\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocAmt",
+        "ElementName": "TaxAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"TaxAmount\"\n        Definition = \"Quantity of cash resulting from the calculation of the tax.\"\n        MaxOccurs = \"unbounded\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    Tp = {\n        __meta = {\n            Name = \"Type\"\n            Definition = \"Specifies the type of the amount.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Choice\"\n        }\n        Cd = {\n            __meta = {\n                Name = \"Code\"\n                Definition = \"Specifies the amount type, in a coded form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.\\r\\nThe list of valid codes is an external code list published separately.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"4\"\n            }\n        }\n        Prtry = {\n            __meta = {\n                Name = \"Proprietary\"\n                Definition = \"Specifies the amount type, in a free-text form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a minimum length of 1, and a maximum length of 35 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\\\";<>@[\\\\]\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                Pattern = \"[0-9a-zA-Z/\\\\-\\\\?:\\\\(\\\\)\\\\.,'\\\\+ !#$%&\\\\*=^_`\\\\{\\\\|\\\\}~\\\";<>@\\\\[\\\\\\\\\\\\]]+\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n    }\n    Amt = {\n        __meta = {\n            Name = \"Amount\"\n            Definition = \"Amount of money, which has been typed.\"\n            Content = \"Simple\"\n        }\n        Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n        SchemaType = \"complexType\"\n    }\n}",
+        "Current": null,
+        "DescendantElementCount": 4,
+        "DescendantElementDepth": 2
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / LineDtls / Amt",
+        "ElementName": "CdtNoteAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"CreditNoteAmount\"\n        Definition = \"Amount of a credit note.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n    SchemaType = \"complexType\"\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / LineDtls / Amt",
+        "ElementName": "DscntApldAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"DiscountAppliedAmount\"\n        Definition = \"Amount of discount to be applied to the amount due and payable to the creditor.\"\n        MaxOccurs = \"unbounded\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    Tp = {\n        __meta = {\n            Name = \"Type\"\n            Definition = \"Specifies the type of the amount.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Choice\"\n        }\n        Cd = {\n            __meta = {\n                Name = \"Code\"\n                Definition = \"Specifies the amount type, in a coded form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.\\r\\nThe list of valid codes is an external code list published separately.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"4\"\n            }\n        }\n        Prtry = {\n            __meta = {\n                Name = \"Proprietary\"\n                Definition = \"Specifies the amount type, in a free-text form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a minimum length of 1, and a maximum length of 35 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\\\";<>@[\\\\]\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                Pattern = \"[0-9a-zA-Z/\\\\-\\\\?:\\\\(\\\\)\\\\.,'\\\\+ !#$%&\\\\*=^_`\\\\{\\\\|\\\\}~\\\";<>@\\\\[\\\\\\\\\\\\]]+\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n    }\n    Amt = {\n        __meta = {\n            Name = \"Amount\"\n            Definition = \"Amount of money, which has been typed.\"\n            Content = \"Simple\"\n        }\n        Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n        SchemaType = \"complexType\"\n    }\n}",
+        "Current": null,
+        "DescendantElementCount": 4,
+        "DescendantElementDepth": 2
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / LineDtls / Amt",
+        "ElementName": "DuePyblAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"DuePayableAmount\"\n        Definition = \"Amount specified is the exact amount due and payable to the creditor.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n    SchemaType = \"complexType\"\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / LineDtls / Amt",
+        "ElementName": "RmtAmtAndTp",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"RemittanceAmountAndType\"\n        Definition = \"Type and amount of money for the referred document.\"\n        MaxOccurs = \"unbounded\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    Tp = {\n        __meta = {\n            Name = \"Type\"\n            Definition = \"Defines the type of amount.\"\n            Content = \"Choice\"\n        }\n        Cd = {\n            __meta = {\n                Name = \"Code\"\n                Definition = \"Specifies the amount type, as published in an external referred amount code set.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies the nature, or use, of the amount, as published in an external document amount type code set.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"4\"\n            }\n        }\n        Prtry = {\n            __meta = {\n                Name = \"Proprietary\"\n                Definition = \"Specifies the amount type, in a free-text form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n    }\n    Amt = {\n        __meta = {\n            Name = \"Amount\"\n            Definition = \"Amount of money for the referred document.\"\n            Content = \"Simple\"\n        }\n        Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n        SchemaType = \"complexType\"\n    }\n}",
+        "DescendantElementCount": 4,
+        "DescendantElementDepth": 2
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / LineDtls / Amt",
+        "ElementName": "RmtdAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"RemittedAmount\"\n        Definition = \"Amount of money remitted.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n    SchemaType = \"complexType\"\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / LineDtls / Amt",
+        "ElementName": "TaxAmt",
+        "Operation": "Remove",
+        "Previous": "{\n    __meta = {\n        Name = \"TaxAmount\"\n        Definition = \"Amount of the tax.\"\n        MaxOccurs = \"unbounded\"\n        MinOccurs = \"0\"\n        Content = \"Sequence\"\n    }\n    Tp = {\n        __meta = {\n            Name = \"Type\"\n            Definition = \"Specifies the type of the amount.\"\n            MaxOccurs = \"1\"\n            MinOccurs = \"0\"\n            Content = \"Choice\"\n        }\n        Cd = {\n            __meta = {\n                Name = \"Code\"\n                Definition = \"Specifies the amount type, in a coded form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.\\r\\nThe list of valid codes is an external code list published separately.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                minLength = \"1\"\n                maxLength = \"4\"\n            }\n        }\n        Prtry = {\n            __meta = {\n                Name = \"Proprietary\"\n                Definition = \"Specifies the amount type, in a free-text form.\"\n                Content = \"Simple\"\n            }\n            Definition = \"Specifies a character string with a minimum length of 1, and a maximum length of 35 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\\\";<>@[\\\\]\"\n            SchemaType = \"simpleType\"\n            Restriction = {\n                Base = \"xs:string\"\n                Pattern = \"[0-9a-zA-Z/\\\\-\\\\?:\\\\(\\\\)\\\\.,'\\\\+ !#$%&\\\\*=^_`\\\\{\\\\|\\\\}~\\\";<>@\\\\[\\\\\\\\\\\\]]+\"\n                minLength = \"1\"\n                maxLength = \"35\"\n            }\n        }\n    }\n    Amt = {\n        __meta = {\n            Name = \"Amount\"\n            Definition = \"Amount of money, which has been typed.\"\n            Content = \"Simple\"\n        }\n        Definition = \"A number of monetary units specified in an active or a historic currency where the unit of currency is explicit and compliant with ISO 4217.\"\n        SchemaType = \"complexType\"\n    }\n}",
+        "Current": null,
+        "DescendantElementCount": 4,
+        "DescendantElementDepth": 2
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / RltdDt",
+        "ElementName": "Definition",
+        "Operation": "Remove",
+        "Previous": "\"This Type restricts the base ISODate to YYYY (exactly 4 digits for the Year) and does not allow use of UTC offset or Zulu indicator with a date.\"",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / RltdDt",
+        "ElementName": "Dt",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"Date\"\n        Definition = \"Date associated with the referred document.\"\n        Content = \"Simple\"\n    }\n    Definition = \"A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in \\\"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\\\" which is aligned with ISO 8601.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:date\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / RltdDt",
+        "ElementName": "Restriction",
+        "Operation": "Remove",
+        "Previous": "{\n    Base = \"xs:date\"\n    Pattern = \"[0-9]{4}-[0-9]{2}-[0-9]{2}\"\n}",
+        "Current": null,
+        "DescendantElementCount": 2,
+        "DescendantElementDepth": 1
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / RltdDt",
+        "ElementName": "SchemaType",
+        "Operation": "Remove",
+        "Previous": "\"simpleType\"",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / RltdDt",
+        "ElementName": "Tp",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"Type\"\n        Definition = \"Type of date associated with the referred document.\"\n        Content = \"Choice\"\n    }\n    Cd = {\n        __meta = {\n            Name = \"Code\"\n            Definition = \"Specifies the date type, as published in an external date type code set.\"\n            Content = \"Simple\"\n        }\n        Definition = \"Defines the type of date, as published in an external date type code list.\\r\\nExternal code sets can be downloaded from www.iso20022.org.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            minLength = \"1\"\n            maxLength = \"4\"\n        }\n    }\n    Prtry = {\n        __meta = {\n            Name = \"Proprietary\"\n            Definition = \"Specifies the date type, in a free-text form.\"\n            Content = \"Simple\"\n        }\n        Definition = \"Specifies a character string with a maximum length of 35 characters.\"\n        SchemaType = \"simpleType\"\n        Restriction = {\n            Base = \"xs:string\"\n            minLength = \"1\"\n            maxLength = \"35\"\n        }\n    }\n}",
+        "DescendantElementCount": 2,
+        "DescendantElementDepth": 1
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / RltdDt",
+        "ElementName": "Content",
+        "Operation": "Change",
+        "Previous": "Simple",
+        "Current": "Sequence"
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / RltdDt",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Date associated with the referred document.",
+        "Current": "Date and date type associated with the referred document."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / Tp / CdOrPrtry / Cd",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Specifies a type of financial or commercial document.",
+        "Current": "Specifies the document type as published in an external document type code list.\r\nExternal code sets can be downloaded from www.iso20022.org."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / Tp / CdOrPrtry / Cd / Restriction",
+        "ElementName": "Enumeration",
+        "Operation": "Remove",
+        "Previous": "{\n    MSIN = {\n        Name = \"MeteredServiceInvoice\"\n        Definition = \"Document is an invoice claiming payment for the supply of metered services, for example gas or electricity supplied to a fixed meter.\"\n    }\n    CNFA = {\n        Name = \"CreditNoteRelatedToFinancialAdjustment\"\n        Definition = \"Document is a credit note for the final amount settled for a commercial transaction.\"\n    }\n    DNFA = {\n        Name = \"DebitNoteRelatedToFinancialAdjustment\"\n        Definition = \"Document is a debit note for the final amount settled for a commercial transaction.\"\n    }\n    CINV = {\n        Name = \"CommercialInvoice\"\n        Definition = \"Document is an invoice.\"\n    }\n    CREN = {\n        Name = \"CreditNote\"\n        Definition = \"Document is a credit note.\"\n    }\n    DEBN = {\n        Name = \"DebitNote\"\n        Definition = \"Document is a debit note.\"\n    }\n    HIRI = {\n        Name = \"HireInvoice\"\n        Definition = \"Document is an invoice for the hiring of human resources or renting goods or equipment.\"\n    }\n    SBIN = {\n        Name = \"SelfBilledInvoice\"\n        Definition = \"Document is an invoice issued by the debtor.\"\n    }\n    CMCN = {\n        Name = \"CommercialContract\"\n        Definition = \"Document is an agreement between the parties, stipulating the terms and conditions of the delivery of goods or services.\"\n    }\n    SOAC = {\n        Name = \"StatementOfAccount\"\n        Definition = \"Document is a statement of the transactions posted to the debtor's account at the supplier.\"\n    }\n    DISP = {\n        Name = \"DispatchAdvice\"\n        Definition = \"Document is a dispatch advice.\"\n    }\n    BOLD = {\n        Name = \"BillOfLading\"\n        Definition = \"Document is a shipping notice.\"\n    }\n    VCHR = {\n        Name = \"Voucher\"\n        Definition = \"Document is an electronic payment document.\"\n    }\n    AROI = {\n        Name = \"AccountReceivableOpenItem\"\n        Definition = \"Document is a payment that applies to a specific source document.\"\n    }\n    TSUT = {\n        Name = \"TradeServicesUtilityTransaction\"\n        Definition = \"Document is a transaction identifier as assigned by the Trade Services Utility.\"\n    }\n    PUOR = {\n        Name = \"PurchaseOrder\"\n        Definition = \"Document is a purchase order.\"\n    }\n}",
+        "Current": null,
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / Tp / CdOrPrtry / Cd / Restriction",
+        "ElementName": "maxLength",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"4\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / Tp / CdOrPrtry / Cd / Restriction",
+        "ElementName": "minLength",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "\"1\"",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / Tp / CdOrPrtry / Cd",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Document type in a coded form.",
+        "Current": "Type of remittance document, as published in an external document type code set."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / Tp / CdOrPrtry / Prtry",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Proprietary identification of the type of the remittance document.",
+        "Current": "Type of remittance document, in a proprietary form."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / RfrdDocInf / Tp / CdOrPrtry",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Provides the type details of the referred document.",
+        "Current": "Coded or proprietary format referred document type."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / RmtInf / Strd / TaxRmt / Dbtr",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Identifies the party on the debit side of the transaction to which the tax applies.",
+        "Current": "Party on the debit side of the transaction to which the tax applies."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / SttlmTmIndctn",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Provides information on the occurred settlement time(s) of the payment transaction.",
+        "Current": "Provides information on the occurred settlement time of the payment transaction."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / SttlmTmReq",
+        "ElementName": "Definition",
+        "Operation": "Change",
+        "Previous": "Provides information on the requested settlement time(s) of the payment instruction.",
+        "Current": "Provides information on the requested settlement time of the payment instruction."
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / UltmtCdtr / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / UltmtCdtr / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / UltmtDbtr / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / CdtTrfTxInf / UltmtDbtr / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / FIToFICstmrCdtTrf / GrpHdr",
+        "ElementName": "XpryDtTm",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"ExpiryDateTime\"\n        Definition = \"Date and time on which the payment should be expired if it has not settled.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"A particular point in the progression of time defined by a mandatory date and a mandatory time component, expressed in either UTC time format (YYYY-MM-DDThh:mm:ss.sssZ), local time with UTC offset format (YYYY-MM-DDThh:mm:ss.sss+/-hh:mm), or local time format (YYYY-MM-DDThh:mm:ss.sss). These representations are defined in \\\"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\\\" which is aligned with ISO 8601.\\nNote on the time format:\\n1) beginning / end of calendar day\\n00:00:00 = the beginning of a calendar day\\n24:00:00 = the end of a calendar day\\n2) fractions of second in time format\\nDecimal fractions of seconds may be included. In this case, the involved parties shall agree on the maximum number of digits that are allowed.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:dateTime\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    }
+]

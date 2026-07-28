@@ -1,0 +1,56 @@
+[
+    {
+        "ParentPath": "Document / RsltnOfInvstgtn / CxlDtls / TxInfAndSts / CxlStsRsnInf / Orgtr / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / RsltnOfInvstgtn / CxlDtls / TxInfAndSts / CxlStsRsnInf / Orgtr / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / RsltnOfInvstgtn / CxlDtls / TxInfAndSts / RslvdCase / Cretr / Agt / FinInstnId / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / RsltnOfInvstgtn / CxlDtls / TxInfAndSts / RslvdCase / Cretr / Agt / FinInstnId / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / RsltnOfInvstgtn / CxlDtls / TxInfAndSts / RslvdCase / Cretr / Pty / PstlAdr",
+        "ElementName": "CareOf",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"CareOf\"\n        Definition = \"Identifies an addressee that is accepting the correspondence for the intended recipient. Using care of ensures the correspondence reaches the right recipient rather than getting returned to the sender.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 140 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"140\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    },
+    {
+        "ParentPath": "Document / RsltnOfInvstgtn / CxlDtls / TxInfAndSts / RslvdCase / Cretr / Pty / PstlAdr",
+        "ElementName": "UnitNb",
+        "Operation": "Add",
+        "Previous": null,
+        "Current": "{\n    __meta = {\n        Name = \"UnitNumber\"\n        Definition = \"Identifies a flat or dwelling within the building.\"\n        MaxOccurs = \"1\"\n        MinOccurs = \"0\"\n        Content = \"Simple\"\n    }\n    Definition = \"Specifies a character string with a maximum length of 16 characters.\"\n    SchemaType = \"simpleType\"\n    Restriction = {\n        Base = \"xs:string\"\n        minLength = \"1\"\n        maxLength = \"16\"\n    }\n}",
+        "DescendantElementCount": 0,
+        "DescendantElementDepth": 0
+    }
+]

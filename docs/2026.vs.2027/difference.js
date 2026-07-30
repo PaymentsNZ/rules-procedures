@@ -15,6 +15,16 @@ const detailTitleText = document.getElementById("detailTitleText");
 const detailClose = document.getElementById("detailClose");
 const detailBody = document.getElementById("detailBody");
 
+// isConciseElement
+function isConciseElement(elementName) {
+    return (
+        elementName == "MinOccurs" ||
+        elementName == "MaxOccurs" ||
+        elementName == "maxLength" ||
+        elementName == "minLength"
+    )
+}
+
 // showDetail
 function showDetail(cell) {
     const value = cell.getValue();
@@ -25,10 +35,7 @@ function showDetail(cell) {
     const row = cell.getRow().getData();
     const field = cell.getField();
 
-    if (
-        row.ElementName === "MinOccurs" ||
-        row.ElementName === "MaxOccurs"
-    ) {
+    if (isConciseElement(row.ElementName)) {
         return;
     }
 
@@ -130,16 +137,20 @@ function detailFormatter(cell) {
     const value = cell.getValue();
     const elementName = cell.getRow().getData().ElementName;
 
-    if (elementName === "MinOccurs" || elementName === "MaxOccurs") {
-        if (row.Operation === "Add" && cell.getField() === "Previous") {
-            return "1";
+    if (isConciseElement(elementName)) {
+        if (elementName === "MinOccurs" || elementName === "MaxOccurs") {
+            if (row.Operation === "Add" && cell.getField() === "Previous") {
+                return "1";
+            }
+            if (row.Operation === "Remove" && cell.getField() === "Current") {
+                return "1";
+            }
         }
-        if (row.Operation === "Remove" && cell.getField() === "Current") {
-            return "1";
+        if (value == null) {
+            return "";
         }
         return value.replace(/^"|"$/g, "");
     }
-
     if (value == null) {
         return "";
     }
@@ -348,7 +359,14 @@ const table = new Tabulator(
 				},
 				headerFilterFunc: multiValueFilter,
 				headerFilterEmptyCheck: value => (!value || value.length === 0),
-				headerPopup: makeCheckboxFilter("Operation")            
+				headerPopup: makeCheckboxFilter("Operation"),
+                headerPopupIcon: `
+                <span class="filter-icon" title="Filter">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18l-7 8v5l-4 2v-7L3 5z"/>
+                    </svg>
+                </span>
+                `                      
 			},
 			{
 				title: "Descendants",

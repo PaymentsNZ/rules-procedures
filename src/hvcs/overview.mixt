@@ -1,4 +1,3 @@
-
 import [
 	pnz = "../html/pnz.legal.mixt"
 	hvcs = "../html/pnz.hvcs.mixt"
@@ -114,7 +113,7 @@ import [
 			)
 		)
 	)
-
+	
 	pnz::nonumber_clause(
 		""
 		"Standards, best practices and commentary"
@@ -170,33 +169,36 @@ import [
 		conditions with SCP customers in chapter 2 of the SCP Procedures.`
 	)
 
-	pnz::clause(
+	pnz::nonumber_clause(
 		""
 		"Document purpose and structure"
 
-		`This document provides participants with a general introduction to the HVCS and gives context to the
-		other documents that make up the applicable HVCS Standards (Appendix 14). It introduces the types of
-		messages used by the HVCS, the concept of Y-copy, frequently used terminology, and the organisations
-		and systems involved in the clearing and settlement process and provides participants with a high
-		level overview of the payment message flows used by the HVCS.`
+		@@mtxt
+		-- {{legal+
+		-- This document provides participants with a general introduction to the HVCS and gives context to the
+		   other documents that make up the applicable HVCS Standards (Appendix 14). It introduces the types of
+		   messages used by the HVCS, the concept of Y-copy, frequently used terminology, and the organisations
+		   and systems involved in the clearing and settlement process and provides participants with a high
+		   level overview of the payment message flows used by the HVCS.			
 
-		`This document is divided into six chapters.`
-		
-		`Chapter 1 introduces new terms that have been included through the implementation of ISO 20022
-		messaging.`
-		
-		`Chapter 2 provides a high level overview of the process for creating, settling and processing HVCS
-		transactions.`
-		
-		`Chapter 3 provides an overview of the message formats and types of messages sent across the HVCS.`
-		
-		`Chapter 4 introduces Y-copy and HVCS message flows.`
-		
-		`Chapter 5 gives an overview of the organisations and systems involved in the HVCS clearing and
-		settlement processes and their roles.`
-		
-		`Chapter 6 describes the legislation, contracts, and standards that apply to HVCS payments and some
-		of the technical terms used by the HVCS.`
+		-- This document is divided into six chapters.
+
+		-- Chapter 1 introduces new terms that have been included through the implementation of ISO 20022
+		messaging.
+		-- Chapter 2 provides a high level overview of the process for creating, settling and processing HVCS
+		transactions.
+
+		-- Chapter 3 provides an overview of the message formats and types of messages sent across the HVCS.
+
+		-- Chapter 4 introduces Y-copy and HVCS message flows.
+
+		-- Chapter 5 gives an overview of the organisations and systems involved in the HVCS clearing and
+		settlement processes and their roles.
+
+		-- Chapter 6 describes the legislation, contracts, and standards that apply to HVCS payments and some
+		of the technical terms used by the HVCS.
+		--!
+		@@
 	)
 
 	/*
@@ -380,52 +382,63 @@ import [
 		"1.1"
 		"Rationale for Change"
 
-		`The Appendix 14 procedures received significant revision during 2022 to support the introduction of
-		MX messaging for the High Value Clearing System (HVCS) and the coexistence period for MT and MX
-		messaging from 2023 through 2025.`
+		@@mtxt
+		-- {{legal+
+		-- The Appendix 14 procedures received significant revision during 2022 to support the introduction of
+		   MX messaging for the High Value Clearing System (HVCS) and the coexistence period for MT and MX
+		   messaging from 2023 through 2025.
 		
-		`The introduction of MX messages to the High Value Clearing System (HVCS) introduced new
-		ISO standard terms.  Readers familiar with the previous Appendix 14 will note that many of
-		the terms used previously by the NZ payments industry have been replaced with their ISO
-		equivalents in both the HVCS rules and procedures.`
+		-- The introduction of MX messages to the High Value Clearing System (HVCS) introduced new
+		   ISO standard terms.  Readers familiar with the previous Appendix 14 will note that many of
+		   the terms used previously by the NZ payments industry have been replaced with their ISO
+		   equivalents in both the HVCS rules and procedures.
 
-		`There are also many places where MT specific terms have been replaced by message system
-		agnostic terms.  This was necessary to prepare for the removal of MT payment messaging from November
-		2025.`
+		-- There are also many places where MT specific terms have been replaced by message system
+		   agnostic terms.  This was necessary to prepare for the removal of MT payment messaging from
+		   November 2025.
+		@@
 	)
 
-	pnz::clause(
+	pnz::nonumber_clause(
 		"1.2"
 		"Terminology Venn Diagram"
 		
-		`This diagram shows the relationship between the standards documents and also the relationship
-		between key terms.`
+		@@mtxt
+		-- {{legal+
+		-- This diagram shows the relationship between the standards documents and also the relationship
+		   between key terms.
+		@@
 
 		pnz::image( "images/hvcs_overview_standards.png", "Standards Overview" )
 
-		pnz::br
-		`The Rules Part 19.1 should be referenced for definitions of all the terms within the diagram.`
-
-		`Additional definition of the specific message types and their use can be found in the HVCS
-		Common Procedures Section at clause 1.1.`
+		@@mtxt
+		-- {{>
+		-- The Rules Part 19.1 should be referenced for definitions of all the terms within the diagram.
+		-- Additional definition of the specific message types and their use can be found in the HVCS
+		   Common Procedures Section at clause 1.1.
+		--!
+		@@
 	)
 
 	pnz::clause(
 		"1.3"
 		"Senders / Receivers / Instructing Agents / Instructed Agents"
 		
-		`ISO 20022 introduced the terms instructing agent and instructed agent.  These terms are used to
-		describe the role of an HVCS participant in relation to a payment message that flows across the
-		HVCS.  During settlement, the instructing agent's ESAS account is debited, and the instructed
-		agent's ESAS account is credited.`
+		@@mtxt
+		-- {{legal+
+		-- ISO 20022 introduced the terms instructing agent and instructed agent.  These terms are used to
+		   describe the role of an HVCS participant in relation to a payment message that flows across the
+		   HVCS.  During settlement, the instructing agent's ESAS account is debited, and the instructed
+		   agent's ESAS account is credited.
 
-		`Instructing agent and instructed agent are payment message specific terms.  When referencing
-		the wider scope of HVCS Instructions (inclusive of exception and investigation messages and
-		system messages), the terms sender and receiver are used, whereby the sender is the entity that
-		constructs the exception and investigation message or system message and requests message
-		delivery from SWIFT (or in some circumstances is SWIFT itself), and the receiver is the
-		recipient entity.  The sender and receiver of the exception and investigation message and
-		system message are represented within the From and To fields of the Business Application Header.`
+		-- Instructing agent and instructed agent are payment message specific terms.  When referencing
+		   the wider scope of HVCS Instructions (inclusive of exception and investigation messages and
+		   system messages), the terms sender and receiver are used, whereby the sender is the entity that
+		   constructs the exception and investigation message or system message and requests message
+		   delivery from SWIFT (or in some circumstances is SWIFT itself), and the receiver is the
+		   recipient entity.  The sender and receiver of the exception and investigation message and
+		   system message are represented within the From and To fields of the Business Application Header.
+		@@
 	)
 
 	pnz::section_heading( "Chapter 2: HVCS Overview" )
@@ -926,33 +939,30 @@ import [
 
 	pnz::subsection_heading( "Financial institution credit transfer cover" )
 
-	pnz::clause(
+	pnz::nonumber_clause(
 		"3.10"
 		"Financial institution credit transfer cover process"
 
-		pnz::nonumber(
-			`The following are provided as examples for the overview. For detail of all scenarios, please
-			see the applicable message standards.`
-		)
+		@@mtxt
+		The following are provided as examples for the overview. For detail of all scenarios, please
+		see the applicable message standards.
 
-		`An FI credit transfer can also be used in a direct and cover payment scenario whereby a participant
-		may send an FI credit transfer message with the contents of a customer credit transfer message received
-		from an overseas financial institution (FI cover message).`
-
-		`An FI cover message:`
-		pnz::level2(
-			`is linked to a customer credit transfer message involving a debtor or a creditor who is not a
-			financial institution,`
-			
-			`contains the linked customer credit transfer message with the name and address of the debtor
-			or the creditor,`
-
-			`settles the obligations of a financial institution (the debtor agent) who sends a customer credit
+		-- {{legal+
+		-- An FI credit transfer can also be used in a direct and cover payment scenario whereby a participant
+		   may send an FI credit transfer message with the contents of a customer credit transfer message received
+		   from an overseas financial institution (FI cover message).
+		-- An FI cover message:
+		--- is linked to a customer credit transfer message involving a debtor or a creditor who is not a
+			financial institution,
+		--- contains the linked customer credit transfer message with the name and address of the debtor
+			or the creditor,
+		--- settles the obligations of a financial institution (the debtor agent) who sends a customer credit
 			transfer message to another financial institution (for example the creditor agent in the diagram)
-			if the debtor agent does not have an account with the creditor agent.`
-		)
-		`The following diagram and table show at a high level how financial institutions interact to send an
-		FI cover message.`
+			if the debtor agent does not have an account with the creditor agent.
+		-- The following diagram and table show at a high level how financial institutions interact to send an
+		   FI cover message.
+		--!
+		@@
 	)
 
 	pnz::image( "images/hvcs_overview_fi_credit_transfer_cover.png", "FI Credit Transfer Cover")
@@ -1018,50 +1028,57 @@ import [
 		"3.11"
 		"Introduction"
 		
-		`The exception and investigation messages are designed to support investigation case management in
-		connection with the cancellation of payment messages or independently between a case assigner and
-		assignee.`
-		
-		`There are two common scenarios for exception and investigation messages to be used by participants:`
-		pnz::level2(
-			`an unsolicited return where a payment instruction has failed to credit the creditor's account and
-			resulted in a return message by the instructed agent; or`
-
-			`a solicited return where a cancellation request has been initiated by the instructing agent and
-			resulted in a return message.`
-		)
+		@@mtxt
+		-- {{legal+
+		-- The exception and investigation messages are designed to support investigation case management in
+		   connection with the cancellation of payment messages or independently between a case assigner and
+		   assignee.
+		-- There are two common scenarios for exception and investigation messages to be used by participants:
+		--- an unsolicited return where a payment instruction has failed to credit the creditor's account and
+			resulted in a return message by the instructed agent; or
+		--- a solicited return where a cancellation request has been initiated by the instructing agent and
+			resulted in a return message.
+		--!
+		@@
 	)
 
-	pnz::clause(
+	pnz::nonumber_clause(
 		"3.12"
 		"Unsolicited return — failed to credit account"
 		
-		`A Return message is initiated by the creditor agent and used to return the original payment message,
-		for example, in the case of an invalid payment message (e.g. specifying an incorrect account number).`
+		@@mtxt
+		-- {{legal+
+		-- A Return message is initiated by the creditor agent and used to return the original payment message,
+		   for example, in the case of an invalid payment message (e.g. specifying an incorrect account number).
+		@@
 	)
 
-	pnz::clause(
+	pnz::nonumber_clause(
 		"3.13"
 		"Solicited return — request for cancellation"
 
-		`A Payment Cancellation Request message can be used to request the cancellation of an HVCS payment.
-		This message would typically be created by the debtor agent and sent to the creditor agent depending
-		on the status of the payment.`
+		@@mtxt
+		-- {{legal+
+		-- A Payment Cancellation Request message can be used to request the cancellation of an HVCS payment.
+		   This message would typically be created by the debtor agent and sent to the creditor agent depending
+		   on the status of the payment.
 
-		`This exception and investigation message must be used only for the return of HVCS payments and the
-		sender of the cancellation request must include their investigation case identifier within the
-		"Case/Identification" element of the exception and investigation message.`
+		-- This exception and investigation message must be used only for the return of HVCS payments and the
+		   sender of the cancellation request must include their investigation case identifier within the
+		   "Case/Identification" element of the exception and investigation message.
 
-		`On receipt of a Payment Cancellation Request message by a participant, the participant must investigate
-		the request and respond by sending a Resolution of Investigation message back to sender of the request
-		indicating whether the Payment Cancellation Request is pending, or if it has been accepted or rejected.`
+		-- On receipt of a Payment Cancellation Request message by a participant, the participant must investigate
+		   the request and respond by sending a Resolution of Investigation message back to sender of the request
+		   indicating whether the Payment Cancellation Request is pending, or if it has been accepted or rejected.
 
-		`If the Payment Cancellation Request is accepted, the participant sends a return message and the returned
-		HVCS payment to the instructing agent of the HVCS payment being returned along with the Resolution o
-		Investigation.`
+		-- If the Payment Cancellation Request is accepted, the participant sends a return message and the returned
+		   HVCS payment to the instructing agent of the HVCS payment being returned along with the Resolution o
+		   Investigation.
 
-		`The diagram below describes the message flow between participants when a Payment Cancellation Request
-		is sent by a debtor agent.`
+		-- The diagram below describes the message flow between participants when a Payment Cancellation Request
+		   is sent by a debtor agent.
+		--!
+		@@
 	)
 
 	pnz::image( "images/hvcs_overview_solicited_return.png", "Solicited Return")
@@ -1070,21 +1087,25 @@ import [
 		"3.14"
 		"Payment return"
 
-		`Exception and investigation messages-May-result in a return message being sent by an agent to the
-		previous agent in the payment chain to return a payment previously settled.`
+		@@mtxt
+		-- {{legal+
+		-- Exception and investigation messages-May-result in a return message being sent by an agent to the
+		   previous agent in the payment chain to return a payment previously settled.
+		
+		-- Return messages-May-be the consequence of a payment message cancellation requested by the debtor
+		   agent or one of the intermediary agents of the HVCS payment or sent by a creditor agent or instructed
+		   agent due to a failure to process the payment message.
 
-		`Return messages-May-be the consequence of a payment message cancellation requested by the debtor
-		agent or one of the intermediary agents of the HVCS payment or sent by a creditor agent or instructed
-		agent due to a failure to process the payment message.`
+		-- The return message refers to the payment message(s) by means of references only, or by means of
+		   references and a set of elements from the payment message, and the return message must include a
+		   payment return code. The full value of the original HVCS payment must be returned as a single payment
+		   or in instalments in circumstances permitted by the applicable message standards.
 
-		`The return message refers to the payment message(s) by means of references only, or by means of
-		references and a set of elements from the payment message, and the return message must include a
-		payment return code. The full value of the original HVCS payment must be returned as a single payment
-		or in instalments in circumstances permitted by the applicable message standards.`
-
-		`The following diagram and table show at a high level how participants interact to return an HVCS
-		payment with a return message where the payment message could not be processed for example, due to
-		a failure to credit the creditor's account.`
+		-- The following diagram and table show at a high level how participants interact to return an HVCS
+		   payment with a return message where the payment message could not be processed for example, due to
+		   a failure to credit the creditor's account.
+		--!
+		@@
 	)
 
 	pnz::image( "images/hvcs_overview_unsolicited_return.png", "Unsolicited Return")
@@ -1124,30 +1145,30 @@ import [
 	)
 
 	pnz::section_heading( "Chapter 4: Message flows" )
-
-	pnz::clause(
+	pnz::nonumber_clause(
 		"4.1"
 		"Message flows"
 		
-		`The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode
-		requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the
-		recipient. Payment messages are only delivered to the recipients once they have been authorised, and
-		typically once settlement of the HVCS payment has been made within RTGS.`
+		@@mtxt
+		-- {{legal+
+		-- The AVP CUG is configured for Y-copy meaning all HVCS payment messages are sent in Y-copy mode. Y-copy mode
+		   requires a portion of the payment message to be sent to the RBNZ to authorise or refuse its delivery to the
+		   recipient. Payment messages are only delivered to the recipients once they have been authorised, and
+		   typically once settlement of the HVCS payment has been made within RTGS.
+		-- More detail about Y-copy can be found in the respective procedures:
+		--- Part D MX Messaging Procedures (ISO 20022)
+		--- Part E MT Messaging Procedures (ISO 15022)
+		--!
 
-		`More detail about Y-copy can be found in the respective procedures:`
-		pnz::level2(
-			`Part D MX Messaging Procedures (ISO 20022)`
-			`Part E MT Messaging Procedures (ISO 15022)`
-		)
-		
-		pnz::bold_div( "Payment message flow" )
+		{{b Payment message flow{{!
 
-		`When a payment message (1) is initiated by participant A, the payment message is then sent to SWIFT who copy
-		key parts of the payment message and send it to the RBNZ to authorise (2).`
-
-		`The RBNZ authorises or refuses the payment message and responds with a system message sent back to SWIFT (3).
-		Based on the RBNZ's response SWIFT will then either send the authorised payment message to participant B to
-		credit their customer's account, or send a refusal notification to participant A (4).`
+		-- {{>
+		-- When a payment message (1) is initiated by participant A, the payment message is then sent to SWIFT who copy
+		   key parts of the payment message and send it to the RBNZ to authorise (2).
+		-- The RBNZ authorises or refuses the payment message and responds with a system message sent back to SWIFT (3).
+		   Based on the RBNZ's response SWIFT will then either send the authorised payment message to participant B to
+		   credit their customer's account, or send a refusal notification to participant A (4).
+		@@
 	)
 
 	pnz::image( "images/hvcs_overview_payment_message_flows.png", "Payment Message Flows")
@@ -1848,6 +1869,7 @@ import [
 
 	`The following table summarises amendments made to the former Appendix 14 procedures, prior to implementation of the
 	ISO 20022 message format. It has been retained here as a historical reference.`
+
 	pnz::br
 	pnz::styled_table(
 		"document-control-table"

@@ -146,20 +146,7 @@
                 </details>
                 <details>
                     <summary>Chapter 7: Receipt of MT payment messages during co-existence</summary>
-                    <ul class="toc-links">
-                        <li>
-                            <a href="#7.1-purpose-and-overview">7.1 Purpose and overview</a>
-                        </li>
-                        <li>
-                            <a href="#7.2-effective-term">7.2 Effective Term</a>
-                        </li>
-                        <li>
-                            <a href="#7.3-effect-of-chapter-7">7.3 Effect of Chapter 7</a>
-                        </li>
-                        <li>
-                            <a href="#7.4-receiving-and-processing-mt-payment-messages">7.4 Receiving and processing MT payment messages</a>
-                        </li>
-                    </ul>
+                    <ul class="toc-links"></ul>
                 </details>
             </div>
         </nav>
@@ -324,20 +311,7 @@
                     </li>
                     <li>
                         <a href="#chapter-7-receipt-of-mt-payment-messages-during-co-existence">Chapter 7: Receipt of MT payment messages during co-existence</a>
-                        <ol class="toc-level-2">
-                            <li>
-                                <a href="#7.1-purpose-and-overview">7.1 - Purpose and overview</a>
-                            </li>
-                            <li>
-                                <a href="#7.2-effective-term">7.2 - Effective Term</a>
-                            </li>
-                            <li>
-                                <a href="#7.3-effect-of-chapter-7">7.3 - Effect of Chapter 7</a>
-                            </li>
-                            <li>
-                                <a href="#7.4-receiving-and-processing-mt-payment-messages">7.4 - Receiving and processing MT payment messages</a>
-                            </li>
-                        </ol>
+                        <ol class="toc-level-2"></ol>
                     </li>
                 </ol>
             </div>
@@ -466,8 +440,7 @@
                     <li>Chapter 4 provides an overview on data truncation.</li>
                     <li>Chapter 5 has been deleted.</li>
                     <li>Chapter 6 has been deleted.</li>
-                    <li>Chapter 7 provides a temporary right for participants to receive and process MT payment messages for 4 weeks
-		from the beginning of the co-existence phase.</li>
+                    <li>Chapter 7 has been deleted.</li>
                 </ol>
             </div>
             <h1 id="chapter-1-the-journey-from-mt-to-mx" class="section-heading">Chapter 1: The journey from MT to MX</h1>
@@ -496,9 +469,9 @@
 				Procedures all apply simultaneously beginning on 22 November 2025 and ending on a date:</span>
                     </p>
                     <ol class="level2 level2-counter-reset">
-                        <li>in November 2026; or</li>
+                        <li>in November 2027; or</li>
                         <li>as determined by Payments NZ if all participants have fully migrated to using MX messages
-			prior to November 2026.</li>
+			prior to November 2027.</li>
                     </ol>
                     <p>
                         <span class="bold">Hybrid Postal Address</span>
@@ -579,7 +552,7 @@
 						Hybrid Postal Address formatting.</div>
                                 <br/>
                                 <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
+                                    <p>On and from 14 November 2026:</p>
                                 </div>
                                 <div>Participants must send all messages using either Structured Postal
 						Address formatting or Hybrid Postal Address formatting.</div>
@@ -594,7 +567,7 @@
 						that uses Hybrid Postal Address formatting to participants as an MX message.</div>
                                 <br/>
                                 <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
+                                    <p>On and from 14 November 2026:</p>
                                 </div>
                                 <div>Participants acting as intermediaries must send all CBPR+ messages and on-send
 						all CBPR+ messages to participants as an MX message using either structured
@@ -694,9 +667,16 @@
                             </td>
                             <td>
                                 <div class="bold">
+                                    <p>By 14 November 2026:</p>
+                                </div>
+                                <div>Participants must be able to receive from SWIFT as an MX message and process.</div>
+                                <br/>
+                                <div class="bold">
                                     <p>By the end of the co-existence phase:</p>
                                 </div>
-                                <div>Participants must be able to receive from SWIFT as an MX message and process</div>
+                                <div>Participants must use the SWIFT Case Manager BIC for all cross-border investigations.</div>
+                                <br/>
+                                <div>Participants must stop receiving and processing MT199/MT299 cross-border investigation messages.</div>
                             </td>
                         </tr>
                     </tbody>
@@ -730,7 +710,7 @@
                     <li>The approach established for the New Zealand migration places obligations on participants in relation
 		to sending and receiving MX messages.</li>
                     <li>
-                        <span>The following obligations in sub-paragraphs (3) to (7) apply to participants</span>
+                        <span>The following obligations in sub-paragraphs (3) to (9) apply to participants</span>
                         <span class="bold">during the co-existence phase.</span>
                     </li>
                     <li>Sending payment messages:</li>
@@ -753,10 +733,19 @@
                         </li>
                         <ol class="level3 level3-counter-reset">
                             <li>
-                                <span>Send an address that contains</span>
+                                <span>Before 14 November 2026, send an address that contains</span>
                                 <span class="bold">either</span>
                                 <span>Unstructured Address Line formatting</span>
                                 <span class="bold">or</span>
+                                <span>Structured Postal Address formatting</span>
+                                <span class="bold">or</span>
+                                <span>Hybrid Postal Address formatting; and</span>
+                            </li>
+                        </ol>
+                        <ol class="level3 level3-counter-reset">
+                            <li>
+                                <span>On and from 14 November 2026, send an address that contains</span>
+                                <span class="bold">either</span>
                                 <span>Structured Postal Address formatting</span>
                                 <span class="bold">or</span>
                                 <span>Hybrid Postal Address formatting.</span>
@@ -802,13 +791,22 @@
                             <li>pacs.009 COV — Financial Institution Credit Transfer Cover.</li>
                         </ol>
                         <li>
-                            <span>Participants</span>
+                            <span>Before 14 November 2026, participants</span>
                             <span class="bold">must</span>
                             <span>receive and process MX messages that contain:</span>
                         </li>
                         <ol class="level3 level3-counter-reset">
                             <li>Structured Postal Address formatting; and</li>
                             <li>Unstructured Address Line formatting; and</li>
+                            <li>Hybrid Postal Address formatting.</li>
+                        </ol>
+                        <li>
+                            <span>On and from 14 November 2026, participants</span>
+                            <span class="bold">must</span>
+                            <span>receive and process MX messages that contain:</span>
+                        </li>
+                        <ol class="level3 level3-counter-reset">
+                            <li>Structured Postal Address formatting; and</li>
                             <li>Hybrid Postal Address formatting.</li>
                         </ol>
                     </ol>
@@ -922,19 +920,28 @@
                 <div id="1.8-obligations-for-participants-to-send-and-receive-messages-after-the-co-existence-phase" class="clause-heading" data-number="1.8">Obligations for participants to send and receive messages after the co-existence phase</div>
                 <ol class="level1 level1-counter-reset">
                     <li>
+                        <span class="bold">On and from 14 November 2026,</span>
+                        <span>participants will be required to:</span>
+                    </li>
+                    <ol class="level2 level2-counter-reset">
+                        <li>Send, receive and process payment messages with either Structured Postal Address formatting or Hybrid Postal Address formatting;</li>
+                        <li>Stop sending, receiving and processing payment messages containing Unstructured Address Line formatting; and</li>
+                        <li>Receive and process camt.110 / camt.111 investigation messages in relation to cross-border payments outside of HVCS.</li>
+                    </ol>
+                    <li>
                         <span class="bold">From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase),</span>
-                        <span>all participants will be required to: </span>
+                        <span>all participants will be required to:</span>
                     </li>
                     <ol class="level2 level2-counter-reset">
                         <li>send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX
-			Message Specifications for all message types that are in scope;</li>
-                        <li>send HVCS instructions containing Structured Postal Address formatting or Hybrid Postal Address
-			formatting only; and</li>
+			Message Specifications for all message types that are in scope; and</li>
                         <li>send and receive structured data for CBPR+ and HVCS instructions.</li>
                     </ol>
-                    <li>The ability to send or receive MTn92 and MTn96 MTn99 messages will be retired in November 2026.</li>
-                    <li>The ability to send or receive MTn99 messages related to payments will be retired in November 2027.</li>
                     <li>There is no foreseen retirement date for MTn98 messages.</li>
+                    <li>SWIFT has mandated that the sending, receiving and processing of MT199 / MT299 messages for cross-border
+		transactions will be retired in November 2027.</li>
+                    <li>The timeline for requiring the use of SWIFT Case Manager for investigations in HVCS and the requirement
+		to stop receiving and processing MT199 / MT299 investigation messages in HVCS is to be determined.</li>
                 </ol>
             </div>
             <div class="clause-row">
@@ -1064,7 +1071,7 @@
 		(across remittance, name and address elements) for New Zealand&apos;s HVCS:</li>
                     <ol class="level2 level2-counter-reset">
                         <li>
-                            <span class="bold">During the co-existence phase:</span>
+                            <span class="bold">Until 14 November 2026:</span>
                         </li>
                         <ol class="level3 level3-counter-reset">
                             <li>Participants must be able to receive and process MX messages that contain Unstructured
@@ -1072,11 +1079,12 @@
                             <li>Sending MX messages containing Structured Postal Address formatting is recommended.</li>
                         </ol>
                         <li>
-                            <span class="bold">From the scheduled date of mandated use of MX structured or hybrid messaging (the end of the co-existence phase),</span>
+                            <span class="bold">On and from 14 November 2026,</span>
                             <span>the capability to send MX messages containing Unstructured Address Line formatting will be
 					removed from the MX specification; therefore, participants must be able to send and receive MX
 					messages containing Structured Postal Address formatting or Hybrid Postal Address formatting
-					for HVCS instructions.</span>
+					for HVCS instructions and must stop receiving and processing HVCS instructions containing
+					Unstructured Address Line formatting.</span>
                         </li>
                     </ol>
                     <li>Further clarification and guidelines for the use of structured remittance and structured name and
@@ -1091,10 +1099,11 @@
                         <li>During the co-existence phase, if a payment instruction is initiated by the debtor agent using a
 			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
 			for the debtor and creditor.</li>
-                        <li>At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured
-			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the
-			co-existence phase, all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting.</li>
+                        <li>On and from 14 November 2026, the capability to send CBPR+ messages containing Unstructured
+			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by 14 November 2026,
+			all participants that act as intermediaries must be able to send and receive
+			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting
+			and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.</li>
                     </ol>
                 </ol>
             </div>
@@ -1132,79 +1141,7 @@
             <h1 id="chapter-6-testing-required-during-co-existence" class="section-heading">Chapter 6: Testing required during co-existence</h1>
             <div>This chapter has been deleted (UG2025 November 2025).</div>
             <h1 id="chapter-7-receipt-of-mt-payment-messages-during-co-existence" class="section-heading">Chapter 7: Receipt of MT payment messages during co-existence</h1>
-            <div class="tag-commentary"></div>
-            <div class="clause-row">
-                <div id="7.1-purpose-and-overview" class="clause-heading" data-number="7.1">Purpose and overview</div>
-                <div class="level1">
-                    <p>It is possible that some MT payment messages which were sent before 22 November 2025
-		may be received by participants for a short period on or after 22 November 2025, for
-		example, if an MT payment message took longer than expected to be sent through SWIFT&apos;s
-		messaging system.</p>
-                    <p>Payments NZ discussed with the ISO 20022 Operations and Readines Working Group (ORWG)
-		that during the window immediately following go-live, Participants may receive MT payments
-		from SWIFT that were held in a SWIFT outbound sanctions queue at the time of go-live 22
-		November. These may be any of the MT payment types or their return variants.</p>
-                    <p>Some Participants may be able to receive and process the incoming MT payment instruction;
-		some may not and would be forced to reject the payment instruction. If the MT103 or MT202
-		payment was accepted, and subsequently needed to be returned, it would have to be returned
-		as a pacs.004.  If an MT return payment is received in this manner after go-live and the
-		original payment was required to be sent again it would have to be sent as an MX message.</p>
-                    <p>Payments NZ are highlighting the potential to receive these MT instructions though expect
-		volumes will be low to none. Payments NZ to not expect any Participant to build capability
-		to handle this scenario and any occurrences to be handled manually via operations teams.</p>
-                </div>
-            </div>
-            <div class="tag-standards"></div>
-            <div class="clause-row">
-                <div id="7.2-effective-term" class="clause-heading" data-number="7.2">Effective Term</div>
-                <div class="level1">
-                    <p>
-                        <span>This chapter is effective from the beginning of the co-existence phase on 22 November 2025 until the end
-				of the calendar day on 19 December 2025</span>
-                        <span class="bold">(Effective Term).</span>
-                        <span>This chapter ceases to have any effect on and from 20 December 2025.</span>
-                    </p>
-                </div>
-            </div>
-            <div class="clause-row">
-                <div id="7.3-effect-of-chapter-7" class="clause-heading" data-number="7.3">Effect of Chapter 7</div>
-                <div class="level1">
-                    <p>This Chapter 7 applies during the Effective Term notwithstanding any provision to the contrary expressed
-		in any Rule or Standard.</p>
-                </div>
-            </div>
-            <div class="clause-row">
-                <div id="7.4-receiving-and-processing-mt-payment-messages" class="clause-heading" data-number="7.4">Receiving and processing MT payment messages</div>
-                <ol class="level1 level1-counter-reset">
-                    <li>
-                        <span>Participants</span>
-                        <span class="bold">may</span>
-                        <span>receive and process the following MT payment messages or their return (RETN) variants from
-				other participants for the Effective Term:</span>
-                        <ol class="level2 level2-counter-reset">
-                            <li>MT103;</li>
-                            <li>MT202;</li>
-                            <li>MT202 COV;</li>
-                            <li>MT205; and</li>
-                            <li>MT205 COV.</li>
-                        </ol>
-                    </li>
-                    <li>
-                        <span>Return messages:  If returning an HVCS payment that was received in MT format during
-				the Effective Term, participants</span>
-                        <span class="bold">must</span>
-                        <span>return the HVCS payment by sending a return message to the original instructing agent as follows:</span>
-                    </li>
-                    <ol class="level2 level2-counter-reset">
-                        <li>if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;</li>
-                        <li>if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;</li>
-                        <li>if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message; and</li>
-                        <li>if the original instructed agent receives a MT205 message, return by sending a pacs.004 message.</li>
-                    </ol>
-                    <li>If return payment was received in MT message format during the Effective Term, and the payment requires
-		resending, it must be sent as an MX message.</li>
-                </ol>
-            </div>
+            <div>This chapter has been deleted (September 2026).</div>
         </main>
     </body>
 </html>

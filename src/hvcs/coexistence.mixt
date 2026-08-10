@@ -1,4 +1,3 @@
-
 import [
 	pnz = "../html/pnz.legal.mixt"
 	hvcs = "../html/pnz.hvcs.mixt"
@@ -151,8 +150,7 @@ import [
 
 		`Chapter 6 has been deleted.`
 
-		`Chapter 7 provides a temporary right for participants to receive and process MT payment messages for 4 weeks
-		from the beginning of the co-existence phase.`
+		`Chapter 7 has been deleted.`
 	)
 
 	pnz::section_heading( "Chapter 1: The journey from MT to MX" )
@@ -190,9 +188,9 @@ import [
 			)
 		]
 		pnz::level2(
-			`in November 2026; or`
+			`in November 2027; or`
 			`as determined by Payments NZ if all participants have fully migrated to using MX messages
-			prior to November 2026.`
+			prior to November 2027.`
 		)
 
 		// Hybrid Postal Address
@@ -298,7 +296,7 @@ import [
 						`Participants must be able to receive and process MX messages that use
 						Hybrid Postal Address formatting.`
 						pnz::br
-						pnz::bold_div( "By the end of the co-existence phase:" )
+						pnz::bold_div( "On and from 14 November 2026:" )
 						`Participants must send all messages using either Structured Postal
 						Address formatting or Hybrid Postal Address formatting.`
 					]
@@ -311,7 +309,7 @@ import [
 						that uses Hybrid Postal Address formatting to participants as an MX message.`
 
 						pnz::br
-						pnz::bold_div( "By the end of the co-existence phase:" )
+						pnz::bold_div( "On and from 14 November 2026:" )
 						`Participants acting as intermediaries must send all CBPR+ messages and on-send
 						all CBPR+ messages to participants as an MX message using either structured
 						postal address formatting or Hybrid Postal Address formatting.`
@@ -396,10 +394,16 @@ import [
 						payments when SWIFT make this capability available for testing.`
 					]
 					[
+						pnz::bold_div( "By 14 November 2026:" )
+						`Participants must be able to receive from SWIFT as an MX message and process.`
+						pnz::br
+
 						pnz::bold_div( "By the end of the co-existence phase:" )
-						`Participants must be able to receive from SWIFT as an MX message and process`
+						`Participants must use the SWIFT Case Manager BIC for all cross-border investigations.`
+						pnz::br
+						`Participants must stop receiving and processing MT199/MT299 cross-border investigation messages.`
 					]
-				]				
+				]
 			]
 		)
 	)
@@ -438,7 +442,7 @@ import [
 		to sending and receiving MX messages.`
 
 		[
-			pnz::text( `The following obligations in sub-paragraphs (3) to (7) apply to participants` )
+			pnz::text( `The following obligations in sub-paragraphs (3) to (9) apply to participants` )
 			pnz::bold( `during the co-existence phase.` )
 		]
 		
@@ -462,10 +466,19 @@ import [
 			]
 			pnz::level3(
 				[
-					pnz::text( "Send an address that contains" )
+					pnz::text( "Before 14 November 2026, send an address that contains" )
 					pnz::bold( "either" )
 					pnz::text( "Unstructured Address Line formatting" )
 					pnz::bold( "or" )
+					pnz::text( "Structured Postal Address formatting" )
+					pnz::bold( "or" )
+					pnz::text( "Hybrid Postal Address formatting; and" )
+				]
+			)
+			pnz::level3(
+				[
+					pnz::text( "On and from 14 November 2026, send an address that contains" )
+					pnz::bold( "either" )
 					pnz::text( "Structured Postal Address formatting" )
 					pnz::bold( "or" )
 					pnz::text( "Hybrid Postal Address formatting." )
@@ -511,13 +524,22 @@ import [
 				`pacs.009 COV — Financial Institution Credit Transfer Cover.`
 			)
 			[
-				pnz::text( "Participants" )
+				pnz::text( "Before 14 November 2026, participants" )
 				pnz::bold( "must" )
 				pnz::text( "receive and process MX messages that contain:" )
 			]
 			pnz::level3(
 				`Structured Postal Address formatting; and`
 				`Unstructured Address Line formatting; and`
+				`Hybrid Postal Address formatting.`
+			)
+			[
+				pnz::text( "On and from 14 November 2026, participants" )
+				pnz::bold( "must" )
+				pnz::text( "receive and process MX messages that contain:" )
+			]
+			pnz::level3(
+				`Structured Postal Address formatting; and`
 				`Hybrid Postal Address formatting.`
 			)
 		)
@@ -645,22 +667,38 @@ import [
 
 		[
 			pnz::bold(
+				`On and from 14 November 2026,`
+			)
+			pnz::text( "participants will be required to:" )
+		]
+		pnz::level2(
+			`Send, receive and process payment messages with either Structured Postal Address formatting or Hybrid Postal Address formatting;`
+
+			`Stop sending, receiving and processing payment messages containing Unstructured Address Line formatting; and`
+
+			`Receive and process camt.110 / camt.111 investigation messages in relation to cross-border payments outside of HVCS.`
+		)
+
+		[
+			pnz::bold(
 				`From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase),`
 			)
-			pnz::text( "all participants will be required to: " )
+			pnz::text( "all participants will be required to:" )
 		]
 		pnz::level2(
 			`send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX
-			Message Specifications for all message types that are in scope;`
-
-			`send HVCS instructions containing Structured Postal Address formatting or Hybrid Postal Address
-			formatting only; and`
+			Message Specifications for all message types that are in scope; and`
 
 			`send and receive structured data for CBPR+ and HVCS instructions.`
 		)
-		`The ability to send or receive MTn92 and MTn96 MTn99 messages will be retired in November 2026.`
-		`The ability to send or receive MTn99 messages related to payments will be retired in November 2027.`
+
 		`There is no foreseen retirement date for MTn98 messages.`
+
+		`SWIFT has mandated that the sending, receiving and processing of MT199 / MT299 messages for cross-border
+		transactions will be retired in November 2027.`
+
+		`The timeline for requiring the use of SWIFT Case Manager for investigations in HVCS and the requirement
+		to stop receiving and processing MT199 / MT299 investigation messages in HVCS is to be determined.`
 	)
 
 
@@ -805,7 +843,7 @@ import [
 
 		pnz::level2(
 			[
-				pnz::bold( `During the co-existence phase:` )
+				pnz::bold( `Until 14 November 2026:` )
 			]
 			pnz::level3(
 				`Participants must be able to receive and process MX messages that contain Unstructured
@@ -815,13 +853,14 @@ import [
 			)
 			[
 				pnz::bold(
-					`From the scheduled date of mandated use of MX structured or hybrid messaging (the end of the co-existence phase),`
+					`On and from 14 November 2026,`
 				)
 				pnz::text(
 					`the capability to send MX messages containing Unstructured Address Line formatting will be
 					removed from the MX specification; therefore, participants must be able to send and receive MX
 					messages containing Structured Postal Address formatting or Hybrid Postal Address formatting
-					for HVCS instructions.`
+					for HVCS instructions and must stop receiving and processing HVCS instructions containing
+					Unstructured Address Line formatting.`
 				)
 			]
 		)
@@ -840,10 +879,11 @@ import [
 			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
 			for the debtor and creditor.`
 
-			`At the end of the co-existence phase, the capability to send CBPR+ messages containing Unstructured
-			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by the end of the
-			co-existence phase, all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting.`
+			`On and from 14 November 2026, the capability to send CBPR+ messages containing Unstructured
+			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by 14 November 2026,
+			all participants that act as intermediaries must be able to send and receive
+			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting
+			and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.`
 		)
 	)
 
@@ -894,95 +934,7 @@ import [
 	"This chapter has been deleted (UG2025 November 2025)."
 
 	pnz::section_heading( "Chapter 7: Receipt of MT payment messages during co-existence" )
-	pnz::tag_commentary
-
-	pnz::nonumber_clause(
-		"7.1"
-		"Purpose and overview"
-	
-		`It is possible that some MT payment messages which were sent before 22 November 2025
-		may be received by participants for a short period on or after 22 November 2025, for
-		example, if an MT payment message took longer than expected to be sent through SWIFT's
-		messaging system.`
-
-		`Payments NZ discussed with the ISO 20022 Operations and Readines Working Group (ORWG)
-		that during the window immediately following go-live, Participants may receive MT payments
-		from SWIFT that were held in a SWIFT outbound sanctions queue at the time of go-live 22
-		November. These may be any of the MT payment types or their return variants.`
-
-		`Some Participants may be able to receive and process the incoming MT payment instruction;
-		some may not and would be forced to reject the payment instruction. If the MT103 or MT202
-		payment was accepted, and subsequently needed to be returned, it would have to be returned
-		as a pacs.004.  If an MT return payment is received in this manner after go-live and the
-		original payment was required to be sent again it would have to be sent as an MX message.`
-
-		`Payments NZ are highlighting the potential to receive these MT instructions though expect
-		volumes will be low to none. Payments NZ to not expect any Participant to build capability
-		to handle this scenario and any occurrences to be handled manually via operations teams.`
-	)
-
-	pnz::tag_standards
-
-	pnz::nonumber_clause(
-		"7.2"
-		"Effective Term"
-	
-		[
-			pnz::text(
-				`This chapter is effective from the beginning of the co-existence phase on 22 November 2025 until the end
-				of the calendar day on 19 December 2025`
-			)
-			pnz::bold( "(Effective Term)." )
-			pnz::text(
-				`This chapter ceases to have any effect on and from 20 December 2025.`
-			)
-		]
-	)
-	
-	pnz::nonumber_clause(
-		"7.3"
-		"Effect of Chapter 7"
-	
-		`This Chapter 7 applies during the Effective Term notwithstanding any provision to the contrary expressed
-		in any Rule or Standard.`
-	)
-
-	pnz::clause(
-		"7.4"
-		"Receiving and processing MT payment messages"
-	
-		[
-			pnz::text( "Participants" )
-			pnz::bold( "may" )
-			pnz::text(
-				`receive and process the following MT payment messages or their return (RETN) variants from
-				other participants for the Effective Term:`
-			)
-			pnz::level2(
-				`MT103;`
-				`MT202;`
-				`MT202 COV;`
-				`MT205; and`
-				`MT205 COV.`
-			)
-		]
-		[
-			pnz::text(
-				`Return messages:  If returning an HVCS payment that was received in MT format during
-				the Effective Term, participants`
-			)
-			pnz::bold( "must" )
-			pnz::text( "return the HVCS payment by sending a return message to the original instructing agent as follows:" )
-		]
-		pnz::level2(
-			"if the original instructed agent receives a MT103 message, return by sending a pacs.004 message;"
-			"if the original instructed agent receives a MT202 message, return by sending a pacs.004 message;"
-			"if the original instructed agent receives a MT202 COV message, return by sending a pacs.004 message; and"
-			"if the original instructed agent receives a MT205 message, return by sending a pacs.004 message."
-		)
-		`If return payment was received in MT message format during the Effective Term, and the payment requires
-		resending, it must be sent as an MX message.`
-	)
+	"This chapter has been deleted (September 2026)."
 
 	/*
 	`PNZ to reach out to RBNZ to confirm implementation plans for these message types`

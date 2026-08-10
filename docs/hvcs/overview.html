@@ -514,14 +514,18 @@
                         <li>creditor agents; and/or</li>
                         <li>debtor agents.</li>
                     </ul>
+                    <div class="doc-comment" data-change-id="BR 1 [ORWG 45]">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">BR 1 [ORWG 45]</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Simplify note about defined term &apos;instructing agent&apos; and &apos;instructed agent&apos;</p>
+                        </div>
+                    </div>
                     <br/>
-                    <p>NOTE: It is important to understand that the terms &apos;instructing agent&apos; and &apos;instructed agent&apos;
-		are also defined terms under the ISO 20022 standard.  This means that the ISO 20022 standard
-		might describe a person as an &apos;instructing agent&apos; or an &apos;instructed agent&apos; even if they are
-		not a HVCS participant.  However, the Rules have narrowed these definitions from their meaning
-		under the ISO 20022 standard.  This means that whenever these terms are used in the Rules and
-		the HVCS Standards, it is referring to HVCS participants only that fulfil the role of an
-		instructing agent or an instructed agent.</p>
+                    <p>For the purposes of these HVCS rules and standards, references to the “instructing agent” and the
+		“instructed agent” only includes HVCS participants.</p>
                     <p>The multilateral contract does not bind other third parties involved in the HVCS clearing
 		process like debtors, who are customers of debtor agents (often acting as the instructing agent),
 		or creditors, who are customers of creditor agents (often acting as the instructed agent).</p>
@@ -1086,94 +1090,111 @@
             <div class="clause-row">
                 <div id="3.10-financial-institution-credit-transfer-cover-process" class="clause-heading" data-number="3.10">Financial institution credit transfer cover process</div>
                 <div class="level1">
-                    <p>The following are provided as examples for the overview. For detail of all scenarios, please see the applicable message standards.</p>
-                    <ol data-numbering-level="1">
-                        <li>
-                            <span data-list-marker="true">(1)</span>
-                            <p>An FI credit transfer can also be used in a direct and cover payment scenario whereby a participant may send an FI credit transfer message with the contents of a customer credit transfer message received from an overseas financial institution (FI cover message).</p>
-                        </li>
-                        <li>
-                            <span data-list-marker="true">(2)</span>
-                            <p>An FI cover message:</p>
-                        </li>
-                        <li>
-                            <ol data-numbering-level="2">
-                                <li>
-                                    <span data-list-marker="true">(a)</span>
-                                    <p>is linked to a customer credit transfer message involving a debtor or a creditor who is not a financial institution,</p>
-                                </li>
-                                <li>
-                                    <span data-list-marker="true">(b)</span>
-                                    <p>contains the linked customer credit transfer message with the name and address of the debtor or the creditor,</p>
-                                </li>
-                                <li>
-                                    <span data-list-marker="true">(c)</span>
-                                    <p>settles the obligations of a financial institution (the debtor agent) who sends a customer credit transfer message to another financial institution (for example the creditor agent in the diagram) if the debtor agent does not have an account with the creditor agent.</p>
-                                </li>
-                            </ol>
-                        </li>
-                        <li>
-                            <span data-list-marker="true">(3)</span>
-                            <p>The following diagram and table show at a high level how financial institutions interact to send an FI cover message.</p>
-                        </li>
-                    </ol>
+                    <div>
+                        <p>The following are provided as examples for the overview. For detail of all scenarios, please see the applicable message standards.</p>
+                        <ol data-numbering-level="1">
+                            <li>
+                                <span data-list-marker="true">(1)</span>
+                                <p>An FI credit transfer can also be used in a direct and cover payment scenario whereby a participant may send an FI credit transfer message with the contents of a customer credit transfer message received from an overseas financial institution (FI cover message).</p>
+                            </li>
+                            <li>
+                                <span data-list-marker="true">(2)</span>
+                                <p>An FI cover message:</p>
+                            </li>
+                            <li>
+                                <ol data-numbering-level="2">
+                                    <li>
+                                        <span data-list-marker="true">(a)</span>
+                                        <p>is linked to a customer credit transfer message involving a debtor or a creditor who is not a financial institution,</p>
+                                    </li>
+                                    <li>
+                                        <span data-list-marker="true">(b)</span>
+                                        <p>contains the linked customer credit transfer message with the name and address of the debtor or the creditor,</p>
+                                    </li>
+                                    <li>
+                                        <span data-list-marker="true">(c)</span>
+                                        <p>settles the obligations of a financial institution (the debtor agent) who sends a customer credit transfer message to another financial institution (for example the creditor agent in the diagram) if the debtor agent does not have an account with the creditor agent.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span data-list-marker="true">(3)</span>
+                                <p>The following diagram and table show at a high level how financial institutions interact to send an FI cover message.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="diagram full-width">
+                        <img src="images/hvcs_overview_fi_credit_transfer_cover.png" alt="FI Credit Transfer Cover"></img>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="pnz-table center-col1">
+                            <thead>
+                                <th>Step</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>A debtor instructs their overseas bank (debtor agent) to make an NZD payment
+						to a creditor.</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <div>The overseas debtor agent</div>
+                                        <ul class="bullets">
+                                            <li>sends a customer credit transfer message to the overseas creditor agent.</li>
+                                            <li>has an NZD account with a participant (its correspondent bank) so it sends
+								a financial FI cover message (with the details of the customer credit participant
+								transfer message embedded in the payment message) to the correspondent bank (labelled
+								B in the diagram). The FI cover message instructs the correspondent bank participant
+								to debit the debtor agent&apos;s NZD account and credit the NZD account of the creditor
+								agent&apos;s correspondent bank (labelled C in the diagram).</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>The correspondent bank participant debits the debtor agent&apos;s NZD account.</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>The correspondent bank participant, as instructing agent, sends an FI cover message to the
+						correspondent bank of the creditor agent, as instructed agent using the AVP CUG transaction
+						delivery system.</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>The instructed agent credits the creditor agent&apos;s NZD account with the amount of the HVCS
+						payment.</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>When the creditor agent&apos;s account is credited, the creditor agent has the money to comply
+						with the payment instruction in the customer credit transfer message (received under step
+						2). The creditor agent credits the creditor&apos;s account. The debtor cannot reverse the HVCS
+						payment after settlement and the creditor can rely on the HVCS payment to complete a linked
+						transaction, for example, provide goods or services to the debtor.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="doc-comment" data-change-id="BR 2 [ORWG 3]">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">BR 2 [ORWG 3]</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Add a reference to CBPR+ handbook for more detailed examples and scenarios.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <ol data-numbering-level="1">
+                            <li>
+                                <span data-list-marker="true">(4)</span>For more examples, please refer to the CBPR+ User Handbook.</li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <div class="diagram">
-                <img src="images/hvcs_overview_fi_credit_transfer_cover.png" alt="FI Credit Transfer Cover"></img>
-            </div>
-            <div class="table-scroll">
-                <table class="pnz-table center-col1">
-                    <thead>
-                        <th>Step</th>
-                        <th>Action</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>A debtor instructs their overseas bank (debtor agent) to make an NZD payment
-					to a creditor.</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>
-                                <div>The overseas debtor agent</div>
-                                <ul class="bullets">
-                                    <li>sends a customer credit transfer message to the overseas creditor agent.</li>
-                                    <li>has an NZD account with a participant (its correspondent bank) so it sends
-							a financial FI cover message (with the details of the customer credit participant
-							transfer message embedded in the payment message) to the correspondent bank (labelled
-							B in the diagram). The FI cover message instructs the correspondent bank participant
-							to debit the debtor agent&apos;s NZD account and credit the NZD account of the creditor
-							agent&apos;s correspondent bank (labelled C in the diagram).</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>The correspondent bank participant debits the debtor agent&apos;s NZD account.</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>The correspondent bank participant, as instructing agent, sends an FI cover message to the
-					correspondent bank of the creditor agent, as instructed agent using the AVP CUG transaction
-					delivery system.</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>The instructed agent credits the creditor agent&apos;s NZD account with the amount of the HVCS
-					payment.</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>When the creditor agent&apos;s account is credited, the creditor agent has the money to comply
-					with the payment instruction in the customer credit transfer message (received under step
-					2). The creditor agent credits the creditor&apos;s account. The debtor cannot reverse the HVCS
-					payment after settlement and the creditor can rely on the HVCS payment to complete a linked
-					transaction, for example, provide goods or services to the debtor.</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
             <h2 id="exception-and-investigation-messages" class="subsection-heading">Exception and investigation messages</h2>
             <div class="clause-row">

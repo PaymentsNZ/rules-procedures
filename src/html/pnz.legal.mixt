@@ -326,6 +326,21 @@ import [
 		)
 	)
 
+	// pnz.legal::styled_image inserts an image with alternate text and a specific style
+	pnz.legal::styled_image = (class as text, src as text, alt as text) => #( div =
+		html::class(
+			"diagram " & class
+			{
+				img = {
+					html::attributes = {
+						src = src
+						alt = alt
+					}
+				} @> ""
+			}
+		)
+	)	
+
 	// pnz.legal::image inserts an image with alternate text
 	pnz.legal::logo = #( div =
 		html::class(

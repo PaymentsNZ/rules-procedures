@@ -128,10 +128,10 @@
                             <a href="#2.7-messages-for-hvcs-payments">2.7 Messages for HVCS payments</a>
                         </li>
                         <li>
-                            <a href="#2.8-other-swiftnet-message-types">2.8 Other SWIFTNet message types</a>
+                            <a href="#2.8-messages-for-exception-and-investigation">2.8 Messages for Exception and Investigation</a>
                         </li>
                         <li>
-                            <a href="#2.9-other-fin-message-types">2.9 Other FIN message types</a>
+                            <a href="#2.9-other-message-types">2.9 Other message types</a>
                         </li>
                     </ul>
                 </details>
@@ -178,7 +178,10 @@
                             <a href="#3.12-cbpr+-character-sets">3.12 CBPR+ character sets</a>
                         </li>
                         <li>
-                            <a href="#3.13-hvcs-character-sets">3.13 HVCS character sets</a>
+                            <a href="#3.13A-use-of-certain-characters-prohibited">3.13A Use of certain characters prohibited</a>
+                        </li>
+                        <li>
+                            <a href="#3.13B-certain-latin-letter-functionality">3.13B Certain latin letter functionality</a>
                         </li>
                     </ul>
                 </details>
@@ -423,10 +426,10 @@
                                 <a href="#2.7-messages-for-hvcs-payments">2.7 - Messages for HVCS payments</a>
                             </li>
                             <li>
-                                <a href="#2.8-other-swiftnet-message-types">2.8 - Other SWIFTNet message types</a>
+                                <a href="#2.8-messages-for-exception-and-investigation">2.8 - Messages for Exception and Investigation</a>
                             </li>
                             <li>
-                                <a href="#2.9-other-fin-message-types">2.9 - Other FIN message types</a>
+                                <a href="#2.9-other-message-types">2.9 - Other message types</a>
                             </li>
                         </ol>
                     </li>
@@ -473,7 +476,10 @@
                                 <a href="#3.12-cbpr+-character-sets">3.12 - CBPR+ character sets</a>
                             </li>
                             <li>
-                                <a href="#3.13-hvcs-character-sets">3.13 - HVCS character sets</a>
+                                <a href="#3.13A-use-of-certain-characters-prohibited">3.13A - Use of certain characters prohibited</a>
+                            </li>
+                            <li>
+                                <a href="#3.13B-certain-latin-letter-functionality">3.13B - Certain latin letter functionality</a>
                             </li>
                         </ol>
                     </li>
@@ -1100,53 +1106,20 @@
                     </div>
                 </ol>
             </div>
-            <div class="clause-row">
-                <div id="2.8-other-swiftnet-message-types" class="clause-heading" data-number="2.8">Other SWIFTNet message types</div>
-                <ol class="level1 level1-counter-reset">
-                    <div>
-                        <p>The Reserve Bank and SWIFT use the system messages described in the following table to process HVCS
-			instructions.:</p>
-                    </div>
-                    <div class="table-scroll">
-                        <table class="pnz-table">
-                            <thead>
-                                <th>Message type</th>
-                                <th>Message name</th>
-                                <th>Sender</th>
-                                <th>Receiver</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>xsys.002</td>
-                                    <td>Y-Copy Authorisation Notification</td>
-                                    <td>SWIFT</td>
-                                    <td>Participant</td>
-                                </tr>
-                                <tr>
-                                    <td>xsys.003</td>
-                                    <td>Y-Copy Refusal Notification</td>
-                                    <td>SWIFT</td>
-                                    <td>Participant</td>
-                                </tr>
-                                <tr>
-                                    <td>xcop.xxx</td>
-                                    <td>SWIFTNet Copy message</td>
-                                    <td>SWIFT</td>
-                                    <td>Reserve Bank</td>
-                                </tr>
-                                <tr>
-                                    <td>xsys.001</td>
-                                    <td>Y-Copy Authorisation of Approval</td>
-                                    <td>Reserve Bank</td>
-                                    <td>SWIFT</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </ol>
+            <div class="doc-comment" data-change-id="BR 2 [ORWG 3]">
+                <div class="doc-comment-meta">
+                    <span class="doc-comment-id">BR 2 [ORWG 3]</span>
+                    <span class="doc-comment-initials">RK</span>
+                </div>
+                <div class="doc-comment-content">
+                    <p>
+                        <span>Include admi.007 in section 2.9 Appendix 14D.</span>
+                        <span>Update 2.7, 2.8 and 2.9 to group message types correctly.</span>
+                    </p>
+                </div>
             </div>
             <div class="clause-row">
-                <div id="2.9-other-fin-message-types" class="clause-heading" data-number="2.9">Other FIN message types</div>
+                <div id="2.8-messages-for-exception-and-investigation" class="clause-heading" data-number="2.8">Messages for Exception and Investigation</div>
                 <ol class="level1 level1-counter-reset">
                     <div>
                         <p>Participants exchange the MX message types described in the following table:</p>
@@ -1172,15 +1145,66 @@
                                     <td>Participant</td>
                                     <td>Participant</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ol>
+            </div>
+            <div class="clause-row">
+                <div id="2.9-other-message-types" class="clause-heading" data-number="2.9">Other message types</div>
+                <ol class="level1 level1-counter-reset">
+                    <div>
+                        <p>The Reserve Bank and SWIFT use the system messages described in the following table
+			to process HVCS instructions:</p>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="pnz-table">
+                            <thead>
+                                <th>Message type</th>
+                                <th>Message name</th>
+                                <th>Sender</th>
+                                <th>Receiver</th>
+                            </thead>
+                            <tbody>
                                 <tr>
-                                    <td>xsys.011</td>
-                                    <td>Delivery notification</td>
+                                    <td>admi.007</td>
+                                    <td>Receipt Acknowledgement (message rejection)</td>
+                                    <td>Reserve Bank</td>
+                                    <td>Participant</td>
+                                </tr>
+                                <tr>
+                                    <td>xcop.xxx</td>
+                                    <td>SWIFTNet Copy message</td>
+                                    <td>SWIFT</td>
+                                    <td>Reserve Bank</td>
+                                </tr>
+                                <tr>
+                                    <td>xsys.001</td>
+                                    <td>Y-Copy Authorisation of Approval</td>
+                                    <td>Reserve Bank</td>
+                                    <td>SWIFT</td>
+                                </tr>
+                                <tr>
+                                    <td>xsys.002</td>
+                                    <td>Y-Copy Authorisation Notification</td>
+                                    <td>SWIFT</td>
+                                    <td>Participant</td>
+                                </tr>
+                                <tr>
+                                    <td>xsys.003</td>
+                                    <td>Y-Copy Refusal Notification</td>
                                     <td>SWIFT</td>
                                     <td>Participant</td>
                                 </tr>
                                 <tr>
                                     <td>xsys.010</td>
                                     <td>Non-Delivery Warning</td>
+                                    <td>SWIFT</td>
+                                    <td>Participant</td>
+                                </tr>
+                                <tr>
+                                    <td>xsys.011</td>
+                                    <td>Delivery notification</td>
                                     <td>SWIFT</td>
                                     <td>Participant</td>
                                 </tr>
@@ -1237,6 +1261,32 @@
                 <ol class="level1 level1-counter-reset">
                     <li>The combination of the Message Definition Identifier and the Usage Identifier are used to identify the Message
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.</li>
+                    <div class="doc-comment" data-change-id="BR 10 [CR 003038]">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">BR 10 [CR 003038]</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <div>
+                                <p>Update the Usage Identifier table by changing:</p>
+                                <ul data-numbering-level="1">
+                                    <li>
+                                        <span data-list-marker="true">•</span>pnz.hvcs.02 to pnz.hvcs.03; and</li>
+                                    <li>
+                                        <span data-list-marker="true">•</span>pnz.hvcs.xbrdr.02 to pnz.hvcs.xbrdr.03, across the pacs.008, pacs.004, pacs.009, pacs.009 COV and cross-border rows.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doc-comment" data-change-id="BR 9 [ORWG 25]">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">BR 9 [ORWG 25]</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Include camt.056 and camt.029 in the table</p>
+                        </div>
+                    </div>
                     <div class="table-scroll">
                         <table class="pnz-table message-types-table">
                             <thead>
@@ -1248,7 +1298,7 @@
                             <tbody>
                                 <tr>
                                     <td>pacs.008.001.09</td>
-                                    <td>pnz.hvcs.02</td>
+                                    <td>pnz.hvcs.03</td>
                                     <td>pacs_008</td>
                                     <td>
                                         <ul class="bullets">
@@ -1259,7 +1309,7 @@
                                 </tr>
                                 <tr>
                                     <td>pacs.008.001.09</td>
-                                    <td>pnz.hvcs.xbrdr.02</td>
+                                    <td>pnz.hvcs.xbrdr.03</td>
                                     <td>pacs_008_xbrdr</td>
                                     <td>
                                         <ul class="bullets">
@@ -1269,7 +1319,7 @@
                                 </tr>
                                 <tr>
                                     <td>pacs.004.001.10</td>
-                                    <td>pnz.hvcs.02</td>
+                                    <td>pnz.hvcs.03</td>
                                     <td>pacs_004</td>
                                     <td>
                                         <ul class="bullets">
@@ -1281,7 +1331,7 @@
                                 </tr>
                                 <tr>
                                     <td>pacs.004.001.10</td>
-                                    <td>pnz.hvcs.xbrdr.02</td>
+                                    <td>pnz.hvcs.xbrdr.03</td>
                                     <td>pacs_004_xbrdr</td>
                                     <td>
                                         <ul class="bullets">
@@ -1293,7 +1343,7 @@
                                 </tr>
                                 <tr>
                                     <td>pacs.009.001.09</td>
-                                    <td>pnz.hvcs.02</td>
+                                    <td>pnz.hvcs.03</td>
                                     <td>pacs_009</td>
                                     <td>
                                         <ul class="bullets">
@@ -1303,7 +1353,7 @@
                                 </tr>
                                 <tr>
                                     <td>pacs.009.001.09</td>
-                                    <td>pnz.hvcs.cov.02</td>
+                                    <td>pnz.hvcs.cov.03</td>
                                     <td>pacs_009_cov</td>
                                     <td>
                                         <ul class="bullets">
@@ -1313,7 +1363,7 @@
                                 </tr>
                                 <tr>
                                     <td>pacs.009.001.09</td>
-                                    <td>pnz.hvcs.xbrdr.02</td>
+                                    <td>pnz.hvcs.xbrdr.03</td>
                                     <td>pacs_009_xbrdr</td>
                                     <td>
                                         <ul class="bullets">
@@ -1323,11 +1373,51 @@
                                 </tr>
                                 <tr>
                                     <td>pacs.009.001.09</td>
-                                    <td>pnz.hvcs.xbrdr.cov.02</td>
+                                    <td>pnz.hvcs.xbrdr.cov.03</td>
                                     <td>pacs_009_cov_xbrdr</td>
                                     <td>
                                         <ul class="bullets">
                                             <li>FI to FI cross-border cover payment</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>camt.056.001.09</td>
+                                    <td>pnz.hvcs.03</td>
+                                    <td>camt_056</td>
+                                    <td>
+                                        <ul class="bullets">
+                                            <li>Request cancellation of a Domestic Payment</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>camt.056.001.09</td>
+                                    <td>pnz.hvcs.xbrdr.03</td>
+                                    <td>camt_056</td>
+                                    <td>
+                                        <ul class="bullets">
+                                            <li>Request cancellation of a Cross-Border Payment</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>camt.029.001.09</td>
+                                    <td>pnz.hvcs.03</td>
+                                    <td>camt_029</td>
+                                    <td>
+                                        <ul class="bullets">
+                                            <li>Resolution of a cancellation request made in respect of a Domestic Payment</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>camt.029.001.09</td>
+                                    <td>pnz.hvcs.xbrdr.03</td>
+                                    <td>camt_029</td>
+                                    <td>
+                                        <ul class="bullets">
+                                            <li>Resolution of a cancellation request made in respect of a Cross-Border Payment</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -1437,13 +1527,18 @@
             <div class="clause-row">
                 <div id="3.8-remittance-information-pacs-008-and-pacs-004" class="clause-heading" data-number="3.8">Remittance information (pacs.008 and pacs.004)</div>
                 <ol class="level1 level1-counter-reset">
+                    <div class="doc-comment" data-change-id="BR 11 [CR 003030]">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">BR 11 [CR 003030]</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Remove reference to the requirement to have bilateral agreement to use structured remittance information for corporates and agents.</p>
+                        </div>
+                    </div>
                     <li>There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.</li>
                     <li>Unstructured remittance information &lt;RmtInf/Ustrd&gt; allows 1x140 characters (to align with HVPS+ and CBPR+).</li>
-                    <div class="tag-standards"></div>
-                    <li>Structured remittance information &lt;RmtInf/Strd&gt; must only be used for HVCS payments when it has been bilaterally or
-		multilaterally agreed (to align with HVPS+).</li>
-                    <div class="tag-commentary"></div>
                     <li>Structured remittance information should be limited to 9000 characters excluding the tags (ie, 9000 characters of business
 		data only and including 3x140 characters in the Additional Remittance Information &lt;AddtlRmtInf&gt; element).</li>
                 </ol>
@@ -1816,20 +1911,64 @@
                     <li>Currencies in the payments should be expressed in ISO Currency Codes only (3-Characters, e.g. EUR).</li>
                 </ol>
             </div>
+            <div class="doc-comment" data-change-id="BR 12 [ORWG 26]">
+                <div class="doc-comment-meta">
+                    <span class="doc-comment-id">BR 12 [ORWG 26]</span>
+                    <span class="doc-comment-initials">RK</span>
+                </div>
+                <div class="doc-comment-content">
+                    <p>Add a standard which prohibits participants from including macrons and emojis in HVCS messages.</p>
+                </div>
+            </div>
+            <div class="doc-comment" data-change-id="BR 13 [ORWG 26]">
+                <div class="doc-comment-meta">
+                    <span class="doc-comment-id">BR 13 [ORWG 26]</span>
+                    <span class="doc-comment-initials">RK</span>
+                </div>
+                <div class="doc-comment-content">
+                    <p>Clarify the commentary regarding the macron functionality.</p>
+                </div>
+            </div>
+            <div class="tag-standards"></div>
             <div class="clause-row">
-                <div id="3.13-hvcs-character-sets" class="clause-heading" data-number="3.13">HVCS character sets</div>
-                <ol class="level1 level1-counter-reset">
-                    <li>
-                        <span>The character sets used within the MX Message Specifications are aligned to CBPR+ though
-				extended to support upper case and lower case Te Reo Māori macron characters within
-				the Name, Address and Remittance elements.  This technical capability for Te Reo is
-				for future proofing only and</span>
-                        <span class="bold">macrons must not be used</span>
-                        <span>by participants in accordance
-				with the MX Message Specifications.</span>
-                    </li>
-                    <li>The following table shows the macron characters that are included in the MX Message
-		Specification along with their Unicode value:</li>
+                <div id="3.13A-use-of-certain-characters-prohibited" class="clause-heading" data-number="3.13A">Use of certain characters prohibited</div>
+                <div class="level1">
+                    <ol data-numbering-level="1">
+                        <li>
+                            <span data-list-marker="true">(1)</span>
+                            <p>HVCS participants must not use the following in a HVCS message:</p>
+                        </li>
+                        <li>
+                            <ol data-numbering-level="2">
+                                <li>
+                                    <span data-list-marker="true">(a)</span>
+                                    <p>latin letters with macrons; and</p>
+                                </li>
+                                <li>
+                                    <span data-list-marker="true">(b)</span>
+                                    <p>emojis.</p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="tag-commentary"></div>
+            <div class="clause-row">
+                <div id="3.13B-certain-latin-letter-functionality" class="clause-heading" data-number="3.13B">Certain latin letter functionality</div>
+                <div class="level1">
+                    <div>
+                        <ol data-numbering-level="1">
+                            <li>
+                                <span data-list-marker="true">(1)</span>
+                                <p>The technical capability for latin letters with macrons enables the potential future incorporation of Te Reo in the MX Message Specifications. Notwithstanding this technical capability, the HVCS Rules do not support their use at this time.</p>
+                            </li>
+                            <li>
+                                <span data-list-marker="true">(2)</span>
+                                <p>The following table shows the macron characters that are supported at a technical level only in the MX Message Specification along with their Unicode value:</p>
+                            </li>
+                        </ol>
+                    </div>
                     <div class="table-scroll">
                         <table class="pnz-table">
                             <thead>
@@ -1872,10 +2011,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Emojis are not permitted in the HVCS Rules.</p>
-                    </div>
-                </ol>
+                </div>
             </div>
             <h1 id="chapter-4-same-day-cleared-payments" class="section-heading">Chapter 4: Same-day Cleared Payments</h1>
             <div class="tag-commentary"></div>
@@ -2031,6 +2167,15 @@
             </div>
             <h1 id="chapter-6-payment-returns" class="section-heading">Chapter 6: Payment returns</h1>
             <div class="tag-commentary"></div>
+            <div class="doc-comment" data-change-id="BR 15 [ORWG 27]">
+                <div class="doc-comment-meta">
+                    <span class="doc-comment-id">BR 15 [ORWG 27]</span>
+                    <span class="doc-comment-initials">RK</span>
+                </div>
+                <div class="doc-comment-content">
+                    <p>Remove REJT from commentary.</p>
+                </div>
+            </div>
             <div class="clause-row">
                 <div id="6.1-overview" class="clause-heading" data-number="6.1">Overview</div>
                 <ol class="level1 level1-counter-reset">
@@ -2040,8 +2185,8 @@
 		of the original payment message (solicited) or initiated by the original instructed agent as an
 		unsolicited payment return.</li>
                     <li>The pacs.004 return message structure is equivalent to the MT 103/103+ (customer credit transfer
-		message) REJT/RETN and the MT202/202 COV (financial institution credit transfer message) REJT/RETN.
-		A REJT/ RETN message is functionally like an unsolicited / solicited pacs.004, respectively.</li>
+		message) RETN and the MT202/202 COV (financial institution credit transfer message) RETN.
+		A RETN message in MT is functionally like an unsolicited / solicited pacs.004, respectively.</li>
                     <li>When using the pacs.004 return message, it is important to note the following:</li>
                     <ol class="level2 level2-counter-reset">
                         <li>Each pacs.004 return message must contain one HVCS return payment.</li>
@@ -2179,17 +2324,21 @@
                     </tbody>
                 </table>
             </div>
+            <div class="doc-comment" data-change-id="BR 16 [CR 003103]">
+                <div class="doc-comment-meta">
+                    <span class="doc-comment-id">BR 16 [CR 003103]</span>
+                    <span class="doc-comment-initials">RK</span>
+                </div>
+                <div class="doc-comment-content">
+                    <p>NARR is no longer a permitted code – Remove second paragraph.</p>
+                </div>
+            </div>
             <div class="clause-row">
                 <div id="7.3-reason-codes-and-use-of-narrative" class="clause-heading" data-number="7.3">Reason Codes and Use of Narrative</div>
-                <ol class="level1 level1-counter-reset">
-                    <div>
-                        <p>When sending a camt.029 or a camt.056 message, participants apply a reason code to define why the
-			message is being sent. These reason codes are defined in detail within SWIFT MyStandards.</p>
-                        <p>One of the reason codes used is NARR. This is a narrative reason code. The NARR reason code can
-			only be used where a more specific reason is not appropriate. The actual reason text should then
-			be included in the Additional Information field.</p>
-                    </div>
-                </ol>
+                <div class="level1">
+                    <p>When sending a camt.029 or a camt.056 message, participants apply a reason code to define why the
+		message is being sent. These reason codes are defined in detail within SWIFT MyStandards.</p>
+                </div>
             </div>
             <h1 id="chapter-8-swiftnet-y-copy-messages" class="section-heading">Chapter 8: SWIFTNet Y-Copy Messages</h1>
             <div class="tag-commentary"></div>

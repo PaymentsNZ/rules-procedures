@@ -630,33 +630,18 @@ import [
 		)
 	)
 
+	pnz::comment(
+		"BR 2 [ORWG 3]"
+		"RK"
+		[
+			"Include admi.007 in section 2.9 Appendix 14D."
+			"Update 2.7, 2.8 and 2.9 to group message types correctly."
+		]
+	)
 
 	pnz::clause(
 		"2.8"
-		"Other SWIFTNet message types"
-
-		pnz::nonumber(
-			`The Reserve Bank and SWIFT use the system messages described in the following table to process HVCS
-			instructions.:`
-		)
-
-		pnz::table(
-			#table(
-				[
-					"Message type", "Message name", "Sender", "Receiver"
-				]
-				[
-					[ "xsys.002", "Y-Copy Authorisation Notification", "SWIFT", "Participant" ]
-					[ "xsys.003", "Y-Copy Refusal Notification", "SWIFT", "Participant" ]
-					[ "xcop.xxx", "SWIFTNet Copy message", "SWIFT", "Reserve Bank" ]
-					[ "xsys.001", "Y-Copy Authorisation of Approval", "Reserve Bank", "SWIFT" ]
-				]
-			)
-		)
-	)
-	pnz::clause(
-		"2.9"
-		"Other FIN message types"
+		"Messages for Exception and Investigation"
 
 		pnz::nonumber(
 			`Participants exchange the MX message types described in the following table:`
@@ -670,8 +655,32 @@ import [
 				[
 					[ "camt.056", "FI to FI Payment Cancellation Request", "Participant", "Participant" ]
 					[ "camt.029", "Resolution of Investigation", "Participant", "Participant" ]
-					[ "xsys.011", "Delivery notification", "SWIFT", "Participant" ]
+				]
+			)
+		)
+	)
+	pnz::clause(
+		"2.9"
+		"Other message types"
+
+		pnz::nonumber(
+			`The Reserve Bank and SWIFT use the system messages described in the following table
+			to process HVCS instructions:`
+		)
+
+		pnz::table(
+			#table(
+				[
+					"Message type", "Message name", "Sender", "Receiver"
+				]
+				[
+					[ "admi.007", "Receipt Acknowledgement (message rejection)", "Reserve Bank", "Participant" ]
+					[ "xcop.xxx", "SWIFTNet Copy message", "SWIFT", "Reserve Bank" ]
+					[ "xsys.001", "Y-Copy Authorisation of Approval", "Reserve Bank", "SWIFT" ]
+					[ "xsys.002", "Y-Copy Authorisation Notification", "SWIFT", "Participant" ]
+					[ "xsys.003", "Y-Copy Refusal Notification", "SWIFT", "Participant" ]
 					[ "xsys.010", "Non-Delivery Warning", "SWIFT", "Participant" ]
+					[ "xsys.011", "Delivery notification", "SWIFT", "Participant" ]
 				]
 			)
 		)
@@ -723,6 +732,25 @@ import [
 		`The combination of the Message Definition Identifier and the Usage Identifier are used to identify the Message
 		Usage Guideline (MUG) as set out in the MX Message Specifications for each message.`
 
+		pnz::comment(
+			"BR 10 [CR 003038]"
+			"RK"
+
+			@@mtxt
+			Update the Usage Identifier table by changing:
+			-- pnz.hvcs.02 to pnz.hvcs.03; and 
+			-- pnz.hvcs.xbrdr.02 to pnz.hvcs.xbrdr.03,
+			across the pacs.008, pacs.004, pacs.009, pacs.009 COV and cross-border rows.
+			@@
+		)
+
+		pnz::comment(
+			"BR 9 [ORWG 25]"
+			"RK"
+
+			"Include camt.056 and camt.029 in the table"
+		)
+
 		pnz::styled_table(
 			"message-types-table"
 			#table(
@@ -735,7 +763,7 @@ import [
 				[
 					[
 						`pacs.008.001.09`
-						`pnz.hvcs.02`
+						`pnz.hvcs.03`
 						`pacs_008`
 						[
 							pnz::bullets(
@@ -746,7 +774,7 @@ import [
 					]
 					[
 						`pacs.008.001.09`
-						`pnz.hvcs.xbrdr.02`
+						`pnz.hvcs.xbrdr.03`
 						`pacs_008_xbrdr`
 						[
 							pnz::bullets(
@@ -756,7 +784,7 @@ import [
 					]
 					[
 						`pacs.004.001.10`
-						`pnz.hvcs.02`
+						`pnz.hvcs.03`
 						`pacs_004`
 						[
 							pnz::bullets(
@@ -768,7 +796,7 @@ import [
 					]
 					[
 						`pacs.004.001.10`
-						`pnz.hvcs.xbrdr.02`
+						`pnz.hvcs.xbrdr.03`
 						`pacs_004_xbrdr`
 						[
 							pnz::bullets(
@@ -780,7 +808,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.02`
+						`pnz.hvcs.03`
 						`pacs_009`
 						[
 							pnz::bullets(
@@ -790,7 +818,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.cov.02`
+						`pnz.hvcs.cov.03`
 						`pacs_009_cov`
 						[
 							pnz::bullets(
@@ -800,7 +828,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.xbrdr.02`
+						`pnz.hvcs.xbrdr.03`
 						`pacs_009_xbrdr`
 						[
 							pnz::bullets(
@@ -810,7 +838,7 @@ import [
 					]
 					[
 						`pacs.009.001.09`
-						`pnz.hvcs.xbrdr.cov.02`
+						`pnz.hvcs.xbrdr.cov.03`
 						`pacs_009_cov_xbrdr`
 						[
 							pnz::bullets(
@@ -818,6 +846,49 @@ import [
 							)
 						]
 					]
+					//
+					// Cancellation messages
+					//
+					[
+						`camt.056.001.09`
+						`pnz.hvcs.03`
+						`camt_056`
+						[
+							pnz::bullets(
+								`Request cancellation of a Domestic Payment`
+							)
+						]
+					]
+					[
+						`camt.056.001.09`
+						`pnz.hvcs.xbrdr.03`
+						`camt_056`
+						[
+							pnz::bullets(
+								`Request cancellation of a Cross-Border Payment`
+							)
+						]
+					]
+					[
+						`camt.029.001.09`
+						`pnz.hvcs.03`
+						`camt_029`
+						[
+							pnz::bullets(
+								`Resolution of a cancellation request made in respect of a Domestic Payment`
+							)
+						]
+					]
+					[
+						`camt.029.001.09`
+						`pnz.hvcs.xbrdr.03`
+						`camt_029`
+						[
+							pnz::bullets(
+								`Resolution of a cancellation request made in respect of a Cross-Border Payment`
+							)
+						]
+					]					
 				]
 			)
 		)
@@ -962,17 +1033,17 @@ import [
 		"3.8"
 		"Remittance information (pacs.008 and pacs.004)"
 		
+		pnz::comment(
+			"BR 11 [CR 003030]"
+			"RK"
+
+			"Remove reference to the requirement to have bilateral agreement to use structured remittance information for corporates and agents."
+		)
+
 		`There is a dedicated Remittance Information element within the MX Message Specifications. A payment message may contain no
 		remittance information, though if included, structured or unstructured may be used but not both.`
 		
 		`Unstructured remittance information <RmtInf/Ustrd> allows 1x140 characters (to align with HVPS+ and CBPR+).`
-
-		pnz::tag_standards
-
-		`Structured remittance information <RmtInf/Strd> must only be used for HVCS payments when it has been bilaterally or
-		multilaterally agreed (to align with HVPS+).`
-
-		pnz::tag_commentary
 
 		`Structured remittance information should be limited to 9000 characters excluding the tags (ie, 9000 characters of business
 		data only and including 3x140 characters in the Additional Remittance Information <AddtlRmtInf> element).`
@@ -1290,28 +1361,46 @@ import [
 		`Currencies in the payments should be expressed in ISO Currency Codes only (3-Characters, e.g. EUR).`
 	)
 
-	pnz::clause(
-		"3.13"
-		"HVCS character sets"
-		
-		[
-			pnz::text(
-				`The character sets used within the MX Message Specifications are aligned to CBPR+ though
-				extended to support upper case and lower case Te Reo Māori macron characters within
-				the Name, Address and Remittance elements.  This technical capability for Te Reo is
-				for future proofing only and`
-			)
-			pnz::bold(
-				"macrons must not be used"
-			)
-			pnz::text(
-				`by participants in accordance
-				with the MX Message Specifications.`
-			)
-		]
+	pnz::comment(
+		"BR 12 [ORWG 26]"
+		"RK"
+		"Add a standard which prohibits participants from including macrons and emojis in HVCS messages."
+	)
 
-		`The following table shows the macron characters that are included in the MX Message
-		Specification along with their Unicode value:`
+	pnz::comment(
+		"BR 13 [ORWG 26]"
+		"RK"
+		"Clarify the commentary regarding the macron functionality."
+	)
+
+	pnz::tag_standards
+
+	pnz::nonumber_clause(
+		"3.13A"
+		"Use of certain characters prohibited"
+
+		@@mtxt
+		-- {{legal+
+		-- HVCS participants must not use the following in a HVCS message:
+		--- latin letters with macrons; and
+		--- emojis.
+		@@
+	)
+
+	pnz::tag_commentary
+
+	pnz::nonumber_clause(
+		"3.13B"
+		"Certain latin letter functionality"
+
+		@@mtxt
+		-- {{legal+
+		-- The technical capability for latin letters with macrons enables the potential future incorporation of
+		   Te Reo in the MX Message Specifications. Notwithstanding this technical capability, the HVCS Rules do
+		   not support their use at this time.
+		-- The following table shows the macron characters that are supported at a technical level only in the
+		   MX Message Specification along with their Unicode value:
+		@@
 
 		pnz::table(
 			#table(
@@ -1329,10 +1418,6 @@ import [
 					[ "ū", "016b", "Ū", "016a" ]
 				]
 			)
-		)
-
-		pnz::nonumber(
-			`Emojis are not permitted in the HVCS Rules.`
 		)
 	)
 
@@ -1521,6 +1606,12 @@ import [
 	pnz::section_heading( "Chapter 6: Payment returns" )
 	pnz::tag_commentary
 
+	pnz::comment(
+		"BR 15 [ORWG 27]"
+		"RK"
+		"Remove REJT from commentary."
+	)
+
 	pnz::clause(
 		"6.1"
 		"Overview"
@@ -1533,8 +1624,8 @@ import [
 		unsolicited payment return.`
 		
 		`The pacs.004 return message structure is equivalent to the MT 103/103+ (customer credit transfer
-		message) REJT/RETN and the MT202/202 COV (financial institution credit transfer message) REJT/RETN.
-		A REJT/ RETN message is functionally like an unsolicited / solicited pacs.004, respectively.`
+		message) RETN and the MT202/202 COV (financial institution credit transfer message) RETN.
+		A RETN message in MT is functionally like an unsolicited / solicited pacs.004, respectively.`
 
 		`When using the pacs.004 return message, it is important to note the following:`
 
@@ -1691,18 +1782,18 @@ import [
 		)
 	)
 
-	pnz::clause(
+	pnz::comment(
+		"BR 16 [CR 003103]"
+		"RK"
+		"NARR is no longer a permitted code – Remove second paragraph."
+	)
+
+	pnz::nonumber_clause(
 		"7.3"
 		"Reason Codes and Use of Narrative"
 
-		pnz::nonumber(
-			`When sending a camt.029 or a camt.056 message, participants apply a reason code to define why the
-			message is being sent. These reason codes are defined in detail within SWIFT MyStandards.`
-	
-			`One of the reason codes used is NARR. This is a narrative reason code. The NARR reason code can
-			only be used where a more specific reason is not appropriate. The actual reason text should then
-			be included in the Additional Information field.`
-		)
+		`When sending a camt.029 or a camt.056 message, participants apply a reason code to define why the
+		message is being sent. These reason codes are defined in detail within SWIFT MyStandards.`
 	)
 
 	pnz::section_heading( "Chapter 8: SWIFTNet Y-Copy Messages" )

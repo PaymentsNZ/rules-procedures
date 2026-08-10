@@ -200,6 +200,21 @@ import [
 		`The best practice processing time period applies to SCP payment instructions that a
 		debtor sends to the instructing agent manually or electronically.`
 	)
+
+	pnz::comment(
+		"BR19"
+		"RK"
+		"Add a statement to the Procedures that notes SCP Debtor Address is Optional"
+	)
+
+	pnz::clause(
+		"1.3A"
+		"Instructing agent: Debtor address"
+
+		`It is best practice to include debtor address with SCPs. Doing so is optional and some participants
+		exclude this information as standard market practice`
+	)
+
 	pnz::clause(
 		"1.4"
 		"Instructed agent: 30 minute processing"

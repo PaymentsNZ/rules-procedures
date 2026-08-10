@@ -168,11 +168,24 @@ import [
 			pnz::text(
 				`means an HVCS instruction sent between participants including:`
 			)
+			pnz::comment(
+				"BR 3 [ORWG 19]"
+				"RK"
+				"Add MT199 in the definition of 'Exception and investigation message'"
+			)
+			pnz::comment(
+				"BR 4 [ORWG 19]"
+				"RK"
+				"Add MT195/MT295 in the definition of 'Exception and investigation message'"
+			)
 			pnz::bullets(
 				`MT192;`
-				`MT196`
+				`MT195;`
+				`MT196;`
+				`MT199;`
 				`MT292;`
-				`MT296`
+				`MT295;`
+				`MT296;`
 				`camt.056; or`
 				`camt.029`
 			)
@@ -241,10 +254,16 @@ import [
 			pnz::text(
 				`means a message sent to a participant through SWIFT in relation to an HVCS instruction including:`
 			)
+			pnz::comment(
+				"BR 5 [ORWG 46]"
+				"RK"
+				"Include admi.007 as a 'system message'"
+			)
 			pnz::bullets(
 				`MT010;`
 				`MT011;`
 				`MT019;`
+				`admi.007;`
 				`xsys.002;`
 				`xsys.003;`
 				`xsys.010; or`
@@ -1084,6 +1103,12 @@ import [
 		`Participants who send and receive financial institution credit transfers during the CLS evening
 		session are:`
 
+		pnz::comment(
+			"BR 7 [ORWG 47]"
+			"RK"
+			"Include reference to New Zealand Depository Limited being a subsidiary to NZX."
+		)
+
 		pnz::table(
 			#table(
 				[
@@ -1120,7 +1145,7 @@ import [
 						`26 March 2025`
 					]
 					[
-						`New Zealand Depository Limited`
+						`New Zealand Depository Limited (subsdiary of NZX)`
 						`4 August 2025`
 					]
 					[

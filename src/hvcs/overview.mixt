@@ -142,14 +142,15 @@ import [
 			`debtor agents.`
 		)
 
+		pnz::comment(
+			"BR 1 [ORWG 45]"
+			"RK"
+			"Simplify note about defined term 'instructing agent' and 'instructed agent'"
+		)
+
 		pnz::br
-		`NOTE: It is important to understand that the terms 'instructing agent' and 'instructed agent'
-		are also defined terms under the ISO 20022 standard.  This means that the ISO 20022 standard
-		might describe a person as an 'instructing agent' or an 'instructed agent' even if they are
-		not a HVCS participant.  However, the Rules have narrowed these definitions from their meaning
-		under the ISO 20022 standard.  This means that whenever these terms are used in the Rules and
-		the HVCS Standards, it is referring to HVCS participants only that fulfil the role of an
-		instructing agent or an instructed agent.`
+		`For the purposes of these HVCS rules and standards, references to the “instructing agent” and the
+		“instructed agent” only includes HVCS participants.`
 
 		`The multilateral contract does not bind other third parties involved in the HVCS clearing
 		process like debtors, who are customers of debtor agents (often acting as the instructing agent),
@@ -961,65 +962,80 @@ import [
 			if the debtor agent does not have an account with the creditor agent.
 		-- The following diagram and table show at a high level how financial institutions interact to send an
 		   FI cover message.
-		--!
 		@@
-	)
 
-	pnz::image( "images/hvcs_overview_fi_credit_transfer_cover.png", "FI Credit Transfer Cover")
+		pnz::styled_image(
+			"full-width"
+			"images/hvcs_overview_fi_credit_transfer_cover.png"
+			"FI Credit Transfer Cover"
+		)
 
-	pnz::styled_table(
-		"center-col1"
-		#table(
-			[
-				"Step", "Action"
-			]
-			[
+		pnz::styled_table(
+			"center-col1"
+			#table(
 				[
-					1
-					`A debtor instructs their overseas bank (debtor agent) to make an NZD payment
-					to a creditor.`
+					"Step", "Action"
 				]
 				[
-					2
 					[
-						"The overseas debtor agent"
-						pnz::bullets(
-							`sends a customer credit transfer message to the overseas creditor agent.`
+						1
+						`A debtor instructs their overseas bank (debtor agent) to make an NZD payment
+						to a creditor.`
+					]
+					[
+						2
+						[
+							"The overseas debtor agent"
+							pnz::bullets(
+								`sends a customer credit transfer message to the overseas creditor agent.`
 
-							`has an NZD account with a participant (its correspondent bank) so it sends
-							a financial FI cover message (with the details of the customer credit participant
-							transfer message embedded in the payment message) to the correspondent bank (labelled
-							B in the diagram). The FI cover message instructs the correspondent bank participant
-							to debit the debtor agent's NZD account and credit the NZD account of the creditor
-							agent's correspondent bank (labelled C in the diagram).`
-						)
+								`has an NZD account with a participant (its correspondent bank) so it sends
+								a financial FI cover message (with the details of the customer credit participant
+								transfer message embedded in the payment message) to the correspondent bank (labelled
+								B in the diagram). The FI cover message instructs the correspondent bank participant
+								to debit the debtor agent's NZD account and credit the NZD account of the creditor
+								agent's correspondent bank (labelled C in the diagram).`
+							)
+						]
+					]
+					[
+						3
+						"The correspondent bank participant debits the debtor agent's NZD account."
+					]
+					[
+						4
+						`The correspondent bank participant, as instructing agent, sends an FI cover message to the
+						correspondent bank of the creditor agent, as instructed agent using the AVP CUG transaction
+						delivery system.`
+					]
+					[
+						5
+						`The instructed agent credits the creditor agent's NZD account with the amount of the HVCS
+						payment.`
+					]
+					[
+						6
+						`When the creditor agent's account is credited, the creditor agent has the money to comply
+						with the payment instruction in the customer credit transfer message (received under step
+						2). The creditor agent credits the creditor's account. The debtor cannot reverse the HVCS
+						payment after settlement and the creditor can rely on the HVCS payment to complete a linked
+						transaction, for example, provide goods or services to the debtor.`
 					]
 				]
-				[
-					3
-					"The correspondent bank participant debits the debtor agent's NZD account."
-				]
-				[
-					4
-					`The correspondent bank participant, as instructing agent, sends an FI cover message to the
-					correspondent bank of the creditor agent, as instructed agent using the AVP CUG transaction
-					delivery system.`
-				]
-				[
-					5
-					`The instructed agent credits the creditor agent's NZD account with the amount of the HVCS
-					payment.`
-				]
-				[
-					6
-					`When the creditor agent's account is credited, the creditor agent has the money to comply
-					with the payment instruction in the customer credit transfer message (received under step
-					2). The creditor agent credits the creditor's account. The debtor cannot reverse the HVCS
-					payment after settlement and the creditor can rely on the HVCS payment to complete a linked
-					transaction, for example, provide goods or services to the debtor.`
-				]
-			]
+			)
 		)
+
+		pnz::comment(
+			"BR 2 [ORWG 3]"
+			"RK"
+			"Add a reference to CBPR+ handbook for more detailed examples and scenarios."
+		)
+
+		@@mtxt
+		-- {{>
+		-- For more examples, please refer to the CBPR+ User Handbook.
+		--!
+		@@		
 	)
 
 	pnz::subsection_heading( "Exception and investigation messages" )

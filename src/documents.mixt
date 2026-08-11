@@ -22,7 +22,7 @@ import [
 			"HVCS Overview"
 			"overview.html"
 			"docs/hvcs/"
-			"14A_HVCS overview_v3.pdf"
+			"14A_HVCS overview_v4.pdf"
 			overview
 		]
 		[
@@ -62,7 +62,7 @@ import [
 			"HVCS Coexistence Procedures"
 			"coexistence.html"
 			"docs/hvcs/"
-			"14F_HVCS co-existence procedures_v3.pdf"
+			"14F_HVCS co-existence procedures_v4.pdf"
 			coexistence
 		]
 	]

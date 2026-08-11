@@ -16,7 +16,7 @@ let
 
 	selector = null
 	//selector = (id as text) => true
-	//selector = (id as text) => (id == "Overview")
+	//selector = (id as text) => (id == "Overview" or id == "Coexistence")
 
 	getTarget = (doc as text) => (
 		// ensure the directory exists before returning the combined file path

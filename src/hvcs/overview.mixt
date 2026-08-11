@@ -6,8 +6,8 @@ import [
 {
 	appendix = "14A"
 	title = "HVCS Overview"
-	document_version = "3"
-	effective_date = "22/11/2025"
+	document_version = "5"
+	effective_date = "14/11/2026"
 	document_control = #table(
 		[
 			"Version number and description of amendment"
@@ -45,6 +45,20 @@ import [
 				"19-Sep-2025"
 				"22-Nov-2025"
 				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 4: Usage Guidelines 2025`
+				"HVCS Management Committee resolution 22-Jul-2026"
+				"27-Jul-2025"
+				"22-Sep-2026"
+				"Payments NZ, Buddle Findlay"
+			]
+			[
+				`Version 5: Usage Guidelines 2026`
+				""
+				""
+				""
+				""
 			]
 		]
 	)

@@ -22,7 +22,7 @@ import [
 			"HVCS Overview"
 			"overview.html"
 			"docs/hvcs/"
-			"14A_HVCS overview_v3.pdf"
+			"14A_HVCS overview_v5.pdf"
 			overview
 		]
 		[
@@ -30,7 +30,7 @@ import [
 			"HVCS Common Procedures"
 			"common.html"
 			"docs/hvcs/"
-			"14B_HVCS common procedures_v2.pdf"
+			"14B_HVCS common procedures_v3.pdf"
 			common
 		]
 		[
@@ -38,7 +38,7 @@ import [
 			"HVCS SCP Procedures"
 			"scp.html"
 			"docs/hvcs/"
-			"14C_HVCS SCP procedures_v3.pdf"
+			"14C_HVCS SCP procedures_v4.pdf"
 			scp
 		]
 		[
@@ -46,7 +46,7 @@ import [
 			"HVCS MX Procedures"
 			"mx.html"
 			"docs/hvcs/"
-			"14D_HVCS MX procedures_v3.pdf"
+			"14D_HVCS MX procedures_v4.pdf"
 			mx
 		]
 		[
@@ -54,7 +54,7 @@ import [
 			"HVCS MT Procedures"
 			"mt.html"
 			"docs/hvcs/"
-			"14E_HVCS MT procedures_v2.pdf"
+			"14E_HVCS MT procedures_v3.pdf"
 			mt
 		]
 		[
@@ -62,7 +62,7 @@ import [
 			"HVCS Coexistence Procedures"
 			"coexistence.html"
 			"docs/hvcs/"
-			"14F_HVCS co-existence procedures_v3.pdf"
+			"14F_HVCS co-existence procedures_v5.pdf"
 			coexistence
 		]
 	]

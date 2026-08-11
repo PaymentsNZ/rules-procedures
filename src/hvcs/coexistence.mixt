@@ -245,14 +245,11 @@ import [
 			)
 		]
 
-		// Unstructured Address Line formatting
-		[
-			pnz::bold( "Unstructured Address Line formatting" )
-			pnz::text(
-				`means when the content of the address information within an MX message is not formatted in
-				accordance with the structured data requirements set out in the MX Message Specifications.`				
-			)
-		]
+		pnz::comment(
+			"BR 17 [CBPR+ CR2006]"
+			"RK"
+			"Remove reference to Unstructured Address Line formatting."
+		)
 
 		`Unless the context otherwise specifies, all other defined terms have the meanings given to them in
 		Part 19 of the Payments NZ Rules and the HVCS Common Procedures.`
@@ -464,20 +461,16 @@ import [
 				pnz::bold( "must" )
 				pnz::text( ":" )
 			]
-			pnz::level3(
-				[
-					pnz::text( "Before 14 November 2026, send an address that contains" )
-					pnz::bold( "either" )
-					pnz::text( "Unstructured Address Line formatting" )
-					pnz::bold( "or" )
-					pnz::text( "Structured Postal Address formatting" )
-					pnz::bold( "or" )
-					pnz::text( "Hybrid Postal Address formatting; and" )
-				]
+
+			pnz::comment(
+				"BR 17 [CBPR+ CR2006]"
+				"RK"
+				"Remove reference to Unstructured Address Line formatting."
 			)
+
 			pnz::level3(
 				[
-					pnz::text( "On and from 14 November 2026, send an address that contains" )
+					pnz::text( "Send an address that contains" )
 					pnz::bold( "either" )
 					pnz::text( "Structured Postal Address formatting" )
 					pnz::bold( "or" )
@@ -523,18 +516,15 @@ import [
 				`pacs.009 — Financial Institution Credit Transfer; and`
 				`pacs.009 COV — Financial Institution Credit Transfer Cover.`
 			)
-			[
-				pnz::text( "Before 14 November 2026, participants" )
-				pnz::bold( "must" )
-				pnz::text( "receive and process MX messages that contain:" )
-			]
-			pnz::level3(
-				`Structured Postal Address formatting; and`
-				`Unstructured Address Line formatting; and`
-				`Hybrid Postal Address formatting.`
+
+			pnz::comment(
+				"BR 17 [CBPR+ CR2006]"
+				"RK"
+				"Remove reference to Unstructured Address Line formatting."
 			)
+
 			[
-				pnz::text( "On and from 14 November 2026, participants" )
+				pnz::text( "Participants" )
 				pnz::bold( "must" )
 				pnz::text( "receive and process MX messages that contain:" )
 			]
@@ -544,7 +534,7 @@ import [
 			)
 		)
 		[
-			pnz::text( "Return messages:  If returning an HVCS payment, participants" )
+			pnz::text( "Return messages: If returning an HVCS payment, participants" )
 			pnz::bold( "must" )
 			pnz::text( "return the HVCS payment by sending a return message to the original instructing agent as follows:" )
 		]
@@ -838,53 +828,29 @@ import [
 		customer data and acquire any additional customer data needed to ensure all ISO 20022 schema elements
 		needed to provide structured or hybrid name and address information are captured.`
 
-		`The following list outlines the agreed approach to use of structured data within HVCS instructions
-		(across remittance, name and address elements) for New Zealand's HVCS:`
-
-		pnz::level2(
-			[
-				pnz::bold( `Until 14 November 2026:` )
-			]
-			pnz::level3(
-				`Participants must be able to receive and process MX messages that contain Unstructured
-				Address Line formatting.`
-				
-				`Sending MX messages containing Structured Postal Address formatting is recommended.`
-			)
-			[
-				pnz::bold(
-					`On and from 14 November 2026,`
-				)
-				pnz::text(
-					`the capability to send MX messages containing Unstructured Address Line formatting will be
-					removed from the MX specification; therefore, participants must be able to send and receive MX
-					messages containing Structured Postal Address formatting or Hybrid Postal Address formatting
-					for HVCS instructions and must stop receiving and processing HVCS instructions containing
-					Unstructured Address Line formatting.`
-				)
-			]
+		pnz::comment(
+			"BR 17 [CBPR+ CR2006]"
+			"RK"
+			"Remove reference to Unstructured Address Line formatting."
 		)
+
 		`Further clarification and guidelines for the use of structured remittance and structured name and
 		address is provided in Part D — MX Messaging Procedures.`
+	)
+
+	pnz::comment(
+		"BR 17 [CBPR+ CR2006]"
+		"RK"
+		"Remove reference to Unstructured Address Line formatting."
 	)
 
 	pnz::clause(
 		"3.2"
 		"CBPR+ approach to structured data"
 
-		`The following outlines the agreed approach to structured data for CBPR+:`
-		
-		pnz::level2(
-			`During the co-existence phase, if a payment instruction is initiated by the debtor agent using a
-			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
-			for the debtor and creditor.`
-
-			`On and from 14 November 2026, the capability to send CBPR+ messages containing Unstructured
-			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by 14 November 2026,
-			all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting
-			and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.`
-		)
+		`If a payment instruction is initiated by the debtor agent using a
+		CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
+		for the debtor and creditor.`
 	)
 
 	pnz::section_heading( "Chapter 4: Using an MT Payments Processor" )

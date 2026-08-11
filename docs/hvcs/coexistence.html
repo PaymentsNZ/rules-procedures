@@ -506,11 +506,15 @@
                         <span>means when the content of the address information within an MX message is formatted in
 				accordance with the structured data requirements set out in the MX Message Specifications.</span>
                     </p>
-                    <p>
-                        <span class="bold">Unstructured Address Line formatting</span>
-                        <span>means when the content of the address information within an MX message is not formatted in
-				accordance with the structured data requirements set out in the MX Message Specifications.</span>
-                    </p>
+                    <div class="doc-comment" data-change-id="BR 17 [CBPR+ CR2006]">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">BR 17 [CBPR+ CR2006]</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Remove reference to Unstructured Address Line formatting.</p>
+                        </div>
+                    </div>
                     <p>Unless the context otherwise specifies, all other defined terms have the meanings given to them in
 		Part 19 of the Payments NZ Rules and the HVCS Common Procedures.</p>
                 </div>
@@ -731,20 +735,18 @@
                             <span class="bold">must</span>
                             <span>:</span>
                         </li>
+                        <div class="doc-comment" data-change-id="BR 17 [CBPR+ CR2006]">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">BR 17 [CBPR+ CR2006]</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Remove reference to Unstructured Address Line formatting.</p>
+                            </div>
+                        </div>
                         <ol class="level3 level3-counter-reset">
                             <li>
-                                <span>Before 14 November 2026, send an address that contains</span>
-                                <span class="bold">either</span>
-                                <span>Unstructured Address Line formatting</span>
-                                <span class="bold">or</span>
-                                <span>Structured Postal Address formatting</span>
-                                <span class="bold">or</span>
-                                <span>Hybrid Postal Address formatting; and</span>
-                            </li>
-                        </ol>
-                        <ol class="level3 level3-counter-reset">
-                            <li>
-                                <span>On and from 14 November 2026, send an address that contains</span>
+                                <span>Send an address that contains</span>
                                 <span class="bold">either</span>
                                 <span>Structured Postal Address formatting</span>
                                 <span class="bold">or</span>
@@ -790,18 +792,17 @@
                             <li>pacs.009 — Financial Institution Credit Transfer; and</li>
                             <li>pacs.009 COV — Financial Institution Credit Transfer Cover.</li>
                         </ol>
+                        <div class="doc-comment" data-change-id="BR 17 [CBPR+ CR2006]">
+                            <div class="doc-comment-meta">
+                                <span class="doc-comment-id">BR 17 [CBPR+ CR2006]</span>
+                                <span class="doc-comment-initials">RK</span>
+                            </div>
+                            <div class="doc-comment-content">
+                                <p>Remove reference to Unstructured Address Line formatting.</p>
+                            </div>
+                        </div>
                         <li>
-                            <span>Before 14 November 2026, participants</span>
-                            <span class="bold">must</span>
-                            <span>receive and process MX messages that contain:</span>
-                        </li>
-                        <ol class="level3 level3-counter-reset">
-                            <li>Structured Postal Address formatting; and</li>
-                            <li>Unstructured Address Line formatting; and</li>
-                            <li>Hybrid Postal Address formatting.</li>
-                        </ol>
-                        <li>
-                            <span>On and from 14 November 2026, participants</span>
+                            <span>Participants</span>
                             <span class="bold">must</span>
                             <span>receive and process MX messages that contain:</span>
                         </li>
@@ -811,7 +812,7 @@
                         </ol>
                     </ol>
                     <li>
-                        <span>Return messages:  If returning an HVCS payment, participants</span>
+                        <span>Return messages: If returning an HVCS payment, participants</span>
                         <span class="bold">must</span>
                         <span>return the HVCS payment by sending a return message to the original instructing agent as follows:</span>
                     </li>
@@ -1067,44 +1068,34 @@
                     <li>Domestically, it is recommended that participants review their processes relating to obtaining
 		customer data and acquire any additional customer data needed to ensure all ISO 20022 schema elements
 		needed to provide structured or hybrid name and address information are captured.</li>
-                    <li>The following list outlines the agreed approach to use of structured data within HVCS instructions
-		(across remittance, name and address elements) for New Zealand&apos;s HVCS:</li>
-                    <ol class="level2 level2-counter-reset">
-                        <li>
-                            <span class="bold">Until 14 November 2026:</span>
-                        </li>
-                        <ol class="level3 level3-counter-reset">
-                            <li>Participants must be able to receive and process MX messages that contain Unstructured
-				Address Line formatting.</li>
-                            <li>Sending MX messages containing Structured Postal Address formatting is recommended.</li>
-                        </ol>
-                        <li>
-                            <span class="bold">On and from 14 November 2026,</span>
-                            <span>the capability to send MX messages containing Unstructured Address Line formatting will be
-					removed from the MX specification; therefore, participants must be able to send and receive MX
-					messages containing Structured Postal Address formatting or Hybrid Postal Address formatting
-					for HVCS instructions and must stop receiving and processing HVCS instructions containing
-					Unstructured Address Line formatting.</span>
-                        </li>
-                    </ol>
+                    <div class="doc-comment" data-change-id="BR 17 [CBPR+ CR2006]">
+                        <div class="doc-comment-meta">
+                            <span class="doc-comment-id">BR 17 [CBPR+ CR2006]</span>
+                            <span class="doc-comment-initials">RK</span>
+                        </div>
+                        <div class="doc-comment-content">
+                            <p>Remove reference to Unstructured Address Line formatting.</p>
+                        </div>
+                    </div>
                     <li>Further clarification and guidelines for the use of structured remittance and structured name and
 		address is provided in Part D — MX Messaging Procedures.</li>
                 </ol>
             </div>
+            <div class="doc-comment" data-change-id="BR 17 [CBPR+ CR2006]">
+                <div class="doc-comment-meta">
+                    <span class="doc-comment-id">BR 17 [CBPR+ CR2006]</span>
+                    <span class="doc-comment-initials">RK</span>
+                </div>
+                <div class="doc-comment-content">
+                    <p>Remove reference to Unstructured Address Line formatting.</p>
+                </div>
+            </div>
             <div class="clause-row">
                 <div id="3.2-cbpr+-approach-to-structured-data" class="clause-heading" data-number="3.2">CBPR+ approach to structured data</div>
                 <ol class="level1 level1-counter-reset">
-                    <li>The following outlines the agreed approach to structured data for CBPR+:</li>
-                    <ol class="level2 level2-counter-reset">
-                        <li>During the co-existence phase, if a payment instruction is initiated by the debtor agent using a
-			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
-			for the debtor and creditor.</li>
-                        <li>On and from 14 November 2026, the capability to send CBPR+ messages containing Unstructured
-			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by 14 November 2026,
-			all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting
-			and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.</li>
-                    </ol>
+                    <li>If a payment instruction is initiated by the debtor agent using a
+		CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
+		for the debtor and creditor.</li>
                 </ol>
             </div>
             <h1 id="chapter-4-using-an-mt-payments-processor" class="section-heading">Chapter 4: Using an MT Payments Processor</h1>

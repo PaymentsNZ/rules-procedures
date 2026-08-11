@@ -843,7 +843,7 @@ import [
 
 		pnz::level2(
 			[
-				pnz::bold( `Until 14 November 2026:` )
+				pnz::bold( `Before 14 November 2026:` )
 			]
 			pnz::level3(
 				`Participants must be able to receive and process MX messages that contain Unstructured

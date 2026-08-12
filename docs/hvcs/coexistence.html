@@ -599,108 +599,107 @@
             </div>
             <div class="clause-row">
                 <div id="1.4-investigation-message-scope" class="clause-heading" data-number="1.4">Investigation message scope</div>
-                <div class="level1"></div>
-            </div>
-            <div>
-                <p>The following investigation messages are in scope during the co-existence phase:</p>
-            </div>
-            <div class="table-scroll">
-                <table class="pnz-table coexistence-table">
-                    <thead>
-                        <th>MT message</th>
-                        <th>MX message</th>
-                        <th>NZ HVCS timing</th>
-                        <th>CBPR+ timing</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>MT 192 / 292 - Request for Cancellation</td>
-                            <td>camt.056 - FI to FI Cancellation Request</td>
-                            <td>
-                                <div class="bold">
-                                    <p>By the beginning of the co-existence phase:</p>
-                                </div>
-                                <div>
-                                    <p>Participants must be able to receive from SWIFT as an MX message and process</p>
-                                </div>
-                                <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
-                                </div>
-                                <div>
-                                    <p>Participants must send all requests as an MX message.</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="bold">
-                                    <p>By the beginning of the co-existence phase:</p>
-                                </div>
-                                <div>
-                                    <p>Participants acting as intermediaries must accept CBPR+ camt.056 messages.
-							MX-&gt;MT and MT-&gt;MX translation will be available via SWIFT&apos;s Inflow Translation.</p>
-                                </div>
-                                <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
-                                </div>
-                                <div>
-                                    <p>Participants must send all requests to SWIFT&apos;s Case Manager BIC.</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>MT 196 / 296 - Answers</td>
-                            <td>camt.029 - Resolution of Investigation</td>
-                            <td>
-                                <div class="bold">
-                                    <p>By the beginning of the co-existence phase:</p>
-                                </div>
-                                <div>Participants must be able to receive from SWIFT as an MX message and process</div>
-                                <br/>
-                                <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
-                                </div>
-                                <div>
-                                    <p>Participants must send all responses as an MX message.</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="bold">
-                                    <p>By the beginning of the co-existence phase:</p>
-                                </div>
-                                <div>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX
-						translation will be available via SWIFT&apos;s In-Flow Translation.</div>
-                                <br/>
-                                <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
-                                </div>
-                                <div>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>MT 199 / MT 299 - Investigation Request and Response</td>
-                            <td>camt.110 / camt.111 - Investigation Request and Response</td>
-                            <td>
-                                <div class="bold">
-                                    <p>No decision has been taken in relation to use of camt.110/camt.111 for domestic payments.</p>
-                                </div>
-                                <div>Payments NZ will lead assessment of Case Manager capabilities for domestic
-						payments when SWIFT make this capability available for testing.</div>
-                            </td>
-                            <td>
-                                <div class="bold">
-                                    <p>By 14 November 2026:</p>
-                                </div>
-                                <div>Participants must be able to receive from SWIFT as an MX message and process.</div>
-                                <br/>
-                                <div class="bold">
-                                    <p>By the end of the co-existence phase:</p>
-                                </div>
-                                <div>Participants must use the SWIFT Case Manager BIC for all cross-border investigations.</div>
-                                <br/>
-                                <div>Participants must stop receiving and processing MT199/MT299 cross-border investigation messages.</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="level1">
+                    <p>The following investigation messages are in scope during the co-existence phase:</p>
+                    <div class="table-scroll">
+                        <table class="pnz-table coexistence-table full-width">
+                            <thead>
+                                <th>MT message</th>
+                                <th>MX message</th>
+                                <th>NZ HVCS timing</th>
+                                <th>CBPR+ timing</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MT 192 / 292 - Request for Cancellation</td>
+                                    <td>camt.056 - FI to FI Cancellation Request</td>
+                                    <td>
+                                        <div class="bold">
+                                            <p>By the beginning of the co-existence phase:</p>
+                                        </div>
+                                        <div>
+                                            <p>Participants must be able to receive from SWIFT as an MX message and process</p>
+                                        </div>
+                                        <div class="bold">
+                                            <p>By the end of the co-existence phase:</p>
+                                        </div>
+                                        <div>
+                                            <p>Participants must send all requests as an MX message.</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bold">
+                                            <p>By the beginning of the co-existence phase:</p>
+                                        </div>
+                                        <div>
+                                            <p>Participants acting as intermediaries must accept CBPR+ camt.056 messages.
+								MX-&gt;MT and MT-&gt;MX translation will be available via SWIFT&apos;s Inflow Translation.</p>
+                                        </div>
+                                        <div class="bold">
+                                            <p>By the end of the co-existence phase:</p>
+                                        </div>
+                                        <div>
+                                            <p>Participants must send all requests to SWIFT&apos;s Case Manager BIC.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>MT 196 / 296 - Answers</td>
+                                    <td>camt.029 - Resolution of Investigation</td>
+                                    <td>
+                                        <div class="bold">
+                                            <p>By the beginning of the co-existence phase:</p>
+                                        </div>
+                                        <div>Participants must be able to receive from SWIFT as an MX message and process</div>
+                                        <br/>
+                                        <div class="bold">
+                                            <p>By the end of the co-existence phase:</p>
+                                        </div>
+                                        <div>
+                                            <p>Participants must send all responses as an MX message.</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bold">
+                                            <p>By the beginning of the co-existence phase:</p>
+                                        </div>
+                                        <div>Participants acting as intermediaries must accept CBPR+ camt.029.  MX-&gt;MT and MT-&gt;MX
+							translation will be available via SWIFT&apos;s In-Flow Translation.</div>
+                                        <br/>
+                                        <div class="bold">
+                                            <p>By the end of the co-existence phase:</p>
+                                        </div>
+                                        <div>Participants must send all responses to SWIFT&apos;s Case Manager BIC.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>MT 199 / MT 299 - Investigation Request and Response</td>
+                                    <td>camt.110 / camt.111 - Investigation Request and Response</td>
+                                    <td>
+                                        <div class="bold">
+                                            <p>No decision has been taken in relation to use of camt.110/camt.111 for domestic payments.</p>
+                                        </div>
+                                        <div>Payments NZ will lead assessment of Case Manager capabilities for domestic
+							payments when SWIFT make this capability available for testing.</div>
+                                    </td>
+                                    <td>
+                                        <div class="bold">
+                                            <p>By 14 November 2026:</p>
+                                        </div>
+                                        <div>Participants must be able to receive from SWIFT as an MX message and process.</div>
+                                        <br/>
+                                        <div class="bold">
+                                            <p>By the end of the co-existence phase:</p>
+                                        </div>
+                                        <div>Participants must use the SWIFT Case Manager BIC for all cross-border investigations.</div>
+                                        <br/>
+                                        <div>Participants must stop receiving and processing MT199/MT299 cross-border investigation messages.</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
             <div class="clause-row">
                 <div id="1.5-iso-20022-migration-timeline" class="clause-heading" data-number="1.5">ISO 20022 migration timeline</div>

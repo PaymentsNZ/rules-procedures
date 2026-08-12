@@ -972,8 +972,6 @@ ul.dashes li::marker {
     break-after: avoid;
   }
 
-
-
   .clause-row {
     --print-heading-width: 25.5mm;
     --print-column-gap: 4mm;
@@ -985,6 +983,7 @@ ul.dashes li::marker {
     float: left;
     width: var(--print-heading-width);
     margin-right: 0em;
+    margin-bottom: 1em;
   }
 
   .level1 {
@@ -993,6 +992,10 @@ ul.dashes li::marker {
     );
   }
 
+  /*
+  This is not currently used but may come in handy later if we need tables followed
+  by other paragraphs with numbering continuation.
+  */
   .table-scroll:has(> table.full-width) {
     clear: both;
 
@@ -1014,8 +1017,6 @@ ul.dashes li::marker {
     min-width: 0;
     max-width: none;
   }
-
-
 
   .level1 > li {
       break-inside: auto;

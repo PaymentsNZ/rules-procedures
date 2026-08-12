@@ -124,9 +124,14 @@ pre, code {
 
 /* BASE (desktop/tablet): keep your 28% | content split, but make content shrinkable */
 .clause-row {
+  --heading-ratio: 28;
+  --column-gap: 1rem;
+
+  container: clause-row / inline-size;
+
   display: grid;
-  grid-template-columns: 28% minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: calc(var(--heading-ratio) * 1%) minmax(0, 1fr);
+  gap: var(--column-gap);
   margin-top: 1rem;
   margin-bottom: 0rem;
   align-items: start;
@@ -134,6 +139,21 @@ pre, code {
 
 /* Let grid children actually shrink in both wide and narrow layouts */
 .clause-row > * { min-width: 0; }
+
+@media (min-width: 901px) {
+  /* allow the full width, not just the constrained width */
+  .diagram.full-width img {
+      /* make the image the width of .clause-row */
+      width: 100cqi;
+      /* move left by the width of the first grid column plus the grid gap */
+      margin-left: calc(var(--heading-ratio) * -1cqi - var(--column-gap));
+      margin-bottom: 1rem;
+
+      display: block;
+      max-width: none;
+      height: auto;
+  }
+}
 
 .clause-heading {
   font-weight: bold;
@@ -514,6 +534,26 @@ Original HTML rendered markers / hierarchy.
   width: max-content;   /* grow to fit content */
   min-width: 100%;      /* but don’t shrink smaller than the viewport */
 }
+
+@media screen and (min-width: 901px) {
+  /* Allow a full-width table to escape the clause content column. */
+  .table-scroll:has(> table.full-width) {
+    clear: both;
+
+    /* make the wrapper the width of .clause-row */
+    width: 100cqi;
+    max-width: none;
+
+    /* move left by the width of the first grid column plus the grid gap */
+    margin-left: calc(var(--heading-ratio) * -1cqi - var(--column-gap));
+  }
+}
+
+.table-scroll > table.full-width {
+  width: 100%;
+  max-width: none;
+}
+
 
 .center-col1 th:nth-child(1),
 .center-col1 td:nth-child(1) {
@@ -903,10 +943,6 @@ ul.dashes li::marker {
   /* Nested lists (if you add subsections later) */
   .toc ol ol { margin-left: 1.5em; }
 
-  .clause-row {
-    grid-template-columns: 15% minmax(0, 1fr);
-  }
-
   .doc-question,
   .doc-comment {
     display: none;
@@ -930,7 +966,74 @@ ul.dashes li::marker {
 
   /*  Neutralize any fixed-header push used on screen */
   .site-header, .app-header, header[role="banner"] { display: none !important; }
-  body.document { padding-top: 0 !important; margin-top: 0 !important; }  
+  body.document { padding-top: 0 !important; margin-top: 0 !important; }
+
+  [class^="tag-"], [class*=" tag-"] {
+    break-after: avoid;
+  }
+
+
+
+  .clause-row {
+    --print-heading-width: 25.5mm;
+    --print-column-gap: 4mm;
+
+    display: block;
+  }
+
+  .clause-heading {
+    float: left;
+    width: var(--print-heading-width);
+    margin-right: 0em;
+  }
+
+  .level1 {
+    margin-left: calc(
+      var(--print-heading-width) + var(--print-column-gap)
+    );
+  }
+
+  .table-scroll:has(> table.full-width) {
+    clear: both;
+
+    padding-top: 0.5rem;
+    margin-left: calc(
+      -1 * (var(--print-heading-width) + var(--print-column-gap))
+    );
+
+    width: calc(
+      100% + var(--print-heading-width) + var(--print-column-gap)
+    );
+
+    max-width: none;
+    overflow-x: visible;
+  }
+
+  .table-scroll > table.full-width {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+
+
+  .level1 > li {
+      break-inside: auto;
+  }
+
+  .level1 > .level2 {
+      break-inside: auto;
+  }
+
+  .level1 > .level2 > li {
+      break-inside: avoid;
+  }
+
+  /* If a level-1 item introduces a nested level-2 list,
+      don't leave the introducing item stranded at page bottom. */
+  .level1 > li:has(+ .level2) {
+      break-after: avoid;
+  }
 }
 
 /*

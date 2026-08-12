@@ -337,90 +337,90 @@ import [
 		"Investigation message scope"
 
 		"The following investigation messages are in scope during the co-existence phase:"
-
-		pnz::styled_table(
-			"coexistence-table full-width"
-			#table(
-				[
-					"MT message"
-					"MX message"
-					"NZ HVCS timing"
-					"CBPR+ timing"
-				]
-				[
-					// Row
-					[
-						`MT 192 / 292 - Request for Cancellation`
-						`camt.056 - FI to FI Cancellation Request`
-						[
-							pnz::bold_div( "By the beginning of the co-existence phase:" )
-							pnz::div( 
-								`Participants must be able to receive from SWIFT as an MX message and process`
-							)
-							pnz::bold_div( "By the end of the co-existence phase:" )
-							pnz::div( 
-								`Participants must send all requests as an MX message.`
-							)						
-						]
-						[
-							pnz::bold_div( "By the beginning of the co-existence phase:" )
-							pnz::div( 
-								`Participants acting as intermediaries must accept CBPR+ camt.056 messages.
-								MX->MT and MT->MX translation will be available via SWIFT's Inflow Translation.`
-							)
-							pnz::bold_div( "By the end of the co-existence phase:" )
-							pnz::div( 
-								`Participants must send all requests to SWIFT's Case Manager BIC.`
-							)
-						]
-					]
-					// Row
-					[
-						`MT 196 / 296 - Answers`
-						`camt.029 - Resolution of Investigation`
-						[
-							pnz::bold_div( "By the beginning of the co-existence phase:" )
-							`Participants must be able to receive from SWIFT as an MX message and process`
-							pnz::br
-							pnz::bold_div( "By the end of the co-existence phase:" )
-							pnz::div(
-								`Participants must send all responses as an MX message.`
-							)						
-						]
-						[
-							pnz::bold_div( "By the beginning of the co-existence phase:" )
-							`Participants acting as intermediaries must accept CBPR+ camt.029.  MX->MT and MT->MX
-							translation will be available via SWIFT's In-Flow Translation.`
-
-							pnz::br
-							pnz::bold_div( "By the end of the co-existence phase:" )
-							`Participants must send all responses to SWIFT's Case Manager BIC.`
-						]
-					]
-					// Row
-					[
-						`MT 199 / MT 299 - Investigation Request and Response`
-						`camt.110 / camt.111 - Investigation Request and Response`
-						[
-							pnz::bold_div( "No decision has been taken in relation to use of camt.110/camt.111 for domestic payments." )
-							`Payments NZ will lead assessment of Case Manager capabilities for domestic
-							payments when SWIFT make this capability available for testing.`
-						]
-						[
-							pnz::bold_div( "By 14 November 2026:" )
-							`Participants must be able to receive from SWIFT as an MX message and process.`
-							pnz::br
-
-							pnz::bold_div( "By the end of the co-existence phase:" )
-							`Participants must use the SWIFT Case Manager BIC for all cross-border investigations.`
-							pnz::br
-							`Participants must stop receiving and processing MT199/MT299 cross-border investigation messages.`
-						]
-					]
-				]
-			)
-		)
 	)
+
+	pnz::styled_table(
+		"coexistence-table"
+		#table(
+			[
+				"MT message"
+				"MX message"
+				"NZ HVCS timing"
+				"CBPR+ timing"
+			]
+			[
+				// Row
+				[
+					`MT 192 / 292 - Request for Cancellation`
+					`camt.056 - FI to FI Cancellation Request`
+					[
+						pnz::bold_div( "By the beginning of the co-existence phase:" )
+						pnz::div( 
+							`Participants must be able to receive from SWIFT as an MX message and process`
+						)
+						pnz::bold_div( "By the end of the co-existence phase:" )
+						pnz::div( 
+							`Participants must send all requests as an MX message.`
+						)						
+					]
+					[
+						pnz::bold_div( "By the beginning of the co-existence phase:" )
+						pnz::div( 
+							`Participants acting as intermediaries must accept CBPR+ camt.056 messages.
+							MX->MT and MT->MX translation will be available via SWIFT's Inflow Translation.`
+						)
+						pnz::bold_div( "By the end of the co-existence phase:" )
+						pnz::div( 
+							`Participants must send all requests to SWIFT's Case Manager BIC.`
+						)
+					]
+				]
+				// Row
+				[
+					`MT 196 / 296 - Answers`
+					`camt.029 - Resolution of Investigation`
+					[
+						pnz::bold_div( "By the beginning of the co-existence phase:" )
+						`Participants must be able to receive from SWIFT as an MX message and process`
+						pnz::br
+						pnz::bold_div( "By the end of the co-existence phase:" )
+						pnz::div(
+							`Participants must send all responses as an MX message.`
+						)						
+					]
+					[
+						pnz::bold_div( "By the beginning of the co-existence phase:" )
+						`Participants acting as intermediaries must accept CBPR+ camt.029.  MX->MT and MT->MX
+						translation will be available via SWIFT's In-Flow Translation.`
+
+						pnz::br
+						pnz::bold_div( "By the end of the co-existence phase:" )
+						`Participants must send all responses to SWIFT's Case Manager BIC.`
+					]
+				]
+				// Row
+				[
+					`MT 199 / MT 299 - Investigation Request and Response`
+					`camt.110 / camt.111 - Investigation Request and Response`
+					[
+						pnz::bold_div( "No decision has been taken in relation to use of camt.110/camt.111 for domestic payments." )
+						`Payments NZ will lead assessment of Case Manager capabilities for domestic
+						payments when SWIFT make this capability available for testing.`
+					]
+					[
+						pnz::bold_div( "By 14 November 2026:" )
+						`Participants must be able to receive from SWIFT as an MX message and process.`
+						pnz::br
+
+						pnz::bold_div( "By the end of the co-existence phase:" )
+						`Participants must use the SWIFT Case Manager BIC for all cross-border investigations.`
+						pnz::br
+						`Participants must stop receiving and processing MT199/MT299 cross-border investigation messages.`
+					]
+				]
+			]
+		)
+	)	
 
 	pnz::nonumber_clause(
 		"1.5"

@@ -6,8 +6,8 @@ import [
 {
 	appendix = "14F"
 	title = "HVCS Co-existence Procedures"
-	document_version = "4"
-	effective_date = "22/09/2026"
+	document_version = "5"
+	effective_date = "dd/mm/2026"
 	document_control = #table(
 		[
 			"Version number and description of amendment"
@@ -49,6 +49,16 @@ import [
 				"22-Sep-2026"
 				"Payments NZ, Buddle Findlay"
 			]
+			[
+				`Version 5: In response to SWIFT's decision to defer their 14 November 2026 CBRP+ implementation and the
+				subsequent HVCS Management Committee decision to retain alignment with SWIFT's implementation timeline,
+				remove the 14 November 2026 requirement to retire unstructured address formats and replace with "on and
+				from a date to be notified by SWIFT"`
+				"HVCS Management Committee resolution DD-MMM-2026"
+				""
+				""
+				"Payments NZ, Buddle Findlay"
+			]			
 		]
 	)
 } @> [
@@ -305,7 +315,7 @@ import [
 						`Participants must be able to receive and process MX messages that use
 						Hybrid Postal Address formatting.`
 						pnz::br
-						pnz::bold_div( "On and from 14 November 2026:" )
+						pnz::bold_div( "On and from a date to be announced by SWIFT:" )
 						`Participants must send all messages using either Structured Postal
 						Address formatting or Hybrid Postal Address formatting.`
 					]
@@ -318,7 +328,7 @@ import [
 						that uses Hybrid Postal Address formatting to participants as an MX message.`
 
 						pnz::br
-						pnz::bold_div( "On and from 14 November 2026:" )
+						pnz::bold_div( "On and from a date to be announced by SWIFT:" )
 						`Participants acting as intermediaries must send all CBPR+ messages and on-send
 						all CBPR+ messages to participants as an MX message using either structured
 						postal address formatting or Hybrid Postal Address formatting.`
@@ -404,7 +414,7 @@ import [
 						payments when SWIFT make this capability available for testing.`
 					]
 					[
-						pnz::bold_div( "By 14 November 2026:" )
+						pnz::bold_div( "On and from a date to be announced by SWIFT:" )
 						`Participants must be able to receive from SWIFT as an MX message and process.`
 						pnz::br
 
@@ -472,28 +482,12 @@ import [
 			[
 				pnz::text( `Where a participant sends a payment message as an MX message, the participant` )
 				pnz::bold( "must" )
-				pnz::text( ":" )
+				pnz::text( "must send an address that contains Unstructured Address Line formatting" )
+				pnz::bold( "or" )
+				pnz::text( "Structured Postal Address formatting" )
+				pnz::bold( "or" )
+				pnz::text( "Hybrid Postal Address formatting." )
 			]
-			pnz::level3(
-				[
-					pnz::text( "Before 14 November 2026, send an address that contains" )
-					pnz::bold( "either" )
-					pnz::text( "Unstructured Address Line formatting" )
-					pnz::bold( "or" )
-					pnz::text( "Structured Postal Address formatting" )
-					pnz::bold( "or" )
-					pnz::text( "Hybrid Postal Address formatting; and" )
-				]
-			)
-			pnz::level3(
-				[
-					pnz::text( "On and from 14 November 2026, send an address that contains" )
-					pnz::bold( "either" )
-					pnz::text( "Structured Postal Address formatting" )
-					pnz::bold( "or" )
-					pnz::text( "Hybrid Postal Address formatting." )
-				]
-			)
 		)
 		[
 			pnz::text( "Sending exception and investigation messages:  Participants" )
@@ -534,22 +528,13 @@ import [
 				`pacs.009 COV — Financial Institution Credit Transfer Cover.`
 			)
 			[
-				pnz::text( "Before 14 November 2026, participants" )
+				pnz::text( "Participants" )
 				pnz::bold( "must" )
 				pnz::text( "receive and process MX messages that contain:" )
 			]
 			pnz::level3(
 				`Structured Postal Address formatting; and`
 				`Unstructured Address Line formatting; and`
-				`Hybrid Postal Address formatting.`
-			)
-			[
-				pnz::text( "On and from 14 November 2026, participants" )
-				pnz::bold( "must" )
-				pnz::text( "receive and process MX messages that contain:" )
-			]
-			pnz::level3(
-				`Structured Postal Address formatting; and`
 				`Hybrid Postal Address formatting.`
 			)
 		)
@@ -677,27 +662,22 @@ import [
 
 		[
 			pnz::bold(
-				`On and from 14 November 2026,`
+				`On and from a date to be notified by SWIFT,`
 			)
-			pnz::text( "participants will be required to:" )
+			pnz::text( "participants will be required to receive and process camt.110 / camt.111 investigation messages in relation to cross-border payments outside of HVCS." )
 		]
-		pnz::level2(
-			`Send, receive and process payment messages with either Structured Postal Address formatting or Hybrid Postal Address formatting;`
-
-			`Stop sending, receiving and processing payment messages containing Unstructured Address Line formatting; and`
-
-			`Receive and process camt.110 / camt.111 investigation messages in relation to cross-border payments outside of HVCS.`
-		)
-
 		[
 			pnz::bold(
-				`From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase),`
+				`On and from a date to be notified by SWIFT,`
 			)
 			pnz::text( "all participants will be required to:" )
 		]
 		pnz::level2(
 			`send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX
 			Message Specifications for all message types that are in scope; and`
+
+			`send, receive and process HVCS instructions containing Structured Postal Address formatting
+			or Hybrid Postal Address formatting only; and`
 
 			`send and receive structured data for CBPR+ and HVCS instructions.`
 		)
@@ -853,7 +833,7 @@ import [
 
 		pnz::level2(
 			[
-				pnz::bold( `Before 14 November 2026:` )
+				pnz::bold( `Until the date to be notified by SWIFT:` )
 			]
 			pnz::level3(
 				`Participants must be able to receive and process MX messages that contain Unstructured
@@ -863,7 +843,7 @@ import [
 			)
 			[
 				pnz::bold(
-					`On and from 14 November 2026,`
+					`On and from the date to be notified by SWIFT:`
 				)
 				pnz::text(
 					`the capability to send MX messages containing Unstructured Address Line formatting will be
@@ -889,11 +869,11 @@ import [
 			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
 			for the debtor and creditor.`
 
-			`On and from 14 November 2026, the capability to send CBPR+ messages containing Unstructured
-			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by 14 November 2026,
-			all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting
-			and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.`
+			`The capability to send, receive and process CBPR+ messages containing Unstructured Address Line formatting
+			will be removed from the CBPR+ Usage Guidelines on and from a date to be notified by SWIFT. Therefore, by
+			the date to be notified by SWIFT, all participants that act as intermediaries must be able to send, receive
+			and process CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address
+			formatting and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.`
 		)
 	)
 

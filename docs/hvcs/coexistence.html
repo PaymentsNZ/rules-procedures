@@ -152,7 +152,7 @@
         </nav>
         <main class="hvcs-content">
             <div class="pdf-vars">
-                <span id="pdf-effective-date" class="run-effdate">Effective date: 22/09/2026</span>
+                <span id="pdf-effective-date" class="run-effdate">Effective date: dd/mm/2026</span>
                 <span id="pdf-doc-title" class="run-doctitle">Appendix 14F: HVCS Co-existence Procedures</span>
             </div>
             <div class="logo">
@@ -160,17 +160,17 @@
             </div>
             <div>
                 <div class="document-title">Appendix 14F: HVCS Co-existence Procedures (UG2025)</div>
-                <div class="document-meta">Version 4</div>
-                <div class="document-meta">Effective date: 22/09/2026</div>
+                <div class="document-meta">Version 5</div>
+                <div class="document-meta">Effective date: dd/mm/2026</div>
             </div>
             <div class="document-heading">Document Control</div>
             <dl class="doc-meta">
                 <dt>Title</dt>
                 <dd>HVCS Co-existence Procedures</dd>
                 <dt>Version</dt>
-                <dd>4</dd>
+                <dd>5</dd>
                 <dt>Effective date</dt>
-                <dd>22/09/2026</dd>
+                <dd>dd/mm/2026</dd>
                 <dt>Circulation</dt>
                 <dd>Payments NZ participants, Buddle Findlay, Reserve Bank</dd>
             </dl>
@@ -217,6 +217,16 @@
                             <td>HVCS Management Committee resolution 22-Jul-2026</td>
                             <td>27-Jul-2026</td>
                             <td>22-Sep-2026</td>
+                            <td>Payments NZ, Buddle Findlay</td>
+                        </tr>
+                        <tr>
+                            <td>Version 5: In response to SWIFT&apos;s decision to defer their 14 November 2026 CBRP+ implementation and the
+				subsequent HVCS Management Committee decision to retain alignment with SWIFT&apos;s implementation timeline,
+				remove the 14 November 2026 requirement to retire unstructured address formats and replace with &quot;on and
+				from a date to be notified by SWIFT&quot;</td>
+                            <td>HVCS Management Committee resolution DD-MMM-2026</td>
+                            <td></td>
+                            <td></td>
                             <td>Payments NZ, Buddle Findlay</td>
                         </tr>
                     </tbody>
@@ -561,7 +571,7 @@
 						Hybrid Postal Address formatting.</div>
                                 <br/>
                                 <div class="bold">
-                                    <p>On and from 14 November 2026:</p>
+                                    <p>On and from a date to be announced by SWIFT:</p>
                                 </div>
                                 <div>Participants must send all messages using either Structured Postal
 						Address formatting or Hybrid Postal Address formatting.</div>
@@ -576,7 +586,7 @@
 						that uses Hybrid Postal Address formatting to participants as an MX message.</div>
                                 <br/>
                                 <div class="bold">
-                                    <p>On and from 14 November 2026:</p>
+                                    <p>On and from a date to be announced by SWIFT:</p>
                                 </div>
                                 <div>Participants acting as intermediaries must send all CBPR+ messages and on-send
 						all CBPR+ messages to participants as an MX message using either structured
@@ -675,7 +685,7 @@
                             </td>
                             <td>
                                 <div class="bold">
-                                    <p>By 14 November 2026:</p>
+                                    <p>On and from a date to be announced by SWIFT:</p>
                                 </div>
                                 <div>Participants must be able to receive from SWIFT as an MX message and process.</div>
                                 <br/>
@@ -737,28 +747,12 @@
                         <li>
                             <span>Where a participant sends a payment message as an MX message, the participant</span>
                             <span class="bold">must</span>
-                            <span>:</span>
+                            <span>must send an address that contains Unstructured Address Line formatting</span>
+                            <span class="bold">or</span>
+                            <span>Structured Postal Address formatting</span>
+                            <span class="bold">or</span>
+                            <span>Hybrid Postal Address formatting.</span>
                         </li>
-                        <ol class="level3 level3-counter-reset">
-                            <li>
-                                <span>Before 14 November 2026, send an address that contains</span>
-                                <span class="bold">either</span>
-                                <span>Unstructured Address Line formatting</span>
-                                <span class="bold">or</span>
-                                <span>Structured Postal Address formatting</span>
-                                <span class="bold">or</span>
-                                <span>Hybrid Postal Address formatting; and</span>
-                            </li>
-                        </ol>
-                        <ol class="level3 level3-counter-reset">
-                            <li>
-                                <span>On and from 14 November 2026, send an address that contains</span>
-                                <span class="bold">either</span>
-                                <span>Structured Postal Address formatting</span>
-                                <span class="bold">or</span>
-                                <span>Hybrid Postal Address formatting.</span>
-                            </li>
-                        </ol>
                     </ol>
                     <li>
                         <span>Sending exception and investigation messages:  Participants</span>
@@ -799,22 +793,13 @@
                             <li>pacs.009 COV — Financial Institution Credit Transfer Cover.</li>
                         </ol>
                         <li>
-                            <span>Before 14 November 2026, participants</span>
+                            <span>Participants</span>
                             <span class="bold">must</span>
                             <span>receive and process MX messages that contain:</span>
                         </li>
                         <ol class="level3 level3-counter-reset">
                             <li>Structured Postal Address formatting; and</li>
                             <li>Unstructured Address Line formatting; and</li>
-                            <li>Hybrid Postal Address formatting.</li>
-                        </ol>
-                        <li>
-                            <span>On and from 14 November 2026, participants</span>
-                            <span class="bold">must</span>
-                            <span>receive and process MX messages that contain:</span>
-                        </li>
-                        <ol class="level3 level3-counter-reset">
-                            <li>Structured Postal Address formatting; and</li>
                             <li>Hybrid Postal Address formatting.</li>
                         </ol>
                     </ol>
@@ -928,21 +913,18 @@
                 <div id="1.8-obligations-for-participants-to-send-and-receive-messages-after-the-co-existence-phase" class="clause-heading" data-number="1.8">Obligations for participants to send and receive messages after the co-existence phase</div>
                 <ol class="level1 level1-counter-reset">
                     <li>
-                        <span class="bold">On and from 14 November 2026,</span>
-                        <span>participants will be required to:</span>
+                        <span class="bold">On and from a date to be notified by SWIFT,</span>
+                        <span>participants will be required to receive and process camt.110 / camt.111 investigation messages in relation to cross-border payments outside of HVCS.</span>
                     </li>
-                    <ol class="level2 level2-counter-reset">
-                        <li>Send, receive and process payment messages with either Structured Postal Address formatting or Hybrid Postal Address formatting;</li>
-                        <li>Stop sending, receiving and processing payment messages containing Unstructured Address Line formatting; and</li>
-                        <li>Receive and process camt.110 / camt.111 investigation messages in relation to cross-border payments outside of HVCS.</li>
-                    </ol>
                     <li>
-                        <span class="bold">From the scheduled date for the mandated use of MX messaging (the end of the co-existence phase),</span>
+                        <span class="bold">On and from a date to be notified by SWIFT,</span>
                         <span>all participants will be required to:</span>
                     </li>
                     <ol class="level2 level2-counter-reset">
                         <li>send, receive and process HVCS instructions in accordance with the MX Messaging Procedures and MX
 			Message Specifications for all message types that are in scope; and</li>
+                        <li>send, receive and process HVCS instructions containing Structured Postal Address formatting
+			or Hybrid Postal Address formatting only; and</li>
                         <li>send and receive structured data for CBPR+ and HVCS instructions.</li>
                     </ol>
                     <li>There is no foreseen retirement date for MTn98 messages.</li>
@@ -1079,7 +1061,7 @@
 		(across remittance, name and address elements) for New Zealand&apos;s HVCS:</li>
                     <ol class="level2 level2-counter-reset">
                         <li>
-                            <span class="bold">Before 14 November 2026:</span>
+                            <span class="bold">Until the date to be notified by SWIFT:</span>
                         </li>
                         <ol class="level3 level3-counter-reset">
                             <li>Participants must be able to receive and process MX messages that contain Unstructured
@@ -1087,7 +1069,7 @@
                             <li>Sending MX messages containing Structured Postal Address formatting is recommended.</li>
                         </ol>
                         <li>
-                            <span class="bold">On and from 14 November 2026,</span>
+                            <span class="bold">On and from the date to be notified by SWIFT:</span>
                             <span>the capability to send MX messages containing Unstructured Address Line formatting will be
 					removed from the MX specification; therefore, participants must be able to send and receive MX
 					messages containing Structured Postal Address formatting or Hybrid Postal Address formatting
@@ -1107,11 +1089,11 @@
                         <li>During the co-existence phase, if a payment instruction is initiated by the debtor agent using a
 			CBPR+ message, it is highly recommended that the CBPR+ message uses Structured Postal Address formatting
 			for the debtor and creditor.</li>
-                        <li>On and from 14 November 2026, the capability to send CBPR+ messages containing Unstructured
-			Address Line formatting will be removed from the CBPR+ Usage Guidelines. Therefore, by 14 November 2026,
-			all participants that act as intermediaries must be able to send and receive
-			CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address formatting
-			and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.</li>
+                        <li>The capability to send, receive and process CBPR+ messages containing Unstructured Address Line formatting
+			will be removed from the CBPR+ Usage Guidelines on and from a date to be notified by SWIFT. Therefore, by
+			the date to be notified by SWIFT, all participants that act as intermediaries must be able to send, receive
+			and process CBPR+ messages containing either Structured Postal Address formatting or Hybrid Postal Address
+			formatting and must stop receiving and processing CBPR+ messages containing Unstructured Address Line formatting.</li>
                     </ol>
                 </ol>
             </div>
